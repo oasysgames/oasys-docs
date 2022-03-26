@@ -8,12 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
-  url: 'hideto0118.github.io',
-  baseUrl: '/docusaurus-test',
+  url: 'https://hideto0118.github.io',
+  baseUrl: '/',
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'hideto.org', // Usually your GitHub org/user name.
+  organizationName: 'hideto0118', // Usually your GitHub org/user name.
   projectName: 'docusaurus-test', // Usually your repo name.
   // themes: ['@docusaurus/theme-search-algolia'],
 
