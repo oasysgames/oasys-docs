@@ -81,15 +81,15 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
             label: 'White Paper',
           },
+          {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   type: 'doc',
+          //   docId: 'intro',
+          //   position: 'left',
+          //   label: 'White Paper',
+          // },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
