@@ -6,14 +6,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Oasys',
+  tagline: 'Oasys Blockchain for Games',
   url: 'https://docusaurus-2.netlify.app', // Url to your site with no trailing slash
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/oasysLogo.jpg',
   organizationName: 'hideto0118', // Usually your GitHub org/user name.
   projectName: 'docusaurus-test', // Usually your repo name.
   // themes: ['@docusaurus/theme-search-algolia'],
@@ -71,10 +71,10 @@ const config = {
       // },
 
       navbar: {
-        title: 'My Site',
+        title: 'Oasys',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Oasys',
+          src: 'img/oasysLogo.jpg',
         },
         items: [
           {
@@ -90,6 +90,10 @@ const config = {
           //   position: 'left',
           //   label: 'White Paper',
           // },
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -149,7 +153,7 @@ const config = {
     }),
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'ja'],
   },
 };
 
