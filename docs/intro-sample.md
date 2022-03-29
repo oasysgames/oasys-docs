@@ -1,8 +1,9 @@
 ---
-sidebar_position: 10
+id: doc2
+sidebar_position: 9
 ---
 
-# Tutorial Intro test
+# Doc2 Tutorial Intro test
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

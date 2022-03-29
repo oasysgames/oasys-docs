@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+---
+# 4-1. Ecosystem Design
+## 1. Overview
+Oasysは、今までブロックチェーンでゲームデベロッパーが直面してきた課題を克服する、多層構造のEVM互換PoSパブリックブロックチェーンです。
+Hub-Layerというスケーラビリティの高いLayer-1と、Verse-LayerというLayer-2 Solutionを用いたLayer-2で構成されます。
+## 2. Verse-Layer
+高速なOptimistic rollups
+
+
+
+通常のOptimistic rollupsでは不特定多数からのFraud Proofによる不正トランザクションを検証する仕組みに信頼を置くことでネットワークを成立させていますが、OasysのOptimistic rollupsではVerse-Layer(Layer-2)を運用するVerse Builderへの信頼の担保とAppointed VerifierによるFraud Proofを通してネットワークを成立させます。
+
+運用型コンテンツではユーザーはコンテンツ事業者が持続的かつ健全に開発及び運営することを信頼する必要があります。OasysではVerse Builderへ持続的かつ健全なコンテンツ運営への信頼を集めます。Transactionは全てはVerifiableといえるため、Verse Builderの信頼の高さはVerseごとの改ざん耐性の高さに直結します。
+またVerse BuilderはVerseを建てる際に1名以上のAppointed Verifierを任命することができます。Appointed Verifierは第三者機関として経済インセンティブと自社の信頼を対価にRollupsを検証します。
+
+OasysではOptimistic rollupsにある7日間の検証期間を無くし、トランザクションをWeb2プロダクト同等レベルにインスタントに承認させることができます。これはどのブロックチェーン,Layer-2技術を用いてもなし得ない速度です。
+
+
+また、Oasys上の全てのデータがHub-Layerに保存されるため高いData Availabilityを実現しており、全てのTrust Pointが欠損した場合でも完全に復元可能です。
+Private Layer-2
+この多層構造を実現するためには、Rollupsを主とするLayer-2技術を用いた「Private Layer-2」ではなく、Private Chainを用いた「Private SIdechain」として実装するよりも、Data Availability、Scalability、Transaction Speedの観点でブロックチェーンゲームにおいてLayer-2技術を用いることが最適と結論づけました。
+
+まず、RollupsはLayer-2のデータは全てLayer-1に反映されるため、もしLayer-2側が停止した場合でもLayer-1側が稼働している限り復元できることは技術的に保証されます(Data Availabilityが高い)。しかしPrivate Sidechainの場合には復元することは技術的に保証されません。そのためブロックチェーンゲームの特徴としてのゲームアセットに永続性をもたせることができるLayer-2技術を用いる方がブロックチェーンゲームに適しています。
+
+また、Private Layer-2では従来のオンラインゲームと遜色ないTransaction Speedにできるため、これまでのブロックチェーンではなし得ない速度をユーザーに提供可能です。
+### ZK-rollups及び新技術への対応
+Oasysの要件を満たす最適なLayer 2 Solutionは複数あると考えていますが、現時点でサポートしている実装はOptimistic Rollupsのみとなります。今後もScaling SolutionはEthereumを中心に開発が加速していくと考えており、技術発展にあわせ適切なタイミングで適切な技術を導入して参ります。
+### 耐Scam性
+Hub-Layerは、Oasysに集まるデータをセキュアかつ安定的に保存・交換することに特化したLayerで、原則applicationを直接動作させません。Verse-Layerを管理するのは各Verse Builderであり、各々の裁量でデプロイするDappsを制限するというPermissionedな設計や、制限を限定するsemi-Permisissioned、制限を加えないPermissionlessな設計などが可能です。
+Verse Builderによる検閲が入るため、必然的にScam耐性やDappsの品質向上が促されます。マス層に向けたブロックチェーンゲームを運営する場合、同じVerse内にScamや低品質なDappsを減らすことで、Verse Builderは安心してユーザーを呼ぶことができます。
+
+## 3. Hub-Layer
+### 高ネットワーク安定性
+OasysのHub-LayerではBlock生成時間を15秒毎とし、Globalに分散されたノードへ安定して情報が伝播される時間を確保します。そのためEthereum同水準の高いネットワークの安定性を担保できます。これは数千のVerse-Layerが接続されても安定した稼働ができる水準です。
+### 高スケーラビリティ
+Oasysでは、Hub-LayerにはFT/NFT/Bridge/Rollupのコントラクトしか用意せず、大規模なトラフィックはVerse-Layer側にのみ溜まる設計にしています。また、Verse-LayerのTransactionをHub-Layerに書き込む際も、Rollupsを用いることでHub-LayerのTransactionを極限まで抑えることが可能です。
+Verse-LayerのTransactionの増加に依存しないスケーラビリティを可能にします。
+### 高Data Availability
+Verse-Layer(Layer 2)のトランザクションデータはHub-Layer(Layer 1)に反映されるため、どんな事象があったかはVerifiableであると言えます。

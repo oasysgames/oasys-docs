@@ -19,49 +19,10 @@ sidebar_position: 2
 マルチバースの時代ではブロックチェーンやNFTという技術が利用されると考えているものの、既存のLayer 1の技術ではトランザクションスピードの遅さやgas代（実行手数料）がかかることなど、マス層には難解なUXを強いることになってしまいます。2018年ではこれをクリアできなかったでしょう。しかし、2021年にはLayer 2の技術が実用され始め、通常のサーバ利用と同じスピードでトランザクションが完了可能となりました。ようやく宿題を終える時がきました。
 実用されているLayer 2の多くは、高価値であるがゆえにgas代が高価なEthereumをLayer 1として利用しているため、トランザクションスピードは瞬時ではあるもののそれなりのgas代がかかります。そのため、EVMサイドチェーンでゲームに特化したパブリックブロックチェーンのOasys Layer 1（Consensus Layer）を稼働させ、ユーザが直接Layer 1を使うことはほぼない形とし、実際のロジックはLayer 2（Execution Layer）で稼働させるアーキテクチャとしました。事業者がメタバースごとに独自のLayer 2を稼働させることができるので、ユーザはgas代が無料となり、そのgas代は事業者が肩代わりすることも可能となります。もちろん、不必要に電力消費を行うこともないので、環境に配慮したPoSチェーンとなっています。
 
-![Oasys Architecture](/img/vision/vision-oasys-layer-architecture.png)
+
 
 OasysではこのOasys Archtectureを用いることで、マス層のエンドユーザーには、Web2時代と遜色ないUXでの、ブロックチェーン利用環境を提供し、ゲームデベロッパーには「カーボンニュートラル」「高ユーザビリティ」「高い自由度」をもつLayer 2という各社のメタバースを構築環境を提供します。
 ## Oasysはマルチバース時代のHubとなります
 マルチバースの時代、Layer 2という技術要素、NFTの流行、様々な要素がOasysという「Blockchain for The Games」のプロジェクトにタイミングよく揃ってきたなと感じています。しかし、そういう要素だけでは成立しません。Oasysに賛同していただくゲーム事業者やユーザの皆様がいればこそですし、むしろそれが一番重要な要素です。
 Oasysはメタバース時代のHubとなります。
 
----
-
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
-
-- `src/pages/index.js` -> `localhost:3000/`
-- `src/pages/foo.md` -> `localhost:3000/foo`
-- `src/pages/foo/bar.js` -> `localhost:3000/foo/bar`
-
-## Create your first React Page
-
-Create a file at `src/pages/my-react-page.js`:
-
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
-
-export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
-}
-```
-
-A new page is now available at `http://localhost:3000/my-react-page`.
-
-## Create your first Markdown Page
-
-Create a file at `src/pages/my-markdown-page.md`:
-
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
-
-This is a Markdown page
-```
-
-A new page is now available at `http://localhost:3000/my-markdown-page`.

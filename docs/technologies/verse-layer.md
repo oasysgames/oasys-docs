@@ -1,0 +1,10 @@
+---
+sidebar_position: 2
+---
+# 5-2.Verse-Layer, with Incredibly High UX
+## Outline
+Verse-LayerはOasysにおけるLayer 2のBlockchainです。Oasysの要件を満たす最適なLayer 2 Solutionは複数あると考えていますが、現時点でサポートしている実装はOptimismのみとなります。ノード実装Optimismをforkしたものに必要最小限の修正をしたものを利用します。Verse-Layerは、Permissioned Chainとして運用するケースが大半であると想定しています。
+## Permissioned ChainにおけるFraud Proof
+Optimistic Rollupの場合、decentralizedなFraud Proofに7日間を要します。それに対してPermissioned Chainで不正があった場合、そのVerseを運営する事業体のレピュテーションリスクになるため、Fraud Proof期間を最小限にすることが可能と考えています。data availabilityのためにもLayer 2のトランザクションデータはLayer 1に反映されるため、どんな事象があったかはverifiableであると言えます。
+## Verse Builder
+verse contractに対して100万OAS以上depositすれば、誰もがverseを構築することができます。Verse-LayerにおいてはVerse Builderがnode運用を引き受けるため、適切にサーバ運用する必要があります。また、どんなスマートコントラクトをデプロイ可能か、どんなトランザクションをgas freeで実行可能かを設定可能です。

@@ -83,6 +83,12 @@ const config = {
             position: 'left',
             label: 'White Paper',
           },
+          // {
+          //   type: 'doc',
+          //   docId: 'doc2',
+          //   position: 'left',
+          //   label: 'Technical Document',
+          // },
           {to: '/blog', label: 'Blog', position: 'left'},
           // {
           //   type: 'doc',
@@ -155,6 +161,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en', 'ja'],
   },
+  
 };
 
 module.exports = config;
