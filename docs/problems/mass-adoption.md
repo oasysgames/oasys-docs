@@ -1,31 +1,24 @@
 ---
 sidebar_position: 4
 ---
-# 3-3. ゲーム用ブロックチェーンのマスアダプションに必要な要件
-## 1.Web3のジレンマ
+# 3-3. Requirements for a Gaming Blockchain to reach Mass Adoption
+## The Web3 Dilemma
 ![Web3 Dilemma](/img/docs/problems/web3-dilemma.png)
-現在のWeb3のプロダクトの多くは非中央集権性を高めた結果、Web2のプロダクトよりも処理速度やGas代負担の必要性などUXが悪いという課題があります。このWeb3のジレンマを解決できれば、Web2の中央集権的なプロダクトからWeb3の非中央集権的なプロダクトへのユーザーの不可逆的な移動が見込まれます。私達は特にブロックチェーンゲーム分野で、エンドユーザー及びゲームデベロッパーの2つの側面からこのWeb3のジレンマ解決に挑みます。
-## 2. マス層の利用が見込まれるUX
-現状のDappsの多くは、UXに大きな課題を持ち、それがマスアダプションを妨げています。2018年からこの問題に立ち向かい続けたブロックチェーンエキスパートによりその答えを以下の3つに結論付けました。
-### Gas Less
-マスのユーザー層にgas代に必要なトークンを入手してもらうハードルは高いです。
-これはgas代の高低の問題ではなく、「gas feesを支払う必要がある」「gas feesのために幾分かの準備金を確保する必要がある」こと自体が難しく、マス層の参入を妨げる大きな要因となっています。
-そのため、マス層のブロックチェーンゲーム参入を促すためには、gas feesを完全に0にすることが必須です。
-### インスタントなTransaction
-ゲームのTransactionに15秒かかるのは、ストレスフルでしょう。
-まして、モバイルゲームやコンシューマーゲームを嗜むマス層のユーザーには、Transactionに1秒かかることでさえあまりに遅く、ストレスを与えることになります。
-Transaction SpeedをWeb2のプロダクトと同水準にインスタントにしていく必要があります。
-### 耐Scam性
-現在のパブリックブロックチェーンには優良なプロダクトだけでなく多くのScamあるいは粗悪なプロダクトも存在し、多くのユーザーの資産が危険にさらされています。マス層が安心してブロックチェーンゲームに参入するにあたり、これらの危険を可能な限り排除する必要があります。
-## 3. ゲームデベロッパーが必要とするUX
-現状のブロックチェーンゲーム開発には、既存のゲーム企業では参入しづらい理由がいくつかあります。
-### 運用面 - Permissionless and Permissioned -
-従来の企業は大手であればあるほど、あらゆるユーザーや事業者が利用するパブリックブロックチェーンでの利用をリスクと捉えます。
-このリスクにはセキュリティリスクだけではなく、レピュテーションリスクも含まれます。現状のブロックチェーンには多くの価値のあるDappsだけではなくScamも多く、
-全てがPermissionless ではリスクが多きすぎるという課題があります。
-### 開発面 - Developer Experience -
-EVM互換のブロックチェーンは、Etheriumで蓄積した技術資産や豊富なOSS周辺ツールとの連携、開発言語の習得などの観点から、ブロックチェーンエンジニア好まれています。また、Layer-2での開発手法はインスタントな処理ができるため開発もしやすいという特徴があります。
-### 設計面 - FT / NFTの自由な設計 -
-ブロックチェーンゲームを開発する場合、Fungible Token(FT)及びNon-fungible Token(NFT)を実装することが必須要件になってきます。
-現状のFT/ NFTのスタンダードでは、ゲーム内コインを用いて後の暴落を招かないように供給量調整したり、IPの保護を目的としたNFTの実装が困難なため、ゲームのエコシステム設計はとても高難易度となっています。そのため、ゲーム事業者にとってより自由な設計ができるFT/ NFT実装モデルの選択肢を用意する必要が出てきています。
+As a result of decentralization, many of the current Web3 products have a poor user experience due to the need to pay for gas and slower processing speeds compared to Web2 products. If this Web3 dilemma can be resolved, we can expect an irreversible migration of users from Web2 centralized products to Web3 decentralized products. We are solving this Web3 dilemma from two sides, end-users, and game developers.
+## User Experience for Mass Adoption
+Many of the current dApps have significant user experience (UX) challenges that hinder mass adoption. We, blockchain experts who have confronted this problem since 2018, have concluded the following three answers.
+### Zero Gas Fees
+The issue is not whether the gas fee is high or low, but the need to pay gas fees and the need to set aside some reserves for gas fees are obstacles. For most users, obtaining tokens for gas is a big hurdle, and it is a significant factor preventing mass adoption. Therefore, it is essential to eliminate gas fees to welcome the casual audience into blockchain games.
+### Instant Transaction
+Fifteen seconds of transaction time would be tremendous stress when playing a game. Even taking one second for a transaction is too slow and stressful for the masses who enjoy mobile, PC and consumer games. Transaction speed needs to be as instantaneous as Web2 products.
+### Scam Resistance
+The current public blockchains have great products, but on the other hand, many scams or inferior products exist, putting users' assets at risk.  These threats need to be eliminated for the average user to feel comfortable entering blockchain games.
+## Developer Experience
+There are several reasons why it is difficult for traditional game developers to start building blockchain games.
+### Operational Aspect - Permissionless and Permissioned
+Traditional corporations consider it risky to use a public blockchain which all kinds of users, companies and DAOs use. This risk includes not only security risks but also reputational risks. The current blockchains host not only valuable dApps, but also many scams. Operating dApps in a full permissionless environment is too much risk for these companies and developers.
+### Development Aspect - Developer Experience
+Blockchain engineers prefer EVM-Compatible blockchains because of the technical assets accumulated by Ethereum, the availability of great OSS tools, and the opportunity of learning cutting-edge development languages. In addition, developing dApps on Layer 2 is relatively easy due to instant transactions.
+### Design Aspect - Flexible Design of FT/NFT
+When developing blockchain games, implementing Fungible Tokens (FT) and Non-fungible Tokens (NFT) is essential for building an ecosystem. The current FT/ NFT standard on the blockchain makes designing a gaming ecosystem highly complex, as it is difficult to control the supply using in-game coins to avoid a dump, or to implement NFTs for IP protection purposes. Therefore, there is a need to provide a choice of FT/NFT implementation models that allow more flexible design for game operators.
 

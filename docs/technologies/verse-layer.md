@@ -1,10 +1,10 @@
 ---
 sidebar_position: 2
 ---
-# 5-2.Verse-Layer, with Incredibly High UX
+# 5-2. Verse-Layer, with Incredibly High UX
 ## Outline
-Verse-LayerはOasysにおけるLayer 2のBlockchainです。Oasysの要件を満たす最適なLayer 2 Solutionは複数あると考えていますが、現時点でサポートしている実装はOptimismのみとなります。ノード実装Optimismをforkしたものに必要最小限の修正をしたものを利用します。Verse-Layerは、Permissioned Chainとして運用するケースが大半であると想定しています。
-## Permissioned ChainにおけるFraud Proof
-Optimistic Rollupの場合、decentralizedなFraud Proofに7日間を要します。それに対してPermissioned Chainで不正があった場合、そのVerseを運営する事業体のレピュテーションリスクになるため、Fraud Proof期間を最小限にすることが可能と考えています。data availabilityのためにもLayer 2のトランザクションデータはLayer 1に反映されるため、どんな事象があったかはverifiableであると言えます。
+The Verse-Layer is Oasys' Layer 2 Blockchain. While we believe there are several optimal Layer 2 solutions that meet Oasys' requirements, the only implementation we currently support is Optimism. Optimism's node implementation was forked, and only minimal necessary modifications have been added. The Verse-Layer is expected to be operated as a Permissioned Layer 2 in most cases.
+## Fraud Proof on Permissioned Layer 2
+It takes 7 days for decentralized fraud-proof for Optimistic rollups. However, we believe that the 7 day challenge period can be minimized because any fraud on a permissioned Layer 2 can become a reputational risk for the entity that operates the verse. Occurred events can be verifiable as the transaction data on Layer 2 is reflected on Layer 1 for data availability.
 ## Verse Builder
-verse contractに対して100万OAS以上depositすれば、誰もがverseを構築することができます。Verse-LayerにおいてはVerse Builderがnode運用を引き受けるため、適切にサーバ運用する必要があります。また、どんなスマートコントラクトをデプロイ可能か、どんなトランザクションをgas freeで実行可能かを設定可能です。
+Anyone can build a verse if they deposit more than 1 million OAS on the verse contract. On the Verse-Layer, a Verse Builder takes care of node operations and is required to operate the server properly. Also, you can configure what smart contracts can be deployed and what transactions can be executed without using any gas.

@@ -4,17 +4,24 @@ sidebar_position: 1
 
 # 2-1. Vision
 
-## メタバースからマルチバースの時代へ
-2021年は「NFT」という言葉の認知度が大幅に向上しましたが、11月にTech Giantの社名変更を機に「メタバース」という言葉の認知度も大きく向上しました。
-このメタバースという言葉は人によって様々に定義されるものですが、「デジタル上の世界」を表す言葉というのは共通見解でしょう。その世界が3DなのかVRなのか、あるいはSNS上のコミュニティ上のものかはさておき。
-そうなると、各社や各コンテンツごとに違う世界観があるので、その世界観ごとにたくさんのメタバースが展開されることになります。
-ユーザーの立場からは、日常的にSNSを利用するように、複数のメタバースを日常利用する未来が想像されるのではないでしょうか。私達はその状態のことを「マルチバース」の時代と定義しています。
-マルチバースの時代では、匿名の名前や身につけているアバター、連れているナビキャラや乗っているマシンは、自分のアイデンティティを表現するものになるのでメタバースを跨いで活用したくなります。アニメや映画の中で語られてきた世界現実になるのです。
-世界がマルチバースに辿り着くまでのプロセス
-マルチバース上でのデータの相互利用性には様々なクリアしなければいけない課題がありますが、まずは各社のメタバースにとって中立的にデジタルアセットの所有情報を担保する仕組みが必要です。それにはブロックチェーンやNFTという技術を用いるのが、現時点の最適解でしょう。
-## マルチバースに向けたOasysの働き
-マルチバースの時代ではブロックチェーンやNFTという技術が利用されると考えているものの、既存のLayer 1のブロックチェーン技術ではトランザクションスピードの遅さやgas代（実行手数料）がかかることなど、マス層にはハードルの高いUXを強いることになってしまいます。2020年まではこれをクリアできませんでした。しかし、2021年にはLayer 2の技術が実用され始め、通常のサーバ利用と同じスピードでトランザクションが完了可能となりました。ようやく宿題を終える時がきました。
-2022年現在、実用されているLayer 2技術の多くは、gas代が高価なEthereumをLayer 1として利用しているため、トランザクションスピードは瞬時ではあるものの決して安くないgas代がかかります。そのため、EVMサイドチェーンでゲームに特化したパブリックブロックチェーンのOasys Layer 1（Consensus Layer）を稼働させ、ユーザが直接Layer 1を使うことはほぼない形とし、実際のロジックはLayer 2（Execution Layer）で稼働させるアーキテクチャとしました。事業者がメタバースごとに独自のLayer 2を稼働させることができるので、そのgas代を事業者が肩代わりすることで、ユーザのgas代を無料にすることも可能となります。もちろん、不必要に電力消費する必要のない、環境に配慮したPoSアルゴリズムを採用しています。
-OasysではこのOasys Archtectureを用いることで、マス層のエンドユーザーには、Web2時代と遜色ないUXでのブロックチェーンゲーム環境を提供し、ゲームデベロッパーには「高ユーザビリティ」「高い自由度」をもつLayer 2という各社のメタバースを構築できる環境を提供します。
-## Oasysはマルチバース時代のHubとなります
-マルチバースの時代、Layer 2という技術要素、NFTの流行、様々な要素がOasysという「Blockchain for The Games」のプロジェクトにタイミングよく揃ってきました。しかし、そういう要素だけでは成立しません。Oasysに賛同していただくゲーム事業者やユーザの皆様がいればこそですし、むしろそれが一番重要な要素です。
+## From Metaverse to Multiverse
+In 2021, the NFT market exploded from the beginning of the year, followed by the rapid growth of blockchain games. The word and concept of Metaverse also went viral after a a particular big tech company changed its name in November.
+
+
+The term Metaverse is used by millions of people to describe the Digital World in 3D space, VR, Social Communities and more. This possibly means each company, game, and content creator may have a different view of the digital world; thus, many Metaverses can be built. 
+
+From a user’s perspective, we can imagine a future where we go into different Metaverses throughout the day, just like we use social media in our everyday life. This is what we call the Multiverse Era.
+
+
+In this future of multiverses, you can express your identity through avatars, user handles, wearables, or machines you drive, and you’ll be able to use them across all the different Metaverses. This is similar to the worlds you often see in movies and animation.
+
+## Leading the World to the Multiverse
+There are various issues that need to be solved for interoperability between different Metaverses. First and foremost, we need to have a mechanism to guarantee the ownership of digital assets for each Metaverse. The best solution at the moment is to use blockchain and NFT technologies.
+
+## How Oasys Contributes to the Multiverse
+We believe that blockchain and NFT technologies will be used in the future of the multiverse. However, the existing Layer 1 blockchain technologies are not user-friendly enough. Extremely slow transactions or high gas fees make the user experience incapable of breaking through to the mainstream and reaching mass adoption. Back in 2018, it wasn’t easy to overcome these challenges. However, by 2021, Layer 2 solutions started becoming available and transactions couldbe completed at similar speeds as normal servers.
+As of 2022, most Layer 2 technology solutions are built based on Ethereum, which can transact fast, but at a relatively high gas fee. Therefore, Oasys developed a Layer 1 (Consensus Layer), the EVM public sidechain specialized for games. On the Oasys blockchain, users will rarely use Layer 1 directly because the logic of games will run on Layer 2 (Execution Layer). Game developers can run their own Layer 2 for each Metaverse which will cover all the gas fees for the users. This will allow users to enjoy the Metaverse without worrying about gas fees. Furthermore, we use the environmentally friendly PoS algorithm, which does not require unnecessary power consumption.
+With Oasys Architecture, game developers can build a Layer 2 Metaverse that is highly usable, flexible, and eco-friendly and as a result, users can enjoy blockchain games with great UX comparable to Web 2 platforms.
+
+## Oasys will be the Hub of the Multiverse
+The era of the multiverse, Layer 2 technology, the NFT boom, and many other factors have come together at the right time for Oasys. However, these trends alone are not enough to make Oasys a reality; we need the game developers, the gaming community, and most of all, the fans to support us to rebuild the future of gaming.

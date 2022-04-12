@@ -1,21 +1,22 @@
 ---
 sidebar_position: 2
 ---
-# 3-1. DeFiとブロックチェーンゲームの特性の違い
-## 1.重要視すべき指標の違い
-DeFiとブロックチェーンゲームはそれぞれ特性が違うためブロックチェーンに求める性能も異なります。
+# 3-2. Differences between DeFi and Blockchain Games
+## Differences in Indicators Between DeFi and Blockchain Games
+Games and DeFi Applications require different capabilities from a blockchain since they operate differently.
 ![Indicattor Difference - DeFi vs Game](/img/docs/problems/indicattor-difference.png)
 
 ### TVL(Total Value Locked)
-TVLとは特定のコントラクトにロックされた合計金額を指し、DeFiのトラクションを測る指標として主に用いられています。
-資金をロックするという多くのDeFiの特性を考慮に入れると、DeFiの信頼や人気を表す指標として支持されるのは一定の合理性があります。
-一方ブロックチェーンゲームにおいては資金をロックするという特性が薄く、多くのブロックチェーンゲームを測る上でTVLは適切ではありません。
+TVL refers to the total amount locked to a particular contract and is the primary measure of DeFi’s traction. Considering DeFi’s characteristics of locking funds, TVL is a rational indicator of DeFi’s reliability and popularity. On the other hand, locking funds is less common in blockchain games, so TVL is not an appropriate measure for many blockchain games.
 
-### Transaction数
-ブロックチェーンゲームではTransaction数がDeFiと比較して膨大になる傾向があります。
-今後、マスアダプション可能なレベルで、本格的にブロックチェーンをゲームに実装した場合、DeFiや現在のGameFiとは比較にならない規模のTransactionが発生するため、それに耐えられる設計が求められます。
+### Transactions Volume
+The transaction volume of blockchain games is massive compared to DeFi. The transaction volume will be incomparably more significant than DeFi’s for widely acceptable full-scale blockchain games. The blockchain needs to be designed to withstand this.
 
-## 2.DAO化の合理性の違い
+## Are we really becoming a DAO?
 ![DAO - DeFi vs Game](/img/docs/problems/dao-difference.png)
-DeFiはFoundation及び開発会社により開発され、最終的にFoundationを解散する形での完全なDAO化をするのが理想とされています。目指すゴールは完璧な”仕組み”であり、具体的にはバグが無い堅牢なセキュティと安定稼働に重きを置いています。
-一方ブロックチェーンゲームの場合、トランプなど”仕組み”に近いゲーム性を持つフルオンチェーンゲームを除き、ゲームコンテンツの持続的なアップデートとサービス運用が必要になります。目指すゴールは永続的な”運営”であり、具体的には飽きないような日々のアップデートが必要になります。そのため、DeFiはDAOという分散型の組織に向かいますが、ブロックチェーンゲームでは一部を除いてDAO化ではなく運営母体という存在はゲームが存在し続ける限りは必要になります。
+Foundations and developers develop DeFi Applications with the end goal of having them managed by a DAO eventually.  The ultimate plan is to have a perfect system that is bug-free, secure, and stable.
+
+On the other hand, blockchain games require continuous updating of game content and service operations. The goal is to improve the game continually. Daily content updates, new playable characters, or item drops are essential to increase user engagement and decrease churn.
+
+For these reasons, DeFi can become a DAO, decentralized autonomous organization. However, blockchain games cannot become a DAO, since a game cannot be automatically developed or updated.
+
