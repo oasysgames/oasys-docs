@@ -11,7 +11,7 @@ const config = {
   url: 'https://docusaurus-2.netlify.app', // Url to your site with no trailing slash
   baseUrl: '/',
   trailingSlash: false,
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/oasysLogo.jpg',
   organizationName: 'hideto0118', // Usually your GitHub org/user name.
@@ -79,9 +79,15 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'whitepaper/intro',
             position: 'left',
             label: 'White Paper',
+          },
+          {
+            type: 'doc',
+            docId: 'techdocs/intro',
+            position: 'left',
+            label: 'techdocs',
           },
           // {
           //   type: 'doc',
@@ -115,7 +121,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/whitepaper/intro',
               },
             ],
           },
