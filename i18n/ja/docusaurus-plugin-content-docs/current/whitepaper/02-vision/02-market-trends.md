@@ -4,24 +4,26 @@ sidebar_position: 2
 
 # 2-2. Market Trends
 ## The Blockchain Market
-The global blockchain market grew from $1.49 billion in 2020 to $4.9 billion in 2021. It is expected to grow at a CAGR of 68.4% to $67.4 billion by 2026.1)
+世界のブロックチェーン市場は2020年の市場規模14.9億ドルから2021年には49億ドルにまで成長しました。また、今後2026年には674億ドルまで年平均成長率68.4%で成長すると予測されてます。1)
 
-The NFT and Game segment, in particular, has experienced significant growth.
-The NFT market hit an annual growth rate of 5,438% in 2021, with the total transaction volume of the top 10 NFT marketplaces climbing to $23.9 billion. 2)
+地域別でみると、北米が39.1%, 欧州が28.6%, アジア太平洋が20.8%, アフリカが6.8%, 中南米が4.7%のシェアをしめてます。
 
-The market for blockchain-based games, which are games using FTs and NFTs, will also grow to over $1 billion in monthly transaction volume.3)
+特にNFT, Gameの分野が大きく成長しました。
+
+NFT市場は2021年の1年で5,438%の年成長率を記録し、トップ10のNFTマーケットプレイスの合計取引高は23.9Bドルに登ります。2)
+
+また、FTやNFTを用いたゲームであるブロックチェーンベースのゲームの市場も大きく成長し、月間1Bドルを超えるまでの取引高にまで登りました。3)
 
 ![Blockchain Market](/img/docs/vision/blockchain-market.png)
 ## The Gaming Market
-The size of the global games market is expanding rapidly. While the impact of COVID-19 was positive in that the games market grew ahead of expectations, there were also negative impacts, such as the lockdown in the first half of 2020 that affected the way game studios work and the pandemic disrupting the global supply chain. 5)
+世界のゲーム市場規模は急速に拡大中です。新型コロナウイルスの発生によりゲーム市場は想定より前倒しに拡大したというポジティブな面もありましたが、2020年前半のロックダウンによりゲームスタジオの働き方に影響を及ぼしたり、パンデミックによりグローバルサプライチェーンを混乱させるなどマイナス面の影響もありました。5)
 
-The breakdown of the games market is assumed to be PC games at $35.9 billion, console games at $49.2 billion, and mobile games at $90.7Bn, with mobile games accounting for more than half of the total.
+ゲーム市場の内訳は、PCゲームが$35.9Bnドル、コンソールゲームが$49.2Bnドル、モバイルゲームが$90.7Bnドルと半分以上がモバイルゲームが占めていると想定されています。
 
-The global games market will continue to grow for the next few years and is expected to exceed $20 billion by the end of 2023. The games market is forecast to grow at a CAGR of +7.2% to $204.6 billion between 2019 and 2023.
+今後ゲーム市場は数年間成長し続け、2023年末には200Bnドルを超える見込みです。ゲーム市場は2019年から2023年の間に+7.2％の年平均成長率で204.6Bnドルに成長すると予測されています。
 
-The number of gamers is also expected to show steady growth, with the global game player population growing at a CAGR (2015-2023) of +5.6% to surpass the 3 billion mark in 2023.5)
+またゲームのプレイヤー数も堅調な成長をみせ、2023年に世界のゲームプレイヤー人口は、CAGR (2015-2023) +5.6%で増加し30億人の大台を突破すると予想されています。
 
-A large share of this growth will come from mobile gamers. Due to growth markets in regions such as Asia Pacific, Middle East & Africa, and Latin America, the player population in these regions is expected to continue to grow over the next few years.
-
+その内の多くはモバイルゲームのユーザーのです。アジア太平洋や中東&アフリカ、中南米といった地域における成長市場のお陰で、向こう数年間これらのゲームプレイヤー人口は更なる増加を見せる見込みです。
 
 ![Game Market](/img/docs/vision/game-market.png)
