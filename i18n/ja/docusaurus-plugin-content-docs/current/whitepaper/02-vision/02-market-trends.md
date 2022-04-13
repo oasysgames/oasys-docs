@@ -2,8 +2,8 @@
 sidebar_position: 2
 ---
 
-# 2-2. 日本語　Market Trends
-## 日本語　The Blockchain Market
+# 2-2. Market Trends
+## The Blockchain Market
 The global blockchain market grew from $1.49 billion in 2020 to $4.9 billion in 2021. It is expected to grow at a CAGR of 68.4% to $67.4 billion by 2026.1)
 
 The NFT and Game segment, in particular, has experienced significant growth.

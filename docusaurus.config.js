@@ -87,7 +87,7 @@ const config = {
             type: 'doc',
             docId: 'techdocs/intro',
             position: 'left',
-            label: 'techdocs',
+            label: 'Technical Materials',
           },
           // {
           //   type: 'doc',
@@ -121,7 +121,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/whitepaper/intro',
+                to: '/docs/whitepaper/intro',
               },
             ],
           },
