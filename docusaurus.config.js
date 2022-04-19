@@ -13,7 +13,7 @@ const config = {
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/oasysLogo.jpg',
+  favicon: 'img/general/OASYS_favicon.png',
   organizationName: 'hideto0118', // Usually your GitHub org/user name.
   projectName: 'docusaurus-test', // Usually your repo name.
   // themes: ['@docusaurus/theme-search-algolia'],
@@ -28,12 +28,12 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -71,10 +71,10 @@ const config = {
       // },
 
       navbar: {
-        title: 'Oasys',
+        title: '',
         logo: {
           alt: 'Oasys',
-          src: 'img/oasysLogo.jpg',
+          src: 'img/general/oasys-logo_inline.png',
         },
         items: [
           {
@@ -95,7 +95,7 @@ const config = {
           //   position: 'left',
           //   label: 'Technical Document',
           // },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           // {
           //   type: 'doc',
           //   docId: 'intro',
@@ -120,8 +120,25 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Wthite Paper',
                 to: '/docs/whitepaper/intro',
+              },
+              {
+                label: 'Wthite Paper (PDF)',
+                href: '/pdfs/dummy.pdf',
+                target: '_blank',
+              },
+              {
+                label: 'Technical Meterials',
+                to: '/docs/techdocs/intro',
+              },
+              {
+                label: 'Light Paper',
+                href: 'https://medium.com/@oasys/lightpaper-2f0e75825415',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/oasysgames',
               },
             ],
           },
@@ -129,16 +146,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://t.co/wHaFUB4R0b',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/oasys_games',
               },
             ],
           },
@@ -146,27 +159,27 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Website',
+                href: 'https://www.oasys.games/',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Medium',
+                href: 'https://medium.com/@oasys',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Oasys | Blockchain for The Games All Rights Reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'ja'],
-  },
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['en', 'ja'],
+  // },
   
 };
 
