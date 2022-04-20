@@ -20,3 +20,5 @@ On the other hand, blockchain games require continuous updating of game content 
 
 For these reasons, DeFi can become a DAO, decentralized autonomous organization. However, blockchain games cannot become a DAO, since a game cannot be automatically developed or updated.
 
+Similarly many game developers developing blockchain games will have a plan to monetize their games over time as it runs. Therefore, they are expected to offer games based on tokenomics and community, but not necessarily DAOs.
+

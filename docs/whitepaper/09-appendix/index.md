@@ -76,8 +76,8 @@ With respect to your purchase, exchange or acquisition of any Tokens, if any, yo
 5. You shall not, are not eligible to, sell or use the Token in and from any jurisdiction in which any sale or use of certain digital currencies, digital assets, virtual assets or cryptocurrencies is prohibited, and any person in violation of such shall be solely responsible for such violation, and the Oasys and its relevant parties shall not be responsible for any such cases.
 
 ## Reference
-​​​​1) TechNavio, Global Blockchain Market, 2020
-2) CoinGecko, 2021 Yearly Cryptocurrency Report
-3) DappRadar, Dapp Industry Overview: August 2021, 2021.08
-4) DappRadar, BGA Blockchain Game Report Q3 2021, 2021.10.14
-5) Newzoo - Global Games Market Report
+​​​​1) TechNavio, Global Blockchain Market, 2020  
+2) CoinGecko, 2021 Yearly Cryptocurrency Report  
+3) DappRadar, Dapp Industry Overview: August 2021, 2021.08  
+4) DappRadar, BGA Blockchain Game Report Q3 2021, 2021.10.14  
+5) Newzoo - Global Games Market Report  

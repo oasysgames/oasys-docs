@@ -5,7 +5,7 @@ sidebar_position: 1
 ## Overview
 Oasys' native token is the OAS token, and the total supply at launch is 10 billion tokens. Six years after the mainnet launch, OAS token holders will determine the additional supply of staking rewards through decentralized governance.
 ## Token Utilities
-OAS tokens have following uses.
+OAS tokens have the following uses.
 ### 1. Gas Fees
 Due to the architecture of Oasys, the Verse Builder pays gas fees for transaction roll-ups to the Hub Layer.
 ### 2. Verse Building Deposits
