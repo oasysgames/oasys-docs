@@ -3,6 +3,8 @@ sidebar_position: 1
 ---
 # Appendix
 ## Profile
+![Profile](/img/docs/whitepaper/founding/profile.png)
+
 ## Disclaimers
 In relation to any and all information specified in this whitepaper, you hereby unconditionally and irrevocably accept and agree to the following.
 

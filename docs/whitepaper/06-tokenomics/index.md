@@ -20,7 +20,7 @@ OAS tokens can be used to purchase NFTs and other products.
 ## Initial Token Allocation
 The total initial supply is 10 billion OAS tokens which will be distributed according to the following allocations.
 ![Initial Token Allocation](/img/docs/whitepaper/tokenomics/initial-token-allocation.png)
-### Ecosystem/Community (38.0%)
+<!-- ### Ecosystem/Community (38.0%)
 Allocated to the partners who build Verse, ecosystem partners, user rewards, liquidity provision, and for marketing purposes.
 ### Staking Rewards (21.0%)
 Allocated as a portion of the staking rewards.
@@ -29,7 +29,7 @@ Allocated to grants and rewards for all developers who participate in the develo
 ### Early Backers (14.0%)
 Allocated to private sale investors, institutional and individual investors.
 ### Foundation (12.0%)
-Allocated to all non-development activities that include product management, design, analysis, research, and support for the growth of Oasys' ecosystem.
+Allocated to all non-development activities that include product management, design, analysis, research, and support for the growth of Oasys' ecosystem. -->
 
 ## Token Supply Curve
 Circulating supply must be a well-balanced design that considers the long-term growth and sustainability of Oasys.

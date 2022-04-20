@@ -6,12 +6,12 @@ sidebar_position: 1
 
 ## From Metaverse to Multiverse
 ![Vision](/img/docs/whitepaper/vision/vision.png)
-In 2021, the NFT market exploded from the beginning of the year, followed by the rapid growth of blockchain games. The word and concept of Metaverse also went viral after a a particular big tech company changed its name in November.
+In 2021, the NFT market exploded from the beginning of the year, followed by the rapid growth of blockchain games. The word and concept of **Metaverse** also went viral after a a particular big tech company changed its name in November.
 
 
-The term Metaverse is used by millions of people to describe the Digital World in 3D space, VR, Social Communities and more. This possibly means each company, game, and content creator may have a different view of the digital world; thus, many Metaverses can be built. 
+The term **Metaverse** is used by millions of people to describe the Digital World in 3D space, VR, Social Communities and more. This possibly means each company, game, and content creator may have a different view of the digital world; thus, many Metaverses can be built. 
 
-From a user’s perspective, we can imagine a future where we go into different Metaverses throughout the day, just like we use social media in our everyday life. This is what we call the Multiverse Era.
+From a user’s perspective, we can imagine a future where we go into different Metaverses throughout the day, just like we use social media in our everyday life. This is what we call the **Multiverse Era**.
 
 
 In this future of multiverses, you can express your identity through avatars, user handles, wearables, or machines you drive, and you’ll be able to use them across all the different Metaverses. This is similar to the worlds you often see in movies and animation.

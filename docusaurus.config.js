@@ -86,6 +86,7 @@ const config = {
           {
             type: 'doc',
             docId: 'techdocs/intro',
+            // docId: 'techdocs/technologies/hub-layer',
             position: 'left',
             label: 'Technical Materials',
           },

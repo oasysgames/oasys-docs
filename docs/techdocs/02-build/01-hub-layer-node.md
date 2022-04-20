@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: Hub-Layer node build
+id: hub-layer
 ---
 
 # Hub-Layer node build

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-# 3-3. Requirements for a Gaming Blockchain to reach Mass Adoption
+# 3-4. Requirements for a Gaming Blockchain to reach Mass Adoption
 ## The Web3 Dilemma
 ![Web3 Dilemma](/img/docs/whitepaper/problems/web3-dilemma.png)
 As a result of decentralization, many of the current Web3 products have a poor user experience due to the need to pay for gas and slower processing speeds compared to Web2 products. If this Web3 dilemma can be resolved, we can expect an irreversible migration of users from Web2 centralized products to Web3 decentralized products. We are solving this Web3 dilemma from two sides, end-users, and game developers.
