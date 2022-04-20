@@ -11,10 +11,11 @@
 }
 
 .topPageLink {
-  box-shadow: 0 1rem 3rem rgb(0 0 0 / 4%);
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 6%);
   height: 100% !important;
   padding: 6rem 0;
   display: flex;
+  justify-content: center;
   transition: .4s !important;
 }
 /* 
@@ -34,8 +35,13 @@
 }*/
 
 .topPageLink:hover {
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%);
   transform: translateY(-1rem);
   text-decoration: unset;
+}
+
+[data-theme='dark'] .topPageLink {
+  background: #303846;
 }
 
 .largeText {
