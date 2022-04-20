@@ -2,12 +2,12 @@
 sidebar_position: 1
 ---
 # 4-1. Ecosystem Design
-![Ecosystem Design](/img/docs/solution/ecosystem-design.png)
 ## Overview
 Oasys is a multi-layered EVM-Compatible PoS public blockchain that solves some of the pain-points game developers experience on other blockchains. Oasys blockchain consists of a highly scalable Layer 1 called Hub-Layer and a Layer 2 called Verse-Layer.
+![Ecosystem Design](/img/docs/whitepaper/solution/ecosystem-design.png)
 ## Verse-Layer (Layer 2)
 ### High-Speed Optimistic Rollups
-![Optimistic Rollups](/img/docs/solution/optimistic-rollups.png)
+![Optimistic Rollups](/img/docs/whitepaper/solution/high-speed-or.png)
 Normal Optimistic rollups establish the network through trust in a mechanism to verify fraudulent transactions by fraud-proof from an unspecified number of parties. In contrast, Oasys' Optimistic rollups establish the network through trust in two factors: the Verse Builder that operates the Verse-Layer (Layer 2); and fraud-proof by the Appointed Verifier.
 
 First, users need to trust that content providers will develop and operate content sustainably and soundly. At Oasys, the Verse Builder plays that role, winning the users’ trust through sustainable and sound content operations. Since all transactions are verifiable, a Verse Builder cannot easily cheat. Therefore, the more trustworthy the Verse Builder is, the more resistant the Verse will be to tampering. Verse Builders can also appoint one or more Appointed Verifier(s) when building a Verse, who will verify Rollups in return for financial incentives and their own trust as a 3rd party.
@@ -17,7 +17,7 @@ Oasys eliminates the 7-day challenge period from Optimistic rollups and allows t
 In addition, since all data on Oasys is stored in the Hub-Layer, high data availability is achieved, and even if the Verse-Layer is lost, it can be completely restored.
 
 ### Private Layer 2, Not Private Blockchain
-![Private Layer2](/img/docs/solution/private-layer2.png)
+![Private Layer2](/img/docs/whitepaper/solution/private-l2.png)
 In order to achieve a multi-layered structure that can solve the Web3 dilemma, we concluded that using Layer 2 technology in blockchain games is the best solution in terms of Data Availability, Scalability, and Transaction Speed, rather than implementing a Private Sidechain.
 Since the permanent existence of game assets is crucial for blockchain games, Layer 2 technology is suitable for these games. By using rollups, all data on Layer 2 is reflected on Layer 1. This means that even if Layer 2 is down, the data is technically guaranteed to be restored as long as Layer 1 is running (high data availability). However, in the case of a private sidechain, it is not technically guaranteed.
 
@@ -25,7 +25,7 @@ Thanks to private Layer 2 transaction speed, users can experience the same seaml
 
 ### Support for ZK-rollups and New Technologies
 We believe that several Layer 2 solutions would be optimal for Oasys, but at this moment, we only support Optimistic rollups. As the development of Ethereum scaling solutions continues to progress, we will launch other suitable technologies at the right time.
-![Optimitc to ZK](/img/docs/solution/optimistic-to-zk.png)
+![Optimitc to ZK](/img/docs/whitepaper/solution/zk-support.png)
 ### Scam Resistance
 The Hub-Lyer specializes in storing and exchanging data securely and in a stable manner, so it does not allow applications to run directly. Since Verse Builders manage the Verse-Layer, each can be designed to be permissioned, semi-permissioned or permissionless, with limited or no restrictions on dApps deployed. Through their authority, the Verse Builders can reduce scam projects and encourage high quality dApps allowing them to confidently invite a wide variety of users into their Verse Layer.
 

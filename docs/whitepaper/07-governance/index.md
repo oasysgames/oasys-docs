@@ -10,7 +10,7 @@ It is designed as community-driven on-chain governance. Specifically, Oasys uses
 
 ## Principle
 Oasys’ governance is designed with the following three principles.
-![Principle](/img/docs/governance/principle.png)
+![Principle](/img/docs/whitepaper/governance/principle.png)
 ### 1. Simplicity
 Complex governance mechanisms lead to a lower turnout of voters and make it less robust. Therefore, the design should be simple to make it easy for token holders to participate in governance.
 ### 2. Legitimacy
@@ -27,6 +27,7 @@ The council is composed of members elected and delegated by the community. It is
 The committee comprises members who developed Oasys. The people who excel at certain technologies are selected by the council. In case of emergencies, the committee is responsible for fixing bugs following the technical proposal. Same as the council, the committee members can be added or removed by a majority council vote.
 
 ## Proposals
+![Proposals](/img/docs/whitepaper/governance/Proposals.png)
 ### 1. Public Proposal
 You can have the right to submit a proposal to the forum as you stake OAS tokens. The token holders and the council need to approve the proposal to be adopted. The proposal will be quickly incorporated into the development schedule as soon as approval is granted.
 ### 2. Council Proposal

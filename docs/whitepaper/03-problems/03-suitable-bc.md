@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # 3-3. Blockchain Suitable for DeFi or Games
 Given the above characteristics, DeFi and games require different functionalities of a blockchain.
-![Compatibility for DeFi and Game](/img/docs/problems/necessity-difference.png)
+![Suitable for DeFi and Games](/img/docs/whitepaper/problems/suitable-blockchain.png)
 
 ## Blockchain Suitable for DeFi
 Since DeFi Applications lock up funds, a high level of security is of the utmost importance. Therefore, decentralization and data availability are prioritized, and network stability and transaction speed are less important due to low transaction volume.

@@ -5,6 +5,7 @@ sidebar_position: 1
 # 2-1. Vision
 
 ## From Metaverse to Multiverse
+![Vision](/img/docs/whitepaper/vision/vision.png)
 In 2021, the NFT market exploded from the beginning of the year, followed by the rapid growth of blockchain games. The word and concept of Metaverse also went viral after a a particular big tech company changed its name in November.
 
 
