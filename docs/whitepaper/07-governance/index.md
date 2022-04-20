@@ -27,7 +27,8 @@ The council is composed of members elected and delegated by the community. It is
 The committee comprises members who developed Oasys. The people who excel at certain technologies are selected by the council. In case of emergencies, the committee is responsible for fixing bugs following the technical proposal. Same as the council, the committee members can be added or removed by a majority council vote.
 
 ## Proposals
-![Proposals](/img/docs/whitepaper/governance/Proposals.png)
+![Proposals](/img/docs/whitepaper/governance/proposals.png)
+
 ### 1. Public Proposal
 You can have the right to submit a proposal to the forum as you stake OAS tokens. The token holders and the council need to approve the proposal to be adopted. The proposal will be quickly incorporated into the development schedule as soon as approval is granted.
 ### 2. Council Proposal
