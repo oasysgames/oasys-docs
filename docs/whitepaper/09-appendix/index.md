@@ -3,7 +3,15 @@ sidebar_position: 1
 ---
 # Appendix
 ## Profile
-![Profile](/img/docs/whitepaper/founding/profile.png)
+**Entity Name:** OASYS PTE. LTD.  
+**Main Address:** 16 RAFFLES QUAY #16-05, HONG LEONG BUILDING, Singapore, 048581  
+**Website:** https://www.oasys.games/  
+**GitHub:** https://github.com/oasysgames  
+**Twitter:** https://twitter.com/oasys_games  
+**Discord:** https://discord.com/invite/3ysgR3yw8z  
+**Medium:** https://medium.com/@oasys  
+
+<!-- ![Profile](/img/docs/whitepaper/founding/profile.png) -->
 
 ## Disclaimers
 In relation to any and all information specified in this whitepaper, you hereby unconditionally and irrevocably accept and agree to the following.
