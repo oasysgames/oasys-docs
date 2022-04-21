@@ -7,7 +7,7 @@ sidebar_position: 2
 Oasys is founded by the industry's top game developers and Web3 companies and organizations. The Founding Team is formed by representatives from these companies and organizations.
 ![Founding Team Members](/img/docs/whitepaper/founding/founding-team.png)
 **Gabby Dizon**, Co-Founder of play-to-earn gaming guild, Yield Guild Games.  
-**Hajime Nakatani**, President and CEO of BANDAI NAMCO Research.  
+**Hajime Nakatani**, President and CEO of Bandai Namco Research.  
 **Hironobu Ueno**, CEO of double jump.tokyo.  
 **Hironao Kunimitsu**, Founder of gumi and CEO of Thirdverse.  
 **Shuji Utsumi**, entertainment business innovator and founding member of PlayStation, co-founder of Q Entertainment, and currently Co-COO of SEGA CORPORATION.  
