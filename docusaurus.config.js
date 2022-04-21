@@ -130,7 +130,7 @@ const config = {
               },
               {
                 label: 'Wthite Paper (PDF)',
-                href: '/pdfs/dummy.pdf',
+                href: '/pdfs/oasys_whitepaper_colored_v1-2.pdf',
                 target: '_blank',
               },
               {
