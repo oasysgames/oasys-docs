@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Verse-Layer, with Incredibly High UX
 
-## Outilen
+## Outline
 The Verse-Layer is Oasys' Layer 2 Blockchain. While we believe there are several optimal Layer 2 solutions that meet Oasys' requirements, the implementation we currently support is Optimism. The node implementation Optimism is forked and the minimum necessary modifications are used. The Verse-Layer is expected to be operated as a Permissioned Chain in most cases.
 
 ## Fraud Proof on Permissioned Chain

@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # NFT Bridge
 
-## Outilen
+## Outline
 The NFT's ownership information is passed between Oasys Hub-Layer (Layer 1) and other networks (Ethereum, Astar, etc.) via a PoS bridge. Various functions can be added to the NFT, however, the ownership information specified on ERC-721 cab be bridged. NFT is bridged via bridge contracts deployed on each network.
 
 ## Handling of NFTs
