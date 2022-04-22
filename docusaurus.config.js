@@ -125,16 +125,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Wthite Paper',
+                label: 'White Paper',
                 to: '/docs/whitepaper/intro',
               },
               {
-                label: 'Wthite Paper (PDF)',
-                href: '/pdfs/oasys_whitepaper_colored_v1-2.pdf',
+                label: 'White Paper (PDF)',
+                href: '/pdfs/oasys_whitepaper_v1-2.pdf',
                 target: '_blank',
               },
               {
-                label: 'Technical Meterials',
+                label: 'Technical Materials',
                 to: '/docs/techdocs/intro',
               },
               {

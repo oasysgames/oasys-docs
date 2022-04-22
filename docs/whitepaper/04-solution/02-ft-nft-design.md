@@ -18,7 +18,7 @@ FT/NFT bridges are available: vFT and exFT for FT; and vNFT and exNFT for NFT.
 ### Oasys NFT Bridge
 For NFT transfers between Verses, Oasys provides an official bridge. The genuine bridge uses the Lock & Mint method. Tokens are locked on the chain before the bridge and minted on the chain after the bridge.
 ### High-security Cross-chain Bridges
-Many cross-chain bridges are vulnerable to being targeted by hackers because they hold large amounts of money in reserve as liquidity. aOnce exploited, the problem can spread throughout the entire ecosystem, posing a significant risk.
+Many cross-chain bridges are vulnerable to being targeted by hackers because they hold large amounts of money in reserve as liquidity. Once exploited, the problem can spread throughout the entire ecosystem, posing a significant risk.
 
 Oasys enables secure bridging between Hub-Layer and Verse-Layer and between Verse-Layers without the intervention of a centralized third-party bridge operator.
 
