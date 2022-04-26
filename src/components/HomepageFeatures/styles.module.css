@@ -19,21 +19,6 @@
   align-items: center;
   transition: .4s !important;
 }
-/* 
-.topPageLink:after {
-  -webkit-font-feature-settings: "liga";
-  bottom: 3rem;
-  color: var(--silverColor);
-  content: "arrow_upward";
-  font-family: Material Icons;
-  font-size: 1.5rem;
-  left: 50%;
-  opacity: 1;
-  opacity: 0;
-  position: absolute;
-  transform: translate(-50%);
-  transition: .2s ease-in-out;
-}*/
 
 .topPageLink:hover {
   box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%);

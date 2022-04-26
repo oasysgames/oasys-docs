@@ -90,23 +90,10 @@ const config = {
           {
             type: 'doc',
             docId: 'techdocs/intro',
-            // docId: 'techdocs/technologies/hub-layer',
             position: 'left',
             label: 'Technical Materials',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'doc2',
-          //   position: 'left',
-          //   label: 'Technical Document',
-          // },
           // {to: '/blog', label: 'Blog', position: 'left'},
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'White Paper',
-          // },
           {
             type: 'localeDropdown',
             position: 'right',
@@ -185,7 +172,6 @@ const config = {
   //   defaultLocale: 'en',
   //   locales: ['en', 'ja'],
   // },
-  
 };
 
 module.exports = config;
