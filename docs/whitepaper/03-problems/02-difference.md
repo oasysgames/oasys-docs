@@ -16,7 +16,7 @@ The transaction volume of blockchain games is massive compared to DeFi. The tran
 ![DAO - DeFi vs Games](/img/docs/whitepaper/problems/dao-defi-games.png)
 Foundations and developers develop DeFi Applications with the end goal of having them managed by a DAO eventually.  The ultimate plan is to have a perfect system that is bug-free, secure, and stable.
 
-On the other hand, blockchain games require continuous updating of game content and service operations. The goal is to improve the game continually. Daily content updates, new playable characters, or item drops are essential to increase user engagement and decrease churn.
+On the other hand, blockchain games require continuous updating of game contents and service operations. The goal is to improve the game continually. Daily content updates, new playable characters, or item drops are essential to maintain the user engagement high and the churn rate low.
 
 For these reasons, DeFi can become a DAO, decentralized autonomous organization. However, blockchain games cannot become a DAO, since a game cannot be automatically developed or updated.
 
