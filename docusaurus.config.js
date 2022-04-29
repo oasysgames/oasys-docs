@@ -8,14 +8,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Oasys',
   tagline: 'Oasys Blockchain for Games',
-  url: 'https://docusaurus-2.netlify.app', // Url to your site with no trailing slash
+  url: 'https://docs.oasys.games', // Url to your site with no trailing slash
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/general/OASYS_favicon.png',
-  organizationName: 'hideto0118', // Usually your GitHub org/user name.
-  projectName: 'docusaurus-test', // Usually your repo name.
+  organizationName: 'oasysgames', // Usually your GitHub org/user name.
+  projectName: 'oasys-docs', // Usually your repo name.
   // themes: ['@docusaurus/theme-search-algolia'],
 
   presets: [
@@ -49,7 +49,8 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      
+      // metadata: [{name: 'keywords', content: 'cooking, blog'}],
+      image: 'img/general/oasys_logo.jpeg',
       // algolia: {
       //   // The application ID provided by Algolia
       //   appId: 'YOUR_APP_ID',
@@ -73,7 +74,6 @@ const config = {
   
       //   //... other Algolia params
       // },
-
       navbar: {
         title: '',
         logo: {
