@@ -29,7 +29,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Homepage ${siteConfig.title}`}
+      title={`Homepage`}
       description="Documentation of Oasys. Oasys is an eco-friendly blockchain built for the gaming community, offering the best user experience with fast transactions and zero gas fees.">
       {/* <HomepageHeader /> */}
       <main>
