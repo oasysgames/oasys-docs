@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Blockchain for The Games. Oasys Documentation">
       {/* <HomepageHeader /> */}
       <main>
         <HomepageFeatures />
