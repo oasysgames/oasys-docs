@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Oasys',
+  title: 'Oasys Documentation',
   tagline: 'Oasys Blockchain for Games',
   url: 'https://docs.oasys.games', // Url to your site with no trailing slash
   baseUrl: '/',
