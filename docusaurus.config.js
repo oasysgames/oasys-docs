@@ -117,7 +117,7 @@ const config = {
               },
               {
                 label: 'White Paper (PDF)',
-                href: '/pdfs/Oasys_whitepaper.pdf',
+                href: '/pdfs/Oasys_WhitePaper.pdf',
                 target: '_blank',
               },
               {
