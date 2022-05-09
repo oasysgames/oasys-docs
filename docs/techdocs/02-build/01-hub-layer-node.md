@@ -18,9 +18,10 @@ id: hub-layer
 ### Firewall Settings
 - TCP/UDP port 30303 allowed (for P2P between nodes)
 - TCP port 8545 allowed (for RPC)
-
+---
 ### Validator Build Steps
-1. Download the Oasys geth binary from github (coming soon) and place it in any directory. (Or build it according to README.md)
+1. Download the Oasys geth binary from [github](https://github.com/oasysgames/oasys-validator) and place it in any directory (e.g. /usr/local/bin).  
+(Or build it according to README.md)
 2. Create an OS user to be used by geth.
 ```
 $ sudo useradd -s /sbin/nologin geth
@@ -28,9 +29,17 @@ $ sudo mkdir /home/geth
 $ sudo chown geth:geth /home/geth
 $ sudo chmod 700 /home/geth
 ```
-3. Download the configuration file (genesis.json) for the genesis block.
+3. Download the configuration file for the genesis block from [github](https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/genesis.zip).
 ```
-$ wget (coming soon) -O /home/geth/genesis.json
+$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/genesis.zip
+
+$ unzip genesis.zip
+Archive:  genesis.zip
+   creating: genesis/
+  inflating: genesis/mainnet.json
+  inflating: genesis/testnet.json
+
+$ mv genesis/{target network}.json /home/geth/genesis.json
 ```
 
 4. Create a genesis block.
@@ -56,7 +65,11 @@ INFO [03-14|12:07:35.106] Maximum peer count ETH=50 LES=0 total=50 INFO [03-14|1
 
 5. Save bootstrap node configuration to `/home/geth/.ethereum/geth/static-nodes.json`
 ```
-[ "enode://093c363d9fa759b58cb0a59d8ca664b4b4981873dc0305b113edf6d0c865089ed9894300b385e58bb3da2f7b8b575170522c5f542a9d47cbff7d28d3c8c8dd65@35.75.212.171:30303" ]
+# For mainnet
+[ "enode://093c363d9fa759b58cb0a59d8ca664b4b4981873dc0305b113edf6d0c865089ed9894300b385e58bb3da2f7b8b575170522c5f542a9d47cbff7d28d3c8c8dd65@35.73.174.118:30303" ]
+
+# For testnet
+[ "enode://4a85df39ec500acd31d4b9feeea1d024afee5e8df4bc29325c2abf2e0a02a34f6ece24aca06cb5027675c167ecf95a9fc23fb7a0f671f84edb07dafe6e729856@35.77.156.6:30303" ]
 ```
 6. Creates a secret key to be used by geth.
 ```
@@ -80,24 +93,25 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 - You must BACKUP your key file! Without the key, it's impossible to access account funds!
 - You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
 ```
-**Important: Keep the secret key and password in a safe place.**
+**Important: Keep the secret key and password in a safe place.**  
+
 7. Save the secret key password to a text file.
 ```
- $ echo {YOUR_PASSWORD} > /home/geth/.ethereum/password.txt
- ```
- 8. Start geth. For YOUR_ACCOUNT_ADDRES, use the secret key address you just created.
- ```
- $ sudo -u geth geth \
-  --networkid 248 \
-  --syncmode full --gcmode archive \
-  --mine --allow-insecure-unlock \
-  --unlock {YOUR_ACCOUNT_ADDRESS} \
-  --password /home/geth/.ethereum/password.txt \
-  --http --http.addr 0.0.0.0 --http.port 8545 \
-  --http.vhosts '*' --http.corsdomain '*' \
-  --http.api net,eth,web3
-  ```
-  9. Immediately after startup, the block synchronization process takes place. The progress of synchronization can be checked with the following command. 
+ $ vi /home/geth/.ethereum/password.txt
+```
+8. Start geth. For `YOUR_ACCOUNT_ADDRES`, use the secret key address you just created.
+```
+$ sudo -u geth geth \
+ --networkid 248 \
+ --syncmode full --gcmode archive \
+ --mine --allow-insecure-unlock \
+ --unlock {YOUR_ACCOUNT_ADDRESS} \
+ --password /home/geth/.ethereum/password.txt \
+ --http --http.addr 0.0.0.0 --http.port 8545 \
+ --http.vhosts '*' --http.corsdomain '*' \
+ --http.api net,eth,web3
+```
+9. Immediately after startup, the block synchronization process takes place. The progress of synchronization can be checked with the following command. 
 ```
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 {
