@@ -14,6 +14,7 @@ id: hub-layer
 | CPU     | 2 Core / 1.8GHz / x86_64 or ARM   |
 | RAM     | 8GB DISK： 100GB SSD              |
 | Network | 100Mbps                           |
+10,000,000 OAS is required to validate the Hub-Layer node.  
 
 ### Firewall Settings
 - TCP/UDP port 30303 allowed (for P2P between nodes)
@@ -29,7 +30,7 @@ $ sudo mkdir /home/geth
 $ sudo chown geth:geth /home/geth
 $ sudo chmod 700 /home/geth
 ```
-3. Download the configuration file for the genesis block from [github](https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/genesis.zip).
+3. Download the configuration file for the genesis block from [github](https://github.com/oasysgames/oasys-validator/releases).
 ```
 $ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/genesis.zip
 
