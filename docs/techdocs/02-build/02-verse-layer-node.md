@@ -13,6 +13,7 @@ sidebar_label: Verse-Layer node build (Optimism)
 | CPU     | 2 Core / 1.8GHz / x86_64   |
 | RAM     | 8GB DISK： 100GB SSD       |
 | Network | 100Mbps                    |
+10,000,000 OAS is required to validate the Verse-Layer node.  
 
 ### Firewall Settings
 - TCP port 8545 allowed (for RPC)
