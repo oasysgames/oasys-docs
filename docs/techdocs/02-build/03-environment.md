@@ -3,7 +3,7 @@ sidebar_position: 4
 sidebar_label: Chain Environment
 ---
 
-# Environment
+# Chain Environment
 ## Mainnet
 |                 |                                    |
 |-----------------|------------------------------------|
