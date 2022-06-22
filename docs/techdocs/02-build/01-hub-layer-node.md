@@ -35,11 +35,13 @@ id: hub-layer
 - TCP/UDP port 30303 allowed (for P2P between nodes)
 - TCP port 8545 allowed (for RPC)
 ---
-### Express Setup 
+## Express Setup 
 
 Note that We've tested Express Setup on CentOS, so command may differ on other OS.
 
-1. Check command `unzip` and `wget` is installed. If not, please install. 
+### 1. Check command `unzip` and `wget` is installed
+
+Check `unzip` and `wget` is installed. If not, please install.
 
 　Cent os:
 ```
@@ -52,19 +54,19 @@ $apt install unzip
 $apt install wget
 ```
 
-2. Download setup.sh File.
+### 2. Download setup.sh File.
 ```
 $ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha4/setup.sh
 ```
-3. On download location, Please give permission to setup.sh file.
+### 3. On download location, Please give permission to setup.sh file
 ```
 $ sudo chmod +x setup.sh
 ```
-4. Start setup.sh 
+### 4. Start setup.sh 
 ```
 $ ./setup.sh
 ```
-5. Check `sestatus`
+### 5. Check `sestatus`
 
 　On CentOs, sometimes `sestatus` stops to run geth, so you need to change：
 
@@ -107,7 +109,7 @@ SELINUXTYPE=targeted
 　And restart system. 
 
 
-6. Start Geth
+### 6. Start Geth
 
 
 Start geth:
@@ -120,7 +122,7 @@ $ systemctl status geth
 ```
 
 
-7. Checking Block Sync Status
+### 7. Checking Block Sync Status
 
 
 　CentOs Default: 
@@ -134,17 +136,24 @@ $ sudo -u geth /usr/local/bin/geth attach ipc:/home/geth/.ethereum/geth.ipc --ex
 
 
 
-### Manual Setup 
-1. Download the Oasys geth binary from [github](https://github.com/oasysgames/oasys-validator) and place it in any directory (e.g. /usr/local/bin).  
+## Manual Setup 
+### 1. Download the Oasys geth binary from [github]
+
+Download from (https://github.com/oasysgames/oasys-validator) and place it in any directory (e.g. /usr/local/bin).  
 (Or build it according to README.md)
-2. Create an OS user to be used by geth.
+### 2. Create an OS user to be used by geth.
 ```
 $ sudo useradd -s /sbin/nologin geth
 $ sudo mkdir /home/geth
 $ sudo chown geth:geth /home/geth
 $ sudo chmod 700 /home/geth
 ```
-3. Download the configuration file for the genesis block from [github](https://github.com/oasysgames/oasys-validator/releases).
+### 3. Download the configuration file for the genesis block from [github]
+
+You can download configuration files on here, 
+(https://github.com/oasysgames/oasys-validator/releases)
+
+Or can download with using `wget` command. 
 ```
 $ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/genesis.zip
 
@@ -157,7 +166,7 @@ Archive:  genesis.zip
 $ mv genesis/{target network}.json /home/geth/genesis.json
 ```
 
-4. Create a genesis block.
+### 4. Create a genesis block.
 ```
 $ sudo -u geth geth init /home/geth/genesis.json
 ```
@@ -178,15 +187,22 @@ INFO [03-14|12:07:35.122] Successfully wrote genesis state         database=ligh
 INFO [03-14|12:07:35.106] Maximum peer count ETH=50 LES=0 total=50 INFO [03-14|12
 ```
 
-5. Save bootstrap node configuration to `/home/geth/.ethereum/geth/static-nodes.json`
-```
-# For mainnet
-[ "enode://093c363d9fa759b58cb0a59d8ca664b4b4981873dc0305b113edf6d0c865089ed9894300b385e58bb3da2f7b8b575170522c5f542a9d47cbff7d28d3c8c8dd65@35.73.174.118:30303" ]
+### 5. Save bootstrap node configuration 
 
-# For testnet
-[ "enode://4a85df39ec500acd31d4b9feeea1d024afee5e8df4bc29325c2abf2e0a02a34f6ece24aca06cb5027675c167ecf95a9fc23fb7a0f671f84edb07dafe6e729856@35.77.156.6:30303" ]
+Save configuration information to `/home/geth/.ethereum/geth/static-nodes.json`
+
+For mainnet:
+
 ```
-6. Creates a secret key to be used by geth.
+"enode://093c363d9fa759b58cb0a59d8ca664b4b4981873dc0305b113edf6d0c865089ed9894300b385e58bb3da2f7b8b575170522c5f542a9d47cbff7d28d3c8c8dd65@35.73.174.118:30303" 
+```
+
+For testnet:
+```
+"enode://4a85df39ec500acd31d4b9feeea1d024afee5e8df4bc29325c2abf2e0a02a34f6ece24aca06cb5027675c167ecf95a9fc23fb7a0f671f84edb07dafe6e729856@35.77.156.6:30303"
+```
+
+### 6. Creates a secret key to be used by geth.
 ```
  $ sudo -u geth geth account new
 ```
@@ -210,11 +226,14 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 ```
 **Important: Keep the secret key and password in a safe place.**  
 
-7. Save the secret key password to a text file.
+### 7. Save the secret key password to a text file
 ```
  $ vi /home/geth/.ethereum/password.txt
 ```
-8. Start geth. For `YOUR_ACCOUNT_ADDRES`, use the secret key address you just created.
+### 8. Start geth
+
+For `YOUR_ACCOUNT_ADDRES`, use the secret key address you just created.
+
 ```
 $ sudo -u geth geth \
  --networkid 248 \
@@ -226,12 +245,16 @@ $ sudo -u geth geth \
  --http.vhosts '*' --http.corsdomain '*' \
  --http.api net,eth,web3
 ```
-9. Immediately after startup, the block synchronization process takes place. The progress of synchronization can be checked with the following command. 
+### 9. Block Sync
+
+Immediately after startup, the block synchronization process takes place. The progress of synchronization can be checked with the following command. 
 
 Please check installed directory, and write the command below to check sync:
 
 ```
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
+```
+
 
 You can see following result：
 
@@ -244,7 +267,9 @@ You can see following result：
   startingBlock: 0
 }
 ```
-Synchronization is complete when the output changes to `false`.
+
+When Synchronization is complete, you can see output`false`.
+
 ```
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 false
