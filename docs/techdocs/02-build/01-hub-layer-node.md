@@ -1,40 +1,11 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 sidebar_label: Hub-Layer node build
 id: hub-layer
 ---
 
 # Hub-Layer node build
-## Server Environment
 
-### Minimum Requrement
-
-|         |                                   |
-|---------|-----------------------------------|
-| OS      | Linux                             |
-| CPU     | 2 Core / 1.8GHz / x86_64 or ARM   |
-| RAM     | 8GB                               |
-| DISK    | 500GB SSD                         |
-| Network | 100Mbps                           |
-
-### Recommended Environment
-
-|         |                                   |
-|---------|-----------------------------------|
-| OS      | Linux                             |
-| CPU     | 4 Core / 1.8GHz / x86_64 or ARM   |
-| RAM     | 16GB                              |
-| DISK    | 500GB SSD                         |
-| Network | 100Mbps                           |
-
-
-**10,000,000 OAS is required to validate the Hub-Layer node.** 
-
-
-### Firewall Settings
-- TCP/UDP port 30303 allowed (for P2P between nodes)
-- TCP port 8545 allowed (for RPC)
----
 ## Express Setup 
 
 Note that We've tested Express Setup on CentOS, so command may differ on other OS.

@@ -6,7 +6,7 @@ id: requirements
 
 # Hardware Requirements
 
-## Hub-Layer Server Hardware Requirements
+## Hub-Layer Hardware Requirements
 
 ### Minimum Requrement
 

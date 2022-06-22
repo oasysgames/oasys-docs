@@ -1,23 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 sidebar_label: Verse-Layer node build (Optimism)
 ---
 
-# Verse-Layer node build (Optimism)
-## Server Environment
+# Verse-Layer Node Build (Optimism)
 
-### Recommended Environment
-|         |                            |
-|---------|----------------------------|
-| OS      | Linux                      |
-| CPU     | 2 Core / 1.8GHz / x86_64   |
-| RAM     | 8GB DISK： 100GB SSD       |
-| Network | 100Mbps                    |
-1,000,000 OAS is required to validate the Verse-Layer node.  
-
-### Firewall Settings
-- TCP port 8545 allowed (for RPC)
----
 ### Validator Build Steps
 #### Prepare
 Clone the [Optimism repository](https://github.com/oasysgames/verse-layer-optimism) provided by the Oasys Foundation.
