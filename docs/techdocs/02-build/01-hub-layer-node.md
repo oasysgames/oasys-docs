@@ -7,20 +7,125 @@ id: hub-layer
 # Hub-Layer node build
 ## Server Environment
 
-### Recommended Environment
+### Minimum Requrement
+
 |         |                                   |
 |---------|-----------------------------------|
 | OS      | Linux                             |
 | CPU     | 2 Core / 1.8GHz / x86_64 or ARM   |
-| RAM     | 8GB DISK： 100GB SSD              |
+| RAM     | 8GB                               |
+| DISK    | 500GB SSD                         |
 | Network | 100Mbps                           |
-10,000,000 OAS is required to validate the Hub-Layer node.  
+
+### Recommended Environment
+
+|         |                                   |
+|---------|-----------------------------------|
+| OS      | Linux                             |
+| CPU     | 4 Core / 1.8GHz / x86_64 or ARM   |
+| RAM     | 16GB                              |
+| DISK    | 500GB SSD                         |
+| Network | 100Mbps                           |
+
+
+**10,000,000 OAS is required to validate the Hub-Layer node.** 
+
 
 ### Firewall Settings
 - TCP/UDP port 30303 allowed (for P2P between nodes)
 - TCP port 8545 allowed (for RPC)
 ---
-### Validator Build Steps
+### Express Setup 
+
+Note that We've tested Express Setup on CentOS, so command may differ on other OS.
+
+1. Check command `unzip` and `wget` is installed. If not, please install. 
+
+Cent os:
+```
+$yum install unzip
+$yum install wget
+```
+Ubuntu:
+```
+$apt install unzip
+$apt install wget
+```
+
+2. Download setup.sh File.
+```
+$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha4/setup.sh
+```
+3. On download location, Please give permission to setup.sh file.
+```
+$ sudo chmod +x setup.sh
+```
+4. Start setup.sh 
+```
+$ ./setup.sh
+```
+5. Check `sestatus`
+
+On CentOs, sometimes `sestatus` stops to run geth, so you need to change  
+```
+$ sestatus
+```
+then, following result will out:
+
+```
+SELinux status:                 enabled
+SELinuxfs mount:                /sys/fs/selinux
+SELinux root directory:         /etc/selinux
+Loaded policy name:             targeted
+Current mode:                   enforcing
+Mode from config file:          permissive
+Policy MLS status:              enabled
+Policy deny_unknown status:     allowed
+Memory protection checking:     actual (secure)
+Max kernel policy version:      33
+```
+
+We recommended to change enforcing onto permissive. 
+
+Open the /etc/selinux/config file and change the SELINUX value to disabled:
+
+```
+This file controls the state of SELinux on the system.
+SELINUX= can take one of these three values:
+       enforcing - SELinux security policy is enforced.
+      permissive - SELinux prints warnings instead of enforcing.
+       disabled - No SELinux policy is loaded.
+SELINUX=disabled
+SELINUXTYPE= can take one of these three values:
+     targeted - Targeted processes are protected,
+     minimum - Modification of targeted policy. Only selected processes are protected. 
+     mls - Multi Level Security protection.
+SELINUXTYPE=targeted
+```
+
+And restart system. 
+
+6. Start Geth
+
+Start geth:
+```
+$ systemctl start geth
+```
+Checking Node Status:
+```
+$ systemctl status geth
+```
+
+7. Checking Block Sync Status
+
+CentOs Default: 
+
+```
+$ sudo -u geth /usr/local/bin/geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
+```
+
+
+### Manual Setup 
 1. Download the Oasys geth binary from [github](https://github.com/oasysgames/oasys-validator) and place it in any directory (e.g. /usr/local/bin).  
 (Or build it according to README.md)
 2. Create an OS user to be used by geth.
@@ -113,6 +218,9 @@ $ sudo -u geth geth \
  --http.api net,eth,web3
 ```
 9. Immediately after startup, the block synchronization process takes place. The progress of synchronization can be checked with the following command. 
+
+Please check installed directory, and write the command below to check sync:
+
 ```
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 {
