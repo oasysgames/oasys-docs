@@ -41,12 +41,12 @@ Note that We've tested Express Setup on CentOS, so command may differ on other O
 
 1. Check command `unzip` and `wget` is installed. If not, please install. 
 
-Cent os:
+　Cent os:
 ```
 $yum install unzip
 $yum install wget
 ```
-Ubuntu:
+　Ubuntu:
 ```
 $apt install unzip
 $apt install wget
@@ -66,11 +66,12 @@ $ ./setup.sh
 ```
 5. Check `sestatus`
 
-On CentOs, sometimes `sestatus` stops to run geth, so you need to change  
+　On CentOs, sometimes `sestatus` stops to run geth, so you need to change：
+
 ```
 $ sestatus
 ```
-then, following result will out:
+　then, following result will out:
 
 ```
 SELinux status:                 enabled
@@ -85,9 +86,9 @@ Memory protection checking:     actual (secure)
 Max kernel policy version:      33
 ```
 
-We recommended to change enforcing onto permissive. 
+　We recommended to change enforcing onto `permissive`. 
 
-Open the /etc/selinux/config file and change the SELINUX value to disabled:
+　Open the `/etc/selinux/config` file and change the SELINUX value to disabled:
 
 ```
 This file controls the state of SELinux on the system.
@@ -103,9 +104,11 @@ SELINUXTYPE= can take one of these three values:
 SELINUXTYPE=targeted
 ```
 
-And restart system. 
+　And restart system. 
+
 
 6. Start Geth
+
 
 Start geth:
 ```
@@ -116,13 +119,19 @@ Checking Node Status:
 $ systemctl status geth
 ```
 
+
 7. Checking Block Sync Status
 
-CentOs Default: 
+
+　CentOs Default: 
 
 ```
 $ sudo -u geth /usr/local/bin/geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 ```
+
+
+---
+
 
 
 ### Manual Setup 
@@ -153,7 +162,7 @@ $ mv genesis/{target network}.json /home/geth/genesis.json
 $ sudo -u geth geth init /home/geth/genesis.json
 ```
 
-The following will be output.
+　The following will be output.
 ```
 INFO [03-14|12:07:35.106] Maximum peer count                       ETH=50 LES=0 total=50
 INFO [03-14|12:07:35.106] Smartcard socket not found, disabling    err="stat /run/pcscd/pcscd.comm: no such file or directory"
@@ -223,6 +232,10 @@ Please check installed directory, and write the command below to check sync:
 
 ```
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
+
+You can see following result：
+
+```
 {
   currentBlock: 34559,
   highestBlock: 203190,
