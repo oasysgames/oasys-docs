@@ -54,11 +54,13 @@ $apt install unzip
 $apt install wget
 ```
 
-### 2. Download setup.sh File.
+### 2. Download Setup File
 ```
 $ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha4/setup.sh
 ```
-### 3. On download location, Please give permission to setup.sh file
+### 3. Giving Permission to Setup file  
+
+Please navigate to downloaded location and give permission to setup.sh file.
 ```
 $ sudo chmod +x setup.sh
 ```
