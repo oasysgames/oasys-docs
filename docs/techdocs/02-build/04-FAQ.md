@@ -27,6 +27,8 @@ INFO [05-30|10:00:52.359] Imported new chain segment blocks=1 txs=0 mgas=0.000 e
 
 ### Restore Public key& Address
 
+You can run python 3 script, with following commands : 
+
 ```
 from eth_account._utils.legacy_transactions import (
     serializable_unsigned_transaction_from_dict,
