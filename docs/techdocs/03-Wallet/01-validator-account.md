@@ -7,7 +7,7 @@ sidebar_label: Validator Account
 
 Oasys is Using PoS system、 which is having two different account type for validators.
 
-**Owner Account**
+**Owner Account** <br>
 **Operator Account**
 
 The Operator account is the account that the node(geth) uses to sign the block (the account created in Step.6 will be used).
