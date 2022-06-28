@@ -18,5 +18,5 @@ The Owner account is the account used to register the Operator address with Stak
 
 The Owner account is only used to sign transactions, so you can increase security by using a hardware wallet.
     
-Due to the separation of Owner and Operator accounts, even if Operator's private key is leaked, Owner simply registers the new Operator address in Staking Contract.
+Due to the separation of Owner and Operator accounts, even if Operator's private key is leaked, Owner can simply register the new Operator address in Staking Contract.
 Also, there is no need for Stakers to change the staking destination.
