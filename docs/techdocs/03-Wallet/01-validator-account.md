@@ -10,7 +10,7 @@ Oasys is Using PoS system、 which is having two different account type for vali
 **Owner Account** <br>
 **Operator Account**
 
-The Operator account is the account that the node(geth) uses to sign the block (the account created in Step.6 will be used).
+The Operator account is the account that the node(geth) uses to sign the block (the account created in Manual setup Step.6 in Hub layer node will be used).
 
 There is a high risk of leakage because the operator account private key must be placed on the node disk.
     
