@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-sidebar_label: Transfer
+sidebar_label: Commands
 ---
 
-## Wallet
+## Wallet Commands
 
 ### Start `Geth` to run commands.
 
