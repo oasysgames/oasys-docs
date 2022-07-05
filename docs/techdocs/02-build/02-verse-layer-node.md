@@ -20,8 +20,9 @@ docker-compose run --rm wallet
 The created wallets will be saved to `./data/wallet/keys.txt`.
 
 Notes:  
-**1. These wallets requires some tokens to run Verse-Layer. For testnet, you can get a token from [Faucet](https://faucet.testnet.oasys.games/).**   
-**2. Be sure to back up this file!**
+1. These wallets requires some tokens to run Verse-Layer. For testnet, you can get a token from [Faucet](https://faucet.testnet.oasys.games/).
+2. Be sure to back up this file!
+
 - You can share your public address with anyone. Others need it to interact with you.
 - You must NEVER share the secret key with anyone! The key controls access to your funds!
 - You must BACKUP your key file! Without the key, it's impossible to access account funds!
