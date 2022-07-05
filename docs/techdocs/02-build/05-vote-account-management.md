@@ -3,22 +3,18 @@ sidebar_position: 6
 sidebar_label: Validator Account
 ---
 
-# Vote Account Management
+# Validator Account
 
 ## Participating POS
-
-### Account information 
-
-
     
-### Download CLI Tool
+## Download CLI Tool
 
 To run the Staking Contract, Please download CLI tool in Github.
     
     https://github.com/oasysgames/oasys-pos-cli/releases
 
     
-### 1. Making owner account
+## 1. Making owner account
 
 Create a private key for the Owner account.
 We are working on hardware wallet support.
@@ -33,19 +29,19 @@ Address : 0x0123456789abcdef...
 Key     : 0x0123456789abcdef0123456789abcdef...
 ```
 
-### 2. Obtaining OAS From Faucet
+## 2. Obtaining OAS From Faucet
 
 You may need gas fees to stake tokens. So Please check you have sufficient gas. If not, you can go to faucet to obtain tokens.
 
 https://faucet.testnet.oasys.games/
     
-### 3. Register as a Validator
+## 3. Register as a Validator
     
 Using CLI Tool, You must register your Address to Staking Contract.
     
 `PRIVATE_KEY` is for Enviornment Settings, Please Use Password of Owner's Account.
     
-#### `--operator` Account Setting
+### `--operator` Account Setting
 
 You can make account if not having one : 
 ```
@@ -63,13 +59,13 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 
 Please Set the geth address with selected address on Secret file : 
 
-#### Export Private Key 
+### Export Private Key 
     
 ```
 $ export PRIVATE_KEY=0x0123456789abcdef0123456789abcdef...
 ```
 
-#### Joining as a validator 
+### Joining as a validator 
     
 ```
 $ oaspos validator:join --network testnet --operator 0x0123456789abcdef...
@@ -80,12 +76,12 @@ If you successfully done, following output will show up. This means you are done
 sending (tx: 0x0123456789abcdef)...: success with 130999 gas
 ```
     
-### 4. If you ended for setting up, please contact Oasys Team to obtain 10M OAS Token 
+## 4. If you ended for setting up, please contact Oasys Team to obtain 10M OAS Token 
 
 To be a Hub-Layer Validator, Staking 10M OAS Token is required. 
     
     
-### 5. Confirming Staking
+## 5. Confirming Staking
 
 After your staking is done, You may check Staking Status with following command : 
     
