@@ -76,7 +76,7 @@ If you successfully done, following output will show up. This means you are done
 sending (tx: 0x0123456789abcdef)...: success with 130999 gas
 ```
     
-## 4. If you ended for setting up, please contact Oasys Team to obtain 10M OAS Token 
+## 4. Balance Required
 
 To be a Hub-Layer Validator, Staking 10M OAS Token is required. 
     
