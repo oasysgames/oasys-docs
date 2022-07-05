@@ -3,7 +3,7 @@ sidebar_position: 2
 sidebar_label: Validator Account
 ---
 
-## About Validator Account 
+# About Validator Account 
 
 Oasys is Using PoS system、 which is having two different account type for validators.
 

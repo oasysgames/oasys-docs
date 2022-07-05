@@ -3,7 +3,7 @@ sidebar_position: 3
 sidebar_label: Commands
 ---
 
-## Wallet Commands
+# Wallet Commands
 
 ### Start `Geth` to run commands.
 
@@ -31,6 +31,3 @@ Check `Amount_Want_To_Send` having 18 digits below 0.
 ```
 $eth.sendTransaction({from: "Sender_Address",to: "Receiver_Address", value: "Amount_Want_To_Send"})
 ```
-
-
-###
