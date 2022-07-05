@@ -78,7 +78,7 @@ sending (tx: 0x0123456789abcdef)...: success with 130999 gas
     
 ## 4. Balance Required
 
-To be a Hub-Layer Validator, Staking 10M OAS Token is required. 
+To be a Hub-Layer Validator, Staking 10M OAS Token is required. Please prepare 10M Tokens to stake. 
     
     
 ## 5. Confirming Staking
