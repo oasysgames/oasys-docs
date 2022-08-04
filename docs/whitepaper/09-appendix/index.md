@@ -4,8 +4,7 @@ sidebar_position: 1
 # Appendix
 ## Profile
 **Entity Name:** OASYS PTE. LTD.  
-**Main Address:** 18 Robinson Road #20-02, 18 Robinson, Singapore, 048547
- 
+**Main Address:** 18 Robinson Road #20-02, 18 Robinson, Singapore, 048547 
 **Website:** https://www.oasys.games/  
 **GitHub:** https://github.com/oasysgames  
 **Twitter:** https://twitter.com/oasys_games  
