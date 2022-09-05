@@ -6,6 +6,10 @@ id: requirements
 
 # Hardware Requirements
 
+## Intro
+
+Blockchain it self stores data onto decentralized storage. Syncing block, Sharing block it self makes stable usage for blockchain network. Since producing more block needs storage, if system elapsed time, and stacked lots of block, you may have to increase disk storage for stable node operations on future.
+
 ## Hub-Layer Hardware Requirements
 
 ### Minimum Requrement
@@ -41,7 +45,7 @@ id: requirements
 | DISK    | 500GB SSD                  |
 | Network | 100Mbps                    |
 
-Verse uses more CPU. Using Higher CPU when having much pending transaction in Verse can have a different verse transaction processing speed for Verse. 
+Verse uses more CPU. Using Higher Frequency for CPU when having much pending transaction in Verse can have a higher verse transaction processing speed for Verse. 
 
 **1,000,000 OAS is required to validate the Verse-Layer node.**
 

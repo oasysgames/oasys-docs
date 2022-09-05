@@ -7,7 +7,6 @@ sidebar_label: Verse-Layer node build (Optimism)
 
 ## Validator Build Steps
 
-
 ## 1. Requirements
 
 Docker Engine v20.10.0 or later and docker-compose v2.0 or later are required.
@@ -201,3 +200,9 @@ docker-compose up -d l2geth
 docker-compose up -d batch-submitter
 docker-compose up -d message-relayer
 ```
+## Permissioned chain
+
+For running verse builder, by considering follwing parameter on permissioned chain may help: 
+
+By deploying permission-less makes scam or non-approved contract, which makes user unsafe. 
+By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by limiting proxy. 

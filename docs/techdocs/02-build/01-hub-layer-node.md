@@ -4,11 +4,19 @@ sidebar_label: Hub-Layer node build
 id: hub-layer
 ---
 
+
+
+
 # Hub-Layer node build
+
+## Check Requirements
+
+Please Check [Validator_Requirements](https://docs.oasys.games/docs/techdocs/build/requirements) Prior to setup. 
 
 ## Express Setup 
 
 Note that We've tested Express Setup on CentOS, so command may differ on other OS.
+You can run any Linux OS for nodes.
 
 ### 1. Check command `unzip` and `wget` is installed
 

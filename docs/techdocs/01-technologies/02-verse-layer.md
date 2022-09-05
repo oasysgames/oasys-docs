@@ -12,3 +12,8 @@ It takes 7 days for decentralized fraud proof for Optimistic rollup. However, we
 
 ## Verse Builder
 Anyone can build a verse if the deposit is more than 1 million OAS on the verse contract. On the Verse-Layer, a Verse Builder takes care of node operations and it is necessary to operate the server properly. Also, you can configure what smart contracts can be deployed and what transactions can be executed without any gas.
+
+## Free Gas For Users
+On Oasys verse,users don't have to pay gas fees, which is paid by verse operators. 
+By taking transacation fees from verse builders, it can maintain sustainablity.
+

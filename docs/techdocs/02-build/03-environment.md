@@ -27,3 +27,4 @@ sidebar_label: Chain Environment
 | Currency Symbol | OAS                                        |
 | RPC             | https://rpc.sandverse.oasys.games/         |
 | Explorer        | https://explorer.sandverse.oasys.games/    |
+| Web Socket      | wss://ws.sandverse.oasys.games             |
