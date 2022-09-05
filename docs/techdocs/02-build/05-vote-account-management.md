@@ -1,9 +1,9 @@
 ---
 sidebar_position: 6
-sidebar_label: Validator Account
+sidebar_label: Vote Account Management
 ---
 
-# Validator Account
+# Vote Account Management
 
 ## Participating POS
     
