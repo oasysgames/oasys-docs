@@ -1,7 +1,7 @@
 ---
 ---
 
-# vNFT, oNFT / Bridge
+# vNFT & oNFT / Bridge
 
 ## Highly Flexible Token Design
 Non-Fungible Tokens (NFT) is essential asset for tokenomics in the ecosystem. Oasys' unique layer structure allows three types of token designs for NFT.
