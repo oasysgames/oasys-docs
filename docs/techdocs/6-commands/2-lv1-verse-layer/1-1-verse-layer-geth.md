@@ -4,7 +4,7 @@
 # Verse-Layer geth
 
 ## Optimism
-
+---
 The same codebase is used to run both the Sequencer and the Verifier. Runtime
 configuration will determine the mode of operation. The configuration flags
 can be configured using either environment variables or passed at runtime as
@@ -58,7 +58,7 @@ so they are interpreted as arguments to `geth` instead of `dlv`.
 Add the flag `--rollup.verifier`
 
 ## Building the source
-
+---
 For prerequisites and detailed build instructions please read the [Installation Instructions](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum) on the wiki.
 
 Building `geth` requires both a Go (version 1.10 or later) and a C compiler. You can install
@@ -75,7 +75,7 @@ make all
 ```
 
 ## Executables
-
+---
 The go-ethereum project comes with several wrappers/executables found in the `cmd`
 directory.
 
@@ -90,7 +90,7 @@ directory.
 |   `puppeth`   | a CLI wizard that aids in creating a new Ethereum network.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 ## Running `geth`
-
+---
 Going through all the possible command line flags is out of scope here (please consult our
 [CLI Wiki page](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)),
 but we've enumerated a few common parameter combos to get you up to speed quickly
@@ -344,7 +344,7 @@ $ geth --your-favourite-flags dumpconfig
 *Note: This works only with `geth` v1.6.0 and above.*
 
 ## Contribution
-
+---
 Thank you for considering to help out with the source code! We welcome contributions
 from anyone on the internet, and are grateful for even the smallest of fixes!
 

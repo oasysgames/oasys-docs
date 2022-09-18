@@ -27,12 +27,11 @@ const sidebars = {
             id: 'techdocs/technologies/lv1-hub-layer/1-1-hub-layer',
           },
           items: [
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-1-pre-deploy',
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-2-geth-wallet',
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-3-block-confirmation',
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-4-validator-commission-rate',
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-5-validator-claim',
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-6-version-info',
+            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-1-geth-wallet',
+            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-2-block-confirmation',
+            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-3-validator-commission-rate',
+            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-4-validator-claim',
+            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-5-version-info',
           ],
         },
         {
@@ -45,8 +44,7 @@ const sidebars = {
           items: [
             'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-1-wallet',
             'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-2-verifier',
-            'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-3-l2geth',
-            'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-4-message-relayer',
+            'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-3-message-relayer',
           ],
         },
         {  
@@ -157,17 +155,7 @@ const sidebars = {
             },
           ],
         },
-        {
-          type: 'category',
-          label: 'About Validator Account',
-          link: {
-            type: 'doc',
-            id: 'techdocs/wallet/lv1-about-validator-account/1-1-about-validator-account',
-          },
-          items: [
-            'techdocs/wallet/lv1-about-validator-account/lv2-about-validator-account/2-1-data-analytics',
-          ],
-        },
+        'techdocs/wallet/lv1-about-validator-account/1-1-about-validator-account',
         {
           type: 'category',
           label: 'Wallet Commands',
@@ -235,6 +223,7 @@ const sidebars = {
             'techdocs/commands/lv1-verse-layer/1-1-verse-layer-geth',
           ],
         },
+        'techdocs/commands/lv1-oasys-pos-cil/1-1-oasys-pos-cil',
       ]
     },
   ],
