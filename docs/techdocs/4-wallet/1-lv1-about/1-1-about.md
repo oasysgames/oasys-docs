@@ -3,14 +3,10 @@
 
 # About
 
-### What is wallet? 
+## Wallet on Oasys 
 
-Crypto wallet is for users that having own private key, more secure and better way to secure your asset. 
+Oasys is using go ethereum, You can use any wallet which supports EVM compatible. 
 
-You can restore your balance anytime with private key. 
+## Hardware wallet
 
-
-
-### Hardware wallet
-
-We will support hardware wallet, please wait for details to be updated. 
+On General, you may use hardware wallet which supports EVM compatible, there is no specific limitations for using it. 
