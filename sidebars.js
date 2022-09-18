@@ -9,17 +9,7 @@ const sidebars = {
       },
       collapsed: false,
       items: [
-        {
-          type: 'category',
-          label: 'About Oasys',
-          link: {
-            type: 'doc',
-            id: 'techdocs/technical-materials/lv1-technical-materials/lv2-technical-materials/2-1-about-oasys',
-          },
-          items: [
-            'techdocs/technical-materials/lv1-technical-materials/lv2-technical-materials/lv3-technical-materials/3-1-over-view',
-          ],
-        },
+        'techdocs/technical-materials/lv1-technical-materials/lv2-technical-materials/2-1-about-oasys',
       ],
     }, 
     {
@@ -53,19 +43,7 @@ const sidebars = {
             id: 'techdocs/technologies/lv1-verse-layer/1-1-verse-layer',
           },
           items: [
-            {
-              type: 'category',
-              label: 'Wallet',
-              link: {
-                type: 'doc',
-                id: 'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-1-wallet',
-              },
-              items: [
-                'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/lv3-verse-layer/3-1-builder',
-                'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/lv3-verse-layer/3-2-sequencer',
-                'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/lv3-verse-layer/3-3-proposer',
-              ],
-            },
+            'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-1-wallet',
             'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-2-verifier',
             'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-3-l2geth',
             'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-4-message-relayer',
@@ -113,40 +91,8 @@ const sidebars = {
             },
           ],
         },
-        {
-          type: 'category',
-          label: 'Hub-Layer Node Build',
-          link: {
-            type: 'doc',
-            id: 'techdocs/validator/lv1-hub-layer-node-build/1-1-hub-layer-node-build',
-          },
-          items: [
-            'techdocs/validator/lv1-hub-layer-node-build/lv2-hub-layer-node-build/2-1-verse-layer-node-build-optimism',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Verse-Layer Node Build (Optimism)',
-          link: {
-            type: 'doc',
-            id: 'techdocs/validator/lv1-verse-layer-node-build-optimism/1-1-verse-layer-node-build-optimism',
-          },
-          items: [
-            'techdocs/validator/lv1-verse-layer-node-build-optimism/lv2-verse-layer-node-build-optimism/2-1-requirements',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Chain Environment',
-          link: {
-            type: 'doc',
-            id: 'techdocs/validator/lv1-chain-environment/1-1-chain-environment',
-          },
-          items: [
-            'techdocs/validator/lv1-chain-environment/lv2-chain-environment/2-1-wallet',
-            'techdocs/validator/lv1-chain-environment/lv2-chain-environment/2-2-jail-period',
-          ],
-        },
+          'techdocs/validator/lv1-hub-layer-node-build/1-1-hub-layer-node-build',
+          'techdocs/validator/lv1-verse-layer-node-build-optimism/1-1-verse-layer-node-build-optimism',
         {
           type: 'category',
           label: 'FAQ',
@@ -162,8 +108,7 @@ const sidebars = {
           type: 'category',
           label: 'Validator Account',
           link: {
-            type: 'doc',
-            id: 'techdocs/validator/lv1-validator-account/1-1-validator-account',
+            type: 'generated-index',
           },
           items: [
             'techdocs/validator/lv1-validator-account/lv2-validator-account/2-1-integration',
@@ -252,6 +197,45 @@ const sidebars = {
           ],
         },
       ],
+    },
+    {
+      type: 'category',
+      label: 'Smart Contract',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'techdocs/smart-contract/1-1-smart-contract',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'Commands',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        {
+          type: 'category',
+          label: 'Hub-Layer',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'techdocs/commands/lv1-hub-layer/1-1-hub-layer',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Verse-Layer',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'techdocs/commands/lv1-verse-layer/1-1-verse-layer-geth',
+          ],
+        },
+      ]
     },
   ],
   whitepaper: [
