@@ -1,4 +1,4 @@
 ---
 ---
 
-# Validator Account
+# Smart Contract
