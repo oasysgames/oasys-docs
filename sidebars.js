@@ -223,7 +223,7 @@ const sidebars = {
             'techdocs/commands/lv1-verse-layer/1-1-verse-layer-geth',
           ],
         },
-        'techdocs/commands/lv1-oasys-pos-cil/1-1-oasys-pos-cil',
+        'techdocs/commands/lv1-oasys-pos-cli/1-1-oasys-pos-cli',
       ]
     },
   ],
