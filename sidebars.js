@@ -68,27 +68,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        {  
-          type: 'category',
-          label: 'Hardware Requirements',
-          link: {
-            type: 'doc',
-            id: 'techdocs/validator/lv1-hardware-requirements/1-1-hardware-requirements',
-          },
-          items: [
-            {
-              type: 'category',
-              label: 'Development Guide',
-              link: {
-                type: 'doc',
-                id: 'techdocs/validator/lv1-hardware-requirements/lv2-hardware-requirements/2-1-development-guide',
-              },
-              items: [
-                'techdocs/validator/lv1-hardware-requirements/lv2-hardware-requirements/lv3-hardware-requirements/3-1-hub-layer-node-build',
-              ],
-            },
-          ],
-        },
+          'techdocs/validator/lv1-hardware-requirements/1-1-hardware-requirements',
           'techdocs/validator/lv1-hub-layer-node-build/1-1-hub-layer-node-build',
           'techdocs/validator/lv1-hub-layer-client-join/1-1-hub-layer-client-join',
           'techdocs/validator/lv1-hub-layer-client-command/1-1-hub-layer-client-command',
@@ -112,19 +92,6 @@ const sidebars = {
           },
           items: [
             'techdocs/validator/lv1-validator-account/lv2-validator-account/2-1-integration',
-            {
-              type: 'category',
-              label: 'Contract',
-              link: {
-                type: 'doc',
-                id: 'techdocs/validator/lv1-validator-account/lv2-validator-account/2-2-contract',
-              },
-              items: [
-                'techdocs/validator/lv1-validator-account/lv2-validator-account/lv3-validator-account/3-1-erc20-erc721-factory-use-case',
-                'techdocs/validator/lv1-validator-account/lv2-validator-account/lv3-validator-account/3-2-smart-contract-example',
-                'techdocs/validator/lv1-validator-account/lv2-validator-account/lv3-validator-account/3-3-game-example',                                
-              ],
-            },
           ],
         },
       ],
@@ -137,19 +104,6 @@ const sidebars = {
       },
       items: [
         'techdocs/wallet/lv1-about/1-1-about',
-        {
-          type: 'category',
-          label: 'Tools',
-          link: {
-            type: 'doc',
-            id: 'techdocs/wallet/lv1-tools/1-1-tools',
-          },
-          items: [
-            'techdocs/wallet/lv1-tools/lv2-tools/2-1-explolers',
-            'techdocs/wallet/lv1-tools/lv2-tools/2-2-faucets',
-            'techdocs/wallet/lv1-tools/lv2-tools/2-3-oracles',  
-          ],
-        },
         'techdocs/wallet/lv1-about-validator-account/1-1-about-validator-account',
         {
           type: 'category',
@@ -181,12 +135,27 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Tools',
+      link: {
+        type: 'doc',
+        id: 'techdocs/wallet/lv1-tools/1-1-tools',
+      },
+      items: [
+        'techdocs/wallet/lv1-tools/lv2-tools/2-1-explolers',
+        'techdocs/wallet/lv1-tools/lv2-tools/2-2-faucets',
+        'techdocs/wallet/lv1-tools/lv2-tools/2-3-oracles',  
+      ],
+    },
+    {
+      type: 'category',
       label: 'Smart Contract',
       link: {
         type: 'generated-index',
       },
       items: [
         'techdocs/smart-contract/1-1-smart-contract',
+        'techdocs/smart-contract/1-2-erc20-erc721-factory-use-case',
+        'techdocs/smart-contract/1-3-game-example',
       ]
     },
     {
@@ -203,7 +172,7 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/commands/lv1-hub-layer/1-1-hub-layer',
+            'techdocs/commands/lv1-hub-layer/1-1-hub-layer-geth',
           ],
         },
         {

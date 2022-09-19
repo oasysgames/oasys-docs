@@ -1,4 +1,0 @@
----
----
-
-# Smart Contract Example
