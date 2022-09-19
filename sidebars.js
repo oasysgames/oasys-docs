@@ -137,13 +137,12 @@ const sidebars = {
       type: 'category',
       label: 'Tools',
       link: {
-        type: 'doc',
-        id: 'techdocs/wallet/lv1-tools/1-1-tools',
+        type: 'generated-index',
       },
       items: [
-        'techdocs/wallet/lv1-tools/lv2-tools/2-1-explorer',
-        'techdocs/wallet/lv1-tools/lv2-tools/2-2-faucets',
-        'techdocs/wallet/lv1-tools/lv2-tools/2-3-oracles',  
+        'techdocs/tools/lv1-tools/1-1-explorer',
+        'techdocs/tools/lv1-tools/1-2-faucets',
+        'techdocs/tools/lv1-tools/1-3-oracles',  
       ],
     },
     {
