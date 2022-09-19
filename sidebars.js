@@ -141,7 +141,7 @@ const sidebars = {
         id: 'techdocs/wallet/lv1-tools/1-1-tools',
       },
       items: [
-        'techdocs/wallet/lv1-tools/lv2-tools/2-1-explolers',
+        'techdocs/wallet/lv1-tools/lv2-tools/2-1-explorer',
         'techdocs/wallet/lv1-tools/lv2-tools/2-2-faucets',
         'techdocs/wallet/lv1-tools/lv2-tools/2-3-oracles',  
       ],
