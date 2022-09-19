@@ -1,7 +1,7 @@
 ---
 ---
 
-# Hub-Layer node build
+# Hub-Layer Node build
 
 ## Check Requirements
 

@@ -90,6 +90,8 @@ const sidebars = {
           ],
         },
           'techdocs/validator/lv1-hub-layer-node-build/1-1-hub-layer-node-build',
+          'techdocs/validator/lv1-hub-layer-client-join/1-1-hub-layer-client-join',
+          'techdocs/validator/lv1-hub-layer-client-command/1-1-hub-layer-client-command',
           'techdocs/validator/lv1-verse-layer-node-build-optimism/1-1-verse-layer-node-build-optimism',
         {
           type: 'category',
@@ -112,7 +114,7 @@ const sidebars = {
             'techdocs/validator/lv1-validator-account/lv2-validator-account/2-1-integration',
             {
               type: 'category',
-              label: 'Contact',
+              label: 'Contract',
               link: {
                 type: 'doc',
                 id: 'techdocs/validator/lv1-validator-account/lv2-validator-account/2-2-contract',
@@ -134,25 +136,18 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        {  
+        'techdocs/wallet/lv1-about/1-1-about',
+        {
           type: 'category',
-          label: 'About',
+          label: 'Tools',
           link: {
             type: 'doc',
-            id: 'techdocs/wallet/lv1-about/1-1-about',
+            id: 'techdocs/wallet/lv1-tools/1-1-tools',
           },
           items: [
-            {
-              type: 'category',
-              label: 'Tools',
-              link: {
-                type: 'doc',
-                id: 'techdocs/wallet/lv1-about/lv2-about/2-1-tools',
-              },
-              items: [
-                'techdocs/wallet/lv1-about/lv2-about/lv3-about/3-1-explolers',
-              ],
-            },
+            'techdocs/wallet/lv1-tools/lv2-tools/2-1-explolers',
+            'techdocs/wallet/lv1-tools/lv2-tools/2-2-faucets',
+            'techdocs/wallet/lv1-tools/lv2-tools/2-3-oracles',  
           ],
         },
         'techdocs/wallet/lv1-about-validator-account/1-1-about-validator-account',
@@ -163,15 +158,13 @@ const sidebars = {
             type: 'doc',
             id: 'techdocs/wallet/lv1-wallet-commands/1-1-wallet-commands',
           },
-          items: [
-            'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/2-1-oracles',
-            'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/2-2-faucets',                                
+          items: [                              
             {
               type: 'category',
               label: 'Validator',
               link: {
                 type: 'doc',
-                id: 'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/2-3-validator',
+                id: 'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/2-1-validator',
               },
               items: [
                 'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/lv3-wallet-commands/3-1-validator-guides',
@@ -181,7 +174,7 @@ const sidebars = {
                 'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/lv3-wallet-commands/3-5-parameters',                                        
               ],
             },
-            'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/2-4-faq',
+            'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/2-2-faq',
           ],
         },
       ],
@@ -223,8 +216,7 @@ const sidebars = {
             'techdocs/commands/lv1-verse-layer/1-1-verse-layer-geth',
           ],
         },
-        'techdocs/commands/lv1-oasys-pos-cli/1-1-oasys-pos-cli',
-      ]
+      ],
     },
   ],
   whitepaper: [

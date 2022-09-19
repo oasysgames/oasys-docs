@@ -1,4 +1,4 @@
-# Oasys-pos-cli
+# Hub-Layer Client Command
 ---
 Command Line Tool for manage proof-of-stake of Oasys Blockchain.
 
