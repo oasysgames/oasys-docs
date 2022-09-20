@@ -2,3 +2,5 @@
 ---
 
 # Game Example
+
+Coming soon
