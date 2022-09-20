@@ -73,17 +73,7 @@ const sidebars = {
           'techdocs/validator/lv1-hub-layer-client-join/1-1-hub-layer-client-join',
           'techdocs/validator/lv1-hub-layer-client-command/1-1-hub-layer-client-command',
           'techdocs/validator/lv1-verse-layer-node-build-optimism/1-1-verse-layer-node-build-optimism',
-        {
-          type: 'category',
-          label: 'FAQ',
-          link: {
-            type: 'doc',
-            id: 'techdocs/validator/lv1-faq/1-1-faq',
-          },
-          items: [
-            'techdocs/validator/lv1-faq/lv2-faq/2-1-chain-environment',
-          ],
-        },
+          'techdocs/validator/lv1-faq/1-1-faq',
         {  
           type: 'category',
           label: 'Validator Account',
