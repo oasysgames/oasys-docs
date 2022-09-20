@@ -7,17 +7,26 @@
 
 ```shell
 $ geth --help
+```
+
+```
 NAME:
    geth - the go-ethereum command line interface
 
    Copyright 2013-2022 The go-ethereum Authors
+```
 
+
+```
 USAGE:
    geth [options] [command] [command options] [arguments...]
 
 VERSION:
    1.10.19-stable-23bee162
+```
 
+
+```
 COMMANDS:
    account                            Manage accounts
    attach                             Start an interactive JavaScript environment (connect to node)
@@ -40,14 +49,16 @@ COMMANDS:
    snapshot                           A set of commands based on the snapshot
    version                            Print version numbers
    version-check                      Checks (online) whether the current version suffers from any known security vulnerabilities
-   wallet                             Manage Ethereum presale wallets
+   wallet                             Manage Oasys presale wallets
    help, h                            Shows a list of commands or help for one command
+```
 
-ETHEREUM OPTIONS:
+
+```
+Oasys Geth OPTIONS:
   --config value                      TOML configuration file
   --datadir.minfreedisk value         Minimum free disk space in MB, once reached triggers auto shut down (default = --cache.gc converted to MB, 0 = disabled)
   --keystore value                    Directory for the keystore (default = inside the datadir)
-  --usb                               Enable monitoring and management of USB hardware wallets
   --pcscdpath value                   Path to the smartcard daemon (pcscd) socket file
   --networkid value                   Explicitly set network id (integer)(For testnets: use --ropsten, --rinkeby, --goerli instead) (default: 1)
   --syncmode value                    Blockchain sync mode ("snap", "full" or "light") (default: snap)
@@ -58,16 +69,13 @@ ETHEREUM OPTIONS:
   --identity value                    Custom node name
   --lightkdf                          Reduce key-derivation RAM & CPU usage at some expense of KDF strength
   --eth.requiredblocks value          Comma separated block number-to-hash mappings to require for peering (<number>=<hash>)
-  --mainnet                           Ethereum mainnet
-  --ropsten                           Ropsten network: pre-configured proof-of-stake test network
-  --rinkeby                           Rinkeby network: pre-configured proof-of-authority test network
-  --goerli                            Görli network: pre-configured proof-of-authority test network
-  --sepolia                           Sepolia network: pre-configured proof-of-work test network
-  --kiln                              Kiln network: pre-configured proof-of-work to proof-of-stake test network
+  --mainnet                           Oasys mainnet
   --datadir value                     Data directory for the databases and keystore (default: "~/.ethereum")
   --datadir.ancient value             Data directory for ancient chain segments (default = inside chaindata)
   --remotedb value                    URL for remote database
+```
 
+```
 LIGHT CLIENT OPTIONS:
   --light.serve value                 Maximum percentage of time allowed for serving LES requests (multi-threaded processing allows values over 100) (default: 0)
   --light.ingress value               Incoming bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)
@@ -78,22 +86,17 @@ LIGHT CLIENT OPTIONS:
   --ulc.onlyannounce                  Ultra light server sends announcements only
   --light.nopruning                   Disable ancient light chain data pruning
   --light.nosyncserve                 Enables serving light clients before syncing
-  
+```
+
+```  
 DEVELOPER CHAIN OPTIONS:
   --dev                               Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled
   --dev.period value                  Block period to use in developer mode (0 = mine only if transaction pending) (default: 0)
   --dev.gaslimit value                Initial block gas limit (default: 11500000)
+```
 
-ETHASH OPTIONS:
-  --ethash.cachedir value             Directory to store the ethash verification caches (default = inside the datadir)
-  --ethash.cachesinmem value          Number of recent ethash caches to keep in memory (16MB each) (default: 2)
-  --ethash.cachesondisk value         Number of recent ethash caches to keep on disk (16MB each) (default: 3)
-  --ethash.cacheslockmmap             Lock memory maps of recent ethash caches
-  --ethash.dagdir value               Directory to store the ethash mining DAGs (default: "~/.ethash")
-  --ethash.dagsinmem value            Number of recent ethash mining DAGs to keep in memory (1+GB each) (default: 1)
-  --ethash.dagsondisk value           Number of recent ethash mining DAGs to keep on disk (1+GB each) (default: 2)
-  --ethash.dagslockmmap               Lock memory maps for recent ethash mining DAGs
 
+```
 TRANSACTION POOL OPTIONS:
   --txpool.locals value               Comma separated accounts to treat as locals (no flush, priority inclusion)
   --txpool.nolocals                   Disables price exemptions for locally submitted transactions
@@ -106,7 +109,9 @@ TRANSACTION POOL OPTIONS:
   --txpool.accountqueue value         Maximum number of non-executable transaction slots permitted per account (default: 64)
   --txpool.globalqueue value          Maximum number of non-executable transaction slots for all accounts (default: 1024)
   --txpool.lifetime value             Maximum amount of time non-executable transaction are queued (default: 3h0m0s)
+```
 
+```
 PERFORMANCE TUNING OPTIONS:
   --cache value                       Megabytes of memory allocated to internal caching (default = 4096 mainnet full node, 128 light mode) (default: 1024)
   --cache.database value              Percentage of cache memory allowance to use for database io (default: 50)
@@ -118,13 +123,17 @@ PERFORMANCE TUNING OPTIONS:
   --cache.noprefetch                  Disable heuristic state prefetch during block import (less CPU and disk IO, more time waiting for data)
   --cache.preimages                   Enable recording the SHA3/keccak preimages of trie keys
   --fdlimit value                     Raise the open file descriptor resource limit (default = system fd limit) (default: 0)
+```
 
+```
 ACCOUNT OPTIONS:
   --unlock value                      Comma separated list of accounts to unlock
   --password value                    Password file to use for non-interactive password input
   --signer value                      External signer (url or path to ipc file)
   --allow-insecure-unlock             Allow insecure account unlocking when account-related RPCs are exposed by http
+```
 
+```
 API AND CONSOLE OPTIONS:
   --ipcdisable                        Disable the IPC-RPC server
   --ipcpath value                     Filename for IPC socket/pipe within the datadir (explicit paths escape it)
@@ -155,7 +164,9 @@ API AND CONSOLE OPTIONS:
   --jspath loadScript                 JavaScript root path for loadScript (default: ".")
   --exec value                        Execute JavaScript statement
   --preload value                     Comma separated list of JavaScript files to preload into the console
+```
 
+```
 NETWORKING OPTIONS:
   --bootnodes value                   Comma separated enode URLs for P2P discovery bootstrap
   --discovery.dns value               Sets DNS discovery entry points (use "" to disable DNS)
@@ -168,28 +179,10 @@ NETWORKING OPTIONS:
   --netrestrict value                 Restricts network communication to the given IP networks (CIDR masks)
   --nodekey value                     P2P node key file
   --nodekeyhex value                  P2P node key as hex (for testing)
-  
-MINER OPTIONS:
-  --mine                              Enable mining
-  --miner.threads value               Number of CPU threads to use for mining (default: 0)
-  --miner.notify value                Comma separated HTTP URL list to notify of new work packages
-  --miner.notify.full                 Notify with pending block headers instead of work packages
-  --miner.gasprice value              Minimum gas price for mining a transaction (default: 1000000000)
-  --miner.gaslimit value              Target gas ceiling for mined blocks (default: 30000000)
-  --miner.etherbase value             Public address for block mining rewards (default = first account) (default: "0")
-  --miner.extradata value             Block extra data set by the miner (default = client version)
-  --miner.recommit value              Time interval to recreate the block being mined (default: 3s)
-  --miner.noverify                    Disable remote sealing verification
+```
 
-GAS PRICE ORACLE OPTIONS:
-  --gpo.blocks value                  Number of recent blocks to check for gas prices (default: 20)
-  --gpo.percentile value              Suggested gas price is the given percentile of a set of recent transaction gas prices (default: 60)
-  --gpo.maxprice value                Maximum transaction priority fee (or gasprice before London fork) to be recommended by gpo (default: 500000000000)
-  --gpo.ignoreprice value             Gas price below which gpo will ignore transactions (default: 2)
 
-VIRTUAL MACHINE OPTIONS:
-  --vmdebug                           Record information useful for VM and contract debugging
-
+```
 LOGGING AND DEBUGGING OPTIONS:
   --fakepow                           Disables proof-of-work verification
   --nocompaction                      Disables db compaction after import

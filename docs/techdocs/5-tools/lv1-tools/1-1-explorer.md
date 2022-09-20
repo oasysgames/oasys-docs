@@ -7,7 +7,8 @@ Blockchain Explorer is a search engine that basically performs searches and easi
 
 Blockchain Explorer makes it easier for user to see all transactions on the public blockchain and access all data related to blockchain, transactions, and wallets.
 
-## How can use Blockchin Explorer?
+## Usecase of Explorer
+
 1. Blockchain Explorer lets you navigate through the entire transaction history of a particular wallet address. This can audit specific wallet addresses while improving transparency of the blockchain.
 2. Blockchain Explorer is clear when searching for incoming addresses. In addition to the transaction receiving address, users can increase transaction transparency by preventing excessive input values from being transferred to transaction fees.
 3. Blockchain Explorer can browse the details of unconfirmed transactions and access the details of unconfirmed transactions through Mempool status.
@@ -16,7 +17,7 @@ Blockchain Explorer makes it easier for user to see all transactions on the publ
 6. Blockchain Explorer can view transaction-related fees along with blockchain difficulty, hash rate, and details.
 7. Blockchain Explorer can be used to explore Genesis blocks or basic blocks of blockchain. This makes it easy to find the first block mined in a particular chain with miner and details.
 
-## Why do you need to use Blockchain Explorer?
+## Purpose of Using Explorer
 
 1. Blockchain Explorer can provide transparency by allowing users to view balances and expenditures on smart contract addresses.
 2. It also helps to check the validity of the wallet address you want to send before sending crypto currency assets using Blockchain Explorer.
