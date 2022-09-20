@@ -17,7 +17,7 @@ const FeatureList = [
   {
     title: 'Technical Materials',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/techdocs/intro",
+    linkTo: "/docs/techdocs/technical-materials/lv1-technical-materials/1-1-technical-materials",
     description: (
       <>
         Guides on how to build nodes and run networks.

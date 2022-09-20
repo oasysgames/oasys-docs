@@ -89,7 +89,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'techdocs/intro',
+            docId: 'techdocs/technical-materials/lv1-technical-materials/1-1-technical-materials',
             position: 'left',
             label: 'Technical Materials',
           },
@@ -104,6 +104,11 @@ const config = {
             position: 'left',
           },
         ],
+      },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        },
       },
       footer: {
         style: 'dark',
