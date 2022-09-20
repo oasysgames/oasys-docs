@@ -29,9 +29,8 @@ const sidebars = {
           items: [
             'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-1-geth-wallet',
             'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-2-block-confirmation',
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-3-validator-commission-rate',
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-4-validator-claim',
-            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-5-version-info',
+            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-3-proof-of-stake',
+            'techdocs/technologies/lv1-hub-layer/lv2-hub-layer/2-4-version-info',
           ],
         },
         {
@@ -44,7 +43,6 @@ const sidebars = {
           items: [
             'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-1-wallet',
             'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-2-verifier',
-            'techdocs/technologies/lv1-verse-layer/lv2-verse-layer/2-3-message-relayer',
           ],
         },
         {  
@@ -55,8 +53,7 @@ const sidebars = {
           },
           items: [
             'techdocs/technologies/lv1-nft-bridge/1-1-nft-bridge',
-            'techdocs/technologies/lv1-nft-bridge/1-2-version-info',
-            'techdocs/technologies/lv1-nft-bridge/1-3-vnft-onft-bridge',
+            'techdocs/technologies/lv1-nft-bridge/1-2-vnft-onft-bridge',
           ],
         },
       ],
@@ -74,16 +71,6 @@ const sidebars = {
           'techdocs/validator/lv1-hub-layer-client-command/1-1-hub-layer-client-command',
           'techdocs/validator/lv1-verse-layer-node-build-optimism/1-1-verse-layer-node-build-optimism',
           'techdocs/validator/lv1-faq/1-1-faq',
-        {  
-          type: 'category',
-          label: 'Validator Account',
-          link: {
-            type: 'generated-index',
-          },
-          items: [
-            'techdocs/validator/lv1-validator-account/lv2-validator-account/2-1-integration',
-          ],
-        },
       ],
     },
     {
@@ -95,32 +82,7 @@ const sidebars = {
       items: [
         'techdocs/wallet/lv1-about/1-1-about',
         'techdocs/wallet/lv1-about-validator-account/1-1-about-validator-account',
-        {
-          type: 'category',
-          label: 'Wallet Commands',
-          link: {
-            type: 'doc',
-            id: 'techdocs/wallet/lv1-wallet-commands/1-1-wallet-commands',
-          },
-          items: [                              
-            {
-              type: 'category',
-              label: 'Validator',
-              link: {
-                type: 'doc',
-                id: 'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/2-1-validator',
-              },
-              items: [
-                'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/lv3-wallet-commands/3-1-validator-guides',
-                'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/lv3-wallet-commands/3-2-validator-account',
-                'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/lv3-wallet-commands/3-3-endpoint',
-                'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/lv3-wallet-commands/3-4-errors',
-                'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/lv3-wallet-commands/3-5-parameters',                                        
-              ],
-            },
-            'techdocs/wallet/lv1-wallet-commands/lv2-wallet-commands/2-2-faq',
-          ],
-        },
+        'techdocs/wallet/lv1-wallet-commands/1-1-wallet-commands',
       ],
     },
     {

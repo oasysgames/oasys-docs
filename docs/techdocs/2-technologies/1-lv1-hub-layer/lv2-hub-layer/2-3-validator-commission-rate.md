@@ -1,4 +1,0 @@
----
----
-
-# Validator Commission Rate
