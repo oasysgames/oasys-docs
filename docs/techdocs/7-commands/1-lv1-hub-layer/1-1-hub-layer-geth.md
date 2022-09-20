@@ -75,25 +75,6 @@ Oasys Geth OPTIONS:
   --remotedb value                    URL for remote database
 ```
 
-```
-LIGHT CLIENT OPTIONS:
-  --light.serve value                 Maximum percentage of time allowed for serving LES requests (multi-threaded processing allows values over 100) (default: 0)
-  --light.ingress value               Incoming bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)
-  --light.egress value                Outgoing bandwidth limit for serving light clients (kilobytes/sec, 0 = unlimited) (default: 0)
-  --light.maxpeers value              Maximum number of light clients to serve, or light servers to attach to (default: 100)
-  --ulc.servers value                 List of trusted ultra-light servers
-  --ulc.fraction value                Minimum % of trusted ultra-light servers required to announce a new head (default: 75)
-  --ulc.onlyannounce                  Ultra light server sends announcements only
-  --light.nopruning                   Disable ancient light chain data pruning
-  --light.nosyncserve                 Enables serving light clients before syncing
-```
-
-```  
-DEVELOPER CHAIN OPTIONS:
-  --dev                               Ephemeral proof-of-authority network with a pre-funded developer account, mining enabled
-  --dev.period value                  Block period to use in developer mode (0 = mine only if transaction pending) (default: 0)
-  --dev.gaslimit value                Initial block gas limit (default: 11500000)
-```
 
 
 ```
