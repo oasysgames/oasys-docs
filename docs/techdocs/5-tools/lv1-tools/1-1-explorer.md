@@ -7,24 +7,6 @@ Blockchain Explorer is a search engine that basically performs searches and easi
 
 Blockchain Explorer makes it easier for user to see all transactions on the public blockchain and access all data related to blockchain, transactions, and wallets.
 
-## What is popular blockchain explorers?
-
-### [1. Blockchain.com](https://www.blockchain.com/)
-![Blockchain.com](/img/docs/techdocs/tools/explorer-blockchain.png)
-In addition to displaying information related to specific transactions, Blockchain.com provides useful data such as transactions per block, on-chain volumes, cycles, and transaction information for multiple chains.
-
-### [2. Blockcypher](https://www.blockcypher.com/)
-![Blockcypher](/img/docs/techdocs/tools/explorer-blockcypher.png)
-BlockCypher is an open-source software that continuously adds enhancements and new features, and provides a seamless user interface for easy viewing of data with real-time information.
-
-### [3. Etherscan.io](https://etherscan.io/)
-![Etherscan.io](/img/docs/techdocs/tools/explorer-etherscan.png)
-Etherscan is a blockchain explorer exclusively for Ethereum blockchain, which is mainly useful for users trading on Ethereum networks, and is easy to search, verify, and verify Ethereum transactions.
-
-### [4. CoinMarketCap](https://coinmarketcap.com/)
-![CoinMarketCap](/img/docs/techdocs/tools/explorer-coinmarketcap.png)
-CoinMarketCap provides users with the ranking of crypto currency and exchanges sorted by market capitalization, making it easy to see all transactions.
-
 ## How can use Blockchin Explorer?
 1. Blockchain Explorer lets you navigate through the entire transaction history of a particular wallet address. This can audit specific wallet addresses while improving transparency of the blockchain.
 2. Blockchain Explorer is clear when searching for incoming addresses. In addition to the transaction receiving address, users can increase transaction transparency by preventing excessive input values from being transferred to transaction fees.
