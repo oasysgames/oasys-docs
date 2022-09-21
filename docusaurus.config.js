@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Oasys Documentation',
   tagline: 'Oasys Blockchain for Games',
-  url: 'https://docs.oasys.games', // Url to your site with no trailing slash
+  url: 'https://docs-oasys-games.netlify.app', // Url to your site with no trailing slash
   baseUrl: '/',
   //trailingSlash: false,
   onBrokenLinks: 'warn',
