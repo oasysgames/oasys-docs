@@ -14,8 +14,8 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/general/OASYS_favicon.png',
-  organizationName: 'oasysgames', // Usually your GitHub org/user name.
-  projectName: 'oasys-docs', // Usually your repo name.
+  //organizationName: 'oasysgames', // Usually your GitHub org/user name.
+  //projectName: 'oasys-docs', // Usually your repo name.
   // themes: ['@docusaurus/theme-search-algolia'],
 
   presets: [
