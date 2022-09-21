@@ -10,7 +10,7 @@ const config = {
   tagline: 'Oasys Blockchain for Games',
   url: 'https://docs.oasys.games', // Url to your site with no trailing slash
   baseUrl: '/',
-  trailingSlash: false,
+  //trailingSlash: false,
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/general/OASYS_favicon.png',
