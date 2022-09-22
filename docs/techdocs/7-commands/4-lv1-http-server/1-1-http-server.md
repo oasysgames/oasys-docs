@@ -1,7 +1,7 @@
 ---
 ---
 
-# Geth Http-server
+# Geth HTTP-Server
 
 [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP) is a unidirectional transport protocol that connects a client and server. The client sends a request to the server, and the server returns a response back to the client. An HTTP connection is closed after the response for a given request is sent.
 

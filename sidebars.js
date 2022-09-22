@@ -139,6 +139,7 @@ const sidebars = {
         'techdocs/commands/lv1-http-server/1-1-http-server',
         'techdocs/commands/lv1-websocket/1-1-websocket',
         'techdocs/commands/lv1-ipc-server/1-1-ipc-server',
+        'techdocs/commands/lv1-graphql/1-1-graphql',
       ],
     },
   ],
