@@ -5,7 +5,7 @@
 
 ## Check Requirements
 
-Please Check [Validator_Requirements](https://docs.oasys.games/docs/techdocs/build/requirements) Prior to setup. 
+Please Check [Validator_Requirements](https://docs.oasys.games/docs/techdocs/validator/lv1-hardware-requirements/1-1-hardware-requirements) Prior to setup. 
 
 ## Express Setup 
 
@@ -28,9 +28,9 @@ $apt install wget
 ```
 
 ### 2. Download Setup File
-```
-$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha4/setup.sh
-```
+
+https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha5/setup.sh
+
 ### 3. Giving Permission to Setup file  
 
 Please navigate to downloaded location and give permission to setup.sh file.

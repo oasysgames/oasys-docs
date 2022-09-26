@@ -9,8 +9,8 @@ Blockchain Explorer makes it easier for user to see all transactions on the publ
 
 
 ## Oasys Explorer 
-
-explorer.oasys.games
+- [explorer.oasys.games](explorer.oasys.games)
+- [explorer.testnet.oasys.games](explorer.testnet.oasys.games)
 
 
 ## Usecase of Explorer
