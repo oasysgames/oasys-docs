@@ -66,6 +66,7 @@ const sidebars = {
       },
       items: [
           'techdocs/validator/lv1-hardware-requirements/1-1-hardware-requirements',
+          'techdocs/validator/lv1-chain-environment/1-1-chain-environment',
           'techdocs/validator/lv1-hub-layer-node-build/1-1-hub-layer-node-build',
           'techdocs/validator/lv1-hub-layer-client-join/1-1-hub-layer-client-join',
           'techdocs/validator/lv1-hub-layer-client-command/1-1-hub-layer-client-command',
