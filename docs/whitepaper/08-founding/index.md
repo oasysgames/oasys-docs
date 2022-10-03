@@ -2,10 +2,10 @@
 sidebar_position: 2
 ---
 
-# Founding Team & Partners
-## Founding Team Members
-Oasys is founded by the industry's top game developers and Web3 companies and organizations. The Founding Team is formed by representatives from these companies and organizations.
-![Founding Team Members](/img/docs/whitepaper/founding/founding-team.png)
+# Advisory Board & Partners
+## Advisory Board Members
+Oasys is founded by the industry's top game developers and Web3 companies and organizations. The Advisory Board is formed by representatives from these companies and organizations.
+![Advisory Board Members](/img/docs/whitepaper/founding/founding-team.png)
 **Gabby Dizon**, Co-Founder of play-to-earn gaming guild, Yield Guild Games.  
 **Hajime Nakatani**, President and CEO of Bandai Namco Research.  
 **Hironobu Ueno**, CEO of double jump.tokyo.  
