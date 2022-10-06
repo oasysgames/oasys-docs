@@ -5,7 +5,7 @@
 
 ## Check Requirements
 
-Please Check [Validator_Requirements](https://docs.oasys.games/docs/techdocs/validator/lv1-hardware-requirements/1-1-hardware-requirements) Prior to setup. 
+Please Check [Validator_Requirements](https://docs.oasys.games/docs/techdocs/validator/hardware-requirements/1-1-hardware-requirements) Prior to setup. 
 
 ## Express Setup 
 
