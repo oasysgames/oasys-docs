@@ -89,7 +89,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'techdocs/technical-materials/lv1-technical-materials/1-1-technical-materials',
+            docId: 'techdocs/technical-materials/1-1-technical-materials',
             position: 'left',
             label: 'Technical Materials',
           },
