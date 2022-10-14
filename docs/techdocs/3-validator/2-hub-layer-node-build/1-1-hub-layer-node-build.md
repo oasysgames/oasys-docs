@@ -29,7 +29,7 @@ $apt install wget
 
 ### 2. Download Setup File
 
-https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha5/setup.sh
+https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0/setup.sh
 
 ### 3. Giving Permission to Setup file  
 
@@ -130,7 +130,7 @@ You can download configuration files on here,
 
 Or can download with using `wget` command. 
 ```
-$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/genesis.zip
+$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0/genesis.zip
 
 $ unzip genesis.zip
 Archive:  genesis.zip
@@ -162,22 +162,7 @@ INFO [03-14|12:07:35.122] Successfully wrote genesis state         database=ligh
 INFO [03-14|12:07:35.106] Maximum peer count ETH=50 LES=0 total=50 INFO [03-14|12
 ```
 
-### 5. Save bootstrap node configuration 
-
-Save configuration information to `/home/geth/.ethereum/geth/static-nodes.json`
-
-For mainnet:
-
-```
-"enode://093c363d9fa759b58cb0a59d8ca664b4b4981873dc0305b113edf6d0c865089ed9894300b385e58bb3da2f7b8b575170522c5f542a9d47cbff7d28d3c8c8dd65@35.73.174.118:30303" 
-```
-
-For testnet:
-```
-"enode://4a85df39ec500acd31d4b9feeea1d024afee5e8df4bc29325c2abf2e0a02a34f6ece24aca06cb5027675c167ecf95a9fc23fb7a0f671f84edb07dafe6e729856@35.77.156.6:30303"
-```
-
-### 6. Creates a secret key to be used by geth.
+### 5. Creates a secret key to be used by geth.
 ```
  $ sudo -u geth geth account new
 ```
@@ -201,26 +186,38 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 ```
 **Important: Keep the secret key and password in a safe place.**  
 
-### 7. Save the secret key password to a text file
+### 6. Save the secret key password to a text file
 ```
  $ vi /home/geth/.ethereum/password.txt
 ```
-### 8. Start geth
+### 7. Start geth
+
+Exports `NETWORK_ID` and `BOOTNODES`.
+
+
+For mainnet:
+```
+$ export NETWORK_ID=248
+$ export BOOTNODES="enode://1e68361cb0e761e0789c014acdbd2491f30176acf25480408382916632e58af1711d857c75be5917319d06049937e49c09ca51a28590e6ee22aceca1161fd583@3.113.207.39:30301,enode://24a55fd923d780213d15f5551bcbb7171343ef095512927d91baca3e7917124c679f894282eefec37350088b31c45a49bb28df790eb88f487ad60a9b6ccc8f3b@35.238.159.190:30301"
+```
+
+For testnet:
+```
+$ export NETWORK_ID=9372
+$ export BOOTNODES="enode://4a85df39ec500acd31d4b9feeea1d024afee5e8df4bc29325c2abf2e0a02a34f6ece24aca06cb5027675c167ecf95a9fc23fb7a0f671f84edb07dafe6e729856@3.113.59.173:30303"
+```
 
 For `YOUR_ACCOUNT_ADDRES`, use the secret key address you just created.
-
 ```
 $ sudo -u geth geth \
- --networkid 248 \
+ --networkid $NETWORK_ID \
+ --bootnodes $BOOTNODES \
  --syncmode full --gcmode archive \
- --mine --allow-insecure-unlock \
- --unlock {YOUR_ACCOUNT_ADDRESS} \
- --password /home/geth/.ethereum/password.txt \
- --http --http.addr 0.0.0.0 --http.port 8545 \
- --http.vhosts '*' --http.corsdomain '*' \
- --http.api net,eth,web3
+ --mine --miner.gaslimit 30000000 \
+ --allow-insecure-unlock --unlock {YOUR_ACCOUNT_ADDRESS} \
+ --password /home/geth/.ethereum/password.txt
 ```
-### 9. Block Sync
+### 8. Block Sync
 
 Immediately after startup, the block synchronization process takes place. The progress of synchronization can be checked with the following command. 
 
