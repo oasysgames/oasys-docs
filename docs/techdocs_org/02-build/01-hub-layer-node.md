@@ -35,7 +35,7 @@ $apt install wget
 
 ### 2. Download Setup File
 ```
-$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha4/setup.sh
+$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0/setup.sh
 ```
 ### 3. Giving Permission to Setup file  
 
@@ -136,7 +136,7 @@ You can download configuration files on here,
 
 Or can download with using `wget` command. 
 ```
-$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0-alpha2/genesis.zip
+$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0/genesis.zip
 
 $ unzip genesis.zip
 Archive:  genesis.zip
