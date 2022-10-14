@@ -121,11 +121,6 @@ const config = {
                 to: '/docs/whitepaper/intro',
               },
               {
-                label: 'White Paper (PDF)',
-                href: '/pdfs/Oasys_WhitePaper.pdf',
-                target: '_blank',
-              },
-              {
                 label: 'Technical Materials',
                 to: '/docs/techdocs/intro',
               },
