@@ -37,6 +37,9 @@ You can navigate [Wallet](/docs/techdocs/wallet/1-1-about-validator-account) to 
 | Sequencer(Verse Layer) | X |
 | Proposer(Verse Layer) | X |
 
+For [exporting hard wallet private key](/docs/techdocs/validator/1-1-faq)
+
+
 
 ## Software Wallets
 
