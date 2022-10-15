@@ -91,6 +91,32 @@ $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'personal.unl
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'miner.start(1)'
 ```
 
+4. Check geth status 
+
+```
+$ sudo systemctl status geth'
+```
+
+If you have **staked** more than 10Million token, and miner is working, you may see, 
+
+```
+Successfully sealed a new block 
+```
+
+OR, 
+
+
+```
+Commit new sealing block
+```
+
+If your miner status is not working, you may see
+
+```
+Block sealing failed
+```
+
+
 ### Exporting Ledger Private Key
 
 You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
