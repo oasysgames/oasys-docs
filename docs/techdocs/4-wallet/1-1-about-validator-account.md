@@ -19,19 +19,27 @@ So, we have made two separate accounts for who is involved in a validator.
 | Stake| O | O |
 | Claim | O | O | 
 | CLI | O | O |
-| Claim Commission | X | O |
+| Claim Commission | X | O (10% of staked, Fixed) |
+
+On initial validators: The Delegator must pay a commission to the Validator Owner.
+If 1000 OAS is staked, and 10% APY is for validation, the reward would be 100 OAS.
+If the commission rate is 10%, the owner takes 10% of the delegated stake, so it receives 10OAS, Delegator takes 90OAS.
+
+The owner can stake himself also. 
+
+The reason for making a fixed rate on validator commission is to avoid the chicken game.
 
 ### **Delegator** 
 
 The delegator is the token's delegator, who delegates assets to the Validator owner or builder account. 
 Since the delegator(hub) can delegate tokens to the owner account, they can stake tokens onto the owner account and receive tokens. 
 
-### **Owner Account** 
+### **Validator Owner (Owner Account)** 
 
 The Owner account is the account used to register the Operator address with Staking Contract. In addition, Staker will provide the Owner address and deposit to Staking Contract. Therefore, the Owner doesn't have to interact, excluding registering the Owner's account. 
 The Owner account is used to sign transactions, so you can increase security using a hardware wallet. And **there is no way to recover if you lost the Owner's address**. 
 
-### **Operator Account**
+### **Validator Operator (Operator Account)**
 
 The Operator account is the account the node(geth) uses to sign the block (the account created in Manual setup Step.6 in the Hub layer node ).
 
