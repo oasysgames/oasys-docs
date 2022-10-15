@@ -10,6 +10,7 @@ const sidebars = {
       collapsed: false,
       items: [
         'techdocs/technical-materials/2-1-about-oasys',
+        'techdocs/technical-materials/2-1-roadmap',
       ],
     }, 
     {

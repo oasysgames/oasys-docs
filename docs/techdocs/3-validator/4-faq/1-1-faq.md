@@ -91,6 +91,12 @@ $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'personal.unl
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'miner.start(1)'
 ```
 
+### Exporting Ledger Private Key
+
+You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
+
+
+
 ## Faucet 
 
 Testnet:

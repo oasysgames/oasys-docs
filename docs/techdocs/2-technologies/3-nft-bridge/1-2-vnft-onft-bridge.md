@@ -9,10 +9,10 @@ Non-Fungible Tokens (NFT) is essential asset for tokenomics in the ecosystem. Oa
 ![vNFT & oNFT](/img/docs/techdocs/nft-bridge/tech-process_vnft-onft.png)
 
 ### 1. vNFT, Restrictive-Use Tokens
-vNFT can be minted on the Verse-Layer. The token can only be used with certain Verse-Layers. This type of FTs (e.g. in-game currency) and NFTs (e.g. IP) can not be cross-chain bridged.
+vNFT can be minted on the Verse Layer. The token can only be used with certain Verse-Layers. This type of FTs (e.g. in-game currency) and NFTs (e.g. IP) can not be cross-chain bridged.
 
 ### 2. oNFT, Highly Interoperable Tokens
-oNFT can be minted on the Hub-Layer. The token is interoperable and is available on all Verse-Layers. Also, it can be sent to another network such as Ethereum by a cross-chain bridge.
+oNFT can be minted on the Hub-Layer. The token is interoperable and is available on all Verse-Layers. Also, it can be sent to another network, such as Ethereum, by a cross-chain bridge.
 
 ### 3. exNFT, Minted in External Network Tokens
 exNFT is a token minted on a network outside of Oasys. They are available on Oasys' Hub-Layer and Verse-Layer via cross-chain bridges.

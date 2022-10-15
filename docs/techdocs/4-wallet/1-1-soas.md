@@ -1,15 +1,15 @@
 ---
 ---
 
-# soas
+# sOAS
 
 OAS is our native token, and sOAS means Stakeable Oasys Token.
-Since it's Delegated Proof of stake, and we need locked up token, we have made sOAS.
+Since it's Delegated Proof of stake, and we need a locked-up token, we have made sOAS.
 
 ## Purpose of sOAS
 
 sOAS is, for better participating in our ecosystem, and thanks for early support with us, we are sending tokens that can stake, which makes an opportunity to participate in our ecosystem.
-Stake-able Oasys Token can be majorly used on Hub layer staking and verse deposit, which can be huge supportive onto verse builders, or operators. 
+sOAS can use Hub layer staking and verse deposit, which can substantially support verse builders or operators. 
 
 ### Contract of sOAS
 
@@ -23,12 +23,13 @@ And you can see the contract on `Mainnet` or `Testnet`.
 | Type | OAS | sOAS |
 |-----------|-----------|-----------|
 | Stake on Hub Layer| O | O |
+| Verse Layer Deposit (1M Deposit to build a verse) | O | O |
 | Claim Staking Reward on Hub Layer | O | O | 
-| CLI Staking | O | O |
+| CLI Staking (Hub/Verse Layer) | O | O |
 | Bridge onto another chain | O | X |
 | Move Token to other address | O | Permissive |
 
-**Permissive** Means, you need authorization from foundation to move token, which can take around 1 month. 
+**Permissive** means you need authorization from the foundation to move token, which can take around 1 month. 
 
 
 ### How is sOAS made? 
@@ -37,13 +38,14 @@ And you can see the contract on `Mainnet` or `Testnet`.
 
 First, look at this code if you are familiar with it. 
 
+sOAS can be minted by anyone, but the minter can move it only with the minter's permission.
 While we mint a token from a contract, 
 
 Address
 Since (Vesting Start period,Lockup end period) 
 Until (Vesting Ends) 
 
-Time itself is calculated by a UNIX timestamp. Calculation formula is : 
+Time itself is calculated by a UNIX timestamp. The Calculation formula is : 
 
 ```
 (now - since) ÷ (until - since) × sOAS holding amount
@@ -67,9 +69,8 @@ And you can retrieve locked up token like this.
 | 2024 Jun 30 | 495.8 sOAS → 495.8 OAS|  
 | 2024 Dec 31 | 1000 sOAS → 1000 OAS|  
 
-**Please remind all example token claim are an approximate number, it might not be accurate.**
 
+**Please remind all example token claims are approximate numbers. Therefore, it might not be accurate.**
 
-### How to claim sOAS onto OAS
-
-We will prepare a web page after mainnet launch that can convert sOAS onto OAS when the cliff is done.
+### How to claim sOAS onto OAS​
+We will prepare a web page after the mainnet launch that can convert sOAS onto OAS when the cliff is over.

@@ -3,15 +3,16 @@
 
 # About Validator Account 
 
-Oasys is Using DPoS system. Validator accounts may be various. 
+Oasys is Using the DPoS system. Validator accounts may be various. 
 
 ![wallet](/img/docs/techdocs/validator/wallet.jpg)
 
 ## Hub Layer
 
-Hub layer it self is, having decentralized nodes with 15 seconds of block confirmation. While we are developing, we have noticed using private key multiple times running commands can be dangerous at the moment, and bad for operation. 
+The Hub layer has decentralized nodes with 15 seconds of block confirmation. While developing, we have noticed that using the private key multiple times running commands can be dangerous at the moment and bad for operation. 
 
-So, we have made two seperate account for who is involved in validator. 
+So, we have made two separate accounts for who is involved in a validator. 
+
 
 | Type | Delegator | Owner |
 |-----------|-----------|-----------|
@@ -22,52 +23,48 @@ So, we have made two seperate account for who is involved in validator.
 
 ### **Delegator** 
 
-Delegator is delegator of token, who delegate assets onto owner, or builder account. 
-Since delegator(hub) need to delegate token onto owner account, they can stake token onto owner account, and can receive tokens. 
+The delegator is the token's delegator, who delegates assets to the Validator owner or builder account. 
+Since the delegator(hub) can delegate tokens to the owner account, they can stake tokens onto the owner account and receive tokens. 
 
 ### **Owner Account** 
 
-The Owner account is the account used to register the Operator address with Staking Contract.In addition, Staker (stakers) will provide Owner address and deposit to Staking Contract. Owner it self don't have to interact excluding registering owner account. 
-The Owner account is only used to sign transactions, so you can increase security by using a hardware wallet. And **there is no way to recover if you lost owner address**. 
+The Owner account is the account used to register the Operator address with Staking Contract. In addition, Staker will provide the Owner address and deposit to Staking Contract. Therefore, the Owner doesn't have to interact, excluding registering the Owner's account. 
+The Owner account is used to sign transactions, so you can increase security using a hardware wallet. And **there is no way to recover if you lost the Owner's address**. 
 
 ### **Operator Account**
 
-The Operator account is the account that the node(geth) uses to sign the block (the account created in Manual setup Step.6 in Hub layer node will be used).
+The Operator account is the account the node(geth) uses to sign the block (the account created in Manual setup Step.6 in the Hub layer node ).
 
-There is a high risk of leakage because the **operator account private key must be placed on the node disk**.
+There is a high risk of leakage because the **operator account's private key must be placed on the node disk**.
 
-Due to the separation of Owner and Operator accounts, even if Operator's private key is leaked, Owner can simply update the new Operator address in Staking Contract. Also, since Delegators or stakers stakes on owner account, there is no need for Stakers to change the staking destination.
+Due to the separation of Owner and Operator accounts, even if Operator's private key is leaked, the Owner can update the new Operator address in Staking Contract. Also, since Delegators or stakes are on the Owner's account, there is no need for Stakers to change the staking destination.
 
 ## Verse Layer
 
-Verse layer is using optimism, designed for high speed. Since we are using optimistic, we have three wallet address model for nodes, and deposits.
+The verse layer uses optimism, designed for high speed. Since we are using optimistic, we have three wallet address models for nodes and deposits.
 
 ### **Builder Wallet**
 
-Builder wallet is owner of Verse-Layer, users or operators can deoposit token onto builder wallet. 
-Main purpose of builder wallet is having deposit wallet for verse gas fees. 
+Builder wallet is the Owner of Verse-Layer. Users or operators can deposit tokens onto the builder wallet. 
+The primary purpose of the builder wallet is to have a deposit wallet for verse gas fees. 
 
-You can deploy verse by running `verse factory contract`, while you are running, you need to send **Sequencer Address** and **Proposer Address**, so you need to roll-up on specific address only. 
+You can deploy verse by running 'verse factory contract`.However, while running, you need to send **Sequencer Address** and **Proposer Address**, so you need to roll up on specific addresses only. 
 
-Since it's not active wallet and not used after running `verse factory contract`, you can store on safe wallet.
+Since it's not an active wallet and not used after running the 'verse factory contract`, you can store it in a safe wallet.
 
-You can use wallet in: 
+You can use a wallet in: 
 
 - Hard Wallet
 - Multi-sig using other providers
 
-*Please note that Multi-sig should be migrated on oasys prior on use. 
+*Please note that Multi-sig should deploy on Oasys before use. 
 
 ### **Sequencer Wallet**
 
-Sequencer wallet is, used by **Sequencer Node** in optimism. Sequencer node it self are used by roll-up Verse-Layer's transaction to Hub-Layer. Sequencer address is written in Optimism contract in Hub-Layer, and roll-up can be done only on specific approved address for security. If key is leaked, builder need to update approved address on contract.  
+Sequencer wallet is, used by **Sequencer Node** in optimism. Roll-up Verse-Layer's transaction uses the sequencer node itself to Hub-Layer. The sequencer address is written in the Optimism contract in Hub-Layer, and roll-up can be done only on specifically approved addresses for security. The builder must update the approved address on the contract if a key is leaked.  
 
 ### **Proposer Wallet**
 
-Proposer wallet is, used by **Proposer Node** in optimism, Proposer node roll-up Verse layer's status root(Merkle Tree) onto Hub-Layer. 
-Proposer wallet need to read block chain process, so it need to use hot wallet only. Proposer address is written in Hub-Layer's optimism contract, and allow approved address only. If key is leaked, builder need to update approved address on contract. 
+Proposer wallet is used by **Proposer Node** in optimism, Proposer node roll-up Verse layer's status root(Merkle Tree) onto Hub-Layer. 
+A proposer wallet needs to read block chain process, so it only needs to use a hot wallet. The proposer address is written in Hub-Layer's optimism contract and allows approved addresses only. The builder must update the approved address on the contract if the private key leaks. 
 
-
-## **Delegator**
-
-Delegator can deligate tokens onto specific address. Delegator can stake onto Hub layer's owner's account or, Verse layer's Builder account. 

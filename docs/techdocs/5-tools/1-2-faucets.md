@@ -15,9 +15,10 @@ There is no need for formal education or knowledge to receive compensation from 
 
 ### Mainnet
 
-faucet.oasys.games
+[Mainnet Faucet](https://faucet.oasys.games) 
 
 ### Testnet
 
-faucet.testnet.oasys.games
+[Testnet Faucet](https://faucet.testnet.oasys.games) 
+
 
