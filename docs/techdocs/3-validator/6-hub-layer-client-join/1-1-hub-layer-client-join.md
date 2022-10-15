@@ -100,3 +100,28 @@ Next Epoch Staking    : 10,000,000 OAS
 ```
     
 To fully done staking, you must wait for 1 Epoch to be run on blockchain, which is approx 1 day. 
+
+
+## 6. Update Operator. 
+
+First, you need to expxort private key. 
+```
+$ export PRIVATE_KEY=Owner Account Private Key
+```
+
+Two ways can be done with CLI. 
+And we are building web it can be done on online later.
+
+```
+$ oaspos validator:update-operator \
+  --mainnet \
+  --operator 0x0123456789abcdef...
+```
+
+
+```
+$ oaspos validator:update-operator \
+  --rpc https://rpc.mainnet.oasys.games/ \
+  --chain-id 248 \
+  --operator 0x0123456789abcdef...
+```

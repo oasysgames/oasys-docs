@@ -13,7 +13,7 @@ You can deploy verse by running `verse factory contract`, while you are running,
 Since it's not active wallet and not used after running `verse factory contract`, you can store on safe wallet.
 You can use wallet in hard wallet that can support, EVM compatible chain.
 
-Also, Verse deposit on builder wallet can be done by other deligator, it doesn't have to be wallet provider is having full token for a building verse. 
+Also, Verse deposit on builder wallet can be done by other Delegator, it doesn't have to be wallet provider is having full token for a building verse. 
 
 ## **Sequencer Wallet**
 
@@ -25,6 +25,6 @@ Proposer wallet is, used by **Proposer Node** in optimism, Proposer node roll-up
 Proposer wallet need to read block chain process, so it need to use hot wallet only. Proposer address is written in Hub-Layer's optimism contract, and allow approved address only. If key is leaked, builder need to update approved address on contract. 
 
 
-## **Deligator**
+## **Delegator**
 
-Deligator can deligate tokens onto specific address. Deligator can stake onto Hub layer's owner's account or, Verse layer's Builder account. 
+Delegator can deligate tokens onto specific address. Delegator can stake onto Hub layer's owner's account or, Verse layer's Builder account. 

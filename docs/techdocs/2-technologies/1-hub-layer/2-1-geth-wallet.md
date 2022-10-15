@@ -12,6 +12,8 @@ Coin wallets, unlike traditional wallets, do not technically store your cryptocu
 
 Oasys is using go ethereum, You can use any wallet which supports EVM compatible. 
 
+For validator wallet : [validator wallet](/docs/techdocs/wallet/1-1-about-validator-account)
+
 ## Hardware wallet
 
 Keeping your private keys and removing them from your device make hardware wallets the most common and secure form of wallet. These devices are similar to USB and recent hard wallets have a variety of functionality.

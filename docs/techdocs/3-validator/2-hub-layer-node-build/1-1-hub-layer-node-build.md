@@ -41,6 +41,16 @@ $ sudo chmod +x setup.sh
 ```
 $ ./setup.sh
 ```
+
+While you are starting on Geth, you will have question, 
+
+**Do you want to start block validation automatically?**
+
+`PLEASE SELECT YES` If you are willing to start validator right away.
+
+If you select [NO, Navigate Q4. On Validator Setup](docs/techdocs/validator/faq/1-1-faq), you may have to turn it on manually, which might take time. 
+
+
 ### 5. Check `sestatus`
 
 　On CentOs, sometimes `sestatus` stops to run geth, so you need to change：

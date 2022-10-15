@@ -70,6 +70,7 @@ const sidebars = {
           'techdocs/validator/hub-layer-node-build/1-1-hub-layer-node-build',
           'techdocs/validator/hub-layer-client-join/1-1-hub-layer-client-join',
           'techdocs/validator/hub-layer-cli/1-1-hub-layer-cli',
+          'techdocs/validator/stakinghub/1-1-staking',
           'techdocs/validator/verse-layer-node-build/1-1-verse-layer-node-build',
           'techdocs/validator/faq/1-1-faq',
       ],
@@ -83,6 +84,7 @@ const sidebars = {
       items: [
         'techdocs/wallet/1-1-about',
         'techdocs/wallet/1-1-about-validator-account',
+        'techdocs/wallet/1-1-soas',
         'techdocs/wallet/1-1-wallet-commands',
       ],
     },

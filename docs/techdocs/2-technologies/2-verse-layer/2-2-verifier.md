@@ -5,7 +5,6 @@
 
 ![Verifier](/img/docs/techdocs/verifier/verifier.png)
 
-## 
 
 Oasys Hub-layer is using Optimistic Rollup, state commitments are published to Hub-layer without any direct proof of the validity of these commitments. Instead, these commitments are considered pending for a period of time. If a proposed state commitment goes unchallenged for the duration of the challenge window (7 days in default), then it is considered final. Once a commitment is considered final, smart contracts on Hub-layer can safely accept proofs about the state of Optimism based on that commitment.
 
