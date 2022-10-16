@@ -126,8 +126,12 @@ Next Epoch Staking    : 10,000,000 OAS
     
 To fully done staking, you must wait for 1 Epoch to be run on blockchain, which is approx 1 day. 
 
+## 6. Check node operation. 
 
-## 6. Update Operator. 
+
+
+
+## 7. Update Operator. 
 
 First, you need to expxort private key. 
 ```
