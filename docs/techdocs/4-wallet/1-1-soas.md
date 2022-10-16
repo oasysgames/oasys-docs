@@ -30,6 +30,7 @@ And you can see the contract on `Mainnet` or `Testnet`.
 | Move Token to other address | O | Permissive |
 
 **Permissive** means you need authorization from the foundation to move token, which can take around 1 month. 
+Please reach out to the Oasys foundation if you need to move a token.
 
 
 ### How is sOAS made? 
@@ -74,3 +75,4 @@ And you can retrieve locked up token like this.
 
 ### How to claim sOAS onto OAS​
 We will prepare a web page after the mainnet launch that can convert sOAS onto OAS when the cliff is over.
+
