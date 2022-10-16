@@ -82,7 +82,7 @@ validator:join command registers onto staking contract.
 ## 4. Staking
 
 
-You can use [oasys hub](/docs/techdocs/validator/1-1-staking) instead.
+You can use [oasys hub](/docs/techdocs/validator/stakinghub/1-1-staking) instead.
 
 ```
 $ export PRIVATE_KEY=Token holder's(Delegator's)address
@@ -127,6 +127,13 @@ Next Epoch Staking    : 10,000,000 OAS
 To fully done staking, you must wait for 1 Epoch to be run on blockchain, which is approx 1 day. 
 
 ## 6. Check node operation. 
+
+```
+$ sudo systemctl status geth
+```
+Run to know geth status.
+
+If you found 
 
 
 
