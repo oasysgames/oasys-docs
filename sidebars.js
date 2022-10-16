@@ -86,6 +86,7 @@ const sidebars = {
         'techdocs/wallet/1-1-about',
         'techdocs/wallet/1-1-about-validator-account',
         'techdocs/wallet/1-1-soas',
+        'techdocs/wallet/1-1-nsuite',
         'techdocs/wallet/1-1-wallet-commands',
       ],
     },

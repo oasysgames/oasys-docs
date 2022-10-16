@@ -22,8 +22,9 @@ So, we have made two separate accounts for who is involved in a validator.
 | Claim Commission | X | O (10% of staked, Fixed) |
 
 On initial validators: The Delegator must pay a commission to the Validator Owner.
-If 1000 OAS is staked, and 10% APY is for validation, the reward would be 100 OAS.
-If the commission rate is 10%, the owner takes 10% of the delegated stake, so it receives 10OAS, Delegator takes 90OAS.
+- If 1000 OAS is staked, and 10% APY is for validation, the reward would be 100 OAS.
+- If the commission rate is 10%, the owner takes 10% of the delegated stake.
+- So Owner receives 10OAS, Delegator takes 90OAS.
 
 The owner can stake himself also. 
 

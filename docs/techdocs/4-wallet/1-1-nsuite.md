@@ -1,0 +1,79 @@
+---
+---
+
+# Nsuite
+
+## Login to Nsuite 
+![nsuite](/img/docs/techdocs/nsuite/1.png)
+
+First, loginto [nusite board](https://board.nsuite.io), and select Workflow, New Request and Contract method. 
+
+---
+## Joining
+
+
+### Select Method(Join POS)
+
+![nsuite](/img/docs/techdocs/nsuite/2.png)
+
+Select StakeManager, Oasys is for a Mainnet, Oasys Testnet is for a Testnet.
+
+![nsuite](/img/docs/techdocs/nsuite/join.png)
+
+Select joinValidator(address) if you want to run `$oaspos validator:join` command in Nsuite.
+
+### Select Stake Manager
+
+![nsuite](/img/docs/techdocs/nsuite/4.png)
+
+Please input, Title of Request, Message for Request, Duedate in advance.
+On Execution details, Please input [Validator operator address](/docs/techdocs/wallet/1-1-about-validator-account) in `operator(address)`.
+
+
+For confirming operator address, run following command on validator pc.
+
+```
+$ sudo -u geth /usr/local/bin/geth attach ipc:/home/geth/.ethereum/geth.ipc -exec eth.accounts
+```
+
+## Staking
+
+### Select Method(Stake)
+
+![nsuite](/img/docs/techdocs/nsuite/2.png)
+
+Select StakeManager, Oasys is for a Mainnet, Oasys Testnet is for a Testnet.
+
+![nsuite](/img/docs/techdocs/nsuite/stake.png)
+
+Select stake(address,uint8,uint256) if you want to run `$oaspos staker:stake` command in Nsuite.
+
+### Select Stake Manager
+
+![nsuite](/img/docs/techdocs/nsuite/stake2.png)
+
+Please input, Title of Request, Message for Request, Duedate in advance.
+On Execution details, Please input 
+
+- input data [Validator owner address](/docs/techdocs/wallet/1-1-about-validator-account)
+
+You can use owner address previously sent to foundation.
+
+- token (uint8)
+
+| Type | token number |
+|-----------|-----------|
+| OAS| 0 |
+| WOAS| 1 |
+| sOAS| 2 |
+
+
+- amount (uint256)
+
+Amount you want to stake. 
+
+If you are inputing 1.5 OAS, please input: 
+
+```
+1500000000000000000
+```

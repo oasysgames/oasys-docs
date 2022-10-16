@@ -5,7 +5,7 @@
 
 
 ---
-# Participating POS using CLI
+## Participating POS using CLI
 
 ---   
 ## Download CLI Tool
@@ -152,6 +152,6 @@ $ oaspos validator:update-operator \
 ```
 
 ---
-# Participating POS using Web
+## Participating POS using Web
 
 We are preparing web can execute validator:join.
