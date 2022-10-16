@@ -3,16 +3,19 @@
 
 # Hub-Layer Client Join
 
-## Participating POS using CLI
-    
-### Download CLI Tool
+
+---
+# Participating POS using CLI
+
+---   
+## Download CLI Tool
 
 To run the Staking Contract, Please download CLI tool in Github.
     
 https://github.com/oasysgames/oasys-pos-cli/releases
 
     
-### 1. Making owner account
+## 1. Making owner account
 
 Create a private key for the Owner account.
 We are working on hardware wallet support.
@@ -27,19 +30,19 @@ Address : 0x0123456789abcdef...
 Key     : 0x0123456789abcdef0123456789abcdef...
 ```
 
-### 2. Obtaining OAS From Faucet
+## 2. Obtaining OAS From Faucet
 
 You may need gas fees to stake tokens. So Please check you have sufficient gas. If not, you can go to faucet to obtain tokens.
 
 https://faucet.testnet.oasys.games/
     
-### 3. Register as a Validator
+## 3. Register as a Validator
     
 Using CLI Tool, You must register your Address to Staking Contract.
     
 `PRIVATE_KEY` is for Enviornment Settings, Please Use Password of Owner's Account.
     
-#### 3.1. `--operator` Account Setting
+### 3.1. `--operator` Account Setting
 
 You can make account if not having one : 
 ```
@@ -57,7 +60,7 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 
 Please Set the geth address with selected address on Secret file : 
 
-#### 3.2. Export Private Key 
+### 3.2. Export Private Key 
     
 ```
 $ export PRIVATE_KEY=0x0123456789abcdef0123456789abcdef...
@@ -76,7 +79,7 @@ sending (tx: 0x0123456789abcdef)...: success with 130999 gas
 
 validator:join command registers onto staking contract.
 
-### 4. Staking
+## 4. Staking
 
 
 You can use [oasys hub](/docs/techdocs/validator/1-1-staking) instead.
@@ -101,7 +104,7 @@ $ oaspos staker:stake \
   --soas 10000000
 ``` 
     
-### 5. Confirming Staking
+## 5. Confirming Staking
 
 After your staking is done, You may check Staking Status with following command : 
     
@@ -124,7 +127,7 @@ Next Epoch Staking    : 10,000,000 OAS
 To fully done staking, you must wait for 1 Epoch to be run on blockchain, which is approx 1 day. 
 
 
-### 6. Update Operator. 
+## 6. Update Operator. 
 
 First, you need to expxort private key. 
 ```
@@ -148,7 +151,7 @@ $ oaspos validator:update-operator \
   --operator 0x0123456789abcdef...
 ```
 
-
-## Participating POS using Web
+---
+# Participating POS using Web
 
 We are preparing web can execute validator:join.

@@ -115,14 +115,14 @@ If your miner status is not working, you may see
 ```
 Block sealing failed
 ```
-
+---
 
 ### Exporting Ledger Private Key
 
 You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
 
 
-
+---
 ## Faucet 
 
 Testnet:
