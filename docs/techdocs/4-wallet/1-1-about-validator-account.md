@@ -33,7 +33,10 @@ The reason for making a fixed rate on validator commission is to avoid the chick
 ### **Delegator** 
 
 The delegator is the token's delegator, who delegates assets to the Validator owner or builder account. 
-Since the delegator(hub) can delegate tokens to the owner account, they can stake tokens onto the owner account and receive tokens. 
+Since the delegator(hub) can delegate tokens to the owner account, they can stake tokens onto the owner account and receive tokens.
+
+Validator Owner (Owner Account) can use same address with Delegator(self delegating).
+Builder Wallet can use same address with Delegator(self delegating).
 
 ### **Validator Owner (Owner Account)** 
 

@@ -145,6 +145,7 @@ const sidebars = {
         'techdocs/commands/websocket/1-1-websocket',
         'techdocs/commands/ipc-server/1-1-ipc-server',
         'techdocs/commands/graphql/1-1-graphql',
+        'techdocs/commands/graphql/1-1-graphqlhub',
       ],
     },
   ],
