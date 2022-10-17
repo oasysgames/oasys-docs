@@ -12,7 +12,7 @@ Most crypto faucets distribute testnet's cryptocurrency as compensation, providi
 There is no need for formal education or knowledge to receive compensation from these crypto faucets, only a wallet address to store the rewarded cryptocurrency.
 
 
-## Oasys Faucet
+## Oasys Faucet Information
 
 ### Mainnet
 
@@ -23,3 +23,19 @@ There is no need for formal education or knowledge to receive compensation from 
 [Testnet Faucet](https://faucet.testnet.oasys.games) 
 
 
+## Using Private Faucet
+
+First, navigate to [Private Faucet](https://c4a7d991.oasys.games/).
+
+Username: faucet
+Password: Please contact to Oasys foundation. 
+
+![faucet1](/img/docs/techdocs/faucet/image1.png)
+
+After login, you may see following screen. 
+
+Clicking `Use Metamask` automatically connects to Metamask.
+
+![faucet2](/img/docs/techdocs/faucet/image2.png)
+
+You can input your wallet address instead. 
