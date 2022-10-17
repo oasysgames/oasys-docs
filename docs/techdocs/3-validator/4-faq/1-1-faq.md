@@ -67,15 +67,7 @@ Block miner status is `off`, so you need to turn on.
 
 
 
-1. Unlock IPC connected Wallet
-
-You need to input `Validator Operator (Operator Account)` on `personal.unlockAccount`. 
-
-```
-$ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'personal.unlockAccount("0x1234....")'
-```
-
-2. in systemd unit file please add geth start option `--alow-insecure-unlock`
+1. in systemd unit file please add geth start option `--alow-insecure-unlock`
 
 ```
 ExecStart=$INSTALL_PATH \
@@ -87,8 +79,7 @@ ExecStart=$INSTALL_PATH \
   --syncmode full --gcmode archive \
   --allow-insecure-unlock
 ```
-
-3. Restart Geth.
+2. Restart Geth.
 
 ```
 $ sudo systemctl restart geth
@@ -97,13 +88,21 @@ $ sudo systemctl restart geth
 Meanwhile, please input geth boot options [geth boot options, manual setup 7 start geth](/docs/techdocs/validator/hub-layer-node-build/1-1-hub-layer-node-build).
 
 
-3. Miner Restart
+3. Unlock IPC connected Wallet
+
+You need to input `Validator Operator (Operator Account)` on `personal.unlockAccount`. 
+
+```
+$ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'personal.unlockAccount("0x1234....")'
+```
+
+4. Miner Restart
 
 ```
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'miner.start(1)'
 ```
 
-4. Check geth status 
+5. Check geth status 
 
 ```
 $ sudo systemctl status geth'
