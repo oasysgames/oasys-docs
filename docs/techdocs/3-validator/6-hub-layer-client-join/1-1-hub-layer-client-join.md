@@ -18,7 +18,7 @@ https://github.com/oasysgames/oasys-pos-cli/releases
 ## 1. Making owner account
 
 Create a private key for the Owner account.
-We are working on hardware wallet support.
+If you already have account, you can skip this. 
     
 ```
 $ oaspos crypto:create-account
@@ -41,6 +41,8 @@ https://faucet.testnet.oasys.games/
 Using CLI Tool, You must register your Address to Staking Contract.
     
 `PRIVATE_KEY` is for Enviornment Settings, Please Use Password of Owner's Account.
+
+If you have used express setup, you can skip 3.1.
     
 ### 3.1. `--operator` Account Setting
 
@@ -61,6 +63,8 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 Please Set the geth address with selected address on Secret file : 
 
 ### 3.2. Export Private Key 
+
+You must export validator owner(Owner account)'s Key. 
     
 ```
 $ export PRIVATE_KEY=0x0123456789abcdef0123456789abcdef...
