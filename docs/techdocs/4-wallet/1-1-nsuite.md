@@ -27,6 +27,10 @@ Select joinValidator(address) if you want to run `$oaspos validator:join` comman
 ![nsuite](/img/docs/techdocs/nsuite/4.png)
 
 Please input, Title of Request, Message for Request, Duedate in advance.
+Please `approve sOAS token` use before staking it. 
+
+If there is no method for approve sOAS, please contact nsuite team. 
+
 On Execution details, Please input [Validator operator address](/docs/techdocs/wallet/1-1-about-validator-account) in `operator(address)`.
 
 
