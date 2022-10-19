@@ -19,6 +19,7 @@ https://github.com/oasysgames/oasys-pos-cli/releases
 
 Create a private key for the Owner account.
 If you already have account, you can skip this. 
+You can find details in [Wallet](/docs/techdocs/wallet/1-1-about-validator-account).
     
 ```
 $ oaspos crypto:create-account
@@ -82,6 +83,7 @@ sending (tx: 0x0123456789abcdef)...: success with 130999 gas
 ```
 
 validator:join command registers onto staking contract.
+If you successfully registered, you may see in Oasys Hub.
 
 ## 4. Staking
 
