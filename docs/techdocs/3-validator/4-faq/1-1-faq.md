@@ -75,7 +75,7 @@ ExecStart=$INSTALL_PATH \
   --networkid ${NETWORK_ID} \
   --bootnodes ${BOOTNODES} \
   --miner.etherbase ${ETHERBASE} \
-  --miner.gaslimit ${GASLIMIT}$SYSTEMD_OPTS \
+  --miner.gaslimit ${GASLIMIT} \
   --syncmode full --gcmode archive \
   --allow-insecure-unlock
 ```
