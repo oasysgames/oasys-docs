@@ -111,6 +111,7 @@ const sidebars = {
         'techdocs/smart-contract/1-3',
         'techdocs/smart-contract/1-4',
         'techdocs/smart-contract/1-5',
+        'techdocs/smart-contract/1-6',
       ]
     },
     {
