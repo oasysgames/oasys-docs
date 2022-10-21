@@ -1,0 +1,240 @@
+---
+---
+
+# Hardhat
+
+Hardhat is a development environment to Ethereum software.
+
+Hardhat allows developers to test, compile, debug and distribute their dapps in the Ethereum blockchain,and hardhat has stack tracking and messaging for errors during debugging, making it easier for developers to analyze and troubleshoot the causes of errors.
+
+Hardhat also offers a variety of utility plug-ins to help develop the plug-ins that developers need by installing them.
+
+## Hardhat Features
+
+- Hardhat provides well-organized documents and tutorial documents for developers new to Hardhat.
+
+- Hardhat provides a wide range of libraries and plug-ins, and allows users to create plug-ins themselves.
+
+- Hardhat provides a flexible test environment for developers by providing a `Hardhat network`, a local test environment that can directly interact with smart contract agreements.
+
+## Install Hardhat
+
+To install Hardhat, go to an empty folder, initialize an npm project (i.e. npm init), and run.
+
+```
+npm init
+
+npm install --save-dev hardhat
+```
+
+Once it's installed, just run this command and follow its instructions:
+
+```
+npx hardhat
+```
+
+## Hardhat Configuration
+
+If you run npx hardhat now, you will be shown some options to facilitate project creation.
+
+You can create a js,ts-based project or create a blank hardhat.config.js file using the following options:
+
+```
+888    888                      888 888               888
+888    888                      888 888               888
+888    888                      888 888               888
+8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
+888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
+888    888 .d888888 888    888  888 888  888 .d888888 888
+888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
+888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
+
+👷 Welcome to Hardhat v2.12.0 👷‍
+
+? What do you want to do? … 
+❯ Create a JavaScript project
+  Create a TypeScript project
+  Create an empty hardhat.config.js
+  Quit
+```
+
+If you select Create a JavaScript project, you can use the following process to create a project.
+
+```
+👷 Welcome to Hardhat v2.12.0 👷‍
+
+✔ What do you want to do? · Create a JavaScript project
+? Hardhat project root: › /Users/XXXX
+? Do you want to add a .gitignore? (Y/n) › 
+? Help us improve Hardhat with anonymous crash reports & basic usage data? (Y/n) › 
+
+```
+
+If the project is successfully created, the following message is printed.
+
+```
+✨ Project created ✨
+
+See the README.md file for some example tasks you can run
+
+Give Hardhat a star on Github if you're enjoying it! 💞✨
+
+     https://github.com/NomicFoundation/hardhat
+```
+
+The structure of the created project is as follows:
+
+```
+contracts/
+scripts/
+test/
+hardhat.config.js
+README.md
+```
+
+- contracts/ is where the source files for your contracts should be.
+- test/ is where your tests should go.
+- scripts/ is where simple automation scripts go.
+* Please refer to the [paths configuration section](https://hardhat.org/hardhat-runner/docs/config#path-configuration) page when changing the structure of the project.
+
+If you select Create a TypeScript project, you can use the following process to create a project.
+
+```
+👷 Welcome to Hardhat v2.12.0 👷‍
+
+✔ What do you want to do? · Create a TypeScript project
+✔ Hardhat project root: · /Users/XXX
+✔ Do you want to add a .gitignore? (Y/n) · 
+```
+
+If the project is successfully created, the following message is printed.
+
+```
+✨ Project created ✨
+
+See the README.md file for some example tasks you can run
+
+Give Hardhat a star on Github if you're enjoying it! 💞✨
+
+     https://github.com/NomicFoundation/hardhat
+```
+
+The structure of the created project is as follows:
+
+```
+contracts/
+scripts/
+test/
+hardhat.config.js
+README.md
+tsconfig.json
+```
+
+- contracts/ is where the source files for your contracts should be.
+- test/ is where your tests should go.
+- scripts/ is where simple automation scripts go.
+* Please refer to the [paths configuration section](https://hardhat.org/hardhat-runner/docs/config#path-configuration) page when changing the structure of the project.
+
+
+If you select Create an empty hardhat.config.js, Hardhat will create a hardhat.config.js like the following:
+
+```
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: "0.8.17",
+};
+```
+
+## Compiling smart contracts
+
+To compile your contracts in your Hardhat project, use the built-in compile task:
+
+```
+$ npx hardhat compile
+// Download the compiler at the first compile run of the project.
+Downloading compiler 0.8.17
+Compiling...
+Compiled 1 contract successfully
+```
+
+The compiled artifacts will be saved in the `artifacts/` directory by default.
+If the artifacts directory does not exist, it is automatically created, and you can modify the structure.
+
+The `compile` command has the following options:
+
+```
+Usage: hardhat [GLOBAL OPTIONS] compile [--concurrency <INT>] [--force] [--no-typechain] [--quiet]
+
+OPTIONS:
+
+  --concurrency 	Number of compilation jobs executed in parallel. Defaults to the number of CPU cores - 1 (default: 7)
+  --force       	Force compilation ignoring cache 
+  --no-typechain	Skip Typechain compilation 
+  --quiet       	Makes the compilation process less verbose 
+
+compile: Compiles the entire project, building all artifacts
+```
+
+## Testing smart contracts
+For smart contract testing, it is recommended that you proceed with the test while writing an example code by referring to the [Testing contracts](https://hardhat.org/hardhat-runner/docs/guides/test-contracts) page.
+
+## Deploying smart contracts
+You can use the following steps to deploy smart contracts from localhost.
+
+
+1. Start a [local node](https://hardhat.org/hardhat-runner/docs/getting-started#connecting-a-wallet-or-dapp-to-hardhat-network)
+
+```
+npx hardhat node
+```
+
+The `node` command has the following options:
+
+```
+Usage: hardhat [GLOBAL OPTIONS] node [--fork <STRING>] [--fork-block-number <INT>] [--hostname <STRING>] [--port <INT>]
+
+OPTIONS:
+
+  --fork             	The URL of the JSON-RPC server to fork from 
+  --fork-block-number	The block number to fork from 
+  --hostname         	The host to which to bind to for new connections (Defaults to 127.0.0.1 running locally, and 0.0.0.0 in Docker) 
+  --port             	The port on which to listen for new connections (default: 8545)
+
+node: Starts a JSON-RPC server on top of Hardhat Network
+```
+
+2. Open a new terminal and deploy the smart contract in the localhost network
+
+- JavaScript
+
+```
+npx hardhat run --network localhost scripts/deploy.js
+```
+
+- TypeScript
+
+```
+npx hardhat run --network localhost scripts/deploy.ts
+```
+
+* If you are deploying on a network other than the local host, enter the following command:
+
+```
+npx hardhat run --network <your-network> scripts/deploy.js
+```
+
+The `run` command has the following options:
+
+```
+Usage: hardhat [GLOBAL OPTIONS] run [--no-compile] script
+
+OPTIONS:
+
+  --no-compile	Don't compile before running this task 
+
+POSITIONAL ARGUMENTS:
+
+  script	A js file to be run within hardhat's environment 
+
+run: Runs a user-defined script after compiling the project
+```
