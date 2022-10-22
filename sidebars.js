@@ -54,6 +54,7 @@ const sidebars = {
           items: [
             'techdocs/technologies/nft-bridge/1-1',
             'techdocs/technologies/nft-bridge/1-2',
+            'techdocs/technologies/nft-bridge/1-3',
           ],
         },
       ],
@@ -111,7 +112,16 @@ const sidebars = {
         'techdocs/smart-contract/1-3',
         'techdocs/smart-contract/1-4',
         'techdocs/smart-contract/1-5',
-        'techdocs/smart-contract/1-6',
+        {  
+          type: 'category',
+          label: 'Build',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'techdocs/smart-contract/build/1-1',
+          ],
+        }, 
       ]
     },
     {
