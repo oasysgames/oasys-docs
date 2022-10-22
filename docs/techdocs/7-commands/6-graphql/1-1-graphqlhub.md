@@ -34,22 +34,22 @@ query
 ```
 query{
   validators {
-    id              # owner address /
+    id              # owner address 
     operator        # used for block operator/オペレーター用
     active          # active status/稼働ステータス/
-    totalStake      # 合計ステーク量(増減する)
-    operatingRatio  # 稼働率
-    jailSince       # jail(稼働が悪すぎてkickされる事)開始エポック
-    jailUntil       # jail終了エポック
+    totalStake      # total stake/合計ステーク量(増減する)/스테이킹 양(증감가능)
+    operatingRatio  # operating ratio/稼働率/가동율
+    jailSince       # jail since(bad operating ratio)/jail(稼働が悪すぎてkickされる事)開始エポック/벨리데이터 제외개시
+    jailUntil       # jail end/jail終了エポック/벨리데이터 제외 종료(낮은 퍼포먼스로 인한)
     
     # ステークしているStaker一覧
     stakes {
       staker {
         id  # Stakerのアドレス
       }
-      oas   # OASの合計ステーク量(増減する)
-      woas  # WrappedOASの合計ステーク量(増減する)
-      soas  # StakableOASの合計ステーク量(増減する)
+      oas   # total staked OAS/OASの合計ステーク量(増減する)/총 스테이킹 된 OAS
+      woas  # total staked WrappedOASの合計ステーク量(増減する)/총 스테이킹 된 wOAS
+      soas  # total stakedStakable OAS/StakableOASの合計ステーク量(増減する)/총 스테이킹된 sOAS
     }
   }
 }
