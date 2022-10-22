@@ -5,12 +5,11 @@ const sidebars = {
       label: 'Technical Materials', 
       link: {
         type: 'doc',
-        id: 'techdocs/technical-materials/1-1-technical-materials',
+        id: 'techdocs/technical-materials/1-1',
       },
       collapsed: false,
       items: [
-        'techdocs/technical-materials/2-1-about-oasys',
-        'techdocs/technical-materials/2-1-roadmap',
+        'techdocs/technical-materials/2-1',
       ],
     }, 
     {
@@ -25,13 +24,13 @@ const sidebars = {
           label: 'Hub-Layer',
           link: {
             type: 'doc',
-            id: 'techdocs/technologies/hub-layer/1-1-hub-layer',
+            id: 'techdocs/technologies/hub-layer/1-1',
           },
           items: [
-            'techdocs/technologies/hub-layer/2-1-geth-wallet',
-            'techdocs/technologies/hub-layer/2-2-block-confirmation',
-            'techdocs/technologies/hub-layer/2-3-proof-of-stake',
-            'techdocs/technologies/hub-layer/2-4-version-info',
+            'techdocs/technologies/hub-layer/2-1',
+            'techdocs/technologies/hub-layer/2-2',
+            'techdocs/technologies/hub-layer/2-3',
+            'techdocs/technologies/hub-layer/2-4',
           ],
         },
         {
@@ -39,11 +38,11 @@ const sidebars = {
           label: 'Verse-Layer, with Incredibly High UX',
           link: {
             type: 'doc',
-            id: 'techdocs/technologies/verse-layer/1-1-verse-layer',
+            id: 'techdocs/technologies/verse-layer/1-1',
           },
           items: [
-            'techdocs/technologies/verse-layer/2-1-wallet',
-            'techdocs/technologies/verse-layer/2-2-verifier',
+            'techdocs/technologies/verse-layer/2-1',
+            'techdocs/technologies/verse-layer/2-2',
           ],
         },
         {  
@@ -53,8 +52,9 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/technologies/nft-bridge/1-1-nft-bridge',
-            'techdocs/technologies/nft-bridge/1-2-vnft-onft-bridge',
+            'techdocs/technologies/nft-bridge/1-1',
+            'techdocs/technologies/nft-bridge/1-2',
+            'techdocs/technologies/nft-bridge/1-3',
           ],
         },
       ],
@@ -66,14 +66,13 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-          'techdocs/validator/hardware-requirements/1-1-hardware-requirements',
-          'techdocs/validator/chain-environment/1-1-chain-environment',
-          'techdocs/validator/hub-layer-node-build/1-1-hub-layer-node-build',
-          'techdocs/validator/hub-layer-client-join/1-1-hub-layer-client-join',
-          'techdocs/validator/hub-layer-cli/1-1-hub-layer-cli',
-          'techdocs/validator/stakinghub/1-1-staking',
-          'techdocs/validator/verse-layer-node-build/1-1-verse-layer-node-build',
-          'techdocs/validator/faq/1-1-faq',
+          'techdocs/validator/hardware-requirements/1-1',
+          'techdocs/validator/chain-environment/1-1',
+          'techdocs/validator/hub-layer-node-build/1-1',
+          'techdocs/validator/hub-layer-client-join/1-1',
+          'techdocs/validator/hub-layer-cli/1-1',
+          'techdocs/validator/verse-layer-node-build/1-1',
+          'techdocs/validator/faq/1-1',
       ],
     },
     {
@@ -83,12 +82,10 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'techdocs/wallet/1-1-about',
-        'techdocs/wallet/1-1-about-validator-account',
-        'techdocs/wallet/1-1-soas',
-        'techdocs/wallet/1-1-metamask',
-        'techdocs/wallet/1-1-nsuite',
-        'techdocs/wallet/1-1-wallet-commands',
+        'techdocs/wallet/1-1',
+        'techdocs/wallet/1-2',
+        'techdocs/wallet/1-3',
+        'techdocs/wallet/1-4',
       ],
     },
     {
@@ -98,9 +95,9 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'techdocs/tools/1-1-explorer',
-        'techdocs/tools/1-2-faucets',
-        'techdocs/tools/1-3-oracles',  
+        'techdocs/tools/1-1',
+        'techdocs/tools/1-2',
+        'techdocs/tools/1-3',  
       ],
     },
     {
@@ -110,9 +107,21 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'techdocs/smart-contract/1-1-smart-contract',
-        'techdocs/smart-contract/1-2-erc20-erc721-factory-use-case',
-        'techdocs/smart-contract/1-3-game-example',
+        'techdocs/smart-contract/1-1',
+        'techdocs/smart-contract/1-2',
+        'techdocs/smart-contract/1-3',
+        'techdocs/smart-contract/1-4',
+        'techdocs/smart-contract/1-5',
+        {  
+          type: 'category',
+          label: 'Build',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'techdocs/smart-contract/build/1-1',
+          ],
+        }, 
       ]
     },
     {
@@ -129,7 +138,7 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/commands/hub-layer/1-1-hub-layer-geth',
+            'techdocs/commands/hub-layer/1-1',
           ],
         },
         {
@@ -139,14 +148,13 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/commands/verse-layer/1-1-verse-layer-geth',
+            'techdocs/commands/verse-layer/1-1',
           ],
         },
-        'techdocs/commands/http-server/1-1-http-server',
-        'techdocs/commands/websocket/1-1-websocket',
-        'techdocs/commands/ipc-server/1-1-ipc-server',
-        'techdocs/commands/graphql/1-1-graphql',
-        'techdocs/commands/graphql/1-1-graphqlhub',
+        'techdocs/commands/http-server/1-1',
+        'techdocs/commands/websocket/1-1',
+        'techdocs/commands/ipc-server/1-1',
+        'techdocs/commands/graphql/1-1',
       ],
     },
   ],
