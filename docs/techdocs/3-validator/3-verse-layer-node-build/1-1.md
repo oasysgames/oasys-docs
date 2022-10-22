@@ -8,6 +8,7 @@
 ## 1. Requirements
 
 Docker Engine v20.10.0 or later and docker-compose v2.0 or later are required.
+Please Check [Hardware_Requirements](/docs/techdocs/validator/hardware-requirements/1-1-hardware-requirements) Prior to setup. 
 
 ## 2. Clone verse-layer-optimism repository
 Clone the [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) repository provided by the Oasys Foundation.
@@ -84,6 +85,8 @@ export BUILDER_ADDRESS=0x...
 export SEQUENCER_ADDRESS=0x...
 export PROPOSER_ADDRESS=0x...
 ```
+
+You can navigate [validator wallet](/docs/techdocs/wallet/1-1-about-validator-account) on Verse. 
 
 Export private key of the `builder` wallet.
 

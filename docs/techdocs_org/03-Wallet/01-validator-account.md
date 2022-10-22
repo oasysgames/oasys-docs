@@ -24,7 +24,7 @@ The Operator account is the account that the node(geth) uses to sign the block (
 
 There is a high risk of leakage because the **operator account private key must be placed on the node disk**.
 
-Due to the separation of Owner and Operator accounts, even if Operator's private key is leaked, Owner can simply update the new Operator address in Staking Contract. Also, since deligators or stakers stakes on owner account, there is no need for Stakers to change the staking destination.
+Due to the separation of Owner and Operator accounts, even if Operator's private key is leaked, Owner can simply update the new Operator address in Staking Contract. Also, since Delegators or stakers stakes on owner account, there is no need for Stakers to change the staking destination.
 
 ## Verse Layer
 
@@ -56,6 +56,6 @@ Proposer wallet is, used by **Proposer Node** in optimism, Proposer node roll-up
 Proposer wallet need to read block chain process, so it need to use hot wallet only. Proposer address is written in Hub-Layer's optimism contract, and allow approved address only. If key is leaked, builder need to update approved address on contract. 
 
 
-## **Deligator**
+## **Delegator**
 
-Deligator can deligate tokens onto specific address. Deligator can stake onto Hub layer's owner's account or, Verse layer's Builder account. 
+Delegator can deligate tokens onto specific address. Delegator can stake onto Hub layer's owner's account or, Verse layer's Builder account. 

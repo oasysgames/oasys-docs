@@ -93,6 +93,12 @@ const config = {
             position: 'left',
             label: 'Technical Materials',
           },
+          {
+            type: 'doc',
+            docId: 'techdocs/technical-materials/1-1-technical-materials',
+            position: 'left',
+            label: 'CONFIDENTIAL',
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'localeDropdown',
@@ -121,13 +127,8 @@ const config = {
                 to: '/docs/whitepaper/intro',
               },
               {
-                label: 'White Paper (PDF)',
-                href: '/pdfs/Oasys_WhitePaper.pdf',
-                target: '_blank',
-              },
-              {
                 label: 'Technical Materials',
-                to: '/docs/techdocs/intro',
+                to: '/docs/techdocs/technical-materials/1-1-technical-materials',
               },
               {
                 label: 'Light Paper',

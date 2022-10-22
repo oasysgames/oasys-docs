@@ -19,7 +19,7 @@ Name:
   Copyright 2022 Oasys | Blockchain for The Games All Rights Reserved.
   
 Version:
-  1.0.0-alpha2
+  1.0.0
 
 Usage:
   oaspos [command]

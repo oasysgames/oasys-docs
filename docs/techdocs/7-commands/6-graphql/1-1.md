@@ -1,7 +1,7 @@
 ---
 ---
 
-# Geth GraphQL Server
+# Making Geth GraphQL Server
 
 In addition to the [JSON-RPC APIs](https://geth.ethereum.org/docs/rpc/server), Geth supports the GraphQL API as specified by [EIP-1767](https://eips.ethereum.org/EIPS/eip-1767). GraphQL lets you specify which fields of an objects you need as part of the query, eliminating the extra load on the client for filling in fields which are not needed. It also allows for combining several traditional JSON-RPC requests into one query which translates into less overhead and more performance.
 
