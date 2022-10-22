@@ -11,7 +11,7 @@ id: hub-layer
 
 ## Check Requirements
 
-Please Check [Validator_Requirements](https://docs.oasys.games/docs/techdocs/build/requirements) Prior to setup. 
+Please Check [Validator_Requirements](/docs/techdocs/build/requirements) Prior to setup. 
 
 ## Express Setup 
 
