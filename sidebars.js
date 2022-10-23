@@ -9,9 +9,7 @@ const sidebars = {
       },
       collapsed: false,
       items: [
-        'techdocs/technical-materials/1-2',
-        'techdocs/technical-materials/1-3',
-        'techdocs/technical-materials/1-4',
+        'techdocs/technical-materials/2-1',
       ],
     }, 
     {
@@ -73,7 +71,6 @@ const sidebars = {
           'techdocs/validator/hub-layer-node-build/1-1',
           'techdocs/validator/hub-layer-client-join/1-1',
           'techdocs/validator/hub-layer-cli/1-1',
-          'techdocs/validator/stakinghub/1-1',
           'techdocs/validator/verse-layer-node-build/1-1',
           'techdocs/validator/faq/1-1',
       ],
@@ -89,8 +86,6 @@ const sidebars = {
         'techdocs/wallet/1-2',
         'techdocs/wallet/1-3',
         'techdocs/wallet/1-4',
-        'techdocs/wallet/1-5',
-        'techdocs/wallet/1-6',
       ],
     },
     {
@@ -160,7 +155,6 @@ const sidebars = {
         'techdocs/commands/websocket/1-1',
         'techdocs/commands/ipc-server/1-1',
         'techdocs/commands/graphql/1-1',
-        'techdocs/commands/graphql/1-2',
       ],
     },
   ],
