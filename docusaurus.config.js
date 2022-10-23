@@ -89,13 +89,13 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'techdocs/technical-materials/1-1-technical-materials',
+            docId: 'techdocs/technical-materials/1-1',
             position: 'left',
             label: 'Technical Materials',
           },
           {
             type: 'doc',
-            docId: 'techdocs/technical-materials/1-1-technical-materials',
+            docId: 'techdocs/technical-materials/1-1',
             position: 'left',
             label: 'CONFIDENTIAL',
           },
@@ -128,7 +128,7 @@ const config = {
               },
               {
                 label: 'Technical Materials',
-                to: '/docs/techdocs/technical-materials/1-1-technical-materials',
+                to: '/docs/techdocs/technical-materials/1-1',
               },
               {
                 label: 'Light Paper',
