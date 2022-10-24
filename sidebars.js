@@ -115,7 +115,67 @@ const sidebars = {
         'techdocs/smart-contract/1-1',
         'techdocs/smart-contract/1-2',
         'techdocs/smart-contract/1-3',
-        'techdocs/smart-contract/1-4',
+        {  
+          type: 'category',
+          label: 'Sample Game',
+          link: {
+            type: 'doc',
+            id: 'techdocs/smart-contract/sample-game/1-1-sample-game',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Tutorial Overview',
+              link: {
+                type: 'generated-index',
+              },
+              items: [
+                'techdocs/smart-contract/sample-game/tutorial-overview/1-1-how-to-make-a-blockchain-game',
+                'techdocs/smart-contract/sample-game/tutorial-overview/1-2-project-setup',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Repository Overview',
+              link: {
+                type: 'generated-index',
+              },
+              items: [
+                'techdocs/smart-contract/sample-game/repository-overview/1-1-index',
+                'techdocs/smart-contract/sample-game/repository-overview/1-2-constants',
+                'techdocs/smart-contract/sample-game/repository-overview/1-3-scenes',
+                'techdocs/smart-contract/sample-game/repository-overview/1-4-manager-classes',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Blockchain Functionality Breakdown',
+              link: {
+                type: 'generated-index',
+              },
+              items: [
+                'techdocs/smart-contract/sample-game/blockchain-functionality/1-1-wallet-connection',
+                'techdocs/smart-contract/sample-game/blockchain-functionality/1-2-wallet-address-display',
+                'techdocs/smart-contract/sample-game/blockchain-functionality/1-3-network-switching',
+                'techdocs/smart-contract/sample-game/blockchain-functionality/1-4-applying-nft-image',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Making an NFT to use in the game',
+              link: {
+                type: 'generated-index',
+              },
+              items: [
+                'techdocs/smart-contract/sample-game/nft-creation/1-1-project-setup',
+                'techdocs/smart-contract/sample-game/nft-creation/1-2-erc-721-contract',
+                'techdocs/smart-contract/sample-game/nft-creation/1-3-smart-contract-testing',
+                'techdocs/smart-contract/sample-game/nft-creation/1-4-smart-contract-deployment',
+                'techdocs/smart-contract/sample-game/nft-creation/1-5-nft-usage',
+              ],
+            },
+          ],
+        },
         'techdocs/smart-contract/1-5',
         {  
           type: 'category',
@@ -126,7 +186,7 @@ const sidebars = {
           items: [
             'techdocs/smart-contract/build/1-1',
           ],
-        }, 
+        },
       ]
     },
     {

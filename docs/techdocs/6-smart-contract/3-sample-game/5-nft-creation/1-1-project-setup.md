@@ -1,0 +1,28 @@
+---
+---
+
+# Project Setup
+
+In this section we'll go over how you can create your own NFT to use in the game.
+
+We will first need to set up an environment that allows us to develop smart contracts on our machine. We will use [Hardhat](https://hardhat.org/) in this tutorial, but feel free to follow along with the development environment of your choice.
+
+Hardhat does not need to be installed globally and can just be installed as an **npm package** in our project.
+We again prepared a sample repository with all the necessary code and will explain all the important parts over the next few pages.
+<!-- TODO: Update Link -->
+Please download the [repository](https://github.com/doublejumptokyo/dino-runner-solidity/tree/main).
+
+<!-- TODO: Update Link -->
+You can also use git commands to clone it:
+
+`git clone https://github.com/doublejumptokyo/dino-runner-solidity`
+
+Once the repository is downloaded open it up in Visual Studio Code and run `npm install` to install all dependencies.
+
+You should now be able to run `npx hardhat test` to confirm that everything is set up correctly.
+
+You should get a message with the metadata for a generated token and a notification that 1 test has passed.
+
+![Hardhat Test](/img/docs/techdocs/sample-game/game-hardhat-test.png)
+
+Let's take a look at the smart contracts code on the next page.
