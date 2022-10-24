@@ -113,50 +113,50 @@ const sidebars = {
       },
       items: [
         'techdocs/smart-contract/1-1',
-        {  
+      ]
+    },
+    {  
+      type: 'category',
+      label: 'Build',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'techdocs/build/1-1',
+        {
           type: 'category',
-          label: 'Build',
+          label: 'Library',
           link: {
             type: 'generated-index',
           },
           items: [
-            'techdocs/smart-contract/build/1-1',
-            {
-              type: 'category',
-              label: 'Library',
-              link: {
-                type: 'generated-index',
-              },
-              items: [
-                'techdocs/smart-contract/build/library/1-1',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'ERC Token',
-              link: {
-                type: 'generated-index',
-              },
-              items: [
-                'techdocs/smart-contract/build/erc-token/1-1',
-                'techdocs/smart-contract/build/erc-token/1-2',
-              ]
-            },
-            'techdocs/smart-contract/build/1-2',
-            {
-              type: 'category',
-              label: 'Qraph QL',
-              link: {
-                type: 'generated-index',
-              },
-              items: [
-                'techdocs/smart-contract/build/graphql/1-1',
-                'techdocs/smart-contract/build/graphql/1-2',
-              ]
-            }, 
-          ],
+            'techdocs/build/library/1-1',
+          ]
         },
-      ]
+        {
+          type: 'category',
+          label: 'ERC Token',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'techdocs/build/erc-token/1-1',
+            'techdocs/build/erc-token/1-2',
+          ]
+        },
+        'techdocs/build/1-2',
+        {
+          type: 'category',
+          label: 'Qraph QL',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'techdocs/build/graphql/1-1',
+            'techdocs/build/graphql/1-2',
+          ]
+        }, 
+      ],
     },
     {
       type: 'category',
