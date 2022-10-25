@@ -156,6 +156,7 @@ const sidebars = {
             'techdocs/build/graphql/1-2',
           ]
         }, 
+        'techdocs/build/1-3',
       ],
     },
     {
