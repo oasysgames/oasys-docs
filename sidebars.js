@@ -73,6 +73,7 @@ const sidebars = {
           'techdocs/validator/hub-layer-node-build/1-1',
           'techdocs/validator/hub-layer-client-join/1-1',
           'techdocs/validator/hub-layer-client-join/1-2',
+          'techdocs/validator/hub-layer-client-join/1-3',
           'techdocs/validator/hub-layer-cli/1-1',
           'techdocs/validator/stakinghub/1-1',
           'techdocs/validator/verse-layer-node-build/1-1',
