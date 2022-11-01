@@ -77,6 +77,7 @@ const sidebars = {
           'techdocs/validator/hub-layer-cli/1-1',
           'techdocs/validator/stakinghub/1-1',
           'techdocs/validator/verse-layer-node-build/1-1',
+          'techdocs/validator/verse-proxy-build/1-1',
           'techdocs/validator/faq/1-1',
       ],
     },
