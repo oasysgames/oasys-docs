@@ -93,12 +93,6 @@ const config = {
             position: 'left',
             label: 'Technical Materials',
           },
-          {
-            type: 'doc',
-            docId: 'techdocs/technical-materials/1-1',
-            position: 'left',
-            label: 'CONFIDENTIAL',
-          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'localeDropdown',

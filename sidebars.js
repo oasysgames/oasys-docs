@@ -56,7 +56,6 @@ const sidebars = {
           items: [
             'techdocs/technologies/nft-bridge/1-1',
             'techdocs/technologies/nft-bridge/1-2',
-            'techdocs/technologies/nft-bridge/1-3',
           ],
         },
       ],
@@ -72,7 +71,7 @@ const sidebars = {
           'techdocs/validator/chain-environment/1-1',
           'techdocs/validator/hub-layer-node-build/1-1',
           'techdocs/validator/hub-layer-client-join/1-1',
-          'techdocs/validator/hub-layer-client-join/1-2',
+          //'techdocs/validator/hub-layer-client-join/1-2',
           'techdocs/validator/hub-layer-client-join/1-3',
           'techdocs/validator/hub-layer-cli/1-1',
           'techdocs/validator/stakinghub/1-1',
@@ -90,10 +89,10 @@ const sidebars = {
       items: [
         'techdocs/wallet/1-1',
         'techdocs/wallet/1-2',
-        'techdocs/wallet/1-3',
+        //'techdocs/wallet/1-3',
         'techdocs/wallet/1-4',
         'techdocs/wallet/1-5',
-        'techdocs/wallet/1-6',
+        //'techdocs/wallet/1-6',
       ],
     },
     {
@@ -134,6 +133,7 @@ const sidebars = {
           },
           items: [
             'techdocs/build/library/1-1',
+            'techdocs/build/library/1-2',
           ]
         },
         {
@@ -216,10 +216,11 @@ const sidebars = {
           },
           items: [
             'techdocs/build/graphql/1-1',
-            'techdocs/build/graphql/1-2',
+            //'techdocs/build/graphql/1-2',
           ]
         }, 
         'techdocs/build/1-2',
+        'techdocs/build/1-3',
       ],
     },
     {
