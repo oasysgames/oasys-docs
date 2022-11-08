@@ -10,8 +10,8 @@ const sidebars = {
       collapsed: false,
       items: [
         'techdocs/technical-materials/1-2',
-        'techdocs/technical-materials/1-3',
-        'techdocs/technical-materials/1-4',
+        //'techdocs/technical-materials/1-3',
+        //'techdocs/technical-materials/1-4',
       ],
     }, 
     {
