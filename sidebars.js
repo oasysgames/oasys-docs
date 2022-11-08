@@ -143,70 +143,70 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/build/erc-token/1-1',
+            //'techdocs/build/erc-token/1-1',
             'techdocs/build/erc-token/1-2',
           ]
         },
-        {
-          type: 'category',
-          label: 'Game Example',
-          link: {
-            type: 'generated-index',
-          },
-          items: [
-            'techdocs/build/game-example/1-1',
-            {
-              type: 'category',
-              label: 'Tutorial Overview',
-              link: {
-                type: 'generated-index',
-              },
-              items: [
-                'techdocs/build/game-example/tutorial/1-1',
-                'techdocs/build/game-example/tutorial/1-2',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Repository Overview',
-              link: {
-                type: 'generated-index',
-              },
-              items: [
-                'techdocs/build/game-example/repository/1-1',
-                'techdocs/build/game-example/repository/1-2',
-                'techdocs/build/game-example/repository/1-3',
-                'techdocs/build/game-example/repository/1-4',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'Blockchain Functionality',
-              link: {
-                type: 'generated-index',
-              },
-              items: [
-                'techdocs/build/game-example/blockchain-functionality/1-1',
-                'techdocs/build/game-example/blockchain-functionality/1-2',
-                'techdocs/build/game-example/blockchain-functionality/1-3',
-                'techdocs/build/game-example/blockchain-functionality/1-4',
-              ]
-            },
-            {
-              type: 'category',
-              label: 'NFT Creation',
-              link: {
-                type: 'generated-index',
-              },
-              items: [
-                'techdocs/build/game-example/nft-creation/1-1',
-                'techdocs/build/game-example/nft-creation/1-2',
-                'techdocs/build/game-example/nft-creation/1-3',
-                'techdocs/build/game-example/nft-creation/1-4',
-                'techdocs/build/game-example/nft-creation/1-5',
-              ]
-            },
-          ]
+        // {
+        //   type: 'category',
+        //   label: 'Game Example',
+        //   link: {
+        //     type: 'generated-index',
+        //   },
+        //   items: [
+        //     'techdocs/build/game-example/1-1',
+        //     {
+        //       type: 'category',
+        //       label: 'Tutorial Overview',
+        //       link: {
+        //         type: 'generated-index',
+        //       },
+        //       items: [
+        //         'techdocs/build/game-example/tutorial/1-1',
+        //         'techdocs/build/game-example/tutorial/1-2',
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'Repository Overview',
+        //       link: {
+        //         type: 'generated-index',
+        //       },
+        //       items: [
+        //         'techdocs/build/game-example/repository/1-1',
+        //         'techdocs/build/game-example/repository/1-2',
+        //         'techdocs/build/game-example/repository/1-3',
+        //         'techdocs/build/game-example/repository/1-4',
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'Blockchain Functionality',
+        //       link: {
+        //         type: 'generated-index',
+        //       },
+        //       items: [
+        //         'techdocs/build/game-example/blockchain-functionality/1-1',
+        //         'techdocs/build/game-example/blockchain-functionality/1-2',
+        //         'techdocs/build/game-example/blockchain-functionality/1-3',
+        //         'techdocs/build/game-example/blockchain-functionality/1-4',
+        //       ]
+        //     },
+        //     {
+        //       type: 'category',
+        //       label: 'NFT Creation',
+        //       link: {
+        //         type: 'generated-index',
+        //       },
+        //       items: [
+        //         'techdocs/build/game-example/nft-creation/1-1',
+        //         'techdocs/build/game-example/nft-creation/1-2',
+        //         'techdocs/build/game-example/nft-creation/1-3',
+        //         'techdocs/build/game-example/nft-creation/1-4',
+        //         'techdocs/build/game-example/nft-creation/1-5',
+        //       ]
+        //     },
+        //   ]
         },
         {
           type: 'category',
