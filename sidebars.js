@@ -43,7 +43,7 @@ const sidebars = {
             id: 'techdocs/technologies/verse-layer/1-1',
           },
           items: [
-            'techdocs/technologies/verse-layer/2-1',
+            //'techdocs/technologies/verse-layer/2-1',
             'techdocs/technologies/verse-layer/2-2',
           ],
         },
