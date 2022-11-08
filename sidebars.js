@@ -216,7 +216,7 @@ const sidebars = {
         //       ]
         //     },
         //   ]
-        },
+        // },
         {
           type: 'category',
           label: 'Qraph QL',
