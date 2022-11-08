@@ -68,7 +68,6 @@ const sidebars = {
       },
       items: [
           'techdocs/validator/hardware-requirements/1-1',
-          'techdocs/validator/chain-environment/1-1',
           'techdocs/validator/hub-layer-node-build/1-1',
           'techdocs/validator/hub-layer-client-join/1-1',
           //'techdocs/validator/hub-layer-client-join/1-2',
@@ -78,6 +77,16 @@ const sidebars = {
           'techdocs/validator/verse-layer-node-build/1-1',
           //'techdocs/validator/verse-proxy-build/1-1',
           'techdocs/validator/faq/1-1',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Chain Environment',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+          'techdocs/validator/chain-environment/1-1',
       ],
     },
     {
