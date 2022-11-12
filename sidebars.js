@@ -88,6 +88,7 @@ const sidebars = {
       },
       items: [
           'techdocs/validator/chain-environment/1-1',
+          'techdocs/build/erc-token/1-1',
       ],
     },
     {
@@ -152,7 +153,6 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/build/erc-token/1-1',
             'techdocs/build/erc-token/1-2',
           ]
         },
