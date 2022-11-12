@@ -87,6 +87,7 @@ const sidebars = {
       },
       items: [
           'techdocs/validator/chain-environment/1-1',
+          'techdocs/build/erc-token/1-1',
       ],
     },
     {
