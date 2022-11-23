@@ -236,6 +236,7 @@ const sidebars = {
   hub_validator: [
       {
         type: 'category',
+        label: 'Hub Validator', 
         link: {
           type: 'doc',
           id: 'hub-validator/1-1',
