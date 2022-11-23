@@ -37,7 +37,7 @@ const FeatureList = [
   {
     title: 'Hub Layer Validator',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/tech/technical-materials/1-1",
+    linkTo: "/docs/tech/hub-validator/1-1",
     description: (
       <>
         Guides on how to build nodes on hub layer.
@@ -47,7 +47,7 @@ const FeatureList = [
   {
     title: 'Building a Verse',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/tech/technical-materials/1-1",
+    linkTo: "/docs/tech/build-verse/1-1",
     description: (
       <>
         Guides on how to build our layer 2 network, Verse.
