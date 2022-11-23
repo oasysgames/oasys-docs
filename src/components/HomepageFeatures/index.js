@@ -15,6 +15,16 @@ const FeatureList = [
     ),
   },
   {
+    title: 'How Oasys Works',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/tech/technical-materials/1-1",
+    description: (
+      <>
+        Guides on how to build nodes and run networks.
+      </>
+    ),
+  },
+  {
     title: 'Technical Materials',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/tech/technical-materials/1-1",
