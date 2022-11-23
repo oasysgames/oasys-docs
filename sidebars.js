@@ -5,11 +5,11 @@ const sidebars = {
       label: 'Technical Materials', 
       link: {
         type: 'doc',
-        id: 'tech/technical-materials/1-1',
+        id: 'tech/intro/1-1',
       },
       collapsed: false,
       items: [
-        'tech/technical-materials/1-2',
+        'tech/intro/1-2',
         //'tech/technical-materials/1-3',
         //'tech/technical-materials/1-4',
       ],
