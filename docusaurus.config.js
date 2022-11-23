@@ -83,21 +83,21 @@ const config = {
         items: [
           {
             type: 'doc',
+            docId: 'tech/wallet/1-1',
+            position: 'left',
+            label: 'Quick Start',
+          },
+          {
+            type: 'doc',
             docId: 'whitepaper/intro',
             position: 'left',
-            label: 'White Paper',
+            label: 'Whitepaper',
           },
           {
             type: 'doc',
             docId: 'tech/intro/1-1',
             position: 'left',
-            label: 'Technical Materials',
-          },
-          {
-            type: 'doc',
-            docId: 'tech/wallet/1-1',
-            position: 'left',
-            label: 'Wallet',
+            label: 'Learn',
           },
           {
             type: 'doc',
@@ -110,6 +110,12 @@ const config = {
             docId: 'tech/build-verse/1-1',
             position: 'left',
             label: 'Build a Verse',
+          },
+          {
+            type: 'doc',
+            docId: 'tech/build-verse/1-1',
+            position: 'left',
+            label: 'Game',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
