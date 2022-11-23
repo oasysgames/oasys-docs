@@ -101,7 +101,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'tech/hub-validator/1-1',
+            docId: 'hub-validator/1-1',
             position: 'left',
             label: 'Hub Layer Validator',
           },
