@@ -9,55 +9,61 @@ const sidebars = {
       },
       collapsed: false,
       items: [
+        'tech/intro/1-2',
+        //'tech/technical-materials/1-3',
+        //'tech/technical-materials/1-4',
       ],
     }, 
     {
       type: 'category',
-      label: 'What is Oasys?',
+      label: 'What',
       link: {
         type: 'generated-index',
       },
       items: [
         {  
           type: 'category',
+          label: 'GameFi',
+          link: {
+            type: 'doc',
+            id: 'tech/what/gamefi/1-1',
+          },
+          items: [
+            'tech/what/gamefi/2-1',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Architecture',
           link: {
             type: 'doc',
-            id: 'tech/what/1-1',
+            id: 'tech/what/architecture/1-1',
           },
           items: [
-            'tech/what/architecture/1-1',
+            'tech/what/architecture/2-1',
           ],
-      items: [
-            {  
-              type: 'category',
-              label: 'gamefi',
-              link: {
-                type: 'doc',
-              },
-              items: [
-                'tech/what/gamefi/1-1',
-          ],
-      items: [
-            {  
-              type: 'category',
-              label: 'Provide',
-              link: {
-                type: 'doc',
-              },
-              items: [
-                'tech/what/provide/1-1',
-          ],
+        },
+        {  
+          type: 'category',
+          label: 'Provide',
+          link: {
+            type: 'generated-index',
+          },
           items: [
-            {  
-              type: 'category',
-              label: 'Roadmap',
-              link: {
-                type: 'doc',
-              },
-              items: [
-                'tech/what/roadmap/1-1',
+            'tech/what/provide/1-1',
           ],
+        },
+        {  
+          type: 'category',
+          label: 'Roadmap',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'tech/what/roadmap/1-1',
+          ],
+        },
+      ],
     },
     {
       type: 'category',
@@ -66,7 +72,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-          'tech/rpc-endpoints/1-1',
+          'tech/validator/rpc-endpoints/1-1',
       ],
     },
     {
@@ -83,28 +89,6 @@ const sidebars = {
         'tech/wallet/1-5',
         //'tech/wallet/1-6',
       ],
-    },
-    {
-      type: 'category',
-      label: 'Tools',
-      link: {
-        type: 'generated-index',
-      },
-      items: [
-        'tech/tools/1-1',
-        'tech/tools/1-2',
-        'tech/tools/1-3',  
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Smart Contract',
-      link: {
-        type: 'generated-index',
-      },
-      items: [
-        'tech/smart-contract/1-1',
-      ]
     },
     {  
       type: 'category',
