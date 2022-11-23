@@ -9,9 +9,6 @@ const sidebars = {
       },
       collapsed: false,
       items: [
-        'tech/intro/1-2',
-        //'tech/intro/1-3',
-        //'tech/intro/1-4',
       ],
     }, 
     {
