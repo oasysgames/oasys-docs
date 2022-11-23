@@ -93,6 +93,24 @@ const config = {
             position: 'left',
             label: 'Technical Materials',
           },
+          {
+            type: 'doc',
+            docId: 'tech/wallet/1-1',
+            position: 'left',
+            label: 'Wallet',
+          },
+          {
+            type: 'doc',
+            docId: 'tech/hub-validator/1-1',
+            position: 'left',
+            label: 'Hub Layer Validator',
+          },
+          {
+            type: 'doc',
+            docId: 'tech/build-verse/1-1',
+            position: 'left',
+            label: 'Build a Verse',
+          },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'localeDropdown',
