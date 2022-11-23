@@ -253,5 +253,40 @@ const sidebars = {
         ],
       },
   ],
+  build: [
+    {
+      type: 'category',
+      label: 'Build on Oasys', 
+      link: {
+        type: 'doc',
+        id: 'build/1-1',
+      },
+      collapsed: false,
+      items: [
+        {  
+          type: 'category',
+          label: 'Verse',
+          link: {
+            type: 'doc',
+            id: 'build/verse/1-1',
+          },
+          items: [
+            'build/verse/1-1',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Game',
+          link: {
+            type: 'doc',
+            id: 'build/game/1-1',
+          },
+          items: [
+            'build/game/1-1',
+          ],
+        },
+      ],
+    },
+],
 };
 module.exports = sidebars;
