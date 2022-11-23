@@ -11,7 +11,7 @@ id: hub-layer
 
 ## Check Requirements
 
-Please Check [Validator_Requirements](/docs/techdocs/build/requirements) Prior to setup. 
+Please Check [Validator_Requirements](/docs/tech/build/requirements) Prior to setup. 
 
 ## Express Setup 
 

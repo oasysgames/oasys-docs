@@ -1,93 +1,75 @@
 const sidebars = {
-  techdocs: [
+  tech: [
     {
       type: 'category',
       label: 'Technical Materials', 
       link: {
         type: 'doc',
-        id: 'techdocs/technical-materials/1-1',
+        id: 'tech/intro/1-1',
       },
       collapsed: false,
       items: [
-        'techdocs/technical-materials/1-2',
-        //'techdocs/technical-materials/1-3',
-        //'techdocs/technical-materials/1-4',
+        'tech/intro/1-2',
+        //'tech/intro/1-3',
+        //'tech/intro/1-4',
       ],
     }, 
     {
       type: 'category',
-      label: 'Technology',
+      label: 'What is Oasys?',
       link: {
         type: 'generated-index',
       },
       items: [
         {  
           type: 'category',
-          label: 'Hub-Layer',
+          label: 'Architecture',
           link: {
             type: 'doc',
-            id: 'techdocs/technologies/hub-layer/1-1',
+            id: 'tech/what/1-1',
           },
           items: [
-            'techdocs/technologies/hub-layer/2-1',
-            'techdocs/technologies/hub-layer/2-2',
-            'techdocs/technologies/hub-layer/2-3',
-            'techdocs/technologies/hub-layer/2-4',
+            'tech/what/architecture/1-1',
           ],
-        },
-        {
-          type: 'category',
-          label: 'Verse-Layer, with Incredibly High UX',
-          link: {
-            type: 'doc',
-            id: 'techdocs/technologies/verse-layer/1-1',
-          },
+      items: [
+            {  
+              type: 'category',
+              label: 'gamefi',
+              link: {
+                type: 'doc',
+              },
+              items: [
+                'tech/what/gamefi/1-1',
+          ],
+      items: [
+            {  
+              type: 'category',
+              label: 'Provide',
+              link: {
+                type: 'doc',
+              },
+              items: [
+                'tech/what/provide/1-1',
+          ],
           items: [
-            //'techdocs/technologies/verse-layer/2-1',
-            'techdocs/technologies/verse-layer/2-2',
+            {  
+              type: 'category',
+              label: 'Roadmap',
+              link: {
+                type: 'doc',
+              },
+              items: [
+                'tech/what/roadmap/1-1',
           ],
-        },
-        {  
-          type: 'category',
-          label: 'NFT Bridge',
-          link: {
-            type: 'generated-index',
-          },
-          items: [
-            'techdocs/technologies/nft-bridge/1-1',
-            'techdocs/technologies/nft-bridge/1-2',
-          ],
-        },
-      ],
     },
     {
       type: 'category',
-      label: 'Validator',
+      label: 'RPC Endpoints',
       link: {
         type: 'generated-index',
       },
       items: [
-          'techdocs/validator/hardware-requirements/1-1',
-          'techdocs/validator/hub-layer-node-build/1-1',
-          'techdocs/validator/hub-layer-client-join/1-1',
-          //'techdocs/validator/hub-layer-client-join/1-2',
-          //'techdocs/validator/hub-layer-client-join/1-3',
-          'techdocs/validator/hub-layer-cli/1-1',
-          'techdocs/validator/stakinghub/1-1',
-          'techdocs/validator/verse-layer-node-build/1-1',
-          //'techdocs/validator/verse-proxy-build/1-1',
-          'techdocs/validator/faq/1-1',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Chain Environment',
-      link: {
-        type: 'generated-index',
-      },
-      items: [
-          'techdocs/validator/chain-environment/1-1',
-          'techdocs/build/erc-token/1-1',
+          'tech/rpc-endpoints/1-1',
       ],
     },
     {
@@ -97,12 +79,12 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'techdocs/wallet/1-1',
-        'techdocs/wallet/1-2',
-        //'techdocs/wallet/1-3',
-        'techdocs/wallet/1-4',
-        'techdocs/wallet/1-5',
-        //'techdocs/wallet/1-6',
+        'tech/wallet/1-1',
+        'tech/wallet/1-2',
+        //'tech/wallet/1-3',
+        'tech/wallet/1-4',
+        'tech/wallet/1-5',
+        //'tech/wallet/1-6',
       ],
     },
     {
@@ -112,9 +94,9 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'techdocs/tools/1-1',
-        'techdocs/tools/1-2',
-        'techdocs/tools/1-3',  
+        'tech/tools/1-1',
+        'tech/tools/1-2',
+        'tech/tools/1-3',  
       ],
     },
     {
@@ -124,7 +106,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'techdocs/smart-contract/1-1',
+        'tech/smart-contract/1-1',
       ]
     },
     {  
@@ -134,7 +116,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-        'techdocs/build/1-1',
+        'tech/build/1-1',
         {
           type: 'category',
           label: 'Library',
@@ -142,8 +124,8 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/build/library/1-1',
-            'techdocs/build/library/1-2',
+            'tech/build/library/1-1',
+            'tech/build/library/1-2',
           ]
         },
         {
@@ -153,8 +135,8 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            //'techdocs/build/erc-token/1-1',
-            'techdocs/build/erc-token/1-2',
+            //'tech/build/erc-token/1-1',
+            'tech/build/erc-token/1-2',
           ]
         },
         // {
@@ -164,7 +146,7 @@ const sidebars = {
         //     type: 'generated-index',
         //   },
         //   items: [
-        //     'techdocs/build/game-example/1-1',
+        //     'tech/build/game-example/1-1',
         //     {
         //       type: 'category',
         //       label: 'Tutorial Overview',
@@ -172,8 +154,8 @@ const sidebars = {
         //         type: 'generated-index',
         //       },
         //       items: [
-        //         'techdocs/build/game-example/tutorial/1-1',
-        //         'techdocs/build/game-example/tutorial/1-2',
+        //         'tech/build/game-example/tutorial/1-1',
+        //         'tech/build/game-example/tutorial/1-2',
         //       ]
         //     },
         //     {
@@ -183,10 +165,10 @@ const sidebars = {
         //         type: 'generated-index',
         //       },
         //       items: [
-        //         'techdocs/build/game-example/repository/1-1',
-        //         'techdocs/build/game-example/repository/1-2',
-        //         'techdocs/build/game-example/repository/1-3',
-        //         'techdocs/build/game-example/repository/1-4',
+        //         'tech/build/game-example/repository/1-1',
+        //         'tech/build/game-example/repository/1-2',
+        //         'tech/build/game-example/repository/1-3',
+        //         'tech/build/game-example/repository/1-4',
         //       ]
         //     },
         //     {
@@ -196,10 +178,10 @@ const sidebars = {
         //         type: 'generated-index',
         //       },
         //       items: [
-        //         'techdocs/build/game-example/blockchain-functionality/1-1',
-        //         'techdocs/build/game-example/blockchain-functionality/1-2',
-        //         'techdocs/build/game-example/blockchain-functionality/1-3',
-        //         'techdocs/build/game-example/blockchain-functionality/1-4',
+        //         'tech/build/game-example/blockchain-functionality/1-1',
+        //         'tech/build/game-example/blockchain-functionality/1-2',
+        //         'tech/build/game-example/blockchain-functionality/1-3',
+        //         'tech/build/game-example/blockchain-functionality/1-4',
         //       ]
         //     },
         //     {
@@ -209,11 +191,11 @@ const sidebars = {
         //         type: 'generated-index',
         //       },
         //       items: [
-        //         'techdocs/build/game-example/nft-creation/1-1',
-        //         'techdocs/build/game-example/nft-creation/1-2',
-        //         'techdocs/build/game-example/nft-creation/1-3',
-        //         'techdocs/build/game-example/nft-creation/1-4',
-        //         'techdocs/build/game-example/nft-creation/1-5',
+        //         'tech/build/game-example/nft-creation/1-1',
+        //         'tech/build/game-example/nft-creation/1-2',
+        //         'tech/build/game-example/nft-creation/1-3',
+        //         'tech/build/game-example/nft-creation/1-4',
+        //         'tech/build/game-example/nft-creation/1-5',
         //       ]
         //     },
         //   ]
@@ -225,12 +207,12 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/build/graphql/1-1',
-            //'techdocs/build/graphql/1-2',
+            'tech/build/graphql/1-1',
+            //'tech/build/graphql/1-2',
           ]
         }, 
-        'techdocs/build/1-2',
-        'techdocs/build/1-3',
+        'tech/build/1-2',
+        'tech/build/1-3',
       ],
     },
     {
@@ -247,7 +229,7 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/commands/hub-layer/1-1',
+            'tech/commands/hub-layer/1-1',
           ],
         },
         {
@@ -257,12 +239,12 @@ const sidebars = {
             type: 'generated-index',
           },
           items: [
-            'techdocs/commands/verse-layer/1-1',
+            'tech/commands/verse-layer/1-1',
           ],
         },
-        'techdocs/commands/http-server/1-1',
-        'techdocs/commands/websocket/1-1',
-        'techdocs/commands/ipc-server/1-1',
+        'tech/commands/http-server/1-1',
+        'tech/commands/websocket/1-1',
+        'tech/commands/ipc-server/1-1',
       ],
     },
   ],

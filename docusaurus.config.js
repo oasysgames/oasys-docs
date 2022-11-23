@@ -89,7 +89,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'techdocs/technical-materials/1-1',
+            docId: 'tech/intro/1-1',
             position: 'left',
             label: 'Technical Materials',
           },
@@ -122,7 +122,7 @@ const config = {
               },
               {
                 label: 'Technical Materials',
-                to: '/docs/techdocs/technical-materials/1-1',
+                to: '/docs/tech/intro/1-1',
               },
               {
                 label: 'Light Paper',
