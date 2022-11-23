@@ -10,8 +10,6 @@ const sidebars = {
       collapsed: false,
       items: [
         'tech/intro/1-2',
-        //'tech/technical-materials/1-3',
-        //'tech/technical-materials/1-4',
       ],
     }, 
     {
@@ -72,7 +70,7 @@ const sidebars = {
         type: 'generated-index',
       },
       items: [
-          'tech/validator/rpc-endpoints/1-1',
+          'tech/rpc-endpoints/1-1',
       ],
     },
     {
