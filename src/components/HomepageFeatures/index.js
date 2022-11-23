@@ -68,12 +68,12 @@ const FeatureList = [
 
 function Feature({Svg, linkTo, title, description}) {
   return (
-    <div className={clsx('col col--6')}>
+    <div className={clsx('col col--4')}>
       <Link className={styles.topPageLink} to={linkTo}>
         <div className="text--center">
           {/* <Svg className={styles.featureSvg} role="img" /> */}
         </div>
-        <div className="text--center padding-horiz--lg">
+        <div className="text--center padding-horiz--sm">
           <h2 className={styles.largeText}>{title}</h2>
           <p className={styles.smallText} >{description}</p>
         </div>
