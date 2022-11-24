@@ -15,55 +15,15 @@ const FeatureList = [
     ),
   },
   {
-    title: 'How Oasys Works',
+    title: 'Technical Documentation',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/tech/intro/1-1",
+    linkTo: "/docs/documentation/whats-oasys/1-1-whats-oasys",
     description: (
       <>
-        Learning How Oasys Works.
+        Documentation for dApps Developers.
       </>
     ),
   },
-  {
-    title: 'Wallet',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/tech/wallet/1-1",
-    description: (
-      <>
-        Guides on how to build nodes and run networks.
-      </>
-    ),
-  },
-  {
-    title: 'Hub Layer Validator',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/tech/hub-validator/1-1",
-    description: (
-      <>
-        Guides on how to build nodes on hub layer.
-      </>
-    ),
-  },
-  {
-    title: 'Building a Verse',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/tech/build-verse/1-1",
-    description: (
-      <>
-        Guides on how to build our layer 2 network, Verse.
-      </>
-    ),
-  },
-  // {
-  //   title: 'Powered by React',
-  //   Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-  //   description: (
-  //     <>
-  //       Extend or customize your website layout by reusing React. Docusaurus can
-  //       be extended while reusing the same header and footer.
-  //     </>
-  //   ),
-  // },
 ];
 
 function Feature({Svg, linkTo, title, description}) {

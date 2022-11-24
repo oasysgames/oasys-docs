@@ -81,12 +81,12 @@ const config = {
           src: 'img/general/oasys-logo_inline.png',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'tech/wallet/1-1',
-            position: 'left',
-            label: 'Quick Start',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'tech/wallet/1-1',
+          //   position: 'left',
+          //   label: 'Quick Start',
+          // },
           {
             type: 'doc',
             docId: 'whitepaper/intro',
@@ -95,28 +95,28 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'tech/intro/1-1',
+            docId: 'documentation/whats-oasys/1-1-whats-oasys',
             position: 'left',
-            label: 'Learn',
+            label: 'Documentation',
           },
-          {
-            type: 'doc',
-            docId: 'hub-validator/1-1',
-            position: 'left',
-            label: 'Hub Layer Validator',
-          },
-          {
-            type: 'doc',
-            docId: 'tech/build-verse/1-1',
-            position: 'left',
-            label: 'Build a Verse',
-          },
-          {
-            type: 'doc',
-            docId: 'tech/build-verse/1-1',
-            position: 'left',
-            label: 'Game',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'hub-validator/1-1',
+          //   position: 'left',
+          //   label: 'Hub Layer Validator',
+          // },
+          // {
+          //   type: 'doc',
+          //   docId: 'tech/build-verse/1-1',
+          //   position: 'left',
+          //   label: 'Build a Verse',
+          // },
+          // {
+          //   type: 'doc',
+          //   docId: 'tech/build-verse/1-1',
+          //   position: 'left',
+          //   label: 'Game',
+          // },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'localeDropdown',
@@ -146,7 +146,7 @@ const config = {
               },
               {
                 label: 'Technical Materials',
-                to: '/docs/tech/intro/1-1',
+                to: '/docs/documentation/whats-oasys/1-1-whats-oasys',
               },
               {
                 label: 'Light Paper',
