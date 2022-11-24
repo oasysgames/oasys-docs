@@ -9,8 +9,8 @@ Blockchain Explorer makes it easier for user to see all transactions on the publ
 
 
 ## Oasys Explorer 
-- [explorer.oasys.games](explorer.oasys.games)
-- [explorer.testnet.oasys.games](explorer.testnet.oasys.games)
+- Oasys Mainnet : [explorer.oasys.games](https://explorer.oasys.games)
+- Oasys Testnet : [explorer.testnet.oasys.games](https://explorer.testnet.oasys.games)
 
 
 ## Usecase of Explorer
