@@ -58,8 +58,7 @@ const sidebars = {
       type: 'category',
       label: 'How Does OASYS Work?', 
       link: {
-        type: 'doc',
-        id: 'documentation/how-does-oasys-work/overview/oasys-architecture/1-1-ecosystem-per-chain',
+        type: 'generated-index',
       },
       collapsed: false,
       items: [
@@ -67,8 +66,7 @@ const sidebars = {
           type: 'category',
           label: 'Overview', 
           link: {
-            type: 'doc',
-            id: 'documentation/how-does-oasys-work/overview/oasys-architecture/1-1-ecosystem-per-chain',
+            type: 'generated-index',
           },
           collapsed: false,
           items: [
@@ -76,26 +74,24 @@ const sidebars = {
               type: 'category',
               label: 'OASYS Architecture', 
               link: {
-                type: 'doc',
-                id: 'documentation/how-does-oasys-work/overview/oasys-architecture/1-1-ecosystem-per-chain',
+                type: 'generated-index',
               },
               collapsed: false,
               items: [
                 'documentation/how-does-oasys-work/overview/oasys-architecture/1-1-ecosystem-per-chain',
                 'documentation/how-does-oasys-work/overview/oasys-architecture/1-2-original-rollup',
+                'documentation/how-does-oasys-work/overview/oasys-architecture/1-3-flexible-token-design',
               ]
             }, {
               type: 'category',
-              label: 'Permissioned Layer 1', 
+              label: 'Permissioned Chain', 
               link: {
-                type: 'doc',
-                id: 'documentation/how-does-oasys-work/overview/permissioned-chain/1-1-high-qualiry-database',
+                type: 'generated-index',
               },
               collapsed: false,
               items: [
                 'documentation/how-does-oasys-work/overview/permissioned-chain/1-1-high-qualiry-database',
                 'documentation/how-does-oasys-work/overview/permissioned-chain/1-2-efficient-load',
-                'documentation/how-does-oasys-work/overview/permissioned-chain/1-3-reject-scams',
               ]
             }
           ]
@@ -103,8 +99,7 @@ const sidebars = {
           type: 'category',
           label: 'Hub Layer', 
           link: {
-            type: 'doc',
-            id: 'documentation/how-does-oasys-work/hub-layer/consensus/1-1-hub-consensus',
+            type: 'generated-index',
           },
           collapsed: false,
           items: [
@@ -154,14 +149,14 @@ const sidebars = {
                   type: 'category',
                   label: 'Fungible Token', 
                   link: {
-                    type: 'doc',
-                    id: 'documentation/how-does-oasys-work/hub-layer/ecosystem/ft/1-1-ft-types',
+                    type: 'generated-index',
                   },
                   collapsed: false,
                   items: [
                     'documentation/how-does-oasys-work/hub-layer/ecosystem/ft/1-1-ft-types',
                     'documentation/how-does-oasys-work/hub-layer/ecosystem/ft/1-2-bridge',
                     'documentation/how-does-oasys-work/hub-layer/ecosystem/ft/1-3-dex',
+                    'documentation/how-does-oasys-work/hub-layer/ecosystem/ft/1-4-oas-tokens',
                   ]
                 }, {
                   type: 'category',
@@ -196,7 +191,8 @@ const sidebars = {
           type: 'category',
           label: 'Verse Layer', 
           link: {
-            type: 'generated-index',
+            type: 'doc',
+            id: 'documentation/how-does-oasys-work/verse-layer/1-1-verse-layer'
           },
           collapsed: false,
           items: [

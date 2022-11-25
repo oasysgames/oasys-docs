@@ -1,4 +1,4 @@
-# Generate Private Chain As Public Chain
+# Generate Your Own Public Chain
 
 課題
 * GameFiにはハイトランザクションを安定的に提供できるネットワークが必要
