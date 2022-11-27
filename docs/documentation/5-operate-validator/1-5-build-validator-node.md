@@ -17,7 +17,7 @@ https://github.com/oasysgames/oasys-pos-cli/releases
 
 Create a private key for the Owner account.
 If you already have account, you can skip this. 
-You can find details in [Wallet](/docs/techdocs/wallet/1-2).
+You can find details in [Wallet](/docs/tech/wallet/1-2).
     
 ```
 $ oaspos crypto:create-account
@@ -71,7 +71,7 @@ $ export PRIVATE_KEY=0x0123456789abcdef0123456789abcdef...
 
 ### 3.3. Joining as a validator 
 
-You cna use [Web Join](/docs/techdocs/validator/hub-layer-client-join/1-2)
+You cna use [Web Join](/docs/tech/validator/hub-layer-client-join/1-2)
     
 ```
 $ oaspos validator:join --network testnet --operator 0x0123456789abcdef...
@@ -88,7 +88,7 @@ If you successfully registered, you may see in Oasys Hub.
 ## 4. Staking
 
 
-You can use [oasys hub](/docs/techdocs/validator/stakinghub/1-1) instead.
+You can use [oasys hub](/docs/tech/validator/stakinghub/1-1) instead.
 
 ```
 $ export PRIVATE_KEY=Token holder's(Delegator's)address
@@ -173,7 +173,7 @@ $ oaspos validator:update-operator \
 
 ---
 
-While you are running a command on [join:validator](/docs/techdocs/validator/hub-layer-client-join/1-1#3-register-as-a-validator):
+While you are running a command on [join:validator](/docs/tech/validator/hub-layer-client-join/1-1#3-register-as-a-validator):
 
 ```
 $ oaspos validator:join --network mainnet --operator 0x0123456789abcdef...
@@ -187,7 +187,7 @@ So we have prepared command execution web, made with web3.js.
 
 --- 
 
-![join1](/img/docs/techdocs/joinvalidator/1.png)
+![join1](/img/docs/tech/joinvalidator/1.png)
 
 First, Login via metamask. 
 
@@ -200,13 +200,13 @@ Check your network is Oasys Mainnet(We do not support testnet now).
 | RPC             | https://rpc.mainnet.oasys.games/   |
 
 
-![join2](/img/docs/techdocs/joinvalidator/2.png)
+![join2](/img/docs/tech/joinvalidator/2.png)
 
 After login, you may see Validator Operator(operator address). 
 
 input **Validator Operator(operator address)** and press **Register**.
 
 
-![join3](/img/docs/techdocs/joinvalidator/3.png)
+![join3](/img/docs/tech/joinvalidator/3.png)
 
 You will see successful if you are done.

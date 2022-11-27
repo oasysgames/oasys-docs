@@ -11,14 +11,14 @@ Configの際の設定でどのような選択肢があるかを解説
 
 ## Validator Build Steps
 
-![verse build](/img/docs/techdocs/verse/versebuild.png)
+![verse build](/img/docs/tech/verse/versebuild.png)
 
-For more detailed information about [Verse Architecture](/docs/techdocs/technologies/verse-layer/1-1),you can see before deploying verse. 
+For more detailed information about [Verse Architecture](/docs/tech/technologies/verse-layer/1-1),you can see before deploying verse. 
 
 ## 1. Requirements
 
 Docker Engine v20.10.0 or later and docker-compose v2.0 or later are required.
-Please Check [Hardware_Requirements](/docs/techdocs/validator/hardware-requirements/1-1) Prior to setup. 
+Please Check [Hardware_Requirements](/docs/tech/validator/hardware-requirements/1-1) Prior to setup. 
 
 ## 2. Clone verse-layer-optimism repository
 Clone the [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) repository provided by the Oasys Foundation.
@@ -96,7 +96,7 @@ export SEQUENCER_ADDRESS=0x...
 export PROPOSER_ADDRESS=0x...
 ```
 
-You can navigate [validator wallet](/docs/techdocs/wallet/1-2) on Verse. 
+You can navigate [validator wallet](/docs/tech/wallet/1-2) on Verse. 
 
 Export private key of the `builder` wallet.
 

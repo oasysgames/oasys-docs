@@ -28,14 +28,14 @@ Metamasks can be used by downloading browser extensions or mobile application ve
 * You should maintain security so that the private key and seed phrase is not disclosed to others.
 
 ## Add Oasys network on Metamask
-![Add network on metamask](/img/docs/techdocs/wallet/add-network-1.png)
+![Add network on metamask](/img/docs/tech/wallet/add-network-1.png)
 
 First, open your metamask, then click the drop-down arrow button on the currently set network, and the window to set up the network is called. You can change or add networks from this window.
 
 If you are adding a new network, you can add a network by clicking the `Add network` button.
 
 
-![Add network on metamask](/img/docs/techdocs/wallet/add-network-2.png)
+![Add network on metamask](/img/docs/tech/wallet/add-network-2.png)
 When you click the Add network button, a web page is called where you can add a new network to your metamask. You can add the Oasys network on this web page by entering each item according to the instructions below.
 
 
@@ -46,18 +46,18 @@ When you click the Add network button, a web page is called where you can add a 
 
 ## Add Oasys Chain
 
-You can find RPC / Chain ID on [Chain enviornment](/docs/techdocs/validator/chain-environment/1-1).
+You can find RPC / Chain ID on [Chain enviornment](/docs/tech/validator/chain-environment/1-1).
 
 Or login onto Oasys Hub add newtork automatically.
 
 
 ## Adding token 
 
-![metamask1](/img/docs/techdocs/metamask/image1.png)
+![metamask1](/img/docs/tech/metamask/image1.png)
 
 Select `Import Tokens`.
 
-![metamask2](/img/docs/techdocs/metamask/image2.png)
+![metamask2](/img/docs/tech/metamask/image2.png)
 
 Input `Token contract address`.
 
@@ -70,10 +70,10 @@ Input `Token contract address`.
 
 ## Add Hardwallet(Ledger)
 
-![ledger1](/img/docs/techdocs/ledger/image1.png)
+![ledger1](/img/docs/tech/ledger/image1.png)
 
 Select `Connect Hardware Wallet`.
 
-![ledger2](/img/docs/techdocs/ledger/image2.png)
+![ledger2](/img/docs/tech/ledger/image2.png)
 
 Select `Ledger`.
