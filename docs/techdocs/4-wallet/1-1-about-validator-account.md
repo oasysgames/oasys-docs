@@ -34,7 +34,7 @@ The delegator is the token's delegator, who delegates assets to the Validator ow
 Since the delegator(hub) can delegate tokens to the owner account, they can stake tokens onto the owner account and receive tokens.
 
 Validator Owner (Owner Account) can use same address with Delegator(self delegating).
-L2 Owner can use same address with Delegator(self delegating).
+L2 Owner can use same address with Delegator(self depositing).
 
 ### **Validator Owner (Owner Account)** 
 
@@ -51,7 +51,12 @@ Due to the separation of Owner and Operator accounts, even if Operator's private
 
 ## Verse Layer
 
+
 The verse layer uses optimism, designed for high speed. Since we are using optimistic, we have three wallet address models for nodes and deposits.
+
+### Depositor 
+
+Depositor can deposit token to L2 Owner. 
 
 | Type | Verse Deposit | Gas fee |
 |-----------|-----------|-----------|
