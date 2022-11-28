@@ -1,5 +1,11 @@
 # Official Links
 
-OASYS Hub
-Verses Portal
-Explorer
+## OASYS Hub
+
+https://hub.oasys.games
+
+## Explorer
+
+https://explorer.oasys.games
+
+## Verses Portal

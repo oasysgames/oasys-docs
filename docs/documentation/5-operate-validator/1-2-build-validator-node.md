@@ -3,8 +3,6 @@
 ---
 ---
 
-
-
 ## Check Requirements
 
 Please Check [Validator_Requirements](/docs/tech/validator/hardware-requirements/1-1) Prior to setup. 
@@ -32,6 +30,8 @@ $apt install wget
 ### 2. Download Setup File
 
 https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0/setup.sh
+
+please check you are downloading latest setup.sh. check from [latest release](https://github.com/oasysgames/oasys-validator/releases)
 
 ### 3. Giving Permission to Setup file  
 
@@ -142,7 +142,7 @@ You can download configuration files on here,
 
 Or can download with using `wget` command. 
 ```
-$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0/genesis.zip
+$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.3/genesis.zip
 
 $ unzip genesis.zip
 Archive:  genesis.zip
