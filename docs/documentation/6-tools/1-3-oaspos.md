@@ -2,8 +2,13 @@
 
 Oaspos is client tool for linux. 
 
+## Download 
+
+[Oaspos](https://github.com/oasysgames/oasys-pos-cli/releases)
+
 ## Build 
 ---
+
 ```shell
 $ go get && go build -o oaspos
 ```
