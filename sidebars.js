@@ -265,6 +265,18 @@ const sidebars = {
           ]
         }, {
           type: 'category',
+          label: 'Stake Oasys', 
+          link: {
+            type: 'doc',
+            id: 'documentation/quick-start/build-verse-layer/1-1-stake-oasys',
+          },
+          collapsed: false,
+          items: [
+            'documentation/quick-start/build-verse-layer/1-1-stake-oasys',
+            'documentation/quick-start/build-verse-layer/1-2-stake-cli',
+          ]
+        },{
+          type: 'category',
           label: 'Build Verse Layer', 
           link: {
             type: 'doc',
