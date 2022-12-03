@@ -25,6 +25,7 @@ chown geth:geth /home/geth/.oasvlfy
 ```
 
 > **Please check you have password.txt & validator operator's private key on disk.**
+> **You need to listen 4101 port so it can send, receive transaction.** 
 
 Create a configuration file. [Click here for a sample.](./readme/config.yml)
 
