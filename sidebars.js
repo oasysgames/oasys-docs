@@ -268,12 +268,12 @@ const sidebars = {
           label: 'Stake Oasys', 
           link: {
             type: 'doc',
-            id: 'documentation/quick-start/build-verse-layer/1-1-stake-oasys',
+            id: 'documentation/quick-start/stake-oasys/1-1-stake-oasys',
           },
           collapsed: false,
           items: [
-            'documentation/quick-start/build-verse-layer/1-1-stake-oasys',
-            'documentation/quick-start/build-verse-layer/1-2-stake-cli',
+            'documentation/quick-start/stake-oasys/1-1-stake-oasys',
+            'documentation/quick-start/stake-oasys/1-2-stake-cli',
           ]
         },{
           type: 'category',
