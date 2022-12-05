@@ -16,3 +16,4 @@ Verse uses more CPU. Using Higher Frequency for CPU when having much pending tra
 ## Firewall Settings
 - TCP/UDP port 30303 allowed (for P2P between nodes)
 - TCP port 8545 allowed (for RPC)
+- TCP/UDP port 4101 allowed (for Verse Verifier)
