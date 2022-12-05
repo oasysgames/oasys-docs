@@ -1,14 +1,5 @@
 # Generate Your Own Public Chain
 
-課題
-* GameFiにはハイトランザクションを安定的に提供できるネットワークが必要
-* しかし一般的なパブリックチェーンではこれは実現できない（混雑したり、GASが高まったり）
-
-OASYSのアプローチ
-* 自社プロダクト専用のPublic Chainを簡単に作ってプロダクトを走らせられるインフラとモジュール
-* 一般的なEVMチェーンのTPSは3,000~4,000くらいだが、これを独占できるなら一般的なチェーンでいう100,000TPSにも匹敵する
-* OASYSで構築するL2にはHub Layerから分散性が供給されるため、Publicと見做せる
-
 ## Problem
 
 When you make a game, there's much interaction. That's why it takes much processing on the network, and game servers talk about cloud or scalability. When we were designing Oasys, when we first thought about a game, we found that many chains were designed for general purposes, not just for a game. 

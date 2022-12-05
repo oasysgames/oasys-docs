@@ -1,14 +1,8 @@
 # Original Optimistic Rollup
 
-独自のロールアップが下記を提供している(ここでは提供価値だけサラッと書く)
-* 分散性シェア
-* データの可用性
-* 資産の強制引き出し（実装予定）
+Optimism is .... good for :: 
 
----
----
-
-# Multiple Optimistic Rollup
+## Multiple Optimistic Rollup
 
 Oasys is always looking for and validating new technologies.
 First we need to introduce, Why Oasys using Optimistic Roll-up : 

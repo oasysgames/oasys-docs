@@ -1,12 +1,12 @@
 # High Performance and Stability
 
-* GameFiは本格的にマスアダプションを目指すフェーズに来ているが、ここには技術的な障壁がある
-* ネットワークが混雑することによるTXの遅延やGASの高騰である。これはUXを大きく損なう。
-* これらを解消するために多くのL2チェーンが登場して市場を賑わせたが、結局は多くのプロダクトが流入すれば同様の問題を抱えてしまう
-* 完全なるPermissionless ChainではアービトラージのようなTXでネットワークの安定性が損なわれ、結果的に求めるUXを阻害してしまう
+The Gamefi market continues to grow. We are at the stage of targeting mass adoption, but there are many technical barriers. 
+The most significant issue is because of Congestion on the network.
 
-* OASYSでは独自のアーキテクチャを採用することでこの課題をクリアした
-* WPにある程度の説明を記載する
-* 詳しくはリンクを飛ばす（How Does OASYS Work内の記事へ）
+Congestion on the network causes transaction delays and gas spikes, degrading the user experience. Numerous L2 chains appear to stimulate the market in order to overcome these challenges, but if many items flow into their chains, they would soon face similar issues.
 
--
+In the case of complete permissionless chains, transactions like arbitrage degrade network stability, which in turn impairs UX requirements.
+
+When it comes to transaction speed, fifteen seconds is really stressful when playing a game. Even a transaction taking one second is too long and frustrating for the majority who enjoy mobile, PC, and other types of games. Transaction speeds must be as fast as Web2 products and services.
+
+Oasys addresses these issues by utilizing its unique multi-layer architecture. Layer 2 of the blockchain handles most transactions. It has a transaction rate of over 1500 transactions per second and may be organically and parraely connected, allowing it to expand in a variety of ways.
