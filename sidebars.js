@@ -172,17 +172,6 @@ const sidebars = {
                     'documentation/how-does-oasys-work/hub-layer/ecosystem/nft/1-3-oasyx',
                     'documentation/how-does-oasys-work/hub-layer/ecosystem/nft/1-4-marketplace',
                   ]
-                }, {
-                  type: 'category',
-                  label: 'Verifier', 
-                  link: {
-                    type: 'generated-index',
-                  },
-                  collapsed: false,
-                  items: [
-                    'documentation/how-does-oasys-work/hub-layer/ecosystem/verifier/1-1-verifier',
-                    'documentation/how-does-oasys-work/hub-layer/ecosystem/verifier/1-2-incentive',
-                  ]
                 }
               ]
             }

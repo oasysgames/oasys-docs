@@ -1,11 +1,7 @@
 # Setup Metamask
 
-マニュアルを作ってあげる
 
----
----
-
-# Install Metamask
+## Install Metamask
 
 Metamask is a cryptocurrency wallet that allows you to transfer and manage cryptocurrency.
 
