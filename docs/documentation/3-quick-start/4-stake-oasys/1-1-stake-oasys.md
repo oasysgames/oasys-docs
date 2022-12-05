@@ -43,9 +43,6 @@ You need to wait for a transaction success.
 ![staking6](/img/docs/techdocs/oasys-hub/success.png)
 
 Congratulations, You have succesfully staked. 
-
-![staking7](/img/docs/techdocs/oasys-hub/image9.png)
-
 You can see with activity of transaction in metamask.
 
 ### Unstake
