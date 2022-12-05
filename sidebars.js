@@ -169,7 +169,7 @@ const sidebars = {
                   items: [
                     'documentation/how-does-oasys-work/hub-layer/ecosystem/nft/1-1-nft-types',
                     'documentation/how-does-oasys-work/hub-layer/ecosystem/nft/1-2-bridge',
-                    'documentation/how-does-oasys-work/hub-layer/ecosystem/nft/1-3-oasyx',
+                    // 'documentation/how-does-oasys-work/hub-layer/ecosystem/nft/1-3-oasyx',
                     'documentation/how-does-oasys-work/hub-layer/ecosystem/nft/1-4-marketplace',
                   ]
                 }
@@ -281,6 +281,7 @@ const sidebars = {
           label: 'Build dApps', 
           link: {
             type: 'generated-index',
+            id: 'documentation/whats-oasys/build-dapps/1-1-select',
           },
           collapsed: false,
           items: [

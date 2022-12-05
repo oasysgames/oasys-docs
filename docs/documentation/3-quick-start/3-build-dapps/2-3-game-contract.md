@@ -1,3 +1,0 @@
-# Elementally Game Contract
-
-Gameのチュートリアル
