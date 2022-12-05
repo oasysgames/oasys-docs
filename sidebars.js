@@ -332,6 +332,7 @@ const sidebars = {
             'documentation/build-dapps/how-to-build-verse/1-1-requirement',
             'documentation/build-dapps/how-to-build-verse/1-2-manual',
             'documentation/build-dapps/how-to-build-verse/1-3-optional-configs',
+            'documentation/build-dapps/how-to-build-verse/1-4-verse-proxy',
           ]
         }, {
           type: 'category',
@@ -346,7 +347,68 @@ const sidebars = {
             'documentation/build-dapps/how-to-build-dapps/1-3-ex-token',
             'documentation/build-dapps/how-to-build-dapps/1-4-ordinary-contract',
           ]
-        }
+        },
+        {
+          type: 'category',
+          label: 'Game Example',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'documentation/build-dapps/game-example/1-1',
+            {
+              type: 'category',
+              label: 'Tutorial Overview',
+              link: {
+                type: 'generated-index',
+              },
+              items: [
+                'documentation/build-dapps/game-example/tutorial/1-1',
+                'documentation/build-dapps/game-example/tutorial/1-2',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Repository Overview',
+              link: {
+                type: 'generated-index',
+              },
+              items: [
+                'documentation/build-dapps/game-example/repository/1-1',
+                'documentation/build-dapps/game-example/repository/1-2',
+                'documentation/build-dapps/game-example/repository/1-3',
+                'documentation/build-dapps/game-example/repository/1-4',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Blockchain Functionality',
+              link: {
+                type: 'generated-index',
+              },
+              items: [
+                'documentation/build-dapps/game-example/blockchain-functionality/1-1',
+                'documentation/build-dapps/game-example/blockchain-functionality/1-2',
+                'documentation/build-dapps/game-example/blockchain-functionality/1-3',
+                'documentation/build-dapps/game-example/blockchain-functionality/1-4',
+              ]
+            },
+            {
+              type: 'category',
+              label: 'NFT Creation',
+              link: {
+                type: 'generated-index',
+              },
+              items: [
+                'documentation/build-dapps/game-example/nft-creation/1-1',
+                'documentation/build-dapps/game-example/nft-creation/1-2',
+                'documentation/build-dapps/game-example/nft-creation/1-3',
+                'documentation/build-dapps/game-example/nft-creation/1-4',
+                'documentation/build-dapps/game-example/nft-creation/1-5',
+              ]
+            },
+          ]
+        },
       ]
     }, {
       type: 'category',
