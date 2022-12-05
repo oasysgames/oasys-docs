@@ -296,7 +296,6 @@ const sidebars = {
               items: [
                 'documentation/quick-start/build-dapps/2-1-vft-oft',
                 'documentation/quick-start/build-dapps/2-2-vnft-onft',
-                'documentation/quick-start/build-dapps/2-3-game-contract',
               ]
             }
           ]
