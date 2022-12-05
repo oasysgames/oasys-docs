@@ -280,7 +280,6 @@ const sidebars = {
           type: 'category',
           label: 'Build dApps', 
           link: {
-            type: 'generated-index',
             id: 'documentation/whats-oasys/build-dapps/1-1-select',
           },
           collapsed: false,
