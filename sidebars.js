@@ -348,7 +348,7 @@ const sidebars = {
                 'documentation/build-dapps/module-references/2-1-ethers.js',
                 'documentation/build-dapps/module-references/2-2-web3.js',
               ]
-            },
+            }
           ]
         },
       ]
