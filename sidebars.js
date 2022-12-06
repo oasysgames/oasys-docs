@@ -354,15 +354,6 @@ const sidebars = {
         'documentation/tools/1-3-oaspos',
         'documentation/tools/1-4-graphQL',
       ]
-    }, {
-      type: 'category',
-      label: 'Official Links', 
-      link: {
-        type: 'doc',
-        id: 'documentation/official-links/1-1-official-links'
-      },
-      collapsed: false,
-      items: []
     }
   ],
   // tech: [
@@ -667,7 +658,17 @@ const sidebars = {
             ]
           }
         ]
-      }, 
+      },
+      {
+        type: 'category',
+        label: 'Official Links', 
+        link: {
+          type: 'doc',
+          id: 'documentation/official-links/1-1-official-links'
+        },
+        collapsed: false,
+        items: []
+      }
     ]
   },
 ],
