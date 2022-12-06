@@ -59,6 +59,7 @@ Select validator you have previously staked.
 
 You can unstake by selecting your staked validator, and press unstake. 
 **It requires 10 days to unstake**
+**If you press max button, (max - gasfee) will be displayed.**
 
 ### Claim Staking Reward 
 
