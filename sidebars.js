@@ -241,6 +241,17 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'Selecting between Verse Builder or Game Builder', 
+          link: {
+            type: 'generated-index',
+          },
+          collapsed: false,
+          items: [
+            'documentation/build-dapps/1-1-select',
+          ]
+        },
+        {
+          type: 'category',
           label: 'How to build Verse (L2)', 
           link: {
             type: 'generated-index',

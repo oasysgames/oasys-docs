@@ -23,7 +23,7 @@ You can use a wallet in hard wallet, or Multi-sig wallet if you want.
 
 ### **L2 Sequencer**
 
-L2 Sequencer is, used by **Sequencer Node** in optimism. Roll-up Verse-Layer's transaction uses the sequencer node itself to Hub-Layer. The sequencer address is written in the Optimism contract in Hub-Layer, and roll-up can be done only on specifically approved addresses for security. L2 Owner must update the approved address on the contract if a key is leaked.  
+L2 Sequencer is, used by **Sequencer Node** in optimism. Also well known as a `Canonical transfer chain`. It roll-up Verse-Layer's transaction uses the sequencer node itself to Hub-Layer. The sequencer address is written in the Optimism contract in Hub-Layer, and roll-up can be done only on specifically approved addresses for security. L2 Owner must update the approved address on the contract if a key is leaked.
 
 ### **L2 Proposer**
 
