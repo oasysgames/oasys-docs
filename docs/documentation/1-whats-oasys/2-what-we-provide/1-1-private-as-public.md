@@ -1,4 +1,4 @@
-# Generate Your Own Public Chain
+# Generate Your Own Public Chain by Verse
 
 ## Problem
 

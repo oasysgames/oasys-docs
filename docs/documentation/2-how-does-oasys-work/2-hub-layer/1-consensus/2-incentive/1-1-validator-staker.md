@@ -7,7 +7,7 @@ DelegatorとStakerが同一であることも解説
 Delegatorに対するValidatorの選定アドバイス
 OASYS Hubへの誘導も行う
 
-## validator
+## Validator
 
 Anyone can become a validator as long as they have at least 10 million OAS staking through the validator contract. First, the validator candidate registers his or her address with the validator contract. Then the OAS token holders may stake any validator or validator candidate address, or unstake at any time. Stake and unstake are reflected in the last block of this epoch. A validator candidate can become a validator from the next epoch by declaring itself as a validator with its address staking 10 million OAS or more. Conversely, if the total amount of staking falls below 10 million OAS, the validator will be automatically dropped from the next epoch.
 
