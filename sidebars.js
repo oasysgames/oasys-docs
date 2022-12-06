@@ -664,7 +664,7 @@ const sidebars = {
         label: 'Official Links', 
         link: {
           type: 'doc',
-          id: 'documentation/official-links/1-1-official-links'
+          id: 'quick-start/official-links/1-1-official-links'
         },
         collapsed: false,
         items: []
