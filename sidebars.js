@@ -71,6 +71,7 @@ const sidebars = {
           'techdocs/validator/hub-layer-client-join/1-1-hub-layer-client-join',
           'techdocs/validator/hub-layer-cli/1-1-hub-layer-cli',
           'techdocs/validator/verse-layer-node-build/1-1-verse-layer-node-build',
+          'techdocs/validator/verse-proxy-build/1-1-verse-proxy-build',
           'techdocs/validator/faq/1-1-faq',
       ],
     },
