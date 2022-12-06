@@ -61,118 +61,50 @@ Address: 0x0123456789abcdef0123456789abcdef
 key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 ```
 
-## 4. Deploy contracts for Verse-Layer to Hub-Layer.
+## 4. Deploy contracts for Verse-Layer to Hub-Layer(WEB).
 
-Clone the [oasys-optimism](https://github.com/oasysgames/oasys-optimism) repository provided by the Oasys Foundation.
+### Connect wallet
+Access to [oasys-pos-fe](https://oasys-pos-fe.vercel.app/verse) and switch to the oasys network where you want to build the verse.
+
+Connect the wallet using the builder in the metamask.
+If you successfully connect the wallet, the builder's address will appear next to "Owner Address:".
+![Connect wallet](/img/docs/techdocs/oasys-pos-fe/connect_wallet.png)
+
+### Deposit OAS to build Verse.
+For mainnet, deposit 1000000 OAS, for testnet, deposit 0.000000001 OAS.
+
+The amount of OAS required for the builder in advance. If you use testnet, please reserve OAS in [faucet](https://faucet.testnet.oasys.games).
+
+If the deposit is successful, you will see the amount of OAS deposited next to "Deposit amount:".
+![Deposit](/img/docs/techdocs/oasys-pos-fe/deposit.png)
+
+### Build verse
+To build Verse, set the following
+・chainId to be set in the Verse
+・address of the sequencer
+・address of the proposer
+
+It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) beforehand.
+![Build](/img/docs/techdocs/oasys-pos-fe/build.png)
 
 
-```shell
-git clone https://github.com/oasysgames/oasys-optimism.git /path/to/oasys-optimism
+If the Verse build is successful, the following will be displayed.
 
-cd /path/to/oasys-optimism/packages/contracts/
+Download address.json and genesis.json.
+![Build](/img/docs/techdocs/oasys-pos-fe/build_complete.png)
 
-git checkout v0.1.2
-```
-
-Install dependencies and Build contracts.
-
-```shell
-npm install  # or "yarn install"
-
-npx hardhat run scripts/generate-artifacts.ts
-```
-
-Export the network to be deployed.
-
-```shell
-export CONTRACTS_TARGET_NETWORK=oasys
-```
-
-Export the created wallet addresses.
-
-```shell
-export BUILDER_ADDRESS=0x...
-export SEQUENCER_ADDRESS=0x...
-export PROPOSER_ADDRESS=0x...
-```
-
-You can navigate [validator wallet](/docs/techdocs/wallet/1-2) on Verse. 
-
-Export private key of the `builder` wallet.
+Copy the generated configuration filess to `assets` directory of the `verse-layer-optimism` repository.
 
 ```shell
-export CONTRACTS_DEPLOYER_KEY=0x...
+cp ./Downloads/addresses.json /path/to/verse-layer-optimism/assets/
+
+cp ./Downloads/genesis.json /path/to/verse-layer-optimism/assets/ 
 ```
 
-Export your Verse-Layer chain ID. Can't change it later, please decide carefully.
+When you have completed this step, return to the `verse-layer-optimism` repository.
 
 ```shell
-export CHAIN_ID=
-```
-
-Export the RPC URL and amount of token to deposit.
-
-For mainnet :
-```shell
-export CONTRACTS_RPC_URL=https://rpc.mainnet.oasys.games/
-export DEPOSIT_AMOUNT=1000000000000000000000000
-```
-
-For testnet :
-
-```shell
-export CONTRACTS_RPC_URL=https://rpc.testnet.oasys.games/
-export DEPOSIT_AMOUNT=1000000000
-```
-
-Deposit OAS token.
-
-```shell
-npx hardhat verse:deposit \
-  --network $CONTRACTS_TARGET_NETWORK \
-  --builder $BUILDER_ADDRESS \
-  --amount $DEPOSIT_AMOUNT
-```
-
-Then, Output would be like this : 
-
-```
-depositing (tx: 0x2faa04c92222133e83eb350f03ec698a4b0d2cfe0a549a118401cdc8c1f5efb8)...: success with 70490 gas
-```
-
-Deploy contracts.
-
-```shell
-npx hardhat verse:build \
-  --network $CONTRACTS_TARGET_NETWORK \
-  --chain-id $CHAIN_ID \
-  --sequencer $SEQUENCER_ADDRESS \
-  --proposer $PROPOSER_ADDRESS \
-  --block-signer $SEQUENCER_ADDRESS \
-  --fee-wallet $BUILDER_ADDRESS \
-  --gpo-owner $BUILDER_ADDRESS
-```
-
-Then, Output would be like this : 
-
-```
-building (tx: 0xc4800ef3dc40a79a10378bf109d192c90b66b6e64a1987ddc6cdbf628d0d7d59)...: success with 17673168 gas
-Success writing contract addresses to ./oasys/addresses.json
-Success writing genesis block configuration to ./oasys/genesis.json
-```
-
-Copy the generated configuration filess to `assets` directory of the `verse-layer` repository.
-
-```shell
-cp ./oasys/addresses.json /path/to/verse-layer/assets/
-
-cp ./oasys/genesis.json /path/to/verse-layer/assets/ 
-```
-
-When you have completed this step, return to the `verse-layer` repository.
-
-```shell
-cd /path/to/verse-layer
+cd /path/to/verse-layer-optimism
 ```
 
 ## 5. Create .env file
