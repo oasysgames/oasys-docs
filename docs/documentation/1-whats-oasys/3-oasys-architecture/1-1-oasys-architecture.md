@@ -15,9 +15,10 @@ When designing two layers, the most thoughtful part is compatibility with Ethere
 
 When thinking about various chains, the compatibility of chains is essential. If the code is not used elsewhere, it causes much inconvenience for developers. 
 If you can't use new and existing tools and have to think about simple things, it's a big problem for developers. 
-Oasys, to solve this problem, decided on the Ethereum fork. 
 
-To create a structure that is most similar to Ethereum and creates synergy, We decided to do this. Of course, when a new version update occurs, we will look deeply and adopt on to new technology. 
+To create a structure that is most similar to Ethereum and creates synergy, We decided to fork geth(Go ethereum). Of course, when a new version update or new technology reveals, we will look deeply and adopt on to new technology. 
+Also, In order to provide a stable environment for blockchain use, application execution is left to the Verse-Layer, and the Hub-Layer is restricted to limited uses for recording rollup information, managing FT/NFT, and managing bridge information. **Smart contracts cannot be deployed directly on Hub-Layer**.
+
 
 ## ## Verse Layer
 

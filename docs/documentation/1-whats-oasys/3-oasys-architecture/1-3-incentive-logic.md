@@ -6,7 +6,7 @@ Staking rewards are a must for the architecture of POS. Therefore, for the stabi
 
 ## Commission 
 
-Belly data, while belly-dating, stabilises the network and mediates transactions. 
+Vallidator, while validating, stabilises the network and mediates transactions. 
 The delegator can delegate the token to the Validator, the Validator can receive a delegated token, and the Validator can receive commissions from the delegator. 
 
 ## Miner Incentives 
