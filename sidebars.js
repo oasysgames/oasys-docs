@@ -233,75 +233,6 @@ const sidebars = {
       ]
     }, {
       type: 'category',
-      label: 'Quick Start', 
-      link: {
-        type: 'generated-index',
-      },
-      collapsed: false,
-      items: [
-        {
-          type: 'category',
-          label: 'Setup Metamask', 
-          link: {
-            type: 'doc',
-            id: 'documentation/quick-start/setup-metamask/1-1-how-to-setup'
-          },
-          collapsed: false,
-          items: [
-            'documentation/quick-start/setup-metamask/1-1-how-to-setup',
-            'documentation/quick-start/setup-metamask/1-2-rpc-endpoint',
-          ]
-        }, {
-          type: 'category',
-          label: 'Stake Oasys', 
-          link: {
-            type: 'doc',
-            id: 'documentation/quick-start/stake-oasys/1-1-stake-oasys',
-          },
-          collapsed: false,
-          items: [
-            'documentation/quick-start/stake-oasys/1-1-stake-oasys',
-            'documentation/quick-start/stake-oasys/1-2-stake-cli',
-          ]
-        },{
-          type: 'category',
-          label: 'Build Verse Layer', 
-          link: {
-            type: 'doc',
-            id: 'documentation/quick-start/build-verse-layer/1-1-build-verse-on-testnet',
-          },
-          collapsed: false,
-          items: [
-            'documentation/quick-start/build-verse-layer/1-1-build-verse-on-testnet',
-            'documentation/quick-start/build-verse-layer/1-2-bridge-between-verses',
-          ]
-        }, {
-          type: 'category',
-          label: 'Build dApps', 
-          link: {
-            id: 'documentation/whats-oasys/build-dapps/1-1-select',
-          },
-          collapsed: false,
-          items: [
-            'documentation/quick-start/build-dapps/1-1-modules',
-            {
-              type: 'category',
-              label: 'Build dApps', 
-              link: {
-                type: 'doc',
-                id: 'documentation/quick-start/build-dapps/1-2-tutorials'
-              },
-              collapsed: false,
-              items: [
-                'documentation/quick-start/build-dapps/2-1-vft-oft',
-                'documentation/quick-start/build-dapps/2-2-vnft-onft',
-              ]
-            }
-          ]
-        }, 
-      ]
-    }, {
-      type: 'category',
       label: 'Build dApps on Verse', 
       link: {
         type: 'generated-index',
@@ -668,6 +599,78 @@ const sidebars = {
       dirName: 'whitepaper',
     },
   ],
+  quickstart:[ 
+    {
+    type: 'category',
+    label: 'Quick Start', 
+    link: {
+      type: 'generated-index',
+    },
+    collapsed: false,
+    items: [
+      {
+        type: 'category',
+        label: 'Setup Metamask', 
+        link: {
+          type: 'doc',
+          id: 'documentation/quick-start/setup-metamask/1-1-how-to-setup'
+        },
+        collapsed: false,
+        items: [
+          'documentation/quick-start/setup-metamask/1-1-how-to-setup',
+          'documentation/quick-start/setup-metamask/1-2-rpc-endpoint',
+        ]
+      }, {
+        type: 'category',
+        label: 'Stake Oasys', 
+        link: {
+          type: 'doc',
+          id: 'documentation/quick-start/stake-oasys/1-1-stake-oasys',
+        },
+        collapsed: false,
+        items: [
+          'documentation/quick-start/stake-oasys/1-1-stake-oasys',
+          'documentation/quick-start/stake-oasys/1-2-stake-cli',
+        ]
+      },{
+        type: 'category',
+        label: 'Build Verse Layer', 
+        link: {
+          type: 'doc',
+          id: 'documentation/quick-start/build-verse-layer/1-1-build-verse-on-testnet',
+        },
+        collapsed: false,
+        items: [
+          'documentation/quick-start/build-verse-layer/1-1-build-verse-on-testnet',
+          'documentation/quick-start/build-verse-layer/1-2-bridge-between-verses',
+        ]
+      }, {
+        type: 'category',
+        label: 'Build dApps', 
+        link: {
+          id: 'documentation/whats-oasys/build-dapps/1-1-select',
+        },
+        collapsed: false,
+        items: [
+          'documentation/quick-start/build-dapps/1-1-modules',
+          {
+            type: 'category',
+            label: 'Build dApps', 
+            link: {
+              type: 'doc',
+              id: 'documentation/quick-start/build-dapps/1-2-tutorials'
+            },
+            collapsed: false,
+            items: [
+              'documentation/quick-start/build-dapps/2-1-vft-oft',
+              'documentation/quick-start/build-dapps/2-2-vnft-onft',
+            ]
+          }
+        ]
+      }, 
+    ]
+  },
+],
   // hub_validator: [
   //     {
   //       type: 'category',
