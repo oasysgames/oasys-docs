@@ -95,6 +95,12 @@ const config = {
           },
           {
             type: 'doc',
+            docId: 'quick-start/setup-metamask/1-1-how-to-setup',
+            position: 'left',
+            label: 'Quick Start',
+          },
+          {
+            type: 'doc',
             docId: 'documentation/whats-oasys/1-1-whats-oasys',
             position: 'left',
             label: 'Documentation',
