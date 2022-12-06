@@ -340,7 +340,7 @@ const sidebars = {
               type: 'category',
               label: 'Module References', 
               link: {
-                type: 'generated-index',
+                type: 'docs',
                 id: 'documentation/build-dapps/module-references/1-1-modules'
               },
               collapsed: false,
