@@ -364,6 +364,7 @@ const sidebars = {
         'documentation/tools/1-2-verse-geth',
         'documentation/tools/1-3-oaspos',
         'documentation/tools/1-4-graphQL',
+        'documentation/tools/1-5-websocket',
       ]
     }
   ],
