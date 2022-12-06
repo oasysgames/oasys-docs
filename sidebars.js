@@ -668,7 +668,6 @@ const sidebars = {
         },
         collapsed: false,
         items: [
-          'quick-start/build-dapps/1-1-modules',
           {
             type: 'category',
             label: 'Build dApps', 
