@@ -9,3 +9,5 @@ Oasys thinks that's a critical point, and it's been thinking a lot since it firs
 
 Celer has many connections to other networks. This means scalability with other chains.  
 We will carefully consider and accept new partners that may come in later, so users can use stable bridges.
+
+- Celer : https://cbridge.celer.network 
