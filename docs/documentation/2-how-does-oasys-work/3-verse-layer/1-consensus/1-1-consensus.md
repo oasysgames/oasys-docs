@@ -1,6 +1,3 @@
-# Alternative Consensus Logic
+# Concensus Logic on Verse 
 
-PoA / PoS
-
-どのようにConfigするのかもディレクション
-(node報酬なども含めて)
+L2 Transactions : L1 confirmation

@@ -26,8 +26,9 @@ We currently do not support the official way, but we will provide web for a clai
 
 ## Staking Contract 
 
+```
 0x0000000000000000000000000000000000001001
-
+```
 
 ## Staking with Oasys Hub.
 

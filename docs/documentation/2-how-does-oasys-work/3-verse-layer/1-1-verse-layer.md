@@ -1,16 +1,5 @@
 # How the Verse Layer work?
 
-必要なエンティティ　（Sequencer, Proposer）
-
-Deposit
-
-Sequencer
-
-Proposer
-
-それぞれの動きを解説
-
-
 ### **L2 Owner**
 
 L2 Owner is the Owner of Verse-Layer. Users or operators can `deposit` tokens onto the L2 Owner. 

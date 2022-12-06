@@ -1,7 +1,7 @@
 # Manual for Building Verse
 
 
-Faucet
+## Faucet
 
 1,000,000 OAS is required to validate the Verse-Layer node. It have 180days lockup on first deployment for a builder wallet.
 But on Testnet, it's free, You can try Verse Testnet with [faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
@@ -148,14 +148,5 @@ docker-compose up -d message-relayer
 For running verse builder, by considering follwing parameter on permissioned chain may help: 
 
 By deploying permission-less makes scam or non-approved contract, which makes user unsafe. 
-By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by limiting proxy. 
-
-
-Deposit
-
-Sequencer
-Proposer
-
-geth installation
-Start Running Verse
+By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by [limiting proxy](docs\documentation\4-build-dapps\1-how-to-build-verse\1-4-verse-proxy). 
 
