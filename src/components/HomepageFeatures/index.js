@@ -15,12 +15,12 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Technical Documentation',
+    title: 'Quick Start',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/quick-start/setup-metamask/1-1-how-to-setup",
     description: (
       <>
-        Documentation for dApps Developers.
+        Quick Start for users.
       </>
     ),
   },
