@@ -29,7 +29,6 @@ const sidebars = {
           collapsed: false,
           items: [
             'documentation/whats-oasys/what-we-provide/1-1-private-as-public',
-            'documentation/whats-oasys/what-we-provide/1-2-cross-chain-bridge',
           ],
         }, {
           type: 'category',
