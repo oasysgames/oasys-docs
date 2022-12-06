@@ -104,7 +104,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'DPoS Consensus Algorithm', 
+              label: 'Consensus Algorithm', 
               link: {
                 type: 'doc',
                 id: 'documentation/how-does-oasys-work/hub-layer/consensus/1-1-hub-consensus',
@@ -113,7 +113,7 @@ const sidebars = {
               items: [
                 {
                   type: 'category',
-                  label: 'DPoS Consensus Algorithm', 
+                  label: 'DPoS', 
                   link: {
                     type: 'generated-index',
                   },
