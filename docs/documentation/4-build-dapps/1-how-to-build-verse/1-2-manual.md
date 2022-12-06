@@ -77,8 +77,8 @@ git checkout v0.1.2
 Install dependencies and Build contracts.
 
 ```shell
-npm install  # or "yarn install"
-
+# node version must be 15
+npm install
 npx hardhat run scripts/generate-artifacts.ts
 ```
 
@@ -106,6 +106,8 @@ export CONTRACTS_DEPLOYER_KEY=0x...
 
 Export your Verse-Layer chain ID. Can't change it later, please decide carefully.
 
+It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) beforehand.
+
 ```shell
 export CHAIN_ID=
 ```
@@ -127,6 +129,7 @@ export DEPOSIT_AMOUNT=1000000000
 
 Deposit OAS token.
 
+The amount of OAS required for the builder in advance. If you use testnet, please reserve OAS in [faucet](https://faucet.testnet.oasys.games).
 ```shell
 npx hardhat verse:deposit \
   --network $CONTRACTS_TARGET_NETWORK \
