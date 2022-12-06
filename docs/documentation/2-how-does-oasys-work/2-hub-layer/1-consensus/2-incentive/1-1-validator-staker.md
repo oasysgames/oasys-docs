@@ -23,3 +23,6 @@ We've decided to call it the Delegator, and by delegating it to the Validator, t
 Staking Reward is available from Staking Contract, which requires a direct claim. 
 In the case of Delegator, you can choose whomever you want to Delegate. Delegation is also possible to one or more Validators. A validator can take a commission from Staking Reward by validating with a delegation from Delegator.
 
+## Easy Staking 
+
+You can participate staking with [oasys hub](https://hub.oasys.games)

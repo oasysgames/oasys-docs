@@ -14,3 +14,8 @@ Gas used on Block means if you are a Validator and you have created Block, you w
 2. Validation Reward(Operation Reward)
 Since Gas used on Block can not stimulate the ecosystem and motivate validators to secure our network, we have a reward for validators who participated in each epoch. Delegator and Validator Owner receives reward. Validation Reward(Operation Reward) is calculated at the end of each epoch, and you can see a timer in oasys hub
 
+## Staking Reward
+
+Staking reward is to stimulate user staking, and reward for contributing stabilisation in network.
+
+
