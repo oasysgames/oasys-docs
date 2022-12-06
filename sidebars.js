@@ -279,6 +279,19 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Module References', 
+          link: {
+            type: 'doc',
+            id: 'documentation/build-dapps/module-references/1-1-modules'
+          },
+          collapsed: false,
+          items: [
+            'documentation/build-dapps/module-references/2-1-ethers.js',
+            'documentation/build-dapps/module-references/2-2-web3.js',
+          ]
+        },
+        {
+          type: 'category',
           label: 'Game Example',
           link: {
             type: 'generated-index',
@@ -336,19 +349,6 @@ const sidebars = {
                 'documentation/build-dapps/game-example/nft-creation/1-5',
               ]
             },
-            {
-              type: 'category',
-              label: 'Module References', 
-              link: {
-                type: 'doc',
-                id: 'documentation/build-dapps/module-references/1-1-modules'
-              },
-              collapsed: false,
-              items: [
-                'documentation/build-dapps/module-references/2-1-ethers.js',
-                'documentation/build-dapps/module-references/2-2-web3.js',
-              ]
-            }
           ]
         },
       ]
