@@ -157,7 +157,7 @@ const config = {
               },
               {
                 label: 'Technical Materials',
-                to: '/docs/documentation/whats-oasys/1-1-whats-oasys',
+                to: '/docs/tech-docs/whats-oasys/1-1-whats-oasys',
               },
               {
                 label: 'Light Paper',
