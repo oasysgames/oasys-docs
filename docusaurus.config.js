@@ -81,30 +81,12 @@ const config = {
           src: 'img/general/oasys-logo_inline.png',
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'tech/wallet/1-1',
-          //   position: 'left',
-          //   label: 'Quick Start',
-          // },
           {
             type: 'doc',
             docId: 'whitepaper/intro',
             position: 'left',
             label: 'Whitepaper',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'quick-start/setup-metamask/1-1-how-to-setup',
-          //   position: 'left',
-          //   label: 'Quick Start',
-          // },
-          // {
-          //   type: 'doc',
-          //   docId: 'documentation/whats-oasys/1-1-whats-oasys',
-          //   position: 'left',
-          //   label: 'Documentation',
-          // },
           {
             type: 'doc',
             docId: 'tech-docs/whats-oasys/1-1-whats-oasys',
@@ -147,25 +129,6 @@ const config = {
             position: 'left',
             label: 'Dev Tools',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'hub-validator/1-1',
-          //   position: 'left',
-          //   label: 'Hub Layer Validator',
-          // },
-          // {
-          //   type: 'doc',
-          //   docId: 'tech/build-verse/1-1',
-          //   position: 'left',
-          //   label: 'Build a Verse',
-          // },
-          // {
-          //   type: 'doc',
-          //   docId: 'tech/build-verse/1-1',
-          //   position: 'left',
-          //   label: 'Game',
-          // },
-          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'localeDropdown',
             position: 'right',
