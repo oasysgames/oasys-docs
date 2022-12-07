@@ -1,0 +1,23 @@
+---
+---
+
+# How to make a Blockchain Game
+
+When making a blockchain game you need to think not only about how to implement the gameplay aspects, but also how you can create a connection between your game and the blockchain.
+When using popular game engines such as Unity or Unreal Engine it is quite hard to safely connect to the blockchain and it is much easier to use a game engine that runs in the browser and can easily access [Metamask](https://metamask.io/) to connect to your wallet.
+
+![My Crypto Heroes Key Art](/img/docs/techdocs/sample-game/game-mch.png)
+
+As an example we can look at [My Crypto Heroes](https://www.mycryptoheroes.net/).
+MCH does not use a game engine, but is built with vue.js and relies only on canvas elements to display the combat animations. The website connects to MetaMask to access information about the user such as their public key to confirm their identity. But MCH also relies on a complex backend to handle user data, calculate combat results, execute tournaments, trade assets and so on.
+
+Creating a backend like that is very time intensive and complicated, so for this tutorial we will create a simple game that runs on the **client side only** to get more familiar with what we can accomplish using blockchain technology in a frontend application.
+
+>A popular adage in programming says **'Never Trust the client'**, so keep in mind that this tutorial is for educational purposes only to get you started with making blockchain games and connect to Oasys and we won't cover possible exploits or security risks. When moving to production you will need to be very careful with what functionality you let the client handle to prevent cheating or other exploits and will most likely have to implement a backend server for some parts of your game.
+
+Even when making a game in the browser there are many game engines and frameworks available we can choose from.
+When working with 3D, some popular choices are [Babylon.js](https://www.babylonjs.com/) or [Three.js](https://threejs.org/).
+But since we wanted Dino Runner to be a simple 2D game we decided on using [Phaser 3](https://phaser.io/phaser3) because of its great documentation and easy of use.
+
+Most of the things shown in this tutorial will work on any EVM (Ethereum Virtual Machine) compatible blockchain, but as an example we will use HOME verse which is a layer 2 sub-verse of Oasys.
+Some benefits of using HOME verse are instant transactions and the fact that we can deploy contracts without having to pay any gas. This means that there is no need to acquire funds or wrestle with a fountain before we can start developing our contracts.

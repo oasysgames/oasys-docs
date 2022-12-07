@@ -14,23 +14,73 @@ const FeatureList = [
       </>
     ),
   },
+  // {
+  //   title: 'Quick Start',
+  //   Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+  //   linkTo: "/docs/quick-start/setup-metamask/1-1-how-to-setup",
+  //   description: (
+  //     <>
+  //       Quick Start for users.
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: 'Technical Documentation',
+  //   Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+  //   linkTo: "/docs/documentation/whats-oasys/1-1-whats-oasys",
+  //   description: (
+  //     <>
+  //       Documentation for dApps Developers.
+  //     </>
+  //   ),
+  // },
   {
-    title: 'Quick Start',
+    title: 'Technical Documentation',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/quick-start/setup-metamask/1-1-how-to-setup",
+    linkTo: "/docs/tech-docs/whats-oasys/1-1-whats-oasys",
     description: (
       <>
-        Quick Start for users.
+        Technical Documentation for Developers. 
       </>
     ),
   },
   {
-    title: 'Technical Documentation',
+    title: 'Architecture',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/documentation/whats-oasys/1-1-whats-oasys",
+    linkTo: "/docs/architecture/overview/oasys-architecture/1-1-ecosystem-per-chain",
     description: (
       <>
-        Documentation for dApps Developers.
+        Oasys Architecture. 
+      </>
+    ),
+  },
+  {
+    title: 'Hub Validator',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/hub-validator/operate-validator/1-1-hd-requirement",
+    description: (
+      <>
+        Document for Oasys Hub Layer Validator.
+      </>
+    ),
+  },
+  {
+    title: 'Verse Developer',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/verse-developer/1-1-select",
+    description: (
+      <>
+        Document for Developer to build Verse Layer.
+      </>
+    ),
+  },
+  {
+    title: 'Staking',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
+    description: (
+      <>
+        You can stake OAS with Metamask.
       </>
     ),
   },

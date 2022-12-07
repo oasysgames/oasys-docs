@@ -1,24 +1,24 @@
-# Build Verse Layer on the Testnet
+# Manual for Building Verse
 
-マニュアル
 
-Configの際の設定でどのような選択肢があるかを解説
+## Faucet
+
+1,000,000 OAS is required to validate the Verse-Layer node. It have 180days lockup on first deployment for a builder wallet.
+But on Testnet, it's free, You can try Verse Testnet with [faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
 
 ---
 ---
-
-# Verse-Layer Node Build (Optimism)
 
 ## Validator Build Steps
 
-![verse build](/img/docs/tech/verse/versebuild.png)
+![verse build](/img/docs/techdocs/verse/versebuild.png)
 
-For more detailed information about [Verse Architecture](/docs/tech/technologies/verse-layer/1-1),you can see before deploying verse. 
+For more detailed information about [Verse Architecture](/docs/techdocs/technologies/verse-layer/1-1),you can see before deploying verse. 
 
 ## 1. Requirements
 
 Docker Engine v20.10.0 or later and docker-compose v2.0 or later are required.
-Please Check [Hardware_Requirements](/docs/tech/validator/hardware-requirements/1-1) Prior to setup. 
+Please Check [Hardware_Requirements](/docs/techdocs/validator/hardware-requirements/1-1) Prior to setup. 
 
 ## 2. Clone verse-layer-optimism repository
 Clone the [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) repository provided by the Oasys Foundation.
@@ -148,4 +148,5 @@ docker-compose up -d message-relayer
 For running verse builder, by considering follwing parameter on permissioned chain may help: 
 
 By deploying permission-less makes scam or non-approved contract, which makes user unsafe. 
-By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by limiting proxy. 
+By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by [limiting proxy](docs\documentation\4-build-dapps\1-how-to-build-verse\1-4-verse-proxy). 
+
