@@ -1,7 +1,0 @@
-# High Quality Database
-
-* Hub LayerはPermissionedBlockchain
-* Verse Layerの構築には多額のDepositが必要なので、優良なゲームコンテンツだけがOASYS上で運営されることになる（Scam防止）
-* 分散性を保証するのはグローバルで最も有名なゲーム会社連合
-
-なのでOASYSのState MachineはGameFiにとっては極めて質の高い分散DBということになる
