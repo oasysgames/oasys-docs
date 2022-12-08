@@ -1,10 +1,12 @@
 # Original Optimistic Rollup
 
-OASYSのOptimistic Rollupの概要
-* Challenging期間が不要で、すべてのTXやState MachineがHub Layerに同期される
-* blockHashの検証をHub LayerのNodeが分散で実行する
-* L2チェーンの資産を強制的にL1に引き出せる（今後実装予定）
+OASYS Optimistic Rollup Overview
+* No Challenging Period Required, All TXs and State Machines Synchronize to Hub Layer
+* Hub Layer Node performs blockHash verification in a distributed manner
+* Force L2 chain assets to be pulled to L1 (to be implemented in the future)
 
-この独自のロールアップによって下記の懸念を払拭できる
-* これ、ただのPrivateSideChainじゃん
-* セキュリティどうするの？
+This unique roll-up can dispel the following concerns:
+* This is just PrivateSideChain.
+* What do you do with security?
+
+While using transacions on Oasys, Oasys Rollup is using TX and State machine is Synchronized to Hub Layer.
