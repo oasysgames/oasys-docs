@@ -19,6 +19,6 @@ Since Gas used on Block can not stimulate the ecosystem and motivate validators 
 Staking reward is to stimulate user staking, and reward for contributing stabilisation in network.
 
 ||staking reward| Staking commission|
-|-----------||-----------|-----------|
+|-----------|-----------|-----------|
 |Receiver| Delegator | Validator Owner|
 |Details| Receives amount after paying interest to Validator owner | Receives commission for operating nodes |
