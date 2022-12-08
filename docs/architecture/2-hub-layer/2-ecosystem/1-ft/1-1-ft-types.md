@@ -1,11 +1,5 @@
 # Flexibility of Fungible Token
 
-
-vFT / oFT / exFT
-
-vFTとoFTを具体的にどのように発行できるかのHow To
-
-
 You can look at [Whitepaper](/docs/whitepaper/solution/ft-nft-design) for basic concepts.
 
 ## oFT

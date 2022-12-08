@@ -1,10 +1,3 @@
-# Multi Layered Architecture
-
-OASYSの2層構造をサラッと解説
-
----
----
-
 # 2 Layer System, Hub & Verse
 
 Oasys has two layers. Hub Layer / Verse Layer. 
