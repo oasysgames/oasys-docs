@@ -62,36 +62,6 @@ const sidebars = {
           items: [],
         }, 
       ],
-    },
-    {
-      type: 'category',
-      label: 'Setup Metamask', 
-      link: {
-        type: 'doc',
-        id: 'tech-docs/setup-metamask/1-1-how-to-setup'
-      },
-      collapsed: false,
-      items: []
-    },
-    {
-      type: 'category',
-      label: 'RPC Endpoint', 
-      link: {
-        type: 'doc',
-        id: 'tech-docs/rpc-endpoint/1-1-rpc-endpoint'
-      },
-      collapsed: false,
-      items: []
-    },
-    {
-      type: 'category',
-      label: 'Official Links', 
-      link: {
-        type: 'doc',
-        id: 'tech-docs/official-links/1-1-official-links'
-      },
-      collapsed: false,
-      items: []
     }
   ],
   architecture: [
