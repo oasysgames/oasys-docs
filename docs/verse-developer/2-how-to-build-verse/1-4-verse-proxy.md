@@ -1,6 +1,6 @@
 # Verse Proxy
 
-This is proxy to control access allow list to verse layer.  
+This is proxy to control access allow list to Verse Layer.  
 Verse-Proxy is made by [Nest](https://github.com/nestjs/nest).  
 
 Verse-Proxy can control following items.  

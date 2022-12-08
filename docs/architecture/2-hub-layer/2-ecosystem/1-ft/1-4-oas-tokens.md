@@ -24,7 +24,7 @@ Since it's Delegated Proof of stake, and we need a locked-up token, we have made
 ### Purpose of sOAS
 
 sOAS is, for better participating in our ecosystem, and thanks for early support with us, we are sending tokens that can stake, which makes an opportunity to participate in our ecosystem.
-sOAS can use Hub layer staking and verse deposit, which can substantially support verse builders or operators. 
+sOAS can use Hub Layer staking and verse deposit, which can substantially support verse builders or operators. 
 
 ### Contract of sOAS
 

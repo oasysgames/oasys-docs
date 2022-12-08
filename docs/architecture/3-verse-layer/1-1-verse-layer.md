@@ -16,5 +16,5 @@ L2 Sequencer is, used by **Sequencer Node** in optimism. Also well known as a `C
 
 ### **L2 Proposer**
 
-L2 Proposer is used by **Proposer Node** in optimism, Proposer node roll-up Verse layer's status root(Merkle Tree) onto Hub-Layer. 
+L2 Proposer is used by **Proposer Node** in optimism, Proposer node roll-up Verse Layer's status root(Merkle Tree) onto Hub-Layer. 
 A L2 Proposer needs to read block chain process, so it only needs to use a hot wallet. The proposer address is written in Hub-Layer's optimism contract and allows approved addresses only. L2 Owner must update the approved address on the contract if the private key leaks. 

@@ -1,9 +1,9 @@
 # Multi Layered Architecture
 
-The Hub Layer is designed to handle only specific tx. This prevents many transactions from occurring, preventing the gasp from rising during roll-up, and does not burden the user even if the gasp rises. 
-Verse Layer will be responsible for the tx of significant games.
+The Hub Layer is designed to handle only specific transactions. This prevents many transactions from occurring, preventing the gasp from rising during roll-up, and does not burden the user even if the gasp rises. 
+Verse Layer will be responsible for the transactions of significant games.
 
-The important parts are as follows. 
+We believe we can provide with flexibility.
 
 - For large projects, a public chain is established for each product. 
 - Multiple games can configure one version 

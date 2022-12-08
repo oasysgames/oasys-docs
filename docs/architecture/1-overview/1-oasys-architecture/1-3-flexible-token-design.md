@@ -1,3 +1,3 @@
 # Flexible Token Design
 
-You can look with [Whitepaper](/docs/whitepaper/solution/ft-nft-design).
+You can look with [Whitepaper](/docs/whitepaper/solution/ft-nft-design) for flexible token design.

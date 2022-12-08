@@ -9,7 +9,7 @@ The validator signs signatures using the registered address for block signing. I
 ## Epoch
 
 Epoch normally means the number of times the entire dataset has been learned. In every Epoch, Staker(Delegator), and Validator will take the stake reward. 
-**Every Epoch is calculated with 5760 blocks** in the Oasys chain, and **each block creation time on Hub layer is fixed at 15 seconds**, so it takes almost 1 day. 
+**Every Epoch is calculated with 5760 blocks** in the Oasys chain, and **each block creation time on Hub Layer is fixed at 15 seconds**, so it takes almost 1 day. 
 This may be delayed little by little depending on the network delay, and at the end of this Epoch, the settlement will be made with Staking Contract. 
 If more than the amount of your token is needed for the Validator, one Staking person should leave it to the Validator because validating is not possible. 
 We've decided to call it the Delegator, and by delegating it to the Validator, the Validator will instead belly-date the token and receive the Staking Reward. 
