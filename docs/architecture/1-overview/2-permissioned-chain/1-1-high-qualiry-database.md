@@ -1,11 +1,8 @@
 # High Quality Database
 
-* Hub LayerはPermissionedBlockchain
-* Verse Layerの構築には多額のDepositが必要なので、優良なゲームコンテンツだけがOASYS上で運営されることになる（Scam防止）
-* 分散性を保証するのはグローバルで最も有名なゲーム会社連合
+Hub Layer is a permissioned Blockchain. Therefore, all updates are required to be updated by validators. Anyone can be a Hub Layer validator, but updating Hub Layer requires permissions. 
+Verse Layer needs a deposit, you can make multiple verse with a token, but we have a lock-up period & minimum amount for scam resistance. 
+Of course, all decentralized validating is operated by famous game companies or crypto natives. 
 
-なのでOASYSのState MachineはGameFiにとっては極めて質の高い分散DBということになる
-
-Hub Layer is permissioned Blockchain, all updates are required to setup by validators. 
-Verse Layer needs deposit, you can make multiple verse with token, but we have lock-up period & minimum amount for scam-resistance. 
-Of course, all decentralized validating is operated by famous game companies. 
+With a stable network and network scalability to be controlled by Game builders, Oasys is the best State machine that can show extreme performance in Blockchain.
+Verse builders don't need to stress bot transactions or scams that can harm your network. 
