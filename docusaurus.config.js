@@ -89,9 +89,15 @@ const config = {
           },
           {
             type: 'doc',
+            docId: 'staking/stake-oasys/1-1-stake-oasys',
+            position: 'left',
+            label: 'For Users',
+          },
+          {
+            type: 'doc',
             docId: 'tech-docs/whats-oasys/1-1-whats-oasys',
             position: 'left',
-            label: 'Tech Docs',
+            label: 'Learn',
           },
           {
             type: 'doc',
@@ -109,13 +115,7 @@ const config = {
             type: 'doc',
             docId: 'verse-developer/1-1-select',
             position: 'left',
-            label: 'Verse Developer',
-          },
-          {
-            type: 'doc',
-            docId: 'staking/stake-oasys/1-1-stake-oasys',
-            position: 'left',
-            label: 'Staking',
+            label: 'Build on Verse',
           },
           {
             type: 'doc',
