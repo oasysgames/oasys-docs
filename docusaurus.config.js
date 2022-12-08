@@ -113,12 +113,6 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'game/1-1',
-            position: 'left',
-            label: 'Game',
-          },
-          {
-            type: 'doc',
             docId: 'staking/stake-oasys/1-1-stake-oasys',
             position: 'left',
             label: 'Staking',
