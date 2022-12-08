@@ -11,7 +11,7 @@ The important parts are as follows.
 - Fast Finality 
 
 High speed, High Finality can be considered low Network Resilience, but we validate all transactions by Hub Layer validators.
-Also, due to the nature of the game pie, the game operator runs Verse in Oasys, and because it's their game, you can trust the person who runs Verse, and in fact, most transactions occur in Verse. So we think like this, and Scam resistance is the most important thing.
+Also, due to the nature of the game pie, the game operator runs Verse in Oasys, and because it's their game, you can trust the person who runs Verse, and in fact, most transactions occur in Verse. So we think, reliability & Scam resistance is the most important thing.
 
 
 
