@@ -135,6 +135,9 @@ PROPOSER_ADDRESS=
 PROPOSER_KEY=
 ```
 
+> **Warning**  
+> Do not change `BLOCK_SIGNER_ADDRESS` and `BLOCK_SIGNER_KEY`. If you change them, the Oasys team will not be able to run replica nodes for Verse-Layer. Furthermore, if the replica node does not exist, the verifier cannot verify the rollup from your Verse-Layer. As a result, the latency of token withdrawal from Verse-Layer to Hub-Layer increases from about 2 minutes to 7 days, resulting in bad UX of the bridge.
+
 ## 6. Run Containers
 
 ```shell
