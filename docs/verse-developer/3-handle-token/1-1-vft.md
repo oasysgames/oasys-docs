@@ -1,4 +1,4 @@
-# Handle Fungible Tokens
+# vFT
 
 ## Create an ERC-20 on Ethereum testnet
 ERC-20 is a token standard for replaceable tokens in the Ethereum blockchain. Tokens created in the ERC-20 standard can transfer tokens from one account to another, get the token balance for the current account, and get the total supply of tokens available on the network.
