@@ -249,17 +249,16 @@ const sidebars = {
       dirName: 'verse-developer',
     },
   ],
-
   staking: [
-    link: {
+    {
       type: 'doc',
       id: 'staking/stake-oasys/1-1-stake-oasys',
     },
     {
-      type: 'doc',
+      type: 'category',
       label: 'For Users',
       collapsed: false,
-      items [
+      items: [
       {
         type: 'category',
         label: 'Setup Metamask', 
