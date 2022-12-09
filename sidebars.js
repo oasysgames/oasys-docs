@@ -94,7 +94,7 @@ const sidebars = {
           collapsed: false,
           items: [
             'architecture/overview/permissioned-chain/1-1-high-qualiry-database',
-            'architecture/overview/permissioned-chain/1-2-efficient-load',
+            // 'architecture/overview/permissioned-chain/1-2-efficient-load',
           ]
         }
       ]
