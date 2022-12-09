@@ -1,10 +1,5 @@
 # Reward / Commission
 
-Staking RewardとValidator Commissionの解説
-rewardとcommissionの比率
-単利と複利の解説
-
-
 ## How block reward is made
 Block Reward have two different details.
 
