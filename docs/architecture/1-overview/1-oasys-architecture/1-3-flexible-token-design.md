@@ -2,7 +2,7 @@
 
 You can look with [Whitepaper](/docs/whitepaper/solution/ft-nft-design) for flexible token design.
 
-Since we have ex,o,v FT & NFT in our network, we'd like to tell you why we have made many token designs. 
+Since Oasys have ex,o,v FT & NFT in our network, we'd like to tell you why we have made many token designs. 
 From architecting Oasys, we've seen many IP holders are afraid to expose their IP.
 
 For example, if you have your own IP with particular behaviour or personality, like kind and lovely. 
