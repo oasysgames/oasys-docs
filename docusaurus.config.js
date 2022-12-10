@@ -119,7 +119,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'dev-tools/tools/1-1-hub-geth',
+            docId: 'dev-tools/tools/1-1-hardhat',
             position: 'left',
             label: 'Dev Tools',
           },
