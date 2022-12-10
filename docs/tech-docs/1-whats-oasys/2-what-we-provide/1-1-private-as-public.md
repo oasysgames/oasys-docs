@@ -1,6 +1,6 @@
 # Generate Your Own Public Chain by Verse
 
-## Problem
+## Issue
 
 When you make a game, there's much interaction. Game requires much processing on the network, and game servers requires cloud or scalability. When we were designing Oasys, when we first thought about a game, we found that many chains were designed for general purposes, not just for a game. 
 

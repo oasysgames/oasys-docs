@@ -1,6 +1,5 @@
 # Oasys Optimistic Rollup
 
-Optimism is .... good for :: 
 
 ## Multiple Optimistic Rollup
 
