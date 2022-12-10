@@ -13,7 +13,7 @@ const sidebars = {
         type: 'doc',
         id: 'tech-docs/whats-oasys/1-1-whats-oasys',
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
@@ -21,7 +21,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'tech-docs/whats-oasys/gamefi-chain/1-1-high-performance',
             'tech-docs/whats-oasys/gamefi-chain/1-2-decentralizaton-and-data-availability',
@@ -33,7 +33,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'tech-docs/whats-oasys/what-we-provide/1-1-private-as-public',
           ],
@@ -45,7 +45,7 @@ const sidebars = {
             type: 'doc',
             id: 'tech-docs/whats-oasys/oasys-architecture/1-1-oasys-architecture',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'tech-docs/whats-oasys/oasys-architecture/1-2-original-rollup',
             'tech-docs/whats-oasys/oasys-architecture/1-3-incentive-logic',
@@ -58,7 +58,7 @@ const sidebars = {
             type: 'doc',
             id: 'tech-docs/whats-oasys/roadmap/1-1-initial-functionalities',
           },
-          collapsed: false,
+          collapsed: true,
           items: [],
         }, 
       ],
@@ -71,7 +71,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
@@ -79,7 +79,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
             'architecture/overview/oasys-architecture/1-2-original-rollup',
@@ -91,7 +91,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'architecture/overview/permissioned-chain/1-1-high-qualiry-database',
             // 'architecture/overview/permissioned-chain/1-2-efficient-load',
@@ -105,7 +105,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
@@ -114,7 +114,7 @@ const sidebars = {
             type: 'doc',
             id: 'architecture/hub-layer/consensus/1-1-hub-consensus',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               type: 'category',
@@ -122,7 +122,7 @@ const sidebars = {
               link: {
                 type: 'generated-index',
               },
-              collapsed: false,
+              collapsed: true,
               items: [
                 'architecture/hub-layer/consensus/dpos/1-1-weighted-random',
                 'architecture/hub-layer/consensus/dpos/1-2-mining',
@@ -133,7 +133,7 @@ const sidebars = {
               link: {
                 type: 'generated-index',
               },
-              collapsed: false,
+              collapsed: true,
               items: [
                 'architecture/hub-layer/consensus/incentive/1-1-validator-staker',
                 'architecture/hub-layer/consensus/incentive/1-2-reward-commission',
@@ -147,7 +147,7 @@ const sidebars = {
             type: 'doc',
             id: 'architecture/hub-layer/ecosystem/1-1-ecosystem',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             {
               type: 'category',
@@ -155,7 +155,7 @@ const sidebars = {
               link: {
                 type: 'generated-index',
               },
-              collapsed: false,
+              collapsed: true,
               items: [
                 'architecture/hub-layer/ecosystem/ft/1-1-ft-types',
                 'architecture/hub-layer/ecosystem/ft/1-2-bridge',
@@ -169,7 +169,7 @@ const sidebars = {
                 type: 'doc',
                 id: 'architecture/hub-layer/ecosystem/nft/1-1-nft-types',
               },
-              collapsed: false,
+              collapsed: true,
               items: [
                 'architecture/hub-layer/ecosystem/nft/1-1-nft-types',
                 'architecture/hub-layer/ecosystem/nft/1-2-bridge',
@@ -188,7 +188,7 @@ const sidebars = {
         type: 'doc',
         id: 'architecture/verse-layer/1-1-verse-layer'
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
@@ -197,7 +197,7 @@ const sidebars = {
             type: 'doc',
             id: 'architecture/verse-layer/consensus/1-1-consensus'
           },
-          collapsed: false,
+          collapsed: true,
           items: []
         }, {
           type: 'category',
@@ -206,7 +206,7 @@ const sidebars = {
             type: 'doc',
             id: 'architecture/verse-layer/permission/1-1-permission'
           },
-          collapsed: false,
+          collapsed: true,
           items: []
         }, {
           type: 'category',
@@ -215,7 +215,7 @@ const sidebars = {
             type: 'doc',
             id: 'architecture/verse-layer/rollup/1-1-overview'
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'architecture/verse-layer/rollup/1-1-overview',
             'architecture/verse-layer/rollup/1-2-difference',
@@ -226,7 +226,7 @@ const sidebars = {
                 type: 'doc',
                 id: 'architecture/verse-layer/rollup/1-3-verifier'
               },
-              collapsed: false,
+              collapsed: true,
               items: [
                 'architecture/verse-layer/rollup/2-1-how-to-pay-network-fee',
                 'architecture/verse-layer/rollup/2-2-initial-verifier',
@@ -244,7 +244,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         'hub-validator/operate-validator/1-1-hd-requirement',
         'hub-validator/operate-validator/1-2-build-validator-node',
@@ -260,7 +260,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         'hub-validator/tools/2-1-hub-geth',
         'hub-validator/tools/2-2-oaspos'
@@ -275,7 +275,7 @@ const sidebars = {
         type: 'doc',
         id: 'verse-developer/1-1-select',
       },
-      collapsed: false,
+      collapsed: true,
       items: [],
     },
     {
@@ -284,7 +284,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         'verse-developer/how-to-build-verse/1-1-requirement',
         'verse-developer/how-to-build-verse/1-2-manual',
@@ -299,7 +299,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         'verse-developer/handle-token/1-1-vft',
         'verse-developer/handle-token/1-2-vnft',
@@ -314,7 +314,7 @@ const sidebars = {
         type: 'doc',
         id: 'verse-developer/game/1-1'
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: 'category',
@@ -322,7 +322,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'verse-developer/game/tutorial/1-1',
             'verse-developer/game/tutorial/1-2',
@@ -334,7 +334,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'verse-developer/game/repository/1-1',
             'verse-developer/game/repository/1-2',
@@ -348,7 +348,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'verse-developer/game/blockchain-functionality/1-1',
             'verse-developer/game/blockchain-functionality/1-2',
@@ -362,7 +362,7 @@ const sidebars = {
           link: {
             type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
             'verse-developer/game/nft-creation/1-1',
             'verse-developer/game/nft-creation/1-2',
@@ -379,7 +379,7 @@ const sidebars = {
         type: 'doc',
         id: 'verse-developer/1-2-bridge-between-verses',
       },
-      collapsed: false,
+      collapsed: true,
       items: [],
     },
   ],
@@ -390,7 +390,7 @@ const sidebars = {
       link: {
         type: 'generated-index',
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         'staking/stake-oasys/1-1-stake-oasys',
         'staking/stake-oasys/1-2-stake-cli',
@@ -403,7 +403,7 @@ const sidebars = {
         type: 'doc',
         id: 'staking/setup-metamask/1-1-how-to-setup',
       },
-      collapsed: false,
+      collapsed: true,
       items: [],
     },
     {
@@ -413,7 +413,7 @@ const sidebars = {
         type: 'doc',
         id: 'staking/rpc-endpoint/1-1-rpc-endpoint',
       },
-      collapsed: false,
+      collapsed: true,
       items: [],
     },
     {
@@ -423,7 +423,7 @@ const sidebars = {
         type: 'doc',
         id: 'staking/official-links/1-1-official-links',
       },
-      collapsed: false,
+      collapsed: true,
       items: [],
     },
   ],
