@@ -8,6 +8,10 @@ The games on Oasys will only be on L2, which means it will require a place, an L
 1. Deploy solely game titles
 2. Become a verse builder and deploy their own games and/or games sourced from 3rd-parties.
 
+## Build a Game
+
+
+
 ## Build a Verse
 
 As previously stated, in order to deploy game contents on Oasys, the selection or creation of a receiving Verse is required first.
@@ -25,11 +29,15 @@ Following the completion of these steps, the game title will be announced, onboa
 
 ## Verified Verse
 
-The responsibility of the verse builder on the Oasys blockchain is the Web3 Game Publisher of Multiple Games on Oasys. The verse builder must have 3 capabilities across the verse-building spectrum. First, stable management of the platform is required in terms of business, governance, and security. In perspective of business, cash and cash equivalents must be secured in order to serve as a safety net to prevent a verse builder from ending its service owing to liquidity issues. In terms of working capital, it is preferable to determine what could be the bare minimum (burn rate). As to governance, Team members must have the following track records: 1) RW credential (i.e. resume, LinkedIn), 2) Digital credential (i.e. Twitter, FB, blogs, etc.). To eliminate the chance of service termination owing to governance reasons, investors and advisors must be present. In the matter of security, the chain operation should be illustrated, including server management (which server to use) and key management (i.e. server login).
+The responsibility of the verse builder on the Oasys blockchain is the Web3 Game Publisher of Multiple Games on Oasys. The verse builder must have 3 capabilities across the verse-building spectrum. 
 
-Second, the ability to acquire games is essential. Onboarding first party games requires the company’s own or subsidiaries’ game development and publishing capacity. To acquire third party games, the verse builder must have the sales and support capacity. The scope of support capacity includes the following areas: (a) technology: engineers, customer service, (b) own tools marketing: influencing ability, web3 marketing experience, (c) blockchain game consulting: legal, tax-related, tokenomics, and (d) others: industry connection, BO support, and financing support.
+1.  First, stable management of the platform is required in terms of business, governance, and security. In perspective of business, cash and cash equivalents must be secured in order to serve as a safety net to prevent a verse builder from ending its service owing to liquidity issues. In terms of working capital, it is preferable to determine what could be the bare minimum (burn rate). As to governance, Team members must have the following track records: 
+-  RW credential (i.e. resume, LinkedIn), 
+-  Digital credential (i.e. Twitter, FB, blogs, etc.). To eliminate the chance of service termination owing to governance reasons, investors and advisors must be present. In the matter of security, the chain operation should be illustrated, including server management (which server to use) and key management (i.e. server login).
 
-Last but not the least, mid-to long-term maintenance is required even after the launch of games. 
+2.  Second, the ability to acquire games is essential. Onboarding first party games requires the company’s own or subsidiaries’ game development and publishing capacity. To acquire third party games, the verse builder must have the sales and support capacity. The scope of support capacity includes the following areas: (a) technology: engineers, customer service, (b) own tools marketing: influencing ability, web3 marketing experience, (c) blockchain game consulting: legal, tax-related, tokenomics, and (d) others: industry connection, BO support, and financing support.
+
+3. Last but not the least, mid-to long-term maintenance is required even after the launch of games. 
 
 - Build Schema
 - Onboarding (migrating)
