@@ -54,4 +54,4 @@
 |-----------------|--------------------------------------------|
 | ChainID         | 19011                                      |
 | RPC             | https://rpc.mainnet.oasys.homeverse.games/    |
-| Explorer        | https://explorer.mainnet.oasys.homeverse.games/   |
+| Explorer        | Explorer: https://explorer.oasys.homeverse.games/   |
