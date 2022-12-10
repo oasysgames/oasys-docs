@@ -2,11 +2,11 @@
 
 ## Problem
 
-When you make a game, there's much interaction. That's why it takes much processing on the network, and game servers talk about cloud or scalability. When we were designing Oasys, when we first thought about a game, we found that many chains were designed for general purposes, not just for a game. 
+When you make a game, there's much interaction. Game requires much processing on the network, and game servers requires cloud or scalability. When we were designing Oasys, when we first thought about a game, we found that many chains were designed for general purposes, not just for a game. 
 
 Commonly designed chains are suitable for many people, but they're used in many areas, not in many places, and they use a variety of networks, not a dedicated network, which has many disadvantages for game operators. 
 
-In particular, as we use the network with Abitrazi, such as Defi, or transactions of bots, game operators also feel that unwanted parts are included on a chain. 
+In particular, as we use the network with Arbitrage, such as Defi, or transactions of bots, game operators need to stand together with unwanted parts are included on a chain. 
 
 
 ## Solution 

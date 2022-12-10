@@ -1,7 +1,7 @@
 # Miner Election Logic
 
-DPoSによる重みづけランダム選定（ラウンドロビン？）
-Staking ContractでのStake AmountとL1のコンセンサスをどのように紐づけているのか
+Oasys is using DPoS. While selecting a block creator, a block miner is elected randomly. The staked amount is weighted while electing the miner.
+If an elected miner is not responding, consensus seeks a new block miner, fixed by consensus. 
 
 ## Uncle block 
 
