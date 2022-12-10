@@ -151,7 +151,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'Fungible Token', 
+              label: 'Token in Oasys', 
               link: {
                 type: 'generated-index',
               },
@@ -161,20 +161,6 @@ const sidebars = {
                 'architecture/hub-layer/ecosystem/ft/1-2-bridge',
                 'architecture/hub-layer/ecosystem/ft/1-3-dex',
                 'architecture/hub-layer/ecosystem/ft/1-4-oas-tokens',
-              ]
-            }, {
-              type: 'category',
-              label: 'Non Fungible Token', 
-              link: {
-                type: 'doc',
-                id: 'architecture/hub-layer/ecosystem/nft/1-1-nft-types',
-              },
-              collapsed: true,
-              items: [
-                'architecture/hub-layer/ecosystem/nft/1-1-nft-types',
-                'architecture/hub-layer/ecosystem/nft/1-2-bridge',
-                // 'architecture/hub-layer/ecosystem/nft/1-3-oasyx',
-                'architecture/hub-layer/ecosystem/nft/1-4-marketplace',
               ]
             }
           ]
