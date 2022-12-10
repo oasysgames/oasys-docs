@@ -1,12 +1,5 @@
 # DPoS Consensus
 
-DPoSの基本
-Hub Layerに必要なアカウント（operator / owner / staker）
-Block producerは重みづけのランダム選定
-Miner Incentive
-Staking Contract(報酬体系をざっくりと)
-Minimum Staking Amount
-
 
 ## PoS 
 
@@ -19,3 +12,11 @@ The coins that have been staked will be locked until you unstake them for tradin
 The PoS mechanism is designed to find solutions to PoW problems that result in competition for monetary value, and it naturally encourages people to seek ways to gain an advantage. PoW also necessitates a large amount of energy, which has an impact on market pricing and profitability.
 
 ## DPOS 
+
+DPoS (Delegated Proof of Stake) is one of the consensus algorithms, a new version of Proof of Stake (PoS).
+
+As the name DPoS can be seen, DPoS is a concept that has its roots in PoS but differentiates itself in that it 'delegate' decision-making rights. The 'vote' of people with tokens selects a number of validators in the order of votes. It delegates the authority to create and validate blocks on behalf of token holders. In addition, delegators can claim rewards from the delegation.
+
+## Minimum staking Amounnt 
+
+In Oasys, there are no staking limits for delegators to stake. Therefore, the minimum amount for staking is 1 wei. 
