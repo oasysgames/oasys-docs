@@ -17,12 +17,13 @@ Of course, Ethereum is not a specialized part of the game because it is a chain 
 To address this and ensure the verses' independence, Oasys has come to form a Multiple Optimistic Rollup. 
 The architecture of multiple Optimistic Rollups is different from the common idea that many transactions occur at Layer 1, and in fact, games require fast transactions and features like Verse, so they provide stability in the Hub, which makes Oasys unique. 
 
-## Limitation of EVM 
+## Overcoming EVM 
 
 Of course, EVMs have limitations in their design. 
 
 The compatibility with Ethereum is an opportunity to use many tools and libraries in development, but in the case of EVM, the VM model is defined in a single core, which creates a performance issue. 
 Due to the model of EVM, always have scaling issue, TPS makes limitations when playing a game, making it disadvantageous for game designers. 
+
 In the case of Oasys, you can go beyond the limitations of TPS by organically connecting various Verses through Multiple Optimistic Rollup. 
 It's possible to put together several machines to achieve the desired level of performance, just as we often call it elastic. 
 This organic connection is possible by opening a WebSocket between Verses, which becomes a scaling solution for high-speed transactions.
