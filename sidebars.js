@@ -276,7 +276,7 @@ const sidebars = {
         'verse-developer/how-to-build-verse/1-2-manual',
         'verse-developer/how-to-build-verse/1-3-optional-configs',
         'verse-developer/how-to-build-verse/1-4-verse-proxy',
-        'verse-developer/how-to-build-verse/1-5-explore',
+        'verse-developer/how-to-build-verse/1-5-explorer',
       ],
     },
     {

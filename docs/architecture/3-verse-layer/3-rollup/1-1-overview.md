@@ -1,8 +1,17 @@
 # Original Optimistic Rollup
 
-メカニズムの全体像
+## Scalibity 
 
-機能性
-* 高処理力
-* 分散性シェア
-* L1からL2上資産の強制引き出し（未実装）
+Original Optimistic Rollup can scale ethererum transaction onto high speed. 
+
+## OVM 
+
+Optimism Virtural Machine is Scalability solution on Ethereum. It's EVM contains EVM.
+
+OVM programs define assumptions which, based on local information, determines what Ethereum states are possible. This can be expressed as a function `satisfies_assumptions(assumptions, ethereum_state, local_information) => true/false`. If `satisfies_assumptions(...)` returns true then the `ethereum_state` is possible based on these particular assumptions, and our `local_information`.
+
+In many L2 solutions, this takes the form of a “dispute liveness assumption.” For example, participants in a channel assume that they will dispute any malicious withdrawal. So, we return false for any Ethereum state which contains a malicious, undisputed withdrawal.
+
+
+
+Sources: [Optimism Medium](https://medium.com/plasma-group/introducing-the-ovm-db253287af50), [Optimism Medium](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
