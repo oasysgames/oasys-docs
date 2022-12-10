@@ -1,10 +1,5 @@
-# Staking with Client.
+# Staking with Client
 
-
----
----
-
-# Staking(Delegating)
 
 ![delegate](/img/docs/techdocs/validator/delegate.png)
 
@@ -12,7 +7,7 @@
 
 There is three ways to stake.
 
-1. [Staking using CLI](/docs/techdocs/validator/hub-layer-client-join/1-1)
+1. [Staking using CLI](/docs/hub-validator/operate-validator/1-3-join-validator-cli)
 
 On staking using CLI, you need to export private key while staking.
 
