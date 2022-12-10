@@ -22,10 +22,6 @@ Technical assistance for integration and marketing (both verse and game) will be
 
 Following the completion of these steps, the game title will be announced, onboarding will begin, and the game will be released.
 
-## Requirements
-
-기술적 Requirements 나열하기.
-
 
 ## Verified Verse
 
@@ -35,12 +31,7 @@ Second, the ability to acquire games is essential. Onboarding first party games 
 
 Last but not the least, mid-to long-term maintenance is required even after the launch of games. 
 
-Build Schema
-
-
-
-Onboarding (migrating)
+- Build Schema
+- Onboarding (migrating)
 
 In the case of onboarding games on existing verses, direct contact is recommended for the smooth onboarding of game titles. 
-
-Factor
