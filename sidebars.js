@@ -292,7 +292,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Tokens", 
+      label: "Make Token", 
       link: {
         type: 'generated-index',
       },
@@ -306,7 +306,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Game",
+      label: "Sample Game",
       link: {
         type: 'doc',
         id: 'verse-developer/game/1-1'
