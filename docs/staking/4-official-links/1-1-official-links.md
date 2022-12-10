@@ -1,19 +1,9 @@
 # Official Links
 
-## Oasys Website 
+- Oasys Website : https://oasys.games
 
-https://oasys.games
+- OASYS Hub : https://hub.oasys.games
 
-## OASYS Hub
+- Explorer : https://explorer.oasys.games
 
-https://hub.oasys.games
-
-## Explorer
-
-https://explorer.oasys.games
-
-## Faucet (Testnet)
-
-https://faucet.testnet.oasys.games
-
-## Verses Portal
+- Faucet (Testnet) : https://faucet.testnet.oasys.games

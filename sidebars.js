@@ -192,7 +192,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Verse Consensus (PoA or PoS)', 
+          label: 'Verse data Confirmation', 
           link: {
             type: 'doc',
             id: 'architecture/verse-layer/consensus/1-1-consensus'
@@ -210,7 +210,7 @@ const sidebars = {
           items: []
         }, {
           type: 'category',
-          label: 'Original Rollup', 
+          label: 'Oasys Rollup', 
           link: {
             type: 'doc',
             id: 'architecture/verse-layer/rollup/1-1-overview'
@@ -422,6 +422,16 @@ const sidebars = {
       link: {
         type: 'doc',
         id: 'staking/official-links/1-1-official-links',
+      },
+      collapsed: true,
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'Glossary', 
+      link: {
+        type: 'doc',
+        id: 'staking/glossary/1-1-glossary',
       },
       collapsed: true,
       items: [],
