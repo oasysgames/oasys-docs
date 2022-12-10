@@ -1,8 +1,5 @@
 # Build Validator Node (geth)
 
----
----
-
 ## Check Requirements
 
 Please Check [Validator_Requirements](/docs/tech/validator/hardware-requirements/1-1) Prior to setup. 
