@@ -15,7 +15,17 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Technical Documentation',
+    title: 'For Users',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
+    description: (
+      <>
+        User can stake OAS with Metamask.
+      </>
+    ),
+  },
+  {
+    title: 'Learn',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/tech-docs/whats-oasys/1-1-whats-oasys",
     description: (
@@ -51,16 +61,6 @@ const FeatureList = [
     description: (
       <>
         Document for Developer to build Verse Layer.
-      </>
-    ),
-  },
-  {
-    title: 'Staking',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
-    description: (
-      <>
-        You can stake OAS with Metamask.
       </>
     ),
   },
