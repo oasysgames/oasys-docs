@@ -116,6 +116,7 @@ const sidebars = {
           },
           collapsed: true,
           items: [
+            
             {
               type: 'category',
               label: 'DPoS', 
@@ -124,6 +125,7 @@ const sidebars = {
               },
               collapsed: true,
               items: [
+                'architecture/hub-layer/consensus/dpos/1-3-validator-account',
                 'architecture/hub-layer/consensus/dpos/1-1-weighted-random',
                 'architecture/hub-layer/consensus/dpos/1-2-mining',
               ]
@@ -178,6 +180,16 @@ const sidebars = {
       items: [
         {
           type: 'category',
+          label: 'How Verse Layer works?', 
+          link: {
+            type: 'doc',
+            id: 'architecture/verse-layer/1-1-verse-layer'
+          },
+          collapsed: true,
+          items: []
+        },
+        {
+          type: 'category',
           label: 'Verse data Confirmation', 
           link: {
             type: 'doc',
@@ -210,7 +222,6 @@ const sidebars = {
               label: 'Verifier', 
               link: {
                 type: 'doc',
-                id: 'architecture/verse-layer/rollup/1-3-verifier'
               },
               collapsed: true,
               items: [
