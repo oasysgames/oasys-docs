@@ -157,10 +157,10 @@ const sidebars = {
               },
               collapsed: true,
               items: [
-                'architecture/hub-layer/ecosystem/ft/1-1-ft-types',
-                'architecture/hub-layer/ecosystem/ft/1-2-bridge',
-                'architecture/hub-layer/ecosystem/ft/1-3-dex',
-                'architecture/hub-layer/ecosystem/ft/1-4-oas-tokens',
+                'architecture/hub-layer/ecosystem/token/1-1-ft-types',
+                'architecture/hub-layer/ecosystem/token/1-2-bridge',
+                'architecture/hub-layer/ecosystem/token/1-3-dex',
+                'architecture/hub-layer/ecosystem/token/1-4-oas-tokens',
               ]
             }
           ]
