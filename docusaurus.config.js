@@ -95,15 +95,15 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
+            docId: 'hub-validator/operate-validator/1-1-hd-requirement',
             position: 'left',
-            label: 'Architecture',
+            label: 'For Validators',
           },
           {
             type: 'doc',
-            docId: 'hub-validator/operate-validator/1-1-hd-requirement',
+            docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
             position: 'left',
-            label: 'Hub Validator',
+            label: 'Architecture',
           },
           {
             type: 'doc',
