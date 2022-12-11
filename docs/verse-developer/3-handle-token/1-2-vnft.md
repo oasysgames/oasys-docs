@@ -23,7 +23,7 @@ When you click the Add network button, a web page is called where you can add a 
 | ChainID         | 20197                                      |
 | Currency Symbol | OAS                                        |
 | RPC             | https://rpc.sandverse.oasys.games/         |
-| Explorer        | https://explorer.sandverse.oasys.games/    |
+| Explorer        | https://scan.sandverse.oasys.games/    |
 | Web Socket      | wss://ws.sandverse.oasys.games             |
 
 ### Create a mintable ERC-721 smart contract using the Openzepplin contracts wizard

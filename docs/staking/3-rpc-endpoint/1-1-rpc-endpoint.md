@@ -7,7 +7,7 @@
 | ChainID         | 248                                |
 | Currency Symbol | OAS                                |
 | RPC             | https://rpc.mainnet.oasys.games/   |
-| Explorer        | https://explorer.oasys.games/      |
+| Explorer        | https://scan.oasys.games/      |
 
 ## Testnet (Hub Layer)
 |                 |                                         |
@@ -15,7 +15,7 @@
 | ChainID         | 9372                                    |
 | Currency Symbol | OAS                                     |
 | RPC             | https://rpc.testnet.oasys.games/        |
-| Explorer        | https://explorer.testnet.oasys.games/   |
+| Explorer        | https://scan.testnet.oasys.games/   |
 
 ### Sand Verse (Verse Layer)
 |                 |                                            |
@@ -23,7 +23,7 @@
 | ChainID         | 20197                                      |
 | Currency Symbol | OAS                                        |
 | RPC             | https://rpc.sandverse.oasys.games/         |
-| Explorer        | https://explorer.sandverse.oasys.games/    |
+| Explorer        | https://scan.sandverse.oasys.games/    |
 | Web Socket      | wss://ws.sandverse.oasys.games             |
 
 
