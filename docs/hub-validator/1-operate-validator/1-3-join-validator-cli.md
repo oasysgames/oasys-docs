@@ -60,14 +60,17 @@ validator:join command registers onto staking contract.
 If you successfully registered, you may see in Oasys Hub.
 
 ### 4. Staking
+You must export validator owner(Owner account)'s Key. 
+Validator owner has to possess more than 10000000 OAS.
+    
 ```bash
-$ export PRIVATE_KEY=Token holder's(Delegator's)address
+$ export PRIVATE_KEY=0x0123456789abcdef0123456789abcdef...
 ```
 
 
 ```bash
 $ oaspos staker:stake \
-  --mainnet
+  --network mainnet \
   --validator Owner Account Address \
   --oas 10000000
 ```
@@ -75,12 +78,17 @@ $ oaspos staker:stake \
 If it's sOAS, you can input sOAS in parameter.
 ```bash
 $ oaspos staker:stake \
-  --mainnet
+  --network mainnet \
   --validator Owner Account Address \
   --soas 10000000
 ``` 
     
 ### 5. Confirming Staking
+You must export validator owner(Owner account)'s Key. 
+    
+```bash
+$ export PRIVATE_KEY=0x0123456789abcdef0123456789abcdef...
+```
 
 After your staking is done, You may check Staking Status with following command : 
     
@@ -118,7 +126,7 @@ Two ways can be done with CLI.
 
 ```bash
 $ oaspos validator:update-operator \
-  --mainnet \
+  --network mainnet \
   --operator 0x0123456789abcdef...
 ```
 
