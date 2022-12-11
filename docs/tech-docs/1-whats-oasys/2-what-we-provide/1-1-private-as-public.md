@@ -1,4 +1,4 @@
-# Generate Your Own Public Chain by Verse
+# Generate Your Own Verse
 
 ## Issue
 
