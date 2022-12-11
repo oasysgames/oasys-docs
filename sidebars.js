@@ -333,14 +333,14 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'GameFi Chain', 
+          label: 'Gaming Chain', 
           link: {
             type: 'generated-index',
           },
           collapsed: true,
           items: [
-            'tech-docs/whats-oasys/gamefi-chain/1-1-high-performance',
-            'tech-docs/whats-oasys/gamefi-chain/1-2-decentralizaton-and-data-availability',
+            'tech-docs/whats-oasys/gaming-chain/1-1-high-performance',
+            'tech-docs/whats-oasys/gaming-chain/1-2-decentralizaton-and-data-availability',
           ],
         },
         {
