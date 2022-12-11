@@ -5,16 +5,6 @@ import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'White Paper',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    linkTo: "/docs/whitepaper/intro",
-    description: (
-      <>
-        Oasys is an EVM-Compatible protocol that adopts the Oasys Architecture. 
-      </>
-    ),
-  },
-  {
     title: 'For Users',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
@@ -31,6 +21,16 @@ const FeatureList = [
     description: (
       <>
         Oasys Architecture. 
+      </>
+    ),
+  },
+  {
+    title: 'White Paper',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    linkTo: "/docs/whitepaper/intro",
+    description: (
+      <>
+        Oasys is an EVM-Compatible protocol that adopts the Oasys Architecture. 
       </>
     ),
   },

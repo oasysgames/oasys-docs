@@ -1,6 +1,5 @@
 # DPoS Consensus
 
-
 ## PoS 
 
 Proof of Stake (PoS) is a type of consensus for processing transactions, writing new blocks on a blockchain, and validating the database, similar to Proof of Work (PoW). While PoW needs processing power, PoS requires owners to stake their coins in order to review new blocks and add them to the blockchain. In a nutshell, PoS eliminates the need for mining equipment, resulting in increased cost-efficiency and energy savings.

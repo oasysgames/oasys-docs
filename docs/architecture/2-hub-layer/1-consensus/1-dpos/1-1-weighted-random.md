@@ -7,3 +7,5 @@ If an elected miner is not responding, consensus seeks a new block miner, fixed 
 
 Oasys Does not have any Uncle Block. 
 Since all block producer is selected on concensus.
+
+## 
