@@ -5,16 +5,6 @@ import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'For Users',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
-    description: (
-      <>
-        User can stake OAS with Metamask.
-      </>
-    ),
-  },
-  {
     title: 'Architecture',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/architecture/overview/oasys-architecture/1-1-ecosystem-per-chain",
@@ -31,6 +21,16 @@ const FeatureList = [
     description: (
       <>
         Oasys is an EVM-Compatible protocol that adopts the Oasys Architecture. 
+      </>
+    ),
+  },
+  {
+    title: 'For Users',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
+    description: (
+      <>
+        User can stake OAS with Metamask.
       </>
     ),
   },
