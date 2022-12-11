@@ -1,7 +1,7 @@
-# Setup Verifier
+# Setup Instant Verifier
 
 ## About
-Verifier of Verse-Layer for the Oasys Blockchain.
+Instant Verifier of Verse-Layer for the Oasys Blockchain.
 
 - Verify the rolluped state by Verse-Layer to the Hub-Layer, create signature and share with other verifiers via P2P.
 
