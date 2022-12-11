@@ -45,7 +45,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'For Verse & Game Developers',
+    title: 'For Verse <br> & Game Developers',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/verse-developer/1-1-select",
     description: (
