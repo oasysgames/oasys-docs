@@ -5,65 +5,6 @@ const sidebars = {
       dirName: 'whitepaper',
     },
   ],
-  techdocs: [
-    {
-      type: 'category',
-      label: "What's OASYS?", 
-      link: {
-        type: 'doc',
-        id: 'tech-docs/whats-oasys/1-1-whats-oasys',
-      },
-      collapsed: true,
-      items: [
-        {
-          type: 'category',
-          label: 'GameFi Chain', 
-          link: {
-            type: 'generated-index',
-          },
-          collapsed: true,
-          items: [
-            'tech-docs/whats-oasys/gamefi-chain/1-1-high-performance',
-            'tech-docs/whats-oasys/gamefi-chain/1-2-decentralizaton-and-data-availability',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'What We Provide?', 
-          link: {
-            type: 'generated-index',
-          },
-          collapsed: true,
-          items: [
-            'tech-docs/whats-oasys/what-we-provide/1-1-private-as-public',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Architecture', 
-          link: {
-            type: 'doc',
-            id: 'tech-docs/whats-oasys/oasys-architecture/1-1-oasys-architecture',
-          },
-          collapsed: true,
-          items: [
-            'tech-docs/whats-oasys/oasys-architecture/1-2-original-rollup',
-            'tech-docs/whats-oasys/oasys-architecture/1-3-incentive-logic',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Roadmap', 
-          link: {
-            type: 'doc',
-            id: 'tech-docs/whats-oasys/roadmap/1-1-initial-functionalities',
-          },
-          collapsed: true,
-          items: [],
-        }, 
-      ],
-    }
-  ],
   architecture: [
     {
       type: 'category',
@@ -248,7 +189,7 @@ const sidebars = {
         'hub-validator/operate-validator/1-3-join-validator-cli',
         'hub-validator/operate-validator/1-4-join-validator-web',
         'hub-validator/operate-validator/1-5-setup-verifier',
-        'hub-validator/operate-validator/1-6-check-staking',
+        'hub-validator/operate-validator/1-6-monitor',
       ]
     },
     {
@@ -381,6 +322,63 @@ const sidebars = {
     },
   ],
   staking: [
+    {
+      type: 'category',
+      label: "What's OASYS?", 
+      link: {
+        type: 'doc',
+        id: 'tech-docs/whats-oasys/1-1-whats-oasys',
+      },
+      collapsed: true,
+      items: [
+        {
+          type: 'category',
+          label: 'GameFi Chain', 
+          link: {
+            type: 'generated-index',
+          },
+          collapsed: true,
+          items: [
+            'tech-docs/whats-oasys/gamefi-chain/1-1-high-performance',
+            'tech-docs/whats-oasys/gamefi-chain/1-2-decentralizaton-and-data-availability',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'What We Provide?', 
+          link: {
+            type: 'generated-index',
+          },
+          collapsed: true,
+          items: [
+            'tech-docs/whats-oasys/what-we-provide/1-1-private-as-public',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Architecture', 
+          link: {
+            type: 'doc',
+            id: 'tech-docs/whats-oasys/oasys-architecture/1-1-oasys-architecture',
+          },
+          collapsed: true,
+          items: [
+            'tech-docs/whats-oasys/oasys-architecture/1-2-original-rollup',
+            'tech-docs/whats-oasys/oasys-architecture/1-3-incentive-logic',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Roadmap', 
+          link: {
+            type: 'doc',
+            id: 'tech-docs/whats-oasys/roadmap/1-1-initial-functionalities',
+          },
+          collapsed: true,
+          items: [],
+        }, 
+      ],
+    },
     {
       type: 'category',
       label: "Staking", 
