@@ -25,16 +25,6 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Learn',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/tech-docs/whats-oasys/1-1-whats-oasys",
-    description: (
-      <>
-        Technical Documentation for Developers. 
-      </>
-    ),
-  },
-  {
     title: 'Architecture',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/architecture/overview/oasys-architecture/1-1-ecosystem-per-chain",
