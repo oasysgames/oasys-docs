@@ -20,7 +20,7 @@
   transition: .4s !important;
 }
 
-.topPageLink {
+.bottomPageLink {
   box-shadow: 0 1rem 3rem rgb(0 0 0 / 6%);
   height: 95% !important;
   padding: 6rem 0;
