@@ -12,20 +12,22 @@ Users can stake, unstake, and claim OAS using Oasys Hub. Now learn how to do the
 
 ![staking1](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-### Select the wallet you want to connect. Currently Metamask is supported but more wallets will be added soon.
+### 2. Select the wallet you want to connect. Currently Metamask is supported but more wallets will be added soon.
 
 ![staking2](/img/docs/techdocs/oasys-hub/switch_network.png)
 
-### If you have no wallet, you can add a network.
+### 3. If you have no wallet, you can add a network.
 
 ![staking13](/img/docs/techdocs/oasys-hub/add_network.png)
 
-### Select a validator and click the stake button.
+### 4. Select a validator and click the stake button.
 
 ![staking3](/img/docs/techdocs/oasys-hub/staking_stake.png)
 
-### Input the stake amount, and select the token you wish to stake, and click the stake button.
+### 5. Input the stake amount, and select the token you wish to stake, and click the stake button.
+
 **It requires 10 days to unstake**
+**If you press max button, (max - gasfee) will be displayed.**
 
 ![staking4](/img/docs/techdocs/oasys-hub/stake.png)
 
@@ -35,35 +37,36 @@ If you have successfully staked, the following message appears.
 
 You can see with activity of transaction in metamask.
 
-## Unstaking
+## 2. Unstaking
+
+### 1. Go to staking Page.
 
 ![staking14](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-Go to staking Page.
+### 2. Select validator you have previously staked.
 
 ![staking15](/img/docs/techdocs/oasys-hub/staking_stake.png)
 
-Select validator you have previously staked.
-
-![staking16](/img/docs/techdocs/oasys-hub/unstake.png)
-
-You can unstake by selecting your staked validator, and press unstake. 
+### 3. You can unstake by selecting your staked validator, and press unstake. 
 **It requires 10 days to unstake**
 **If you press max button, (max - gasfee) will be displayed.**
 
-### Claim Staking Reward 
+![staking16](/img/docs/techdocs/oasys-hub/unstake.png)
+
+
+## 3. Claim Staking Reward 
+
+### 1. Go to staking Page.
 
 ![staking1](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-Go to staking Page.
+### 2. Select validator you have previously staked.
 
 ![staking5](/img/docs/techdocs/oasys-hub/staking_stake.png)
 
-Select validator you have previously staked.
+### 3. You can claim by selecting your staked validator, and press claim button. 
 
 ![staking12](/img/docs/techdocs/oasys-hub/claim.png)
-
-You can claim by selecting your staked validator, and press claim button. 
 
 ### Supported Hardware Wallet on Oasys Hub
 
