@@ -68,7 +68,7 @@ You can see with activity of transaction in metamask.
 
 ![staking12](/img/docs/techdocs/oasys-hub/claim.png)
 
-### Supported Hardware Wallet on Oasys Hub
+## Supported Hardware Wallet on Oasys Hub
 
 You can use all wallets supported by metamask. Also, Please Make sure the Ethereum wallet is installed on a hardware wallet.
 
