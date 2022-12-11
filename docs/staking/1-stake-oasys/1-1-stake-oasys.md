@@ -1,51 +1,41 @@
 # Easy Stake on Oasys
 
 
-## Staking with Oasys Hub.
+## How to Stake / Unstake / Claim using Oasys Hub
 
-You can navigate Oasys Hub for a easiest way for staking.
-Delegators can claim rewards by Validators if they are promoting. Validator takes validation commission from delegators.
-
-## Oasys Hub Link 
-
-Oasys Hub link: https://hub.oasys.games
-
-### Staking (Delegating) with Oasys hub
+Users can stake, unstake, and claim OAS using Oasys Hub. Now learn how to do these actions!
 
 
-Navigate to Oasys Hub Page.
+## 1. Staking
+
+### 1. Visit [Oasys Hub](https://hub.oasys.games/) and click Staking
 
 ![staking1](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-Select Staking For Staking.
+### Select the wallet you want to connect. Currently Metamask is supported but more wallets will be added soon.
 
 ![staking2](/img/docs/techdocs/oasys-hub/switch_network.png)
 
-Select wallet you want to connect. We will add more wallet support.
+### If you have no wallet, you can add a network.
 
 ![staking13](/img/docs/techdocs/oasys-hub/add_network.png)
 
-If you have no wallet, you can add network. 
+### Select a validator and click the stake button.
 
 ![staking3](/img/docs/techdocs/oasys-hub/staking_stake.png)
 
-Select Validator and click stake button. 
+### Input the stake amount, and select the token you wish to stake, and click the stake button.
+**It requires 10 days to unstake**
 
 ![staking4](/img/docs/techdocs/oasys-hub/stake.png)
 
-Input stake amount, and select token you wish to stake, and click stake button. 
-**It requires 10 days to unstake**
-
-![staking5](/img/docs/techdocs/oasys-hub/pending.png)
-
-You need to wait for a transaction success. 
+If you have successfully staked, the following message appears.
 
 ![staking6](/img/docs/techdocs/oasys-hub/success.png)
 
-Congratulations, You have succesfully staked. 
 You can see with activity of transaction in metamask.
 
-### Unstake
+## Unstaking
 
 ![staking14](/img/docs/techdocs/oasys-hub/staking_page.png)
 
