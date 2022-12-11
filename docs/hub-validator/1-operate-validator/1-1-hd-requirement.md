@@ -16,7 +16,7 @@ Since producing more block needs storage, if system elapsed time, and stacked lo
 |DISK|500GB SSD|
 |Network|100Mbps|
 
-**10,000,000 OAS is required to validate the Hub-Layer node.**
+**10,000,000 OAS is required to be staked by Delegator to validate the Hub-Layer node**
 
 ## Firewall Settings
 - TCP/UDP port 30303 allowed (for P2P between nodes)
