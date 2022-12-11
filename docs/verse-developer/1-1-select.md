@@ -14,8 +14,6 @@ The games on Oasys will only be on L2, which means it will require a place, an L
 
 ## Build a Verse
 
-As previously stated, in order to deploy game contents on Oasys, the selection or creation of a receiving Verse is required first.
-
 In principle, anyone with a deposit of 1 million OAS tokens can create an L2 on Oasys. Although technical requirements would allow builders to develop L2s, this does not imply that everyone is a trustworthy subject. In other words, a reliable operator is both a safe and dependable subject inside the Oasys ecosystem and an Oasys partner at the same time. As part of this process, Oasys continues to put efforts in keeping the ecosystem balanced and improved by providing various supports including the grant.
 
 
@@ -41,5 +39,9 @@ The responsibility of the verse builder on the Oasys blockchain is the Web3 Game
 
 - Build Schema
 - Onboarding (migrating)
+
+In the case of onboarding games on existing verses, direct contact is recommended for the smooth onboarding of game titles. 
+
+### Onboarding (migrating)
 
 In the case of onboarding games on existing verses, direct contact is recommended for the smooth onboarding of game titles. 
