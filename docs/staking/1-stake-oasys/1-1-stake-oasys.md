@@ -27,6 +27,7 @@ Users can stake, unstake, and claim OAS using Oasys Hub. Now learn how to do the
 ### 5. Input the stake amount, and select the token you wish to stake, and click the stake button.
 
 **It requires 10 days to unstake**
+
 **If you press max button, (max - gasfee) will be displayed.**
 
 ![staking4](/img/docs/techdocs/oasys-hub/stake.png)
