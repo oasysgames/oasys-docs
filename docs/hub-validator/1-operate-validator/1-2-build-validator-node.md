@@ -2,7 +2,7 @@
 
 ## Check Requirements
 
-Please Check [Validator_Requirements](/docs/tech/validator/hardware-requirements/1-1) Prior to setup. 
+Please Check [Validator_Requirements](/docs/hub-validator/operate-validator/1-1-hd-requirement) Prior to setup. 
 
 ## Express Setup 
 
@@ -47,7 +47,7 @@ While you are starting on Geth, you will have question,
 
 `PLEASE SELECT YES` If you are willing to start validator right away.
 
-If you select [NO, Navigate Q4. On Validator Setup](/docs/tech/validator/faq/1-1), you may have to turn it on manually, which might take time. 
+If you select [NO, Navigate Q4. On Validator Setup](/docs/hub-validator/operate-validator/1-7-hd-faq), you may have to turn it on manually, which might take time. 
 
 
 ### 5. Check `sestatus`
@@ -330,4 +330,4 @@ If not working :
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 ``` 
 
-2. [Check Block sync status.](/docs/tech/validator/faq/1-1#q5-i-want-to-know-block-sync-status)
+2. [Check Block sync status.](/docs/hub-validator/operate-validator/1-7-faq#q5-i-want-to-know-block-sync-status)
