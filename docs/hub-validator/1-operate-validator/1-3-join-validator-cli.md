@@ -3,7 +3,7 @@
 ## Participating PoS using CLI
 Before participating PoS, You have to complete building validator at [Build Validator Node (geth)](/docs/hub-validator/operate-validator/1-2-build-validator-node)
 
-And we recommend to [participate PoS using WEB](/docs/hub-validator/operate-validator/1-6-join-validator-web).
+And we recommend to [participate PoS using WEB](/docs/hub-validator/operate-validator/1-4-join-validator-web).
 
 ### Download CLI Tool
 
@@ -36,7 +36,7 @@ If not and you want your validator to join oasys testnet PoS, you can go to [fau
 ### 3. Register as a Validator
 Using CLI Tool, You must register your validator Owner address, validator Operator Address to Staking Contract.
 
-You can use [oasys-pos-fe(WEB)](/docs/hub-validator/operate-validator/1-6-join-validator-web) instead CLI.
+You can use [oasys-pos-fe(WEB)](/docs/hub-validator/operate-validator/1-4-join-validator-web) instead CLI.
 
 #### 3.1. Export Validator Owner private key 
 

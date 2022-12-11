@@ -13,12 +13,12 @@ But on Testnet, it's free, You can try Verse Testnet with [faucet](https://fauce
 
 ![verse build](/img/docs/techdocs/verse/versebuild.png)
 
-For more detailed information about [Verse Architecture](/docs/techdocs/technologies/verse-layer/1-1),you can see before deploying verse. 
+For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/1-1-verse-layer),you can see before deploying verse. 
 
 ## 1. Requirements
 
 Docker Engine v20.10.0 or later and docker-compose v2.0 or later are required.
-Please Check [Hardware_Requirements](/docs/techdocs/validator/hardware-requirements/1-1) Prior to setup. 
+Please Check [Hardware_Requirements](/docs/verse-developer/how-to-build-verse/1-1-requirement) Prior to setup. 
 
 ## 2. Clone verse-layer-optimism repository
 Clone the [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) repository provided by the Oasys Foundation.
