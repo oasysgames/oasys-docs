@@ -95,12 +95,6 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'tech-docs/whats-oasys/1-1-whats-oasys',
-            position: 'left',
-            label: 'Learn',
-          },
-          {
-            type: 'doc',
             docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
             position: 'left',
             label: 'Architecture',
