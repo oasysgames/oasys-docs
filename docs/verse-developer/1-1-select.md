@@ -1,6 +1,6 @@
 # Selecting as a builder in Oasys
 
-
+![select](static\img\docs\techdocs\verse\select.png)
 
 The table shows how game companies can start business on Oasys. 
 
@@ -8,11 +8,13 @@ The games on Oasys will only be on L2, which means it will require a place, an L
 1. Deploy solely game titles
 2. Become a verse builder and deploy their own games and/or games sourced from 3rd-parties.
 
-## Build a Game2
+## Build a Game
 
 
 
 ## Build a Verse
+
+![flowchart](static\img\docs\techdocs\verse\flowchart.png)
 
 In principle, anyone with a deposit of 1 million OAS tokens can create an L2 on Oasys. Although technical requirements would allow builders to develop L2s, this does not imply that everyone is a trustworthy subject. In other words, a reliable operator is both a safe and dependable subject inside the Oasys ecosystem and an Oasys partner at the same time. As part of this process, Oasys continues to put efforts in keeping the ecosystem balanced and improved by providing various supports including the grant.
 
