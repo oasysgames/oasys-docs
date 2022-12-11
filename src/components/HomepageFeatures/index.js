@@ -35,7 +35,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Hub Validator',
+    title: 'For Validators',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/hub-validator/operate-validator/1-1-hd-requirement",
     description: (
@@ -45,7 +45,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Verse Developer',
+    title: 'For Verse & Game Developer',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/verse-developer/1-1-select",
     description: (
