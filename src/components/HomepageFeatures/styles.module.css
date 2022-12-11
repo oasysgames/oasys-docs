@@ -31,10 +31,10 @@
 }
 
 .largeText {
-  font-weight: 500!important;
+  font-weight: 700!important;
   font-size: 2.5rem;
-  font-weight: 200;
-  line-height: 1.2;
+  font-weight: 500;
+  line-height: 1.0;
 }
 
 .smallText {
