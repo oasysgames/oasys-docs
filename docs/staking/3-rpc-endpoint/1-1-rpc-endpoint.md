@@ -44,7 +44,7 @@
 |                 |                                            |
 |-----------------|--------------------------------------------|
 | ChainID         | 2400                                      |
-| RPC             | http://3.114.180.205:8545/                |
+| RPC             | https://rpc.tcgverse.xyz/                |
 | Explorer        | http://explorer.tcgverse.xyz/   |
 | Documentation   | https://tcgverse.gitbook.io/tcgverse-1/technical-materials      |
 
