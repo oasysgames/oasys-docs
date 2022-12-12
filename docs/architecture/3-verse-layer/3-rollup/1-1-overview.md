@@ -1,6 +1,8 @@
 # Original Optimistic Rollup
 
-## Scalibity 
+## Scalability 
+
+![rollup](/img/docs/techdocs/verse/rollup.png)
 
 Original Optimistic Rollup can scale ethererum transaction onto high speed. 
 
