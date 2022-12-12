@@ -8,9 +8,6 @@ The games on Oasys will only be on L2, which means it will require a place, an L
 1. Deploy solely game titles
 2. Become a verse builder and deploy their own games and/or games sourced from 3rd-parties.
 
-## Build a Game
-
-
 
 ## Build a Verse
 
