@@ -2,7 +2,7 @@
 
 Oasys is Using the DPoS system. Validator accounts may be various. 
 
-![wallet](/img/docs/techdocs/validator/wallet.jpg)
+![wallet](/img/docs/techdocs/validator/wallet.png)
 
 ## Hub Layer
 
