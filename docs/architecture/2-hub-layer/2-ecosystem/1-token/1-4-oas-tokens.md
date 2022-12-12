@@ -16,19 +16,13 @@ OAS does not have any contract address.
 | Claim Staking Reward on Hub Layer | O | O | X | 
 | CLI Staking (Hub/Verse Layer) | O | O | X |
 | Bridge onto another chain | O | X | X |
-| Move Token to other address | O | Permissive | X |
+| Move Token to other address | O | X | X |
 
-**Permissive** means you need authorization from the foundation to move token, which can take around 1 month. 
-Please reach out to the Oasys foundation if you need to move a token.
 
 ## sOAS
 
 OAS is our native token, and sOAS means Stakeable Oasys Token.
-Since it's Delegated Proof of stake, and we need a locked-up token, we have made sOAS.
-### Purpose of sOAS
-
-sOAS is, for better participating in our ecosystem, and thanks for early support with us, we are sending tokens that can stake, which makes an opportunity to participate in our ecosystem.
-sOAS can use Hub Layer staking and verse deposit, which can substantially support verse builders or operators. 
+Since we need a locked-up token for validators, we have made sOAS.
 
 ### Contract of sOAS
 
