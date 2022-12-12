@@ -219,6 +219,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'RPC Endpoint', 
+      link: {
+        type: 'doc',
+        id: 'staking/rpc-endpoint/1-1-rpc-endpoint',
+      },
+      collapsed: true,
+      items: [],
+    },
+    {
+      type: 'category',
       label: "Build Verse", 
       link: {
         type: 'generated-index',
