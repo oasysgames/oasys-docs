@@ -4,25 +4,18 @@ Native Token.
 
 OAS does not have any contract address. 
 
+# WOAS
+
+Wrapped Oasys Token
+
+ERC-20 Standard token, easy use for bridges. 
 
 # sOAS & LOAS
-
-## OAS Token compare
-
-| Type | OAS | sOAS | LOAS |
-|-----------|-----------|-----------|-----------|
-| Stake on Hub Layer| O | O | X |
-| Verse Layer Deposit (1M Deposit to build a verse) | O | O | X |
-| Claim Staking Reward on Hub Layer | O | O | X | 
-| CLI Staking (Hub/Verse Layer) | O | O | X |
-| Bridge onto another chain | O | X | X |
-| Move Token to other address | O | X | X |
-
 
 ## sOAS
 
 OAS is our native token, and sOAS means Stakeable Oasys Token.
-Since we need a locked-up token for validators, we have made sOAS.
+Since we need a locked-up token but POS needs staking for validators, we have made sOAS.
 
 ### Contract of sOAS
 
@@ -81,8 +74,7 @@ OAS is our native token, and LOAS means Locked Oasys Token.
 ### Purpose of LOAS
 
 On normal chain, Even if it's on Lock-up period, sometimes you can not claim your token even if you have right on it. 
-You can claim same as sOAS while vesting period.
-LOAS would be mainly sent for our contributors. 
+You can claim same as sOAS while vesting period. LOAS would be mainly sent for our contributors. 
 
 ### Contract of LOAS
 
