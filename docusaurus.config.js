@@ -85,15 +85,38 @@ const config = {
             type: 'doc',
             docId: 'whitepaper/intro',
             position: 'left',
-            label: 'White Paper',
+            label: 'Whitepaper',
           },
           {
             type: 'doc',
-            docId: 'techdocs/technical-materials/1-1-technical-materials',
+            docId: 'staking/stake-oasys/1-1-stake-oasys',
             position: 'left',
-            label: 'Technical Materials',
+            label: 'For Users',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'doc',
+            docId: 'hub-validator/operate-validator/1-1-hd-requirement',
+            position: 'left',
+            label: 'For Validators',
+          },
+          {
+            type: 'doc',
+            docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
+            position: 'left',
+            label: 'Architecture',
+          },
+          {
+            type: 'doc',
+            docId: 'verse-developer/1-1-select',
+            position: 'left',
+            label: 'For Verse & Game Developers',
+          },
+          {
+            type: 'doc',
+            docId: 'dev-tools/tools/1-1-hardhat',
+            position: 'left',
+            label: 'Dev Tools',
+          },
           {
             type: 'localeDropdown',
             position: 'right',
@@ -107,6 +130,7 @@ const config = {
       },
       docs: {
         sidebar: {
+          hideable: true,
           autoCollapseCategories: true,
         },
       },
@@ -121,13 +145,8 @@ const config = {
                 to: '/docs/whitepaper/intro',
               },
               {
-                label: 'White Paper (PDF)',
-                href: '/pdfs/Oasys_WhitePaper.pdf',
-                target: '_blank',
-              },
-              {
                 label: 'Technical Materials',
-                to: '/docs/techdocs/intro',
+                to: '/docs/tech-docs/whats-oasys/1-1-whats-oasys',
               },
               {
                 label: 'Light Paper',

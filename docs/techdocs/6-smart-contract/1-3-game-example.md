@@ -1,6 +1,0 @@
----
----
-
-# Game Example
-
-Coming soon

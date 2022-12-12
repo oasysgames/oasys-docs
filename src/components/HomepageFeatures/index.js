@@ -5,6 +5,46 @@ import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
+    title: 'For Users',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
+    description: (
+      <>
+        User can stake OAS with Metamask.
+      </>
+    ),
+  },
+  {
+    title: 'For Validators',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/hub-validator/operate-validator/1-1-hd-requirement",
+    description: (
+      <>
+        Document for Oasys Hub Layer Validator.
+      </>
+    ),
+  },
+  {
+    title: 'For Verse & Game Developers',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/verse-developer/1-1-select",
+    description: (
+      <>
+        Document for Developer to build Verse Layer.
+      </>
+    ),
+  },
+  {
+    title: 'Architecture',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/architecture/overview/oasys-architecture/1-1-ecosystem-per-chain",
+    description: (
+      <>
+        Oasys Architecture. 
+      </>
+    ),
+  },
+  {
     title: 'White Paper',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     linkTo: "/docs/whitepaper/intro",
@@ -14,36 +54,16 @@ const FeatureList = [
       </>
     ),
   },
-  {
-    title: 'Technical Materials',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/techdocs/technical-materials/1-1-technical-materials",
-    description: (
-      <>
-        Guides on how to build nodes and run networks.
-      </>
-    ),
-  },
-  // {
-  //   title: 'Powered by React',
-  //   Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-  //   description: (
-  //     <>
-  //       Extend or customize your website layout by reusing React. Docusaurus can
-  //       be extended while reusing the same header and footer.
-  //     </>
-  //   ),
-  // },
 ];
 
 function Feature({Svg, linkTo, title, description}) {
   return (
-    <div className={clsx('col col--6')}>
+    <div className={clsx('col col--4')}>
       <Link className={styles.topPageLink} to={linkTo}>
         <div className="text--center">
           {/* <Svg className={styles.featureSvg} role="img" /> */}
         </div>
-        <div className="text--center padding-horiz--lg">
+        <div className="text--center padding-horiz--sm">
           <h2 className={styles.largeText}>{title}</h2>
           <p className={styles.smallText} >{description}</p>
         </div>
