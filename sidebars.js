@@ -368,16 +368,16 @@ const sidebars = {
             'tech-docs/whats-oasys/oasys-architecture/1-3-incentive-logic',
           ],
         },
-        {
-          type: 'category',
-          label: 'Roadmap', 
-          link: {
-            type: 'doc',
-            id: 'tech-docs/whats-oasys/roadmap/1-1-initial-functionalities',
-          },
-          collapsed: true,
-          items: [],
-        }, 
+        // {
+        //   type: 'category',
+        //   label: 'Roadmap', 
+        //   link: {
+        //     type: 'doc',
+        //     id: 'tech-docs/whats-oasys/roadmap/1-1-initial-functionalities',
+        //   },
+        //   collapsed: true,
+        //   items: [],
+        // }, 
       ],
     },
     {
