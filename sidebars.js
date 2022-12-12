@@ -68,7 +68,7 @@ const sidebars = {
               items: [
                 'architecture/hub-layer/consensus/dpos/1-3-validator-account',
                 'architecture/hub-layer/consensus/dpos/1-1-weighted-random',
-                'architecture/hub-layer/consensus/dpos/1-2-mining',
+                // 'architecture/hub-layer/consensus/dpos/1-2-mining',
               ]
             }, {
               type: 'category',
