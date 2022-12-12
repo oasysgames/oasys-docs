@@ -1,4 +1,4 @@
-# How the Verse Layer work?
+# Verse Accounts
 
 ### **L2 Owner**
 

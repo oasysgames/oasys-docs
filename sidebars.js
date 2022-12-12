@@ -121,7 +121,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'How Verse Layer works?', 
+          label: 'About Verse accounts', 
           link: {
             type: 'doc',
             id: 'architecture/verse-layer/1-1-verse-layer'
