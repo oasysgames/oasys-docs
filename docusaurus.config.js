@@ -109,7 +109,7 @@ const config = {
             type: 'doc',
             docId: 'verse-developer/1-1-select',
             position: 'left',
-            label: 'Build on Verse',
+            label: 'For Verse & Game Developers',
           },
           {
             type: 'doc',
