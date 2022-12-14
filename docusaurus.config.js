@@ -83,12 +83,6 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'whitepaper/intro',
-            position: 'left',
-            label: 'Whitepaper',
-          },
-          {
-            type: 'doc',
             docId: 'staking/stake-oasys/1-1-stake-oasys',
             position: 'left',
             label: 'For Users',
@@ -101,15 +95,21 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
+            docId: 'verse-developer/1-1-select',
             position: 'left',
-            label: 'Architecture',
+            label: 'Build on Oasys',
           },
           {
             type: 'doc',
-            docId: 'verse-developer/1-1-select',
+            docId: 'whitepaper/intro',
             position: 'left',
-            label: 'For Verse & Game Developers',
+            label: 'Whitepaper',
+          },
+          {
+            type: 'doc',
+            docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
+            position: 'left',
+            label: 'Architecture',
           },
           {
             type: 'doc',
@@ -181,6 +181,10 @@ const config = {
               {
                 label: 'Medium',
                 href: 'https://medium.com/@oasys',
+              },
+              {
+                label: 'Audit Report',
+                href: 'https://certificate.quantstamp.com/full/oasys',
               },
             ],
           },

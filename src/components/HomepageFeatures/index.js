@@ -25,7 +25,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'For Verse & Game Developers',
+    title: 'Build on Oasys',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/verse-developer/1-1-select",
     description: (
