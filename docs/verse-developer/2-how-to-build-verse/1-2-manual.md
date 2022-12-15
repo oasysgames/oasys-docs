@@ -88,7 +88,9 @@ It is recommended to secure the chainId with [EVM-based Chains](https://github.c
 ![Build](/img/docs/techdocs/oasys-pos-fe/build.png)
 
 
-If the Verse build is successful, the following will be displayed.
+If the Verse build is successful, the following will be displayed. You have to memo build_transaction to check VerseInfo at [check-verse-page](#check-verse-information-from-verse_build-transaction).
+
+![Verse build Success](/img/docs/techdocs/oasys-pos-fe/verse_build_success.png)
 
 Download address.json and genesis.json.
 ![Build](/img/docs/techdocs/oasys-pos-fe/build_complete.png)
@@ -106,6 +108,15 @@ When you have completed this step, return to the `verse-layer-optimism` reposito
 ```shell
 cd /path/to/verse-layer-optimism
 ```
+
+### Check verse information from verse_build transaction
+You can check verse information from verse_build transaction at [check-verse-page](https://oasys-pos-fe.vercel.app/check-verse).
+![Check verse info](/img/docs/techdocs/oasys-pos-fe/check_verse_info.png)
+
+You can also download address.json and genesis.json as well as [Build verse](#build-verse).
+![Build](/img/docs/techdocs/oasys-pos-fe/build_complete.png)
+
+Copy the generated configuration filess to `assets` directory of the `verse-layer-optimism` repository as well as [Build verse](#build-verse).
 
 ## 5. Create .env file
 
