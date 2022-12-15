@@ -1,5 +1,5 @@
 # oFT
-oFT is a Fungible Token created by Oasys hub.
+oFT is a Fungible Token created on Oasys hub.
 oFT can be bridged between the Verse layer(L2) and the Hub layer(L1).
 
 When creating an oFT, it is necessary to create an ERC20 for each Hub (L1) and Verse (L2).

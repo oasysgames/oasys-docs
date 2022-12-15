@@ -244,7 +244,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Make Token", 
+      label: "Create Token", 
       link: {
         type: 'generated-index',
       },
