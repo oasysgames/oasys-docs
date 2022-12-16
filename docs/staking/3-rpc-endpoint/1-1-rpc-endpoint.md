@@ -18,6 +18,8 @@
 | Explorer        | https://scan.testnet.oasys.games/   |
 
 ### Sand Verse (Verse Layer)
+Please refer to [Sand Verse](/docs/verse-developer/how-to-build-verse/1-6-sandverse) to learn about Sand verse.
+
 |                 |                                            |
 |-----------------|--------------------------------------------|
 | ChainID         | 20197                                      |
