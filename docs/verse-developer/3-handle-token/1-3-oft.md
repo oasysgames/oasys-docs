@@ -8,7 +8,7 @@ When creating an oFT, it is necessary to create an ERC20 for each Hub (L1) and V
 From here on out, We will explain how to create an oFT, using [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oft.ts) in [the bride tutorial](https://github.com/oasysgames/l1-l2-bridge-tutorial) as a reference.
 This tutorial actually implements [the contract](https://github.com/oasysgames/oasys-optimism/tree/develop/packages/contracts) used in Verse and Hub.
 
-In this tutorial, L1 is set to Oasys testnetwok and L2 to Oasys Sand Verse.
+In this tutorial, L1 is set to Oasys testnetwok and L2 to Oasys SAND Verse.
 ```typescript
 // hardhat.config.ts
 networks: {

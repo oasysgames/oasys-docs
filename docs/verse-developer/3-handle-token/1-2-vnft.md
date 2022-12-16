@@ -1,23 +1,23 @@
 # vNFT
 
-## Create an ERC-721 on Oasys Sand Verse
-We will explain how to create an ERC-721 token from Oasys Sand Verse network.
+## Create an ERC-721 on Oasys SAND Verse
+We will explain how to create an ERC-721 token from Oasys SAND Verse network.
 
 This token is a vNFT that cannot be bridged to the Oasys hub.
 Also, to deploy a vNFT to the main network of each verse, the deployer must be authorized by the verse operator.
-However, anyone can deploy token in Oasys Sand Verse.
+However, anyone can deploy token in Oasys SAND Verse.
 
 To perform this tutorial, use the following tools:
 1. Remix IDE : Remix IDE allows you to edit smart contracts and deploy.
 2. OpenZepplin Contract Wizard : You can easily create an ERC-721 smart contract using OpenZeppelin Contract Wizard.
 3. Metamask (browser extension) : Process transactions and deploy smart contracts through the Metamask browser extension.
-* Oasys Sand Verse network is layer-2, and the faucet does not exist because gas is **free** when processing transactions.
+* Oasys SAND Verse network is layer-2, and the faucet does not exist because gas is **free** when processing transactions.
 
-### Add Oasys Sand Verse network on metamask
+### Add Oasys SAND Verse network on metamask
 ![Add Oasys Sand Verse network on metamask](/img/docs/techdocs/smart-contract/add-network-1.png)
 When you click the Add network button, a web page is called where you can add a new network to your metamask. You can add the Oasys Sand Verse network on this web page by entering each item according to the instructions below.
 
-#### Oasys Sand Verse
+#### Oasys SAND Verse
 |                 |                                            |
 |-----------------|--------------------------------------------|
 | ChainID         | 20197                                      |
@@ -77,4 +77,4 @@ After setting up Provider Environment, check the following.
 * Please refer to [this](/docs/verse-developer/handle-token/1-1-vft-oft#metamask-gas-fee-settings) section for gas fee modification.
 
 ![Mint ERC-721](/img/docs/techdocs/smart-contract/mint-erc721-token-sandverse-2.png)
-- If token minting is successful, go to your account page in Oasys Sand Verse Explorer. You can then click on the `Tokens` menu to view tokens you own.
+- If token minting is successful, go to your account page in Oasys SAND Verse Explorer. You can then click on the `Tokens` menu to view tokens you own.
