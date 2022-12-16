@@ -61,7 +61,7 @@ key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 ## 4. Deploy contracts for Verse-Layer to Hub-Layer(WEB).
 
 ### Connect wallet
-Access to [oasys-pos-fe](https://oasys-pos-fe.vercel.app/verse) and switch to the oasys network where you want to build the verse.
+Access to [oasys-pos-fe](https://oasys-pos-fe.vercel.app) and switch to the oasys network where you want to build the verse.
 
 Connect the wallet using the builder in the metamask.
 If you successfully connect the wallet, the builder's address will appear next to "Owner Address:".
@@ -159,5 +159,5 @@ docker-compose up -d message-relayer
 For running verse builder, by considering follwing parameter on permissioned chain may help: 
 
 By deploying permission-less makes scam or non-approved contract, which makes user unsafe. 
-By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by [limiting proxy](docs\documentation\4-build-dapps\1-how-to-build-verse\1-4-verse-proxy). 
+By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by [limiting proxy](/docs/verse-developer/how-to-build-verse/1-4-verse-proxy). 
 
