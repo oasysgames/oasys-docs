@@ -38,7 +38,7 @@ Please refer to [SAND Verse](/docs/verse-developer/how-to-build-verse/1-6-sandve
 |-----------------|--------------------------------------------|
 | ChainID         | 29548                                      |
 | RPC             | https://rpc.oasys.mycryptoheroes.net/      |
-| Explorer        | https://explorer.sandverse.oasys.games/    |
+| Explorer        | https://explorer.oasys.mycryptoheroes.net    |
 | Documentation   | https://linktr.ee/mycryptoheroes_docs      |
 
 ### TCG Verse 
