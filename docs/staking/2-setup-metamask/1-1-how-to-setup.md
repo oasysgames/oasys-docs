@@ -42,7 +42,7 @@ When you click the Add network button, a web page is called where you can add a 
 
 ## Add Oasys Chain
 
-You can find RPC / Chain ID on [Chain enviornment](/docs/staking/setup-metamask/1-1-how-to-setup).
+You can find RPC / Chain ID on [RPC Environment](/docs/staking/rpc-endpoint/1-1-rpc-endpoint).
 
 Or login onto Oasys Hub add newtork automatically.
 

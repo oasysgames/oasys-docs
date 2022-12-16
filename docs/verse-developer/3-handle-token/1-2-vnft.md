@@ -74,7 +74,7 @@ After setting up Provider Environment, check the following.
 
 2. When ready, click the `transact` button and approve the transaction for token transfer.
 
-* Please refer to [this](/docs/verse-developer/handle-token/1-1-vft-oft#metamask-gas-fee-settings) section for gas fee modification.
+* Please refer to [this](/docs/verse-developer/handle-token/1-1-vft#metamask-gas-fee-settings) section for gas fee modification.
 
 ![Mint ERC-721](/img/docs/techdocs/smart-contract/mint-erc721-token-sandverse-2.png)
 - If token minting is successful, go to your account page in Oasys Sand Verse Explorer. You can then click on the `Tokens` menu to view tokens you own.
