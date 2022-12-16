@@ -2,7 +2,7 @@
 
 ## Tutroal
 
-Anyone can try to [token bridge tutorial](https://github.com/oasysgames/l1-l2-bridge-tutorial) between Oasys Testnet and SandVerse.
+Anyone can try to [token bridge tutorial](https://github.com/oasysgames/l1-l2-bridge-tutorial) between Oasys Testnet and SANDVerse.
 
 ### Install tutorial
 

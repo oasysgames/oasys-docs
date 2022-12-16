@@ -18,7 +18,7 @@ sidebar_label: Environment
 | RPC      | https://rpc.testnet.oasys.games/        |
 | Explorer | https://scan.testnet.oasys.games/   |
 
-## Sand Verse
+## SAND Verse
 |          |                                            |
 |----------|--------------------------------------------|
 | ChainID  | 20197                                      |

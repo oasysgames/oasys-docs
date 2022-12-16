@@ -1,23 +1,23 @@
 # vFT
 
-## Create an ERC-20 on Oasys Sand Verse
+## Create an ERC-20 on Oasys SAND Verse
 Based on how to create an ERC-20 from the goerli test network created above, we will explain how to create an ERC-20 from Oasys Sand Verse network.
 
 This token is a vFT that cannot be bridged to the Oasys hub.
 Also, to deploy a vFT to the main network of each verse, the deployer must be authorized by the verse operator.
-However, anyone can deploy token in Oasys Sand Verse.
+However, anyone can deploy token in Oasys SAND Verse.
 
 To perform this tutorial, use the following tools:
 1. Remix IDE : Remix IDE allows you to edit smart contracts and deploy.
 2. OpenZepplin Contract Wizard : You can easily create an ERC-20 smart contract using OpenZeppelin Contract Wizard.
 3. Metamask (browser extension) : Process transactions and deploy smart contracts through the Metamask browser extension.
-* Oasys Sand Verse network is layer-2, and the faucet does not exist because gas is **free** when processing transactions.
+* Oasys SAND Verse network is layer-2, and the faucet does not exist because gas is **free** when processing transactions.
 
-### Add Oasys Sand Verse network on metamask
-![Add Oasys Sand Verse network on metamask](/img/docs/techdocs/smart-contract/add-network-1.png)
-When you click the Add network button, a web page is called where you can add a new network to your metamask. You can add the Oasys Sand Verse network on this web page by entering each item according to the instructions below.
+### Add Oasys SAND Verse network on metamask
+![Add Oasys SAND Verse network on metamask](/img/docs/techdocs/smart-contract/add-network-1.png)
+When you click the Add network button, a web page is called where you can add a new network to your metamask. You can add the Oasys SAND Verse network on this web page by entering each item according to the instructions below.
 
-#### Oasys Sand Verse
+#### Oasys SAND Verse
 |                 |                                            |
 |-----------------|--------------------------------------------|
 | ChainID         | 20197                                      |

@@ -17,7 +17,7 @@
 | RPC             | https://rpc.testnet.oasys.games/        |
 | Explorer        | https://scan.testnet.oasys.games/   |
 
-### Sand Verse (Verse Layer)
+### SAND Verse (Verse Layer)
 |                 |                                            |
 |-----------------|--------------------------------------------|
 | ChainID         | 20197                                      |
