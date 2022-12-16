@@ -240,6 +240,7 @@ const sidebars = {
         'verse-developer/how-to-build-verse/1-3-optional-configs',
         'verse-developer/how-to-build-verse/1-4-verse-proxy',
         'verse-developer/how-to-build-verse/1-5-explorer',
+        'verse-developer/how-to-build-verse/1-6-sandverse',
       ],
     },
     {
