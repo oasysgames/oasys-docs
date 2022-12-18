@@ -251,6 +251,7 @@ const sidebars = {
       },
       collapsed: true,
       items: [
+        'verse-developer/handle-token/1-5-intro',
         'verse-developer/handle-token/1-1-vft',
         'verse-developer/handle-token/1-2-vnft',
         'verse-developer/handle-token/1-3-oft',
