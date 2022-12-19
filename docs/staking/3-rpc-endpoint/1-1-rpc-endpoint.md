@@ -56,4 +56,5 @@ Please refer to [SAND Verse](/docs/verse-developer/how-to-build-verse/1-6-sandve
 |-----------------|--------------------------------------------|
 | ChainID         | 19011                                      |
 | RPC             | https://rpc.mainnet.oasys.homeverse.games/    |
-| Explorer        | Explorer: https://explorer.oasys.homeverse.games/   |
+| Explorer        | https://explorer.oasys.homeverse.games/   |
+| Documentation   | https://linktr.ee/homeverse |
