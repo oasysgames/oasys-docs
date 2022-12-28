@@ -76,12 +76,15 @@ If the deposit is successful, you will see the amount of OAS deposited next to "
 ![Deposit](/img/docs/techdocs/oasys-pos-fe/deposit.png)
 
 ### Build verse
-To build Verse, set the following
-・chainId to be set in the Verse
-・address of the sequencer
-・address of the proposer
+It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) before building Verse.
 
-It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) beforehand.
+e.g. [Register oasys mainnet chainId](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
+
+To build Verse, set the following
+- chainId to be set in the Verse
+- address of the sequencer
+- address of the proposer
+
 ![Build](/img/docs/techdocs/oasys-pos-fe/build.png)
 
 
