@@ -1,9 +1,9 @@
 # vNFT
 
 ## Create an ERC-721 on Oasys SAND Verse
-We will explain how to create an ERC-721 token from Oasys SAND Verse network.
+Create an ERC-721 token from Oasys SAND Verse network.
 
-This token is a vNFT that cannot be bridged to the Oasys hub.
+vNFT is a token that cannot be bridged to the Oasys hub.
 Also, to deploy a vNFT to the main network of each verse, the deployer must be authorized by the verse operator.
 However, anyone can deploy token in Oasys SAND Verse.
 

@@ -2,7 +2,12 @@
 
 ## Tutroal
 
-Anyone can try to [token bridge tutorial](https://github.com/oasysgames/l1-l2-bridge-tutorial) between Oasys Testnet and SANDVerse.
+Anyone can try to [token bridge tutorial](https://github.com/oasysgames/l1-l2-bridge-tutorial) between Oasys Testnet or Mainnet, and SANDVerse.
+
+|Token|Bridge|
+|--|---------|
+|oFT / oNFT|O|
+|vFT / vNFT|X|
 
 ### Install tutorial
 

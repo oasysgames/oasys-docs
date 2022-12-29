@@ -10,7 +10,7 @@ After you setup, you may configure files in :
 ```
 
 After you open, You may See Few addresses. Those address may changed by contract update. 
-You many need to send your tokens onto `sequencer address` from `addresses.json` to use bridge.
+You many need to send your tokens onto `sequencer address` for sending gas, and Use L1 deposit address from `addresses.json` to use bridge.
 
 ```
 {
@@ -30,15 +30,15 @@ You many need to send your tokens onto `sequencer address` from `addresses.json`
 }
 ```
 
-### OVM_Sequencer 
+#### OVM_Sequencer 
 
 It works as L2 Sequencer. 
 
-### OVM_Proposer
+#### OVM_Proposer
 
 It works as L2 Proposer. Mainly handles with messaging.
 
-### CanonicalTransactionChain
+#### CanonicalTransactionChain
 
 Works as a sequencer. 
 

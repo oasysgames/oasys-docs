@@ -26,10 +26,10 @@ Verse uses more CPU. Using Higher Frequency for CPU when having much pending tra
 (e.g. `rpc.mainnet.verse1.com`)
 
 ## Explore Settings
-- Secure Domain to set EXPLORE_URL
+- Secure Domain to set EXPLORER_URL
 (e.g. `verse1.com`)
-- After building Verse explore, set EXPLORE_URL to Verse explore IPaddress by DNS
-(e.g. `explore.mainnet.verse1.com`)
+- After building Verse explorer, set EXPLORER_URL to Verse explorer IPaddress by DNS
+(e.g. `explorer.mainnet.verse1.com`)
 
 ## ChainId Register
 It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) beforehand.
