@@ -157,6 +157,12 @@ docker-compose up -d l2geth
 docker-compose up -d batch-submitter
 docker-compose up -d message-relayer
 ```
+
+- data-transport-layer : Data-transport between L1 <> L2
+- l2geth : L2 geth. Core component on Verse. 
+- message-relayer : Message relayer, sending message between L1 <> L2
+- batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
+
 ## Permissioned chain
 
 For running verse builder, by considering follwing parameter on permissioned chain may help: 
