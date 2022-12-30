@@ -42,6 +42,17 @@ It works as L2 Proposer. Mainly handles with messaging.
 
 Works as a sequencer. 
 
+#### StateCommitmentChain
+
+Works as a proposer. 
+
+#### navigating on L1 deposit address
+ 
+You can take [L1 deposit address](https://github.com/oasysgames/oasys-optimism/blob/8f1467bf973a6587fb7482e60cecaf7c50ee78f9/packages/contracts/contracts/oasys/L1/build/L1BuildDeposit.sol#L37) from following event. 
+
+or you can see `0x5200000000000000000000000000000000000009` 's log on verse building. 
+
+
 ## Related Factory Contract 
 
 
