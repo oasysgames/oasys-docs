@@ -1,4 +1,7 @@
-# Setup Instant Verifier
+# Verse Submitter
+Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
+
+If you build verse submitter, first you have to build [L1-Light-node](/docs/verse-developer/how-to-build-verse/1-5-build-L1-light-node).
 
 ## About
 Instant Verifier of Verse-Layer for the Oasys Blockchain.
@@ -36,13 +39,26 @@ curl -O /home/geth/.oasvlfy/config.yml \
     https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config.yml
 ```
 
-Edit config.yml.
+Edit config.yml to set verse submitter.
+
+Set L1 address with plenty of OAS for the submitter because the submitter needs to have OAS for gas.
+
 ```yml
 wallets:
   # Wallet used by Verifier (Usually the same address as geth)
   signer:
     address: '0x...' # set your account created L1-light-node.
     password: /home/geth/.ethereum/password.txt # set your account password path that is created L1-light-node.
+
+  # Wallet used by Submitter (gas is required)
+  submitter:
+    address: '0x...' # set your L1 account address having plenty of OAS. (e.g. sequencer address).
+...
+submitter:
+  enable: true  # Only enable for Verse Builder
+  targets:
+    - chain_id: 420  # Chain ID of your Verse-Layer
+      wallet: submitter
 ```
 
 Create a systemd unit file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/oasvlfy.service)
