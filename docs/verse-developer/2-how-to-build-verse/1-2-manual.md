@@ -158,14 +158,21 @@ docker-compose up -d batch-submitter
 docker-compose up -d message-relayer
 ```
 
-- data-transport-layer : Data-transport between L1 <> L2
+- data-transport-layer : Data-transport between L1 and L2
 - l2geth : L2 geth. Core component on Verse. 
-- message-relayer : Message relayer, sending message between L1 <> L2
+- message-relayer : Message relayer, sending message between L1 and L2
 - batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
+
+## 7. Set Instant Verifier(Optional)
+Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
+
+If you want set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier), please follow these pages.
+- [L1 Light Node](/docs/verse-developer/how-to-build-verse/1-5-build-L1-light-node)
+- [Verse Submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter)
 
 ## Permissioned chain
 
-For running verse builder, by considering follwing parameter on permissioned chain may help: 
+For running verse builder, by considering following parameter on permissioned chain may help: 
 
 By deploying permission-less makes scam or non-approved contract, which makes user unsafe. 
 By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by [limiting proxy](/docs/verse-developer/how-to-build-verse/1-4-verse-proxy). 
