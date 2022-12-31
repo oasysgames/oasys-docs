@@ -55,15 +55,26 @@ In principle, anyone with a deposit of 1 million OAS tokens can create an L2 on 
 
 The rest of this document describes the technical manual in order for game companies to deploy a verse layer. In order to deploy a L2 contract, potential verse builders are required to deposit 1,000,000 OAS tokens as a minimum requirement, which will be returned to the depositor(s) after approximately 180 days. OAS tokens can be purchased from below exchanges (as of Dec 31, 2022). 
 
-Central Exchange List
-| Name | Pair 
-|----|--------------|
-|OKX |OAS/USDT: https://www.okx.com/trade-spot/oas-usdt OAS/USDC: https://www.okx.com/trade-spot/oas-usdc |
-|Gate.io | OAS/USDT: https://gate.io/trade/OAS_USDT |
-|Kucoin | OAS/USDT: https://www.kucoin.com/trade/OAS-USDT |
-|Bybit | OAS/USDT: https://www.bybit.com/trade/spot/OAS/USDT |
-|MEXC Global | OAS/USDT: https://www.mexc.com/exchange/OAS_USDT |
-|Huobi | OAS/USDT: https://www.huobi.com/en-us/exchange/oas_usdt |
+#### Central Exchange List
+
+OKX 
+- OAS/USDT: https://www.okx.com/trade-spot/oas-usdt
+- OAS/USDC: https://www.okx.com/trade-spot/oas-usdc 
+
+Gate.io
+- OAS/USDT: https://gate.io/trade/OAS_USDT
+
+Kucoin
+- OAS/USDT: https://www.kucoin.com/trade/OAS-USDT
+
+Bybit
+- OAS/USDT: https://www.bybit.com/trade/spot/OAS/USDT
+
+MEXC Global
+- OAS/USDT: https://www.mexc.com/exchange/OAS_USDT
+
+Huobi
+- OAS/USDT: https://www.huobi.com/en-us/exchange/oas_usdt
 
 *List updated on Dec 31, 2022
 
