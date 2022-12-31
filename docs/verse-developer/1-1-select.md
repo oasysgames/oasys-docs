@@ -47,9 +47,13 @@ https://forms.gle/ALtAsFpx8rq3XMcA8
 
 In case any confirmation for registration through either forms is needed, please reach out to the Oasys team for support. 
 
-### 4. Building a verse layer
+## Build a Verse
 
-The rest of this document describes the technical manual in order for game companies to deploy a verse layer. In order to deploy a L2 contract, potential verse builders are required to deposit 1,000,000 OAS tokens as a minimum requirement, which will be returned to the depositor(s) after approximately 180 days. OAS tokens can be purchased from below exchanges (as of Dec 30, 2022). 
+![flowchart](/img/docs/techdocs/verse/flowchart.png)
+
+In principle, anyone with a deposit of 1 million OAS tokens can create an L2 on Oasys.
+
+The rest of this document describes the technical manual in order for game companies to deploy a verse layer. In order to deploy a L2 contract, potential verse builders are required to deposit 1,000,000 OAS tokens as a minimum requirement, which will be returned to the depositor(s) after approximately 180 days. OAS tokens can be purchased from below exchanges (as of Dec 31, 2022). 
 
 Central Exchange List
 
@@ -69,11 +73,7 @@ Central Exchange List
 
 *List updated on Dec 31, 2022
 
-## Build a Verse
 
-![flowchart](/img/docs/techdocs/verse/flowchart.png)
-
-In principle, anyone with a deposit of 1 million OAS tokens can create an L2 on Oasys.
 
 ### Onboarding (migrating)
 
