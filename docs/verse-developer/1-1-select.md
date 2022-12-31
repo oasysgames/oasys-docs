@@ -16,7 +16,7 @@ In order to deploy a game on Oasys, it is required to have a verse-layer (L2 of 
 
 ![deploy](/img/docs/techdocs/verse/game.png)
 
-### s2. Selecting a verse partner
+### 2. Selecting a verse partner
 
 If a game company is looking to deploy a game title without building its own verse, a game company needs to get in touch with respective verse builders. Oasys team can also help respective game companies to be connected with respective verse builders. 
 
