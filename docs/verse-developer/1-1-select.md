@@ -53,18 +53,18 @@ The rest of this document describes the technical manual in order for game compa
 
 Central Exchange List
 
-OKX 
+**OKX** 
 - OAS/USDT: https://www.okx.com/trade-spot/oas-usdt
 - OAS/USDC: https://www.okx.com/trade-spot/oas-usdc 
-Gate.io
+**Gate.io**
 - OAS/USDT: https://gate.io/trade/OAS_USDT
-Kucoin
+**Kucoin**
 - OAS/USDT: https://www.kucoin.com/trade/OAS-USDT
-Bybit
+**Bybit**
 - OAS/USDT: https://www.bybit.com/trade/spot/OAS/USDT
-MEXC Global
+**MEXC Global**
 - OAS/USDT: https://www.mexc.com/exchange/OAS_USDT
-Huobi
+**Huobi**
 - OAS/USDT: https://www.huobi.com/en-us/exchange/oas_usdt
 
 *List updated on Dec 31, 2022
