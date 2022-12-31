@@ -14,7 +14,7 @@ The games on Oasys will only be on L2, which means it will require a place, an L
 
 In order to deploy a game on Oasys, it is required to have a verse-layer (L2 of Oasys), either one of existing ones, or a new verse-layer built by a game company. Below flow chart describes the steps required to deploy your game. 
 
-![deploy](img/docs/techdocs/verse/game.png)
+![deploy](/img/docs/techdocs/verse/game.png)
 
 ### s2. Selecting a verse partner
 
