@@ -139,7 +139,7 @@ You can download configuration files on here,
 
 Or can download with using `wget` command. 
 ```
-$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.3/genesis.zip
+$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.4/genesis.zip
 
 $ unzip genesis.zip
 Archive:  genesis.zip
