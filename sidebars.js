@@ -321,6 +321,7 @@ const sidebars = {
             'verse-developer/game/nft-creation/1-2',
             'verse-developer/game/nft-creation/1-3',
             'verse-developer/game/nft-creation/1-4',
+            'verse-developer/game/nft-creation/1-5',
           ],
         },
       ],
