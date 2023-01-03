@@ -50,11 +50,23 @@ You can see with activity of transaction in metamask.
 
 ### 3. You can unstake by selecting your staked validator, and press unstake. 
 
-**It requires 10 days to unstake.**
+“Withdraw” button is added to the Staking page.
+
+For the OAS that you have unstaked from each validator page, you can withdraw them 10 days after the unstaking process.
 
 **If you press max button, (max - gasfee) will be displayed.**
 
 ![staking16](/img/docs/techdocs/oasys-hub/unstake.png)
+
+### 4.Press “Withdraw” button for checking the status of unstaked OAS. 
+
+![staking17](/img/docs/techdocs/oasys-hub/withdraw_select.png)
+
+### 5. - You can check how much the time left until the tokens will be withdrawable. 
+
+If 10 days have passed, you can withdraw your tokens by pressing a withdraw button. 
+
+![staking18](/img/docs/techdocs/oasys-hub/withdraw.png)
 
 
 ## 3. Claim Staking Reward 
