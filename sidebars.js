@@ -344,7 +344,8 @@ const sidebars = {
         id: 'verse-developer/1-3-contact-list',
       },
       collapsed: true,
-      items
+      items: [],
+    },
   ],
   staking: [
     {
