@@ -10,9 +10,9 @@ After you setup, you may configure files in :
 ```
 
 After you open, You may See Few addresses. Those address may changed by contract update. 
-You many need to send your tokens onto `sequencer address` for sending gas, and Use L1 deposit address from `addresses.json` to use bridge.
+You many need to send your tokens onto `sequencer address` for sending gas, and Use L1 bridge address from `addresses.json` to use bridge.
 
-```
+```json
 {
     "Lib_AddressManager": "0x158b3E793bc212F5fC0A91de13B6C764fb8D436D",
     "OVM_Sequencer": "0x900AcdE2455D0791F2AC9220ab700Be9B88886c2",
@@ -58,33 +58,47 @@ or you can see `0x5200000000000000000000000000000000000009` 's log on verse buil
 
 ### Hub Layer 
 
-```
+#### Factory Contract
+
+```json
 L1StandardERC20Factory: '0x5200000000000000000000000000000000000004'
 ```
 Standard ERC 20 Factory contract for Making ERC-20.
 
-```
+```json
 L1StandardERC721Factory: '0x5200000000000000000000000000000000000005'
 ```
 
-Standard ERC 721 Factory contract for Making ERC-20.
+Standard ERC 721 Factory contract for Making ERC-721.
+
+#### Bridge Contract
+L1_Bridge_Contract address is different for each Verse-Layer.
+
+```json
+"Proxy__OVM_L1CrossDomainMessenger": "0x6D544390Eb535d61e196c87d6B9c80dCD8628Acd",
+"Proxy__OVM_L1StandardBridge": "0xB1eDe3F5AC8654124Cb5124aDf0Fd3885CbDD1F7",
+"Proxy__OVM_L1ERC721Bridge": "0xA6D6d7c556ce6Ada136ba32Dbe530993f128CA44",
+```
+
 
 ### Verse Layer 
 
 Pre-Deployed contracts. All Verse Layer Contracts are same. 
 
-```
+```json
 L2CrossDomainMessenger: '0x4200000000000000000000000000000000000007',
 ```
 
-```
+```json
 L2StandardBridge: '0x4200000000000000000000000000000000000010',
 ```
 
-```
+```json
 L2StandardTokenFactory: '0x4200000000000000000000000000000000000012',
 ```
 
-```
+```json
 L2ERC721Bridge: '0x6200000000000000000000000000000000000001',
 ```
+
+Because L2StandardERC721 contract is not pre-deployed, if you use ERC721, you have to deploy [L2StandardERC721](https://github.com/oasysgames/oasys-optimism/blob/develop/packages/contracts/contracts/oasys/L2/token/L2StandardERC721.sol).
