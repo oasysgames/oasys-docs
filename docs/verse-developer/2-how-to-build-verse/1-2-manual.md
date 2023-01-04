@@ -58,7 +58,10 @@ Address: 0x0123456789abcdef0123456789abcdef
 key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 ```
 
-## 4. Deploy contracts for Verse-Layer to Hub-Layer(WEB).
+## 4-1. Deploy contracts for Verse-Layer to Hub-Layer.
+
+If you've already build Verse, skip this procedure.
+And you can check VerseInfo with build_transaction at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
 ### Connect wallet
 Access to [oasys-pos-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the verse.
@@ -88,7 +91,7 @@ To build Verse, set the following
 ![Build](/img/docs/techdocs/oasys-pos-fe/build.png)
 
 
-If the Verse build is successful, the following will be displayed. You have to memo build_transaction to check VerseInfo at [check-verse-page](#check-verse-information-from-verse_build-transaction).
+If the Verse build is successful, the following will be displayed. You have to memo build_transaction to check VerseInfo at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
 ![Verse build Success](/img/docs/techdocs/oasys-pos-fe/verse_build_success.png)
 
@@ -109,7 +112,7 @@ When you have completed this step, return to the `verse-layer-optimism` reposito
 cd /path/to/verse-layer-optimism
 ```
 
-### Check verse information from verse_build transaction
+## 4-2. Check verse information from verse_build transaction
 You can check verse information from verse_build transaction at [check-verse-page](https://tools-fe.oasys.games/check-verse).
 ![Check verse info](/img/docs/techdocs/oasys-pos-fe/check_verse_info.png)
 
