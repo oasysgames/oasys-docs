@@ -10,7 +10,7 @@ The coins that have been staked will be locked until you unstake them for tradin
 
 The PoS mechanism is designed to find solutions to PoW problems that result in competition for monetary value, and it naturally encourages people to seek ways to gain an advantage. PoW also necessitates a large amount of energy, which has an impact on market pricing and profitability.
 
-## DPOS 
+## DPoS 
 
 DPoS (Delegated Proof of Stake) is one of the consensus algorithms, a new version of Proof of Stake (PoS).
 
