@@ -65,7 +65,7 @@ And you can retrieve locked up token like this.
 **Please remind all example token claims are approximate numbers. Therefore, it might not be accurate.**
 
 ### How to claim sOAS onto OAS​
-You can claim sOAS onto OAS​ at [oasys-pos-fe](https://oasys-pos-fe.vercel.app/sOAS)
+You can claim sOAS onto OAS​ at [oasys-pos-fe](https://tools-fe.oasys.games/sOAS)
 
 ## LOAS
 
@@ -115,4 +115,4 @@ And you can retrieve locked up token like this.
 **Please remind all example token claims are approximate numbers. Therefore, it might not be accurate.**
 
 ### How to claim LOAS onto OAS​
-You can claim LOAS onto OAS​ at [oasys-pos-fe](https://oasys-pos-fe.vercel.app/lOAS)
+You can claim LOAS onto OAS​ at [oasys-pos-fe](https://tools-fe.oasys.games/lOAS)

@@ -61,7 +61,7 @@ key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 ## 4. Deploy contracts for Verse-Layer to Hub-Layer(WEB).
 
 ### Connect wallet
-Access to [oasys-pos-fe](https://oasys-pos-fe.vercel.app) and switch to the oasys network where you want to build the verse.
+Access to [oasys-pos-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the verse.
 
 Connect the wallet using the builder in the metamask.
 If you successfully connect the wallet, the builder's address will appear next to "Owner Address:".
@@ -110,7 +110,7 @@ cd /path/to/verse-layer-optimism
 ```
 
 ### Check verse information from verse_build transaction
-You can check verse information from verse_build transaction at [check-verse-page](https://oasys-pos-fe.vercel.app/check-verse).
+You can check verse information from verse_build transaction at [check-verse-page](https://tools-fe.oasys.games/check-verse).
 ![Check verse info](/img/docs/techdocs/oasys-pos-fe/check_verse_info.png)
 
 You can also download address.json and genesis.json as well as [Build verse](#build-verse).
