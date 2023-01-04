@@ -16,17 +16,7 @@ In order to deploy a game on Oasys, it is required to have a verse-layer (L2 of 
 
 If a game company is looking to deploy a game title without building its own verse, a game company needs to get in touch with respective verse builders. Oasys team can also help respective game companies to be connected with respective verse builders. 
 
-|Verse Name|Website|Contact|Form|
-|--|---------|--------|--------|
-|MCH Verse|https://www.mycryptoheroes.net/verse|wakao@mycryptoheroes.net or kanzaki@mycryptoheroes.net||
-|TCG Verse|https://tcgverse.xyz/|katsutakeishii@cryptogames.co.jp  or 　kotaozawa@cryptogames.co.jp|https://docs.google.com/forms/d/e/1FAIpQLSfds0wzeLs2Dc1aoK9UhNK44ZLmdDS7Rg2C3wrPPkACG2doYQ/viewform|
-|Home Verse|https://www.homeverse.games/|contact@homeverse.games |https://docs.google.com/forms/d/e/1FAIpQLScEyQd9kugKuxemcaiACahhaigVqy5W7FdrSkj3TIUhWK2Mpw/viewform?usp=send_form|
-|Chain Verse|https://www.chainverse.info/|team@chainguardians.io or idon@chainguardians.io||
-
-or, 
-
-Oasys Game Alliance Team
-Contact: dominic@oasys.games 
+You can navigate onto [Verse Contact List](/docs/verse-developer/1-3-contact-list)
 
 ### 3. Registering your game and verse on Oasys Hub
 

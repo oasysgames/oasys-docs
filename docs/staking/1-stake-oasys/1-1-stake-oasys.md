@@ -62,9 +62,11 @@ For the OAS that you have unstaked from each validator page, you can withdraw th
 
 ![staking17](/img/docs/techdocs/oasys-hub/withdraw_select.png)
 
-### 5. - You can check how much the time left until the tokens will be withdrawable. 
+### 5. If 10 days have passed, you can withdraw your tokens by pressing a withdraw button. 
 
 If 10 days have passed, you can withdraw your tokens by pressing a withdraw button. 
+
+You can check how much the time left until the tokens will be withdrawable. 
 
 ![staking18](/img/docs/techdocs/oasys-hub/withdraw.png)
 
