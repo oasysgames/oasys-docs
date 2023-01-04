@@ -23,7 +23,7 @@ const sidebars = {
           collapsed: true,
           items: [
             'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
-            'architecture/overview/oasys-architecture/1-2-oasys-rollup',
+            // 'architecture/overview/oasys-architecture/1-2-oasys-rollup',
             'architecture/overview/oasys-architecture/1-3-flexible-token-design',
           ]
         }, {
@@ -83,12 +83,13 @@ const sidebars = {
               ]
             }
           ]
-        }, {
+        }, 
+        {
           type: 'category',
-          label: 'OASYS Ecosystem', 
+          label: 'Token Flexibility', 
           link: {
             type: 'doc',
-            id: 'architecture/hub-layer/ecosystem/1-1-ecosystem',
+            id: 'architecture/hub-layer/ecosystem/token/1-1-ft-types',
           },
           collapsed: true,
           items: [
@@ -100,9 +101,9 @@ const sidebars = {
               },
               collapsed: true,
               items: [
-                'architecture/hub-layer/ecosystem/token/1-1-ft-types',
-                'architecture/hub-layer/ecosystem/token/1-2-bridge',
-                'architecture/hub-layer/ecosystem/token/1-3-dex',
+                // 'architecture/hub-layer/ecosystem/token/1-1-ft-types',
+                // 'architecture/hub-layer/ecosystem/token/1-2-bridge',
+                // 'architecture/hub-layer/ecosystem/token/1-3-dex',
                 'architecture/hub-layer/ecosystem/token/1-4-oas-tokens',
               ]
             }
