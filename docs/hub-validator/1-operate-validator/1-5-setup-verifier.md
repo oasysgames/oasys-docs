@@ -66,3 +66,31 @@ Unlock the private key if it is password protected.(Same with unlocking while se
 oasvlfy wallet:unlock --config /home/geth/.oasvlfy/config.yml --name signer
 Password:
 ```
+
+## Updating Verifier 
+
+Check the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases).
+
+Download the latest release of verifier. 
+
+- For AMD / Intel CPU , Please download AMD. 
+- For ARM based CPU , Please download ARM. 
+
+Stop the verifier. 
+
+```shell
+systemctl stop oasvlfy
+```
+
+Run the new verifier again. 
+
+It may require some time for synchronization between the verifier from database. 
+
+Unlock the private key if it is password protected.(Same with unlocking while setting up on hub-layer node setup.)
+
+```shell
+oasvlfy wallet:unlock --config /home/geth/.oasvlfy/config.yml --name signer
+Password:
+```
+
+
