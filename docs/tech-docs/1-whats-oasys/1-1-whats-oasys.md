@@ -6,7 +6,7 @@
 
 ## Key Agenda
 
-- Highly compatitible EVM 
+- Highly compatible EVM 
 - Scaling with Verse(Layer 2),designed for Games
 - Low gas fee, High scam resistance
 
