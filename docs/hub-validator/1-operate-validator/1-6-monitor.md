@@ -94,16 +94,7 @@ Please install Grafana on [the install page](https://grafana.com/docs/grafana/la
 
 ### Build Grafana
 You will find the startup commands on the install page of each environment, so please use them to start Grafana.
-
-```shell
-# On Debian or Ubuntu
-sudo service grafana-server start
-
-# On macOS
-brew services start grafana
-```
-
-### Allow Grafana to access InfluxDB
+### Allow accessing InfluxDB(InfluxQL)
 You can access Grafana through `localhost:3000`.
 
 You can access a visualization dashboard. The browser will prompt for login credentials (user: `admin` and password: `admin`). When prompted, the default password should be changed and saved.
@@ -130,13 +121,44 @@ InfluxDB Details:
   HTTP Method: GET
 ```
 
-![Grafana setting1](/img/docs/techdocs/monitor-validator/grafana_setting_1.png)
-![Grafana setting2](/img/docs/techdocs/monitor-validator/grafana_setting_2.png)
+![Grafana influxQL1](/img/docs/techdocs/monitor-validator/grafana_influxQL_1.png)
+![Grafana influxQL2](/img/docs/techdocs/monitor-validator/grafana_influxQL_2.png)
 
 Click on `Save and test` and wait for the confirmation to pop up.
 
 For details, refer to [InfluxDB docs](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/?t=InfluxQL).
 
+### Allow accessing InfluxDB(Flux)
+You can access Grafana through `localhost:3000`.
+
+You can access a visualization dashboard. The browser will prompt for login credentials (user: `admin` and password: `admin`). When prompted, the default password should be changed and saved.
+
+To set InfluxDB as the data source, click on the `Data sources` icon and click on `InfluxDB`.
+
+Please set The following configuration.
+```yaml
+Name: InfluxDB
+Query Language: Flux
+HTTP:
+  URL: http://localhost:8086
+  Access: Server (default)
+  Whitelisted cookies: None (leave blank)
+Auth:
+  All options left as their default (switches off)
+Custom HTTP Headers:
+  None
+InfluxDB Details
+  Organization: oasys
+  Token: <your-access-token>
+  Default Bucket: geth
+```
+
+![Grafana Flux 1](/img/docs/techdocs/monitor-validator/grafana_flux_1.png)
+![Grafana Flux 2](/img/docs/techdocs/monitor-validator/grafana_flux_2.png)
+
+Click on `Save and test` and wait for the confirmation to pop up.
+
+For details, refer to [InfluxDB docs](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/).
+
 ### Customize Dashboard
 If you want to customize the dashboard, please refer to [Ethereum docs](https://ethereum.org/en/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/#setting-up-grafana).
-
