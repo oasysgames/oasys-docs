@@ -21,7 +21,7 @@ To store data from geth, you must create a user and database(InfluxDB calls buck
 
 If you can access localhost:8086 from a browser, you can create a user and database.
 
-For details, Refer to [InfluxDB setup](https://docs.influxdata.com/influxdb/v2.6/install/#set-up-influxdb-through-the-ui).
+For details, refer to [InfluxDB setup](https://docs.influxdata.com/influxdb/v2.6/install/#set-up-influxdb-through-the-ui).
 
 Please sign in at `http//localhost:8086` with the following setting.
 
@@ -39,7 +39,7 @@ To store data from geth, you must create a user and database(InfluxDB calls buck
 
 If you cannot access localhost:8086 from a browser, you can create a user and database by InfluxDB-CLI.
 
-For details, Refer to [InfluxDB setup](https://docs.influxdata.com/influxdb/v2.6/install/?t=Set+up+with+the+CLI#set-up-influxdb-through-the-influx-cli).
+For details, refer to [InfluxDB setup](https://docs.influxdata.com/influxdb/v2.6/install/?t=Set+up+with+the+CLI#set-up-influxdb-through-the-influx-cli).
 
 ```shell
 influx setup \
@@ -135,7 +135,7 @@ InfluxDB Details:
 
 Click on `Save and test` and wait for the confirmation to pop up.
 
-For details, Refer to [InfluxDB docs](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/?t=InfluxQL).
+For details, refer to [InfluxDB docs](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/?t=InfluxQL).
 
 ### Customize Dashboard
 If you want to customize the dashboard, please refer to [Ethereum docs](https://ethereum.org/en/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/#setting-up-grafana).
