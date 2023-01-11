@@ -111,21 +111,23 @@ You can access a visualization dashboard. The browser will prompt for login cred
 To set InfluxDB as the data source, click on the `Data sources` icon and click on `InfluxDB`.
 
 Please set The following configuration.
-```
+```yaml
 Name: InfluxDB
-Query Language: Flux
-HTTP
+Query Language: InfluxQL
+HTTP:
   URL: http://localhost:8086
   Access: Server (default)
   Whitelisted cookies: None (leave blank)
-Auth
+Auth:
   All options left as their default (switches off)
-Custom HTTP Headers
-  None
-InfluxDB Details
-  Organization: oasys
-  Token: <your-access-token>
-  Default Bucket: geth
+Custom HTTP Headers:
+  - Heder: Authorization
+    Value: Token <YOUR_ACCESS_TOKEN> # There is a space between 'Token' and <YOUR_ACCESS_TOKEN>
+InfluxDB Details:
+  Database: geth
+  User: geth
+  Password: <your-password>
+  HTTP Method: GET
 ```
 
 ![Grafana setting1](/img/docs/techdocs/monitor-validator/grafana_setting_1.png)
