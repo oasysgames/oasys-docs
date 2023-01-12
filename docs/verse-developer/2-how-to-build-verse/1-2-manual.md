@@ -1,16 +1,16 @@
 # Manual for Building Verse
 
 1,000,000 OAS is required to validate the Verse-Layer node.
-It have 180days lockup on first deployment for a builder wallet.
-But on Testnet, it's free, You can try Verse Testnet with [faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
+It has a 180days lockup on the first deployment for a builder wallet.
+But on Testnet, it's free; You can try Verse Testnet with [Faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
 
-If you want to test deploying contracts and executing transactions on Verse, please use [SAND Verse](/docs/verse-developer/how-to-build-verse/1-6-sandverse).
+If you want to test deploying contracts and execute transactions on Verse, please use [SAND Verse](/docs/verse-developer/how-to-build-verse/1-6-sandverse).
 
 ## Validator Build Steps
 
 ![verse build](/img/docs/techdocs/verse/versebuild.png)
 
-For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/1-1-verse-layer),you can see before deploying verse. 
+For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/1-1-verse-layer), you can see it before deploying Verse. 
 
 ## 1. Requirements
 
@@ -37,7 +37,7 @@ docker-compose run --rm wallet
 The created wallets will be saved to `./data/wallet/keys.txt`.
 
 Notes:  
-**1. These wallets requires some tokens to run Verse-Layer. For testnet, you can get a token from [Faucet](https://faucet.testnet.oasys.games/).**  
+**1. These wallets require some tokens to run Verse-Layer. For testnet, you can get a token from [Faucet](https://faucet.testnet.oasys.games/).**  
 **2. Be sure to back up this file!**
 
 ```text:./data/wallet/keys.txt
@@ -60,11 +60,11 @@ key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 
 ## 4-1. Deploy contracts for Verse-Layer to Hub-Layer.
 
-If you've already build Verse, skip this procedure.
+If you've already built Verse, skip this procedure.
 And you can check VerseInfo with build_transaction at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
 ### Connect wallet
-Access to [oasys-pos-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the verse.
+Access to [oasys-pos-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the Verse.
 
 Connect the wallet using the builder in the metamask.
 If you successfully connect the wallet, the builder's address will appear next to "Owner Address:".
@@ -73,15 +73,15 @@ If you successfully connect the wallet, the builder's address will appear next t
 ### Deposit OAS to build Verse.
 For mainnet, deposit 1000000 OAS, for testnet, deposit 0.000000001 OAS.
 
-The amount of OAS required for the builder in advance. If you use testnet, please reserve OAS in [faucet](https://faucet.testnet.oasys.games).
+The amount of OAS required for the builder in advance. If you use testnet, please reserve OAS in [Faucet](https://faucet.testnet.oasys.games).
 
-If the deposit is successful, you will see the amount of OAS deposited next to "Deposit amount:".
+If the deposit is successful, you will see the OAS deposited next to "Deposit amount:".
 ![Deposit](/img/docs/techdocs/oasys-pos-fe/deposit.png)
 
 ### Build verse
 It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) before building Verse.
 
-e.g. [Register oasys mainnet chainId](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
+e.g. [Register Oasys mainnet chainId](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
 
 To build Verse, set the following
 - chainId to be set in the Verse
@@ -91,14 +91,14 @@ To build Verse, set the following
 ![Build](/img/docs/techdocs/oasys-pos-fe/build.png)
 
 
-If the Verse build is successful, the following will be displayed. You have to memo build_transaction to check VerseInfo at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
+If the Verse build is successful, the following will be displayed. You must memo build_transaction to check VerseInfo at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
 ![Verse build Success](/img/docs/techdocs/oasys-pos-fe/verse_build_success.png)
 
 Download address.json and genesis.json.
 ![Build](/img/docs/techdocs/oasys-pos-fe/build_complete.png)
 
-Copy the generated configuration filess to `assets` directory of the `verse-layer-optimism` repository.
+Copy the generated configuration files to the `assets` directory of the `verse-layer-optimism` repository.
 
 ```shell
 cp ./Downloads/addresses.json /path/to/verse-layer-optimism/assets/
@@ -106,20 +106,20 @@ cp ./Downloads/addresses.json /path/to/verse-layer-optimism/assets/
 cp ./Downloads/genesis.json /path/to/verse-layer-optimism/assets/ 
 ```
 
-When you have completed this step, return to the `verse-layer-optimism` repository.
+After completing this step, return to the `verse-layer-optimism` repository.
 
 ```shell
 cd /path/to/verse-layer-optimism
 ```
 
-## 4-2. Check verse information from verse_build transaction
-You can check verse information from verse_build transaction at [check-verse-page](https://tools-fe.oasys.games/check-verse).
+## 4-2. Check verse information from the verse_build transaction
+You can check verse information from the verse_build transaction at [check-verse-page](https://tools-fe.oasys.games/check-verse).
 ![Check verse info](/img/docs/techdocs/oasys-pos-fe/check_verse_info.png)
 
 You can also download address.json and genesis.json as well as [Build verse](#build-verse).
 ![Build](/img/docs/techdocs/oasys-pos-fe/build_complete.png)
 
-Copy the generated configuration filess to `assets` directory of the `verse-layer-optimism` repository as well as [Build verse](#build-verse).
+Copy the generated configuration files to the `assets` directory of the `verse-layer-optimism` repository and [Build verse](#build-verse).
 
 ## 5. Create .env file
 
@@ -169,14 +169,17 @@ docker-compose up -d message-relayer
 ## 7. Set Instant Verifier(Optional)
 Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
 
-If you want set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier), please follow these pages.
+Please follow these pages if you want to set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier).
 - [L1 Light Node](/docs/verse-developer/how-to-build-verse/1-5-build-L1-light-node)
 - [Verse Submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter)
 
 ## Permissioned chain
 
-For running verse builder, by considering following parameter on permissioned chain may help: 
+For running verse builder, by considering the following parameter on the permissioned chain may help: 
 
-By deploying permission-less makes scam or non-approved contract, which makes user unsafe. 
-By approving transaction freely on verse, you may attacked by unexpected gas attack, which can be controled by [limiting proxy](/docs/verse-developer/how-to-build-verse/1-4-verse-proxy). 
+Deploying permission-less makes scam or non-approved contracts, which makes users unsafe. 
+By approving transaction freely on Verse, you may be attacked by an unexpected gas attack, which can be controlled by [limiting proxy](/docs/verse-developer/how-to-build-verse/1-4-verse-proxy). 
+
+
+
 
