@@ -165,3 +165,13 @@ For a Geth monitoring dashboard, copy the ID of [this dashboard](https://grafana
 
 ### Customize Dashboard
 If you want to customize the dashboard, please refer to [Ethereum docs](https://ethereum.org/en/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/#setting-up-grafana).
+
+## Checklist(optional)
+### Checking Geth Sync
+You can check if your geth synchronizes other geth by checking `Latest block`.
+
+If `Latest block` increase by four in one minute, your geth is working.
+
+### Checking Disk
+Due to geth is store data in disk, you have to check if disk is afforded.
+
