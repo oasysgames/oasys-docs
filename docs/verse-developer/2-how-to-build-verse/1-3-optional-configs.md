@@ -1,18 +1,18 @@
-# Optional Configrations
+# Optional Configurations
 
 
 ## Address List
 
-After you setup, you may configure files in : 
+After you set up, you may configure files in the: 
 
 ```
 /oasys/addresses.json
 ```
 
-After you open, You may See Few addresses. Those address may changed by contract update. 
-You many need to send your tokens onto `sequencer address` for sending gas, and Use L1 bridge address from `addresses.json` to use bridge.
+After you open it, You may See a Few addresses. This is because contract updates may change those addresses. 
+You need to send your tokens to the `sequencer address` for sending gas and Use L1 bridge address from `addresses.json` to use bridge.
 
-```json
+```JSON
 {
     "Lib_AddressManager": "0x158b3E793bc212F5fC0A91de13B6C764fb8D436D",
     "OVM_Sequencer": "0x900AcdE2455D0791F2AC9220ab700Be9B88886c2",
@@ -36,7 +36,7 @@ It works as L2 Sequencer.
 
 #### OVM_Proposer
 
-It works as L2 Proposer. Mainly handles with messaging.
+It works as L2 Proposer. Mainly handles messaging.
 
 #### CanonicalTransactionChain
 
@@ -48,9 +48,9 @@ Works as a proposer.
 
 #### navigating on L1 deposit address
  
-You can take [L1 deposit address](https://github.com/oasysgames/oasys-optimism/blob/8f1467bf973a6587fb7482e60cecaf7c50ee78f9/packages/contracts/contracts/oasys/L1/build/L1BuildDeposit.sol#L37) from following event. 
+You can take [L1 deposit address](https://github.com/oasysgames/oasys-optimism/blob/8f1467bf973a6587fb7482e60cecaf7c50ee78f9/packages/contracts/contracts/oasys/L1/build/L1BuildDeposit.sol#L37) from following the event. 
 
-or you can see `0x5200000000000000000000000000000000000009` 's log on verse building. 
+Or you can see `0x5200000000000000000000000000000000000009` 's log on verse building. 
 
 
 ## Related Factory Contract 
@@ -60,21 +60,25 @@ or you can see `0x5200000000000000000000000000000000000009` 's log on verse buil
 
 #### Factory Contract
 
-```json
+Factory contract deployed by validator helps deploy some tokens or verse on Oasys or bridging tokens on Oasys.
+You can check [factory contract](https://github.com/oasysgames/oasys-validator/blob/e33f9c71d4c2bb2ba62f94c979c3d293979904d9/contracts/oasys/contracts.go) for list of factory contract. 
+
+
+```JSON
 L1StandardERC20Factory: '0x5200000000000000000000000000000000000004'
 ```
-Standard ERC 20 Factory contract for Making ERC-20.
+Standard ERC20 Factory contract is a tool for deploying ERC-20 tokens on Hub Layer.
 
-```json
+```JSON
 L1StandardERC721Factory: '0x5200000000000000000000000000000000000005'
 ```
 
-Standard ERC 721 Factory contract for Making ERC-721.
+Standard ERC 721 Factory contract is a tool for deploying ERC-721 tokens on Hub Layer.
 
 #### Bridge Contract
 L1_Bridge_Contract address is different for each Verse-Layer.
 
-```json
+```JSON
 "Proxy__OVM_L1CrossDomainMessenger": "0x6D544390Eb535d61e196c87d6B9c80dCD8628Acd",
 "Proxy__OVM_L1StandardBridge": "0xB1eDe3F5AC8654124Cb5124aDf0Fd3885CbDD1F7",
 "Proxy__OVM_L1ERC721Bridge": "0xA6D6d7c556ce6Ada136ba32Dbe530993f128CA44",
@@ -83,13 +87,13 @@ L1_Bridge_Contract address is different for each Verse-Layer.
 
 ### Verse Layer 
 
-Pre-Deployed contracts. All Verse Layer Contracts are same. 
+Pre-Deployed contracts. All Verse Layer Contracts are the same. 
 
 ```json
 L2CrossDomainMessenger: '0x4200000000000000000000000000000000000007',
 ```
 
-```json
+```JSON
 L2StandardBridge: '0x4200000000000000000000000000000000000010',
 ```
 
@@ -97,8 +101,62 @@ L2StandardBridge: '0x4200000000000000000000000000000000000010',
 L2StandardTokenFactory: '0x4200000000000000000000000000000000000012',
 ```
 
-```json
+```JSON
 L2ERC721Bridge: '0x6200000000000000000000000000000000000001',
 ```
 
-Because L2StandardERC721 contract is not pre-deployed, if you use ERC721, you have to deploy [L2StandardERC721](https://github.com/oasysgames/oasys-optimism/blob/develop/packages/contracts/contracts/oasys/L2/token/L2StandardERC721.sol).
+Because the L2StandardERC721 contract is not pre-deployed, if you use ERC721, you have to deploy [L2StandardERC721](https://github.com/oasysgames/oasys-optimism/blob/develop/packages/contracts/contracts/oasys/L2/token/L2StandardERC721.sol).
+
+## Adding Chainlist 
+
+
+_data/chains/eip155-your_verse_chain_no.json
+
+On `your_verse_chain_no`, you need to add a chain number not taken from other chain numbers.
+
+Here is an example. 
+
+```json
+{
+  "name": "Oasys Mainnet",
+  "chain": "Oasys", //Your O
+  "icon": "oasys", //icon for your_chain_name.json
+  "rpc": ["https://rpc-mainnet.oasys.games"], // RPC address
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "OAS", // Your Verse Currency name. If it does not have a currency, the default is OAS. 
+    "symbol": "OAS", // Your symbol 
+    "decimals": 18  // 18 Decimal is default on Oasys.
+  },
+  "infoURL": "https://oasys.games", // URL of your landing page. 
+  "shortName": "OAS", 
+  "chainId": 248, // Your chain ID
+  "networked": 248, // Your Network ID (you can select same as chain ID)
+  "explorers": [
+    {
+      "name": "blockscout",
+      "url": "https://explorer.oasys.games", // URL of your explorer. 
+      "standard": "EIP3091" // Default is EIP3091
+    }
+  ]
+}
+```
+
+_data/icons/your_chain_name.json
+
+```json
+[
+  {
+    "url": "", // Your IPFS path of logo.
+    "width": 3600, // IPFS icon's width in pixels.
+    "height": 3600, // IPFS icon's height in pixels.
+    "format": "png" // IPFS icon's format.
+  }
+]
+```
+
+On `your_chain_name`, you need to add a chain name.
+
+On the `icons` directory, you can add icon using the ipfs path. 
+
+
