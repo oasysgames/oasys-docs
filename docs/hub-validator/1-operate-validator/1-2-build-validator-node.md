@@ -47,7 +47,7 @@ While you are starting on Geth, you will have question,
 
 `PLEASE SELECT YES` If you are willing to start validator right away.
 
-If you select NO, Navigate [Q4](/docs/hub-validator/operate-validator/1-7-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh). On Validator Setup, you may have to turn it on manually, which might take time. 
+If you select NO, Navigate [Q4](/docs/hub-validator/operate-validator/1-8-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh). On Validator Setup, you may have to turn it on manually, which might take time. 
 
 
 ### 5. Check `sestatus`
@@ -330,4 +330,4 @@ If not working :
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 ``` 
 
-2. [Check Block sync status.](/docs/hub-validator/operate-validator/1-7-faq#q5-i-want-to-know-block-sync-status)
+2. [Check Block sync status.](/docs/hub-validator/operate-validator/1-8-faq#q5-i-want-to-know-block-sync-status)

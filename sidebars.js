@@ -190,8 +190,9 @@ const sidebars = {
         'hub-validator/operate-validator/1-3-join-validator-cli',
         'hub-validator/operate-validator/1-4-join-validator-web',
         'hub-validator/operate-validator/1-5-setup-verifier',
-        'hub-validator/operate-validator/1-6-check-staking',
-        'hub-validator/operate-validator/1-7-faq',
+        'hub-validator/operate-validator/1-6-monitor',
+        'hub-validator/operate-validator/1-7-check-staking',
+        'hub-validator/operate-validator/1-8-faq',
       ]
     },
     {

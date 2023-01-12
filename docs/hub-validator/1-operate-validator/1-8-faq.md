@@ -162,7 +162,7 @@ miner: "0xB6e607Fb81223C87DbCA06451594202A82C4D6eA"
 ```
 
 You can check, `"0xec5497b5f3f72105dd720b627ef394fe6d0bc41ed542fc4ebda52f022f643125"` 's miner is `"0xB6e607Fb81223C87DbCA06451594202A82C4D6eA"`. 
-If miner is displayed `"0x0000000000000000000000000000000000000000"`, you need to turn on miner. You can navigate onto [Q4. block validation](/docs/hub-validator/operate-validator/1-7-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh).
+If miner is displayed `"0x0000000000000000000000000000000000000000"`, you need to turn on miner. You can navigate onto [Q4. block validation](/docs/hub-validator/operate-validator/1-8-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh).
 
 
 
