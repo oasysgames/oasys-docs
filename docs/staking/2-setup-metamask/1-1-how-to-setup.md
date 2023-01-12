@@ -13,12 +13,12 @@ Metamasks can be used by downloading browser extensions or mobile application ve
 
 1. Visit [metamask.io](https://metamask.io/download/) to install a browser extension or a mobile application that fits your smartphone model.
 2. If a wallet already exists after installing a metamask, run a wallet recovery, or if you make a new wallet, create a wallet through the wallet-making function provided by metamask.
-3. Once you have created a new wallet, save the seed phrase in your wallet in a safe place.
+3. Once you have created a new wallet, save the seed phrase in your Wallet in a safe place.
 
 ## Metamask Features
 
-1. Public key : The public key (address) is a hexadecimal string used by the user to send cryptocurrency to the Wallet.
-2. Private key : The user uses the private key to send cryptocurrency from the account and recover the wallet of the 'one' wallet created on the metamask account, so it should be secured.
+1. Public key: The public key (address) is a hexadecimal string used by the user to send cryptocurrency to the Wallet.
+2. Private key: The user uses the private key to send cryptocurrency from the account and recover the Wallet of the 'one' wallet created on the metamask account, so the private key should be secured.
 3. Seed phrase : The seed phrase is the recovery password used to recover the metamask account, and if you recover through the seed phrase, you can recover the 'all' wallets created on the metamask account. You need to keep the seed phrase in a secure location.
 
 * You should maintain security so that the private key and seed phrase is not disclosed to others.
@@ -44,10 +44,10 @@ When you click the Add network button, a web page is called where you can add a 
 
 You can find RPC / Chain ID on [RPC Environment](/docs/staking/rpc-endpoint/1-1-rpc-endpoint).
 
-Or login onto Oasys Hub add newtork automatically.
+Or login onto Oasys Hub and add network automatically.
 
 
-## Adding token 
+## Adding a token 
 
 ![metamask1](/img/docs/tech/metamask/image1.png)
 
@@ -72,4 +72,3 @@ Select `Connect Hardware Wallet`.
 
 ![ledger2](/img/docs/tech/ledger/image2.png)
 
-Select `Ledger`.
