@@ -109,8 +109,16 @@ Because the L2StandardERC721 contract is not pre-deployed, if you use ERC721, yo
 
 ## Adding Chainlist 
 
+Chainlist is a web that provides an easy way to add a chain for users. It is recommended for all verses to add a verse on Chainlist. 
 
-_data/chains/eip155-your_verse_chain_no.json
+### Procedure for adding Chainlist
+
+1. Navigate onto [Chainlist github](https://github.com/ethereum-lists/chains).
+2. Fork the repo, add `_data/chains/eip155-your_verse_chain_no.json` & `_data/icons/your_chain_name.json`
+3. Submit a pull request. 
+
+
+#### `_data/chains/eip155-your_verse_chain_no.json`
 
 On `your_verse_chain_no`, you need to add a chain number not taken from other chain numbers.
 
@@ -142,7 +150,11 @@ Here is an example.
 }
 ```
 
-_data/icons/your_chain_name.json
+#### `_data/icons/your_chain_name.json`
+
+On `your_chain_name`, you need to add a chain name.
+
+On the `icons` directory, you can add icon using the ipfs path. 
 
 ```json
 [
@@ -155,8 +167,5 @@ _data/icons/your_chain_name.json
 ]
 ```
 
-On `your_chain_name`, you need to add a chain name.
-
-On the `icons` directory, you can add icon using the ipfs path. 
 
 
