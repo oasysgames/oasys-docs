@@ -160,5 +160,8 @@ Click on `Save and test` and wait for the confirmation to pop up.
 
 For details, refer to [InfluxDB docs](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/).
 
+### Setup Dashboard
+For a Geth monitoring dashboard, copy the ID of [this dashboard](https://grafana.com/grafana/dashboards/13877-single-geth-dashboard/) and paste it into the `Import page` in Grafana. After saving the dashboard, it should look dashboard.
+
 ### Customize Dashboard
 If you want to customize the dashboard, please refer to [Ethereum docs](https://ethereum.org/en/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/#setting-up-grafana).
