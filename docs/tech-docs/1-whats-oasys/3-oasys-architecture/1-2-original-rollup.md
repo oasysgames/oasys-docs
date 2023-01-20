@@ -8,9 +8,7 @@ First we need to introduce, Why Oasys using Optimistic Roll-up :
 In Ethereum's Layer 1 structure, there were many scalability problems. For example, for many users, even if they wanted to give fast transactions, there was a limit for users and builders due to the limitation of transaction speed. 
 This issue was highly adopted while designing Oasys. As a result, the roll-up was determined to be the most reliable of the scaling solutions at this point. 
 
-In the case of the existing Layer 2, one Layer 2 accepts many Ecker systems. This creates a new Layer 2 name, but the resulting project teams are attributed to Ethereum. 
-Introducing it as a scaling solution, but it is greatly affected by Ethereum. 
-
+In the case of the existing Layer 2, one Layer 2 is greatly affected by Ethereum's status. 
 Of course, Ethereum is not a specialized part of the game because it is a chain made for many purposes. 
 
 To address this and ensure the verses' independence, Oasys has come to form a Multiple Optimistic Rollup. 

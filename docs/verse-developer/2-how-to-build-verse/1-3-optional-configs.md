@@ -139,7 +139,7 @@ Here is an example.
   "infoURL": "https://oasys.games", // URL of your landing page. 
   "shortName": "OAS", 
   "chainId": 248, // Your chain ID
-  "networked": 248, // Your Network ID (you can select same as chain ID)
+  "networkid": 248, // Your Network ID (you can select same as chain ID)
   "explorers": [
     {
       "name": "blockscout",
