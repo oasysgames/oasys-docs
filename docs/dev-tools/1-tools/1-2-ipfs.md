@@ -1,5 +1,5 @@
 # IPFS
-[IPFS(Interplanetary File System)](https://ipfs.tech/) is a decentralized p2p file system that wants to connect all computers. Many Web3 projects use it, and recently many NFT projects have required IPFS for NFT storage.
+[IPFS(Interplanetary File System)](https://ipfs.tech/) is a decentralized p2p file system that aims to connect all computers. Many Web3 projects use it, and recently many NFT projects have required IPFS for NFT storage.
 
 IPFS uses content addressing to identify content, not its location, and uses [IPLD](https://ipld.io/) to import content from raw content to IPFS addresses that uniquely identify content on the IPFS network.
 

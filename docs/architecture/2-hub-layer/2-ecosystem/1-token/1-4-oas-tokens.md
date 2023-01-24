@@ -2,19 +2,20 @@
 
 Native Token. 
 
-OAS does not have any contract address. 
+OAS does not have a contract address. 
 
 # WOAS
 
 Wrapped Oasys Token
 
-ERC-20 Standard token, easy use for bridges. 
+ERC-20 Standard token with easy use for bridging. 
 
 # sOAS & LOAS
 
 ## sOAS
 
 OAS is our native token, and sOAS means Stakeable Oasys Token.
+<!-- TRANSLATION: This sentence is quite clumsy, but not sure what is meant without japanese source -->
 Since we need a locked-up token but POS needs staking for validators, we have made sOAS.
 
 ### Contract of sOAS
@@ -28,15 +29,15 @@ sOAS contract address is `0x5200000000000000000000000000000000000002`
 
 - [sOAS on Github](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/SOAS.sol)
 
-First, look at this code if you are familiar with it. 
-
+If you're familiar with solidity, take a look at this code first.
+<!-- TRANSLATION: Is 'the minter can move it only with the minter's permission' really correct? -->
 sOAS can be minted by anyone, but the minter can move it only with the minter's permission.
 
 ### Vesting period
 
 While we mint a token from a contract, Since (Vesting Start) and Until (Vesting Ends)  is calculated by a UNIX timestamp. 
 
-The Calculation formula is : 
+The Calculation formula is: 
 
 ```bash
 ClaimableOAS = (now - Since) ÷ (Until - Since) × sOAS holding amount
@@ -45,7 +46,8 @@ ClaimableOAS = (now - Since) ÷ (Until - Since) × sOAS holding amount
 
 For example, 
 
-If token is minted 1,000 sOAS
+If 1,000 sOAS tokens are minted:
+<!-- TRANSLATION: Since is Jan 1, 2023? Instead of 2024? -->
 Since is Jan 1, 2024
 Until is Dec 31, 2024
 
@@ -62,10 +64,10 @@ And you can retrieve locked up token like this.
 | 2024 Dec 31 | 1000 sOAS → 1000 OAS|  
 
 
-**Please remind all example token claims are approximate numbers. Therefore, it might not be accurate.**
+**Please keep in mind that all example token claims are approximate numbers. Therefore, they might not be accurate.**
 
-### How to claim sOAS onto OAS​
-You can claim sOAS onto OAS​ at [oasys-pos-fe](https://tools-fe.oasys.games/sOAS)
+### How to claim sOAS into OAS​
+You can claim sOAS into OAS​ at [oasys-pos-fe](https://tools-fe.oasys.games/sOAS)
 
 ## LOAS
 
@@ -73,8 +75,8 @@ OAS is our native token, and LOAS means Locked Oasys Token.
 
 ### Purpose of LOAS
 
-On normal chain, Even if it's on Lock-up period, sometimes you can not claim your token even if you have right on it. 
-You can claim same as sOAS while vesting period. LOAS would be mainly sent for our contributors. 
+On a normal chain, even during the Lock-up period, sometimes you can not claim your token despite having the right to do so. 
+You can claim the same as sOAS during the vesting period. LOAS would be mainly sent for our contributors. 
 
 ### Contract of LOAS
 
@@ -94,8 +96,9 @@ ClaimableOAS = (now - Since) ÷ (Until - Since) × LOAS holding amount
 ```
 
 For example, 
+<!-- TRANSLATION: Since is Jan 1, 2023? Instead of 2024? -->
 
-If token is minted 1,000 LOAS
+When 1,000 LOAS are minted:
 Since is Jan 1, 2024
 Until is Dec 31, 2024
 
@@ -112,7 +115,7 @@ And you can retrieve locked up token like this.
 | 2024 Dec 31 | 1000 LOAS → 1000 OAS|  
 
 
-**Please remind all example token claims are approximate numbers. Therefore, it might not be accurate.**
+**Please keep in mind that all example token claims are approximate numbers. Therefore, they might not be accurate.**
 
-### How to claim LOAS onto OAS​
-You can claim LOAS onto OAS​ at [oasys-pos-fe](https://tools-fe.oasys.games/lOAS)
+### How to claim LOAS into OAS​
+You can claim LOAS into OAS​ at [oasys-pos-fe](https://tools-fe.oasys.games/lOAS)

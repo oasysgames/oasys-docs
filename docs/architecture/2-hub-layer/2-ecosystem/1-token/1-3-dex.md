@@ -1,14 +1,14 @@
 # DEX
 
-Decentralized Exchange. Unlike CEX(Central Exchange), it is an exchange that enables easy trade. 
+Decentralized Exchange. Unlike CEX(Centralized Exchange), it is an exchange that enables easy trade. 
 
-DEX is an innovative smart contract system that opens the market for tokens within a crypto wallet, and it's simple to swap between users. 
+DEX is an innovative smart contract system that opens the market for tokens within a crypto wallet, and makes swapping between users very simple.
 
-## Automation Market Maker (AMM)
+## Automated Market Maker (AMM)
 
 AMM is a system that automatically enables market use according to specific rules.
 
-Using Automation market maker, participants can provide liquidity to facilitate investment in the market. By automating and systemizing, makers create an environment in which liquidity is provided autonomously to the market without relying on intermediaries or third parties.
+Using an automated market maker, participants can provide liquidity to facilitate investment in the market. By automating and systemizing, makers create an environment in which liquidity is provided autonomously to the market without relying on intermediaries or third parties.
 
 AMM uses mathematical formulas to calculate asset prices.
 

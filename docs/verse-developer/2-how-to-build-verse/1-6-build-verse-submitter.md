@@ -1,7 +1,7 @@
 # Verse Submitter
-Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
+The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
 
-If you build verse submitter, first you have to build [L1-Light-node](/docs/verse-developer/how-to-build-verse/1-5-build-L1-light-node).
+If you build a verse submitter, first you have to build [L1-Light-node](/docs/verse-developer/how-to-build-verse/1-5-build-L1-light-node).
 
 ## About
 Instant Verifier of Verse-Layer for the Oasys Blockchain.
@@ -12,13 +12,13 @@ Instant Verifier of Verse-Layer for the Oasys Blockchain.
 
 - Verification of rollup state, P2P node, and submission of signatures to verification contracts can be used individually.
 
-- All Hub Layer Validator need to install Verse Verifier. 
+- All Hub Layer Validator need to install a Verse Verifier. 
 
 ## Quick Start
 
 Download the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases).
 
-> The Verifier create keccak256 hash of [ethereum signed messages](https://eips.ethereum.org/EIPS/eip-712) with the same private key as the Hub-Layer validator, so it is recommended to run on the same node as the Hub-Layer validator.
+> The Verifier creates a keccak256 hash of [ethereum signed messages](https://eips.ethereum.org/EIPS/eip-712) with the same private key as the Hub-Layer validator, so it is recommended to run on the same node as the Hub-Layer validator.
 
 Create a data directory.
 
@@ -90,8 +90,8 @@ Check the binary from the [releases page](https://github.com/oasysgames/verse-ve
 
 Download the latest release of verifier. 
 
-- For AMD / Intel CPU , Please download AMD. 
-- For ARM based CPU , Please download ARM. 
+- For AMD / Intel CPU, Please download AMD. 
+- For ARM based CPU, Please download ARM. 
 
 Stop the verifier. 
 

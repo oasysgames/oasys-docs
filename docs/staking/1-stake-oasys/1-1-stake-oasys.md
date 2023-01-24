@@ -3,7 +3,8 @@
 
 ## How to Stake / Unstake / Claim using Oasys Hub
 
-Users can stake, unstake, and claim OAS using Oasys Hub. Now learn how to do these actions!
+Users can stake, unstake, and claim OAS using Oasys Hub. 
+Let's take a look at how we can perform these actions!
 
 
 ## 1. Staking
@@ -36,7 +37,7 @@ If you have successfully staked, the following message appears.
 
 ![staking6](/img/docs/techdocs/oasys-hub/success.png)
 
-You can see the activity of transactions in metamask.
+You can see the transaction activity in metamask.
 
 ## 2. Unstaking
 
@@ -64,11 +65,9 @@ For the OAS that you have unstaked from each validator page, you can withdraw th
 
 ### 5. If 10 days have passed, you can withdraw your tokens by pressing the withdraw button. 
 
-If 10 days have passed, you can withdraw your tokens by pressing the withdraw button. 
-
 You can check how much time is left until the tokens are withdrawable. 
 
-While unstaking, you can not take staking rewards. 
+While unstaking, you can not receive staking rewards. 
 
 ![staking18](/img/docs/techdocs/oasys-hub/withdraw.png)
 
@@ -79,7 +78,7 @@ While unstaking, you can not take staking rewards.
 
 ![staking1](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-### 2. Select the validator you have previously staked.
+### 2. Select the validator you have previously staked into.
 
 ![staking5](/img/docs/techdocs/oasys-hub/staking_stake.png)
 
@@ -91,5 +90,5 @@ While unstaking, you can not take staking rewards.
 
 You can use all wallets supported by metamask. Also, please ensure the Ethereum wallet is installed on a hardware wallet.
 
-**For Staking, you require 1 epoch to be finalized(Approx 1 Day). For Unstaking, You require 10 days to unstake.**
+**Staking requires 1 epoch to be finalized (Approx 1 Day). Unstaking requires 10 days to finalize.**
 

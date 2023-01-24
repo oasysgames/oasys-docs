@@ -2,13 +2,13 @@
 
 ## Staking Reward
 
-Staking rewards are a must for the architecture of POS. Therefore, for the stability of the network, we have assigned Staking Rewards on Tokenomics. POS validates the network through the Proof of Staking. Staking reward is calculated in every epoch.
+Staking rewards are a must for any POS architecture. Therefore, for the stability of the network, we have assigned Staking Rewards through Tokenomics. POS validates the network through the Proof of Staking. Staking reward are calculated every epoch.
 
 ## Commission 
 
-Vallidator, while validating, stabilises the network and mediates transactions. 
-The delegator can delegate the token to the Validator, the Validator can receive a delegated token, and the Validator can receive commissions from the delegator. 
+Validators will mediate transactions and stabilize the network.
+The delegator can delegate tokens to the Validator, the Validator can receive a delegated token, and the Validator can receive a commission from the delegator. 
 
 ## Miner Incentives 
 
-The person who created the block is called Miner. Miners receive the gas fee used in the block. Under the EIP1559 standard, a small amount of gas fee will burn, and the gas fee used in the block will be paid to the Validator Owner.
+The group of people creating blocks are called Miners. Miners receive the gas fee used in the block. Under the EIP1559 standard, a small amount of the gas fee will burn, and the gas fee used in the block will be paid to the Validators Owner.

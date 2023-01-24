@@ -1,7 +1,7 @@
 # L1 Light Node
 Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
 
-If you build verse submitter, you have to build L1-Light-node following this page.
+If you build a verse submitter, you have to build L1-Light-node following this page.
 
 ## Check Requirements
 
@@ -9,7 +9,7 @@ Please Check [Validator_Requirements](/docs/hub-validator/operate-validator/1-1-
 
 ## Express Setup 
 
-Note that We've tested Express Setup on CentOS, so command may differ on other OS.
+Note that We've tested Express Setup on CentOS, so the commands may differ on another OS.
 You can run any Linux OS for nodes.
 
 ### 1. Check command `unzip` and `wget` is installed
@@ -31,7 +31,7 @@ $apt install wget
 
 https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0/setup.sh
 
-please check you are downloading latest setup.sh. check from [latest release](https://github.com/oasysgames/oasys-validator/releases)
+please make sure you are downloading the latest setup.sh. check from [latest release](https://github.com/oasysgames/oasys-validator/releases)
 
 ### 3. Giving Permission to Setup file  
 
@@ -44,7 +44,7 @@ $ sudo chmod +x setup.sh
 $ ./setup.sh
 ```
 
-While you are starting on Geth, you will have question, 
+While you are starting on Geth, you will be asked a question, 
 
 **Do you want to start block validation automatically?**
 
@@ -233,7 +233,7 @@ $ sudo -u geth geth \
 
 Immediately after startup, the block synchronization process takes place. The progress of synchronization can be checked with the following command. 
 
-Please check installed directory, and write the command below to check sync:
+Please check the installed directory, and write the command below to check sync:
 
 ```
 $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
@@ -270,13 +270,13 @@ $ systemctl stop geth
 
 ### Check keystore
 
-First navigate onto /home/geth
+First navigate to /home/geth
 
 Your default install location is `/home/geth/.ethereum/`.
 
-and Check you have secret key on, `/home/geth/.ethereum/keystore/`, You have `password.txt` on `/home/geth/.ethereum/password.txt`
+and confirm that you have the secret key on, `/home/geth/.ethereum/keystore/`, You have `password.txt` on `/home/geth/.ethereum/password.txt`
 
-Back up `secret key`, `password.txt` before upgrade. 
+Back up `secret key`, `password.txt` before upgrading. 
 
 ```
 Secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11-06.835917424Z--abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd

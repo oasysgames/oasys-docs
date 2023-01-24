@@ -1,10 +1,10 @@
 # Verse Proxy
 
-This is proxy to control access allow list to Verse Layer.  
+This is a proxy to control the access allow list to the Verse Layer.  
 Verse-Proxy is made by [Nest](https://github.com/nestjs/nest).  
 
-Verse-Proxy can control following items.  
-- jsonrpc method
+Verse-Proxy can control following items:  
+- jsonrpc methods
 - transaction's from, to, value
 - address which can deploy smart contract
 
@@ -17,7 +17,7 @@ git clone git@github.com:oasysgames/verse-proxy.git
 ```
 
 ### 2. Set access allow list
-Set access allow list at following file.  
+Set the access allow list in the following files.  
 Details are described later.
 - `src/config/configuration.ts`
 - `src/config/transactionAllowList.ts`

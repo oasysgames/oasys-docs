@@ -1,16 +1,16 @@
 # Manual for Building Verse
 
 1,000,000 OAS is required to validate the Verse-Layer node.
-It has a 180days lockup on the first deployment for a builder wallet.
-But on Testnet, it's free; You can try Verse Testnet with [Faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
+There's a 180 days lockup period on the first deployment for a builder wallet.
+But on the Testnet, it's free; You can try the Verse Testnet with [Faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
 
-If you want to test deploying contracts and execute transactions on Verse, please use [SAND Verse](/docs/verse-developer/how-to-build-verse/1-6-sandverse).
+If you want to test deploying contracts and execute transactions on the Verse, please use [SAND Verse](/docs/verse-developer/how-to-build-verse/1-6-sandverse).
 
 ## Validator Build Steps
 
 ![verse build](/img/docs/techdocs/verse/versebuild.png)
 
-For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/1-1-verse-layer), you can see it before deploying Verse. 
+For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/1-1-verse-layer), you can take a look at it before deploying a Verse. 
 
 ## 1. Requirements
 
@@ -37,7 +37,7 @@ docker-compose run --rm wallet
 The created wallets will be saved to `./data/wallet/keys.txt`.
 
 Notes:  
-**1. These wallets require some tokens to run Verse-Layer. For testnet, you can get a token from [Faucet](https://faucet.testnet.oasys.games/).**  
+**1. These wallets require some tokens to run the Verse-Layer. For the testnet, you can get tokens from [Faucet](https://faucet.testnet.oasys.games/).**  
 **2. Be sure to back up this file!**
 
 ```text:./data/wallet/keys.txt
@@ -60,30 +60,30 @@ key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 
 ## 4-1. Deploy contracts for Verse-Layer to Hub-Layer.
 
-If you've already built Verse, skip this procedure.
+If you've already built the Verse, skip this procedure.
 And you can check VerseInfo with build_transaction at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
 ### Connect wallet
-Access to [oasys-pos-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the Verse.
+Access [oasys-pos-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the Verse.
 
-Connect the wallet using the builder in the metamask.
+Connect the wallet using the builder in metamask.
 If you successfully connect the wallet, the builder's address will appear next to "Owner Address:".
 ![Connect wallet](/img/docs/techdocs/oasys-pos-fe/connect_wallet.png)
 
 ### Deposit OAS to build Verse.
-For mainnet, deposit 1000000 OAS, for testnet, deposit 0.000000001 OAS.
+For the mainnet, deposit 1000000 OAS, for the testnet, deposit 0.000000001 OAS.
 
-The amount of OAS required for the builder in advance. If you use testnet, please reserve OAS in [Faucet](https://faucet.testnet.oasys.games).
+The amount of OAS is required for the builder in advance. If you use the testnet, please reserve OAS in [Faucet](https://faucet.testnet.oasys.games).
 
 If the deposit is successful, you will see the OAS deposited next to "Deposit amount:".
 ![Deposit](/img/docs/techdocs/oasys-pos-fe/deposit.png)
 
 ### Build verse
-It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) before building Verse.
+It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) before building a Verse.
 
 e.g. [Register Oasys mainnet chainId](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
 
-To build Verse, set the following
+To build a Verse, set the following
 - chainId to be set in the Verse
 - address of the sequencer
 - address of the proposer
@@ -150,7 +150,7 @@ PROPOSER_KEY=
 ```
 
 > **Warning**  
-> Do not change `BLOCK_SIGNER_ADDRESS` and `BLOCK_SIGNER_KEY`. If you change them, the Oasys team will not be able to run replica nodes for Verse-Layer. Furthermore, if the replica node does not exist, the verifier cannot verify the rollup from your Verse-Layer. As a result, the latency of token withdrawal from Verse-Layer to Hub-Layer increases from about 2 minutes to 7 days, resulting in bad UX of the bridge.
+> Do not change `BLOCK_SIGNER_ADDRESS` and `BLOCK_SIGNER_KEY`. If you change them, the Oasys team will not be able to run replica nodes for the Verse-Layer. Furthermore, if the replica node does not exist, the verifier cannot verify the rollup from your Verse-Layer. As a result, the latency of token withdrawal from the Verse-Layer to Hub-Layer increases from about 2 minutes to 7 days, resulting in bad UX of the bridge.
 
 ## 6. Run Containers
 
@@ -167,7 +167,7 @@ docker-compose up -d message-relayer
 - batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
 
 ## 7. Set Instant Verifier(For Mainnet only)
-Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
+The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
 
 
 Please follow these pages if you want to set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier).
@@ -176,10 +176,10 @@ Please follow these pages if you want to set [Instant Verifier](/docs/architectu
 
 ## Permissioned chain
 
-For running verse builder, by considering the following parameter on the permissioned chain may help: 
+For running the verse builder, considering the following parameter on the permissioned chain may help: 
 
-Deploying permission-less makes scam or non-approved contracts, which makes users unsafe. 
-By approving transaction freely on Verse, you may be attacked by an unexpected gas attack, which can be controlled by [limiting proxy](/docs/verse-developer/how-to-build-verse/1-4-verse-proxy). 
+Deploying permission-less creates scam or non-approved contracts, which makes users unsafe. 
+By approving transaction freely on the Verse, you may be attacked by an unexpected gas attack, which can be controlled by [limiting proxy](/docs/verse-developer/how-to-build-verse/1-4-verse-proxy). 
 
 
 

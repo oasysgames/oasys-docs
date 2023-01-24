@@ -1,21 +1,21 @@
 # Setup Instant Verifier
 
 ## About
-Instant Verifier of Verse-Layer for the Oasys Blockchain.
+Instant Verifier of the Verse-Layer for the Oasys Blockchain.
 
-- Verify the rolluped state by Verse-Layer to the Hub-Layer, create signature and share with other verifiers via P2P.
+- Verify the rolled up state from the Verse-Layer to the Hub-Layer, create signatures and share with other verifiers via P2P.
 
 - The verifier is also **verified by the Hub-Layer validator** and can finalize rollups by collecting signatures for 51% or more of total stake amount and submitting it to the verification contract.
 
-- Verification of rollup state, P2P node, and submission of signatures to verification contracts can be used individually.
+- Verification of the rollup state, P2P node, and submission of signatures to verification contracts can be used individually.
 
-- All Hub Layer Validator need to install Verse Verifier. 
+- All Hub Layer Validator need to install a Verse Verifier. 
 
 ## Quick Start
 
 Download the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases).
 
-> The Verifier create keccak256 hash of [ethereum signed messages](https://eips.ethereum.org/EIPS/eip-712) with the same private key as the Hub-Layer validator, so it is recommended to run on the same node as the Hub-Layer validator.
+> The Verifier creates a keccak256 hash of [ethereum signed messages](https://eips.ethereum.org/EIPS/eip-712) with the same private key as the Hub-Layer validator, so it is recommended to run it on the same node as the Hub-Layer validator.
 
 Create a data directory.
 

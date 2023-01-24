@@ -5,7 +5,6 @@ If an elected miner is not responding, consensus seeks a new block miner, fixed 
 
 ## Uncle block 
 
-Oasys Does not have any Uncle Block. 
-Since all block producer is selected on concensus.
+Oasys doesn't have any Uncle Block, since all block producers are selected by concensus.
 
 ## 

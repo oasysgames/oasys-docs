@@ -3,11 +3,12 @@
 
 # Hardhat
 
-Hardhat is a development environment to Ethereum software.
+Hardhat is a development environment for Ethereum based software.
 
-Hardhat allows developers to test, compile, debug and distribute their dapps in the Ethereum blockchain,and hardhat has stack tracking and messaging for errors during debugging, making it easier for developers to analyze and troubleshoot the causes of errors.
+Hardhat allows developers to test, compile, debug and distribute their dapps on the Ethereum blockchain
+It has stack tracking and the ability to log errors and messages to the console, making it easier for developers to analyze and troubleshoot the causes of errors.
 
-Hardhat also offers a variety of utility plug-ins to help develop the plug-ins that developers need by installing them.
+Hardhat also offers a variety of utility plug-ins which can be installed to make development easier.
 
 ## Hardhat Features
 
@@ -15,11 +16,11 @@ Hardhat also offers a variety of utility plug-ins to help develop the plug-ins t
 
 - Hardhat provides a wide range of libraries and plug-ins, and allows users to create plug-ins themselves.
 
-- Hardhat provides a flexible test environment for developers by providing a `Hardhat network`, a local test environment that can directly interact with smart contract agreements.
+- Hardhat provides a flexible test environment for developers by providing a `Hardhat network`, a local test environment that can directly interact with smart contracts.
 
 ## Install Hardhat
 
-To install Hardhat, go to an empty folder, initialize an npm project (i.e. npm init), and run.
+To install Hardhat create an empty folder and initialize a npm project (i.e. npm init).
 
 ```
 npm init
@@ -37,7 +38,7 @@ npx hardhat
 
 If you run npx hardhat now, you will be shown some options to facilitate project creation.
 
-You can create a js,ts-based project or create a blank hardhat.config.js file using the following options:
+You can create a js/ts-based project or create a blank hardhat.config.js file using the following options:
 
 ```
 888    888                      888 888               888
