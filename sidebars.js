@@ -92,22 +92,17 @@ const sidebars = {
             id: 'architecture/hub-layer/ecosystem/token/1-1-ft-types',
           },
           collapsed: true,
-          items: [
-            {
-              type: 'category',
-              label: 'Token in Oasys', 
-              link: {
-                type: 'generated-index',
-              },
-              collapsed: true,
-              items: [
-                // 'architecture/hub-layer/ecosystem/token/1-1-ft-types',
-                // 'architecture/hub-layer/ecosystem/token/1-2-bridge',
-                // 'architecture/hub-layer/ecosystem/token/1-3-dex',
-                'architecture/hub-layer/ecosystem/token/1-4-oas-tokens',
-              ]
-            }
-          ]
+          items: [],
+        },
+        {
+          type: 'category',
+          label: 'Token in Oasys(OAS/LOAS/SOAS/WOAS)', 
+          link: {
+            type: 'doc',
+            id: 'architecture/hub-layer/ecosystem/token/1-4-oas-tokens',
+          },
+          collapsed: true,
+          items: [],
         }
       ]
     },

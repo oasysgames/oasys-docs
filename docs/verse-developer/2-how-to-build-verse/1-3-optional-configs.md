@@ -1,6 +1,10 @@
 # Optional Configurations
 
 
+## Registering on Oasys hub
+
+Registering chain for bridge on oasys hub: https://docs.google.com/forms/d/e/1FAIpQLSf3rk8s1Da1NjwoSGPYQBaawIKBl0_AGQKXobF78P79XupQWA/viewform
+
 ## Address List
 
 After the set up, you may configure files in the: 

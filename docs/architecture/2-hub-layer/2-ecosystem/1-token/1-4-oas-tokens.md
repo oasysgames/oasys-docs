@@ -1,10 +1,12 @@
-# OAS
+# Token in Oasys(OAS/LOAS/SOAS/WOAS) 
+
+## OAS
 
 Native Token. 
 
 OAS does not have a contract address. 
 
-# WOAS
+## WOAS
 
 Wrapped Oasys Token
 
