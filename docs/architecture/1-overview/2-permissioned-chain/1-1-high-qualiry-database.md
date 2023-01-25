@@ -15,7 +15,4 @@ Verse builders don't need to stress about bot transactions or scams that could h
 ## Efficient loading
 
 While constructing a Verse, verse operators can build a Verse read server that can read Verse transactions worldwide. 
-The Read server's scalability is unlimited. You can scale the reading capability by making Verse replica nodes.
-
-<!-- TRANSLATION: Not quite sure what is meant here -->
-After making Verse replica nodes, you can only send your verse by allowing actual transactions. 
+The Read server's scalability is unlimited. You can scale the reading capability by making Verse replica nodes
