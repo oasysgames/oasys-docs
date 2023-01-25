@@ -31,7 +31,14 @@ sOAS contract address is `0x5200000000000000000000000000000000000002`
 
 If you're familiar with solidity, take a look at this code first.
 <!-- TRANSLATION: Is 'the minter can move it only with the minter's permission' really correct? -->
-sOAS can be minted by anyone, but the minter can move it only with the minter's permission.
+sOAS can be minted by anyone, but the receiver can move it only with the minter's permission.
+
+||  |
+|----------------|----------------|
+|Mint|Anyone can mint|
+|Receive|Anyone|
+|Move token|Only by minter|
+
 
 ### Vesting period
 
