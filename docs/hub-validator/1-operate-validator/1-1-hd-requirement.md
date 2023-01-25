@@ -17,7 +17,6 @@ Since producing more blocks requires storage, if your node is operated for a lon
 |DISK|500GB SSD|
 |Network|100Mbps|
 
-<!-- TRANSLATION: Is it really  10,000,000 OAS and not 1,000,000 OAS like mentioned in other chapters? -->
 **10,000,000 OAS is required to be staked by Delegator to validate the Hub-Layer node**
 
 ## Firewall Settings
