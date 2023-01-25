@@ -4,7 +4,7 @@
 
 ### Q1. Validator Header not found
     
-On Hub layer manual setup Step.8, you may see lots of following error. There is no problem, so please ignore them.
+On the Hub layer manual setup Step 8, you may see a few of the following errors. There is no problem, so please ignore them.
 
 ERROR[05-30|09:57:30.102] Failed to get validators in=Snapshot.apply hash=d069bc..ef6390 number=97920 err="header for hash not found"
     
@@ -14,15 +14,15 @@ ERROR[05-30|09:57:30.102] Failed to get validators in=Snapshot.apply hash=d069bc
 $ sudo -u geth /usr/local/bin/geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 ```
 
-On Manual Setup Step 9 or Using this command, You can see command result `false` when block sync is done
+On manual setup step 9 or using this command, You can see the command result is `false` when block sync is completed.
 
-After synced, whenever you receive a new block from another Validator, you will see a log similar to the following:
+After syncing, whenever you receive a new block from another validator, you will see a log similar to the following:
 
 INFO [05-30|10:00:52.359] Imported new chain segment blocks=1 txs=0 mgas=0.000 elapsed=2.138ms mgasps=0.000 number=105,080 hash=9e2e47..97dbb5 dirty=0.00B
 
-### Q3. Restore Public key& Address
+### Q3. Restore Public key & Address
 
-You can run python 3 script, with following commands : 
+You can run python a 3 script, with following commands : 
 
 ```
 from eth_account._utils.legacy_transactions import (
@@ -60,11 +60,11 @@ print(Web3.toChecksumAddress(recoverd_address))
 ### Q4. I have selected No on Do you want to start block validation automatically? on setup.sh
 
 Since you have selected automatic block validation, 
-Block miner status is `off`, so you need to turn on.
+Block miner status is `off`, so you need to turn it on.
 
 
 
-1. in systemd unit file please add geth start option `--alow-insecure-unlock`
+1. In the systemd unit file please add geth start option `--alow-insecure-unlock`
 
 ```
 ExecStart=$INSTALL_PATH \
@@ -129,14 +129,13 @@ Block sealing failed
 ```
 ---
 
-### Q5. I want to know block sync status 
+### Q5. I want to know the block sync status 
 
 ```
 $ sudo -u geth /usr/local/bin/geth attach /home/geth/.ethereum/geth.ipc -exec 'eth.getBlockByNumber("0x0")'
 ```
 
-You can figure out your genesis.json is right file with this.   
-You can figure with hash parameter.
+You can figure out your genesis.json is the right file through the hash parameter.
 
 For example, If you have installed v1.0.0, You will find following hash.
 
@@ -145,14 +144,14 @@ hash: "0x7027e4041ce0185f45aab280b852d49193f5adb0f728a0cb3846a9c9bbf4b7fe"
 miner: "0x0000000000000000000000000000000000000000"
 ```
 
-Each version have original hash on genesis block, `'eth.getBlockByNumber("0x0")'`can check you've installed right version.
+Each version has an original hash on the genesis block, `'eth.getBlockByNumber("0x0")'` allows you to check if you've installed the right version.
 
 
 ```
 $ sudo -u geth /usr/local/bin/geth attach /home/geth/.ethereum/geth.ipc -exec 'eth.getBlockByNumber("latest")'
 ```
 
-You can check latest block hash with this. 
+You can check the latest block hash with this. 
 
 For example: 
 
@@ -168,7 +167,7 @@ If miner is displayed `"0x0000000000000000000000000000000000000000"`, you need t
 
 ### Q6. Unit file.
 
-You can check with following unit file, make sure your unit file is written correct.
+You can check with the following unit file, make sure your unit file is written correctly.
 
 ```
 Environment=DATA_DIR=/home/geth/.ethereum
@@ -188,19 +187,19 @@ ExecStart=/usr/local/bin/geth \
   --syncmode full --gcmode archive
 ```
 
-Please check, you have following parameter. 
+Please confirm that you have the following parameter. 
 
 `--allow-insecure-unlock`
 
-You need unlocking, which makes unlock with a password so operator can sign a block. 
+You need to enable unlocking, which allows unlocking with a password so the operator can sign blocks. 
 
 `/home/geth/.ethereum/password.txt`
 
-Make sure you have password (used while making nodes, operator's password on setup.sh) with non-encrypted.
+Make sure you have a password (used while making nodes, operator's password on setup.sh) which is non-encrypted.
 
 `Environment=ETHERBASE=YOUR OPERATOR ADDRESS HERE`
 
-Make sure you have your operator address on here.
+Make sure you have your operator address in here.
 
 
 

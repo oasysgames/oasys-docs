@@ -7,28 +7,29 @@ Metamask is a cryptocurrency wallet that allows you to transfer and manage crypt
 
 Metamask allows you to run the Ethereum dapp directly from your browser without running the entire Ethereum node, enabling you to view and manage cryptocurrency remittances and tokens.
 
-Metamasks can be used by downloading browser extensions or mobile application versions, and Web3 developers can start developing them through browser extensions.
+Metamask can be used by downloading the browser extension or mobile application.
+Web3 developers can start development using the browser extension.
 
 ## Setup Metamask 
 
-1. Visit [metamask.io](https://metamask.io/download/) to install a browser extension or a mobile application that fits your smartphone model.
-2. If a wallet already exists after installing a metamask, run a wallet recovery, or if you make a new wallet, create a wallet through the wallet-making function provided by metamask.
-3. Once you have created a new wallet, save the seed phrase in your Wallet in a safe place.
+1. Visit [metamask.io](https://metamask.io/download/) to install the browser extension or mobile application which fits your smartphone model.
+2. If you already have an existing wallet, run the wallet recovery after installing metamask. If you want to make a new wallet, create it through the wallet creation function provided by metamask.
+3. Once you have created a new wallet, save the seed phrase in a safe place.
 
 ## Metamask Features
 
 1. Public key: The public key (address) is a hexadecimal string used by the user to send cryptocurrency to the Wallet.
 2. Private key: The user uses the private key to send cryptocurrency from the account and recover the Wallet of the 'one' wallet created on the metamask account, so the private key should be secured.
-3. Seed phrase : The seed phrase is the recovery password used to recover the metamask account, and if you recover through the seed phrase, you can recover the 'all' wallets created on the metamask account. You need to keep the seed phrase in a secure location.
+3. Seed phrase: The seed phrase is the recovery password used to recover the metamask account, and if you recover through the seed phrase, you can recover the 'all' wallets created on the metamask account. You need to keep the seed phrase in a secure location.
 
 * You should maintain security so that the private key and seed phrase is not disclosed to others.
 
 ## Add Oasys network on Metamask
 ![Add network on metamask](/img/docs/tech/wallet/add-network-1.png)
 
-First, open your metamask, then click the drop-down arrow button on the currently set network, and the window to set up the network is called. You can change or add networks from this window.
+First, open up metamask, then click the drop-down arrow button on the currently set network, which will open up the network select window. You can change or add networks from this window.
 
-If you are adding a new network, you can add a network by clicking the `Add network` button.
+You can add a new network by clicking the `Add network` button.
 
 
 ![Add network on metamask](/img/docs/tech/wallet/add-network-2.png)
@@ -42,9 +43,9 @@ When you click the Add network button, a web page is called where you can add a 
 
 ## Add Oasys Chain
 
-You can find RPC / Chain ID on [RPC Environment](/docs/staking/rpc-endpoint/1-1-rpc-endpoint).
+You can find the RPC / Chain ID on [RPC Environment](/docs/staking/rpc-endpoint/1-1-rpc-endpoint).
 
-Or login onto Oasys Hub and add network automatically.
+Or log into Oasys Hub and add the network automatically.
 
 
 ## Adding a token 
@@ -64,7 +65,7 @@ Input `Token contract address`.
 
 
 
-## Add Hardwallet(Ledger)
+## Add Hardware wallet(Ledger)
 
 ![ledger1](/img/docs/tech/ledger/image1.png)
 

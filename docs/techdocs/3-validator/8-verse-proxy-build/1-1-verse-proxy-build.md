@@ -1,9 +1,9 @@
 # Verse-Proxy Build
-This is proxy to control access allow list to verse layer.  
+This is a proxy to control the access allow list of the Verse Layer.  
 Verse-Proxy is made by [Nest](https://github.com/nestjs/nest).  
 
-Verse-Proxy can control following items.  
-- jsonrpc method
+Verse-Proxy can control following items:
+- jsonrpc methods
 - transaction's from, to, value
 - address which can deploy smart contract
 
@@ -16,7 +16,7 @@ git clone git@github.com:oasysgames/verse-proxy.git
 ```
 
 ### 2. Set access allow list
-Set access allow list at following file.  
+Set the access allow list in following files.  
 Details are described later.
 - `src/config/configuration.ts`
 - `src/config/transactionAllowList.ts`
@@ -74,7 +74,7 @@ docker run --name verse-proxy -d -p $PORT:$PORT -v $PWD/src/config:/usr/src/app/
 ## Control items
 
 ### Set allowed verse request methods
-You can set allowed verse request methods by regex at `src/config/configuration.ts`.
+You can set allowed verse request methods through regex at `src/config/configuration.ts`.
 ```typescript
 allowedMethods: [
   /^net_version$/,
@@ -97,7 +97,7 @@ Default allowedMethods feature are following.
 - It prohibits the methods of executing a transaction with the authority of verse-geth(e.g. eth_sendTransaction)
 
 ### Set transaction allow list
-You can set allowed transaction list at `src/config/transactionAllowList.ts`.
+You can set the allowed transaction list at `src/config/transactionAllowList.ts`.
 
 #### from, to
 You can control the from and to of a transaction.
@@ -169,7 +169,7 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 |  lte  |  txValue <= condition is allowed  |
 
 #### Deployer
-You can control deployer of a verse.
+You can control the deployer of a verse.
 
 ```typescript
 // Only 0xaf395754eB6F542742784cE7702940C60465A46a can deploy

@@ -17,7 +17,7 @@ influxd
 And you can access InfluxDB through `localhost:8086`.
 
 ### Create User and Database(GUI)
-To store data from geth, you must create a user and database(InfluxDB calls bucket) at InfluxDB.
+To store data from geth, you must create a user and database(InfluxDB calls this bucket) at InfluxDB.
 
 If you can access localhost:8086 from a browser, you can create a user and database.
 
@@ -35,9 +35,9 @@ Please sign in at `http//localhost:8086` with the following setting.
 ![InfluxDB GUI SignIn](/img/docs/techdocs/monitor-validator/influxdb_signin.png)
 
 ### Create User and Database(CLI)
-To store data from geth, you must create a user and database(InfluxDB calls bucket) at InfluxDB.
+To store data from geth, you must create a user and database(InfluxDB calls this bucket) at InfluxDB.
 
-If you cannot access localhost:8086 from a browser, you can create a user and database by InfluxDB-CLI.
+If you cannot access localhost:8086 from a browser, you can create a user and database through the InfluxDB-CLI.
 
 For details, refer to [InfluxDB setup](https://docs.influxdata.com/influxdb/v2.6/install/?t=Set+up+with+the+CLI#set-up-influxdb-through-the-influx-cli).
 
@@ -52,7 +52,7 @@ influx setup \
 ### Check Your Access Token
 InfluxDB data is stored in `~/.influxdbv2`. 
 
-And you can check your access token by the following command.
+And you can check your access token with the following command.
 
 ```shell
 cat ~/.influxdbv2/configs 
@@ -66,7 +66,7 @@ cat ~/.influxdbv2/configs
   active = true
 ```
 
-Save your access token to use by Grafana.
+Save your access token to use with Grafana.
 
 ## Geth Setting
 Please execute the following command to allow geth to store metrics in InfluxDB.
@@ -161,17 +161,17 @@ Click on `Save and test` and wait for the confirmation to pop up.
 For details, refer to [InfluxDB docs](https://docs.influxdata.com/influxdb/v2.0/tools/grafana/).
 
 ### Setup Dashboard
-For a Geth monitoring dashboard, copy the ID of [this dashboard](https://grafana.com/grafana/dashboards/13877-single-geth-dashboard/) and paste it into the `Import page` in Grafana. After saving the dashboard, it should look dashboard.
+For a Geth monitoring dashboard, copy the ID of [this dashboard](https://grafana.com/grafana/dashboards/13877-single-geth-dashboard/) and paste it into the `Import page` in Grafana. After saving the dashboard, you should be able to view it.
 
 ### Customize Dashboard
 If you want to customize the dashboard, please refer to [Ethereum docs](https://ethereum.org/en/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/#setting-up-grafana).
 
 ## Checklist(optional)
 ### Checking Geth Sync
-You can check if your geth synchronizes other geth by checking `Latest block`.
+You can check if your geth synchronizes the other geth by checking `Latest block`.
 
-If `Latest block` increase by four in one minute, your geth is working.
+If `Latest block` increases by four in one minute, your geth is working.
 
 ### Checking Disk
-Due to geth is store data in disk, you have to check if disk is afforded.
+Since geth needs to store data on the disk, you need to make sure there is enough storage space.
 

@@ -51,7 +51,7 @@ Use "oaspos [command] --help" for more information about a command.
 
 ## Validator Subcommands
 ---
-First, set the environment variable to the private key for sign the transaction.
+First, set the environment variable to the private key for signing the transaction.
 
 ```shell
 
@@ -60,7 +60,7 @@ $ export PRIVATE_KEY=0x0123456789abcdfe...
 
 ### Validator Activate Command
 ---
-Use `$ oaspos validator:activate` command to change the validator status to active.
+Use the `$ oaspos validator:activate` command to change the validator status to active.
 
 Errors can occurs in the following situations:
 1. An error occurs if you run `activate` when you are not a validator.

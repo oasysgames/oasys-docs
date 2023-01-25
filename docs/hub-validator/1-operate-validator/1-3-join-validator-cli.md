@@ -1,13 +1,13 @@
 # Join Validator to PoS (CLI)
 
 ## Participating PoS using CLI
-Before participating PoS, You have to complete building validator at [Build Validator Node (geth)](/docs/hub-validator/operate-validator/1-2-build-validator-node)
+Before participating in PoS, you have to complete building a validator at [Build Validator Node (geth)](/docs/hub-validator/operate-validator/1-2-build-validator-node)
 
 And we recommend to [participate PoS using WEB](/docs/hub-validator/operate-validator/1-4-join-validator-web).
 
 ### Download CLI Tool
 
-To run the Staking Contract, Please download CLI tool in Github.
+To run the Staking Contract, Please download the CLI tool from Github.
     
 https://github.com/oasysgames/oasys-pos-cli/releases
 
@@ -15,7 +15,7 @@ https://github.com/oasysgames/oasys-pos-cli/releases
 ### 1. Create owner account
 
 Create a private key for the Owner account.
-If you already have account, you can skip this. 
+If you already have an account, you can skip this step. 
 You can find details in [Wallet](/docs/tech/wallet/1-2).
     
 ```
@@ -29,7 +29,7 @@ Key     : 0x0123456789abcdef0123456789abcdef...
 ```
 
 ### 2. Obtain OAS
-You may need gas fees to stake tokens. So Please check you have sufficient gas. 
+You may need gas fees to stake tokens. So Please check that you have sufficient gas. 
 
 If not and you want your validator to join oasys testnet PoS, you can go to [faucet](https://faucet.testnet.oasys.games/) to obtain tokens.
 

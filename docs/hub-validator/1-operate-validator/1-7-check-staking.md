@@ -22,11 +22,11 @@ $ ./oaspos validator:info-all --network mainnet
 ```
 
 ## Check Your Staking
-To fully done staking, you must wait for 1 Epoch to be run on blockchain, which is approx 1 day.
+To fully complete staking, you must wait for 1 Epoch to be run on the blockchain, which is approximately 1 day.
 
 The following command checks the staking amount at the current epoch.
 
-That's why it is necessary to check the staking amount after the next epoch following the staking process has been done.
+That's why it's necessary to check the staking amount after the next epoch has passed and the staking was completed.
 
 
 ```bash

@@ -3,14 +3,14 @@
 
 ## Address List
 
-After you set up, you may configure files in the: 
+After the set up, you may configure files in the: 
 
 ```
 /oasys/addresses.json
 ```
 
-After you open it, You may See a Few addresses. This is because contract updates may change those addresses. 
-You need to send your tokens to the `sequencer address` for sending gas and Use L1 bridge address from `addresses.json` to use bridge.
+After you open it, You may see a few addresses. This is because contract updates may change those addresses. 
+You need to send your tokens to the `sequencer address` for sending gas and Use L1 bridge address from `addresses.json` to use the bridge.
 
 ```JSON
 {

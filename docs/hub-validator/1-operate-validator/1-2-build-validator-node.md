@@ -6,7 +6,7 @@ Please Check [Validator_Requirements](/docs/hub-validator/operate-validator/1-1-
 
 ## Express Setup 
 
-Note that We've tested Express Setup on CentOS, so command may differ on other OS.
+Note that We've tested Express Setup on CentOS, so commands may differ on another OS.
 You can run any Linux OS for nodes.
 
 ### 1. Check command `unzip` and `wget` is installed
@@ -32,7 +32,7 @@ please check you are downloading latest setup.sh. check from [latest release](ht
 
 ### 3. Giving Permission to Setup file  
 
-Please navigate to downloaded location and give permission to setup.sh file.
+Please navigate to the downloaded location and give permission to setup.sh file.
 ```
 $ sudo chmod +x setup.sh
 ```
@@ -41,7 +41,7 @@ $ sudo chmod +x setup.sh
 $ ./setup.sh
 ```
 
-While you are starting on Geth, you will have question, 
+While you are starting on Geth, you will be asked a question, 
 
 **Do you want to start block validation automatically?**
 
@@ -134,7 +134,7 @@ $ sudo chmod 700 /home/geth
 ```
 ### 3. Download the configuration file for the genesis block from [github]
 
-You can download configuration files on here, 
+You can download configuration files from here, 
 (https://github.com/oasysgames/oasys-validator/releases)
 
 Or can download with using `wget` command. 
@@ -267,7 +267,7 @@ $ systemctl stop geth
 
 ### Check keystore
 
-First navigate onto /home/geth
+First navigate into /home/geth
 
 Your default install location is `/home/geth/.ethereum/`.
 

@@ -10,7 +10,7 @@ const FeatureList = [
     linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
     description: (
       <>
-        User can stake OAS with Metamask.
+        Users can stake OAS with Metamask.
       </>
     ),
   },
@@ -20,7 +20,7 @@ const FeatureList = [
     linkTo: "/docs/hub-validator/operate-validator/1-1-hd-requirement",
     description: (
       <>
-        Document for Oasys Hub Layer Validator.
+        Documentation for Oasys Hub Layer Validators.
       </>
     ),
   },
@@ -30,7 +30,7 @@ const FeatureList = [
     linkTo: "/docs/verse-developer/1-1-select",
     description: (
       <>
-        Document for Developer to build Verse Layer.
+        Documentation for Developers to build on the Verse Layer.
       </>
     ),
   },

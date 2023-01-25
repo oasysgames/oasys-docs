@@ -1,7 +1,7 @@
 # Hub geth 
 
-Geth is go ethereum, and Oasys is using go ethereum based network on Hub Layer. 
-You can use or check with command-line while using it. 
+Geth is go ethereum, and Oasys is using a go ethereum based network on the Hub Layer. 
+You can use it or perform checks through the command line. 
 
 ## Command-line Options
 

@@ -2,8 +2,9 @@
 
 
 ## Intro
-Blockchain it self stores data onto decentralized storage. Syncing block, Sharing block it self makes stable usage for blockchain network. 
-Since producing more block needs storage, if system elapsed time, and stacked lots of block, you may have to increase disk storage for stable node operations on future.
+The Blockchain itself stores data into a decentralizes storage.
+Syncing and Sharing blocks is required for stable blockchain usage.
+Since producing more blocks requires storage, if your node is operated for a long time you may have to increase disk storage for stable node operations at some point in the future.
 
 ## Hub-Layer Hardware Requirements
 

@@ -1,6 +1,6 @@
 # How to pay Network Fee
 
-You must put gas fee in [L2 Sequencer](/docs/architecture/verse-layer/1-1-verse-layer#l2-sequencer) & [L2 Proposer](/docs/architecture/verse-layer/1-1-verse-layer#l2-proposer)
+You must put a gas fee in [L2 Sequencer](/docs/architecture/verse-layer/1-1-verse-layer#l2-sequencer) & [L2 Proposer](/docs/architecture/verse-layer/1-1-verse-layer#l2-proposer)
 
 |----| L2 Sequencer | L2 Proposer |
 |----|----|----|

@@ -2,7 +2,7 @@
 
 - Instant Verifier 
 
-Instant Verifier skip 7days of dispute period, which was challenging at past.  
+Instant Verifiers skip 7 day dispute period, which was challenging in the past.  
 
 - vFT vNFT 
 

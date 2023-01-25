@@ -1,12 +1,12 @@
 # Explorer
-After building Verse, You have to create Verse explorer. Please use [blockscout](https://docs.blockscout.com/) to create Verse explorer.
+After building a Verse, you have to create a Verse explorer. Please use [blockscout](https://docs.blockscout.com/) to create a Verse explorer.
 
 ## Environment Variable
-When creating blockscout, you have to set environment variable using blockscout.
+When creating a blockscout instance, you have to set the environment variable using blockscout.
 
-You can check environment variable lists at [this page](https://docs.blockscout.com/for-developers/information-and-settings/env-variables).
+You can check the environment variable lists at [this page](https://docs.blockscout.com/for-developers/information-and-settings/env-variables).
 
-When creating verse blockscout, please set following to environment variables.
+When creating a verse blockscout, please set the following environment variables.
 
 |    Variable               |   Description                              | Value |
 |---------------------------|--------------------------------------------|--------|
@@ -19,7 +19,7 @@ When creating verse blockscout, please set following to environment variables.
 If you build verse on the same server, you can set `ETHEREUM_JSONRPC_HTTP_URL` and `ETHEREUM_JSONRPC_TRACE_URL` as `http://host.docker.internal:8545/`.
 
 ## Manual Setup
-If you set up blockscout for Verse, You have to set it up manually.
+If you set up blockscout for a Verse, You have to set it up manually.
 
 ### Git Clone
 First, you have to clone [oasys-blockscout](https://github.com/oasysgames/oasys-blockscout).
@@ -28,13 +28,13 @@ git clone git@github.com:oasysgames/oasys-blockscout.git
 ```
 
 ### Set Environment Variables
-After that, please set environment variable to [common-blockscout.env](https://github.com/oasysgames/oasys-blockscout/blob/main/docker-compose/envs/common-blockscout.env) along with [Environment Variable](#environment-variable).
+After that, please set the environment variables to [common-blockscout.env](https://github.com/oasysgames/oasys-blockscout/blob/main/docker-compose/envs/common-blockscout.env) along with [Environment Variable](#environment-variable).
 
 ### Run Container
-Finally, run the container by docker-compose.
+Finally, run the container with docker-compose.
 ```shell
 cd docker-compose
 docker compose up -d
 ```
 
-When you have done docker-compose up, you can explore via `http://localhost:4000/`.
+When you finished docker-compose up, you can explore via `http://localhost:4000/`.

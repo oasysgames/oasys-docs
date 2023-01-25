@@ -4,11 +4,10 @@
 
 ![rollup](/img/docs/techdocs/verse/rollup.png)
 
-Original Optimistic Rollup can scale ethererum transaction onto high speed. 
+Original Optimistic Rollup can scale Ethereum transactions to a high speed. 
 
 ## OVM 
-
-Optimism Virtural Machine is Scalability solution on Ethereum. It's EVM contains EVM.
+Optimism Virtual Machine is a Scalability solution on Ethereum. It's EVM contains multiple states on optimism.
 
 OVM programs define assumptions which, based on local information, determines what Ethereum states are possible. This can be expressed as a function `satisfies_assumptions(assumptions, ethereum_state, local_information) => true/false`. If `satisfies_assumptions(...)` returns true then the `ethereum_state` is possible based on these particular assumptions, and our `local_information`.
 

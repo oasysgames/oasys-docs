@@ -4,7 +4,7 @@
 
 #### account 
 
-An object containg address, balance, nonce, and optional storage and code. An account can be a EOA or Contract accounts.
+An object containing address, balance, nonce, optional storage and code. An account can be a EOA or Contract account.
 
 #### address
 
@@ -22,10 +22,10 @@ An Application Programming Interface (API) is a set of definitions for how to us
 Every block has a reserve price known as the 'base fee'. It is the minimum gas fee a user must pay to include a transaction in the next block.
 
 #### block
-A block is a bundled unit of information that include an ordered list of transactions and consensus-related information. Blocks are proposed by proof-of-stake validators, at which point they are shared across the entire peer-to-peer network, where they can easily be independently verified by all other nodes. Consensus rules govern what contents of a block are considered valid, and any invalid blocks are disregarded by the network. The ordering of these blocks and the transactions therein create a deterministic chain of events with the end representing the current state of the network.
+A block is a bundled unit of information that includes an ordered list of transactions and consensus-related information. Blocks are proposed by proof-of-stake validators, at which point they are shared across the entire peer-to-peer network, where they can easily be independently verified by all other nodes. Consensus rules govern what contents of a block are considered valid, and any invalid blocks are disregarded by the network. The ordering of these blocks and the transactions therein create a deterministic chain of events with the end representing the current state of the network.
 
 #### block time
-The time interval between blocks being added to the blockchain. Oasys have 15 block time in Hub Layer.
+The time interval between blocks being added to the blockchain. Oasys has a block time of 15 in the Hub Layer.
 
 ## C
 
@@ -58,7 +58,7 @@ Short for "decentralized finance," a broad category of dapps aiming to provide f
 Encryption is the conversion of electronic data into a form unreadable by anyone except the owner of the correct decryption key.
 
 #### epoch
-A dataset for validators having 5760blocks.
+A dataset for validators having 5760 blocks.
 
 #### externally owned account (EOA)
 Externally owned accounts (EOAs) are accounts that are controlled by private keys, typically generated using a seed phrase. Unlike smart contracts, externally owned accounts are accounts without any code associated with them. Typically these accounts are managed with a wallet.
@@ -69,7 +69,7 @@ A stack-based virtual machine that executes bytecode. In Ethereum, the execution
 ## F
 
 #### faucet
-A service carried out via smart contract that dispenses funds in the form of free test ether that can be used on a testnet.
+A service carried out via smart contracts that dispense funds in the form of free test ether that can be used on a testnet.
 
 
 #### finality
@@ -90,7 +90,7 @@ Price in OAS of one unit of gas specified in a transaction.
 The first block in a blockchain, used to initialize a particular network and its cryptocurrency.
 
 #### geth
-Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go. Hub Layer is written in geth.
+Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go. The Hub Layer is written in geth.
 
 #### gwei
 Short for gigawei, a denomination of ether, commonly utilized to price gas. 1 gwei = 109 wei. 109 gwei = 1 ether.
@@ -98,7 +98,7 @@ Short for gigawei, a denomination of ether, commonly utilized to price gas. 1 gw
 ## H 
 
 #### hard fork
-A permanent divergence in the blockchain; also known as a hard-forking change. One commonly occurs when nonupgraded nodes can't validate blocks created by upgraded nodes that follow newer consensus rules. Not to be confused with a fork, soft fork, software fork, or Git fork. Oasys Hub Layer takes Hardfork while updating smart contract deployments.
+A permanent divergence in the blockchain; also known as a hard-forking change. One commonly occurs when nonupgraded nodes can't validate blocks created by upgraded nodes that follow newer consensus rules. Not to be confused with a fork, soft fork, software fork, or Git fork. The Oasys Hub Layer takes Hardfork while updating smart contract deployments.
 
 #### hash
 A fixed-length fingerprint of variable-size input, produced by a hash function(Keccak-256).

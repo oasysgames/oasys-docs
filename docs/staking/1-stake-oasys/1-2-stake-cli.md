@@ -9,7 +9,7 @@ There are three ways to stake.
 
 1. [Staking using CLI](/docs/hub-validator/operate-validator/1-3-join-validator-cli)
 
-On staking using CLI, you need to export the private key while staking.
+When staking using the CLI, you need to export the private key while staking.
 
 2. Staking with Oasys Hub. 
 
@@ -17,7 +17,7 @@ You can use [Oasys Hub](https://hub.oasys.games) for staking.
 
 3. Direct contract call 
 
-We currently do not support the official way, but we will provide web for a claim if you are an owner on a validator.
+We currently do not support the official way, but we'll provide web for a claim if you are an owner on a validator.
 
 ## Staking Contract 
 
@@ -33,7 +33,7 @@ We currently do not support the official way, but we will provide web for a clai
 | Type | Oasys Hub | CLI |
 |-----------|-----------|-----------|
 | Stake | O | O |
-| Stake using Hard wallet (ex.Ledger) | O | O (Need to export private key) | 
+| Stake using Hardware wallet (ex.Ledger) | O | O (Need to export private key) | 
 | Claim staking Reward | O | O |
 | Unstake | O | O |
 
@@ -41,4 +41,4 @@ We currently do not support the official way, but we will provide web for a clai
 
 You can use all wallets supported by metamask. Also, please ensure the Ethereum wallet is installed on a hardware wallet.
 
-**For staking, you require 1 epoch to be finalized(Approx 1 Day)**
+**Staaking requires 1 epoch to be finalized(Approx 1 Day)**
