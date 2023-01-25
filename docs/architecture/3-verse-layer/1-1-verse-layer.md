@@ -11,8 +11,7 @@ Since it's not an active wallet and not used after running the `verse factory co
 If you want, you can use a wallet, a hardware wallet, or a Multi-sig wallet.
 
 ### **L2 Sequencer**
-<!-- TRANSLATION: Not sure what is meant by 'It roll-up Verse-Layer's transaction uses the sequencer node itself to Hub-Layer' -->
-The L2 Sequencer is used by the **Sequencer Node** in optimism. Also well known as a `Canonical transfer chain`. It roll-up Verse-Layer's transaction uses the sequencer node itself to Hub-Layer. The sequencer address is written in the Optimism contract in the Hub-Layer, and the Verse operator's L2 Sequencer can only do a roll-up on specifically approved security addresses. The L2 Owner must update the approved address on the contract if a key is leaked.
+The L2 Sequencer is used by the **Sequencer Node** in optimism. Also well known as a `Canonical transfer chain`.**Sequencer Node** roll-up Verse-Layer's data to Hub-Layer. The sequencer address is written in the Optimism contract in the Hub-Layer, and the Verse operator's L2 Sequencer can only do a roll-up on specifically approved security addresses. The L2 Owner must update the approved address on the contract if a key is leaked.
 
 ### **L2 Proposer**
 
