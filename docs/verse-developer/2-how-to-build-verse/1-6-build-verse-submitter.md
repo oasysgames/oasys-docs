@@ -37,10 +37,6 @@ Create a submitter's private key. You can use docker image or [oasys-validator](
 
 - Using docker image
   ```shell
-  # Create a keystore directory.
-  mkdir /home/geth/.ethereum/keystore
-  chown geth:geth /home/geth/.ethereum/keystore
-
   # Create a private key.
   docker run --rm -ti \
     -v /home/geth/.ethereum/keystore:/keystore ethereum/client-go \
