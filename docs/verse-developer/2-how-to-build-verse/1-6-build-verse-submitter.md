@@ -1,8 +1,6 @@
 # Verse Submitter
 The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
 
-If you build a verse submitter, first you have to build [L1-Light-node](/docs/verse-developer/how-to-build-verse/1-5-build-L1-light-node).
-
 ## About
 Instant Verifier of Verse-Layer for the Oasys Blockchain.
 
@@ -14,48 +12,107 @@ Instant Verifier of Verse-Layer for the Oasys Blockchain.
 
 - All Hub Layer Validator need to install a Verse Verifier. 
 
-## Quick Start
+## Setup Verifier
 
-Download the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases).
+Download the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases) and place it in `/usr/local/bin/oasvlfy`.
 
-> The Verifier creates a keccak256 hash of [ethereum signed messages](https://eips.ethereum.org/EIPS/eip-712) with the same private key as the Hub-Layer validator, so it is recommended to run on the same node as the Hub-Layer validator.
+- For AMD / Intel CPU, Please download `oasvlfy-v0.0.X-linux-amd64.zip`. 
+- For ARM based CPU, Please download `oasvlfy-v0.0.X-linux-arm64.zip`. 
 
-Create a data directory.
+Create a daemon user.
 
 ```shell
-mkdir /home/geth/.oasvlfy
-chown geth:geth /home/geth/.oasvlfy
+groupadd geth
+useradd geth -g geth -s /usr/local/sbin/geth -m
 ```
 
-> **Please check you have password.txt & validator operator's private key on disk.**
-> **You need to listen 4101 port so it can send, receive transaction.** 
+Create data and keystore directories.
+
+```shell
+mkdir -p /home/geth/.oasvlfy /home/geth/.ethereum/keystore
+chown -R geth:geth /home/geth/.oasvlfy /home/geth/.ethereum/keystore
+```
+
+Create a submitter's private key. You can use docker image or [oasys-validator](https://github.com/oasysgames/oasys-validator) binary.
+
+- Using docker image
+  ```shell
+  # Create a keystore directory.
+  mkdir /home/geth/.ethereum/keystore
+  chown geth:geth /home/geth/.ethereum/keystore
+
+  # Create a private key.
+  docker run --rm -ti \
+    -v /home/geth/.ethereum/keystore:/keystore ethereum/client-go \
+    --keystore /keystore account new
+
+  # Change owner.
+  chown geth:geth /home/geth/.ethereum/keystore/*
+  ```
+
+- Using oasys-validator binary
+  ```shell
+  # Download the geth binary for AMD/Intel CPU.
+  curl -Lo geth.zip \
+    https://github.com/oasysgames/oasys-validator/releases/download/v1.0.4/geth-v1.0.4-linux-amd64.zip
+
+  # Download the geth binary for ARM-Based CPU.
+  curl -Lo geth.zip \
+    https://github.com/oasysgames/oasys-validator/releases/download/v1.0.4/geth-v1.0.4-linux-arm64.zip
+
+  # Extract binary.
+  unzip geth.zip
+
+  # Create a private key.
+  ./geth --keystore /home/geth/.ethereum/keystore account new
+
+  # Change owner.
+  chown geth:geth /home/geth/.ethereum/keystore/*
+
+  # Delete binary as they are not needed.
+  rm geth
+  ```
 
 Create a configuration file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config.yml)
 
-> Open the TCP port that P2P listens on the firewall.
-
 ```shell
-curl -O /home/geth/.oasvlfy/config.yml \
+curl -o /home/geth/.oasvlfy/config.yml \
     https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config.yml
+
+chown geth:geth /home/geth/.oasvlfy/config.yml
 ```
 
 Edit config.yml to set verse submitter.
 
-Set L1 address with plenty of OAS for the submitter because the submitter needs to have OAS for gas.
+:::caution
+- Please check you have verse submitter's private key at the **keystore** directory.
+  - If you do not have a private key, [please create one](#create-private-key).
+  - If password protected, make sure password.txt exists on disk.
+- Please deposit OAS for gas to submitter's wallet on L1(10 OAS or higher).
+- You need to listen **4101(tcp/udp)** port so it can send, receive signatures with other verifiers.
+:::
 
 ```yml
 wallets:
-  # Wallet used by Verifier (Usually the same address as geth)
-  signer:
-    address: '0x...' # set your account created L1-light-node.
-    password: /home/geth/.ethereum/password.txt # set your account password path that is created L1-light-node.
+  # <!-- comment out or delete this block. -->
+  # signer:
+  #   address: '0x'
+  #   password: /home/geth/.ethereum/password.txt
 
   # Wallet used by Submitter (gas is required)
   submitter:
-    address: '0x...' # set your L1 account address having plenty of OAS. (e.g. sequencer address).
+    address: '0x...' # set the your submitter's private key address.
+    password: /home/geth/.ethereum/password.txt
+
 ...
+
+# Verification worker
+verifier:
+  enable: false
+
+# Signature submitting worker
 submitter:
-  enable: true  # Only enable for Verse Builder
+  enable: true
   targets:
     - chain_id: 420  # Chain ID of your Verse-Layer
       wallet: submitter
@@ -64,7 +121,7 @@ submitter:
 Create a systemd unit file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/oasvlfy.service)
 
 ```shell
-curl -O /usr/lib/systemd/system/oasvlfy.service \
+curl -o /usr/lib/systemd/system/oasvlfy.service \
     https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/oasvlfy.service
 
 systemctl daemon-reload
@@ -76,22 +133,25 @@ Run the Verifier.
 systemctl start oasvlfy
 ```
 
-Unlock the private key if it is password protected.(Same with unlocking while setting up on hub-layer node setup.)
+It may require some time for synchronization between the verifier from database. 
+
+:::info
+If your private key is password protected and you do not want to use password.txt, you must unlock it manually.
 
 ```shell
 oasvlfy wallet:unlock --config /home/geth/.oasvlfy/config.yml --name signer
-Password:
 ```
+::::::
 
 
 ## Updating Verifier 
 
 Check the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases).
 
-Download the latest release of verifier. 
+Download the latest release of verifier and place it in `/usr/local/bin/oasvlfy`.
 
-- For AMD / Intel CPU, Please download AMD. 
-- For ARM based CPU, Please download ARM. 
+- For AMD / Intel CPU, Please download `oasvlfy-v0.0.X-linux-amd64.zip`. 
+- For ARM based CPU, Please download `oasvlfy-v0.0.X-linux-arm64.zip`. 
 
 Stop the verifier. 
 
@@ -101,11 +161,14 @@ systemctl stop oasvlfy
 
 Run the new verifier again. 
 
-It may require some time for synchronization between the verifier from database. 
+```shell
+systemctl start oasvlfy
+```
 
-Unlock the private key if it is password protected.(Same with unlocking while setting up on hub-layer node setup.)
+:::info
+If your private key is password protected and you do not want to use password.txt, you must unlock it manually.
 
 ```shell
 oasvlfy wallet:unlock --config /home/geth/.oasvlfy/config.yml --name signer
-Password:
 ```
+::::::
