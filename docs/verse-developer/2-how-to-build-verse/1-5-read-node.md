@@ -43,7 +43,46 @@ Please refer to the following to run verse containers.
 
 You only need to run data-transport-layer and l2geth containers.
 
+- data-transport-layer : Data-transport between L1 and L2
+- l2geth : L2 geth. Core component on Verse. 
+
 ```bash
 docker-compose up -d data-transport-layer
 docker-compose up -d l2geth
 ```
+
+## Confirm synchronization
+You can confirm read-only verse node is synchronizing verse. 
+
+### Check current block number
+Please check blockNumber with the following request parameters on a respective node(verse node and read-only node).
+
+```json
+{
+    "jsonrpc": "2.0",
+    "method": "eth_blockNumber",
+    "params": [],
+    "id": 0
+}
+```
+
+The response's result is blockNumber.
+```json
+{
+  "jsonrpc": "2.0",
+  "id": 0,
+  "result": "0x7e4"
+}
+```
+
+If the read-only node possesses the latest verse info, each blockNumber coincides.  
+
+### Update block number
+In verse, a block is created for each transaction.
+
+Please execute a transaction in verse and update the blockNumber.
+
+### Check the latest block number
+As before, please check blockNumber with the following request parameters on a respective node(verse node and read-only node).
+
+If each blockNumber coincides, the read-only node can synchronize verse node.
