@@ -40,3 +40,10 @@ ROLLUP_VERIFIER_ENABLE: 'true'
 Please refer to the following to run verse containers.
 
 - [Run Containers](https://docs.oasys.games/docs/verse-developer/how-to-build-verse/1-2-manual#6-run-containers)
+
+You only need to run data-transport-layer and l2geth containers.
+
+```bash
+docker-compose up -d data-transport-layer
+docker-compose up -d l2geth
+```
