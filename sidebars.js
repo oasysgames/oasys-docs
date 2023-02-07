@@ -236,6 +236,7 @@ const sidebars = {
         'verse-developer/how-to-build-verse/1-2-manual',
         'verse-developer/how-to-build-verse/1-3-optional-configs',
         'verse-developer/how-to-build-verse/1-4-verse-proxy',
+        'verse-developer/how-to-build-verse/1-5-read-node',
         'verse-developer/how-to-build-verse/1-6-build-verse-submitter',
         'verse-developer/how-to-build-verse/1-7-explorer',
         'verse-developer/how-to-build-verse/1-8-sandverse',
