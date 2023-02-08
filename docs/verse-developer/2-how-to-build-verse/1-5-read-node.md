@@ -14,8 +14,14 @@ As well as the verse construction, use [verse-layer-optimism](https://github.com
 
 - [Create .env file](https://docs.oasys.games/docs/verse-developer/how-to-build-verse/1-2-manual#5-create-env-file)
 
-When setting an environment variable, please follow it.
+You can choose which layers to synchronize within the following. 
 
+- Synchronizing Verse(L2)
+- Synchronizing Oasys hub(L1)
+
+It is recommended to synchronize with verse because it allows immediate synchronization of verse status updates.
+
+#### Synchronizing Verse(L2)
 .env
 ```bash
 # Layer2 settings
@@ -35,6 +41,29 @@ docker-compose.yml
 ROLLUP_BACKEND: l2
 ROLLUP_VERIFIER_ENABLE: 'true'
 ```
+
+#### Synchronizing Oasys hub(L1)
+
+.env
+```bash
+# Layer2 settings
+L2_CHAIN_ID=<YOUR_VERSE_CHAIN_ID>
+L2_HTTP_URL=http://host.docker.internal:$L2GETH_HTTP_PORT/
+
+# You don't need to set private_key
+SEQUENCER_ADDRESS=<YOUR_SEQUENCER_ADDRESS>
+SEQUENCER_KEY=
+
+PROPOSER_ADDRESS=<YOUR_PROPOSER_ADDRESS>
+PROPOSER_KEY=
+```
+
+docker-compose.yml
+```bash
+ROLLUP_BACKEND: l1
+ROLLUP_VERIFIER_ENABLE: 'true'
+```
+
 
 ### Run Verse containers
 Please refer to the following to run verse containers.
