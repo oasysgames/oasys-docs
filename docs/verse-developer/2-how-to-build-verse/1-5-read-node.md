@@ -77,12 +77,25 @@ The response's result is blockNumber.
 
 If the read-only node possesses the latest verse info, each blockNumber coincides.  
 
+### Open Docker log
+To check if read-only verse node is synchronizing, please open docker container log.
+
+```bash
+docker logs verse-layer-optimism-l2geth-1
+```
+
 ### Update block number
 In verse, a block is created for each transaction.
 
 Please execute a transaction in verse and update the blockNumber.
 
-### Check the latest block number
-As before, please check blockNumber with the following request parameters on a respective node(verse node and read-only node).
+If checked following logs, it means that read-only verse node is synchronizing.
+```bash
+2023-02-08 10:33:31 INFO [02-08|01:33:31.697] Syncing transaction range                start=2047 end=2047 backend=l2
+2023-02-08 10:33:31 INFO [02-08|01:33:31.708] New block                                index=2047 l1-timestamp=1675820010 l1-blocknumber=762673 tx-hash=0x4ecebfaad3c98a0337ad122e11db2b30d20ac4e5ada757193e1ce03e2957b7e4 queue-orign=sequencer gas=2448863 fees=0 elapsed=6.310ms
+```
 
-If each blockNumber coincides, the read-only node can synchronize verse node.
+### Check block number update
+As before, please check blockNumber.
+
+If each blockNumber coincides, the read-only node completed to synchronize verse node.
