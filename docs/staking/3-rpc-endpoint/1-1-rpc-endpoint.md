@@ -58,3 +58,23 @@ Please refer to [SAND Verse](/docs/verse-developer/how-to-build-verse/1-6-sandve
 | RPC             | https://rpc.mainnet.oasys.homeverse.games/    |
 | Explorer        | https://explorer.oasys.homeverse.games/   |
 | Documentation   | https://linktr.ee/homeverse |
+
+### Chain Verse
+
+|                 |                                            |
+|-----------------|--------------------------------------------|
+| ChainID         | 5555                                      |
+| RPC             | https://rpc.chainverse.info/   |
+| Explorer        | https://explorer.chainverse.info/  |
+
+
+### Saakuru Verse
+
+|                 |                                            |
+|-----------------|--------------------------------------------|
+| ChainID         | 19011                                      |
+| RPC             | https://rpc.saakuru.network    |
+| Websocket       | https://ws.saakuru.network    |
+| Explorer        | https://explorer.saakuru.network   |
+| Documentation   | https://aagventures.readme.io/reference/saakuru-blockchain-overview |
+
