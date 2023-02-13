@@ -18,3 +18,5 @@ The L2 Sequencer is used by the **Sequencer Node** in optimism. Also well known 
 The L2 Proposer is used by the **Proposer Node** in optimism. The Proposer node rolls-up the Verse Layer's status root(Merkle Tree) onto the Hub-Layer. 
 An L2 Proposer needs to read the block chain process, so it only needs to use a hot wallet. The proposer address is written in the Hub-Layer's optimism contract and allows approved addresses only. The L2 Owner must update the approved addresses on the contract if the private key leaks. 
 
+### **L2 Message Relayer**
+The L2 Message Relayer is used by the **Relayer Node** in optimism. The Relayer node relay messages between L1 and L2. Messaging is mainly used in token bridges, but can also be used in your applications. The Relayer node can be run by untrusted third parties because the message body is verified by the contract. However, due to the cost of gas, it is generally run by the Verse owner.
