@@ -56,6 +56,10 @@ key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 ---- proposer ----
 Address: 0x0123456789abcdef0123456789abcdef
 key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
+
+---- message-relayer ----
+Address: 0x0123456789abcdef0123456789abcdef
+key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 ```
 
 ## 4-1. Deploy contracts for Verse-Layer to Hub-Layer.
@@ -145,8 +149,12 @@ L2_CHAIN_ID=
 # Created wallet address and key
 SEQUENCER_ADDRESS=
 SEQUENCER_KEY=
+
 PROPOSER_ADDRESS=
 PROPOSER_KEY=
+
+MESSAGE_RELAYER_ADDRESS=
+MESSAGE_RELAYER_KEY=
 ```
 
 > **Warning**  
