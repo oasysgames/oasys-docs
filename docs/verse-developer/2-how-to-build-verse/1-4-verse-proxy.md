@@ -225,7 +225,7 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 |  lte  |  txValue <= condition is allowed  |
 
 #### Transaction access rate limit(Option)
-If you set transaction access rate limit, follow [Transaction access rate limit](https://github.com/oasysgames/verse-proxy/blob/master/docs/RateLimit.md)
+If you set transaction access rate limit, follow [Transaction access rate limit](/docs/verse-developer/how-to-build-verse/1-5-rate-limit)
 
 ### Set contract deployer
 You can control deployer of a verse at `src/config/transactionAllowList.ts`.
