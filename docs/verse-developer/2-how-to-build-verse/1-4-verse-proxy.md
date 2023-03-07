@@ -1,13 +1,12 @@
-# Verse Proxy
-
-This is a proxy to control the access allow list to the Verse Layer.  
+# Verse-Proxy
+This is proxy to control access allow list to verse layer.  
 Verse-Proxy is made by [Nest](https://github.com/nestjs/nest).  
 
-Verse-Proxy can control following items:  
-- jsonrpc methods
+Verse-Proxy can control following items.  
+- jsonrpc method
 - transaction's from, to, value
 - address which can deploy smart contract
-
+- transaction access rate
 
 ## Verse Proxy Build Steps
 
@@ -17,7 +16,7 @@ git clone git@github.com:oasysgames/verse-proxy.git
 ```
 
 ### 2. Set access allow list
-Set the access allow list in the following files.  
+Set access allow list at following file.  
 Details are described later.
 - `src/config/configuration.ts`
 - `src/config/transactionAllowList.ts`
@@ -55,6 +54,12 @@ $ npm run test:cov
 ```
 
 ## Control items
+
+### Set allowed header
+You can set whether you inherit proxy request's host header on verse request at `src/config/configuration.ts`.
+```typescript
+inheritHostHeader: true,
+```
 
 ### Set allowed verse request methods
 You can set allowed verse request methods by regex at `src/config/configuration.ts`.
@@ -110,17 +115,60 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
       toList: ['*'],
     },
   ];
-}
+};
 ```
 
 ```typescript
-// ! is denial.
+// ! is exception_pattern.
+
 // 0xaf395754eB6F542742784cE7702940C60465A46a are not allowed to be transacted.
+// But any address other than 0xaf395754eB6F542742784cE7702940C60465A46a are allowed to be transacted.
 export const getTxAllowList = (): Array<TransactionAllow> => {
   return [
     {
       fromList: ['!0xaf395754eB6F542742784cE7702940C60465A46a'],
+      toList: ['*'],
+    },
+  ];
+};
+
+// Everyone are not allowed to transact to 0xaf395754eB6F542742784cE7702940C60465A46a.
+// everyone are allowed to transact to any address other than 0xaf395754eB6F542742784cE7702940C60465A46a.
+export const getTxAllowList = (): Array<TransactionAllow> => {
+  return [
+    {
+      fromList: ['*'],
       toList: ['!0xaf395754eB6F542742784cE7702940C60465A46a'],
+    },
+  ];
+};
+
+// Multiple Setting is enabled.
+// Everyone are not allowed to transact to 0xaf395754eB6F542742784cE7702940C60465A46a and 0xaf395754eB6F542742784cE7702940C60465A46c.
+// everyone are allowed to transact to any address other than 0xaf395754eB6F542742784cE7702940C60465A46a and 0xaf395754eB6F542742784cE7702940C60465A46c.
+export const getTxAllowList = (): Array<TransactionAllow> => {
+  return [
+    {
+      fromList: ['*'],
+      toList: [
+        '!0xaf395754eB6F542742784cE7702940C60465A46a',
+        '!0xaf395754eB6F542742784cE7702940C60465A46c'
+      ],
+    },
+  ];
+};
+```
+
+```typescript
+// You can not set setting with normal_address and exception_pattern.
+export const getTxAllowList = (): Array<TransactionAllow> => {
+  return [
+    {
+      fromList: ['*'],
+      toList: [
+        '0xaf395754eB6F542742784cE7702940C60465A46a',
+        '!0xaf395754eB6F542742784cE7702940C60465A46c'
+      ],
     },
   ];
 };
@@ -128,8 +176,8 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 
 If you want to allow transacting factory and bridge contracts, please set those contract addresses to `to`.
 
-```yaml
-# Verse-Layer pre-deployed Contracts. Same address for all Verse-Layers.
+```json
+// Verse-Layer pre-deployed Contracts. Same address for all Verse-Layers.
 L2StandardBridge: '0x4200000000000000000000000000000000000010',
 L2StandardTokenFactory: '0x4200000000000000000000000000000000000012',
 L2ERC721Bridge: '0x6200000000000000000000000000000000000001',
@@ -151,7 +199,7 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 };
 ```
 
-#### Value
+#### Value(Option)
 You can control the token value of a transaction.
 
 ```typescript
@@ -162,7 +210,7 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
       fromList: ['*'],
       toList: ['*'],
       value: { gt: '1000000000000000000' },
-    }
+      },
   ];
 };
 ```
@@ -176,8 +224,11 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 |  lt  |  txValue < condition is allowed  |
 |  lte  |  txValue <= condition is allowed  |
 
-#### Deployer
-You can control deployer of a verse.
+#### Transaction access rate limit(Option)
+If you set transaction access rate limit, follow [Transaction access rate limit](/docs/verse-developer/how-to-build-verse/1-5-rate-limit)
+
+### Set contract deployer
+You can control deployer of a verse at `src/config/transactionAllowList.ts`.
 
 ```typescript
 // Only 0xaf395754eB6F542742784cE7702940C60465A46a can deploy
@@ -185,22 +236,25 @@ export const getDeployAllowList = (): Array<string> => {
   return ['0xaf395754eB6F542742784cE7702940C60465A46a'];
 };
 
+// wild card
 // Everyone can deploy
 export const getDeployAllowList = (): Array<string> => {
   return ['*'];
 };
-// 0xaf395754eB6F542742784cE7702940C60465A46c cannot deploy,
-// 0xaf395754eB6F542742784cE7702940C60465A46a can deploy
+
+// exception_pattern
+// any address other than 0xaf395754eB6F542742784cE7702940C60465A46c can deploy.
 export const getDeployAllowList = (): Array<string> => {
-  return [
-    '!0xaf395754eB6F542742784cE7702940C60465A46c',
-    '0xaf395754eB6F542742784cE7702940C60465A46a',
-  ];
+  return ['!0xaf395754eB6F542742784cE7702940C60465A46c'];
 };
 ```
 
-### Set allowed header
-You can set whether you inherit proxy request's host header on verse request at `src/config/configuration.ts`.
-```typescript
-inheritHostHeader: true,
+## Batch Request
+You can execute batch requests to the proxy.
+
+If you want to make many transaction batch requests, change the parse limit in the body by environment variable.
+The default body parse limit is 512kb.
+
+```bash
+MAX_BODY_BYTE_SIZE=1048576 # 1048576 byte is 1MB.
 ```
