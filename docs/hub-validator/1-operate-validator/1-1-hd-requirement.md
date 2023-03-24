@@ -23,3 +23,4 @@ Since producing more blocks requires storage, if your node is operated for a lon
 - TCP/UDP port 30303 allowed (for P2P between nodes)
 - TCP port 8545 allowed (for RPC)
 - TCP/UDP port 4101 allowed (for Instant Verifier)
+- TCP/UDP port 30301 allowed (for Bootnodes)
