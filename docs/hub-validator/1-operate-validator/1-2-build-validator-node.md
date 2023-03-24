@@ -25,10 +25,7 @@ $apt install wget
 ```
 
 ### 2. Download Setup File
-
-https://github.com/oasysgames/oasys-validator/releases/download/v1.0.0/setup.sh
-
-please check you are downloading latest setup.sh. check from [latest release](https://github.com/oasysgames/oasys-validator/releases)
+Please check you are downloading latest setup.sh. check from [latest release](https://github.com/oasysgames/oasys-validator/releases)
 
 ### 3. Giving Permission to Setup file  
 
