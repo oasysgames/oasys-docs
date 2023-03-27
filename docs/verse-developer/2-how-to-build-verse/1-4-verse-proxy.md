@@ -258,3 +258,27 @@ The default body parse limit is 512kb.
 ```bash
 MAX_BODY_BYTE_SIZE=1048576 # 1048576 byte is 1MB.
 ```
+
+## Multi Processing
+If you want to build proxy in multi-process, set worker count to environment variables.
+The default worker count is 1.
+
+```bash
+CLUSTER_PROCESS=4
+```
+
+## Master-Verse-Node and Read-Verse-node
+You can create a verse and its replica to reduce the access load on the verse.
+A verse can be set on the master-node and a replica on the read-node in a proxy.
+It will send read-transactions to the read-node and write-transactions to the master-node.
+
+You can set Master-Verse-Node and Read-Verse-node by the environment variable.
+```bash
+VERSE_MASTER_NODE_URL=[YOUR_VERSE_URL]
+VERSE_READ_NODE_URL=[YOUR_VERSE_REPLICA_URL]
+```
+
+### Check Master-Verse-Node
+To check the behavior of requests to the Master-Verse-Node, an endpoint named `/master` is provided.
+
+All transactions sent to `/master` are sent to the Master-Verse-Node.
