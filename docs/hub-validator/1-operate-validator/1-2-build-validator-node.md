@@ -4,6 +4,10 @@
 
 Please Check [Validator_Requirements](/docs/hub-validator/operate-validator/1-1-hd-requirement) Prior to setup. 
 
+:::Important
+Oasys client does frequent hardfork everytime it updates nodes, Which requires to update your node before hardfork to keep validate on Oasys chain. If you are late with updating, you must [**resync node**](/docs/hub-validator/operate-validator/1-2-build-validator-node/resync-nodes).
+:::
+
 ## Express Setup 
 
 Note that We've tested Express Setup on CentOS, so commands may differ on another OS.
@@ -25,7 +29,7 @@ $apt install wget
 ```
 
 ### 2. Download Setup File
-Please check you are downloading latest setup.sh. check from [latest release](https://github.com/oasysgames/oasys-validator/releases)
+Please check you are downloading latest setup.sh. check from [**latest release**](https://github.com/oasysgames/oasys-validator/releases)
 
 ### 3. Giving Permission to Setup file  
 
@@ -328,3 +332,28 @@ $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 ``` 
 
 2. [Check Block sync status.](/docs/hub-validator/operate-validator/1-8-faq#q5-i-want-to-know-block-sync-status)
+3. [Restart sync process.](/docs/hub-validator/operate-validator/1-8-faq#q5-i-want-to-know-block-sync-status)
+
+
+## Resync Nodes
+
+```
+systemctl stop geth
+```
+
+Stop geth process.
+
+```
+mv /home/geth/.ethereum/geth /home/geth/.ethereum/geth-backup
+```
+
+move sync data on `/home/geth/.ethereum/geth` to somewhere else.
+
+```
+sudo geth init genesis/mainnet.json
+```
+Init [**latest**](https://github.com/oasysgames/oasys-validator/releases/) genesis.json file on github.
+
+```
+systemctl start geth
+```

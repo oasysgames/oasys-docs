@@ -165,7 +165,7 @@ If miner is displayed `"0x0000000000000000000000000000000000000000"`, you need t
 
 
 
-### Q6. Unit file.
+### Q6. Check Unit file.
 
 You can check with the following unit file, make sure your unit file is written correctly.
 
