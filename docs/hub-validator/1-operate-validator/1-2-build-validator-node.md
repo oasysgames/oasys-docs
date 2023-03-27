@@ -6,7 +6,7 @@ Please Check [Validator_Requirements](/docs/hub-validator/operate-validator/1-1-
 
 :::important
 
-Oasys client does frequent hardfork everytime it updates nodes, Which requires to update your node before hardfork to keep validate on Oasys chain. If you are late with updating, you must [**resync node**](/docs/hub-validator/operate-validator/1-2-build-validator-node/resync-nodes).
+Oasys client does frequent hardfork everytime it updates nodes, Which requires to update your node before hardfork to keep validate on Oasys chain. If you are late with updating, you must [**resync node**](/docs/hub-validator/operate-validator/1-2-build-validator-node#resync-nodes).
 ::::::
 
 ## Express Setup 
