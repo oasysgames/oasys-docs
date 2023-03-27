@@ -260,14 +260,14 @@ false
 
 ## Updating node 
 
-### Stop Geth 
+### 1. Stop Geth 
 
 ```
 $ systemctl stop geth
 ```
 
 
-### Check keystore
+### 2. Check keystore
 
 First navigate into /home/geth
 
@@ -288,23 +288,29 @@ journalctl -u geth -n 1000 --no-pager
 
 You can try `journalctl` to　check update logs.
 
-### Download new release
+### 3. Download new release
+
+:::Important
+Please check your version is **latest** version before downloading.
+::::::
 
 You can download configuration files on here, 
 (https://github.com/oasysgames/oasys-validator/releases)
 
-You need to download, geth-version_number-linux-amd64.zip(BINARY FILE) if you are using Intel or AMD cpu unzip. 
-You can learn with [how setup.sh code deploys code](https://github.com/oasysgames/oasys-validator/blob/54aae939d3f01fc5f89b470a75e0b13cac4240a3/.github/setup_template.sh#L9).
+:::info
+Download geth-version_number-linux-amd64.zip(BINARY FILE) if you are using Intel or AMD CPU. 
+Download geth-version_number-linux-arm64.zip(BINARY FILE) if you are using ARM based chip CPU. 
+::::::
 
-Please check your version is latest version. 
+You can learn about setup process by navigating [how setup.sh code deploys code](https://github.com/oasysgames/oasys-validator/blob/54aae939d3f01fc5f89b470a75e0b13cac4240a3/.github/setup_template.sh#L9).
 
 
-### Restart geth
+### 4. Restart geth
 ```
 $ sudo systemctl start geth
 ``` 
 
-### Check geth status
+### 5. Check geth status
 
 ```
 $ sudo systemctl status geth
@@ -338,11 +344,15 @@ $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 
 ## Resync Nodes
 
+### 1. Stop geth
+
 ```
 systemctl stop geth
 ```
 
 Stop geth process.
+
+### 2. Move sync data
 
 ```
 mv /home/geth/.ethereum/geth /home/geth/.ethereum/geth-backup
@@ -350,10 +360,14 @@ mv /home/geth/.ethereum/geth /home/geth/.ethereum/geth-backup
 
 move sync data on `/home/geth/.ethereum/geth` to somewhere else.
 
+### 3. Init genesis.json
+
 ```
 sudo geth init genesis/mainnet.json
 ```
 Init [**latest**](https://github.com/oasysgames/oasys-validator/releases/) genesis.json file on github.
+
+### 4. Restart geth 
 
 ```
 systemctl start geth
