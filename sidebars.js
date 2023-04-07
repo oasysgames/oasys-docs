@@ -182,8 +182,7 @@ const sidebars = {
       items: [
         'hub-validator/operate-validator/1-1-hd-requirement',
         'hub-validator/operate-validator/1-2-build-validator-node',
-        'hub-validator/operate-validator/1-3-join-validator-cli',
-        'hub-validator/operate-validator/1-4-join-validator-web',
+        'hub-validator/operate-validator/1-3-join-validator',
         'hub-validator/operate-validator/1-5-setup-verifier',
         'hub-validator/operate-validator/1-6-monitor',
         'hub-validator/operate-validator/1-7-check-staking',

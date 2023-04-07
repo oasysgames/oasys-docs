@@ -1,18 +1,37 @@
 # Build Validator Node (geth)
 
-## Check Requirements
 
-Please Check [Validator_Requirements](/docs/hub-validator/operate-validator/1-1-hd-requirement) Prior to setup. 
+## Build steps 
 
-:::important
+### Full node
 
+Oasys's full node can sync blocks, and execute commands on geth. (e.g. execute `eth.getbalance`)
+It's not validator, but 
+
+Full node only
+- [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/1-1-hd-requirement)
+- [x] 2.Install geth with [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup)[**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup)
+
+### Validator node operation
+
+Oasys validator node operation runs validator client on Oasys.
+Validator node operation require stake from delgator or self delgation of **10,000,000 OAS**. Please prepare in advance. 
+
+- [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/1-1-hd-requirement) & [**validator account roles**](/docs/architecture/hub-layer/consensus/dpos/1-3-validator-account)
+- [x] 2.Install geth with [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup)[**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup)
+- [x] 3.[**Join validator with PoS client**](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-cli or [**Join validator with Web**](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-web). Web is recommended.
+- [x] 4.[**stake your token with PoS client**](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or [**stake your token with web**](/docs/hub-validator/operate-validator/1-3-join-validator#3-staking).
+- [x] 5.Check validation status on **next epoch**
+- [x] 6.After stable validation, run [**Instant verifier**](/docs/hub-validator/operate-validator/1-5-setup-verifier)
+
+:::caution
 Oasys client does frequent hardfork everytime it updates nodes, Which requires to update your node before hardfork to keep validate on Oasys chain. If you are late with updating, you must [**resync node**](/docs/hub-validator/operate-validator/1-2-build-validator-node#resync-nodes).
 ::::::
 
 ## Express Setup 
 
 Note that We've tested Express Setup on CentOS, so commands may differ on another OS.
-You can run any Linux OS for nodes.
+**You can run any Linux OS** for nodes.
 
 ### 1. Check command `unzip` and `wget` is installed
 
@@ -47,7 +66,7 @@ While you are starting on Geth, you will be asked a question,
 
 **Do you want to start block validation automatically?**
 
-`PLEASE SELECT YES` If you are willing to start validator right away.
+**PLEASE SELECT YES** If you are willing to start validator right away.
 
 If you select NO, Navigate [Q4](/docs/hub-validator/operate-validator/1-8-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh). On Validator Setup, you may have to turn it on manually, which might take time. 
 
@@ -290,17 +309,14 @@ You can try `journalctl` to　check update logs.
 
 ### 3. Download new release
 
-:::Important
+:::caution
 Please check your version is **latest** version before downloading.
+- Download geth-version_number-linux-amd64.zip(BINARY FILE) if you are using Intel or AMD CPU. 
+- Download geth-version_number-linux-arm64.zip(BINARY FILE) if you are using ARM based chip CPU. 
 ::::::
 
 You can download configuration files on here, 
 (https://github.com/oasysgames/oasys-validator/releases)
-
-:::info
-Download geth-version_number-linux-amd64.zip(BINARY FILE) if you are using Intel or AMD CPU. 
-Download geth-version_number-linux-arm64.zip(BINARY FILE) if you are using ARM based chip CPU. 
-::::::
 
 You can learn about setup process by navigating [how setup.sh code deploys code](https://github.com/oasysgames/oasys-validator/blob/54aae939d3f01fc5f89b470a75e0b13cac4240a3/.github/setup_template.sh#L9).
 
