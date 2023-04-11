@@ -115,6 +115,10 @@ Because the L2StandardERC721 contract is not pre-deployed, if you use ERC721, yo
 
 Chainlist is a web that provides an easy way to add a chain for users. It is recommended for all verses to add a verse on Chainlist. 
 
+:::caution
+If you are on dev mode for verse, adding chainlist will open your verse information to public.
+::::::
+
 ### Procedure for adding Chainlist
 
 1. Navigate onto [Chainlist github](https://github.com/ethereum-lists/chains).
