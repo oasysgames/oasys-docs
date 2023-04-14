@@ -56,7 +56,7 @@ You will see a success message after doing this.
 
 ### 3. Staking
 There's no staking function in [oasys-pos-fe](https://tools-fe.oasys.games/validator).
-You have to stake via [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator-cli#4-staking) or [Oasys Hub](https://hub.oasys.games/). 
+You have to stake via [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or [Oasys Hub](https://hub.oasys.games/). 
 
 
 
@@ -65,7 +65,7 @@ You have to stake via [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-
 ### Participating PoS using CLI
 Before participating in PoS, you have to complete building a validator at [Build Validator Node (geth)](/docs/hub-validator/operate-validator/1-2-build-validator-node)
 
-And we recommend to [participate PoS using WEB](/docs/hub-validator/operate-validator/1-3-join-validator-cli).
+And we recommend to [participate PoS using WEB](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-web).
 
 ### Download CLI Tool
 
@@ -78,7 +78,7 @@ https://github.com/oasysgames/oasys-pos-cli/releases
 
 Create a private key for the Owner account.
 If you already have an account, you can skip this step. 
-You can find details in [Wallet](/docs/tech/wallet/1-2).
+You can find details in [Wallet](/docs/architecture/hub-layer/consensus/dpos/1-3-validator-account).
     
 ```
 $ oaspos crypto:create-account
@@ -98,7 +98,7 @@ If not and you want your validator to join oasys testnet PoS, you can go to [fau
 ### 3. Register as a Validator
 Using CLI Tool, You must register your validator Owner address, validator Operator Address to Staking Contract.
 
-You can use [oasys-pos-fe(WEB)](/docs/hub-validator/operate-validator/1-3-join-validator-cli) instead CLI.
+You can use oasys-pos-fe(WEB) instead CLI.
 
 #### 3.1. Export Validator Owner private key 
 

@@ -7,7 +7,7 @@
 
 There are three ways to stake.
 
-1. [Staking using CLI](/docs/hub-validator/operate-validator/1-3-join-validator-cli)
+1. [Staking using CLI](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking)
 
 When staking using the CLI, you need to export the private key while staking.
 

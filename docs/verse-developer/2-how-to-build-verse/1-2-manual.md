@@ -4,7 +4,7 @@
 There's a 180 days lockup period on the first deployment for a builder wallet.
 But on the Testnet, it's free; You can try the Verse Testnet with [Faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
 
-If you want to test deploying contracts and execute transactions on the Verse, please use [SAND Verse](/docs/verse-developer/how-to-build-verse/1-6-sandverse).
+If you want to test deploying contracts and execute transactions on the Verse, please use [SAND Verse](/docs/verse-developer/how-to-build-verse/1-10-sandverse).
 
 ## Validator Build Steps
 
@@ -175,11 +175,11 @@ docker-compose up -d message-relayer
 - batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
 
 ## 7. Set Instant Verifier(For Mainnet only)
-The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter).
+The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter).
 
 
 Please follow these pages if you want to set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier).
-- [Verse Submitter](/docs/verse-developer/how-to-build-verse/1-6-build-verse-submitter)
+- [Verse Submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter)
 
 ## Permissioned chain
 

@@ -1,5 +1,5 @@
 # Check Validators and Your staking(CLI)
-You can check validator state with [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator-cli).
+You can check validator state with [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator#participating-pos-using-cli).
 
 ## Preparation
 Set staker private_key.
