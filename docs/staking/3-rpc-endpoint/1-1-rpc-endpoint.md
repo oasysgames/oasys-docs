@@ -6,7 +6,7 @@
 |-----------------|------------------------------------|
 | ChainID         | 248                                |
 | Currency Symbol | OAS                                |
-| RPC(Blockfi)    | https://oasys.blockpi.network/v1/rpc/public	  |
+| RPC(BlockPi)    | https://oasys.blockpi.network/v1/rpc/public	  |
 | RPC             | https://rpc.mainnet.oasys.games/   |
 | Explorer        | https://scan.oasys.games/      |
 
