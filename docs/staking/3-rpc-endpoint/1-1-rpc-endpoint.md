@@ -6,9 +6,9 @@
 |-----------------|------------------------------------|
 | ChainID         | 248                                |
 | Currency Symbol | OAS                                |
-| RPC(Poket Network)| https://oasys-rpc.gateway.pokt.network	  |
 | RPC(BlockPi)    | https://oasys.blockpi.network/v1/rpc/public	  |
-| RPC             | https://rpc.mainnet.oasys.games/   |
+| RPC(Oasys)             | https://rpc.mainnet.oasys.games/   |
+| RPC(Poket Network)| https://oasys-rpc.gateway.pokt.network	  |
 | Explorer        | https://scan.oasys.games/      |
 
 ## Testnet (Hub Layer)
