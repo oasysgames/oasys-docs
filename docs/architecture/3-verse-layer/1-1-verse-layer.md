@@ -1,3 +1,7 @@
+---
+pagination_next: architecture/verse-layer/consensus/1-1-consensus
+---
+
 # Verse Accounts
 
 ### **L2 Owner**
