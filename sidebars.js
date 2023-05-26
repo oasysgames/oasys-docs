@@ -201,6 +201,19 @@ const sidebars = {
         'hub-validator/tools/2-2-oaspos'
       ]
     },
+    {
+      type: 'category',
+      label: "Build on AWS", 
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: true,
+      items: [
+        'hub-validator/build-on-AWS/3-1-preparation',
+        'hub-validator/build-on-AWS/3-2-usecase',
+        'hub-validator/build-on-AWS/3-3-minimum-configuration',
+      ]
+    },
   ],
   versedeveloper: [
     {
