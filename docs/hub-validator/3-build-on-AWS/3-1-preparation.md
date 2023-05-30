@@ -1,12 +1,11 @@
 # Preparation
-- you need XX knowledge, skill, experience to read this docs.
-- if you are not familiar with Oasys, please read XX
+- you need Linux knowledge, skill, experience to read this docs.
+- if you are not familiar with Oasys, please read [What's Oasys?](/docs/tech-docs/whats-oasys/1-1-whats-oasys)
 
-## Required skills 
+## Setup EC2 on AWS
 
-Linux to run validator client
+Select EC2 instance type on AWS. 
 
 ## Node configuration 
 
 [Check out Validator client Installation](/docs/hub-validator/1-operate-validator/1-2-build-validator-node)
-
