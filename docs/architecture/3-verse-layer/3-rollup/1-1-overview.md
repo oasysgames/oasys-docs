@@ -1,3 +1,7 @@
+---
+pagination_next: architecture/verse-layer/rollup/1-2-difference
+---
+
 # Original Optimistic Rollup
 
 ## Scalability 
