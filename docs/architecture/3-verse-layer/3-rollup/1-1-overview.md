@@ -19,4 +19,4 @@ In many L2 solutions, this takes the form of a â€œdispute liveness assumption.â€
 
 
 
-Sources: [Optimism Medium](https://medium.com/plasma-group/introducing-the-ovm-db253287af50), [Optimism Medium](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
+Sources: ["Introducing the OVM" - Optimism Medium](https://medium.com/plasma-group/introducing-the-ovm-db253287af50), ["OVM Deep Dive" - Optimism Medium](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
