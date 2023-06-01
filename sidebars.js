@@ -203,15 +203,16 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Build on AWS", 
+      label: "Run with AWS", 
       link: {
         type: 'generated-index',
       },
       collapsed: true,
       items: [
-        'hub-validator/build-on-AWS/3-1-preparation',
-        'hub-validator/build-on-AWS/3-2-usecase',
-        'hub-validator/build-on-AWS/3-3-minimum-configuration',
+        'hub-validator/run-with-AWS/3-1-introduction',
+        'hub-validator/run-with-AWS/3-2-preparation',
+        'hub-validator/run-with-AWS/3-3-minimum-configuration',
+        'hub-validator/run-with-AWS/3-4-additional-resources',
       ]
     },
   ],
