@@ -95,7 +95,7 @@ To build a Verse, set the following
 ![Build](/img/docs/techdocs/oasys-pos-fe/build.png)
 
 
-If the Verse build is successful, the following will be displayed. You must memo build_transaction to check VerseInfo at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
+If the Verse build is successful, the following will be displayed. You can get verse info with build_tx_hash at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
 ![Verse build Success](/img/docs/techdocs/oasys-pos-fe/verse_build_success.png)
 
@@ -116,8 +116,8 @@ After completing this step, return to the `verse-layer-optimism` repository.
 cd /path/to/verse-layer-optimism
 ```
 
-## 4-2. Check verse information from the verse_build transaction
-You can check verse information from the verse_build transaction at [check-verse-page](https://tools-fe.oasys.games/check-verse).
+## 4-2. Check verse information
+You can check verse information from verse-build_tx_hash or verse_chain_id or verse_builder_address at [check-verse-page](https://tools-fe.oasys.games/check-verse).
 ![Check verse info](/img/docs/techdocs/oasys-pos-fe/check_verse_info.png)
 
 You can also download address.json and genesis.json as well as [Build verse](#build-verse).

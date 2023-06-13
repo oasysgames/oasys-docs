@@ -5,9 +5,9 @@ The read-only verse nodes are synchronized with the verse itself, and users can 
 
 ## Setup
 ### Get verse settings
-You have to get the verse setting on [tools-fe](https://tools-fe.oasys.games/check-verse) with verse-build tx. Please refer to the following to obtain addressses.json and genesis.json, which contain the settings for verse.
+You have to get the verse setting on [tools-fe](https://tools-fe.oasys.games/check-verse) with verse-build_tx_hash or verse_chain_id or verse_builder_address. Please refer to the following to obtain addressses.json and genesis.json, which contain the settings for verse.
 
-- [Check verse information from the verse_build transaction](https://docs.oasys.games/docs/verse-developer/how-to-build-verse/1-2-manual#4-2-check-verse-information-from-the-verse_build-transaction)
+- [Check verse information](https://docs.oasys.games/docs/verse-developer/how-to-build-verse/1-2-manual#4-2-check-verse-information)
 
 ### Set Environment variable
 As well as the verse construction, use [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) to launch the read-only verse node.
