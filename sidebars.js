@@ -336,6 +336,17 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Upgrade',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: true,
+      items: [
+        'verse-developer/upgrade/1-1-contracts',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Contact List', 
       link: {
         type: 'doc',
