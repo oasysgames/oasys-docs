@@ -76,7 +76,7 @@ And you can retrieve locked up token like this.
 **Please keep in mind that all example token claims are approximate numbers. Therefore, they might not be accurate.**
 
 ### How to claim sOAS into OAS​
-You can claim sOAS into OAS​ at [oasys-pos-fe](https://tools-fe.oasys.games/sOAS)
+You can claim sOAS into OAS​ at [tools-fe](https://tools-fe.oasys.games/sOAS)
 
 ## LOAS
 
@@ -127,4 +127,4 @@ And you can retrieve locked up token like this.
 **Please keep in mind that all example token claims are approximate numbers. Therefore, they might not be accurate.**
 
 ### How to claim LOAS into OAS​
-You can claim LOAS into OAS​ at [oasys-pos-fe](https://tools-fe.oasys.games/lOAS)
+You can claim LOAS into OAS​ at [tools-fe](https://tools-fe.oasys.games/lOAS)

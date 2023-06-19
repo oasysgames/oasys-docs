@@ -68,11 +68,12 @@ If you've already built the Verse, skip this procedure.
 And you can check VerseInfo with build_transaction at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
 ### Connect wallet
-Access [oasys-pos-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the Verse.
+Access [tools-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the Verse.
 
 Connect the wallet using the builder in metamask.
-If you successfully connect the wallet, the builder's address will appear next to "Owner Address:".
-![Connect wallet](/img/docs/techdocs/oasys-pos-fe/connect_wallet.png)
+If you successfully connect the wallet, the builder's address and connected network will appear.
+
+![Connect wallet](/img/docs/techdocs/tools-fe/connect_wallet.png)
 
 ### Deposit OAS to build Verse.
 For the mainnet, deposit 1000000 OAS, for the testnet, deposit 0.000000001 OAS.
@@ -80,7 +81,7 @@ For the mainnet, deposit 1000000 OAS, for the testnet, deposit 0.000000001 OAS.
 The amount of OAS is required for the builder in advance. If you use the testnet, please reserve OAS in [Faucet](https://faucet.testnet.oasys.games).
 
 If the deposit is successful, you will see the OAS deposited next to "Deposit amount:".
-![Deposit](/img/docs/techdocs/oasys-pos-fe/deposit.png)
+![Deposit](/img/docs/techdocs/tools-fe/deposit.png)
 
 ### Build verse
 It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) before building a Verse.
@@ -92,15 +93,15 @@ To build a Verse, set the following
 - address of the sequencer
 - address of the proposer
 
-![Build](/img/docs/techdocs/oasys-pos-fe/build.png)
+![Build](/img/docs/techdocs/tools-fe/build.png)
 
 
 If the Verse build is successful, the following will be displayed. You can get verse info with build_tx_hash at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
-![Verse build Success](/img/docs/techdocs/oasys-pos-fe/verse_build_success.png)
+![Verse build Success](/img/docs/techdocs/tools-fe/verse_build_success.png)
 
 Download address.json and genesis.json.
-![Build](/img/docs/techdocs/oasys-pos-fe/build_complete.png)
+![Build](/img/docs/techdocs/tools-fe/build_complete.png)
 
 Copy the generated configuration files to the `assets` directory of the `verse-layer-optimism` repository.
 
@@ -118,10 +119,11 @@ cd /path/to/verse-layer-optimism
 
 ## 4-2. Check verse information
 You can check verse information from verse-build_tx_hash or verse_chain_id or verse_builder_address at [check-verse-page](https://tools-fe.oasys.games/check-verse).
-![Check verse info](/img/docs/techdocs/oasys-pos-fe/check_verse_info.png)
+
+![Check verse info](/img/docs/techdocs/tools-fe/check_verse_info.png)
 
 You can also download address.json and genesis.json as well as [Build verse](#build-verse).
-![Build](/img/docs/techdocs/oasys-pos-fe/build_complete.png)
+![Build](/img/docs/techdocs/tools-fe/build_complete.png)
 
 Copy the generated configuration files to the `assets` directory of the `verse-layer-optimism` repository and [Build verse](#build-verse).
 

@@ -23,7 +23,7 @@ Please check [**Checklist for validator**](/docs/hub-validator/operate-validator
 ### Participating PoS using Web
 Before participating in PoS, You have to complete building a validator at [Build Validator Node (geth)](/docs/hub-validator/operate-validator/1-2-build-validator-node)
 
-You can join validator to PoS at [oasys-pos-fe](https://tools-fe.oasys.games/validator).
+You can join validator to PoS at [tools-fe](https://tools-fe.oasys.games/join-validator).
 
 ### 1. Connect Validator owner wallet
 First, Login with the Validator owner via metamask.
@@ -55,7 +55,7 @@ You will see a success message after doing this.
 ![join_update](/img/docs/tech/joinvalidator/join_validator_update.png)
 
 ### 3. Staking
-There's no staking function in [oasys-pos-fe](https://tools-fe.oasys.games/validator).
+There's no staking function in [tools-fe](https://tools-fe.oasys.games/join-validator).
 You have to stake via [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or [Oasys Hub](https://hub.oasys.games/). 
 
 
@@ -98,7 +98,7 @@ If not and you want your validator to join oasys testnet PoS, you can go to [fau
 ### 3. Register as a Validator
 Using CLI Tool, You must register your validator Owner address, validator Operator Address to Staking Contract.
 
-You can use oasys-pos-fe(WEB) instead CLI.
+You can use tools-fe(WEB) instead CLI.
 
 #### 3.1. Export Validator Owner private key 
 
