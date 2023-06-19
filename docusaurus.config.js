@@ -118,6 +118,12 @@ const config = {
             label: 'Dev Tools',
           },
           {
+            type: 'doc',
+            docId: 'references/hub-layer/1-1',
+            position: 'left',
+            label: 'References',
+          },
+          {
             type: 'localeDropdown',
             position: 'right',
           },

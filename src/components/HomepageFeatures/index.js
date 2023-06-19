@@ -54,6 +54,16 @@ const FeatureList = [
       </>
     ),
   },
+  {
+    title: 'References',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/references/hub-layer/1-1",
+    description: (
+      <>
+        References mainly for developers
+      </>
+    ),
+  },
 ];
 
 function Feature({Svg, linkTo, title, description}) {
