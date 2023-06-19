@@ -98,7 +98,7 @@ If not and you want your validator to join oasys testnet PoS, you can go to [fau
 ### 3. Register as a Validator
 Using CLI Tool, You must register your validator Owner address, validator Operator Address to Staking Contract.
 
-You can use oasys-pos-fe(WEB) instead CLI.
+You can use tools-fe(WEB) instead CLI.
 
 #### 3.1. Export Validator Owner private key 
 
