@@ -10,7 +10,7 @@ You can join validator at [join validator](/docs/hub-validator/operate-validator
 To claim commission, please connect wallet of validator owner at [tools-fe](https://tools-fe.oasys.games/claim-commissions).
 
 When connect wallet of validator owner, You can see address of validator owner and validator operator.
-![claim commission](/img/docs/techdocs/oasys-pos-fe/claim_commission.png)
+![claim commission](/img/docs/techdocs/tools-fe/claim_commission.png)
 
 ### Press button
 To claim commission, press button of `Claim Commissions`.
