@@ -69,7 +69,7 @@ cp -rp ./data ~/verse-backup$(date '+%Y%m%d')
 
 ## Create contractupdate.json
 
-Please copy the JSON and save it as `./assets/contractupdate.json`. Also, replace the `_REPL_DEPLOY_BLOCK_` with the **latest block number plus 1**.
+Please copy the JSON and save it as `./assets/contractupdate.json`. Also, replace the `_REPL_DEPLOY_BLOCK_` with the decimal (not hexadecimal) value of the **latest block number plus 1**.
 
 ```json
 {
