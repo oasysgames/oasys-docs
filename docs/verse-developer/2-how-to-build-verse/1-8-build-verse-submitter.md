@@ -172,10 +172,10 @@ oasvlfy wallet:unlock --config /home/geth/.oasvlfy/config.yml --name signer
 ## Monitor Verifier
 
 ### How to check verse verification status
-Instant Verifier manages data at SQLite.
-You can check the verification status and rollup status from SQLite data.
+The Instant Verifier stores its data within a SQLite database.
+Therefore, you can inspect the status of the verification and rollup processes by accessing this SQLite data.
 
-If you build Instant Verifier, you can check `db.sqlite` at `datastore` of `/home/geth/.oasvlfy/config.yml`.
+If you have set up the Instant Verifier, you can inspect the `db.sqlite` file located in the `datastore` directory, which can be found in the path `/home/geth/.oasvlfy/config.yml`.
 ```yaml
 datastore: /data/verse-verifier
 ```
@@ -185,16 +185,16 @@ To show data, execute SQLite.
 sqlite3 /data/verse-verifier/db.sqlite
 ```
 
-To make it easier to see the results of your query, execute the following at SQLite.
+To better visualize the results of your queries, execute the following commands in SQLite:
 ```sql
 .headers on
 .mode column
 ```
 
-Before checking verse verification status, you must check your verse state_commitment_chain(scc) contract address.
+Before examining the Verse verification status, it's essential to confirm your Verse's state_commitment_chain (scc) contract address.
 You can check the state_commitment_chain address as `StateCommitmentChain` at `addresses.json` downloaded from [tools-fe](/docs/verse-developer/how-to-build-verse/1-2-manual#4-2-check-verse-information).
 
-You can check the verification status of the your Verse by run SQL with the `StateCommitmentChain` address as the where condition.
+You can examine your Verse's verification status by running an SQL command with the `StateCommitmentChain` address as a condition in the WHERE clause.
 
 ```sql
 .header on
