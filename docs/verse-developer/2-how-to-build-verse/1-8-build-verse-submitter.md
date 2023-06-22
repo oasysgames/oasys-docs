@@ -180,81 +180,126 @@ If you build Instant Verifier, you can check `db.sqlite` at `datastore` of `/hom
 datastore: /data/verse-verifier
 ```
 
-To check verse status, execute SQLite.
+To show data, execute SQLite.
 ```shell
 sqlite3 /data/verse-verifier/db.sqlite
 ```
 
 To make it easier to see the results of your query, execute the following at SQLite.
 ```sql
+.headers on
 .mode column
 ```
 
 Before checking verse verification status, you must check your verse state_commitment_chain(scc) contract address.
 You can check the state_commitment_chain address as `StateCommitmentChain` at `addresses.json` downloaded from [tools-fe](/docs/verse-developer/how-to-build-verse/1-2-manual#4-2-check-verse-information).
 
-#### How to check next rollup index(next index)
-You can check the next rollup index with your state_commitment_chain(scc) address.
+You can check the verification status of the your Verse by run SQL with the `StateCommitmentChain` address as the where condition.
 
 ```sql
-select id,hex(address), next_index from optimism_sccs where hex(address) = '<Your state_commitment_chain address>';
+.header on
+.mode column
+
+-- If you want to output in CSV format, uncomment it out.
+-- .mode csv
+
+
+-- Create temporary table for variables.
+PRAGMA temp_store=2;
+CREATE TEMP TABLE _vars(name TEXT PRIMARY KEY, value TEXT);
+
+-- Please set the your `StateCommitmentChain` address (without the leading `0x`).
+INSERT INTO _vars (name,value) VALUES (
+  'scc',
+  (
+    SELECT id FROM optimism_sccs
+    WHERE HEX(address) = UPPER('<Set here>')
+  )
+);
+
+-- Rollup index range to be checked.
+INSERT INTO _vars (name,value) VALUES (
+  'last_index',
+  (
+    SELECT MAX(batch_index) FROM optimism_signatures
+    WHERE optimism_scc_id = (SELECT value FROM _vars WHERE name = 'scc')
+  )
+);
+INSERT INTO _vars (name,value) VALUES (
+  'first_index',
+  (SELECT value FROM _vars WHERE name = 'last_index') - 40
+);
+
+-- Please overwrite if you want to check a specific rollup index range.
+-- UPDATE _vars SET value = '10' WHERE name = 'first_index';
+-- UPDATE _vars SET value = '20' WHERE name = 'last_index';
+
+
+-------- Table1: Display the number of verified verifiers per rollup. --------
+-- If you want to output to a file, uncomment it out.
+-- .output 'counts.txt'
+SELECT
+  sig.batch_index,
+  SUM(CASE WHEN sig.approved IS TRUE  THEN 1 ELSE 0 END) AS approves,
+  SUM(CASE WHEN sig.approved IS FALSE THEN 1 ELSE 0 END) AS rejects
+FROM  optimism_signatures AS sig
+WHERE sig.optimism_scc_id = (SELECT value FROM _vars WHERE name = 'scc')
+AND   sig.batch_index BETWEEN (SELECT value FROM _vars WHERE name = 'first_index') AND (SELECT value FROM _vars WHERE name = 'last_index')
+GROUP BY sig.batch_index, sig.approved
+ORDER BY sig.batch_index, sig.approved;
+
+
+-------- Table2: Display signatures received from verifiers. --------
+-- If you want to output to a file, uncomment it out.
+-- .output 'signatures.txt'
+SELECT 
+  sig.id,
+  HEX(signers.address) AS signer,
+  sig.batch_index,
+  HEX(sig.batch_root) AS 'state',
+  CASE WHEN sig.approved IS TRUE THEN 'yes' ELSE 'no' END AS approved,
+  HEX(sig.signature) AS signature
+FROM  optimism_signatures AS sig
+JOIN  optimism_sccs ON sig.optimism_scc_id = optimism_sccs.id 
+JOIN  signers       ON sig.signer_id = signers.id 
+WHERE sig.optimism_scc_id = (SELECT value FROM _vars WHERE name = 'scc')
+AND   sig.batch_index BETWEEN (SELECT value FROM _vars WHERE name = 'first_index') AND (SELECT value FROM _vars WHERE name = 'last_index')
+ORDER BY sig.batch_index, signers.id;
 ```
 
 Column data is the following.
 
-| Column  | Description | Example |
-| ---- | ---- | ---- |
-|  id  | | 1  |
-|  address  | Address of state_commitment_chain | ADFB0D1B239819CC45B7A863DEEAC9A54F97EB75  |
-|  next_index  | Index of the rollup that will be verified next | 3  |
+For the **`Table1`**
 
-`next_index` is the rollup index that will be verified next. To summarize, this scc verified rollup of (`next_index` - 1) times.
+| Column  | Description |
+| ---- | ---- |
+| batch_index | Serial number of the rollup. |
+| approves | Number of verifiers who approved to the rollup. |
+| rejects  | Number of verifiers who rejected to the rollup. |
 
-#### How to check latest rollup index(batch index) details
-You can check the latest verified rollup index with your state_commitment_chain(scc) address.
+For the **`Table2`**
 
-```sql
-WITH subquery AS (
-  SELECT 
-    optimism_signatures.id,
-    optimism_signatures.previous_id,
-    hex(signers.address) as validator_address,
-    hex(optimism_sccs.address) as verse_scc_address,
-    optimism_signatures.batch_index,
-    hex(optimism_signatures.batch_root) as  batch_root,
-    optimism_signatures.batch_size,
-    optimism_signatures.prev_total_elements,
-    optimism_signatures.approved,
-    hex(optimism_signatures.signature) as optimism_signature
-  FROM 
-    optimism_signatures 
-  JOIN 
-    optimism_sccs ON optimism_signatures.optimism_scc_id = optimism_sccs.id 
-  JOIN 
-    signers ON optimism_signatures.signer_id = signers.id 
-  WHERE 
-      hex(optimism_sccs.address) = '<Your state_commitment_chain address>'
-  ORDER BY
-      optimism_signatures.batch_index DESC
-)
-SELECT * FROM subquery
-WHERE subquery.batch_index =  (SELECT MAX(batch_index) FROM subquery);
+| Column  | Description |
+| ---- | ---- |
+| id | [ULID](https://github.com/ulid/spec) of the signature. |
+| signer | The Ethereum address of the verifier who created the signature. |
+| batch_index | Serial number of the rollup. |
+| state | The StateRoot to be signed |
+| approved | Whether the verifier has verified and approved or not. |
+| signature | Off-chain signature received from verifier |
+
+### How to monitor logs
+
+Monitor all logs:
+```shell
+journalctl -fu oasvlfy --output=cat --no-pager
 ```
 
-Column data is the following.
-
-| Column  | Description | Example |
-| ---- | ---- | ---- |
-|  id  | | 01H3E9VPZSN4KS0QSP3T1ZYJ28  |
-|  previous_id  | Id of the previous rollup data that this validator_address signed for this verse | 01H3DWTPQED7GZKW1ZRHQ3M9YG  |
-|  validator_address  | Validator that verified the rollup | A889698683900857FA9AC54FBC972E88292B5387  |
-|  verse_scc_address  | Verse State_commitment_chain | ADFB0D1B239819CC45B7A863DEEAC9A54F97EB75  |
-|  batch_index  | Rollup index | 2  |
-|  batch_root  | State root used verification | 6094AE31953B97DAD3BEC31E170186DF52FEC23D858F159BE49445907AB36C1D  |
-|  batch_size  | Number of L2 transactions this rollup will hold | 1  |
-|  prev_total_elements  | How many layer2 transactions have been rolled up so far | 2  |
-|  approved  | Whether the validator has validated and approved or not. True is 1, false is 0 | 1  |
-|  optimism_signature  | Signature when validator verifies | 6A7F636DC04DF53DD2151F227B19FEF2EDB1AFAD5584A84D4FA12C2...  |
+Monitor only logs of the your Verse:
+```shell
+journalctl -fu oasvlfy --output=cat --no-pager |
+  grep -i '<Set the your `StateCommitmentChain` address (without the leading `0x`).>'
+```
 
 ### How to monitor the submission of validator rollup verification
 You can check the following in the submitter log.
