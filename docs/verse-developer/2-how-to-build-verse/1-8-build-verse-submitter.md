@@ -168,3 +168,163 @@ If your private key is password protected and you do not want to use password.tx
 oasvlfy wallet:unlock --config /home/geth/.oasvlfy/config.yml --name signer
 ```
 ::::::
+
+## Monitor Verifier
+
+### How to check verse verification status
+The Instant Verifier stores its data within a SQLite database.
+Therefore, you can inspect the status of the verification and rollup processes by accessing this SQLite data.
+
+If you have set up the Instant Verifier, you can inspect the `db.sqlite` file located in the `datastore` directory, which can be found in the path `/home/geth/.oasvlfy/config.yml`.
+```yaml
+datastore: /data/verse-verifier
+```
+
+To show data, execute SQLite.
+```shell
+sqlite3 /data/verse-verifier/db.sqlite
+```
+
+To better visualize the results of your queries, execute the following commands in SQLite:
+```sql
+.headers on
+.mode column
+```
+
+Before examining the Verse verification status, it's essential to confirm your Verse's state_commitment_chain (scc) contract address.
+You can check the state_commitment_chain address as `StateCommitmentChain` at `addresses.json` downloaded from [tools-fe](/docs/verse-developer/how-to-build-verse/1-2-manual#4-2-check-verse-information).
+
+You can examine your Verse's verification status by running an SQL command with the `StateCommitmentChain` address as a condition in the WHERE clause.
+
+```sql
+.header on
+.mode column
+
+-- If you want to output in CSV format, uncomment it out.
+-- .mode csv
+
+
+-- Create temporary table for variables.
+PRAGMA temp_store=2;
+CREATE TEMP TABLE _vars(name TEXT PRIMARY KEY, value TEXT);
+
+-- Please set the your `StateCommitmentChain` address (without the leading `0x`).
+INSERT INTO _vars (name,value) VALUES (
+  'scc',
+  (
+    SELECT id FROM optimism_sccs
+    WHERE HEX(address) = UPPER('<Set here>')
+  )
+);
+
+-- Rollup index range to be checked.
+INSERT INTO _vars (name,value) VALUES (
+  'last_index',
+  (
+    SELECT MAX(batch_index) FROM optimism_signatures
+    WHERE optimism_scc_id = (SELECT value FROM _vars WHERE name = 'scc')
+  )
+);
+INSERT INTO _vars (name,value) VALUES (
+  'first_index',
+  (SELECT value FROM _vars WHERE name = 'last_index') - 40
+);
+
+-- Please overwrite if you want to check a specific rollup index range.
+-- UPDATE _vars SET value = '10' WHERE name = 'first_index';
+-- UPDATE _vars SET value = '20' WHERE name = 'last_index';
+
+
+-------- Table1: Display the number of verified verifiers per rollup. --------
+-- If you want to output to a file, uncomment it out.
+-- .output 'counts.txt'
+SELECT
+  sig.batch_index,
+  SUM(CASE WHEN sig.approved IS TRUE  THEN 1 ELSE 0 END) AS approves,
+  SUM(CASE WHEN sig.approved IS FALSE THEN 1 ELSE 0 END) AS rejects
+FROM  optimism_signatures AS sig
+WHERE sig.optimism_scc_id = (SELECT value FROM _vars WHERE name = 'scc')
+AND   sig.batch_index BETWEEN (SELECT value FROM _vars WHERE name = 'first_index') AND (SELECT value FROM _vars WHERE name = 'last_index')
+GROUP BY sig.batch_index, sig.approved
+ORDER BY sig.batch_index, sig.approved;
+
+
+-------- Table2: Display signatures received from verifiers. --------
+-- If you want to output to a file, uncomment it out.
+-- .output 'signatures.txt'
+SELECT 
+  sig.id,
+  HEX(signers.address) AS signer,
+  sig.batch_index,
+  HEX(sig.batch_root) AS 'state',
+  CASE WHEN sig.approved IS TRUE THEN 'yes' ELSE 'no' END AS approved,
+  HEX(sig.signature) AS signature
+FROM  optimism_signatures AS sig
+JOIN  optimism_sccs ON sig.optimism_scc_id = optimism_sccs.id 
+JOIN  signers       ON sig.signer_id = signers.id 
+WHERE sig.optimism_scc_id = (SELECT value FROM _vars WHERE name = 'scc')
+AND   sig.batch_index BETWEEN (SELECT value FROM _vars WHERE name = 'first_index') AND (SELECT value FROM _vars WHERE name = 'last_index')
+ORDER BY sig.batch_index, signers.id;
+```
+
+Column data is the following.
+
+For the **`Table1`**
+
+| Column  | Description |
+| ---- | ---- |
+| batch_index | Serial number of the rollup. |
+| approves | Number of verifiers who approved to the rollup. |
+| rejects  | Number of verifiers who rejected to the rollup. |
+
+For the **`Table2`**
+
+| Column  | Description |
+| ---- | ---- |
+| id | [ULID](https://github.com/ulid/spec) of the signature. |
+| signer | The Ethereum address of the verifier who created the signature. |
+| batch_index | Serial number of the rollup. |
+| state | The StateRoot to be signed |
+| approved | Whether the verifier has verified and approved or not. |
+| signature | Off-chain signature received from verifier |
+
+### How to monitor logs
+
+Monitor all logs:
+```shell
+journalctl -fu oasvlfy --output=cat --no-pager
+```
+
+Monitor only logs of the your Verse:
+```shell
+journalctl -fu oasvlfy --output=cat --no-pager |
+  grep -i '<Set the your `StateCommitmentChain` address (without the leading `0x`).>'
+```
+
+### How to monitor the submission of validator rollup verification
+You can check the following in the submitter log.
+- Submission of validator rollup verification to the verse state_commitment_chain(scc) contract
+- Rollup verification completion
+
+#### Submission of validator rollup verification
+If a validation result for a validator is submitted to state_commitment_chain(scc), 'Sent transaction' will appear in the log.
+
+```shell
+2023-06-20 10:43:10 INFO [06-20|01:43:10.260] Sent transaction  worker=scc-submitter   scc=0xADFb0D1b239819cC45B7A863DEeac9A54F97eb75 from-index=0 to-index=0 call-size=1 tx=0xfff45b3380eb72a0d02a80b8f6f606759d73317a44618145c0c26358609e9d96 nonce=0 gas-limit=140,994 gas-fee=1,000,000,002 gas-tip=1,000,000,000 caller=scc_submitter.go:501
+```
+
+The above means the following.
+- One validator's validation results are submitted to scc(`0xADFb0D1b239819cC45B7A863DEeac9A54F97eb75`)
+- Not yet written in BLOCK. It is a transaction that has been sent to the mempool.
+- L1 Submission Transaction hash is `0xfff45b3380eb72a0d02a80b8f6f606759d73317a44618145c0c26358609e9d96`.
+
+#### Submission of validator rollup verification completion
+If rollup verification completion, a 'Transaction succeeded' will appear in the log.
+
+```shell
+2023-06-20 10:43:19 INFO [06-20|01:43:19.262] Transaction succeeded  worker=scc-submitter   scc=0xADFb0D1b239819cC45B7A863DEeac9A54F97eb75 from-index=0 to-index=0 tx=0xfff45b3380eb72a0d02a80b8f6f606759d73317a44618145c0c26358609e9d96 caller=scc_submitter.go:538
+```
+
+The above means the following.
+- Submission of validator rollup verification is completed
+- L1 Submission Transaction hash is `0xfff45b3380eb72a0d02a80b8f6f606759d73317a44618145c0c26358609e9d96`.
