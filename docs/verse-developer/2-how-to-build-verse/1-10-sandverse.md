@@ -7,3 +7,6 @@ But because everyone can see transactions with the SAND Verse explorer, We recom
 
 ## How to add SAND Verse to your metamask
 Please refer to [RPC Endpoints](/docs/staking/rpc-endpoint/1-1-rpc-endpoint#sand-verse-verse-layer) to set up Oasys SAND Verse in your metamask.
+
+## How to Obtain OAS on Sand Verse
+Please visit the [faucet](https://faucet.sandverse.oasys.games/) website to get OAS tokens for making transactions.
