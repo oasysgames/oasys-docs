@@ -101,6 +101,7 @@ If the Verse build is successful, the following will be displayed. You can get v
 ![Verse build Success](/img/docs/techdocs/tools-fe/verse_build_success.png)
 
 Download address.json and genesis.json.
+When you build new verse node, please use latest version genesis.json.
 ![Build](/img/docs/techdocs/tools-fe/build_complete.png)
 
 Copy the generated configuration files to the `assets` directory of the `verse-layer-optimism` repository.
@@ -123,7 +124,9 @@ You can check verse information from verse-build_tx_hash or verse_chain_id or ve
 ![Check verse info](/img/docs/techdocs/tools-fe/check_verse_info.png)
 
 You can also download address.json and genesis.json as well as [Build verse](#build-verse).
+If the verse has already been created and you want to check genesis.json version of the verse, you can check that with your verse rpc url at `Check Genesis Version `.
 ![Build](/img/docs/techdocs/tools-fe/build_complete.png)
+![Check Genesis Version](/img/docs/techdocs/tools-fe/check_genesis_version.png)
 
 Copy the generated configuration files to the `assets` directory of the `verse-layer-optimism` repository and [Build verse](#build-verse).
 
