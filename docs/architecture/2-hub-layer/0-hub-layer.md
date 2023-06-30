@@ -1,7 +1,6 @@
 ---
-sidebar_position: 1
 ---
-# 5-1. Hub- Layer
+# Hub- Layer
 ## Outline
 The Hub-Layer is an EVM-Compatible public blockchain of Layer 1 in Oasys. The node implementation is based on a forked version of geth (Go Ethereum) with minimal modifications and adopts PoS (Proof of Stake) as the consensus algorithm. The public nature of blockchain operation is ensured by allowing users to become node operators (validators). In order to provide a stable blockchain network, in principle, application execution is left to the Verse-Layer. The Hub-Layer is restricted to limited uses for rolling up batches of transactions, FT/NFT management, managing bridge information, and so on. Exceptionally, some contracts may be deployed on the Hub-Layer via governance approval, but these are controlled by the governance, so the stability of the blockchain remains unaffected.
 

@@ -1,3 +1,6 @@
+---
+---
+
 # About Validator Account 
 
 <!-- TRANSLATE: Not sure what is meant by 'Validator accounts may be various' -->

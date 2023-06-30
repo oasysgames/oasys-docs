@@ -78,7 +78,7 @@ https://github.com/oasysgames/oasys-pos-cli/releases
 
 Create a private key for the Owner account.
 If you already have an account, you can skip this step. 
-You can find details in [Wallet](/docs/architecture/hub-layer/consensus/dpos/1-3-validator-account).
+You can find details in [Wallet](/docs/architecture/hub-layer/validator-account).
     
 ```
 $ oaspos crypto:create-account

@@ -1,5 +1,5 @@
 # Verse Submitter
-The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building Verse Submitter.
+The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier) by building Verse Submitter.
 
 ## About
 Instant Verifier of Verse-Layer for the Oasys Blockchain.

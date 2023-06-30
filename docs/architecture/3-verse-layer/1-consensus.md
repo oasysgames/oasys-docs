@@ -1,3 +1,6 @@
+---
+---
+
 # Consensus Logic on Verses 
 
 The Verse Layer uses optimism to employ optimistic rollups.

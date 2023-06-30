@@ -13,7 +13,7 @@ Since producing more blocks requires storage, if your node is operated for a lon
 |--|---------|
 |OS|Linux|
 |CPU|4 Core / 2.5GHz / x86_64 or ARM|
-|RAM|16GB|
+|RAM|32GB|
 |DISK|500GB SSD|
 |Network|100Mbps|
 

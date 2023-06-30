@@ -1,3 +1,6 @@
+---
+---
+
 # Permission by Deposit
 
 A token deposit is required for making a Verse. 
