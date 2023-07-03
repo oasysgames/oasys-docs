@@ -7,7 +7,7 @@
 |--|---------|
 |OS|Linux|
 |CPU|4 Core / 2/5GHz / x86_64|
-|RAM|8GB DISK|
+|RAM|16GB|
 |DISK|500GB SSD|
 |Network|100Mbps|
 Verse uses more CPU. Using Higher Frequency for CPU when having much pending transaction in Verse can have a higher verse transaction processing speed for Verse.
