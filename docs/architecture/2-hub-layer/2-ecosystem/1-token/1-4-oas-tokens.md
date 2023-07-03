@@ -2,23 +2,22 @@
 
 ## OAS
 
-Native Token. 
-
-OAS does not have a contract address. 
+Native Token. OAS does not have a contract address. 
 
 ## WOAS
 
-Wrapped Oasys Token
-
-ERC-20 Standard token with easy use for bridging. 
+Wrapped Oasys Token. ERC-20 Standard token with easy use for bridging. 
 
 # sOAS & LOAS
 
+
 ## sOAS
 
-OAS is our native token, and sOAS means Stakeable Oasys Token.
-<!-- TRANSLATION: This sentence is quite clumsy, but not sure what is meant without japanese source -->
-Since we need a locked-up token but POS needs staking for validators, we have made sOAS.
+OAS is our native token, and sOAS means Stakeable Oasys Token. Since we need a locked-up token but POS needs staking for validators, we have made sOAS.
+
+### Purpose of sOAS
+
+sOAS is, for better participating in our ecosystem, and thanks for early support with us, we are sending tokens that can stake, which makes an opportunity to participate in our ecosystem. sOAS can use Hub layer staking and verse deposit, which can substantially support verse builders or operators.
 
 ### Contract of sOAS
 
@@ -128,3 +127,17 @@ And you can retrieve locked up token like this.
 
 ### How to claim LOAS into OAS​
 You can claim LOAS into OAS​ at [tools-fe](https://tools-fe.oasys.games/lOAS)
+
+## OAS & sOAS & LOAS compare
+
+| Type | OAS | sOAS | LOAS |
+|-----------|-----------|-----------|-----------|
+| Stake on Hub Layer| O | O | X |
+| Verse Layer Deposit (1M Deposit to build a verse) | O | O | X |
+| Claim Staking Reward on Hub Layer | O | O | X | 
+| CLI Staking (Hub/Verse Layer) | O | O | X |
+| Bridge onto another chain | O | X | X |
+| Move Token to other address | O | Permissive | X |
+
+**Permissive** means you need authorization from the foundation to move token, which can take around 1 month. 
+Please reach out to the Oasys foundation if you need to move a token.

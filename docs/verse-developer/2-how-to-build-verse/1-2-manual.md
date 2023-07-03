@@ -10,7 +10,7 @@ If you want to test deploying contracts and execute transactions on the Verse, p
 
 ![verse build](/img/docs/techdocs/verse/versebuild.png)
 
-For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/1-1-verse-layer), you can take a look at it before deploying a Verse. 
+For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/verse-accounts), you can take a look at it before deploying a Verse. 
 
 ## 1. Requirements
 
@@ -180,10 +180,10 @@ docker-compose up -d message-relayer
 - batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
 
 ## 7. Set Instant Verifier(For Mainnet only)
-The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter).
+The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter).
 
 
-Please follow these pages if you want to set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-2-initial-verifier).
+Please follow these pages if you want to set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
 - [Verse Submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter)
 
 ## Permissioned chain

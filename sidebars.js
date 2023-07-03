@@ -50,14 +50,22 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Consensus Algorithm', 
+          label: 'Hub Layer', 
           link: {
             type: 'doc',
-            id: 'architecture/hub-layer/consensus/1-1-hub-consensus',
+            id: 'architecture/hub-layer/hub-layer',
+          },
+          collapsed: true,
+          items: []
+        },
+        {
+          type: 'category',
+          label: 'Consensus Algorithm', 
+          link: {
+            type: 'generated-index',
           },
           collapsed: true,
           items: [
-            
             {
               type: 'category',
               label: 'DPoS', 
@@ -66,8 +74,8 @@ const sidebars = {
               },
               collapsed: true,
               items: [
-                'architecture/hub-layer/consensus/dpos/1-3-validator-account',
-                'architecture/hub-layer/consensus/dpos/1-1-weighted-random',
+                'architecture/hub-layer/consensus/dpos/1-1-hub-consensus',
+                'architecture/hub-layer/consensus/dpos/1-2-weighted-random',
                 // 'architecture/hub-layer/consensus/dpos/1-2-mining',
               ]
             }, {
@@ -83,7 +91,27 @@ const sidebars = {
               ]
             }
           ]
-        }, 
+        },
+        {
+          type: 'category',
+          label: 'About Validator Account', 
+          link: {
+            type: 'doc',
+            id: 'architecture/hub-layer/validator-account',
+          },
+          collapsed: true,
+          items: []
+        },
+        {
+          type: 'category',
+          label: 'Wallet', 
+          link: {
+            type: 'doc',
+            id: 'architecture/hub-layer/wallet',
+          },
+          collapsed: true,
+          items: []
+        },
         {
           type: 'category',
           label: 'Token Flexibility', 
@@ -110,36 +138,46 @@ const sidebars = {
       type: 'category',
       label: 'Verse Layer', 
       link: {
-        type: 'doc',
-        id: 'architecture/verse-layer/1-1-verse-layer'
+        type: 'generated-index',
       },
       collapsed: true,
       items: [
         {
           type: 'category',
-          label: 'About Verse accounts', 
+          label: 'Verse Layer', 
           link: {
             type: 'doc',
-            id: 'architecture/verse-layer/1-1-verse-layer'
+            id: 'architecture/verse-layer/verse-layer'
           },
           collapsed: true,
           items: []
         },
         {
           type: 'category',
-          label: 'Verse data Confirmation', 
+          label: 'Consensus', 
           link: {
             type: 'doc',
-            id: 'architecture/verse-layer/consensus/1-1-consensus'
+            id: 'architecture/verse-layer/consensus'
           },
           collapsed: true,
           items: []
-        }, {
+        },
+        {
           type: 'category',
-          label: 'Permissioned / Permissionless', 
+          label: 'About Verse accounts', 
           link: {
             type: 'doc',
-            id: 'architecture/verse-layer/permission/1-1-permission'
+            id: 'architecture/verse-layer/verse-accounts'
+          },
+          collapsed: true,
+          items: []
+        },
+        {
+          type: 'category',
+          label: 'Permission', 
+          link: {
+            type: 'doc',
+            id: 'architecture/verse-layer/permission'
           },
           collapsed: true,
           items: []
@@ -162,13 +200,23 @@ const sidebars = {
               },
               collapsed: true,
               items: [
-                'architecture/verse-layer/rollup/2-1-how-to-pay-network-fee',
-                'architecture/verse-layer/rollup/2-2-initial-verifier',
+                'architecture/verse-layer/rollup/2-1-instant-verifier',
+                'architecture/verse-layer/rollup/2-2-how-to-pay-network-fee',
               ]
             }
           ]
         }
       ]
+    },
+    {
+      type: 'category',
+      label: 'Wallet', 
+      link: {
+        type: 'doc',
+        id: 'architecture/wallet',
+      },
+      collapsed: true,
+      items: [],
     },
   ],
   hubvalidator: [
@@ -187,7 +235,8 @@ const sidebars = {
         'hub-validator/operate-validator/1-5-setup-verifier',
         'hub-validator/operate-validator/1-6-monitor',
         'hub-validator/operate-validator/1-7-check-staking',
-        'hub-validator/operate-validator/1-8-faq',
+        'staking/rpc-endpoint/1-1-rpc-endpoint',
+        'hub-validator/operate-validator/1-8-faq',  
       ]
     },
     {
@@ -199,7 +248,8 @@ const sidebars = {
       collapsed: true,
       items: [
         'hub-validator/tools/2-1-hub-geth',
-        'hub-validator/tools/2-2-oaspos'
+        'hub-validator/tools/2-2-oaspos',
+        'hub-validator/tools/2-3-nsuite',
       ]
     },
   ],
@@ -210,16 +260,6 @@ const sidebars = {
       link: {
         type: 'doc',
         id: 'verse-developer/1-1-select',
-      },
-      collapsed: true,
-      items: [],
-    },
-    {
-      type: 'category',
-      label: 'RPC Endpoint', 
-      link: {
-        type: 'doc',
-        id: 'staking/rpc-endpoint/1-1-rpc-endpoint',
       },
       collapsed: true,
       items: [],
@@ -348,6 +388,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'RPC Endpoint', 
+      link: {
+        type: 'doc',
+        id: 'staking/rpc-endpoint/1-1-rpc-endpoint',
+      },
+      collapsed: true,
+      items: [],
+    },
+    {
+      type: 'category',
       label: 'Contact List', 
       link: {
         type: 'doc',
@@ -443,6 +493,16 @@ const sidebars = {
       link: {
         type: 'doc',
         id: 'staking/rpc-endpoint/1-1-rpc-endpoint',
+      },
+      collapsed: true,
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'Blockchain Explorer', 
+      link: {
+        type: 'doc',
+        id: 'staking/explore/1-1-explore',
       },
       collapsed: true,
       items: [],

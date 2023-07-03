@@ -19,3 +19,17 @@ Staking reward is to stimulate user staking and reward for contributing stabilis
 |Details| Receives amount after paying interest to Validator owner | Receives commission for operating nodes |
 
 A reward is calculated daily basis.
+
+## Jail 
+
+Low-performance Validators make the network unstable, so we made temporary jail for validators who are on low performance.
+If a validator doesn't make successful block sealing for a day, we exclude it from the POS system and change it to Jailed status. 
+While Jailed status, the validator can't receive a Validation Reward(Operation Reward) for one epoch(approx one day).
+On the Current status, without the Low-performance ban, you can claim a Validation Reward(Operation Reward) of approx 10% APY for validating on Oasys.
+
+Example: 
+- Operation ratio is bad on epoch 20, 
+- Jail since : 21
+- Jail Until : 22
+
+Validator can not claim or participate validator for approx 2 days.
