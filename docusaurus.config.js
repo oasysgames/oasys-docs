@@ -61,7 +61,7 @@ const config = {
         indexName: 'oasysgames',
   
         // Optional: see doc section below
-        contextualSearch: true,
+        contextualSearch: false,
   
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
         // externalUrlRegex: 'external\\.com|domain\\.com',
