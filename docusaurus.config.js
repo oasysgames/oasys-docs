@@ -56,7 +56,7 @@ const config = {
         appId: 'UY32N5LBZM',
   
         // Public API key: it is safe to commit it
-        apiKey: 'e9f15996a6938fc41b26ef46c8e3a17b',
+        apiKey: 'ffd5908fc7a35a352d2265dde0833d95',
   
         indexName: 'oasysgames',
   
