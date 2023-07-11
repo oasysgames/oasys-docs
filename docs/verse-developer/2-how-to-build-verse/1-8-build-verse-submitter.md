@@ -12,6 +12,12 @@ Instant Verifier of Verse-Layer for the Oasys Blockchain.
 
 - All Hub Layer Validator need to install a Verse Verifier. 
 
+:::info Info
+
+The Instant Verifier requires at least one Replica node of Verse node, which must be operated by someone other than the Verse Builder. The Replica node validates all the transactions coming from the Verse mode. The Instant Verifier refers to this Replica node to verify the Verse's integrity.
+
+:::
+
 ## Setup Verifier
 
 Download the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases) and place it in `/usr/local/bin/oasvlfy`.

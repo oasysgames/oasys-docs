@@ -18,6 +18,9 @@
 | Currency Symbol | OAS                                     |
 | RPC             | https://rpc.testnet.oasys.games         |
 | Explorer        | https://scan.testnet.oasys.games/   |
+| Faucet          | https://faucet.testnet.oasys.games/ |
+
+Our current testnet cannot sync with other full nodes. We are contemplating launching a new testnet to rectify this synchronization issue.
 
 ### SAND Verse (Verse Layer)
 Please refer to [SAND Verse](/docs/verse-developer/how-to-build-verse/1-10-sandverse) to learn about SAND verse.
@@ -29,6 +32,7 @@ Please refer to [SAND Verse](/docs/verse-developer/how-to-build-verse/1-10-sandv
 | RPC             | https://rpc.sandverse.oasys.games         |
 | Explorer        | https://scan.sandverse.oasys.games/    |
 | Web Socket      | wss://ws.sandverse.oasys.games             |
+| Faucet          | https://faucet.sandverse.oasys.games/ |
 
 
 
