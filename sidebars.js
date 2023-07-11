@@ -418,16 +418,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Contact List',
-      link: {
-        type: 'doc',
-        id: 'verse-developer/1-3-contact-list',
-      },
-      collapsed: true,
-      items: [],
-    },
-    {
-      type: 'category',
       label: 'FAQ',
       link: {
         type: 'doc',
