@@ -172,6 +172,13 @@ Next Epoch Staking    : 10,000,000 OAS
     
 To fully done staking, you must wait for 1 Epoch to be run on blockchain, which is approx 1 day. 
 
+
+:::note Note
+
+Currently, we highly recommend a commission rate of 10% on the mainnet. We don't want validators to compete based on low commission rates. Instead, we encourage competition through game development. This is why we are not advocating for differences in commission rates.
+
+:::
+
 ### 6. Check node operation. 
 Checking Node Status:
 ```bash

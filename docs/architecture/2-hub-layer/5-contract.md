@@ -4,6 +4,10 @@
 # Contracts
 The Hub Layer is EVM compatible. Therefore, any contract in the Ethereum ecosystem can be migrated to the Oasys without any additional modifications. Furthermore, any existing developer tools such as Truffle or web3.js are also compatible. Thus, there is no friction for developers. The development experience is the same as with Ethereum.
 
+The Verse layer is designed to be the optimal environment for developing games on Oasys, while the Oasys Hub serves as the security layer for the Verse layer. It functions as a public space for game developers. We did not design it to host a large number of contracts unrelated to gaming, such as DeFi contracts.　
+
+This is why the Hub layer is not open for contract deployment.
+
 ## Preset Contracts
 The Hub Layer includes a set of preset contracts that are essential to our ecosystem. Here is the list:
 
