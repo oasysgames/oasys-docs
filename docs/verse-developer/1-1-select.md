@@ -1,3 +1,11 @@
+# Introduction
+Firstly, I would like to address the issue of migration costs from Ethereum, Polygon, or other EVM chains for developers who are considering migrating to or selecting Oasys as their gaming development platform.
+
+**The migration costs in our ecosystem are minimal**. Our verses are EVM compatible, meaning any smart contract written in Solidity can be migrated without any modifications. Moreover, all the developer tools for the Ethereum ecosystem can also be used in Oasys. In most cases, all that's required is to change the chain ID and the RPC endpoint URL.
+
+Our architecture is divided into two layers. The first layer is the Hub layer, which manages the security of the entire ecosystem, and this is where the validators reside. The second layer is the Verse layer, which serves as the home for each game. The Verse is the primary concern for game developers. If you're interested in learning more, please refer to the architecture section of this document: [Verse Layer
+](/docs/architecture/verse-layer/verse-layer).
+
 # Selecting as a builder in Oasys
 
 The games on Oasys will only be on L2, which means it will require a place, an L2, Verse-Layer, to deploy games. As a result, game companies will have to decide between two options: 

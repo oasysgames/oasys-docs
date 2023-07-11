@@ -97,13 +97,13 @@ const config = {
             type: 'doc',
             docId: 'hub-validator/operate-validator/1-1-hd-requirement',
             position: 'left',
-            label: 'For Validators',
+            label: 'Validator',
           },
           {
             type: 'doc',
             docId: 'verse-developer/1-1-select',
             position: 'left',
-            label: 'Build on Oasys',
+            label: 'Verse/Game Builder',
           },
           {
             type: 'doc',
@@ -121,7 +121,7 @@ const config = {
             type: 'doc',
             docId: 'dev-tools/tools/1-1-hardhat',
             position: 'left',
-            label: 'Dev Tools',
+            label: 'Dev Tool',
           },
           {
             type: 'localeDropdown',

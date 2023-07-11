@@ -114,6 +114,16 @@ const sidebars = {
         },
         {
           type: 'category',
+          label: 'Smart Contract',
+          link: {
+            type: 'doc',
+            id: 'architecture/hub-layer/contract',
+          },
+          collapsed: true,
+          items: []
+        },
+        {
+          type: 'category',
           label: 'Token Flexibility', 
           link: {
             type: 'doc',
@@ -205,6 +215,16 @@ const sidebars = {
               ]
             }
           ]
+        },
+        {
+          type: 'category',
+          label: 'Smart Contract',
+          link: {
+            type: 'doc',
+            id: 'architecture/verse-layer/contract'
+          },
+          collapsed: true,
+          items: []
         }
       ]
     },
@@ -235,8 +255,8 @@ const sidebars = {
         'hub-validator/operate-validator/1-5-setup-verifier',
         'hub-validator/operate-validator/1-6-monitor',
         'hub-validator/operate-validator/1-7-check-staking',
+        'hub-validator/operate-validator/1-8-faq',
         'staking/rpc-endpoint/1-1-rpc-endpoint',
-        'hub-validator/operate-validator/1-8-faq',  
       ]
     },
     {
@@ -388,20 +408,30 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'RPC Endpoint', 
+      label: 'Contact List',
       link: {
         type: 'doc',
-        id: 'staking/rpc-endpoint/1-1-rpc-endpoint',
+        id: 'verse-developer/1-3-contact-list',
       },
       collapsed: true,
       items: [],
     },
     {
       type: 'category',
-      label: 'Contact List', 
+      label: 'FAQ',
       link: {
         type: 'doc',
-        id: 'verse-developer/1-3-contact-list',
+        id: 'verse-developer/faq',
+      },
+      collapsed: true,
+      items: [],
+    },
+    {
+      type: 'category',
+      label: 'RPC Endpoint',
+      link: {
+        type: 'doc',
+        id: 'staking/rpc-endpoint/1-1-rpc-endpoint',
       },
       collapsed: true,
       items: [],
