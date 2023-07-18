@@ -175,5 +175,46 @@ On the `icons` directory, you can add icon using the ipfs path.
 ]
 ```
 
+## Gas Fee
+
+By default configuration, the verse operates gas-free. However, if you wish, you can implement a gas fee system. Concerning the gas currency, the default choice is the bridged OAS, which is the native token of the Hub layer (L1). This choice isn't mandatory, but if you want to use a different token as the gas fee, such as your verse's native token, it would require additional development on the [oasys-optimism](https://github.com/oasysgames/oasys-optimism).
 
 
+
+### How is the gas fee implemented?
+In reality, whether a gas fee is applied or not depends on the user's choice. If a user sends a transaction with a non-zero gas price, the calculated gas cost (gas used * gas price) is automatically deducted.
+
+The gas-free environment on a Verse is achieved by setting the minimum gas price. By default, the minimum gas price is set to zero. If the price is zero, no gas fee is deducted because the calculated gas cost will always be zero.
+
+:::info Note
+
+The fee mechanism on a Verse does not support [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), despite the Verse being originally forked from Geth, which is an implementation of the Ethereum protocol.
+
+:::
+
+### How to set a non-zero gas price?
+
+You have two options. The first is through the `miner.gasprice` flag when you start your verse. The other one is via the `GASPRICE` environment variable.
+
+#### For users who have followed the [previous steps](/docs/verse-developer/how-to-build-verse/1-2-manual#2-clone-verse-layer-optimism-repository), specifically those using [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism).
+
+You can set the GASPRICE setting in the `docker-compose.yml` to your desired value. Please note that the unit is `wei`.
+
+Here is an example of setting the gas price to 1 Gwei:
+```yml
+x-l2geth-environment: &l2geth-environment
+  # ...
+  GASPRICE: 1000000000
+  # ...
+```
+
+#### For users who want to run their verse with an option flag
+
+Please just append the flag in your command line.
+
+Here is an example of setting the gas price to 1 Gwei:
+```sh
+geth \
+  --miner.gasprice 1000000000 \
+  # ...
+```
