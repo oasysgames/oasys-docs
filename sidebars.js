@@ -418,16 +418,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Development Partner',
-      link: {
-        type: 'doc',
-        id: 'verse-developer/partner',
-      },
-      collapsed: true,
-      items: [],
-    },
-    {
-      type: 'category',
       label: 'FAQ',
       link: {
         type: 'doc',
