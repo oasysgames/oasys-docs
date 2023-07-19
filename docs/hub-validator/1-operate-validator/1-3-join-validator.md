@@ -163,7 +163,7 @@ And Following output will come out.
 Balance               : 9 OAS
 Status                : active
 Operator Address      : 0x0123456789abcdef...
-Commission Rate       : 0 %
+Commission Rate       : 10 %
 Commissions           : 0 Wei
 Jailed Epoch          : 0
 Current Epoch Staking : 0 Wei

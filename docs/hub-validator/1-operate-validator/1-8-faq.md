@@ -6,8 +6,11 @@
     
 On the Hub layer manual setup Step 8, you may see a few of the following errors. There is no problem, so please ignore them.
 
+```sh
 ERROR[05-30|09:57:30.102] Failed to get validators in=Snapshot.apply hash=d069bc..ef6390 number=97920 err="header for hash not found"
+```
     
+---
 ### Q2. Block sync command result `false` 
 
 ```
@@ -20,6 +23,7 @@ After syncing, whenever you receive a new block from another validator, you will
 
 INFO [05-30|10:00:52.359] Imported new chain segment blocks=1 txs=0 mgas=0.000 elapsed=2.138ms mgasps=0.000 number=105,080 hash=9e2e47..97dbb5 dirty=0.00B
 
+---
 ### Q3. Restore Public key & Address
 
 You can run python a 3 script, with following commands : 
@@ -57,6 +61,7 @@ print(Web3.toChecksumAddress(tx['from']))
 print(Web3.toChecksumAddress(recoverd_address))
 ```
 
+---
 ### Q4. I have selected No on Do you want to start block validation automatically? on setup.sh
 
 Since you have selected automatic block validation, 
@@ -128,7 +133,6 @@ If your miner status is not working, you may see
 Block sealing failed
 ```
 ---
-
 ### Q5. I want to know the block sync status 
 
 ```
@@ -164,7 +168,7 @@ You can check, `"0xec5497b5f3f72105dd720b627ef394fe6d0bc41ed542fc4ebda52f022f643
 If miner is displayed `"0x0000000000000000000000000000000000000000"`, you need to turn on miner. You can navigate onto [Q4. block validation](/docs/hub-validator/operate-validator/1-8-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh).
 
 
-
+---
 ### Q6. Check Unit file.
 
 You can check with the following unit file, make sure your unit file is written correctly.
@@ -201,18 +205,36 @@ Make sure you have a password (used while making nodes, operator's password on s
 
 Make sure you have your operator address in here.
 
+---
+### Q7. How can I check the commission I can claim?
 
+You have two options to do this: one is via the command line interface (CLI) and the other is via the web.
 
+#### CLI
+You can use the [oasys-pos-cli](https://github.com/oasysgames/oasys-pos-cli) utility tool to facilitate validator tasks. There's a specific command to check the commission that you can claim.
 
+Here is a sample command:
+```sh
+# Set the private key as an environment variable.
+$ export PRIVATE_KEY=STAKER_PRIVATE_KEY
 
-### Q8. Exporting Ledger Private Key
+# Display the validator information
+$ oaspos validator:info --network mainnet
 
-You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
+Balance               : 9 OAS
+Status                : active
+Operator Address      : 0x0123456789abcdef...
+Commission Rate       : 10 %
+Commissions           : 123000000000000000000 Wei
+Jailed Epoch          : 0
+Current Epoch Staking : 0 Wei
+Next Epoch Staking    : 10,000,000 OAS
+```
 
+#### Web
+In the near future, you'll be able to check the amount that can be claimed on the "Claim Commission" page on the [tools-fe](https://tools-fe.oasys.games/claim-commissions).
 
 ---
-## Faucet in Testnet 
-
-https://faucet.testnet.oasys.games/
-
+### Q8. Exporting Ledger Private Key
+You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
 
