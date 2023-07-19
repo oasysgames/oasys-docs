@@ -6,7 +6,7 @@ Native Token. OAS does not have a contract address.
 
 ## WOAS
 
-Wrapped Oasys Token. ERC-20 Standard token with easy use for bridging. 
+The Wrapped Oasys Token is an ERC-20 standard token designed for simplicity of token swapping.
 
 # sOAS & LOAS
 
