@@ -1,5 +1,7 @@
 # Verse Contact List
 
+Here is a list of verses. Please note that this is not a comprehensive list, as anyone with sufficient OAS deposits can create a Verse without requiring permission from Oasys.
+
 |Verse Name|Website|Contact|Form|
 |--|---------|--------|--------|
 |MCH Verse|https://www.mycryptoheroes.net/verse|wakao@mycryptoheroes.net or kanzaki@mycryptoheroes.net||
@@ -13,3 +15,6 @@ or,
 
 Oasys Game Alliance Team
 Contact: dominic@oasys.games 
+
+#### For Verse builders who wish to have their Verse added to this list
+Pplease get in touch with tak, our technical support at Oasys. You can find him on Discord under the username `tak1827`.
