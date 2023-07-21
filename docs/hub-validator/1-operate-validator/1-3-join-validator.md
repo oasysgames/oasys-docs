@@ -1,12 +1,12 @@
-# Join Validator to PoS (CLI & Web) 
+# Join Validator to PoS (CLI & Web)
 
-## Flow checklist
+## Flow Checklist
 
-Please check [**Checklist for validator**](/docs/hub-validator/operate-validator/1-2-build-validator-node#validator-node-operation) to see whole process.
+Please refer to the [**Checklist for Validators**](/docs/hub-validator/operate-validator/1-2-build-validator-node#validator-node-operation) to review the entire process.
 
-1. Join Validator with PoS or Web to participate blockchain consensus
-2. Stake or delegate **10,000,000 OAS to activate validator node
-3. Check status of validation on next epoch
+1. Join the validator to the PoS consensus using either the CLI or the Web interface.
+2. Stake or delegate **10,000,000 OAS** to activate the validator node.
+3. Check the validation status in the next epoch.
 
 ||Web|CLI|
 |---------|----------|----------|
@@ -14,50 +14,45 @@ Please check [**Checklist for validator**](/docs/hub-validator/operate-validator
 |Stake with Hard wallet|O|O (Need to export Private key)|
 |Check reward|O|O|
 |Claim reward|O|O|
-|Check commissions|X|O|
+|Check commissions|❌|O|
 |Claim commissions|O|O|
 
 
-## Join Validator to PoS (WEB)
+## Join Validator to PoS (Web)
 
-### Participating PoS using Web
-Before participating in PoS, You have to complete building a validator at [Build Validator Node (geth)](/docs/hub-validator/operate-validator/1-2-build-validator-node)
+### Participating in PoS using the Web Interface
+Before participating in PoS, ensure that you have completed the steps to build a validator node as outlined in [Building a Validator Node (Geth)](/docs/hub-validator/operate-validator/1-2-build-validator-node).
 
-You can join validator to PoS at [tools-fe](https://tools-fe.oasys.games/join-validator).
+You can join the validator to the PoS network through the [tools-fe](https://tools-fe.oasys.games/join-validator) web site.
 
-### 1. Connect Validator owner wallet
-First, Login with the Validator owner via metamask.
-
-Check that your network is Oasys Mainnet(We do not support testnet now).
+### 1. Connect Your Validator Owner Wallet
+Start by logging in with your Validator owner account via MetaMask.
+Ensure that your network is set to Oasys Mainnet (Testnet is not supported at the moment).
 
 **Mainnet**
 
-|                 |                                    |
+|      Name       | Value                              |
 |-----------------|------------------------------------|
 | ChainID         | 248                                |
 | Currency Symbol | OAS                                |
 | RPC             | https://rpc.mainnet.oasys.games/   |
 
 
-After connecting the  wallet, you can see the Validator owner address. 
+After connecting your wallet, you will see your Validator owner address.
 ![connect_wallet](/img/docs/tech/joinvalidator/connect_wallet.png)
 
-### 2. Register Validator operator
-Input Validator Operator(operator address) and press **Register**.
-
-You will see a success message after doing this.
+### 2. Register the Validator Operator
+Enter the Validator Operator (operator address) and click on **Register**.
+You will receive a success message upon completion.
 ![join](/img/docs/tech/joinvalidator/join_validator.png)
 
 ### Update Operator
-Input the new validator operator address and press **Update**.
-
-You will see a success message after doing this.
+Enter the new Validator Operator address and click on **Update**.
+You will receive a success message upon completion.
 ![join_update](/img/docs/tech/joinvalidator/join_validator_update.png)
 
 ### 3. Staking
-There's no staking function in [tools-fe](https://tools-fe.oasys.games/join-validator).
-You have to stake via [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or [Oasys Hub](https://hub.oasys.games/). 
-
+Staking is not available on the tools-fe web site. You can stake your OAS tokens using the [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or the [Oasys Hub](https://hub.oasys.games/).
 
 
 ## Join Validator to PoS (CLI)
