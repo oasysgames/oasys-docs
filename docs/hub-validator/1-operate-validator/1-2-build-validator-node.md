@@ -58,12 +58,18 @@ $ ./setup.sh
 ```
 When starting Geth, you will encounter a question:
 
-**Do you want to start block validation automatically?**
+> Do you want to start block validation automatically?
 
-If you wish to start the validator immediately, please select **YES**.
+If you wish to start the validator immediately, please select **YES**. If you choose **NO**, please proceed to [Q4](/docs/hub-validator/operate-validator/1-8-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh) in the Validator Setup section. Keep in mind that manually turning on the validator might take some time.
 
-If you choose **NO**, please proceed to [Q4](/docs/hub-validator/operate-validator/1-8-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh) in the Validator Setup section. Keep in mind that manually turning on the validator might take some time.
 
+:::info Operator Address
+The operator address required for registration in the later [Join Validator](/docs/hub-validator/operate-validator/1-3-join-validator#2-register-the-validator-operator) process is generated in Step 4. This step is identified by the print message `4. Create a private key`.
+
+The address is written in the wallet.txt file located at `/home/geth/.ethereum/wallet.txt`. You can find the created account's address after the sentence `Public address of the key:`.
+
+For more information about the operator, please refer to [this discription](/docs/architecture/hub-layer/validator-account#validator-operator-operator-account)
+:::
 
 ### 5. Check `sestatus` Command
 On CentOS, there are instances where running `sestatus` may cause interruptions with geth(Oasys Node). In such cases, it is necessary to make the following changes:
@@ -196,6 +202,12 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 - You must BACKUP your key file! Without the key, it's impossible to access account funds!
 - You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
 ```
+:::info Operator Address
+The generated address is intended to be registered as an operator address in the later [Join Validator](/docs/hub-validator/operate-validator/1-3-join-validator#2-register-the-validator-operator) process. You can find the created account's address after the sentence `Public address of the key:`.
+
+For more information about the operator, please refer to [this discription](/docs/architecture/hub-layer/validator-account#validator-operator-operator-account)
+:::
+
 Save the secret key password to a text file using the following command:
 ```sh
 $ vi /home/geth/.ethereum/password.txt
