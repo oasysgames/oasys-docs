@@ -207,7 +207,6 @@ Make sure you have your operator address in here.
 
 ---
 ### Q7. How can I check the commission I can claim?
-
 You have two options to do this: one is via the command line interface (CLI) and the other is via the web.
 
 #### CLI
@@ -235,6 +234,33 @@ Next Epoch Staking    : 10,000,000 OAS
 In the near future, you'll be able to check the amount that can be claimed on the "Claim Commission" page on the [tools-fe](https://tools-fe.oasys.games/claim-commissions).
 
 ---
-### Q8. Exporting Ledger Private Key
-You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
+### Q8. How can I check slashings?
+You have two options to do this: one is through the command line interface (CLI), and the other is via the web.
 
+#### CLI
+You can use the [oasys-pos-cli](https://github.com/oasysgames/oasys-pos-cli) utility tool to facilitate validator tasks. There's a specific command that allows you to see how many times you have been slashed in each recent epoch.
+
+Here is a sample command:
+
+```sh
+# Display the slashes in each epoch
+# - Use the --validator option to specify your validator address.
+# - Use the --back-epoch option to specify the number of epochs to go back in order to start listing the slashes. 
+$ ./oaspos validator:info-slash --network mainnet --validator 0xXX.. --back-epoch 30  
+
++----+-------+-------+
+| ID | Epoch | Slash |
++----+-------+-------+
+|  1 |   200 |     0 |
+|  2 |   199 |     3 |
+...
+| 30 |   170 |     1 |
++----+-------+-------+
+```
+
+#### Web
+In the near future, you'll be able to see the slashes in each recent 30 days on the "Check Validator" page on the [tools-fe](https://tools-fe.oasys.games/).
+
+---
+### Q9. Exporting Ledger Private Key
+You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
