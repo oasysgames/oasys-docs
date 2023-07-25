@@ -207,7 +207,10 @@ Make sure you have your operator address in here.
 
 ---
 ### Q7. How can I check the commission I can claim?
-You have two options to do this: one is via the command line interface (CLI) and the other is via the web.
+You have two options to do this: one is via web and the other is via the command line interface (CLI).
+
+#### Web
+You can view the amount that can be claimed on the `Claim Commission` tab on the [tools-fe](https://tools-fe.oasys.games/claim-commissions).
 
 #### CLI
 You can use the [oasys-pos-cli](https://github.com/oasysgames/oasys-pos-cli) utility tool to facilitate validator tasks. There's a specific command to check the commission that you can claim.
@@ -230,12 +233,12 @@ Current Epoch Staking : 0 Wei
 Next Epoch Staking    : 10,000,000 OAS
 ```
 
-#### Web
-In the near future, you'll be able to check the amount that can be claimed on the "Claim Commission" page on the [tools-fe](https://tools-fe.oasys.games/claim-commissions).
-
 ---
 ### Q8. How can I check slashings?
-You have two options to do this: one is through the command line interface (CLI), and the other is via the web.
+You have two options to do this: one is through the web, and the other is via the command line interface (CLI).
+
+#### Web
+You can view the slashes in each recent 30 slots (days) on the `Check Validator` tab on the [tools-fe](https://tools-fe.oasys.games/check-validator).
 
 #### CLI
 You can use the [oasys-pos-cli](https://github.com/oasysgames/oasys-pos-cli) utility tool to facilitate validator tasks. There's a specific command that allows you to see how many times you have been slashed in each recent epoch.
@@ -257,9 +260,6 @@ $ ./oaspos validator:info-slash --network mainnet --validator 0xXX.. --back-epoc
 | 30 |   170 |     1 |
 +----+-------+-------+
 ```
-
-#### Web
-In the near future, you'll be able to see the slashes in each recent 30 days on the "Check Validator" page on the [tools-fe](https://tools-fe.oasys.games/).
 
 ---
 ### Q9. Exporting Ledger Private Key
