@@ -23,7 +23,7 @@
 Our current testnet cannot sync with other full nodes. We are contemplating launching a new testnet to rectify this synchronization issue.
 
 ### SAND Verse (Verse Layer)
-Please refer to [SAND Verse](/docs/verse-developer/how-to-build-verse/1-10-sandverse) to learn about SAND verse.
+Please refer to [SAND Verse](/docs/verse-developer/how-to-build-verse/1-11-sandverse) to learn about SAND verse.
 
 |                 |                                            |
 |-----------------|--------------------------------------------|
