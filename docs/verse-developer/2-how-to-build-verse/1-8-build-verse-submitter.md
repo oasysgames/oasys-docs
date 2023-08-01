@@ -246,8 +246,8 @@ INSERT INTO _vars (name,value) VALUES (
 -- .output 'counts.txt'
 SELECT
   sig.batch_index,
-  SUM(CASE WHEN sig.approved IS TRUE  THEN 1 ELSE 0 END) AS approves,
-  SUM(CASE WHEN sig.approved IS FALSE THEN 1 ELSE 0 END) AS rejects
+  SUM(CASE WHEN sig.approved = 1 THEN 1 ELSE 0 END) AS approves,
+  SUM(CASE WHEN sig.approved = 0 THEN 1 ELSE 0 END) AS rejects
 FROM  optimism_signatures AS sig
 WHERE sig.optimism_scc_id = (SELECT value FROM _vars WHERE name = 'scc')
 AND   sig.batch_index BETWEEN (SELECT value FROM _vars WHERE name = 'first_index') AND (SELECT value FROM _vars WHERE name = 'last_index')
@@ -263,7 +263,7 @@ SELECT
   HEX(signers.address) AS signer,
   sig.batch_index,
   HEX(sig.batch_root) AS 'state',
-  CASE WHEN sig.approved IS TRUE THEN 'yes' ELSE 'no' END AS approved,
+  CASE WHEN sig.approved = 1 THEN 'yes' ELSE 'no' END AS approved,
   HEX(sig.signature) AS signature
 FROM  optimism_signatures AS sig
 JOIN  optimism_sccs ON sig.optimism_scc_id = optimism_sccs.id 
