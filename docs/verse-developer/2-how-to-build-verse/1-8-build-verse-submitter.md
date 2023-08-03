@@ -106,6 +106,16 @@ wallets:
     address: '0x...' # set the your submitter's private key address.
     password: /home/geth/.ethereum/password.txt
 
+# Set L1 chain
+hub_layer:
+  chain_id: 248
+  rpc: wss://ws.mainnet.oasys.games/
+  # If you are building the Verse Submitter on the L1 Testnet, 
+  # comment out the mainnet settings above and uncomment the following testnet settings.
+
+  # chain_id: 9372
+  # rpc: wss://ws.testnet.oasys.games/
+
 ...
 
 # Verification worker
