@@ -107,15 +107,25 @@ wallets:
     password: /home/geth/.ethereum/password.txt
 
 # Set L1 chain
+# If you are building the Verse Submitter on the L1 Testnet, 
+# comment out the mainnet settings and uncomment the testnet settings.
 hub_layer:
+  # mainnet setting
   chain_id: 248
   rpc: wss://ws.mainnet.oasys.games/
-  # If you are building the Verse Submitter on the L1 Testnet, 
-  # comment out the mainnet settings above and uncomment the following testnet settings.
-
+  # testnet setting
   # chain_id: 9372
   # rpc: wss://ws.testnet.oasys.games/
 
+# Set L2 chain
+# If you are building the Verse Submitter on the L1 Testnet, 
+# comment out the mainnet settings and uncomment the testnet settings.
+verse_layer:
+  discovery:
+    # mainnet setting
+    endpoint: https://cdn.oasys.games/_oasvlfy/verse-layers.v1.json
+    # testnet setting
+    # endpoint: https://cdn.testnet.oasys.games/_oasvlfy/verse-layers.v1.json
 ...
 
 # Verification worker
