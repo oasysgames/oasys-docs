@@ -132,6 +132,10 @@ $ oaspos staker:stake \
   --validator Owner Account Address \
   --soas 10000000
 ``` 
+
+> **Testnet Staking**  
+> If you wish to stake an L1 Testnet Validator, please request staking from the Oasys Foundation using the following form.
+> [To participate in proof of stake(Oasys L1 testnet)](https://forms.gle/9TgwStSkjBKjYof86)
     
 ### 5. Confirming Staking
 To confirm your staking status, export your validator owner's private key:

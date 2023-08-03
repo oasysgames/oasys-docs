@@ -43,6 +43,27 @@ wallets:
   signer:
     address: '0x...' # set your account created L1-light-node.
     password: /home/geth/.ethereum/password.txt # set your account password path that is created L1-light-node.
+
+# Set L1 chain
+# If you are building the verifier on the L1 Testnet, 
+# comment out the mainnet settings and uncomment the testnet settings.
+hub_layer:
+  # mainnet setting
+  chain_id: 248
+  rpc: wss://ws.mainnet.oasys.games/
+  # testnet setting
+  # chain_id: 9372
+  # rpc: wss://ws.testnet.oasys.games/
+
+# Set L2 chain
+# If you are building the verifier on the L1 Testnet, 
+# comment out the mainnet settings and uncomment the testnet settings.
+verse_layer:
+  discovery:
+    # mainnet setting
+    endpoint: https://cdn.oasys.games/_oasvlfy/verse-layers.v1.json
+    # testnet setting
+    # endpoint: https://cdn.testnet.oasys.games/_oasvlfy/verse-layers.v1.json
 ```
 
 Create a systemd unit file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/oasvlfy.service)
