@@ -300,7 +300,6 @@ const sidebars = {
         'verse-developer/how-to-build-verse/1-6-reduce-metamask-access',
         'verse-developer/how-to-build-verse/1-7-read-node',
         'verse-developer/how-to-build-verse/1-8-build-verse-submitter',
-        'verse-developer/how-to-build-verse/1-13-build-verse-testnet',
         'verse-developer/how-to-build-verse/1-9-monitor',
         'verse-developer/how-to-build-verse/1-10-explorer',
         'verse-developer/how-to-build-verse/1-12-the-graph',

@@ -179,12 +179,16 @@ docker-compose up -d message-relayer
 - message-relayer : Message relayer, sending message between L1 and L2
 - batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
 
-## 7. Set Instant Verifier(For Mainnet only)
+## 7. Set Instant Verifier
 The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter).
 
 
 Please follow these pages if you want to set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
 - [Verse Submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter)
+
+Additionally, if you wish to enable instant verification, you are required to submit your Verse information to Oasys.
+- Mainnet: [To use instant verifier in verse(Mainnet)](https://forms.gle/J3yaWEB8mETgHTTc6)
+- Testnet: [To use instant verifier in verse(Testnet)](https://forms.gle/3DjSvPYx4CSj1Q2o9)
 
 ## Permissioned chain
 
