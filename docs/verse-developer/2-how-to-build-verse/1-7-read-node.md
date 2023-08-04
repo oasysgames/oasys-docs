@@ -199,7 +199,29 @@ $ curl http://<address of the origin node>:8545/ \
 ```
 
 ## Promoting Replica node
-The Replica node can be promoted to writable Origin node.
+The replica node can be promoted to writable origin node.
+
+### Stop block creation
+Prevents the origin node from creating a new block.
+
+```shell
+$ docker-compose exec l2geth geth attach -exec 'miner.stop()'
+```
+
+### Confirm synchronization
+Confirm that the replica node has caught up with the latest block on the origin node. If you are synchronizing from a Hub-Layer, you must wait for the origin node to complete its last rollup.
+
+```shell
+$ curl http://<address of the origin node and the replica node>:8545/ \
+  -H 'Content-Type: application/json' \
+  -d '{"jsonrpc":"2.0", "method":"eth_getBlockByNumber", "params":["latest", false], "id":1}' \
+  | jq '.result | { number, hash, stateRoot }'
+{
+  "number": "0x...",
+  "hash": "0x...",
+  "stateRoot": "0x..."
+}
+```
 
 ### Stop containers
 Stop all containers on the origin node and the replica node.
