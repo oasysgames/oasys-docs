@@ -1,7 +1,7 @@
 # Replica Node
 You can build a read-only replica node of Verse-Layer.
 
-The read-only verse nodes are synchronized with the verse itself, and users can retrieve information about the verse from the read-only verse nodes.
+The read-only verse nodes are synchronized with the verse itself, and users can retrieve information about the verse from the read-only verse nodes. In addition, a replica node can be promoted to a writable origin node.
 
 ## How synchronization works
 There are two ways for synchronizing Verse-Layer's transaction data to the replica node.
