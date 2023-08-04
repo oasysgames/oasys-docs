@@ -27,13 +27,20 @@ chown geth:geth /home/geth/.oasvlfy
 > **Please check you have password.txt & validator operator's private key on disk.**
 > **You need to listen 4101 port so it can send, receive transaction.** 
 
-Create a configuration file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config.yml)
+Create a configuration file. 
+- [Mainnet sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config-mainnet.yml)
+- [Testnet sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config-testnet.yml)
 
 > Open the TCP port that P2P listens on the firewall.
 
 ```shell
+# Mainnet
 curl -O /home/geth/.oasvlfy/config.yml \
-    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config.yml
+    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config-mainnet.yml
+
+# Testnet
+curl -O /home/geth/.oasvlfy/config.yml \
+    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config-testnet.yml
 ```
 
 Edit config.yml.
@@ -43,39 +50,6 @@ wallets:
   signer:
     address: '0x...' # set your account created L1-light-node.
     password: /home/geth/.ethereum/password.txt # set your account password path that is created L1-light-node.
-
-# Set L1 chain
-# If you are building the verifier on the L1 Testnet, 
-# comment out the mainnet settings and uncomment the testnet settings.
-hub_layer:
-  # mainnet setting
-  chain_id: 248
-  rpc: wss://ws.mainnet.oasys.games/
-  # testnet setting
-  # chain_id: 9372
-  # rpc: wss://ws.testnet.oasys.games/
-
-# Set L2 chain
-# If you are building the verifier on the L1 Testnet, 
-# comment out the mainnet settings and uncomment the testnet settings.
-verse_layer:
-  discovery:
-    # mainnet setting
-    endpoint: https://cdn.oasys.games/_oasvlfy/verse-layers.v1.json
-    # testnet setting
-    # endpoint: https://cdn.testnet.oasys.games/_oasvlfy/verse-layers.v1.json
-
-# Set p2p setting
-# If you are building the Verse Submitter on the L1 Testnet, 
-# comment out the mainnet settings and uncomment the testnet settings.
-p2p:
-  listen: 0.0.0.0:4101
-  bootnodes:
-    # mainnet setting
-    - /ip4/3.113.207.39/tcp/4101/p2p/12D3KooWRcFMyjkMLEQtSbjGiJSL6VQ6LTco4YxfvBeVVAX4rx5Y
-    - /ip4/35.238.159.190/tcp/4101/p2p/12D3KooWJjVoho7nNiwACx6aJH3STC58SjkbkNUsuDwzSPAJHarh
-    # testnet setting
-    # - /ip4/34.142.254.12/tcp/4101/p2p/12D3KooWMQpbQbv9vuGj2dWQHQX6K5oHPupTTSEMNzZWJQqgsBMU
 ```
 
 Create a systemd unit file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/oasvlfy.service)
