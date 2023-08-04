@@ -75,12 +75,19 @@ Create a submitter's private key. You can use docker image or [oasys-validator](
   rm geth
   ```
 
-Create a configuration file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config.yml)
+Create a configuration file. 
+- [Mainnet sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config-mainnet.yml)
+- [Testnet sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config-testnet.yml)
 
 ```shell
-curl -o /home/geth/.oasvlfy/config.yml \
-    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config.yml
+# Mainnet
+curl -O /home/geth/.oasvlfy/config.yml \
+    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config-mainnet.yml
+chown geth:geth /home/geth/.oasvlfy/config.yml
 
+# Testnet
+curl -O /home/geth/.oasvlfy/config.yml \
+    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config-testnet.yml
 chown geth:geth /home/geth/.oasvlfy/config.yml
 ```
 
