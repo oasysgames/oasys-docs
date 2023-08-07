@@ -48,13 +48,15 @@ The operator address is generated in the previous validator node building sectio
 You will receive a success message upon completion.
 ![join](/img/docs/tech/joinvalidator/join_validator.png)
 
-### Update Operator
+#### Update Operator
 Enter the new Validator Operator address and click on **Update**.
 You will receive a success message upon completion.
 ![join_update](/img/docs/tech/joinvalidator/join_validator_update.png)
 
 ### 3. Staking
-Staking is currently not available on the tools-fe website. To stake your OAS tokens, you can use either the [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or the [Oasys Hub](https://hub.oasys.games/).
+To stake OAS, you have two options: staking via [Oasys Hub](https://hub.oasys.games/staking) or using a command-line tool called [oasys-pos-cli](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking). Oasys Hub is a web User Interface, making it much easier to use. However, it currently only supports a limited number of web wallets, such as Metamask. On the other hand, the command-line tool allows you to use any wallet, as it can intake an exported private key.
+
+As for Oasys Hub, once your validator node is registered, it will be listed on the Staking page. Even if you're not yet listed, you can still stake. Just input your validator's owner address in the search bar. As long as your validator has joined the network, the staking screen for your validator will appear.
 
 ## Join Validator to PoS (CLI)
 
