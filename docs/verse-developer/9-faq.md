@@ -9,3 +9,12 @@ The consumed gas is the sum of 2 rollups
 - StateRoot rollup = 1.4 M
 :::
 
+---
+
+### Q. How to Replace an Old Verse Node with a New Verse Node?
+We highly recommend migrating to a new node by switching from the old writable node to an already synced read-only node.
+
+If you want to create a new Verse node, you first have to set up the new node as a read-only full node. Once it's caught up with the new block, you can stop the old node and then change the read-only node to writable (making it the New Verse node).
+
+Please refer to [this section](/docs/verse-developer/how-to-build-verse/1-7-read-node#promoting-replica-node) for instructions on promoting a replica node.
+
