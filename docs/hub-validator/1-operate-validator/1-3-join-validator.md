@@ -58,6 +58,8 @@ To stake OAS, you have two options: staking via [Oasys Hub](https://hub.oasys.ga
 
 As for Oasys Hub, once your validator node is registered, it will be listed on the Staking page. **Even if you're not yet listed, you can still stake**. Just input your validator's owner address in the search bar. As long as your validator has joined the network, the staking screen for your validator will appear.
 
+![staking](/img/docs/tech/oasys-hub/staking.png)
+
 ## Join Validator to PoS (CLI)
 
 ### Participating in PoS using CLI
