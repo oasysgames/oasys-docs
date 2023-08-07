@@ -18,3 +18,18 @@ If you want to create a new Verse node, you first have to set up the new node as
 
 Please refer to [this section](/docs/verse-developer/how-to-build-verse/1-7-read-node#promoting-replica-node) for instructions on promoting a replica node.
 
+---
+
+### Q. How to Change the State Root Adding Interval?
+By default, the StateCommitmentChain (SCC) appends the state root every 4 bridge transactions. You can alter this default setting using either an environment variable or a command-line option:
+```sh
+# Using an environment variable
+export MIN_STATE_ROOT_ELEMENTS=X
+
+# Using a command-line option
+--min-state-root-elements X
+```
+Reference Code:
+- [The appendStateBatch function in the SCC (StateCommitmentChain) contract](https://github.com/oasysgames/oasys-optimism/blob/v0.1.5/packages/contracts/contracts/L1/rollup/StateCommitmentChain.sol#L87)
+- [Settings within the Optimism](https://github.com/oasysgames/oasys-optimism/blob/v0.1.5/go/batch-submitter/flags/flags.go#L74)
+
