@@ -119,7 +119,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'dev-tools/tools/1-1-hardhat',
+            docId: 'ecosystem/wallet',
             position: 'left',
             label: 'Ecosystem',
           },
