@@ -91,7 +91,7 @@ const config = {
             type: 'doc',
             docId: 'staking/stake-oasys/1-1-stake-oasys',
             position: 'left',
-            label: 'For Users',
+            label: 'Users',
           },
           {
             type: 'doc',
@@ -103,7 +103,7 @@ const config = {
             type: 'doc',
             docId: 'verse-developer/1-1-select',
             position: 'left',
-            label: 'Verse/Game Builder',
+            label: 'Verse/Game Dev',
           },
           {
             type: 'doc',
@@ -121,7 +121,7 @@ const config = {
             type: 'doc',
             docId: 'dev-tools/tools/1-1-hardhat',
             position: 'left',
-            label: 'Dev Tool',
+            label: 'Ecosystem',
           },
           {
             type: 'localeDropdown',
