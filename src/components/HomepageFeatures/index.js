@@ -7,7 +7,7 @@ const FeatureList = [
   {
     title: 'For Users',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/staking/stake-oasys/1-1-stake-oasys",
+    linkTo: "/docs/staking/stake-oasys/1-1-stake",
     description: (
       <>
         Users can stake OAS with Metamask.
@@ -25,7 +25,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Build on Oasys',
+    title: 'For VerseBuilder / GameDeveloper',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/verse-developer/1-1-select",
     description: (
@@ -45,12 +45,12 @@ const FeatureList = [
     ),
   },
   {
-    title: 'White Paper',
+    title: 'Ecosystem',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    linkTo: "/docs/whitepaper/intro",
+    linkTo: "/docs/ecosystem/wallet",
     description: (
       <>
-        Oasys is an EVM-Compatible protocol that adopts the Oasys Architecture. 
+        The current ecosystem of Oasys is continually evolving. We will expand and grow our ecosystem over time.
       </>
     ),
   },
