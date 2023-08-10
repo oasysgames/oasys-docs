@@ -113,5 +113,5 @@ const receipt3 = await tx3.wait()
 If token minting is successful, go to your account page in Oasys Hub Explorer. You can then click on the `Tokens` menu to view tokens you own.
 
 ## How to bridge oNFT between Hub and Verse
-If you want to know about bridge oNFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/1-2-bridge-between-verses) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oNFT.ts) in the bride tutorial.
+If you want to know about bridge oNFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/bridge/hub-verse) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oNFT.ts) in the bride tutorial.
 

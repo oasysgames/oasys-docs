@@ -279,7 +279,7 @@ const sidebars = {
       label: 'Intro', 
       link: {
         type: 'doc',
-        id: 'verse-developer/1-1-select',
+        id: 'verse-developer/intro',
       },
       collapsed: true,
       items: [],
@@ -302,8 +302,7 @@ const sidebars = {
         'verse-developer/how-to-build-verse/1-8-build-verse-submitter',
         'verse-developer/how-to-build-verse/1-9-monitor',
         'verse-developer/how-to-build-verse/1-10-explorer',
-        'verse-developer/how-to-build-verse/1-12-the-graph',
-        'verse-developer/how-to-build-verse/1-11-sandverse',
+        'verse-developer/how-to-build-verse/1-50-upgrade-contract',
       ],
     },
     {
@@ -389,20 +388,22 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'oFT/oNFT Bridge', 
+      label: 'Bridge',
       link: {
-        type: 'doc',
-        id: 'verse-developer/1-2-bridge-between-verses',
+        type: 'generated-index',
       },
       collapsed: true,
-      items: [],
+      items: [
+        'verse-developer/bridge/bridge',
+        'verse-developer/bridge/hub-verse',
+      ],
     },
     {
       type: 'category',
-      label: 'Upgrade',
+      label: 'Sand Verse',
       link: {
         type: 'doc',
-        id: 'verse-developer/upgrade/1-1-contracts',
+        id: 'verse-developer/sandverse',
       },
       collapsed: true,
       items: [],
@@ -412,7 +413,7 @@ const sidebars = {
       label: 'Verse Contact List',
       link: {
         type: 'doc',
-        id: 'verse-developer/1-3-contact-list',
+        id: 'verse-developer/contact-list',
       },
       collapsed: true,
       items: [],

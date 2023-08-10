@@ -24,7 +24,7 @@ In order to deploy a game on Oasys, it is required to have a verse-layer (L2 of 
 
 If a game company is looking to deploy a game title without building its own verse, a game company needs to get in touch with respective verse builders. Oasys team can also help respective game companies to be connected with respective verse builders. 
 
-You can navigate onto [Verse Contact List](/docs/verse-developer/1-3-contact-list)
+You can navigate onto [Verse Contact List](/docs/verse-developer/contact-list)
 
 ### 3. Registering your game and verse on Oasys Hub
 
