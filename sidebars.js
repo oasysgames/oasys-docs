@@ -499,14 +499,16 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Staking", 
+      label: "Staking/Unstaking",
       link: {
         type: 'generated-index',
       },
       collapsed: true,
       items: [
-        'staking/stake-oasys/1-1-stake-oasys',
-        'staking/stake-oasys/1-2-stake-cli',
+        'staking/stake-oasys/1-1-stake',
+        'staking/stake-oasys/1-2-stake-hub',
+        'staking/stake-oasys/1-3-stake-cli',
+        'staking/stake-oasys/1-4-stake-contract',
       ],
     },
     {

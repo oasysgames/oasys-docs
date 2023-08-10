@@ -3,7 +3,7 @@
 Oasys has two layers. The Hub Layer and the Verse Layer, since adopting a two layers design overcomes scalability limitations. 
 When designing the system with two layers in mind, the most important part was compatibility with Ethereum.
 
-## ## Hub Layer
+## Hub Layer
 
 When considering a multi-chain environment, EVM compatibility is essential.
 If the code you write cannot be used elsewhere, it causes a lot of inconvenience for developers.
@@ -13,7 +13,7 @@ To create a structure that synergizes with and is most similar to Ethereum, we d
 Also, In order to provide a stable environment for blockchain use, application execution is left to the Verse-Layer, and the Hub-Layer is restricted to limited uses for recording rollup information, managing FT/NFT, and managing bridge information. **Smart contracts cannot be deployed directly on the Hub-Layer**.
 
 
-## ## Verse Layer
+## Verse Layer
 
 Using only Ethereum might be very inconvenient for playing games. Games usually execute many transactions, so there's a need for a network that can handle a large amount of transactions in a short time. 
 In terms of compatibility, we had two main focuses while making the Verse Layer. 

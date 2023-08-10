@@ -89,7 +89,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'staking/stake-oasys/1-1-stake-oasys',
+            docId: 'staking/stake-oasys/1-1-stake',
             position: 'left',
             label: 'Users',
           },
@@ -103,19 +103,7 @@ const config = {
             type: 'doc',
             docId: 'verse-developer/intro',
             position: 'left',
-            label: 'Verse/Game Dev',
-          },
-          {
-            type: 'doc',
-            docId: 'whitepaper/intro',
-            position: 'left',
-            label: 'Whitepaper',
-          },
-          {
-            type: 'doc',
-            docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
-            position: 'left',
-            label: 'Architecture',
+            label: 'Verse/GameDev',
           },
           {
             type: 'doc',
@@ -123,6 +111,18 @@ const config = {
             position: 'left',
             label: 'Ecosystem',
           },
+          {
+            type: 'doc',
+            docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
+            position: 'left',
+            label: 'Architecture',
+          },
+          // {
+          //   type: 'doc',
+          //   docId: 'whitepaper/intro',
+          //   position: 'left',
+          //   label: 'Whitepaper',
+          // },
           {
             type: 'localeDropdown',
             position: 'right',
@@ -153,10 +153,6 @@ const config = {
               {
                 label: 'Technical Materials',
                 to: '/docs/tech-docs/whats-oasys/1-1-whats-oasys',
-              },
-              {
-                label: 'Light Paper',
-                href: 'https://medium.com/@oasys/lightpaper-2f0e75825415',
               },
               {
                 label: 'GitHub',

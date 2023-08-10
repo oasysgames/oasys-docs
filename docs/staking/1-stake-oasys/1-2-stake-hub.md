@@ -1,11 +1,4 @@
-# Easy Stake on Oasys
-
-
-## How to Stake / Unstake / Claim using Oasys Hub
-
-Users can stake, unstake, and claim OAS using Oasys Hub. 
-Let's take a look at how we can perform these actions!
-
+# Stake via Oasys Hub
 
 ## 1. Staking
 
@@ -86,9 +79,46 @@ While unstaking, you can not receive staking rewards.
 
 ![staking12](/img/docs/techdocs/oasys-hub/claim.png)
 
-## Supported Hardware Wallet on Oasys Hub
+## How to Stake / Unstake / Claim via Contract call
+[StakeManager.sol](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/StakeManager.sol) is the contract that you interract with.
+This contract is deploied at `0x0000000000000000000000000000000000001001`.
 
-You can use all wallets supported by metamask. Also, please ensure the Ethereum wallet is installed on a hardware wallet.
 
-**Staking requires 1 epoch to be finalized (Approx 1 Day). Unstaking requires 10 days to finalize.**
+## 1. Staking
+The interface of staking function is bellow.
+- validator: validator address you are trying to stake
+- token: case you stake OAS=0, case you stake wOAS=1, case you stake sOAS=2
+- amount: The amout of token you stake, please not the unit is wei(1 OAS= 1000000000000000000).
+```solidity
+function stake(
+    address validator,
+    Token.Type token,
+    uint256 amount
+) external;
+```
 
+## 2. Unstake
+The interface of staking function is bellow. Please note that the bellow claim is needed to acutally witdaraw staked OAS. you have to wait 10 days to be able to claim OAS. The interface paramaters are same as staking.
+```solidity
+function unstakeV2(
+    address validator,
+    Token.Type token,
+    uint256 amount
+) external;
+```
+
+## 3. Claim
+The interface of staking function is bellow. After 10 days past when you call unstake, you be able to call this function.
+- lockedUnstake: the id of unstake. this id is incrementally assigned every you unstake process start from 0. you can know the total number of your locked unstake via calling `getLockedUnstakeCount` function in bellow. The lockedUnstake is substract one from the total
+- 
+```solidity
+function claimLockedUnstake(
+    uint256 lockedUnstake
+) external;
+```
+- staker: the address of staker
+```solidity
+function getLockedUnstakeCount(
+    address staker
+) external;
+``` 
