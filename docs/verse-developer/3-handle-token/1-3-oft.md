@@ -110,5 +110,5 @@ The token has been created but is not visible on the metamask. In this case, you
 Import `l1oft` address at Hub, `l2oft` address at Verse.
 
 ## How to bridge oFT between Hub and Verse
-If you want to know about bridge oFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/1-2-bridge-between-verses) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oft.ts) in the bride tutorial.
+If you want to know about bridge oFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/bridge/hub-verse) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oft.ts) in the bride tutorial.
 

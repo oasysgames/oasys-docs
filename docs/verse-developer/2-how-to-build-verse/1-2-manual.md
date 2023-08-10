@@ -4,7 +4,7 @@
 There's a 180 days lockup period on the first deployment for a builder wallet.
 But on the Testnet, it's free; You can try the Verse Testnet with [Faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
 
-If you want to test deploying contracts and execute transactions on the Verse, please use [SAND Verse](/docs/verse-developer/how-to-build-verse/1-11-sandverse).
+If you want to test deploying contracts and execute transactions on the Verse, please use [SAND Verse](/docs/verse-developer/sandverse).
 
 ## Validator Build Steps
 

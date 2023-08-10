@@ -2,12 +2,12 @@
 We offer 3 options for processing staking/unstaking:
 
 1. [Oasy Hub](/docs/staking/stake-oasys/1-2-stake-hub)
-  - Ideal for those who prefer a user-friendly UI.
+    - Ideal for those who prefer a user-friendly UI.
 2. [CLI tool](/docs/staking/stake-oasys/1-3-stake-cli)
-  - Suitable for those who prefer using the command-line interface.
-  - Note that the Oasys hub above currently supports only a limited number of wallets, such as MetaMask. If you have an unsupported wallet, but it can extract your wallet details, you can process using this tool.
+    - Suitable for those who prefer using the command-line interface.
+    - Note that the Oasys hub above currently supports only a limited number of wallets, such as MetaMask. If you have an unsupported wallet, but it can extract your wallet details, you can process using this tool.
 3. [Contract Direct Calling](/docs/staking/stake-oasys/1-4-stake-contract)
-  - For those who use NSuite or prefer to use bare-bone contract direct calling, please refer to the bottom section on this page.
+    - For those who use NSuite or prefer to use bare-bone contract direct calling, please refer to the bottom section on this page.
 
 :::warning Warn
 **About Staking**

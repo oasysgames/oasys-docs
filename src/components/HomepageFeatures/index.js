@@ -27,7 +27,7 @@ const FeatureList = [
   {
     title: 'For VerseBuilder / GameDeveloper',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/verse-developer/1-1-select",
+    linkTo: "/docs/verse-developer/intro",
     description: (
       <>
         Documentation for Developers to build on the Verse Layer.
