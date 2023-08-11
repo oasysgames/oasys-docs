@@ -27,13 +27,20 @@ chown geth:geth /home/geth/.oasvlfy
 > **Please check you have password.txt & validator operator's private key on disk.**
 > **You need to listen 4101 port so it can send, receive transaction.** 
 
-Create a configuration file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config.yml)
+Create a configuration file. 
+- [Mainnet sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config-mainnet.yml)
+- [Testnet sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config-testnet.yml)
 
 > Open the TCP port that P2P listens on the firewall.
 
 ```shell
+# Mainnet
 curl -O /home/geth/.oasvlfy/config.yml \
-    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config.yml
+    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config-mainnet.yml
+
+# Testnet
+curl -O /home/geth/.oasvlfy/config.yml \
+    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config-testnet.yml
 ```
 
 Edit config.yml.
