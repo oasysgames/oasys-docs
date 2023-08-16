@@ -1,7 +1,7 @@
 ---
 ---
 
-# About Validator Account 
+# Validator Account
 
 <!-- TRANSLATE: Not sure what is meant by 'Validator accounts may be various' -->
 Oasys is Using the DPoS system. Validator accounts may be various. 
@@ -29,23 +29,17 @@ On initial validators: The Delegator must pay a commission to the Validator Owne
 
 The owner can stake themselves also. 
 
-### **Delegator** 
+### Delegator (Staking OAS)
+The delegator is an individual who delegates (=stakes) their assets to the validator owner. Since delegators can delegates tokens directly to the owner account through [multiple methods](/docs/staking/stake-oasys/1-1-stake), they can deposit their tokens and, in return, receive rewards.
 
-The delegator is the token's delegator, who delegates assets to the Validator owner or builder account. 
-Since the delegator (hub) can delegate tokens to the owner account, they can stake tokens onto the owner account and receive tokens.
+It's worth noting that the validator owner can use their own address for staking, a process known as self-delegating.
 
-The Validator Owner (Owner Account) can use the same address as the Delegator (self delegating).
-L2 Owners can use the same address as the Delegator (self delegating).
+### Validator Owner
+The validator owner serves as the unique identity of the Validator. It's fixed, meaning you cannot switch or replace it. As such, it's the address that Delegators (those who stake OAS to your node) identify validator during the staking process.
 
-### **Validator Owner (Owner Account)** 
+Routine interactions are limited to 'joining as a Validator`, 'claiming commission rewards', and 'updating the operator'. Since the Validator owner account is used to sign transactions for these operations, using a hardware wallet is advisable for added security. Crucially, **if you lose access to the Owner's address, it is irretrievable**.
 
-The Validator owner is the account used to register the Operator address with the Staking Contract. In addition, the Staker will provide the Validator owner's address and deposit to the Staking Contract. Therefore, the Validator owner doesn't have to interact with it, excluding registering the Validator owner's account. 
-The Validator owner account is used to sign transactions, so you can increase security by using a hardware wallet. And **there is no way to recover if you lost the Owner's address**. 
+### Validator Operator
+The Operator account is essential for the operation of the Validator node. Specifically, this account signs blocks. During the Validator Node program's startup, the operator private key typically resides on the same disk as the Validator node.
 
-### **Validator Operator (Operator Account)**
-
-The Operator account is the account the node (geth) uses to sign the block (the account created through manual setup Step 6 in the Hub layer node).
-
-There is a risk of leakage because the **operator account's private key must be placed on the node disk**.
-
-Due to the separation of Owner and Operator accounts, even if the Operator's private key is leaked, the Owner can update the new Operator address in the Staking Contract. Also, since Delegators or stakes are on the Owner's account, there is no need for Stakers to change the staking destination.
+Thanks to the distinction between the Owner and Operator accounts, if the Operator's private key is ever compromised, the Owner can easily update to a new Operator address. Moreover, since Delegators (those who stake OAS) rely on the Owner's account, there's no need for Stakers to modify their staking target.
