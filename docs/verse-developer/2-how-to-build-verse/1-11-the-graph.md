@@ -1,4 +1,4 @@
-# The Graph
+# The Graph (Indexer)
 
 ## Introduction
 [The Graph](https://thegraph.com/) is a protocol for indexing and querying blockchain. By deploying a "Subgraph", blockchain data is automatically indexed by indexers, and can be easily accessed via GraphQL.

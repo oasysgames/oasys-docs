@@ -18,6 +18,22 @@ $ oaspos staker:stake \
   --oas 10000000 # Alternatively, you can use `--woas` or `--soas`
 ```
 
+To verify your staking status, use the `validator:info` command as shown below:
+```sh
+$ oaspos validator:info --network mainnet
+```
+You can expect an output similar to the following:
+```sh
+Balance               : 9 OAS
+Status                : active
+Operator Address      : 0x0123456789abcdef...
+Commission Rate       : 10 %
+Commissions           : 0 Wei
+Jailed Epoch          : 0
+Current Epoch Staking : 0 Wei
+Next Epoch Staking    : 10,000,000 OAS
+```
+
 ## 2. Unstake
 Below is an example command line for unstaking. Please note that you must perform a claim (described in the next section) to actually withdraw staked OAS, and you must wait 10 days to be able to claim OAS. The interface parameters are the same as for staking.
 ```sh
