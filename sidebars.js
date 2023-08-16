@@ -255,6 +255,7 @@ const sidebars = {
         'hub-validator/operate-validator/1-5-setup-verifier',
         'hub-validator/operate-validator/1-6-monitor',
         'hub-validator/operate-validator/1-7-check-staking',
+        'hub-validator/operate-validator/1-9-recover-testnet-validator',
         'hub-validator/operate-validator/1-8-faq',
         'staking/rpc-endpoint/1-1-rpc-endpoint',
       ]
