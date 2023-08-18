@@ -355,3 +355,51 @@ Restart the Geth process by running the following command:
 ```sh
 $ systemctl start geth
 ```
+
+## Migrate Validator to new Server
+Follow these steps to migrate the validator node to a new server:
+
+### 1. Stop old validator node
+In the old validator node, run the following command to stop the geth service:
+
+```shell
+# In old validator node
+systemctl stop geth
+```
+
+### 2. Copy old validator account data
+On the new validator node, 
+Create `wallet.txt` located at `/home/geth/.ethereum`. Set the following text in the file.
+
+```shell
+Public address of the key:   <OLD_VALIDATOR_OPERATOR_ADDRESS>
+Path of the secret key file: <OLD_VALIDATOR_NODE_KEYSTORE_FILE_NAME>
+```
+
+`OLD_VALIDATOR_NODE_KEYSTORE_FILE_NAME` is like `UTC--2023-08-18T04-39-44.162945000Z--59d767b31039a520853ac2f1b811ea322cc67497`.
+
+### 3. Setup new validator node
+On the new validator node, execute `setup.sh` as part of the [Express setup](#express-setup).
+
+:::info PASSPHRASE
+When running the `setup.sh`, you will be prompted to enter the passphrase for the private key.
+
+`Enter the passphrase for the private key`
+
+This passphrase is the password specified to create the validator operator address in the old validator node.
+:::
+
+### 4. Copy old validator key data
+Copy old validator keystore data to new validator keystore.
+
+```shell
+# In new validator node
+cd /home/geth/.ethereum/geth/keystore
+vim <OLD_VALIDATOR_NODE_KEYSTORE_FILE_NAME>
+```
+
+### 5. Start new validator node
+```shell
+# In new validator node
+systemctl start geth
+```
