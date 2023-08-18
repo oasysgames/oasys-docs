@@ -6,7 +6,7 @@
 
 - Oasys Navi: https://oasys.gamefi.org/
 
-- Blockchain Explorer: https://scan.oasys.games/
+- Blockchain Explorer: https://explorer.oasys.games/
 
 - GitHub : https://github.com/oasysgames  
 
@@ -16,7 +16,7 @@
 
 - Medium: : https://medium.com/@oasys  
 
-- Explorer : https://scan.oasys.games
+- Explorer : https://explorer.oasys.games
 
 - Faucet (Testnet) : https://faucet.testnet.oasys.games
 
