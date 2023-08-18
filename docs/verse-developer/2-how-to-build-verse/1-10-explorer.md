@@ -53,6 +53,8 @@ This script rewrites the following variables
 - SUPPORTED_CHAINS
 - SUBNETWORK
 
+You can check the [this page](https://docs.blockscout.com/for-developers/manual-deployment#deployment-steps) for the detail of manual deployment.
+
 ### Run Container
 Finally, run the container with docker-compose.
 ```shell
