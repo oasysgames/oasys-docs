@@ -88,6 +88,10 @@ It is recommended to secure the chainId with [EVM-based Chains](https://github.c
 
 e.g. [Register Oasys mainnet chainId](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
 
+:::warning Ensure that your chain ID is globally unique
+Please remember that the chain ID acts as a unique identifier for a blockchain. Altering it is akin to launching an entirely new blockchain. Once a chain is launched with a specific chain ID, it cannot be replaced, regardless of reasons such as duplicate chain IDs.
+:::
+
 To build a Verse, set the following
 - chainId to be set in the Verse
 - address of the sequencer
