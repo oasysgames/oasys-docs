@@ -367,15 +367,7 @@ In the old validator node, run the following command to stop the geth service:
 systemctl stop geth
 ```
 
-### 2. Remove old validator service
-In the old validator node, remove the old validator service:
-
-```shell
-# In old validator node
-rm -rf /usr/lib/systemd/system/geth.service
-```
-
-### 3. Setup new validator node
+### 2. Setup new validator node
 On the new validator node, execute `setup.sh` as part of the [Express setup](#express-setup).
 
 :::info PASSPHRASE
@@ -386,7 +378,7 @@ When running the `setup.sh`, you will be prompted to enter the passphrase for th
 This passphrase is the password specified to create the validator operator address in the old validator node.
 :::
 
-### 4. Copy old validator data
+### 3. Copy old validator data
 In the old validator node, Copy the old validator data to the new validator node:
 
 ```shell
@@ -395,18 +387,19 @@ rsync -av /usr/lib/systemd/system/geth.service <NEW_VALIDATOR_NODE>:/usr/lib/sys
 rsync -av /home/geth/.ethereum <NEW_VALIDATOR_NODE>:/home/geth/.ethereum # geth data
 ```
 
+### 4. Remove old validator data
+In the old validator node, remove the old validator data:
+
+```shell
+# In old validator node
+rm -rf /usr/lib/systemd/system/geth.service
+rm -rf /home/geth/.ethereum
+```
+
 ### 5. Start new validator node
 ```shell
 # In new validator node
 systemctl daemon-reload
 systemctl enable geth
 systemctl start geth
-```
-
-### 6. Remove old validator data
-In the old validator node, remove the old validator data:
-
-```shell
-# In old validator node
-rm -rf /home/geth/.ethereum
 ```
