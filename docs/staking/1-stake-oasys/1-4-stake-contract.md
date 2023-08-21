@@ -3,7 +3,7 @@
 
 ## 1. Staking
 The interface for the staking function is as follows:
-- validator: Address of the validator you are trying to stake with.
+- validator: Address of the validator owner you are trying to stake with.
 - token: Case when you stake OAS=0, stake wOAS=1, or stake sOAS=2.
 - amount: The amount of tokens you want to stake; please note that the unit is in wei (1 OAS = 1000000000000000000).
 ```solidity
