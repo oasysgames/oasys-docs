@@ -393,7 +393,6 @@ In the old validator node, remove the old validator data:
 ```shell
 # In old validator node
 rm -rf /usr/lib/systemd/system/geth.service
-rm -rf /home/geth/.ethereum
 ```
 
 ### 5. Start new validator node
