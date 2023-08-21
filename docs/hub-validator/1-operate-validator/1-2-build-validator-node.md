@@ -375,15 +375,7 @@ In the old validator node, remove the old validator service:
 rm -rf /usr/lib/systemd/system/geth.service
 ```
 
-### 3. Copy old validator data
-In the old validator node, Copy the old validator data to the new validator node:
-
-```shell
-# In old validator node
-rsync -av /home/geth/.ethereum <NEW_VALIDATOR_NODE>:/home/geth/.ethereum
-```
-
-### 4. Setup new validator node
+### 3. Setup new validator node
 On the new validator node, execute `setup.sh` as part of the [Express setup](#express-setup).
 
 :::info PASSPHRASE
@@ -394,13 +386,39 @@ When running the `setup.sh`, you will be prompted to enter the passphrase for th
 This passphrase is the password specified to create the validator operator address in the old validator node.
 :::
 
-### 5. Start new validator node
+### 4. Copy old validator data
+In the old validator node, Copy the old validator data to the new validator node:
+
+```shell
+# In old validator node
+rsync -av /home/geth/.ethereum <NEW_VALIDATOR_NODE>:/home/geth/.ethereum
+```
+
+### 5. Set old validator operator address as miner
+On the new validator node, modify the validator service to use the old validator operator address for the `--miner.etherbase` option:
+
+```shell
+# In new validator node
+
+# check the old validator operator address
+cat /home/geth/.ethereum/wallet.txt
+
+# modify the new validator service
+vim /usr/lib/systemd/system/geth.service
+```
+
+Set the old validator operator address to `<OLD_VALIDATOR_OPERATOR_ADDRESS>`:
+```shell
+Environment=ETHERBASE=<OLD_VALIDATOR_OPERATOR_ADDRESS>
+```
+
+### 6. Start new validator node
 ```shell
 # In new validator node
 systemctl start geth
 ```
 
-### 6. Remove old validator data
+### 7. Remove old validator data
 In the old validator node, remove the old validator data:
 
 ```shell
