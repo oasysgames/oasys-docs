@@ -9,7 +9,7 @@ $ export PRIVATE_KEY=0x0123456789abcdef0123456789abcdef...
 ## 1. Staking
 Below is an example command line for staking:
 - network: Supports 2 networks, either mainnet or testnet.
-- validator:  The validator address you're trying to stake with.
+- validator:  The validator owner address you're trying to stake with.
 - oas: The amount of tokens you wish to stake, noting that the unit is wei (1 OAS = 1000000000000000000).
 ```sh
 $ oaspos staker:stake \
