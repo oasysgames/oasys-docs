@@ -7,13 +7,19 @@
 Oasys's full node is capable of synchronizing blocks and executing commands on geth, including eth.getbalance. However, it is important to note that the Oasys full node itself does not function as a validator.
 
 - [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/1-1-hd-requirement)
-- [x] 2.Install geth with [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup)[**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup)
+- [x] 2.Install geth through one of the following three options:
+  - [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
+  - [**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
+  - [**Via AWS Marketplace setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#setup-via-aws-marketplace): This is the easiest method, offering a one-click solution to build a node using the AWS Marketplace.
 
 ### Validator Node
 The Oasys validator node operation involves running the validator client on the Oasys platform. To participate in the validator node operation, it is necessary to have a stake of **10,000,000 OAS** from a delegator or through self-delegation. Please make sure to prepare the required stake in advance.
 
 - [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/1-1-hd-requirement) & [**validator account roles**](/docs/architecture/hub-layer/validator-account)
-- [x] 2.Install geth with [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup)[**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup)
+- [x] 2.Install geth through one of the following three options:
+  - [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
+  - [**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
+  - [**Via AWS Marketplace setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#setup-via-aws-marketplace): This is the easiest method, offering a one-click solution to build a node using the AWS Marketplace.
 - [x] 3.[**Join validator with PoS client**](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-cli) or [**Join validator with Web**](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-web). Web is recommended. (Please follow the steps for [joining](/docs/hub-validator/tools/2-3-nsuite#joining) as an N Suite user)
 - [x] 4.[**stake your token with PoS client**](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or [**stake your token with web**](/docs/hub-validator/operate-validator/1-3-join-validator#3-staking). (Please follow the steps for [staking](/docs/hub-validator/tools/2-3-nsuite#staking) as an N Suite user)
 - [x] 5.Check validation status on **next epoch**
@@ -22,6 +28,8 @@ The Oasys validator node operation involves running the validator client on the 
 :::caution
 The Oasys client undergoes frequent hard forks whenever it updates nodes. To continue validating on the Oasys chain, it is necessary to update your node prior to each hard fork. If you fail to update in a timely manner, you will be required to [**resync your node**](/docs/hub-validator/operate-validator/1-2-build-validator-node#resync-nodes).
 ::::::
+
+---
 
 ## Express Setup
 
@@ -54,7 +62,7 @@ $ sudo chmod +x setup.sh
 ```
 ### 4. Start setup.sh
 ```sh
-$ ./setup.sh
+$ sudo ./setup.sh
 ```
 When starting Geth, you will encounter a question:
 
@@ -263,6 +271,25 @@ $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 false
 ```
 
+---
+
+
+## Setup via AWS Marketplace
+The Oasys Validator Node is readily available on the AWS Marketplace. The AWS Marketplace serves as a comprehensive digital catalog, facilitating the process of deploying, and managing third-party software for its users.
+
+With most of the Oasys validator node settings preconfigured, your primary task will be to launch our node via the Marketplace and proceed with the following account creation steps.
+
+For details regarding pricing and support information, please refer to our official Marketplace page.
+
+Once you have successfully launched the AWS instance and logged into the remote server, continue with the instructions provided in the following steps.
+
+### Execute Setup.sh
+As a validator node operator, you need to create a unique private key. This step is essential since each validator requires a unique key.
+
+Simply execute the `setup.sh` script located in the home directory (/home/ubuntu). For further information, please refer to the [Start setup.sh](/docs/hub-validator/operate-validator/1-2-build-validator-node#4-start-setupsh) section in Express Setup.
+
+---
+
 ## Updating the Node
 
 ### 1. Stop Geth
@@ -329,6 +356,8 @@ To check the block sync status, please refer to [this section](/docs/hub-validat
 3. Restart Sync Process
 If needed, you can restart the sync process by following the [instructions mentioned here](/docs/hub-validator/operate-validator/1-8-faq#q5-i-want-to-know-block-sync-status).
 
+
+---
 
 ## Resync Nodes
 
