@@ -37,10 +37,16 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        googleAnalytics: {
-          trackingID: 'UA-219518834-3',
+        // googleAnalytics: {
+        //   trackingID: 'UA-219518834-3',
+        //   anonymizeIP: true,
+        // },
+        // GA4 is here
+        // https://docusaurus.io/docs/next/api/plugins/@docusaurus/plugin-google-gtag
+        gtag: {
+          trackingID: 'G-BFHQ7KS0DH',
           anonymizeIP: true,
-        },
+        }
       }),
     ],
   ],
