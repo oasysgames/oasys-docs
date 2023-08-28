@@ -254,7 +254,7 @@ const sidebars = {
         'hub-validator/operate-validator/1-4-claim-commission',
         'hub-validator/operate-validator/1-5-setup-verifier',
         'hub-validator/operate-validator/1-6-monitor',
-        'hub-validator/operate-validator/1-7-check-staking',
+        'hub-validator/operate-validator/1-7-upgrade-migrate',
         'hub-validator/operate-validator/1-8-faq',
         'staking/rpc-endpoint/1-1-rpc-endpoint',
       ]
