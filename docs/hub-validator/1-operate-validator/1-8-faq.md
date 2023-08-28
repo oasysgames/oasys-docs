@@ -265,11 +265,9 @@ $ ./oaspos validator:info-slash --network mainnet --validator 0xXX.. --back-epoc
 ### Q9. Exporting Ledger Private Key
 You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
 
-### Q10. Migrate validator to another machine
-There are several reasons why you want to migrate the operating validator node to a different server:
-
-- Performance
-- Security
-- Network connectivity
-
-To learn how to migrate your validator node to a new server, please refer to the [Migrate Validator to New Server section](/docs/hub-validator/operate-validator/1-2-build-validator-node#migrate-validator-to-new-server).
+### Q10. How to Migrate a Validator to Another Machine
+Various factors might prompt you to migrate your operating validator node to a different server, such as:
+- Improved Performance
+- Enhanced Security
+- Better Network Connectivity
+For step-by-step instructions on how to move your validator node to a new server, please consult the [Migrating Validator to a New Server section](/docs/hub-validator/operate-validator/1-7-upgrade-migrate#migrating-validator-to-a-new-server).
