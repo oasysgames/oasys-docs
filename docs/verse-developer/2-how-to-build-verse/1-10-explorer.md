@@ -15,6 +15,8 @@ When creating a verse blockscout, please set the following environment variables
 | ETHEREUM_JSONRPC_HTTP_URL | The RPC endpoint used to fetch blocks, transactions, receipts, tokens. |    rpc.myverse.com `(Your Verse RPC)`   |
 | ETHEREUM_JSONRPC_TRACE_URL | The RPC endpoint specifically for the Erigon/Geth/Nethermind/Besu client used by trace_block and trace_replayTransaction. This can be used to designate a tracing node. |    rpc.myverse.com `(Your Verse RPC)`   |
 | SECRET_KEY_BASE | Required for contract verification. Specify a random string of 64 characters. | On Unix, you can create it with the following command <br /> <code>head -c 64 /dev/urandom \| base64 \| cut -c 1-64</code> |
+| JSON_RPC | The RPC endpoint used to a button of "Add My-Verse" in footer for Metamask. |    rpc.myverse.com `(Your Verse RPC)`   |
+| CHAIN_ID | Unique identifier for the "My-Verse" blockchain within the Ethereum network. It used to a button of "Add My-Verse" in footer for Metamask. |    1234 `(Your Verse ChainID)`   |
 
 If you build verse on the same server, you can set `ETHEREUM_JSONRPC_HTTP_URL` and `ETHEREUM_JSONRPC_TRACE_URL` as `http://host.docker.internal:8545/`.
 
