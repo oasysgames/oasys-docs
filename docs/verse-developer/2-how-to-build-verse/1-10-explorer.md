@@ -30,10 +30,34 @@ git clone git@github.com:oasysgames/oasys-blockscout.git
 ### Set Environment Variables
 After that, please set the environment variables to [common-blockscout.env](https://github.com/oasysgames/oasys-blockscout/blob/main/docker-compose/envs/common-blockscout.env) along with [Environment Variable](#environment-variable).
 
+### Set Brand Config Variables
+
+You can adjust settings related to branding, such as theme colors and logos, to align with your desired branding.
+
+| Item                  | Description                                                                                                      | Target File or Directory Path                                                                         | Example                                                                                                                                                                          |
+|-----------------------|------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Theme Colors and CSS  | Set the stylesheet of your instance to the one you prefer.                                                       | `apps/block_scout_web/assets/css/theme/_neutral_variables.scss`                                        | Change `$primary: #5c34a2;` to `$primary: #ff0000;`                                                                                                                              |
+| Logos                 | Use the LOGO and FOOTER_LOGO environment variables to link to your uploaded logos.                              | <code>apps/block_scout_web/assets/static/images</code> <br /> <code>docker-compose/envs/common-blockscout.env</code>           | Place `foo.png` into `apps/block_scout_web/assets/static/images` and set `LOGO=/images/foo.png` in `docker-compose/envs/common-blockscout.env`                                    |
+| MetaData              | Adjust MetaTags for different pages.                                                                             | `apps/block_scout_web/lib/block_scout_web/templates/chain/_metatags.html.eex`                          | Replace content in `<meta name="description" content="...` with your desired content.                                                                                            |
+| Favicon               | Replace the existing favicons.                                                                                   | `apps/block_scout_web/assets/static/images`                                                            | Replace favicons in the specified folder.                                                                                                                                         |
+| Menus                 | Use the APPS_MENU environment variable to add an apps menu.                                                     | `docker-compose/envs/common-blockscout.env`                                                           | Set `APPS_MENU=true` and `EXTERNAL_APPS=[{"title": "App", "url": "https://app", "embedded?": true}]`.                                                                             |
+| Top Navigation Bar    | Data for this section is rendered from a specific template.                                                      | `apps/block_scout_web/lib/block_scout_web/templates/layout/_topnav.html.eex`                          | Refer to the specific template.                                                                                                                                                   |
+| Footer                | The data for the footer is sourced from another template.                                                        | `apps/block_scout_web/lib/block_scout_web/templates/layout/_footer.html.eex`                          | Change `FOOTER_GITHUB_LINK=https://example.com` to `FOOTER_GITHUB_LINK=https://example.io`.                                                                                       |
+
+### Reflect settings for network changes
+```shell
+cd docker-compose
+./modify_networks.sh default_network_name
+```
+This script rewrites the following variables
+- SUPPORTED_CHAINS
+- SUBNETWORK
+
+You can check the [this page](https://docs.blockscout.com/for-developers/manual-deployment#deployment-steps) for the detail of manual deployment.
+
 ### Run Container
 Finally, run the container with docker-compose.
 ```shell
-cd docker-compose
 docker compose up -d
 ```
 
