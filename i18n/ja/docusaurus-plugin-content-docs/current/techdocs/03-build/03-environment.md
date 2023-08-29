@@ -9,14 +9,14 @@ sidebar_label: Environment
 |----------|------------------------------------|
 | ChainID  | 248                                |
 | RPC      | https://rpc.mainnet.oasys.games/   |
-| Explorer | https://scan.oasys.games/      |
+| Explorer | https://explorer.oasys.games/      |
 
 ## Testnet
 |          |                                         |
 |----------|-----------------------------------------|
 | ChainID  | 9372                                    |
 | RPC      | https://rpc.testnet.oasys.games/        |
-| Explorer | https://scan.testnet.oasys.games/   |
+| Explorer | https://explorer.testnet.oasys.games/   |
 
 ## SAND Verse
 |          |                                            |
