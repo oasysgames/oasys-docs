@@ -12,11 +12,9 @@ The Wrapped Oasys Token is an ERC-20 standard token designed for simplicity of t
 
 
 ## sOAS
-
-OAS is our native token, and sOAS means Stakeable Oasys Token. Since we need a locked-up token but POS needs staking for validators, we have made sOAS.
+OAS is our native token, and sOAS means Stakeable Oasys Token. Since we need a locked-up token but POS needs staking for validators, we have made sOAS. Although sOAS tokens are locked and consequently non-circulating, holders of sOAS, as well as validators, can earn rewards through staking activities.
 
 ### Purpose of sOAS
-
 sOAS is, for better participating in our ecosystem, and thanks for early support with us, we are sending tokens that can stake, which makes an opportunity to participate in our ecosystem. sOAS can use Hub layer staking and verse deposit, which can substantially support verse builders or operators.
 
 ### Contract of sOAS
