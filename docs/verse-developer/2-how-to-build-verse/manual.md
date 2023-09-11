@@ -183,12 +183,12 @@ docker-compose up -d message-relayer
 - message-relayer : Message relayer, sending message between L1 and L2
 - batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
 
-## 7. Set Instant Verifier(For Mainnet only)
-The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/build-verse-submitter).
+## 7. Set Instant Verifier
+Oasys L2 is a fork of Optimistic Rollup. A significant limitation is **the extended delay in bridge** transactions from L2 to L1, which often takes up to 7 days. To bypass this lengthy waiting period, we highly recommend using our **Verse Submitter, which enables instant bridge** transactions from L2 to L1.
 
+For instructions on how to set up the Verse Submitter, please refer to the [this section](/docs/verse-developer/how-to-build-verse/build-verse-submitter).
 
-Please follow these pages if you want to set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
-- [Verse Submitter](/docs/verse-developer/how-to-build-verse/build-verse-submitter)
+For users interested in our instant verification mechanism, please visit [this page](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
 
 ## Permissioned chain
 
