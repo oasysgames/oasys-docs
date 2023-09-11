@@ -15,22 +15,22 @@ const FeatureList = [
     ),
   },
   {
-    title: 'For Validators',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/hub-validator/operate-validator/1-1-hd-requirement",
-    description: (
-      <>
-        Documentation for Oasys Hub Layer Validators.
-      </>
-    ),
-  },
-  {
     title: 'For VerseBuilder / GameDeveloper',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     linkTo: "/docs/verse-developer/intro",
     description: (
       <>
         Documentation for Developers to build on the Verse Layer.
+      </>
+    ),
+  },
+  {
+    title: 'For Validators',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    linkTo: "/docs/hub-validator/operate-validator/1-1-hd-requirement",
+    description: (
+      <>
+        Documentation for Oasys Hub Layer Validators.
       </>
     ),
   },

@@ -13,7 +13,7 @@ These are standard requirements, but of course, they can vary depending on the e
 |DISK|500GB SSD|
 |Network|100Mbps|
 
-Please note that a blockchain cannot be horizontally scaled (you cannot create redundant infrastructure by creating multiple nodes). A blockchain node must be standalone (although [read-only nodes](/docs/verse-developer/how-to-build-verse/1-7-read-node) can be created).
+Please note that a blockchain cannot be horizontally scaled (you cannot create redundant infrastructure by creating multiple nodes). A blockchain node must be standalone (although [read-only nodes](/docs/verse-developer/how-to-build-verse/1-8-read-node) can be created).
 
 In terms of CPU, the consensus-making workload is computation-intensive. However, this is a sequential task, so simply increasing the number of cores will not solve the problem. The only solution is to use a CPU with a higher single-core performance.
 

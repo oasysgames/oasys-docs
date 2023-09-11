@@ -16,7 +16,7 @@ We highly recommend migrating to a new node by switching from the old writable n
 
 If you want to create a new Verse node, you first have to set up the new node as a read-only full node. Once it's caught up with the new block, you can stop the old node and then change the read-only node to writable (making it the New Verse node).
 
-Please refer to [this section](/docs/verse-developer/how-to-build-verse/1-7-read-node#promoting-replica-node) for instructions on promoting a replica node.
+Please refer to [this section](/docs/verse-developer/how-to-build-verse/1-8-read-node#promoting-replica-node) for instructions on promoting a replica node.
 
 ---
 
