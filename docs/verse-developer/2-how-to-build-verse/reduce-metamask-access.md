@@ -1,5 +1,5 @@
 # Reduce Metamask Access
-You can reduce metamask access by [verse-proxy](/docs/verse-developer/how-to-build-verse/1-5-verse-proxy).
+You can reduce metamask access by [verse-proxy](/docs/verse-developer/how-to-build-verse/verse-proxy).
 
 By returning the cache of block number to the metamask, the number of accesses to the metamask can be reduced.
 

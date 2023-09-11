@@ -1,5 +1,5 @@
 # Transaction Rate Limit
-You can restrict transaction access by [verse-proxy](/docs/verse-developer/how-to-build-verse/1-5-verse-proxy).
+You can restrict transaction access by [verse-proxy](/docs/verse-developer/how-to-build-verse/verse-proxy).
 
 ## Datastore setting
 For setting datastore to store transaction history, you have to set datastore environment variables.

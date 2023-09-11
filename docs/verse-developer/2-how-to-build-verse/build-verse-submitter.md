@@ -198,7 +198,7 @@ To better visualize the results of your queries, execute the following commands 
 ```
 
 Before examining the Verse verification status, it's essential to confirm your Verse's state_commitment_chain (scc) contract address.
-You can check the state_commitment_chain address as `StateCommitmentChain` at `addresses.json` downloaded from [tools-fe](/docs/verse-developer/how-to-build-verse/1-2-manual#4-2-check-verse-information).
+You can check the state_commitment_chain address as `StateCommitmentChain` at `addresses.json` downloaded from [tools-fe](/docs/verse-developer/how-to-build-verse/manual#4-2-check-verse-information).
 
 You can examine your Verse's verification status by running an SQL command with the `StateCommitmentChain` address as a condition in the WHERE clause.
 

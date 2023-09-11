@@ -196,7 +196,7 @@ The fee mechanism on a Verse does not support [EIP-1559](https://eips.ethereum.o
 
 You have two options. The first is through the `miner.gasprice` flag when you start your verse. The other one is via the `GASPRICE` environment variable.
 
-#### For users who have followed the [previous steps](/docs/verse-developer/how-to-build-verse/1-2-manual#2-clone-verse-layer-optimism-repository), specifically those using [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism).
+#### For users who have followed the [previous steps](/docs/verse-developer/how-to-build-verse/manual#2-clone-verse-layer-optimism-repository), specifically those using [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism).
 
 You can set the GASPRICE setting in the `docker-compose.yml` to your desired value. Please note that the unit is `wei`.
 

@@ -225,7 +225,7 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 |  lte  |  txValue <= condition is allowed  |
 
 #### Transaction access rate limit(Option)
-If you set transaction access rate limit, follow [Transaction access rate limit](/docs/verse-developer/how-to-build-verse/1-6-rate-limit)
+If you set transaction access rate limit, follow [Transaction access rate limit](/docs/verse-developer/how-to-build-verse/rate-limit)
 
 ### Set contract deployer
 You can control deployer of a verse at `src/config/transactionAllowList.ts`.
@@ -286,4 +286,4 @@ All transactions sent to `/master` are sent to the Master-Verse-Node.
 ## Reduce Metamask Access
 By returning the cache of blockNumber to the metamask, the number of accesses to the metamask can be reduced.
 For more detail, check the following doc.
-[Reduce Metamask Access](/docs/verse-developer/how-to-build-verse/1-7-reduce-metamask-access)
+[Reduce Metamask Access](/docs/verse-developer/how-to-build-verse/reduce-metamask-access)
