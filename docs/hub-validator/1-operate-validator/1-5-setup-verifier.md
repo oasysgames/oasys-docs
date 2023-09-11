@@ -67,6 +67,10 @@ oasvlfy wallet:unlock --config /home/geth/.oasvlfy/config.yml --name signer
 Password:
 ```
 
+:::caution We highly recommend monitoring memory consumption
+If you continue to run the verifier, you may notice that memory usage gradually increases, potentially consuming more than 80% or 90% of the total memory. If you encounter memory consumption issues, please restart the verifier. Restarting has no drawbacks, so you can do it at any time.
+:::
+
 ## Updating Verifier 
 
 Check the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases).
