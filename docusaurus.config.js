@@ -101,15 +101,15 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'hub-validator/operate-validator/1-1-hd-requirement',
-            position: 'left',
-            label: 'Validator',
-          },
-          {
-            type: 'doc',
             docId: 'verse-developer/intro',
             position: 'left',
             label: 'Verse/GameDev',
+          },
+          {
+            type: 'doc',
+            docId: 'hub-validator/operate-validator/1-1-hd-requirement',
+            position: 'left',
+            label: 'Validator',
           },
           {
             type: 'doc',

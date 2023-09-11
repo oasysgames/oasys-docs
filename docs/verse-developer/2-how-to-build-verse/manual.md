@@ -15,7 +15,7 @@ For more detailed information about [Verse Architecture](/docs/architecture/vers
 ## 1. Requirements
 
 Docker Engine v20.10.0 or later and docker-compose v2.0 or later are required.
-Please Check [Hardware_Requirements](/docs/verse-developer/how-to-build-verse/1-1-requirement) Prior to setup. 
+Please Check [Hardware_Requirements](/docs/verse-developer/how-to-build-verse/requirement) Prior to setup. 
 
 ## 2. Clone verse-layer-optimism repository
 Clone the [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) repository provided by the Oasys Foundation.
@@ -184,18 +184,18 @@ docker-compose up -d message-relayer
 - batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
 
 ## 7. Set Instant Verifier(For Mainnet only)
-The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter).
+The Verse Builder can set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier) by building [verse submitter](/docs/verse-developer/how-to-build-verse/build-verse-submitter).
 
 
 Please follow these pages if you want to set [Instant Verifier](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
-- [Verse Submitter](/docs/verse-developer/how-to-build-verse/1-8-build-verse-submitter)
+- [Verse Submitter](/docs/verse-developer/how-to-build-verse/build-verse-submitter)
 
 ## Permissioned chain
 
 For running the verse builder, considering the following parameter on the permissioned chain may help: 
 
 Deploying permission-less creates scam or non-approved contracts, which makes users unsafe. 
-By approving transaction freely on the Verse, you may be attacked by an unexpected gas attack, which can be controlled by [limiting proxy](/docs/verse-developer/how-to-build-verse/1-4-verse-proxy). 
+By approving transaction freely on the Verse, you may be attacked by an unexpected gas attack, which can be controlled by [limiting proxy](/docs/verse-developer/how-to-build-verse/verse-proxy).
 
 
 

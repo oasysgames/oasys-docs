@@ -87,8 +87,8 @@ $ rsync -av --exclude 'data/' /path/to/verse-layer-optimism/ replica:/path/to/ve
   $ git clone https://github.com/oasysgames/verse-layer-optimism.git /path/to/verse-layer-optimism
   ```
 1. You have to download the verse settings from [tools-fe](https://tools-fe.oasys.games/check-verse) with `chain id` or `builder address`. Please refer to the following to obtain `addressses.json` and `genesis.json`, which contain the settings for verse.
-    - Related document: [Check verse information](/docs/verse-developer/how-to-build-verse/1-2-manual#4-2-check-verse-information)
-1. [Create `.env` file](/docs/verse-developer/how-to-build-verse/1-2-manual#5-create-env-file)
+    - Related document: [Check verse information](/docs/verse-developer/how-to-build-verse/manual#4-2-check-verse-information)
+1. [Create `.env` file](/docs/verse-developer/how-to-build-verse/manual#5-create-env-file)
 1. Add the Verse Chain ID to the `.env` file.
   ```dotenv:./.env
   # Layer2 settings
