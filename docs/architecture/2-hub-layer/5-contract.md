@@ -14,6 +14,7 @@ The Hub Layer includes a set of preset contracts that are essential to our ecosy
 | Name | Description | Address | Referenced Code |
 |----------------|-------------| ------------- | ------------- |
 | StakeManager | The core contract of the proof-of-stake. | 0x0000000000000000000000000000000000001001 | [StakeManager.sol](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/StakeManager.sol) |
+| Environment | The Environment contract has parameters for proof-of-stake. | 0x0000000000000000000000000000000000001000 | [Environment.sol](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/Environment.sol) |
 | OASMultiTransfer | A utility contract to transfer multiple OAS tokens in a single transaction. | 0x520000000000000000000000000000000000002c | [OASMultiTransfer.sol](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/util/OASMultiTransfer.sol) |
 | WOAS | Wrapped Oasys Token. An ERC-20 standard token designed for easy token swaping. | 0x5200000000000000000000000000000000000001 | [WOAS.sol](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/WOAS.sol) |
 | SOAS | Stakeable Oasys Token. | 0x5200000000000000000000000000000000000002 | [SOAS.sol](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/SOAS.sol) |

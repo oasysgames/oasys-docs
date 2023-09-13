@@ -14,6 +14,32 @@ function stake(
 ) external;
 ```
 
+To ensure your staking amount, use the `getValidatorInfo` function. Staking changes will take effect from the next epoch, so you first need to identify the current epoch.
+
+To find out the latest epoch, you can call the Environment contract, which is deployed at `0x0000000000000000000000000000000000001000` on both the mainnet and testnet.
+
+The read-only `epoch` function will return the latest epoch.
+```solidity
+function epoch() external returns (uint256);
+```
+
+When calling `getValidatorInfo`, specify the latest `epoch + 1` as the function call parameter. The last parameter in the response will be the accumulated staking amount.
+
+- validator: Address of the validator owner you are trying to stake with.
+- epoch: The target epoch you are inquiring about.
+```solidity
+function getValidatorInfo(
+    address validator,
+    uint256 epoch
+) external returns (
+    address operator,
+    bool active,
+    bool jailed,
+    bool candidate,
+    uint256 stakes
+);
+```
+
 ## 2. Unstake
 The interface for the unstaking function is as follows. Please note that a claim (described in the next section) is required to actually withdraw staked OAS, and you have to wait 10 days to be able to claim OAS. The interface parameters are the same as for staking.
 ```solidity
