@@ -7,17 +7,23 @@
 Oasys's full node is capable of synchronizing blocks and executing commands on geth, including eth.getbalance. However, it is important to note that the Oasys full node itself does not function as a validator.
 
 - [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/1-1-hd-requirement)
-- [x] 2.Install geth with [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup)[**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup)
+- [x] 2.Install geth through one of the following two options:
+  - [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
+  - [**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
+- [x] 3.Join our official [Discord](https://discord.gg/oasysgames). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
 
 ### Validator Node
 The Oasys validator node operation involves running the validator client on the Oasys platform. To participate in the validator node operation, it is necessary to have a stake of **10,000,000 OAS** from a delegator or through self-delegation. Please make sure to prepare the required stake in advance.
 
 - [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/1-1-hd-requirement) & [**validator account roles**](/docs/architecture/hub-layer/validator-account)
-- [x] 2.Install geth with [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup)[**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup)
+- [x] 2.Install geth through one of the following tow options:
+  - [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
+  - [**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
 - [x] 3.[**Join validator with PoS client**](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-cli) or [**Join validator with Web**](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-web). Web is recommended. (Please follow the steps for [joining](/docs/hub-validator/tools/2-3-nsuite#joining) as an N Suite user)
 - [x] 4.[**stake your token with PoS client**](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or [**stake your token with web**](/docs/hub-validator/operate-validator/1-3-join-validator#3-staking). (Please follow the steps for [staking](/docs/hub-validator/tools/2-3-nsuite#staking) as an N Suite user)
 - [x] 5.Check validation status on **next epoch**
 - [x] 6.After stable validation, run [**Instant verifier**](/docs/hub-validator/operate-validator/1-5-setup-verifier)
+- [x] 7.Join our official [Discord](https://discord.gg/oasysgames). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
 
 :::caution
 The Oasys client undergoes frequent hard forks whenever it updates nodes. To continue validating on the Oasys chain, it is necessary to update your node prior to each hard fork. If you fail to update in a timely manner, you will be required to [**resync your node**](/docs/hub-validator/operate-validator/1-2-build-validator-node#resync-nodes).
