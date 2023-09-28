@@ -68,29 +68,40 @@ If you've already built the Verse, skip this procedure.
 And you can check VerseInfo with build_transaction at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
 
 ### Connect wallet
-Access [tools-fe](https://tools-fe.oasys.games) and switch to the oasys network where you want to build the Verse.
+Access [tools-fe](https://tools-fe.oasys.games) and switch to the oasys network.
 
-Connect the wallet using the builder in metamask.
-If you successfully connect the wallet, the builder's address and connected network will appear.
+Connect the wallet using metamask.
+Upon successful connection, the connected account address and the network will be displayed.
 
 ![Connect wallet](/img/docs/techdocs/tools-fe/connect_wallet.png)
 
-### Deposit OAS to build Verse.
-For the mainnet, deposit 1000000 OAS, for the testnet, deposit 0.000000001 OAS.
+Account connected to [tools-fe](https://tools-fe.oasys.games) have the following capabilities:
 
-The amount of OAS is required for the builder in advance. If you use the testnet, please reserve OAS in [Faucet](https://faucet.testnet.oasys.games).
+- Deposit OAS for verse builder as a depositor
+- Build a verse as a verse builder.
 
-If the deposit is successful, you will see the OAS deposited next to "Deposit amount:".
+### Deposit OAS
+You can deposit OAS for verse builder as a depositor at `Change Deposit Amount`.
+
 ![Deposit](/img/docs/techdocs/tools-fe/deposit.png)
+
+For the mainnet, deposit 1000000 OAS, for the testnet, deposit 0.000000001 OAS.
+The amount of OAS is required for the depositor in advance. If you use the testnet, please reserve OAS in [Faucet](https://faucet.testnet.oasys.games).
+
+### Check Your Deposit
+You can check deposited OAS for a specific verse builder at `Check Deposit Amount`.
+
+![Check-Deposit](/img/docs/techdocs/tools-fe/check-deposit.png)
 
 ### Build verse
 It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) before building a Verse.
-
-e.g. [Register Oasys mainnet chainId](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
+(e.g. [Register Oasys mainnet chainId](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524))
 
 :::warning Ensure that your chain ID is globally unique
 Please remember that the chain ID acts as a unique identifier for a blockchain. Altering it is akin to launching an entirely new blockchain. Once a chain is launched with a specific chain ID, it cannot be replaced, regardless of reasons such as duplicate chain IDs.
 :::
+
+You can build a Verse at [Build Verse](https://tools-fe.oasys.games/build-verse).
 
 To build a Verse, set the following
 - chainId to be set in the Verse
