@@ -51,13 +51,26 @@ You can adjust settings related to branding, such as theme colors and logos, to 
 | Footer                | The data for the footer is sourced from another template.                                                        | `apps/block_scout_web/lib/block_scout_web/templates/layout/_footer.html.eex`                          | Change `FOOTER_GITHUB_LINK=https://example.com` to `FOOTER_GITHUB_LINK=https://example.io`.                                                                                       |
 
 ### Reflect settings for network changes
+
+You can modify the network settings using either a script or the manual method.
+
+#### Using the script
+
 ```shell
 cd docker-compose
 ./modify_networks.sh default_network_name
 ```
-This script rewrites the following variables
+This script alters the following variables:
 - SUPPORTED_CHAINS
 - SUBNETWORK
+
+#### Manual method
+
+Please modify the variables below:
+
+- docker-compose/envs/common-blockscout.env
+  - SUPPORTED_CHAINS
+  - SUBNETWORK
 
 You can check the [this page](https://docs.blockscout.com/for-developers/manual-deployment#deployment-steps) for the detail of manual deployment.
 
