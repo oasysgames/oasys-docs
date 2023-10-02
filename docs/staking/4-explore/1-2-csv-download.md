@@ -20,8 +20,8 @@ Using the CLI tool to correct the CSV is optional but recommended to ensure the 
 
 - Download the latest oasys-csv-cli-* from [releases](https://github.com/oasysgames/explorer-csv-cli/releases).
 - Choose among MacOS, Windows, or Linux.
-- Download location: Any (for this example, we'll use "Downloads").
-Assume the csv file is in the same directory.
+- Download location: Any
+- Assume the csv file is in the same directory.
 
 ### Execute from Terminal
 
