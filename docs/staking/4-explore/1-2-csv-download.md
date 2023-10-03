@@ -1,5 +1,8 @@
 # CSV Download
-The explorer offers a range of features, with the CSV export being particularly in demand. This function is essential for individual tax calculations and corporate accounting purposes.
+Accurate record-keeping is critical in the realm of digital transactions.
+Considering the diverse needs of users, from personal tax returns to complex corporate accounting, Explorer is equipped with a CSV export feature.
+Explorer is designed to access and output data such as On Chain Transactions and Token Transfers.
+Read below to understand the step-by-step process and additional tools available to ensure data accuracy.
 
 ## How to Use
 
