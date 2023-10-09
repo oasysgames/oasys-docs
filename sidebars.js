@@ -534,13 +534,15 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Blockchain Explorer', 
+      label: "Blockchain Explorer",
       link: {
-        type: 'doc',
-        id: 'staking/explore/1-1-explore',
+        type: 'generated-index',
       },
       collapsed: true,
-      items: [],
+      items: [
+        'staking/explore/1-1-explore',
+        'staking/explore/1-2-csv-download',
+      ],
     },
     {
       type: 'category',

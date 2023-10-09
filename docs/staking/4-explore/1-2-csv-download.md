@@ -1,4 +1,8 @@
 # CSV Download
+Accurate record-keeping is critical in the realm of digital transactions.
+Considering the diverse needs of users, from personal tax returns to complex corporate accounting, Explorer is equipped with a CSV export feature.
+Explorer is designed to access and output data such as On Chain Transactions and Token Transfers.
+Read below to understand the step-by-step process and additional tools available to ensure data accuracy.
 
 ## How to Use
 
@@ -23,33 +27,19 @@ Using the CLI tool to correct the CSV is optional but recommended to ensure the 
 - Download location: Any
 - Assume the csv file is in the same directory.
 
-### Execute from Terminal
+### Usage
+For usage instructions, please refer to the tool's [README](https://github.com/oasysgames/explorer-csv-cli). As an example, we provide a guide on how to use it on macOS.
 
+First, launch the Terminal.
 ![terminal_launch](/img/tutorial/explorerCsvCliTerminal.jpg)
+In the Terminal, navigate to [your CLI directory] by typing `cd [your CLI directory]` and then pressing enter. Replace [your CLI directory] with the path where you've stored the CLI tool.
 
-In Terminal, type cd [your CLI directory] and press enter. Replace [your CLI directory] with the path where you have placed the CLI tool.
-
-Execute the following according to your system:
-
-- macOS
-
+Then, execute following commad:
 ```bash
 ./oasys-csv-cli-macos input.csv output.csv chain_name
 
 # example
 # ./oasys-csv-cli-macos foo.csv bar.csv hub_mainnet
-```
-
-- Linux
-
-```bash
-./oasys-csv-cli-linux input.csv output.csv chain_name
-```
-
-- Windows
-
-```bash
-./oasys-csv-cli-windows input.csv output.csv chain_name
 ```
 
 Here, input.csv is the path to the CSV file you want to read, and output.csv is the path where the resulting CSV file will be saved.
