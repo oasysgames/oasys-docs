@@ -5,6 +5,7 @@ While operating your node, you might encounter some of the errors listed below. 
 ```sh
 ERROR[05-30|09:57:30.102] Failed to get validators in=Snapshot.apply hash=d069bc..ef6390 number=97920 err="header for hash not found"
 ```
+
 ---
 ### Q. How do I initiate block validation (mining)?
 To initiate block validation (often referred to as mining), you should append the following options to your validator node (geth) command line:
@@ -46,6 +47,30 @@ Lastly, confirm that the latest block number matches the one displayed on the [e
 ```sh
 sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.blockNumber
 ```
+
+---
+### Q. How can I resolve the sync failure issue?
+If you experience a syncing issue, consider retrying in a fresh environment using a reliable cloud service provider, such as AWS, Azure, or GCP. This is because the root cause might be related to your network environment.
+
+Here are a few things to keep in mind:
+- Ensure the specifications exceed the [recommended requirements](/docs/hub-validator/operate-validator/hd-requirement).
+- Make sure the [necessary ports](/docs/hub-validator/operate-validator/hd-requirement#firewall-settings) are open.
+- Disable mining to ensure that the node can sync as a full node. You can disable mining mode by removing the `--mine` option when starting the node.
+
+After starting the node, you might notice frequent forced peer disconnections. We haven't identified the root cause yet, but it might be related to the order in which blocks are received. At the checkpoint block(section), they need to be in order. Even if disconnections occur, the node automatically finds peers and resumes syncing. This pattern of disconnection and reconnection continues until the full sync is complete.
+
+To prevent situations where syncing stops due to the absence of peers, we recommend noting connected peers by executing the following command periodically:
+```sh
+sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec admin.peers
+```
+
+If you get stuck due to a lack of peers, you can manually add them using the following command:
+```sh
+sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec admin.addPeer("enode://XXX...@XX.XX.XX.XX:30303")
+```
+
+You can verify whether the syncing is complete or not by referring to the [this question](/docs/hub-validator/operate-validator/faq#q-how-do-i-verify-the-block-synchronization-status).
+
 ---
 ### Q. How can I check the commission I can claim?
 You have two options to do this: one is via web and the other is via the command line interface (CLI).
