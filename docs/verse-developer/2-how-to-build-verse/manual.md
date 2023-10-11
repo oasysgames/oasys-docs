@@ -201,6 +201,43 @@ For instructions on how to set up the Verse Submitter, please refer to the [this
 
 For users interested in our instant verification mechanism, please visit [this page](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
 
+## Upgrade L2 container version
+To check the L2 container version, refer to `docker-compose.yml` in `verse-layer-optimism` repository.
+```yaml
+x-l2geth: &l2geth
+  image: ghcr.io/oasysgames/oasys-optimism/l2geth:v0.1.2 # <- l2geth container version
+  entrypoint: /bin/sh /assets/l2geth/run.sh
+
+services:
+  data-transport-layer:
+    <<: *common
+    image: ghcr.io/oasysgames/oasys-optimism/data-transport-layer:v0.1.1 # <- L2 data-transport-layer container version
+    entrypoint: /bin/sh /assets/data-transport-layer/run.sh
+  
+  batch-submitter:
+    <<: *common
+    image: ghcr.io/oasysgames/oasys-optimism/batch-submitter:v0.1.1 # <- L2 batch-submitter container version
+
+  message-relayer:
+    <<: *common
+    image: ghcr.io/oasysgames/oasys-optimism/message-relayer:v0.1.1 # <- L2 message-relayer container version
+```
+
+To upgrade the L2 container version, follow these steps:
+
+- Stop the L2 containers:
+```shell
+docker-compose stop "<CONTAINER_NAME>" && docker-compose rm "<CONTAINER_NAME>"
+```
+
+- Update the container version in `docker-compose.yml`.
+
+- Start the L2 containers:
+```shell
+docker-compose up -d "<CONTAINER_NAME>"
+```
+
+
 ## Permissioned chain
 
 For running the verse builder, considering the following parameter on the permissioned chain may help: 
