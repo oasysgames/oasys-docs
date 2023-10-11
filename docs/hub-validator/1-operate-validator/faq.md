@@ -103,8 +103,8 @@ $ ./oaspos validator:info-slash --network mainnet --validator 0xXX.. --back-epoc
 ```
 
 ---
-### Q. Exporting Ledger Private Key
-You can navigate onto [ledger](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true)
+### Q.How to Export a Private Key from Ledger?
+To export a private key from a Ledger device, follow the official guide provided by Ledger. You can find detailed instructions on the [Ledger Support page](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true).
 
 ### Q. How to Migrate a Validator to Another Machine
 Various factors might prompt you to migrate your operating validator node to a different server, such as:
