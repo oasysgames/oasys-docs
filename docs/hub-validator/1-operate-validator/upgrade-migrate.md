@@ -16,13 +16,13 @@ Secret key file Example:
 /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11-06.835917424Z--abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd
 ```
 
-<!-- After that, you can try using `journalctl` to check the update logs:
+### 3. Remove old geth binary
+Remove the old geth binary with:
 ```sh
-$ journalctl -u geth -n 1000 --no-pager
+rm -rf /usr/local/bin/geth
 ```
-This command allows you to view the update logs. -->
 
-### 3. Download the Latest Release
+### 4. Download the Latest Release
 Download from Oasys Validator GitHub [Releases](https://github.com/oasysgames/oasys-validator/releases). For setup details, consult the `setup.sh` code in the GitHub repository.
 You can learn how to use `setup.sh` at [Express setup](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup).
 
@@ -32,13 +32,13 @@ Ensure you download the **latest version** suitable for your CPU architecture:
 - For ARM-based CPUs: Download geth-version_number-linux-arm64.zip
 ::::::
 
-### 4. Restart Geth
+### 5. Restart Geth
 Restart Geth with:
 ```sh
 $ sudo systemctl start geth
 ``` 
 
-### 5. Verify Geth Status
+### 6. Verify Geth Status
 Check Geth's status with:
 ```sh
 $ sudo systemctl status geth
