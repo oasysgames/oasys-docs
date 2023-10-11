@@ -225,14 +225,12 @@ services:
 
 To upgrade the L2 container version, follow these steps:
 
-- Stop the L2 containers:
+1. Stop the L2 containers:
 ```shell
 docker-compose stop "<CONTAINER_NAME>" && docker-compose rm "<CONTAINER_NAME>"
 ```
-
-- Update the container version in `docker-compose.yml`.
-
-- Start the L2 containers:
+2. Update the container version in `docker-compose.yml`.
+3. Start the L2 containers:
 ```shell
 docker-compose up -d "<CONTAINER_NAME>"
 ```
