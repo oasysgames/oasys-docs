@@ -24,6 +24,7 @@ This command allows you to view the update logs. -->
 
 ### 3. Download the Latest Release
 Download from Oasys Validator GitHub [Releases](https://github.com/oasysgames/oasys-validator/releases). For setup details, consult the `setup.sh` code in the GitHub repository.
+You can learn how to use `setup.sh` at [Express setup](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup).
 
 :::caution
 Ensure you download the **latest version** suitable for your CPU architecture:
