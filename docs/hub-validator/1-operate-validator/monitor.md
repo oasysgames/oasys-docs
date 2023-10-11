@@ -1,5 +1,5 @@
 # Monitoring
-For users who wish to monitor or check the functionality of their validator node, we will provide [helpful tips](/docs/hub-validator/operate-validator/1-6-monitor#monitoring-tips). If you require a more robust user interface(WebUI) or wish to monitor not only the status but also the performance of your validator node, we will introduce a [dedicated way](/docs/hub-validator/operate-validator/1-6-monitor#monitoring-metrics-with-rich-web-ui) for that purpose.
+For users who wish to monitor or check the functionality of their validator node, we will provide [helpful tips](/docs/hub-validator/operate-validator/monitor#monitoring-tips). If you require a more robust user interface(WebUI) or wish to monitor not only the status but also the performance of your validator node, we will introduce a [dedicated way](/docs/hub-validator/operate-validator/monitor#monitoring-metrics-with-rich-web-ui) for that purpose.
 
 Just like with any other server, it's beneficial to monitor error logs on the validator node. Please be aware that `ERROR[07-26|05:32:01.016] Snapshot extension registration failed` is often output, but this is not a cause for concern. Exclude this log from your alert emission targets.
 
@@ -8,7 +8,7 @@ We believe the most straightforward and reliable way to determine whether a Vali
 
 The process of accepting/creating blocks is the end result of complex tasks performed by the validator node. If the blocks are being created regularly, it indicates that all other complex tasks are functioning properly as well.
 
-Firstly, we will demonstrate [how to check the block height](/docs/hub-validator/operate-validator/1-6-monitor#how-to-check-block-height). Along with this, we will cover other topics that appear to be useful for monitoring. The use case highly depends on your specific situation.
+Firstly, we will demonstrate [how to check the block height](/docs/hub-validator/operate-validator/monitor#how-to-check-block-height). Along with this, we will cover other topics that appear to be useful for monitoring. The use case highly depends on your specific situation.
 
 
 ### How to Check Block Height
@@ -63,7 +63,7 @@ $ geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'admin.peers.length'
 ### How to Check Slashing Status?
 Slashing occurs when your node is down. As long as your node operates normally, which can be checked via block height monitoring, slashing should not be a concern.
 
-Please refer to [FAQ No.8](/docs/hub-validator/operate-validator/1-8-faq#q8-how-can-i-check-slashings) for further details.
+Please refer to [FAQ No.8](/docs/hub-validator/operate-validator/faq#q8-how-can-i-check-slashings) for further details.
 
 
 ## Monitoring Metrics With Rich Web UI

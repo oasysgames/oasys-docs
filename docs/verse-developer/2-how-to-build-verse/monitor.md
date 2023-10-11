@@ -1,7 +1,7 @@
 # Monitoring
-Verse monitoring shares many similarities with [Validator Node monitoring](/docs/hub-validator/operate-validator/1-6-monitor). Although Verse blocks are not generated at regular intervals like the validator's 15-second block generation, monitoring whether the block height is correctly incrementing remains a simple and reliable way to confirm that the Verse node is functioning properly.
+Verse monitoring shares many similarities with [Validator Node monitoring](/docs/hub-validator/operate-validator/monitor). Although Verse blocks are not generated at regular intervals like the validator's 15-second block generation, monitoring whether the block height is correctly incrementing remains a simple and reliable way to confirm that the Verse node is functioning properly.
 
-Please refer to the corresponding [section](/docs/hub-validator/operate-validator/1-6-monitor#how-to-check-block-height). Take note that if the block height increases at a very high speed, it might be a sign that your Verse is under attack. We recommend setting up alerts for two scenarios: one for when blocks are created too infrequently and another for when blocks are created too frequently.
+Please refer to the corresponding [section](/docs/hub-validator/operate-validator/monitor#how-to-check-block-height). Take note that if the block height increases at a very high speed, it might be a sign that your Verse is under attack. We recommend setting up alerts for two scenarios: one for when blocks are created too infrequently and another for when blocks are created too frequently.
 
 Just like any other server, it's beneficial to monitor error logs on your validator node. If you see the following error repeated, it indicates that the L2->L1 bridge has been suspended. This mainly happens due to a delay with the Instant Verifier.
 ```sh
@@ -33,4 +33,4 @@ To check if the rollup is functioning or suspended, you can observe the value re
 - [getTotalElements](https://github.com/oasysgames/oasys-optimism/blob/067ae176836bd3a7bdc1f16617a5b73f51cfa733/packages/contracts/contracts/L1/rollup/CanonicalTransactionChain.sol#L128-L131)
 
 ### How to Check if the Validator Node is Running in Mining Mode
-Please refer to the [this section](/docs/hub-validator/operate-validator/1-6-monitor#how-to-check-if-the-validator-node-is-running-in-mining-mode) in Validator monitoring.
+Please refer to the [this section](/docs/hub-validator/operate-validator/monitor#how-to-check-if-the-validator-node-is-running-in-mining-mode) in Validator monitoring.

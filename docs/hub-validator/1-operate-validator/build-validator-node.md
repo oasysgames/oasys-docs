@@ -6,27 +6,27 @@
 ### Full Node
 Oasys's full node is capable of synchronizing blocks and executing commands on geth, including eth.getbalance. However, it is important to note that the Oasys full node itself does not function as a validator.
 
-- [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/1-1-hd-requirement)
+- [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/hd-requirement)
 - [x] 2.Install geth through one of the following two options:
-  - [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
-  - [**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
+  - [**Express setup**](/docs/hub-validator/operate-validator/build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
+  - [**Manual setup**](/docs/hub-validator/operate-validator/build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
 - [x] 3.Join our official [Discord](https://discord.gg/oasysgames). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
 
 ### Validator Node
 The Oasys validator node operation involves running the validator client on the Oasys platform. To participate in the validator node operation, it is necessary to have a stake of **10,000,000 OAS** from a delegator or through self-delegation. Please make sure to prepare the required stake in advance.
 
-- [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/1-1-hd-requirement) & [**validator account roles**](/docs/architecture/hub-layer/validator-account)
+- [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/hd-requirement) & [**validator account roles**](/docs/architecture/hub-layer/validator-account)
 - [x] 2.Install geth through one of the following tow options:
-  - [**Express setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
-  - [**Manual setup**](/docs/hub-validator/operate-validator/1-2-build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
-- [x] 3.[**Join validator with PoS client**](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-cli) or [**Join validator with Web**](/docs/hub-validator/operate-validator/1-3-join-validator#join-validator-to-pos-web). Web is recommended. (Please follow the steps for [joining](/docs/hub-validator/tools/2-3-nsuite#joining) as an N Suite user)
-- [x] 4.[**stake your token with PoS client**](/docs/hub-validator/operate-validator/1-3-join-validator#4-staking) or [**stake your token with web**](/docs/hub-validator/operate-validator/1-3-join-validator#3-staking). (Please follow the steps for [staking](/docs/hub-validator/tools/2-3-nsuite#staking) as an N Suite user)
+  - [**Express setup**](/docs/hub-validator/operate-validator/build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
+  - [**Manual setup**](/docs/hub-validator/operate-validator/build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
+- [x] 3.[**Join validator with PoS client**](/docs/hub-validator/operate-validator/join-validator#join-validator-to-pos-cli) or [**Join validator with Web**](/docs/hub-validator/operate-validator/join-validator#join-validator-to-pos-web). Web is recommended. (Please follow the steps for [joining](/docs/hub-validator/tools/2-3-nsuite#joining) as an N Suite user)
+- [x] 4.[**stake your token with PoS client**](/docs/hub-validator/operate-validator/join-validator#4-staking) or [**stake your token with web**](/docs/hub-validator/operate-validator/join-validator#3-staking). (Please follow the steps for [staking](/docs/hub-validator/tools/2-3-nsuite#staking) as an N Suite user)
 - [x] 5.Check validation status on **next epoch**
-- [x] 6.After stable validation, run [**Instant verifier**](/docs/hub-validator/operate-validator/1-5-setup-verifier)
+- [x] 6.After stable validation, run [**Instant verifier**](/docs/hub-validator/operate-validator/setup-verifier)
 - [x] 7.Join our official [Discord](https://discord.gg/oasysgames). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
 
 :::caution
-The Oasys client undergoes frequent hard forks whenever it updates nodes. To continue validating on the Oasys chain, it is necessary to update your node prior to each hard fork. If you fail to update in a timely manner, you will be required to [**resync your node**](/docs/hub-validator/operate-validator/1-2-build-validator-node#resync-nodes).
+The Oasys client undergoes frequent hard forks whenever it updates nodes. To continue validating on the Oasys chain, it is necessary to update your node prior to each hard fork. If you fail to update in a timely manner, you will be required to [**resync your node**](/docs/hub-validator/operate-validator/build-validator-node#resync-nodes).
 ::::::
 
 ## Express Setup
@@ -66,11 +66,11 @@ When starting Geth, you will encounter a question:
 
 > Do you want to start block validation automatically?
 
-If you wish to start the validator immediately, please select **YES**. If you choose **NO**, please proceed to [Q4](/docs/hub-validator/operate-validator/1-8-faq#q4-i-have-selected-no-on-do-you-want-to-start-block-validation-automatically-on-setupsh) in the Validator Setup section. Keep in mind that manually turning on the validator might take some time.
+If you wish to start the validator immediately, please select **YES**. If you choose **NO**, please check to [initiate block validation](/docs/hub-validator/operate-validator/faq#q-how-do-i-initiate-block-validation-mining) section in Q&A. Keep in mind that manually turning on the validator might take some time.
 
 
 :::info Operator Address
-The operator address required for registration in the later [Join Validator](/docs/hub-validator/operate-validator/1-3-join-validator#2-register-the-validator-operator) process is generated in Step 4. This step is identified by the print message `4. Create a private key`.
+The operator address required for registration in the later [Join Validator](/docs/hub-validator/operate-validator/join-validator#2-register-the-validator-operator) process is generated in Step 4. This step is identified by the print message `4. Create a private key`.
 
 The address is written in the wallet.txt file located at `/home/geth/.ethereum/wallet.txt`. You can find the created account's address after the sentence `Public address of the key:`.
 
@@ -209,7 +209,7 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 - You must REMEMBER your password! Without the password, it's impossible to decrypt the key!
 ```
 :::info Operator Address
-The generated address is intended to be registered as an operator address in the later [Join Validator](/docs/hub-validator/operate-validator/1-3-join-validator#2-register-the-validator-operator) process. You can find the created account's address after the sentence `Public address of the key:`.
+The generated address is intended to be registered as an operator address in the later [Join Validator](/docs/hub-validator/operate-validator/join-validator#2-register-the-validator-operator) process. You can find the created account's address after the sentence `Public address of the key:`.
 
 For more information about the operator, please refer to [this discription](/docs/architecture/hub-layer/validator-account#validator-operator-operator-account)
 :::
@@ -254,11 +254,21 @@ $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 You will receive the following output:
 ```sh
 {
-  currentBlock: 34559,
-  highestBlock: 203190,
-  knownStates: 0,
-  pulledStates: 0,
-  startingBlock: 0
+  currentBlock: 1969919,
+  healedBytecodeBytes: 0,
+  healedBytecodes: 0,
+  healedTrienodeBytes: 0,
+  healedTrienodes: 0,
+  healingBytecode: 0,
+  healingTrienodes: 0,
+  highestBlock: 2163128,
+  startingBlock: 0,
+  syncedAccountBytes: 0,
+  syncedAccounts: 0,
+  syncedBytecodeBytes: 0,
+  syncedBytecodes: 0,
+  syncedStorage: 0,
+  syncedStorageBytes: 0
 }
 ```
 

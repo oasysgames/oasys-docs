@@ -3,7 +3,7 @@ Validator owner can receive [staking commission](/docs/architecture/hub-layer/co
 
 ## Prerequisite
 If you want to claim commission, You have to join validator.
-You can join validator at [join validator](/docs/hub-validator/operate-validator/1-3-join-validator).
+You can join validator at [join validator](/docs/hub-validator/operate-validator/join-validator).
 
 ## How to claim
 ### Connect Wallet
