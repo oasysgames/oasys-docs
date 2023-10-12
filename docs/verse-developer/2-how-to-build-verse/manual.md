@@ -236,19 +236,43 @@ To upgrade the L2 container version, follow these steps:
 
 1. Stop the L2 containers:
 ```shell
-$ docker-compose stop "<CONTAINER_NAME>" && docker-compose rm "<CONTAINER_NAME>"
+# Stop data-transport-layer
+$ docker-compose stop data-transport-layer && docker-compose rm data-transport-layer
+
+# Stop l2geth
+$ docker-compose stop l2geth && docker-compose rm l2geth
+
+# Stop batch-submitter
+$ docker-compose stop batch-submitter && docker-compose rm batch-submitter
+
+# Stop message-relayer
+$ docker-compose stop message-relayer && docker-compose rm message-relayer
 ```
 
 2. Backup data(only `l2geth` or `data-transport-layer` upgrade):
 ```shell
-$ mv ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>" ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>_backup" # Default L2_DATA_DIR is ./data/
+# Backup data-transport-layer
+$ mv ./"<L2_DATA_DIR>"/data-transport-layer ./"<L2_DATA_DIR>"/"data-transport-layer-backup" # Default L2_DATA_DIR is ./data/
+
+# Backup l2geth
+$ mv ./"<L2_DATA_DIR>"/l2geth ./"<L2_DATA_DIR>"/"l2geth-backup" # Default L2_DATA_DIR is ./data/
 ```
 
 3. Update the container version in `docker-compose.yml`.
 
 4. Start the L2 containers:
 ```shell
-$ docker-compose up -d "<CONTAINER_NAME>"
+# Start data-transport-layer
+$ docker-compose up -d data-transport-layer
+
+# Start l2geth
+$ docker-compose up -d l2geth
+
+# Start batch-submitter
+$ docker-compose up -d batch-submitter
+
+# Start message-relayer
+$ docker-compose up -d message-relayer
 ```
 
 
