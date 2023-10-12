@@ -241,7 +241,7 @@ docker-compose stop "<CONTAINER_NAME>" && docker-compose rm "<CONTAINER_NAME>"
 
 2. Backup data(only `l2geth` or `data-transport-layer` upgrade):
 ```shell
-tar -czvf "<CONTAINER_NAME>"_back.tar.gz ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>" # Default L2_DATA_DIR is ./data/
+mv ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>" ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>_backup" # Default L2_DATA_DIR is ./data/
 ```
 
 3. Update the container version in `docker-compose.yml`.
