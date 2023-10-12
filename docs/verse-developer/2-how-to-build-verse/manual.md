@@ -223,11 +223,25 @@ services:
     image: ghcr.io/oasysgames/oasys-optimism/message-relayer:v0.1.1 # <- L2 message-relayer container version
 ```
 
+:::warning Important
+**Verse Service Maintenance**
+To upgrade the L2 container version, it's essential to stop the L2 containers. Please note that stopping the `l2geth` container will halt the Verse service. However, stopping containers other than `l2geth` will not affect the Verse service. Before upgrading the `l2geth` container, kindly inform Verse users about the scheduled maintenance!
+
+**Backup l2geth data**
+
+When you stop `l2geth` or `data-transport-layer` container, ensure you back up the data.
+:::
+
 To upgrade the L2 container version, follow these steps:
 
 - Stop the L2 containers:
 ```shell
 docker-compose stop "<CONTAINER_NAME>" && docker-compose rm "<CONTAINER_NAME>"
+```
+
+- Backup data(only `l2geth` or `data-transport-layer` upgrade):
+```shell
+tar -czvf "<CONTAINER_NAME>"_back.tar.gz ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>" # Default L2_DATA_DIR is ./data/
 ```
 
 - Update the container version in `docker-compose.yml`.
