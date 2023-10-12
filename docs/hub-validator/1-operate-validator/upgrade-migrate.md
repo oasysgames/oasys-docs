@@ -16,21 +16,31 @@ Secret key file Example:
 /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11-06.835917424Z--abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd
 ```
 
-### 3. Remove old geth binary
-Remove the old geth binary with:
+### 3. Backing Up the Old Version of Geth
+To back up your old version of geth, follow these steps:
 ```sh
-rm -rf /usr/local/bin/geth
+GETH_PATH=/usr/local/bin # Adjust this based on your environment
+VERSION=$($GETH_PATH/geth version | grep ...)
+mv $GETH_PATH/geth $GETH_PATH/geth-$VERSION
 ```
 
-### 4. Download the Latest Release
-Download from Oasys Validator GitHub [Releases](https://github.com/oasysgames/oasys-validator/releases). For setup details, consult the `setup.sh` code in the GitHub repository.
-You can learn how to use `setup.sh` at [Express setup](/docs/hub-validator/operate-validator/1-2-build-validator-node#express-setup).
-
+### 4. Downloading and Installing the Latest Version
+Download and unzip the latest version:
 :::caution
 Ensure you download the **latest version** suitable for your CPU architecture:
 - For Intel or AMD CPUs: Download geth-version_number-linux-amd64.zip
 - For ARM-based CPUs: Download geth-version_number-linux-arm64.zip
 ::::::
+```sh
+wget https://github.com/oasysgames/oasys-validator/releases/download/<latest version>/geth-<latest version>-linux-<amd64|arm64>.zip
+unzip geth-<latest version>-linux-<amd64|arm64>.zip
+```
+
+Place the new version in the correct location and change its ownership:
+```sh
+sudo mv ./geth $GETH_PATH
+sudo chown geth:geth $GETH_PATH/geth
+```
 
 ### 5. Restart Geth
 Restart Geth with:

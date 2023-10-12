@@ -234,19 +234,19 @@ When you stop `l2geth` or `data-transport-layer` container, ensure you back up t
 
 To upgrade the L2 container version, follow these steps:
 
-- Stop the L2 containers:
+1. Stop the L2 containers:
 ```shell
 docker-compose stop "<CONTAINER_NAME>" && docker-compose rm "<CONTAINER_NAME>"
 ```
 
-- Backup data(only `l2geth` or `data-transport-layer` upgrade):
+2. Backup data(only `l2geth` or `data-transport-layer` upgrade):
 ```shell
 tar -czvf "<CONTAINER_NAME>"_back.tar.gz ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>" # Default L2_DATA_DIR is ./data/
 ```
 
-- Update the container version in `docker-compose.yml`.
+3. Update the container version in `docker-compose.yml`.
 
-- Start the L2 containers:
+4. Start the L2 containers:
 ```shell
 docker-compose up -d "<CONTAINER_NAME>"
 ```
