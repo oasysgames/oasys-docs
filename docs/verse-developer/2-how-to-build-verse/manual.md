@@ -21,9 +21,9 @@ Please Check [Hardware_Requirements](/docs/verse-developer/how-to-build-verse/re
 Clone the [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) repository provided by the Oasys Foundation.
 
 ```shell
-git clone https://github.com/oasysgames/verse-layer-optimism.git /path/to/verse-layer-optimism
+$ git clone https://github.com/oasysgames/verse-layer-optimism.git /path/to/verse-layer-optimism
 
-cd /path/to/verse-layer-optimism
+$ cd /path/to/verse-layer-optimism
 ```
 
 ## 3. Create Wallets
@@ -31,7 +31,7 @@ cd /path/to/verse-layer-optimism
 Create Ethereum wallets (address and private key) to be used by Builder, Sequencer, and Proposer.
 
 ```shell
-docker-compose run --rm wallet
+$ docker-compose run --rm wallet
 ```
 
 The created wallets will be saved to `./data/wallet/keys.txt`.
@@ -122,15 +122,15 @@ When you build new verse node, please use latest version genesis.json.
 Copy the generated configuration files to the `assets` directory of the `verse-layer-optimism` repository.
 
 ```shell
-cp ./Downloads/addresses.json /path/to/verse-layer-optimism/assets/
+$ cp ./Downloads/addresses.json /path/to/verse-layer-optimism/assets/
 
-cp ./Downloads/genesis.json /path/to/verse-layer-optimism/assets/ 
+$ cp ./Downloads/genesis.json /path/to/verse-layer-optimism/assets/ 
 ```
 
 After completing this step, return to the `verse-layer-optimism` repository.
 
 ```shell
-cd /path/to/verse-layer-optimism
+$ cd /path/to/verse-layer-optimism
 ```
 
 ## 4-2. Check verse information
@@ -152,12 +152,12 @@ Create an environment variable configuration file for containers.
 Sample for mainnet : 
 
 ```shell
-cp .env.sample.mainnet .env
+$ cp .env.sample.mainnet .env
 ```
 
 Sample for testnet :
 ```shell
-cp .env.sample.testnet .env
+$ cp .env.sample.testnet .env
 ```
 
 The following settings should be changed.
@@ -183,10 +183,10 @@ MESSAGE_RELAYER_KEY=
 ## 6. Run Containers
 
 ```shell
-docker-compose up -d data-transport-layer
-docker-compose up -d l2geth
-docker-compose up -d batch-submitter
-docker-compose up -d message-relayer
+$ docker-compose up -d data-transport-layer
+$ docker-compose up -d l2geth
+$ docker-compose up -d batch-submitter
+$ docker-compose up -d message-relayer
 ```
 
 - data-transport-layer : Data-transport between L1 and L2
@@ -236,19 +236,19 @@ To upgrade the L2 container version, follow these steps:
 
 1. Stop the L2 containers:
 ```shell
-docker-compose stop "<CONTAINER_NAME>" && docker-compose rm "<CONTAINER_NAME>"
+$ docker-compose stop "<CONTAINER_NAME>" && docker-compose rm "<CONTAINER_NAME>"
 ```
 
 2. Backup data(only `l2geth` or `data-transport-layer` upgrade):
 ```shell
-mv ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>" ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>_backup" # Default L2_DATA_DIR is ./data/
+$ mv ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>" ./"<L2_DATA_DIR>"/"<CONTAINER_NAME>_backup" # Default L2_DATA_DIR is ./data/
 ```
 
 3. Update the container version in `docker-compose.yml`.
 
 4. Start the L2 containers:
 ```shell
-docker-compose up -d "<CONTAINER_NAME>"
+$ docker-compose up -d "<CONTAINER_NAME>"
 ```
 
 
