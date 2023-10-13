@@ -21,7 +21,7 @@ To back up your old version of geth, follow these steps:
 ```bash
 # check your geth version
 $ BIN_DIR=/usr/local/bin # set your binary directory has geth
-$ VERSION=$($BIN_DIR/geth -v | awk '{print $3}')
+$ VERSION=$(geth version | awk '/Version:/ && !/Go Version:/ {print $2}')
 
 # backup your geth binary
 mv $BIN_DIR/geth $BIN_DIR/geth-$VERSION
