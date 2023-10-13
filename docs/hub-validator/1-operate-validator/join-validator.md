@@ -14,12 +14,12 @@ Currently, we highly recommend a commission rate of 10% on the mainnet. We don't
 :::
 
 We offer three methods for joining, as described below:
-1. [Web(tools-fe)](/docs/hub-validator/operate-validator/1-3-join-validator#webtools-fe)
+1. [Web(tools-fe)](/docs/hub-validator/operate-validator/join-validator#webtools-fe)
     - Ideal for those who prefer a user-friendly UI.
-2. [CLI Tool](/docs/hub-validator/operate-validator/1-3-join-validator#cli-tool)
+2. [CLI Tool](/docs/hub-validator/operate-validator/join-validator#cli-tool)
     - Suitable for those who prefer using the command-line interface.
     - Note that the Web(tools-fe) above currently supports only a limited number of wallets, such as MetaMask. If you have an unsupported wallet, but it can extract your wallet details, you can process using this tool.
-3. [Contract Direct Calling](/docs/hub-validator/operate-validator/1-3-join-validator#contract-direct-calling)
+3. [Contract Direct Calling](/docs/hub-validator/operate-validator/join-validator#contract-direct-calling)
     - For those who use NSuite or prefer to use bare-bone contract direct calling, please refer to the bottom section on this page.
 
 <!-- As a brief note, let us outline the support status of related tasks for each method.
@@ -54,7 +54,7 @@ Once you've connected your wallet, your Validator owner address will be displaye
 
 ### 2. Register the Validator Operator
 Input the Validator Operator's address and click **Register**.
-If you followed the Express Setup, you would have generated the operator address in the earlier validator node building steps. You can find the details [here](/docs/hub-validator/operate-validator/1-2-build-validator-node#4-start-setupsh). For those who opted for the manual setup, the details are available [here](/docs/hub-validator/operate-validator/1-2-build-validator-node#5-generate-a-secret-key-for-geth).
+If you followed the Express Setup, you would have generated the operator address in the earlier validator node building steps. You can find the details [here](/docs/hub-validator/operate-validator/build-validator-node#4-start-setupsh). For those who opted for the manual setup, the details are available [here](/docs/hub-validator/operate-validator/build-validator-node#5-generate-a-secret-key-for-geth).
 
 
 Once completed, you'll see a confirmation message indicating success.
@@ -100,7 +100,7 @@ As of now, it is not possible to join as a validator on the testnet. We apologiz
 ::: -->
 
 ### 3. Register as a Validator
-The operator address is generated in the previous validator node building section. For Express Setup users, it can be found [here](/docs/hub-validator/operate-validator/1-2-build-validator-node#4-start-setupsh), and for manual users, it can be found [here](/docs/hub-validator/operate-validator/1-2-build-validator-node#5-generate-a-secret-key-for-geth).
+The operator address is generated in the previous validator node building section. For Express Setup users, it can be found [here](/docs/hub-validator/operate-validator/build-validator-node#4-start-setupsh), and for manual users, it can be found [here](/docs/hub-validator/operate-validator/build-validator-node#5-generate-a-secret-key-for-geth).
 
 #### 3.1. Export Validator Owner Private Key
 First, export your validator owner's private key as follows:
@@ -165,7 +165,7 @@ function joinValidator(
 ) external;
 ```
 
-The operator address is generated in the previous validator node building section. For Express Setup users, it can be found [here](/docs/hub-validator/operate-validator/1-2-build-validator-node#4-start-setupsh), and for manual users, it can be found [here](/docs/hub-validator/operate-validator/1-2-build-validator-node#5-generate-a-secret-key-for-geth).
+The operator address is generated in the previous validator node building section. For Express Setup users, it can be found [here](/docs/hub-validator/operate-validator/build-validator-node#4-start-setupsh), and for manual users, it can be found [here](/docs/hub-validator/operate-validator/build-validator-node#5-generate-a-secret-key-for-geth).
 
 It's important to note that the specified address is not the owner address, but rather the operator address. When registering the owner address, **the sender of this transaction automatically becomes the owner**.
 

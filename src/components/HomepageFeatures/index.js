@@ -27,7 +27,7 @@ const FeatureList = [
   {
     title: 'For Validators',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/hub-validator/operate-validator/1-1-hd-requirement",
+    linkTo: "/docs/hub-validator/operate-validator/hd-requirement",
     description: (
       <>
         Documentation for Oasys Hub Layer Validators.

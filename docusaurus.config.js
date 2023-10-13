@@ -107,7 +107,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'hub-validator/operate-validator/1-1-hd-requirement',
+            docId: 'hub-validator/operate-validator/hd-requirement',
             position: 'left',
             label: 'Validator',
           },
