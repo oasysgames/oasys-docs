@@ -16,28 +16,42 @@ Secret key file Example:
 /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11-06.835917424Z--abcdabcdabcdabcdabcdabcdabcdabcdabcdabcd
 ```
 
-<!-- After that, you can try using `journalctl` to check the update logs:
-```sh
-$ journalctl -u geth -n 1000 --no-pager
+### 3. Backing Up the Old Version of Geth
+To back up your old version of geth, follow these steps:
+```bash
+# check your geth version
+$ BIN_DIR=/usr/local/bin # set your binary directory has geth
+$ VERSION=$(geth version | awk '/Version:/ && !/Go Version:/ {print $2}')
+
+# backup your geth binary
+mv $BIN_DIR/geth $BIN_DIR/geth-$VERSION
 ```
-This command allows you to view the update logs. -->
 
-### 3. Download the Latest Release
-Download from Oasys Validator GitHub [Releases](https://github.com/oasysgames/oasys-validator/releases). For setup details, consult the `setup.sh` code in the GitHub repository.
-
+### 4. Downloading and Installing the Latest Version
+Download and unzip the latest version:
 :::caution
 Ensure you download the **latest version** suitable for your CPU architecture:
 - For Intel or AMD CPUs: Download geth-version_number-linux-amd64.zip
 - For ARM-based CPUs: Download geth-version_number-linux-arm64.zip
 ::::::
+```bash
+$ wget https://github.com/oasysgames/oasys-validator/releases/download/<"LATEST_VERSION">/geth-<"LATEST_VERSION">-linux-<"amd64|arm64">.zip
+$ unzip geth-<"LATEST_VERSION">-linux-<"amd64|arm64">.zip
+```
 
-### 4. Restart Geth
+Place the new version in the correct location and change its ownership:
+```bash
+$ sudo mv ./geth $BIN_DIR
+$ sudo chown <"SERVICE_USER">:<"SERVICE_USER"> $BIN_DIR/geth # default SERVICE_USER is geth
+```
+
+### 5. Restart Geth
 Restart Geth with:
 ```sh
 $ sudo systemctl start geth
 ``` 
 
-### 5. Verify Geth Status
+### 6. Verify Geth Status
 Check Geth's status with:
 ```sh
 $ sudo systemctl status geth

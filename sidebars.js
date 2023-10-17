@@ -303,6 +303,7 @@ const sidebars = {
         'verse-developer/how-to-build-verse/monitor',
         'verse-developer/how-to-build-verse/explorer',
         'verse-developer/how-to-build-verse/the-graph',
+        'verse-developer/how-to-build-verse/upgrade-verse',
         'verse-developer/how-to-build-verse/upgrade-contract',
       ],
     },
