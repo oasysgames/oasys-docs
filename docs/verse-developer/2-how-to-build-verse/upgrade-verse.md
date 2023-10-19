@@ -1,25 +1,28 @@
 # Upgrade Verse
 
+## Check latest container version
+You can check the latest container version at [oasys-optimism packages](https://github.com/orgs/oasysgames/packages?repo_name=oasys-optimism).
+
 ## Check L2 container version
 To check the L2 container version, refer to `docker-compose.yml` in `verse-layer-optimism` repository.
 ```yaml
 x-l2geth: &l2geth
-  image: ghcr.io/oasysgames/oasys-optimism/l2geth:v0.1.2 # <- l2geth container version
+  image: ghcr.io/oasysgames/oasys-optimism/l2geth:v0.1.6 # <- l2geth container version
   entrypoint: /bin/sh /assets/l2geth/run.sh
 
 services:
   data-transport-layer:
     <<: *common
-    image: ghcr.io/oasysgames/oasys-optimism/data-transport-layer:v0.1.1 # <- L2 data-transport-layer container version
+    image: ghcr.io/oasysgames/oasys-optimism/data-transport-layer:v0.1.6 # <- L2 data-transport-layer container version
     entrypoint: /bin/sh /assets/data-transport-layer/run.sh
   
   batch-submitter:
     <<: *common
-    image: ghcr.io/oasysgames/oasys-optimism/batch-submitter:v0.1.1 # <- L2 batch-submitter container version
+    image: ghcr.io/oasysgames/oasys-optimism/batch-submitter:v0.1.6 # <- L2 batch-submitter container version
 
   message-relayer:
     <<: *common
-    image: ghcr.io/oasysgames/oasys-optimism/message-relayer:v0.1.1 # <- L2 message-relayer container version
+    image: ghcr.io/oasysgames/oasys-optimism/message-relayer:v0.1.6 # <- L2 message-relayer container version
 ```
 
 ## Upgrade L2 container version
