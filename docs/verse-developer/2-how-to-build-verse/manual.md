@@ -182,6 +182,9 @@ MESSAGE_RELAYER_KEY=
 
 ## 6. Run Containers
 
+Before running the containers, you need to check latest release version at [oasys-optimism packages](https://github.com/orgs/oasysgames/packages?repo_name=oasys-optimism).
+If it need, please update container version at `docker-compose.yml`.
+
 ```shell
 $ docker-compose up -d data-transport-layer
 $ docker-compose up -d l2geth
