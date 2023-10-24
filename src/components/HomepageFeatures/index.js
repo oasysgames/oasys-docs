@@ -47,7 +47,7 @@ const FeatureList = [
   {
     title: 'Ecosystem',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    linkTo: "/docs/ecosystem/wallet",
+    linkTo: "/docs/ecosystem/intro",
     description: (
       <>
         The current ecosystem of Oasys is continually evolving. We will expand and grow our ecosystem over time.

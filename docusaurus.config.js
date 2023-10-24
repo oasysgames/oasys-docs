@@ -113,7 +113,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'ecosystem/wallet',
+            docId: 'ecosystem/intro',
             position: 'left',
             label: 'Ecosystem',
           },

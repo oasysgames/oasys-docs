@@ -55,7 +55,7 @@ Alternatively, you can request indexing services from providers like [Footprint]
 #### 3. Wallet
 Oasys is compatible with any wallet in the Ethereum ecosystem. We especially feature the Oasys Passport, which is developed for gaming purposes. Please check the official site below.
 
-[Oasys Passport Official Site](https://www.oasys-wallet.com/)
+[Oasys Passport Official Site](https://www.oasys-wallet.com/en)
 
 #### 4. Built-in Bridge UI
 We believe that incorporating a bridging UI into your game can enhance the user experience. Typical gamers might not be familiar with crypto-friendly bridging UIs. Therefore, seamlessly integrating a bridging function into games can be beneficial. We are considering providing something like an SDK to facilitate the built-in bridge UI if there's high demand.

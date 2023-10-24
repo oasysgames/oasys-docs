@@ -6,7 +6,7 @@ Oasys is compatible with the EVM, so essentially any wallet within the Ethereum 
 
 |Name|URL|
 |--|---------|
-|Oasys Passport|https://www.oasys-wallet.com/|
+|Oasys Passport|https://www.oasys-wallet.com/en|
 |SBI Web3 Wallet|https://www.sbivc.co.jp/services/web3wallet|
 |N Suite|https://www.nsuite.io/ja|
 |Metamask|https://metamask.io/|
