@@ -21,6 +21,7 @@ The Hub Layer includes a set of preset contracts that are essential to our ecosy
 | LOAS | Locked Oasys Token. | 0x5200000000000000000000000000000000000023 | [LOAS.sol](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/LOAS.sol) |
 | L1StandardERC20Factory | Contract that deploys the Oasys Standard ERC20. | 0x5200000000000000000000000000000000000004 | [L1StandardERC20Factory.sol](https://github.com/oasysgames/oasys-optimism/blob/v0.1.5/packages/contracts/contracts/oasys/L1/token/L1StandardERC20Factory.sol) |
 | L1StandardERC721Factory | Contract that deploys the Oasys Standard ERC721. | 0x5200000000000000000000000000000000000005 | [L1StandardERC721Factory.sol](https://github.com/oasysgames/oasys-optimism/blob/v0.1.5/packages/contracts/contracts/oasys/L1/token/L1StandardERC721Factory.sol) |
+| Multicall2 | Aggregate results from multiple function calls | 0x5200000000000000000000000000000000000022 |[Multicall2.sol](https://github.com/makerdao/multicall/blob/16ec5e2859b3a4829ceed4ee1ef609e6e9a744ee/src/Multicall2.sol) |
 
 ## ERC20 Contracts
 These are the contract addresses that are supported bridging from Ethereum through [cBridge](https://cbridge.celer.network/1/248/USDC), maintained by Celer.
