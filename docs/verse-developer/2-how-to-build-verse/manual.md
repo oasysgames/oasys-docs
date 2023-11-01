@@ -12,6 +12,11 @@ If you want to test deploying contracts and execute transactions on the Verse, p
 
 For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/verse-accounts), you can take a look at it before deploying a Verse. 
 
+### Constructing Verse as a Permissioned Chain
+If safeguarding against scams or hacks is a paramount concern for your business, you can configure Verse as a permissioned chain using the Verse-Proxy.
+
+Allowing unrestricted transactions on the Verse could expose you to unforeseen gas attacks. However, by using the proxy, such threats can be managed and limited. For a deeper understanding, please refer to the [Verse-Proxy](/docs/verse-developer/how-to-build-verse/verse-proxy) section.
+
 ## 1. Requirements
 
 Docker Engine v20.10.0 or later and docker-compose v2.0 or later are required.
@@ -66,6 +71,8 @@ key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 
 If you've already built the Verse, skip this procedure.
 And you can check VerseInfo with build_transaction at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
+
+For users wishing to build using Multisig like Nsuite, detailed instructions are provided at the [end](/docs/verse-developer/how-to-build-verse/manual#construct-verse-through-direct-contract-function-calls) of this page.
 
 ### Connect wallet
 Access [tools-fe](https://tools-fe.oasys.games) and switch to the oasys network.
@@ -204,13 +211,41 @@ For instructions on how to set up the Verse Submitter, please refer to the [this
 
 For users interested in our instant verification mechanism, please visit [this page](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
 
-## Permissioned chain
+---
 
-For running the verse builder, considering the following parameter on the permissioned chain may help: 
+## Construct Verse Through Direct Contract Function Calls
+Particularly for Multisig users, such as Nsuite, we've detailed the interfaces of the deposit and build functions within the contract.
 
-Deploying permission-less creates scam or non-approved contracts, which makes users unsafe. 
-By approving transaction freely on the Verse, you may be attacked by an unexpected gas attack, which can be controlled by [limiting proxy](/docs/verse-developer/how-to-build-verse/verse-proxy).
+### Deposit
+The contract for depositing is named [L1BuildDeposit](https://github.com/oasysgames/oasys-optimism/blob/4d667a169296f37422ffaa4901e8d149e84abe5a/packages/contracts/contracts/oasys/L1/build/L1BuildDeposit.sol), and it's deployed at `0x5200000000000000000000000000000000000007`. You can deposit either OAS or sOAS. Here's how it's done for OAS:
+- builder: Address of the Verse builder
+```solidity
+function deposit(address builder) external payable;
+```
+For sOAS, the process is as follows:
+- builder: Address of the Verse builder
+- token: sOAS address
+- amount: Amount to deposit
+```solidity
+function depositERC20(
+    address builder,
+    address token,
+    uint256 amount
+) external;
+```
+After making your deposit, please verify the outcome in the [Check Your Deposit](/docs/verse-developer/how-to-build-verse/manual#check-your-deposit) section above.
 
+### Build
+The build contract is named [L1BuildAgent](https://github.com/oasysgames/oasys-optimism/blob/4d667a169296f37422ffaa4901e8d149e84abe5a/packages/contracts/contracts/oasys/L1/build/L1BuildAgent.sol), and its address is `0x5200000000000000000000000000000000000008`.
 
-
-
+- chainId: Chain ID of the Verse
+- sequencer: Address of the sequencer
+- proposer: Address of the proposer
+```solidity
+function build(
+    uint256 chainId,
+    address sequencer,
+    address proposer
+) external;
+```
+After completing the build, please verify the newly deployed contract addresses, such as the bridge, and download the JSON file. For additional details, refer to the [Build Verse](/docs/verse-developer/how-to-build-verse/manual#build-verse) section above.
