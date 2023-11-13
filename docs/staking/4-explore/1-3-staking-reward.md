@@ -15,7 +15,7 @@ https://github.com/oasysgames/oasfi/blob/main/doc/user_guide.md#export-commissio
 #### macOS:
 
 ```bash
-./oasfi-macos  export-commission-reward address -c=chain_name
+./oasfi-macos  export-commission-reward address -c=chain_name --from_data=2023-08-16T10:00:00 --to_data=2023-10-16T10:00:00
 
 # example
 # ./oasfi-macos  export-commission-reward 0x272d6bd040c2b8454f4f6f43115758fbe318ee2c -c=hub_mainnet 
@@ -24,7 +24,7 @@ https://github.com/oasysgames/oasfi/blob/main/doc/user_guide.md#export-commissio
 #### windows:
 
 ```bash
-./oasfi-win.exe  export-commission-reward address -c=chain_name
+./oasfi-win.exe  export-commission-reward address -c=chain_name --from_data=2023-08-16T10:00:00 --to_data=2023-10-16T10:00:00
 
 # example
 # ./oasfi-win.exe  export-commission-reward 0x272d6bd040c2b8454f4f6f43115758fbe318ee2c -c=hub_mainnet 
@@ -33,7 +33,7 @@ https://github.com/oasysgames/oasfi/blob/main/doc/user_guide.md#export-commissio
 #### linux:
 
 ```bash
-./oasfi-linux  export-commission-reward address -c=chain_name
+./oasfi-linux  export-commission-reward address -c=chain_name --from_data=2023-08-16T10:00:00 --to_data=2023-10-16T10:00:00
 
 # example
 # ./oasfi-linux  export-commission-reward 0x272d6bd040c2b8454f4f6f43115758fbe318ee2c -c=hub_mainnet 
