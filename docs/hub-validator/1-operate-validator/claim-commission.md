@@ -14,3 +14,6 @@ When connect wallet of validator owner, You can see address of validator owner a
 
 ### Press button
 To claim commission, press button of `Claim Commissions`.
+
+## Export Commission Reward History
+For validators interested in checking their generated commission rewards, we offer a valuable tool tailored to your needs. By using [oasfi](https://github.com/oasysgames/oasfi), primarily designed for financial or accounting purposes, you can interact with Oasys and export the commission reward history on a daily basis (specifically based on epochs). For more information, please refer to the user guidelines available [here](https://github.com/oasysgames/oasfi/blob/main/doc/user_guide.md#export-commission-reward-script).
