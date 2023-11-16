@@ -41,3 +41,26 @@ As you may know, the L2 batch transactions, which are periodically submitted to 
 
 #### Bottleneck of Middleware:
 The L2 batch transaction is dispatched by the `batch-submitter` for every block on L1. This means that batches can only be submitted at 15-second intervals. By updating the batch-submitter logic, we believe we can reduce this interval. Our estimate is that the shortest possible interval is 1 second, leading to a theoretical maximum TPS of around `2000`. We'll consider implementing these changes as any verse growth.
+
+### Q. How to Update Sequencer/Proposer Address
+If you need to rotate or have lost your Sequencer/Proposer, there's no need to worry as you can update the address. However, keep in mind that if you lose your builder key, it cannot be recovered.
+
+First, ensure that the current address matches your expectations. To check this, call the `getAddress` function of the [Lib_AddressManager](https://github.com/oasysgames/oasys-optimism/blob/44655464537249ea8d9e045240e787144cdcb80f/packages/contracts/contracts/libraries/resolver/Lib_AddressManager.sol) contract:
+
+- name: This is the name of the target address. For updating the Sequencer, set it as `OVM_Sequencer`; for the Proposer, set as `OVM_Proposer`.
+```solidity
+function getAddress(string memory _name) external view returns (address);
+```
+
+Upgrading is performed by calling the `setAddress` function of the same contract. Note that only the transaction sender who is the builder is allowed to execute this.
+
+- name: This should be the same as in the `getAddress` function above.
+- address: This is the new address to be set, either for the sequencer or proposer.
+```solidity
+function setAddress(
+    string memory name,
+    address address
+) external onlyOwner;
+```
+
+Once completed, confirm the address has been updated by calling `getAddress` again.
