@@ -1,4 +1,4 @@
-# Reward / Commission
+# Reward / Validator Reward
 
 ## How block reward is made
 Block Reward have two different details.
@@ -9,14 +9,14 @@ Gas used on Block means if you are a Validator and you have created Block, you w
 2. Validation Reward(Operation Reward)
 Since Gas used on Block can not stimulate the ecosystem and motivate validators to secure our network, we have a reward for validators who participated in each epoch. In addition, Delegator and Validator Owner receive a reward. Validation Reward(Operation Reward) is calculated at the end of each epoch, and you can see a timer in the Oasys hub.
 
-## Staking Reward & Commission
+## Staking Reward & Validator Reward
 
 Staking reward is to stimulate user staking and reward for contributing stabilisation in a network.
 
-||staking reward| Staking commission|
+||staking reward| validator reward|
 |-----------|-----------|-----------|
 |Receiver| Delegator | Validator Owner|
-|Details| Receives amount after paying interest to Validator owner | Receives commission for operating nodes |
+|Details| Receives amount after paying interest to Validator owner | Receives validator reward for operating nodes |
 
 A reward is calculated daily basis.
 

@@ -4,10 +4,10 @@
 
 Staking rewards are a must for any POS architecture. Therefore, for the stability of the network, we have assigned Staking Rewards through Tokenomics. POS validates the network through the Proof of Staking. Staking reward are calculated every epoch.
 
-## Commission 
+## Validator Reward
 
 Validators will mediate transactions and stabilize the network.
-The delegator can delegate tokens to the Validator, the Validator can receive a delegated token, and the Validator can receive a commission from the delegator. 
+The delegator can delegate tokens to the Validator, the Validator can receive a delegated token, and the Validator can receive a validator reward from the delegator. 
 
 ## Miner Incentives 
 

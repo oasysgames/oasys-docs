@@ -14,7 +14,7 @@ Block creation time may be delayed a little by network delay for block creation,
 If more than the amount of your token is needed for the Validator, one Staking person should leave it to the Validator because validating is impossible. 
 We've decided to call it the Delegator, and by delegating it to the Validator, the Validator will belly-date the token and receive the Staking Reward instead. 
 Staking Reward is available from Staking Contract, which requires a direct claim. 
-In the case of a Delegator, you can choose whomever you want to Delegate. Delegation is also possible to one or more Validators. A validator can take a commission from Staking Reward by validating with a delegation from Delegator.
+In the case of a Delegator, you can choose whomever you want to Delegate. Delegation is also possible to one or more Validators. A validator can take a validator reward from Staking Reward by validating with a delegation from Delegator.
 
 ## Easy Staking 
 

@@ -72,14 +72,14 @@ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec admin.addPeer(
 You can verify whether the syncing is complete or not by referring to the [this question](/docs/hub-validator/operate-validator/faq#q-how-do-i-verify-the-block-synchronization-status).
 
 ---
-### Q. How can I check the commission I can claim?
+### Q. How can I check the validator reward I can claim?
 You have two options to do this: one is via web and the other is via the command line interface (CLI).
 
 #### Web
 You can view the amount that can be claimed on the `Claim Commission` tab on the [tools-fe](https://tools-fe.oasys.games/claim-commissions).
 
 #### CLI
-You can use the [oasys-pos-cli](https://github.com/oasysgames/oasys-pos-cli) utility tool to facilitate validator tasks. There's a specific command to check the commission that you can claim.
+You can use the [oasys-pos-cli](https://github.com/oasysgames/oasys-pos-cli) utility tool to facilitate validator tasks. There's a specific command to check the validator reward that you can claim.
 
 Here is a sample command:
 ```sh

@@ -10,7 +10,7 @@ In terms of timing, you can undertake the joining process at any point, even bef
 For details on staking, please refer to the [staking section](/docs/staking/stake-oasys/1-1-stake). Staking processes are the same for general users. Please note that in order to become a validator, the validator owner must be staked a minimum of 10,000,000 OAS.
 
 :::note Note
-Currently, we highly recommend a commission rate of 10% on the mainnet. We don't want validators to compete based on low commission rates. Instead, we encourage competition through game development. This is why we are not advocating for differences in commission rates.
+Currently, we highly recommend a validator reward rate of 10% on the mainnet. We don't want validators to compete based on low validator reward rates. Instead, we encourage competition through game development. This is why we are not advocating for differences in validator reward rates.
 :::
 
 We offer three methods for joining, as described below:

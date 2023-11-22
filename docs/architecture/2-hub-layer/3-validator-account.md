@@ -20,11 +20,11 @@ So we have made two separate accounts for who is involved in validating.
 | Stake| O | O |
 | Claim | O | O | 
 | CLI | O | O |
-| Claim Commission | X | O (Upto Validator's commission) |
+| Claim Validator Reward | X | O (Upto Validator's validator reward) |
 
-On initial validators: The Delegator must pay a commission to the Validator Owner.
+On initial validators: The Delegator must pay a validator reward to the Validator Owner.
 - If 1000 OAS is staked, and 10% APY is for validation, the reward would be 100 OAS.
-- If the commission rate is 10%, the owner takes 10% of the delegated stake.
+- If the validator reward rate is 10%, the owner takes 10% of the delegated stake.
 - So the Owner receives 10OAS, Delegator takes 90OAS.
 
 The owner can stake themselves also. 
@@ -37,7 +37,7 @@ It's worth noting that the validator owner can use their own address for staking
 ### Validator Owner
 The validator owner serves as the unique identity of the Validator. It's fixed, meaning you cannot switch or replace it. As such, it's the address that Delegators (those who stake OAS to your node) identify validator during the staking process.
 
-Routine interactions are limited to 'joining as a Validator`, 'claiming commission rewards', and 'updating the operator'. Since the Validator owner account is used to sign transactions for these operations, using a hardware wallet is advisable for added security. Crucially, **if you lose access to the Owner's address, it is irretrievable**.
+Routine interactions are limited to 'joining as a Validator`, 'claiming validator reward rewards', and 'updating the operator'. Since the Validator owner account is used to sign transactions for these operations, using a hardware wallet is advisable for added security. Crucially, **if you lose access to the Owner's address, it is irretrievable**.
 
 ### Validator Operator
 The Operator account is essential for the operation of the Validator node. Specifically, this account signs blocks. During the Validator Node program's startup, the operator private key typically resides on the same disk as the Validator node.
