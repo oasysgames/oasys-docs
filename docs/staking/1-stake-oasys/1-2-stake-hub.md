@@ -60,12 +60,12 @@ For the OAS that you have unstaked from each validator page, you can withdraw th
 
 You can check how much time is left until the tokens are withdrawable. 
 
-While unstaking, you can not receive staking rewards. 
+While unstaking, you can not receive staker rewards. 
 
 ![staking18](/img/docs/techdocs/oasys-hub/withdraw.png)
 
 
-## 3. Claim Staking Reward 
+## 3. Claim Staker Reward
 
 ### 1. Go to the staking Page.
 

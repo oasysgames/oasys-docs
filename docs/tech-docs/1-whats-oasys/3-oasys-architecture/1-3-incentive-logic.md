@@ -1,8 +1,8 @@
 # Incentive Logic
 
-## Staking Reward
+## Staker Reward
 
-Staking rewards are a must for any POS architecture. Therefore, for the stability of the network, we have assigned Staking Rewards through Tokenomics. POS validates the network through the Proof of Staking. Staking reward are calculated every epoch.
+Staker Rewards are a must for any POS architecture. Therefore, for the stability of the network, we have assigned Staker Rewards through Tokenomics. POS validates the network through the Proof of Staking. Staker Reward are calculated every epoch.
 
 ## Validator Reward
 
