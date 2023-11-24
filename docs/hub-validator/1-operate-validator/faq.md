@@ -138,6 +138,3 @@ Various factors might prompt you to migrate your operating validator node to a d
 - Better Network Connectivity
 
 For step-by-step instructions on how to move your validator node to a new server, please consult the [Migrating Validator to a New Server section](/docs/hub-validator/operate-validator/upgrade-migrate#migrating-validator-to-a-new-server).
-
-### Q.How to Verify Contract by Blockscout API ?
-docs about verify is [here](https://docs.oasys.games/docs/staking/explore/1-3-verify) 

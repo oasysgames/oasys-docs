@@ -1,52 +1,32 @@
-# Verify Contract
+# Contract Verification
+Verifying a contract enables public access to the code of the deployed contract. Oasys utilizes [Blockscout](https://github.com/blockscout/blockscout), which is a prominent open-source explorer. Therefore, it's essential to follow its specifications. Please refer to the [Blockscout documentation](https://docs.blockscout.com/for-users/verifying-a-smart-contract) for guidance. We will provide you with an exact example of the configuration.
 
-Verifying a contract makes the code of the deployed contract accessible for public verification. 
-With Blockscout, it is possible to verify contracts deployed via an API using Hardhat.
+# Configuring the Hardhat Settings File
+I will present you with a practical example of the config file (`hardhat.config.js`) for our mainnet case. Please note that it's not necessary to login and generate an apiKey; any value is acceptable.
 
-Note:
-Oasys mainnet does not support verification via an API.
-This is due to the fact that deployments are conducted through contracts,
-not via an API such as Hardhat. Consequently, the necessary JSON configuration
-created during a deployment via a Hardhat deployment script is not available,
-making API-based verification infeasible on the Oasys mainnet.
-
-# Getting Started
-see blockscout docs:
-https://docs.blockscout.com/for-users/verifying-a-smart-contract/hardhat-verification-plugin
-
-# Setting hardhat.config.js  
-
-## 1.Add networks
-```
+```javascript
+const config = {
+  ...
   networks: {
-    "network-name": {
-      url: "(rpc-url-of-chain)",
+    oasysmainnet: {
+      url: "https://rpc.mainnet.oasys.games",
     },
   },
-```
-
-## 2.Add the following to etherscan.customChains[]
-```
-{
-  network: "network-name", // have to match apiKey key
-  chainId: (network-chain-id),
-  urls: {
-    apiURL: "https://your-blockscout-host/api",
-    browserURL: "https://your-blockscout-host",
+  etherscan: {
+    apiKey: {
+      oasysmainnet: "abc"
+    },
+    customChains: [
+      {
+        network: "oasysmainnet",
+        chainId: 248,
+        urls: {
+          apiURL: "https://explorer.oasys.games/api",
+          browserURL: "https://explorer.oasys.games/"
+        }
+      }
+    ]
   },
+  ...
 }
-```
-
-## 3. Add the following to etherscan.apiKey
-Create a key with any value
-```
-   etherscan: {
-     apiKey: {
-       'network-name': 'foo',
-     },
-```
-
-## 4.Verify
-```
-npx hardhat verify --network network-name (deployed contract address)
 ```
