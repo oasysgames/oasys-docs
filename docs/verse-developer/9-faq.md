@@ -64,3 +64,6 @@ function setAddress(
 ```
 
 Once completed, confirm the address has been updated by calling `getAddress` again.
+
+### Q.How to Verify a Contract Using the Explore API?
+Please refer to the [Contract Verification](https://docs.oasys.games/docs/staking/explore/1-3-verify) section of the explorer in this documentation.

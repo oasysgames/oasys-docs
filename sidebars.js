@@ -543,6 +543,7 @@ const sidebars = {
       items: [
         'staking/explore/1-1-explore',
         'staking/explore/1-2-csv-download',
+        'staking/explore/1-3-verify',
       ],
     },
     {
