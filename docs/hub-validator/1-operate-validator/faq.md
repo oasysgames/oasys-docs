@@ -1,5 +1,5 @@
 ---
-id: validator-common-faq
+id: faq
 title: Common FAQ
 sidebar_label: Node FAQ
 description: "A troubleshooting guide for validator node."
