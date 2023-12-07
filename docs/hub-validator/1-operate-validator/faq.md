@@ -1,3 +1,14 @@
+---
+id: validator-common-faq
+title: Common FAQ
+sidebar_label: Node FAQ
+description: "A troubleshooting guide for validator node."
+keywords:
+  - docs
+  - validator
+  - commands
+  - faq
+---
 # FAQ
 
 ### Q. Validator Header not found
@@ -142,22 +153,21 @@ For step-by-step instructions on how to move your validator node to a new server
 
 ### Frequently Used Commands for Hub
 
-| Command | Description |
-| --- | --- |
-
-| `admin_addPeer` | Adds a new remote peer to the list of tracked static nodes. |
-| `admin_addTrustedPeer` | Adds the given peer to a reserved trusted list which allows the node to always connect, even if the slots are full. |
-| `admin_nodeInfo` | The nodeInfo property can be queried for all the information known about the running Geth node. |
-| `admin_peers` | The peers property can be queried for all the information known about the connected peers |
-| `admin_removePeer` | Disconnects from a remote peer if the connection exists. |
-| `admin_removeTrustedPeer` | Removes a remote peer from the trusted peer set |
-| `admin.peers.length` | Displays the total count of peers the node is connected with. |
-| `clique_getSigners` | Retrieves the list of authorized signers at the specified block number. |
-| `clique_getSignersAtHash` | Retrieves the list of authorized signers at the specified block hash |
-| `debug_getBadBlocks` | Returns a list of the last 'bad blocks' that the client has seen on the network and returns them as a JSON list of block-hashes. |
-| `eth.getBlock("latest").number	` | Queries the height of the latest block. |
-| `eth.syncing.highestBlock - eth.syncing.currentBlock` | Compares the current block of your node to the highest block. |
-| `debug_setHead` | Sets the current head of the local chain by block number. |
-| `les.latestCheckpoint` | Get the index and hashes of the latest known checkpoint. |
-| `net_peerCount` | Returns the number of connected peers. |
-
+| Command                                             | Description                                                                                        |       
+| -------------------------------------               | ----------------------------------------------                                                     |   
+| `admin_addPeer`                                     | **Adds a new remote peer to the list of tracked static nodes.**                                    |
+| `admin_addTrustedPeer`                              | **Adds the peer to a reserved trusted list which allows the node to always connect, even if the slots are full.** |                                                                    |
+| `admin_nodeInfo`                                    | **The nodeInfo property can be queried for all the information known about the running Geth node.**|             
+| `admin_peers`                                       | **The peers property can be queried for all the information known about the connected peers.**     |
+| `admin_removePeer`                                  | **Disconnects from a remote peer if the connection exists.**                                       |
+| `admin_removeTrustedPeer`                           | **Removes a remote peer from the trusted peer set.**                                               |
+| `admin.peers.length`                                | **Displays the total count of peers the node is connected with.**                                  |
+| `clique_getSigners`                                 | **Retrieves the list of authorized signers at the specified block number.**                        |
+| `clique_getSignersAtHash`                           | **Retrieves the list of authorized signers at the specified block hash.**                          |
+| `debug_getBadBlocks`                                | **Returns a list of the last 'bad blocks' that the client has seen on the network and returns them as a JSON list of block-hashes.**                                                |
+| `eth.getBlock("latest").number`                     | **Queries the height of the latest block.**                                                        |
+| `debug_setHead`                                     | **Sets the current head of the local chain by block number.**                                      |                                                        
+| `les.latestCheckpoint`                              | **Gets the index and hashes of the latest known checkpoint.**                                      |
+| `net_peerCount`                                     | **Returns the number of connected peers.**                                                         |
+|`eth.syncing.highestBlock - eth.syncing.currentBlock`| **Compares the current block of your node to the highest block.**                                  |
+                            `                                           
