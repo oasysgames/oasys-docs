@@ -8,7 +8,7 @@
 | Currency Symbol | OAS                                |
 | RPC(BlockPi)    | https://oasys.blockpi.network/v1/rpc/public	  |
 | RPC(Oasys)      | https://rpc.mainnet.oasys.games    |
-| RPC(Poket Network)| https://oasys-mainnet.gateway.pokt.network/v1/lb/c967bd31 https://oasys-mainnet-archival.gateway.pokt.network/v1/lb/c967bd31 |
+| RPC(Poket Network)| https://oasys-mainnet.gateway.pokt.network/v1/lb/c967bd31 , https://oasys-mainnet-archival.gateway.pokt.network/v1/lb/c967bd31 |
 | Explorer        | https://explorer.oasys.games/      |
 
 ## Testnet (Hub Layer)
