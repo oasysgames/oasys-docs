@@ -511,6 +511,7 @@ const sidebars = {
         'staking/stake-oasys/1-2-stake-hub',
         'staking/stake-oasys/1-3-stake-cli',
         'staking/stake-oasys/1-4-stake-contract',
+        'staking/stake-oasys/1-5-export-csv',
       ],
     },
     {

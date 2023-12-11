@@ -17,5 +17,8 @@ Please note that staking requires 1 epoch to be finalized (Approximately 1 Day).
 Please be aware that unstaking takes 10 days. Once you initiate the unstaking process, you must wait 10 days to be able to actually withdraw the staked OAS. The withdrawal process is equivalent to a `claim`.
 :::
 
+### Exporting Historical Data
+We offer a method for [exporting historical staking rewards](/docs/staking/stake-oasys/1-5-export-csv), catering to those who require historical data for accounting or tax calculation purposes.
+
 ### Supported Hardware Wallet on Oasys Hub
 You can use all wallets that are supported by MetaMask. Also, ensure that the Ethereum wallet is installed on a hardware wallet.

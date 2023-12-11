@@ -32,8 +32,7 @@ Using the CLI tool to correct the CSV is optional but recommended to ensure the 
 
 ### Usage
 
-For usage instructions, please refer to the tool's [README](https://github.com/oasysgames/oasfi)and watch "user-guide" -> "correct-csv" corner.
-As an example, we provide a guide on how to use it on macOS.
+For usage instructions, please refer to the tool's [guideline](https://github.com/oasysgames/oasfi/blob/main/doc/doc_EN/correct_csv_EN.md). As an example, we provide a guide on how to use it on macOS.
 
 1. First, launch the Terminal.
    ![terminal_launch](/img/tutorial/explorerCsvCliTerminal.jpg)
