@@ -19,3 +19,8 @@ Please be aware that unstaking takes 10 days. Once you initiate the unstaking pr
 
 ### Supported Hardware Wallet on Oasys Hub
 You can use all wallets that are supported by MetaMask. Also, ensure that the Ethereum wallet is installed on a hardware wallet.
+
+### Export historical data
+You can use the oasfi CLI tool to export historical CSV data for Staker and Validator Rewards
+
+[Export historical data](/docs/staking/stake-oasys/1-5-export-csv)
