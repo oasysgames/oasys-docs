@@ -1,3 +1,15 @@
+---
+id: high-quality-database
+title: High Quality Database
+sidebar_label: Efficient loading
+description: "An overview of the features of permissioned chain."
+keywords:
+  - High Quality Database
+  - Hub Layer
+  - Verse Layer
+  - Efficient loading
+---
+
 # High Quality Database
 
 The Hub Layer is a permissioned Blockchain. Therefore, all updates are required to be updated by validators. Anyone can be a Hub Layer validator, but updating the Hub Layer requires permissions. 
