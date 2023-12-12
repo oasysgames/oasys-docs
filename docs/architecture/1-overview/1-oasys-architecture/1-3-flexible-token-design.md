@@ -1,3 +1,15 @@
+---
+id: token-design
+title: Flexible Token Design
+sidebar_label: Multi Token Design
+description: "An overview of the Flexible Token Design."
+keywords:
+  - NFT
+  - FT
+  - ex
+  - o
+  - v
+---
 # Flexible Token Design
 
 You can have a look at our [Whitepaper](/docs/whitepaper/solution/ft-nft-design) for more info about flexible token design.
