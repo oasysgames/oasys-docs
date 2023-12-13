@@ -39,31 +39,33 @@ For usage instructions, please refer to the tool's [guideline](https://github.co
 2. In the Terminal, navigate to [your CLI directory] by typing `cd [your CLI directory]` and then pressing enter. Replace [your CLI directory] with the path where you've stored the CLI tool.
 3. Then, execute following commad:
 
+> **_Note:_** If you omit the --chain or -c option, the default setting is hub_mainnet.
+
 #### macOS:
 
 ```bash
-./oasfi-macos correct-csv -i=input.csv -o=output.csv chain_name
+./oasfi-macos correct-csv -i=input.csv -o=output.csv --chain=chain_name
 
 # example
-# ./oasfi-macos correct-csv -i=foo.csv -o=bar.csv hub_mainnet
+# ./oasfi-macos correct-csv -i=foo.csv -o=bar.csv --chain=hub_mainnet
 ```
 
 #### windows:
 
 ```bash
-./oasfi-win.exe correct-csv -i=input.csv -o=output.csv -c=chain_name
+./oasfi-win.exe correct-csv -i=input.csv -o=output.csv --chain=chain_name
 
 # example
-# ./oasfi-win.exe correct-csv -i=foo.csv -o=bar.csv hub_mainnet
+# ./oasfi-win.exe correct-csv -i=foo.csv -o=bar.csv --chain=hub_mainnet
 ```
 
 #### linux:
 
 ```bash
-./oasfi-linux correct-csv -i=input.csv -o=output.csv chain_name
+./oasfi-linux correct-csv -i=input.csv -o=output.csv --chain=chain_name
 
 # example
-# ./oasfi-linux correct-csv -i=foo.csv -o=bar.csv hub_mainnet
+# ./oasfi-linux correct-csv -i=foo.csv -o=bar.csv --chain=hub_mainnet
 ```
 
 Here, input.csv is the path to the CSV file you want to read, and output.csv is the path where the resulting CSV file will be saved.
