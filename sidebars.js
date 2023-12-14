@@ -27,7 +27,7 @@ const sidebars = {
             'architecture/overview/oasys-architecture/flexible-token-design',
           ]
         }, {
-          type: 'category',
+          type: 'category'
           label: 'Permissioned Chain', 
           link: {
             type: 'generated-index',
