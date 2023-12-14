@@ -56,7 +56,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // metadata: [{name: 'keywords', content: 'cooking, blog'}],
-      image: 'img/general/oasys_logo.jpeg',
+      image: 'img/general/oasys_ogp.png',
       algolia: {
         // The application ID provided by Algolia
         appId: 'UY32N5LBZM',

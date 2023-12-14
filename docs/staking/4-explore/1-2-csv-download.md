@@ -32,39 +32,40 @@ Using the CLI tool to correct the CSV is optional but recommended to ensure the 
 
 ### Usage
 
-For usage instructions, please refer to the tool's [README](https://github.com/oasysgames/oasfi)and watch "user-guide" -> "correct-csv" corner.
-As an example, we provide a guide on how to use it on macOS.
+For usage instructions, please refer to the tool's [guideline](https://github.com/oasysgames/oasfi/blob/main/doc/doc_EN/correct_csv_EN.md). As an example, we provide a guide on how to use it on macOS.
 
 1. First, launch the Terminal.
    ![terminal_launch](/img/tutorial/explorerCsvCliTerminal.jpg)
 2. In the Terminal, navigate to [your CLI directory] by typing `cd [your CLI directory]` and then pressing enter. Replace [your CLI directory] with the path where you've stored the CLI tool.
 3. Then, execute following commad:
 
+> **_Note:_** If you omit the --chain or -c option, the default setting is hub_mainnet.
+
 #### macOS:
 
 ```bash
-./oasfi-macos correct-csv -i=input.csv -o=output.csv chain_name
+./oasfi-macos correct-csv -i=input.csv -o=output.csv --chain=chain_name
 
 # example
-# ./oasfi-macos correct-csv -i=foo.csv -o=bar.csv hub_mainnet
+# ./oasfi-macos correct-csv -i=foo.csv -o=bar.csv --chain=hub_mainnet
 ```
 
 #### windows:
 
 ```bash
-./oasfi-win.exe correct-csv -i=input.csv -o=output.csv -c=chain_name
+./oasfi-win.exe correct-csv -i=input.csv -o=output.csv --chain=chain_name
 
 # example
-# ./oasfi-win.exe correct-csv -i=foo.csv -o=bar.csv hub_mainnet
+# ./oasfi-win.exe correct-csv -i=foo.csv -o=bar.csv --chain=hub_mainnet
 ```
 
 #### linux:
 
 ```bash
-./oasfi-linux correct-csv -i=input.csv -o=output.csv chain_name
+./oasfi-linux correct-csv -i=input.csv -o=output.csv --chain=chain_name
 
 # example
-# ./oasfi-linux correct-csv -i=foo.csv -o=bar.csv hub_mainnet
+# ./oasfi-linux correct-csv -i=foo.csv -o=bar.csv --chain=hub_mainnet
 ```
 
 Here, input.csv is the path to the CSV file you want to read, and output.csv is the path where the resulting CSV file will be saved.
