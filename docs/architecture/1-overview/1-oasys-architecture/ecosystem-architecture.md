@@ -1,3 +1,14 @@
+---
+id: ecosystem-architecture
+title: Oasys Architecture
+sidebar_label: Oasys Architecture
+description: "Oasys Chain Architecture."
+keywords:
+  - Architecture
+  - Hub
+  - Verse
+  - Multi Layer
+---
 # Multi Layered Architecture
 
 The Hub Layer is designed to handle only specific transactions. This prevents many transactions from occurring, preventing the gas fee from rising during roll-up, and does not burden the user even if the gas price rises. 
