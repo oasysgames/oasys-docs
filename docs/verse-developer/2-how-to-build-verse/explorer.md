@@ -75,8 +75,10 @@ Please modify the variables below:
 You can check the [this page](https://docs.blockscout.com/for-developers/manual-deployment#deployment-steps) for the detail of manual deployment.
 
 ### Run Container
-Finally, run the container with docker-compose.
+Finally, run the container with docker-compose
+(it may take several tens of minutes for build)
 ```shell
+docker-compose build 
 docker compose up -d
 ```
 
