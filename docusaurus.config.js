@@ -26,7 +26,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/oasysgames',
+          editUrl: 'https://github.com/oasysgames/oasys-docs/blob/main',
         },
         // blog: {
         //   showReadingTime: true,
@@ -119,7 +119,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
+            docId: 'architecture/overview/oasys-architecture/ecosystem-architecture',
             position: 'left',
             label: 'Architecture',
           },

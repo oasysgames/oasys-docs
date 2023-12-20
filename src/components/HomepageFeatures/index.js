@@ -37,7 +37,7 @@ const FeatureList = [
   {
     title: 'Architecture',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    linkTo: "/docs/architecture/overview/oasys-architecture/1-1-ecosystem-per-chain",
+    linkTo: "/docs/architecture/overview/oasys-architecture/ecosystem-architecture",
     description: (
       <>
         Oasys Architecture. 
