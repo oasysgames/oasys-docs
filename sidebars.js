@@ -22,9 +22,9 @@ const sidebars = {
           },
           collapsed: true,
           items: [
-            'architecture/overview/oasys-architecture/1-1-ecosystem-per-chain',
+            'architecture/overview/oasys-architecture/ecosystem-architecture',
             // 'architecture/overview/oasys-architecture/1-2-oasys-rollup',
-            'architecture/overview/oasys-architecture/1-3-flexible-token-design',
+            'architecture/overview/oasys-architecture/flexible-token-design',
           ]
         }, {
           type: 'category',
@@ -34,7 +34,7 @@ const sidebars = {
           },
           collapsed: true,
           items: [
-            'architecture/overview/permissioned-chain/1-1-high-qualiry-database',
+            'architecture/overview/permissioned-chain/high-quality-database',
             // 'architecture/overview/permissioned-chain/1-2-efficient-load',
           ]
         }
