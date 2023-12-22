@@ -28,9 +28,7 @@ If you set up blockscout for a Verse, You have to set it up manually.
 ### Git Clone
 First, you have to clone [oasys-blockscout](https://github.com/oasysgames/oasys-blockscout).
 ```shell
-git clone git@github.com:oasysgames/oasys-blockscout.git
-cd oasys-blockscout
-git checkout oasys-blockscout-v5
+git clone https://github.com/oasysgames/oasys-blockscout.git
 ```
 
 ### Set Environment Variables
