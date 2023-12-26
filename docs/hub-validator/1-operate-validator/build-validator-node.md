@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Build Oasys Node (geth)
 
 
@@ -29,16 +32,18 @@ The Oasys validator node operation involves running the validator client on the 
 The Oasys client undergoes frequent hard forks whenever it updates nodes. To continue validating on the Oasys chain, it is necessary to update your node prior to each hard fork. If you fail to update in a timely manner, you will be required to [**resync your node**](/docs/hub-validator/operate-validator/build-validator-node#resync-nodes).
 ::::::
 
-## Express Setup
+<Tabs>
+  <TabItem value="express setup" label="Express Setup" default>
 
-Please note that we have tested the Express Setup process on CentOS, so the provided commands may vary for other operating systems. However, rest assured that **you can run Oasys nodes on any Linux OS or any other operating system** of your choice.
-
+:::info
+Please note that we have tested the Express Setup process on CentOS, so the provided commands may vary for other operating systems. However, rest assured that you can run Oasys nodes on any Linux OS or any other operating system of your choice.
+::::::   
 
 ### 1. Verify Installation of `unzip` and `wget` Commands
 
 Please ensure that the `unzip` and `wget` commands are installed on your system. If they are not already installed, please proceed with their installation.
 
-Cent os:
+CentOS:
 ```sh
 $ sudo yum install unzip
 $ sudo yum install wget
@@ -133,7 +138,9 @@ $ sudo -u geth /usr/local/bin/geth attach ipc:/home/geth/.ethereum/geth.ipc --ex
 
 ---
 
-## Manual Setup
+  </TabItem>
+  <TabItem value="manual setup" label="Manual Setup">
+
 ### 1. Download the Oasys Geth Binary
 Download the Oasys Geth binary from [GitHub](https://github.com/oasysgames/oasys-validator) and place it in any directory of your choice (e.g., /usr/local/bin). Alternatively, you can build it following the instructions provided in the README.md file.
 
@@ -278,3 +285,5 @@ $ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
 
 false
 ```
+</TabItem>
+</Tabs>
