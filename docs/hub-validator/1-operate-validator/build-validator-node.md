@@ -1,3 +1,16 @@
+---
+id: build-validator-node
+title: Validator Node Setup
+sidebar_label: Node Setup 
+description: "Guide for setting up Node"
+keywords:
+  - geth
+  - full node
+  - validator
+  - express
+  - manual
+---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 

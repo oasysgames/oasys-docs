@@ -1,3 +1,15 @@
+---
+id: 1-1-stake
+title: Staking Methods
+sidebar_label: Staking Instructions 
+description: "Guide for staking on Oasys"
+keywords:
+  - staking
+  - unstaking
+  - Hub
+  - CLI
+---
+
 # Staking/Unstaking
 We offer 3 options for processing staking/unstaking:
 
