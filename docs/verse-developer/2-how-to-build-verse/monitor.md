@@ -34,3 +34,8 @@ To check if the rollup is functioning or suspended, you can observe the value re
 
 ### How to Check if the Validator Node is Running in Mining Mode
 Please refer to the [this section](/docs/hub-validator/operate-validator/monitor#how-to-check-if-the-validator-node-is-running-in-mining-mode) in Validator monitoring.
+
+### Troubleshooting Assistance
+We offer a helpful script designed to assist in resolving any issues that may arise with your verse. Please refer to the following link.
+- For users of the previous optimism version of Verse: [L2 Troubleshooting](https://github.com/oasysgames/oasys-optimism/wiki/L2-Troubleshooting)
+- For users of the opstack version of Verse: Coming soon
