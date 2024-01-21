@@ -83,6 +83,18 @@ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec admin.addPeer(
 You can verify whether the syncing is complete or not by referring to the [this question](/docs/hub-validator/operate-validator/faq#q-how-do-i-verify-the-block-synchronization-status).
 
 ---
+### Q. My full node is out of sync, and a BAD BLOCK error keeps appearing. How to recover?
+The most straightforward method is to roll back to a block height well before the bad block occurred.
+```sh
+# Rollback to a specific height
+debug.setHead("0xff...")
+```
+Ensure that the block hash matches the hash from the explorer for verification.
+```sh
+geth attach --exec 'eth.getBlockByNumber("0xff...").hash === "0xff.. hash from explorer"'
+```
+
+---
 ### Q. How can I check the commission I can claim?
 You have two options to do this: one is via web and the other is via the command line interface (CLI).
 
