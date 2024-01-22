@@ -1,3 +1,15 @@
+---
+id: manual
+title: Build Verse Layer Setup
+sidebar_label: Verse Layer Setup 
+description: "Guide for setting up Verse Layer"
+keywords:
+  - Verse
+  - builder
+  - sequencer
+  - proposer
+---
+
 # Manual for Building Verse
 
 1,000,000 OAS is required to validate the Verse-Layer node.
