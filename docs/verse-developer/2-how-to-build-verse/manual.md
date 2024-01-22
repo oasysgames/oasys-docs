@@ -19,8 +19,7 @@ Allowing unrestricted transactions on the Verse could expose you to unforeseen g
 
 ## 1. Requirements
 
-Docker Engine v20.10.0 or later and docker-compose v2.0 or later are required.
-Please Check [Hardware_Requirements](/docs/verse-developer/how-to-build-verse/requirement) Prior to setup. 
+[Docker Engine v20.10.0 or later](https://docs.docker.com/engine/install/) and [docker compose v2.0 or later](https://docs.docker.com/compose/install/standalone/) are required.Please Check [Hardware_Requirements](/docs/verse-developer/how-to-build-verse/requirement) Prior to setup. 
 
 ## 2. Clone verse-layer-optimism repository
 Clone the [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) repository provided by the Oasys Foundation.
@@ -30,8 +29,42 @@ $ git clone https://github.com/oasysgames/verse-layer-optimism.git /path/to/vers
 
 $ cd /path/to/verse-layer-optimism
 ```
+## 3. Create .env file
 
-## 3. Create Wallets
+Create an environment variable configuration file for containers.
+
+Sample for mainnet : 
+
+```shell
+$ cp .env.sample.mainnet .env
+```
+
+Sample for testnet :
+```shell
+$ cp .env.sample.testnet .env
+```
+
+The following settings should be changed.
+
+```shell
+# Your Verse-Layer chain ID
+L2_CHAIN_ID=
+
+# Created wallet address and key
+SEQUENCER_ADDRESS=
+SEQUENCER_KEY=
+
+PROPOSER_ADDRESS=
+PROPOSER_KEY=
+
+MESSAGE_RELAYER_ADDRESS=
+MESSAGE_RELAYER_KEY=
+```
+
+> **Warning**  
+> Do not change `BLOCK_SIGNER_ADDRESS` and `BLOCK_SIGNER_KEY`. If you change them, the Oasys team will not be able to run replica nodes for the Verse-Layer. Furthermore, if the replica node does not exist, the verifier cannot verify the rollup from your Verse-Layer. As a result, the latency of token withdrawal from the Verse-Layer to Hub-Layer increases from about 2 minutes to 7 days, resulting in bad UX of the bridge.
+
+## 4. Create Wallets
 
 Create Ethereum wallets (address and private key) to be used by Builder, Sequencer, and Proposer.
 
@@ -67,10 +100,10 @@ Address: 0x0123456789abcdef0123456789abcdef
 key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 ```
 
-## 4-1. Deploy contracts for Verse-Layer to Hub-Layer.
+## 5-1. Deploy contracts for Verse-Layer to Hub-Layer.
 
 If you've already built the Verse, skip this procedure.
-And you can check VerseInfo with build_transaction at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
+And you can check VerseInfo with build_transaction at [check-verse-page](#5-2-check-verse-information-from-verse_build-transaction).
 
 For users wishing to build using Multisig like Nsuite, detailed instructions are provided at the [end](/docs/verse-developer/how-to-build-verse/manual#construct-verse-through-direct-contract-function-calls) of this page.
 
@@ -90,10 +123,15 @@ Account connected to [tools-fe](https://tools-fe.oasys.games) have the following
 ### Deposit OAS
 You can deposit OAS for verse builder as a depositor at `Change Deposit Amount`.
 
-![Deposit](/img/docs/techdocs/tools-fe/deposit.png)
+![Deposit](/img/docs/techdocs/tools-fe/deposit1.png)
 
 For the mainnet, deposit 1000000 OAS, for the testnet, deposit 0.000000001 OAS.
 The amount of OAS is required for the depositor in advance. If you use the testnet, please reserve OAS in [Faucet](https://faucet.testnet.oasys.games).
+
+:::warning 
+Please don't set any values for the second verse builder address option and set amount(sOAS).
+:::
+
 
 ### Check Your Deposit
 You can check deposited OAS for a specific verse builder at `Check Deposit Amount`.
@@ -118,7 +156,7 @@ To build a Verse, set the following
 ![Build](/img/docs/techdocs/tools-fe/build.png)
 
 
-If the Verse build is successful, the following will be displayed. You can get verse info with build_tx_hash at [check-verse-page](#4-2-check-verse-information-from-verse_build-transaction).
+If the Verse build is successful, the following will be displayed. You can get verse info with build_tx_hash at [check-verse-page](#5-2-check-verse-information-from-verse_build-transaction).
 
 ![Verse build Success](/img/docs/techdocs/tools-fe/verse_build_success.png)
 
@@ -140,7 +178,7 @@ After completing this step, return to the `verse-layer-optimism` repository.
 $ cd /path/to/verse-layer-optimism
 ```
 
-## 4-2. Check verse information
+## 5-2. Check verse information
 You can check verse information from verse-build_tx_hash or verse_chain_id or verse_builder_address at [check-verse-page](https://tools-fe.oasys.games/check-verse).
 
 ![Check verse info](/img/docs/techdocs/tools-fe/check_verse_info.png)
@@ -151,41 +189,6 @@ If the verse has already been created and you want to check genesis.json version
 ![Check Genesis Version](/img/docs/techdocs/tools-fe/check_genesis_version.png)
 
 Copy the generated configuration files to the `assets` directory of the `verse-layer-optimism` repository and [Build verse](#build-verse).
-
-## 5. Create .env file
-
-Create an environment variable configuration file for containers.
-
-Sample for mainnet : 
-
-```shell
-$ cp .env.sample.mainnet .env
-```
-
-Sample for testnet :
-```shell
-$ cp .env.sample.testnet .env
-```
-
-The following settings should be changed.
-
-```shell
-# Your Verse-Layer chain ID
-L2_CHAIN_ID=
-
-# Created wallet address and key
-SEQUENCER_ADDRESS=
-SEQUENCER_KEY=
-
-PROPOSER_ADDRESS=
-PROPOSER_KEY=
-
-MESSAGE_RELAYER_ADDRESS=
-MESSAGE_RELAYER_KEY=
-```
-
-> **Warning**  
-> Do not change `BLOCK_SIGNER_ADDRESS` and `BLOCK_SIGNER_KEY`. If you change them, the Oasys team will not be able to run replica nodes for the Verse-Layer. Furthermore, if the replica node does not exist, the verifier cannot verify the rollup from your Verse-Layer. As a result, the latency of token withdrawal from the Verse-Layer to Hub-Layer increases from about 2 minutes to 7 days, resulting in bad UX of the bridge.
 
 ## 6. Run Containers
 
