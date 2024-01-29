@@ -35,7 +35,7 @@ Using the CLI tool to correct the CSV is optional but recommended to ensure the 
 For usage instructions, please refer to the tool's [guideline](https://github.com/oasysgames/oasfi/blob/main/doc/doc_EN/correct_csv_EN.md). As an example, we provide a guide on how to use it on macOS.
 
 1. First, launch the Terminal.
-   ![terminal_launch](/img/tutorial/explorerCsvCliTerminal.jpg)
+   ![terminal_launch](/img/docs/tech/csv-download/explorerCsvCliTerminal.jpg)
 2. In the Terminal, navigate to [your CLI directory] by typing `cd [your CLI directory]` and then pressing enter. Replace [your CLI directory] with the path where you've stored the CLI tool.
 3. Then, execute following commad:
 
@@ -69,3 +69,23 @@ For usage instructions, please refer to the tool's [guideline](https://github.co
 ```
 
 Here, input.csv is the path to the CSV file you want to read, and output.csv is the path where the resulting CSV file will be saved.
+
+## Use Case
+The downloaded CSV can be utilized for various purposes. Here, we present practical examples for different use cases.
+
+### Staking Reward Tax Calculation
+For those who wish to calculate the rewards earned from staking, we provide a step-by-step guide.
+
+
+1. Enter the wallet address used for staking in the search window located at the upper right corner of the explorer and press Enter.
+![case-staking-tax-1](/img/docs/tech/csv-download/case-staking-tax-1.png)
+1. On the Transaction Details section, select the 'Internal Transactions' tab.
+![case-staking-tax-2](/img/docs/tech/csv-download/case-staking-tax-2.png)
+1. At the bottom of the page, click on "CSV Download" to download the CSV file.
+![case-staking-tax-3](/img/docs/tech/csv-download/case-staking-tax-3.png)
+1. Specify the time period you wish to analyze, select the corresponding checkbox, and then download the file.
+![case-staking-tax-4](/img/docs/tech/csv-download/case-staking-tax-4.png)
+1. Open the CSV and apply the following filters to the rows:
+  - The 'from' address should be the staking contract: (`0x000000000000000000000000000000000000000000000000000000000001001`)
+  - The 'to' address should be your wallet address.
+![case-staking-tax-5](/img/docs/tech/csv-download/case-staking-tax-5.png)
