@@ -94,6 +94,44 @@ Ensure that the block hash matches the hash from the explorer for verification.
 geth attach --exec 'eth.getBlockByNumber("0xff...").hash === "0xff.. hash from explorer"'
 ```
 
+#### For Those Who Haven't Resolved the Issue
+Please share the outputs of the following commands with the Oasys team:
+```sh
+# Get the Geth version
+/usr/local/bin/geth version
+
+# Get the Geth starting options
+ps aux | grep geth
+
+# Get the genesis block
+sudo -u geth /usr/local/bin/geth attach -exec 'eth.getBlockByNumber("0x0")'
+
+# Get the latest block
+sudo -u geth /usr/local/bin/geth attach -exec 'eth.getBlockByNumber("latest")'
+
+# Get the sync status
+sudo -u geth /usr/local/bin/geth attach -exec 'eth.syncing'
+
+# Contents of the bad block
+########## BAD BLOCK #########
+Chain config: %v
+
+Validator: 0x%x
+Number: %v
+Hash: 0x%x
+ParentHash: 0x%x
+Time: %v
+Difficulty: %v
+ReceiptHash: 0x%x
+Root: 0x%x
+Extra: 0x%x
+Transactions: %d
+%v
+
+Error: %v
+##############################
+```
+
 ---
 ### Q. How can I check the commission I can claim?
 You have two options to do this: one is via web and the other is via the command line interface (CLI).
