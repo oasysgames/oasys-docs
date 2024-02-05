@@ -14,6 +14,7 @@ Read below to understand the step-by-step process and additional tools available
 - Choose the desired time period for which you want to download the CSV file.
 - Click on the reCAPTCHA to verify that you are not a robot.
 - Click on the Download button to download the CSV file to your computer.
+- If the period of data to be downloaded is wide, the load on the server will be high and the download will take time.
 
 ### Download CLI (optional)
 
