@@ -1,6 +1,23 @@
 # Explorer
 After building a Verse, you have to create a Verse explorer. Please use [blockscout](https://docs.blockscout.com/) to create a Verse explorer.
 
+:::info
+The explorer utilizes the `txpool` and `debug` namespaces of the JSON RPC to communicate l2geth. Therefore, you need to enable these two namespaces. Please ensure to include these namespaces in the starting options or environment variables.
+
+```sh
+# In the case of starting options
+geth \
+  ... \
+  --http.api=eth,web3,net,shh,rollup,txpool,debug \
+  --ws.api=eth,web3,net,shh,rollup,txpool,debug \
+  ...
+
+# In the case of environment variables
+RPC_API=eth,web3,net,shh,rollup,txpool,debug
+WS_API=eth,web3,net,shh,rollup,txpool,debug
+```
+:::
+
 ## Environment Variable
 When creating a blockscout instance, you have to set the environment variable using blockscout.
 
