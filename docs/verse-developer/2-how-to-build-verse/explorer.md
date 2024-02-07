@@ -1,7 +1,7 @@
 # Explorer
 After building a Verse, you have to create a Verse explorer. Please use [blockscout](https://docs.blockscout.com/) to create a Verse explorer.
 
-:::info
+## Update L2Geth Startup Options
 The explorer utilizes the `txpool` and `debug` namespaces of the JSON RPC to communicate l2geth. Therefore, you need to enable these two namespaces. Please ensure to include these namespaces in the starting options or environment variables.
 
 ```sh
@@ -16,6 +16,10 @@ geth \
 RPC_API=eth,web3,net,shh,rollup,txpool,debug
 WS_API=eth,web3,net,shh,rollup,txpool,debug
 ```
+:::warning Security Concern Regarding Activating debug and txpool Namespaces
+The `debug` namespace contains dangerous commands, such as `setHead(blockNum)`, which roll back the block head to a past state. Therefore, it's crucial not to expose the raw API to the public. We recommend introduce middleware that blocks requests to the debug namespace. To facilitate this, we offer the verse-proxy solution. Please refer to here: [Set allowed verse request methods](/docs/verse-developer/how-to-build-verse/verse-proxy#set-allowed-verse-request-methods)
+
+Regarding the `txpool`, there isn't as significant a security concern as with the debug namespace. However, it is still advisable not to make it publicly accessible. Opening this endpoint to the public is unnecessary since the explorer offers similar capabilities.
 :::
 
 ## Environment Variable
