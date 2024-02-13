@@ -61,8 +61,9 @@ MESSAGE_RELAYER_ADDRESS=
 MESSAGE_RELAYER_KEY=
 ```
 
-> **Warning**  
-> Do not change `BLOCK_SIGNER_ADDRESS` and `BLOCK_SIGNER_KEY`. If you change them, the Oasys team will not be able to run replica nodes for the Verse-Layer. Furthermore, if the replica node does not exist, the verifier cannot verify the rollup from your Verse-Layer. As a result, the latency of token withdrawal from the Verse-Layer to Hub-Layer increases from about 2 minutes to 7 days, resulting in bad UX of the bridge.
+:::warning
+Do not change `BLOCK_SIGNER_ADDRESS` and `BLOCK_SIGNER_KEY`. If you change them, the Oasys team will not be able to run replica nodes for the Verse-Layer. Furthermore, if the replica node does not exist, the verifier cannot verify the rollup from your Verse-Layer. As a result, the latency of token withdrawal from the Verse-Layer to Hub-Layer increases from about 2 minutes to 7 days, resulting in bad UX of the bridge.
+:::
 
 ## 4. Create Wallets
 
@@ -213,6 +214,10 @@ Oasys L2 is a fork of Optimistic Rollup. A significant limitation is **the exten
 For instructions on how to set up the Verse Submitter, please refer to the [this section](/docs/verse-developer/how-to-build-verse/build-verse-submitter).
 
 For users interested in our instant verification mechanism, please visit [this page](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
+
+
+## 8. Confirming Building Success
+To verify whether your building process was successful, execute the [troubleshooting script](/docs/verse-developer/how-to-build-verse/monitor#troubleshooting-assistance). If it passes, your build should be considered successful.
 
 ---
 
