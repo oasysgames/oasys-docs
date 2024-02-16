@@ -10,7 +10,6 @@ The consumed gas is the sum of 2 rollups
 :::
 
 ---
-
 ### Q. How to Replace an Old Verse Node with a New Verse Node?
 We highly recommend migrating to a new node by switching from the old writable node to an already synced read-only node.
 
@@ -19,7 +18,6 @@ If you want to create a new Verse node, you first have to set up the new node as
 Please refer to [this section](/docs/verse-developer/how-to-build-verse/read-node#promoting-replica-node) for instructions on promoting a replica node.
 
 ---
-
 ### Q. How to Change the State Root Adding Interval?
 By default, the StateCommitmentChain (SCC) appends the state root every 4 bridge transactions. You can alter this default setting using either an environment variable or a command-line option:
 ```sh
@@ -33,6 +31,7 @@ Reference Code:
 - [The appendStateBatch function in the SCC (StateCommitmentChain) contract](https://github.com/oasysgames/oasys-optimism/blob/v0.1.5/packages/contracts/contracts/L1/rollup/StateCommitmentChain.sol#L87)
 - [Settings within the Optimism](https://github.com/oasysgames/oasys-optimism/blob/v0.1.5/go/batch-submitter/flags/flags.go#L74)
 
+---
 ### Q. What is the maximum TPS of Verse?
 Based on our tests, the current peak TPS for Verse stands at approximately `100`. The primary constraints are not tied to hardware capabilities but are attributed to the transaction size and middleware.
 
@@ -42,6 +41,7 @@ As you may know, the L2 batch transactions, which are periodically submitted to 
 #### Bottleneck of Middleware:
 The L2 batch transaction is dispatched by the `batch-submitter` for every block on L1. This means that batches can only be submitted at 15-second intervals. By updating the batch-submitter logic, we believe we can reduce this interval. Our estimate is that the shortest possible interval is 1 second, leading to a theoretical maximum TPS of around `2000`. We'll consider implementing these changes as any verse growth.
 
+---
 ### Q. How to Update Sequencer/Proposer Address
 If you need to rotate or have lost your Sequencer/Proposer, there's no need to worry as you can update the address. However, keep in mind that if you lose your builder key, it cannot be recovered.
 
@@ -65,5 +65,12 @@ function setAddress(
 
 Once completed, confirm the address has been updated by calling `getAddress` again.
 
+---
 ### Q.How to Verify a Contract Using the Explore API?
 Please refer to the [Contract Verification](https://docs.oasys.games/docs/staking/explore/1-3-verify) section of the explorer in this documentation.
+
+---
+### Q. Does the fact that The Verse is run by a single node mean it's not decentralized?
+Discussing the decentralization of L2 cannot be done in the same manner as with L1. For L1, decentralization is a primary concern because if it is centralized, the central authority could engage in fraudulent behaviors, such as double-spending. On the other hand, L2 incorporates mechanisms to correct fraudulent behavior (our Verse uses Optimistic Rollup, and this correction is facilitated through fraud proof submissions). Therefore, decentralization is not as critical in the security context for L2.
+
+However, censorship resistance and MEV (maximal extractable value) present more significant challenges. Since our Verse is operated by a single party, this means that the party can select transactions based on their preferences, implying that the Verse lacks censorship resistance. Examples of MEV issues include front-running, back-running, and DEX arbitrage, which are concerns.
