@@ -74,3 +74,7 @@ Please refer to the [Contract Verification](https://docs.oasys.games/docs/stakin
 Discussing the decentralization of L2 cannot be done in the same manner as with L1. For L1, decentralization is a primary concern because if it is centralized, the central authority could engage in fraudulent behaviors, such as double-spending. On the other hand, L2 incorporates mechanisms to correct fraudulent behavior (our Verse uses Optimistic Rollup, and this correction is facilitated through fraud proof submissions). Therefore, decentralization is not as critical in the security context for L2.
 
 However, censorship resistance and MEV (maximal extractable value) present more significant challenges. Since our Verse is operated by a single party, this means that the party can select transactions based on their preferences, implying that the Verse lacks censorship resistance. Examples of MEV issues include front-running, back-running, and DEX arbitrage, which are concerns.
+
+---
+### Q. Is there any security risk in making the explorer API publicly accessible?
+There is no risk. Please refer to the [API documentation](https://explorer.oasys.games/eth-rpc-api-docs). Users can only access several eth namespace APIs through the explorer API. Even though the explorer connects to an L2geth with the debug namespace activated, end users cannot make dangerous calls to the debug namespace through the Explorer.
