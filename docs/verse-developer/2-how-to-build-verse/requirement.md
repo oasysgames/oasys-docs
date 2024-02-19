@@ -20,7 +20,6 @@ In terms of CPU, the consensus-making workload is computation-intensive. However
 Verse generally uses more CPU power. Using a CPU with a higher frequency can increase the Verse transaction processing speed, especially when dealing with a large number of pending transactions.
 
 ## Firewall Settings
-- TCP/UDP port 30303 allowed (for P2P between nodes)
 - TCP port 8545 allowed (for RPC)
 - TCP/UDP port 4101 allowed (for Verse Verifier)
 
