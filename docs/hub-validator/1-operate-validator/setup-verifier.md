@@ -14,22 +14,16 @@ Instant Verifier of the Verse-Layer for the Oasys Blockchain.
 ## Quick Start
 
 Download the binary from the [releases page](https://github.com/oasysgames/verse-verifier/releases).
-
-> The Verifier creates a keccak256 hash of [ethereum signed messages](https://eips.ethereum.org/EIPS/eip-712) with the same private key as the Hub-Layer validator, so it is recommended to run it on the same node as the Hub-Layer validator.
+The Verifier creates a keccak256 hash of [ethereum signed messages](https://eips.ethereum.org/EIPS/eip-712) with the same private key as the Hub-Layer validator, so it is recommended to run it on the same node as the Hub-Layer validator.
 
 Create a data directory.
-
 ```shell
 mkdir /home/geth/.oasvlfy
 chown geth:geth /home/geth/.oasvlfy
 ```
-
-> **Please check you have password.txt & validator operator's private key on disk.**
-> **You need to listen 4101 port so it can send, receive transaction.** 
+Ensure you have **password.txt and the validator operator's private key stored on your disk**. It's necessary to **listen on port 4101(UDP/TCP)** to send and receive transactions. Please open both TCP and UDP.
 
 Create a configuration file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config.yml)
-
-> Open the TCP port that P2P listens on the firewall.
 
 ```shell
 curl -O /home/geth/.oasvlfy/config.yml \
