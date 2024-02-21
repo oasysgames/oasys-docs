@@ -192,7 +192,8 @@ $ ./oaspos validator:info-slash --network mainnet --validator 0xXX.. --back-epoc
 ### Q.How to Export a Private Key from Ledger?
 To export a private key from a Ledger device, follow the official guide provided by Ledger. You can find detailed instructions on the [Ledger Support page](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true).
 
-### Q. How to Migrate a Validator to Another Machine
+---
+### Q. How to Migrate a Validator to Another Machine?
 Various factors might prompt you to migrate your operating validator node to a different server, such as:
 - Improved Performance
 - Enhanced Security
@@ -200,9 +201,14 @@ Various factors might prompt you to migrate your operating validator node to a d
 
 For step-by-step instructions on how to move your validator node to a new server, please consult the [Migrating Validator to a New Server section](/docs/hub-validator/operate-validator/upgrade-migrate#migrating-validator-to-a-new-server).
 
+---
+### Q. How can I obtain the complete list of stakers?
+You can obtain the list of stakers by calling the [getValidatorStakes](https://github.com/oasysgames/oasys-genesis-contract/blob/412faff50fd66546082792a34fda1108d5a7a355/contracts/StakeManager.sol#L601) function on the [StakeManager](/docs/architecture/hub-layer/contract#preset-contracts) contract.
 
+For users who prefer a GUI interface, we are considering proofing the StakeManager on [Explorer](https://explorer.oasys.games/address/0x0000000000000000000000000000000000001001). However, due to the unconventional deployment method, it poses a challenge, and we have not yet implemented it.
+
+---
 ### Frequently Used Commands for Hub
-
 | Command                                             | Description                                                                                        |       
 | -------------------------------------               | ----------------------------------------------                                                     |   
 | `admin_addPeer`                                     | **Adds a new remote peer to the list of tracked static nodes.**                                    |
