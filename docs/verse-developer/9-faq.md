@@ -80,7 +80,7 @@ However, censorship resistance and MEV (maximal extractable value) present more 
 There is no risk. Please refer to the [API documentation](https://explorer.oasys.games/eth-rpc-api-docs). Users can only access several eth namespace APIs through the explorer API. Even though the explorer connects to an L2geth with the debug namespace activated, end users cannot make dangerous calls to the debug namespace through the Explorer.
 
 ---
-### Q. What is the reason the token symbol appears as OAS instead of ETH on Blockscout?
+### Q. What is the reason the token symbol appears as ETH instead of OAS on Blockscout?
 
 If you've set up an older version of a node and noticed that the token symbol on Blockscout appears as ETH instead of OAS,
 there is a way to correct this by executing a command directly on the Blockscout database:
