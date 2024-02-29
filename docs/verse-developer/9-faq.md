@@ -78,3 +78,16 @@ However, censorship resistance and MEV (maximal extractable value) present more 
 ---
 ### Q. Is there any security risk in making the explorer API publicly accessible?
 There is no risk. Please refer to the [API documentation](https://explorer.oasys.games/eth-rpc-api-docs). Users can only access several eth namespace APIs through the explorer API. Even though the explorer connects to an L2geth with the debug namespace activated, end users cannot make dangerous calls to the debug namespace through the Explorer.
+
+---
+### Q. What is the reason the token symbol appears as OAS instead of ETH on Blockscout?
+
+If you've set up an older version of a node and noticed that the token symbol on Blockscout appears as ETH instead of OAS,
+there is a way to correct this by executing a command directly on the Blockscout database:
+```
+UPDATE tokens SET name='OAS', symbol='OAS' WHERE contract_address_hash = '\xdeaddeaddeaddeaddeaddeaddeaddeaddead0000';
+```
+
+However, this change is temporary. It automatically reverts to ETH after a few seconds 
+because Blockscout updates the token information fetched from the RPC server, causing the symbol to revert back to ETH. 
+To keep the token's symbol as OAS, you would need to run a script that executes the update command above every second.
