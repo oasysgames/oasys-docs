@@ -61,7 +61,21 @@ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.blockNumbe
 
 ---
 ### Q. How can I resolve the sync failure issue?
-If you experience a syncing issue, consider retrying in a fresh environment using a reliable cloud service provider, such as AWS, Azure, or GCP. This is because the root cause might be related to your network environment.
+Firstly, please ensure that the latest head of your chain matches the one on the explorer.
+
+To get the latest block number, use the following command:
+```sh
+sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.blockNumber
+```
+To retrieve the hash of a specific block, ensure you specify the block number in hex format:
+```sh
+sudo -u geth geth attach --exec 'eth.getBlockByNumber("0xff...").hash
+```
+If it matches, please wait until full syncing is achieved. If it does not match, you may not be following the canonical chain. In this case, you are advised to revert the latest head back to the point where it matches with the explorer. Please identify the head that matches with the explorer, then execute the setHead command.
+```sh
+sudo -u geth geth attach --exec 'debug.setHead("0xff...")'
+```
+If you are still facing synchronization issues, the root cause is likely related to your network environment. It is highly recommended to consider retrying in a fresh environment using a reliable cloud service provider, such as AWS, Azure, or GCP.
 
 Here are a few things to keep in mind:
 - Ensure the specifications exceed the [recommended requirements](/docs/hub-validator/operate-validator/hd-requirement).
