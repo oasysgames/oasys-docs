@@ -78,3 +78,12 @@ However, censorship resistance and MEV (maximal extractable value) present more 
 ---
 ### Q. Is there any security risk in making the explorer API publicly accessible?
 There is no risk. Please refer to the [API documentation](https://explorer.oasys.games/eth-rpc-api-docs). Users can only access several eth namespace APIs through the explorer API. Even though the explorer connects to an L2geth with the debug namespace activated, end users cannot make dangerous calls to the debug namespace through the Explorer.
+
+---
+### Q. The token symbol at `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` is currently displayed as ETH. How can we change it to OAS?
+You can modify this directly in the database using the following SQL commands:
+```sql
+UPDATE tokens SET name='OAS', symbol='OAS' WHERE contract_address_hash = '\xdeaddeaddeaddeaddeaddeaddeaddeaddead0000';
+UPDATE address_names SET name='OAS' WHERE address_hash = '\xdeaddeaddeaddeaddeaddeaddeaddeaddead0000';
+```
+This token, `OVM_ETH`, is utilized to manage the balance of bridged OAS. Although it is recognized and implemented as an ERC20 token, any transfer, approvals, or other activities involving it are prohibited. Therefore, it should not be treated as a standard ERC20 token.
