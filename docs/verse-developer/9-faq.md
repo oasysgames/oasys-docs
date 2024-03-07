@@ -86,8 +86,5 @@ If you've set up an older version of a node and noticed that the token symbol on
 there is a way to correct this by executing a command directly on the Blockscout database:
 ```
 UPDATE tokens SET name='OAS', symbol='OAS' WHERE contract_address_hash = '\xdeaddeaddeaddeaddeaddeaddeaddeaddead0000';
+UPDATE address_names SET name='OAS' WHERE address_hash = '\xdeaddeaddeaddeaddeaddeaddeaddeaddead0000';
 ```
-
-However, this change is temporary. It automatically reverts to ETH after a few seconds 
-because Blockscout updates the token information fetched from the RPC server, causing the symbol to revert back to ETH. 
-To keep the token's symbol as OAS, you would need to run a script that executes the update command above every second.
