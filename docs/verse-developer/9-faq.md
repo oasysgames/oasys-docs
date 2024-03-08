@@ -86,4 +86,4 @@ You can modify this directly in the database using the following SQL commands:
 UPDATE tokens SET name='OAS', symbol='OAS' WHERE contract_address_hash = '\xdeaddeaddeaddeaddeaddeaddeaddeaddead0000';
 UPDATE address_names SET name='OAS' WHERE address_hash = '\xdeaddeaddeaddeaddeaddeaddeaddeaddead0000';
 ```
-This token, `OVM_ETH`, is utilized to manage the balance of bridged OAS. Although it is recognized and implemented as an ERC20 token, any transfer, approvals, or other activities involving it are prohibited. Therefore, it should not be treated as a standard ERC20 token.
+This token, `OVM_OAS`, is utilized to manage the balance of bridged OAS. Although it is recognized and implemented as an ERC20 token, any transfer, approvals, or other activities involving it are prohibited. Therefore, it should not be treated as a standard ERC20 token.
