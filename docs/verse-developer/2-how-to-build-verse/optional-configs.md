@@ -1,14 +1,41 @@
 # Optional Configurations
 
+### Verse Contracts Deployment Configuration
+The configuration for deploying Verse contract sets is defined as [BuildConfig](https://github.com/oasysgames/oasys-opstack/blob/feat/l1-migrate/packages/contracts-bedrock/src/oasys/L1/build/interfaces/IL1BuildAgent.sol#L5-L51) in `L1BuildAgent.sol`. The meanings of each configuration item are as follows:
+
+| Name | Default Value | Description |
+|-----------|------------|------------|
+|finalSystemOwner| - |The owner of L1 contract set.|
+|l2OutputOracleProposer| - |The address of proposer|
+|l2OutputOracleChallenger| - |The address of challenger. usually same as finalSystemOwner |
+|batchSenderAddress| - |The address of the l2 transaction batch sender|
+|p2pSequencerAddress| - |The address of the p2p sequencer.|
+|messageRelayer| - |The address of messager relayer|
+|l2BlockTime| 2 |The block time of l2 chain.|
+|l2GasLimit|30000000|The gas limit of l2 chain|
+|l2OutputOracleSubmissionInterval|80|Determines the block number interval for submitting the next L2 state root.|
+|finalizationPeriodSeconds|7days|FinalizationPeriodSeconds represents the number of seconds before an output is considered.|
+
+### Which Block Time Should I Choose?
+You can select a block time within the 1s to 7s range. Since the default block time for OP Stack is 2s, it's recommended to choose 2 seconds if you have no specific preference. If transaction speed is a priority, choosing 1 second may be beneficial. Setting a 1-second block time means that, on average, an end user will wait about 500ms until their transaction is included in a block (more specifically, until a transaction receipt is received). However, a drawback of this setting is the rapid increase in block numbers, as a new block is produced every second, even if there are no transactions.
+
+### Why have we set the default value of l2OutputOracleSubmissionInterval to 80?
+The submission interval significantly impacts both the waiting time for L2->L1 withdrawals and the speed at which the L2 state proposer operates. If the interval is short, the waiting time for L2 withdrawals decreases. Conversely, if the interval is too short, the state proposer may fail to keep pace with the growth speed of the L2 block height.
+Assumptions:
+- The L2 block time is 1s.
+- The operational proposer (op-proposer) confirms 4 blocks.
+- The op-proposer cannot send multiple rollups to a single block.
+The op-proposer submits the L2 state every 5 L1 block intervals. During this period, the L2 block grows by 75 blocks. Therefore, 80 was selected as the default value.
+
 ## Address List
 
-After the set up, you may configure files in the: 
+After the set up, you may configure files in the:
 
 ```
 /oasys/addresses.json
 ```
 
-After you open it, You may see a few addresses. This is because contract updates may change those addresses. 
+After you open it, You may see a few addresses. This is because contract updates may change those addresses.
 You need to send your tokens to the `sequencer address` for sending gas and Use L1 bridge address from `addresses.json` to use the bridge.
 
 ```JSON
@@ -29,9 +56,9 @@ You need to send your tokens to the `sequencer address` for sending gas and Use 
 }
 ```
 
-#### OVM_Sequencer 
+#### OVM_Sequencer
 
-It works as L2 Sequencer. 
+It works as L2 Sequencer.
 
 #### OVM_Proposer
 
@@ -39,28 +66,28 @@ It works as L2 Proposer. Mainly handles messaging.
 
 #### CanonicalTransactionChain
 
-Works as a sequencer. 
+Works as a sequencer.
 
 #### StateCommitmentChain
 
-Works as a proposer. 
+Works as a proposer.
 
 #### navigating on L1 deposit address
- 
-You can take [L1 deposit address](https://github.com/oasysgames/oasys-optimism/blob/8f1467bf973a6587fb7482e60cecaf7c50ee78f9/packages/contracts/contracts/oasys/L1/build/L1BuildDeposit.sol#L37) from following the event. 
 
-Or you can see `0x5200000000000000000000000000000000000009` 's log on verse building. 
+You can take [L1 deposit address](https://github.com/oasysgames/oasys-optimism/blob/8f1467bf973a6587fb7482e60cecaf7c50ee78f9/packages/contracts/contracts/oasys/L1/build/L1BuildDeposit.sol#L37) from following the event.
 
-
-## Related Factory Contract 
+Or you can see `0x5200000000000000000000000000000000000009` 's log on verse building.
 
 
-### Hub Layer 
+## Related Factory Contract
+
+
+### Hub Layer
 
 #### Factory Contract
 
 Factory contract deployed by validator helps deploy some tokens or verse on Oasys or bridging tokens on Oasys.
-You can check [factory contract](https://github.com/oasysgames/oasys-validator/blob/e33f9c71d4c2bb2ba62f94c979c3d293979904d9/contracts/oasys/contracts.go) for list of factory contract. 
+You can check [factory contract](https://github.com/oasysgames/oasys-validator/blob/e33f9c71d4c2bb2ba62f94c979c3d293979904d9/contracts/oasys/contracts.go) for list of factory contract.
 
 
 ```JSON
@@ -84,9 +111,9 @@ L1_Bridge_Contract address is different for each Verse-Layer.
 ```
 
 
-### Verse Layer 
+### Verse Layer
 
-Pre-Deployed contracts. All Verse Layer Contracts are the same. 
+Pre-Deployed contracts. All Verse Layer Contracts are the same.
 
 ```json
 L2CrossDomainMessenger: '0x4200000000000000000000000000000000000007',
@@ -106,9 +133,9 @@ L2ERC721Bridge: '0x6200000000000000000000000000000000000001',
 
 Because the L2StandardERC721 contract is not pre-deployed, if you use ERC721, you have to deploy [L2StandardERC721](https://github.com/oasysgames/oasys-optimism/blob/develop/packages/contracts/contracts/oasys/L2/token/L2StandardERC721.sol).
 
-## Adding Chainlist 
+## Adding Chainlist
 
-Chainlist is a web that provides an easy way to add a chain for users. It is recommended for all verses to add a verse on Chainlist. 
+Chainlist is a web that provides an easy way to add a chain for users. It is recommended for all verses to add a verse on Chainlist.
 
 :::caution
 If you are on dev mode for verse, adding chainlist will open your verse information to public.
@@ -118,14 +145,14 @@ If you are on dev mode for verse, adding chainlist will open your verse informat
 
 1. Navigate onto [Chainlist github](https://github.com/ethereum-lists/chains).
 2. Fork the repo, add `_data/chains/eip155-your_verse_chain_no.json` & `_data/icons/your_chain_name.json`
-3. Submit a pull request. 
+3. Submit a pull request.
 
 
 #### `_data/chains/eip155-your_verse_chain_no.json`
 
 On `your_verse_chain_no`, you need to add a chain number not taken from other chain numbers.
 
-Here is an example. 
+Here is an example.
 
 ```json
 {
@@ -135,18 +162,18 @@ Here is an example.
   "rpc": ["https://rpc-mainnet.oasys.games"], // RPC address
   "faucets": [],
   "nativeCurrency": {
-    "name": "OAS", // Your Verse Currency name. If it does not have a currency, the default is OAS. 
-    "symbol": "OAS", // Your symbol 
+    "name": "OAS", // Your Verse Currency name. If it does not have a currency, the default is OAS.
+    "symbol": "OAS", // Your symbol
     "decimals": 18  // 18 Decimal is default on Oasys.
   },
-  "infoURL": "https://oasys.games", // URL of your landing page. 
-  "shortName": "OAS", 
+  "infoURL": "https://oasys.games", // URL of your landing page.
+  "shortName": "OAS",
   "chainId": 248, // Your chain ID
   "networkid": 248, // Your Network ID (you can select same as chain ID)
   "explorers": [
     {
       "name": "blockscout",
-      "url": "https://explorer.oasys.games", // URL of your explorer. 
+      "url": "https://explorer.oasys.games", // URL of your explorer.
       "standard": "EIP3091" // Default is EIP3091
     }
   ]
@@ -157,7 +184,7 @@ Here is an example.
 
 On `your_chain_name`, you need to add a chain name.
 
-On the `icons` directory, you can add icon using the ipfs path. 
+On the `icons` directory, you can add icon using the ipfs path.
 
 ```json
 [

@@ -1,16 +1,86 @@
-# Manual for Building Verse
+# Building Verse Procedure
+Building Verse is divided into 3 main steps, which we will explain individually. We strongly recommend **trying the entire process on a testnet first**.
+1. Deposit OAS
+2. Deploy Verse contracts on the Hub Layer (L1)
+3. Run Verse services (L2)
 
-1,000,000 OAS is required to validate the Verse-Layer node.
-There's a 180 days lockup period on the first deployment for a builder wallet.
-But on the Testnet, it's free; You can try the Verse Testnet with [Faucet](https://faucet.testnet.oasys.games)(10OAS is sufficient to deploy contract) and build Verse-Layer node.
+## 1. Deposit OAS
+To build a Verse, builders are required to deposit `1 million OAS`. This deposit is not permanently locked while operating your Verse; it is only locked for `180 days`. After this period, you can withdraw the OAS for any purpose, such as constructing another Verse, without the need for an additional 1 million OAS purchase.
 
-If you want to test deploying contracts and execute transactions on the Verse, please use [SAND Verse](/docs/verse-developer/sandverse).
+Building on the mainnet requires 1 million OAS, whereas building on the testnet requires just `1 OAS`. Please obtain test OAS from the [Faucet](https://faucet.testnet.oasys.games/).
+
+:::warning Management of the Builder Key
+The builder key holds the privilege to withdraw the deposited OAS and deploy the Verse contract set on L1 (step 2). As the builder key cannot be replaced, please manage it with utmost care. Loss of this key means you cannot withdraw OAS and complete the building steps.
+:::
+
+There are two methods for depositing OAS: through a UI or by directly calling contract methods.
+For those who prefer using a UI, please visit [the website here](https://tools-fe.oasys.games/). The process is straightforward.
+For those who prefer calling contract methods, such as Nsuite users, follow the steps below.
+
+The contract for depositing OAS is [L1BuildDeposit](https://github.com/oasysgames/oasys-opstack/blob/feat/l1-migrate/packages/contracts-bedrock/src/oasys/L1/build/L1BuildDeposit.sol), deployed at 0x00....
+Use the deposit function as shown below. Please call this function.
+
+- builder: the address of builder
+```solidity
+function deposit(address builder) external payable;
+```
+
+Then, confirm the balance by calling the `getDepositTotal` function below.
+```solidity
+function getDepositTotal(address builder) public view returns (uint256);
+```
+
+## 2. Deploy Verse contracts on the Hub Layer (L1)
+Since L2 relies on L1 for security, it doesn't operate in isolation. L2 interacts with L1, and as part of these interactions, you'll deploy a set of contracts on L1. These contracts are crucial for maintaining the security of your Verse.
+
+When deploying, you'll register 5 keys and the l2BlockTime as follows:
+
+| Name | Description |
+|--|--|
+|finalSystemOwner|This key has privileges across all the contract sets deployed on L1 and is hence called the owner key. It's required for modifying settings and upgrading contracts. "Store this key in a secure location"; without it, you cannot replace the other keys.|
+|l2OutputOracleProposer|Used to propose the L2 state root, this key is set to the `op-proposer`.|
+|batchSenderAddress|Utilized to submit all L2 transaction batches to L1, this key is set to the `op-batcher`.|
+|p2pSequencerAddress|Employed for P2P syncing with multiple operation nodes. Currently, this key is not in use. Keep it for future application.|
+|messageRelayer|This key finalizes the L2->L1 withdrawal bridge messages and is set to the `message-relayer`.|
+|l2BlockTime|The block time for L2. Choose within the 1 to 7 seconds range. Please refer [link here](/docs/verse-developer/how-to-build-verse/optional-configs#which-block-time-should-i-choose) for guidance on selection.|
+
+For those who prefer a UI, please visit [the website here](https://tools-fe.oasys.games/build-verse). The process is straightforward.
+For users who opt for contract method calls, like Nsuite users, follow the steps below.
+
+The contract to deploy the contract sets is [L1BuildAgent](https://github.com/oasysgames/oasys-opstack/blob/feat/l1-migrate/packages/contracts-bedrock/src/oasys/L1/build/L1BuildAgent.sol), deployed at 0x00....
+- chainId: The chain ID of your Verse. Ensure this chain ID is unique globally.
+- cfg: A tuple of the configuration. Please refer to [the optional configuration page](/docs/verse-developer/how-to-build-verse/optional-configs#verse-contracts-deployment-configuration).
+```solidity
+function build(
+    uint256 chainId,
+    BuildConfig calldata cfg
+) external returns (BuiltAddressList memory, address[7] memory);
+```
+
+Then, verify the results by calling the `builtLists` function below. As long as it returns a non-zero address, your build was successful.
+```solidity
+function builtLists(uint256 chainId) external returns(BuiltAddressList memory)
+```
+
+
+## 3. Run Verse services (L2)
+Verse comprises 6 distinct services, each with a specific role, ensuring their correct operation is crucial for the system's functionality. Below is a brief overview of these services and their functions:
+
+| Name | Description |
+|--|--|
+|op-node|Directs L2 block creation and derives L2 chain from L1.|
+|op-geth|Executes L2 transactions and constructs blocks.|
+|op-propoer|Proposes L2 state updates to L1.|
+|op-batcher|Submits all L2 transactions to L1.|
+|messager-relayer|Relays L2->L1 withdrawal bridge transactions to L1.|
+|verse-submitter|Handles instant verification processes.|
+
 
 ## Validator Build Steps
 
 ![verse build](/img/docs/techdocs/verse/versebuild.png)
 
-For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/verse-accounts), you can take a look at it before deploying a Verse. 
+For more detailed information about [Verse Architecture](/docs/architecture/verse-layer/verse-accounts), you can take a look at it before deploying a Verse.
 
 ### Constructing Verse as a Permissioned Chain
 If safeguarding against scams or hacks is a paramount concern for your business, you can configure Verse as a permissioned chain using the Verse-Proxy.
@@ -19,7 +89,7 @@ Allowing unrestricted transactions on the Verse could expose you to unforeseen g
 
 ## 1. Requirements
 
-[Docker Engine v20.10.0 or later](https://docs.docker.com/engine/install/) and [docker compose v2.0 or later](https://docs.docker.com/compose/install/standalone/) are required.Please Check [Hardware_Requirements](/docs/verse-developer/how-to-build-verse/requirement) Prior to setup. 
+[Docker Engine v20.10.0 or later](https://docs.docker.com/engine/install/) and [docker compose v2.0 or later](https://docs.docker.com/compose/install/standalone/) are required.Please Check [Hardware_Requirements](/docs/verse-developer/how-to-build-verse/requirement) Prior to setup.
 
 ## 2. Clone verse-layer-optimism repository
 Clone the [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism) repository provided by the Oasys Foundation.
@@ -33,7 +103,7 @@ $ cd /path/to/verse-layer-optimism
 
 Create an environment variable configuration file for containers.
 
-Sample for mainnet : 
+Sample for mainnet :
 
 ```shell
 $ cp .env.sample.mainnet .env
@@ -75,8 +145,8 @@ $ docker-compose run --rm wallet
 
 The created wallets will be saved to `./data/wallet/keys.txt`.
 
-Notes:  
-**1. These wallets require some tokens to run the Verse-Layer. For the testnet, you can get tokens from [Faucet](https://faucet.testnet.oasys.games/).**  
+Notes:
+**1. These wallets require some tokens to run the Verse-Layer. For the testnet, you can get tokens from [Faucet](https://faucet.testnet.oasys.games/).**
 **2. Be sure to back up this file!**
 
 ```text:./data/wallet/keys.txt
@@ -129,7 +199,7 @@ You can deposit OAS for verse builder as a depositor at `Change Deposit Amount`.
 For the mainnet, deposit 1000000 OAS, for the testnet, deposit 0.000000001 OAS.
 The amount of OAS is required for the depositor in advance. If you use the testnet, please reserve OAS in [Faucet](https://faucet.testnet.oasys.games).
 
-:::warning 
+:::warning
 Please don't set any values for the second verse builder address option and set amount(sOAS).
 :::
 
@@ -170,7 +240,7 @@ Copy the generated configuration files to the `assets` directory of the `verse-l
 ```shell
 $ cp ./Downloads/addresses.json /path/to/verse-layer-optimism/assets/
 
-$ cp ./Downloads/genesis.json /path/to/verse-layer-optimism/assets/ 
+$ cp ./Downloads/genesis.json /path/to/verse-layer-optimism/assets/
 ```
 
 After completing this step, return to the `verse-layer-optimism` repository.
@@ -204,7 +274,7 @@ $ docker-compose up -d message-relayer
 ```
 
 - data-transport-layer : Data-transport between L1 and L2
-- l2geth : L2 geth. Core component on Verse. 
+- l2geth : L2 geth. Core component on Verse.
 - message-relayer : Message relayer, sending message between L1 and L2
 - batch-submitter : submit L2 tx for sending L1. You must run only one container for Verse.
 
