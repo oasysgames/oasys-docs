@@ -104,3 +104,23 @@ docker compose up -d
 ```
 
 When you finished docker-compose up, you can explore via `http://localhost:4000/`.
+
+### Post-Build Checklist
+
+- **UI Checks**
+  - **CSV Download Functionality**: Test and ensure CSVs can be downloaded seamlessly without encountering errors.
+  - **Logo Display**: Verify the correct placement and visibility of logos in both the top left header and bottom left footer across night and light modes.
+  - **Network Listing**: Review and confirm the accuracy of the network list displayed.
+  - **MetaMask Integration**: Test the functionality of the button for adding networks to MetaMask, ensuring smooth integration and operation.
+
+- **Verify Contract Feature on Blockscout**
+  - Confirm that Smart Contracts can be successfully verified, both through the GUI and using the Hardhat via API.
+
+- **Error Log Verification**
+  - **Internal Transactions**: Ensure the accurate retrieval of internal transactions without errors from the WebSocket endpoint.
+  - **Additional Error Logs**: Confirm there are no other error logs present that could indicate underlying issues.
+
+- **Monitoring and Alerts**
+  - **CPU and Memory Usage**: Monitor server performance during CSV downloads and Smart Contract verifications, ensuring optimal operation.
+  - **Storage Usage**: Verify that storage usage is monitored with configured alerts to notify when predetermined thresholds are surpassed.
+  - **PostgreSQL Database Load**: Check for any load-related issues on the PostgreSQL database serving Blockscout, ensuring it is within operational norms.
