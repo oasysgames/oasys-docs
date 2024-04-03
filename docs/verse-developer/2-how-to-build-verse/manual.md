@@ -93,11 +93,9 @@ For those who prefer to build the services from the source code, please consult 
 |verse-submitter|[verse-verifier](https://github.com/oasysgames/verse-verifier)|
 
 ## 4. Verify the Build
-To confirm the success of your build process, run the [troubleshooting script](/docs/verse-developer/how-to-build-verse/monitor#troubleshooting-assistance). A successful execution of this script indicates that your build process has completed successfully.
+To confirm the success of your build process, run the [troubleshooting shell script](/docs/verse-developer/how-to-build-verse/monitor#troubleshooting-assistance). A successful execution of this script indicates that your build process has completed successfully.
 
-As an optional setting, we highly recommend executing the previously mentioned script on a periodic basis. This script focuses on L2-specific topics and ensures the overall functionality of your Verse. For details on what is specifically checked, please refer to the provided link.
-
-Although the above script lacks notification functionality, we offer an alternative shell script available here. This script allows for notifications via Slack or Discord in case of any issues with your Verse installation. It is important to note that this script does not monitor CPU usage or memory consumption, so general infrastructure monitoring will need to be managed through other familiar means.
+As an optional setting, we highly recommend executing the previously mentioned script on a periodic basis. This script focuses on L2-specific topics and ensures the overall functionality of your Verse. As the above script lacks notification functionality, we offer an [alternative shell script](/docs/verse-developer/how-to-build-verse/monitor#monitoring-alert-assistance). By executing this script at regular intervals, for instance through cron, This script allows for notifications via Slack or Discord in case of any issues with your Verse installation. It is important to note that this script does not monitor CPU usage or memory consumption, so general infrastructure monitoring will need to be managed through other familiar means.
 
 
 ## Validator Build Steps
