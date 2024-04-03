@@ -3,6 +3,7 @@ Building Verse is divided into 3 main steps, which we will explain individually.
 1. Deposit OAS
 2. Deploy Verse contracts on the Hub Layer (L1)
 3. Run Verse services (L2)
+4. Verify the Build
 
 ## 1. Deposit OAS
 To build a Verse, builders are required to deposit `1 million OAS`. This deposit is not permanently locked while operating your Verse; it is only locked for `180 days`. After this period, you can withdraw the OAS for any purpose, such as constructing another Verse, without the need for an additional 1 million OAS purchase.
@@ -62,7 +63,6 @@ Then, verify the results by calling the `builtLists` function below. As long as 
 function builtLists(uint256 chainId) external returns(BuiltAddressList memory)
 ```
 
-
 ## 3. Run Verse services (L2)
 Verse comprises 6 distinct services, each with a specific role, ensuring their correct operation is crucial for the system's functionality. Below is a brief overview of these services and their functions:
 
@@ -74,6 +74,30 @@ Verse comprises 6 distinct services, each with a specific role, ensuring their c
 |op-batcher|Submits all L2 transactions to L1.|
 |messager-relayer|Relays L2->L1 withdrawal bridge transactions to L1.|
 |verse-submitter|Handles instant verification processes.|
+
+### 1. Download Configuration Files
+The initial step is to download the necessary configuration files. You can find these files through [the web site here](https://tools-fe.oasys.games/check-verse). These configuration files are crucial as they serve as one of the inputs for initializing and applying settings to the services.
+
+### 2. Configure and Start Services
+The simplest method to start the services is by using Docker. We provide a docker-compose file to simplify the process of building and starting the services as much as possible. Please adhere to the instructions found in the README.md within the [verse-layer-opstack](https://github.com/oasysgames/verse-layer-opstack) directory.
+
+For those who prefer to build the services from the source code, please consult the corresponding repositories for each service as listed below:
+
+| Service | Repository |
+|--|--|
+|op-node|[oasys-opstack](https://github.com/oasysgames/oasys-opstack)|
+|op-geth|[oasys-op-geth](https://github.com/oasysgames/oasys-op-geth)|
+|op-propoer|[oasys-opstack](https://github.com/oasysgames/oasys-opstack)|
+|op-batcher|[oasys-opstack](https://github.com/oasysgames/oasys-opstack)|
+|messager-relayer|[opstack-message-relayer](https://github.com/oasysgames/opstack-message-relayer)|
+|verse-submitter|[verse-verifier](https://github.com/oasysgames/verse-verifier)|
+
+## 4. Verify the Build
+To confirm the success of your build process, run the [troubleshooting script](/docs/verse-developer/how-to-build-verse/monitor#troubleshooting-assistance). A successful execution of this script indicates that your build process has completed successfully.
+
+As an optional setting, we highly recommend executing the previously mentioned script on a periodic basis. This script focuses on L2-specific topics and ensures the overall functionality of your Verse. For details on what is specifically checked, please refer to the provided link.
+
+Although the above script lacks notification functionality, we offer an alternative shell script available here. This script allows for notifications via Slack or Discord in case of any issues with your Verse installation. It is important to note that this script does not monitor CPU usage or memory consumption, so general infrastructure monitoring will need to be managed through other familiar means.
 
 
 ## Validator Build Steps
