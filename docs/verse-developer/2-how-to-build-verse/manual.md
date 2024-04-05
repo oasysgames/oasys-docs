@@ -19,14 +19,14 @@ For those who prefer using a UI, please visit [the website here](https://tools-f
 For those who prefer calling contract methods, such as Nsuite users, follow the steps below.
 
 The contract for depositing OAS is [L1BuildDeposit](https://github.com/oasysgames/oasys-opstack/blob/feat/l1-migrate/packages/contracts-bedrock/src/oasys/L1/build/L1BuildDeposit.sol), deployed at 0x00....
-Use the deposit function as shown below. Please call this function.
+Use the deposit function as shown below. Please call this function:
 
 - builder: the address of builder
 ```solidity
 function deposit(address builder) external payable;
 ```
 
-Then, confirm the balance by calling the `getDepositTotal` function below.
+Then, confirm the balance by calling the `getDepositTotal` function below:
 ```solidity
 function getDepositTotal(address builder) public view returns (uint256);
 ```

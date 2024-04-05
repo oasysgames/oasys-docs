@@ -36,8 +36,61 @@ Verse generally uses more CPU power. Using a CPU with a higher frequency can inc
 - After building Verse explorer, set EXPLORER_URL to Verse explorer IPaddress by DNS
 (e.g. `explorer.mainnet.verse1.com`)
 
-## ChainId Register
-It is recommended to secure the chainId with [EVM-based Chains](https://github.com/ethereum-lists/chains) beforehand.
+## Registering Your Verse ChainId on Chainlist
+To ensure global uniqueness, it's crucial that your Verse's ChainId is distinct. Verify its uniqueness by consulting [Chainlist](https://chainid.network/), a platform that facilitates the addition of new chains for users. We strongly recommend that all Verse instances be registered on Chainlist to maintain a globally unique ChainId.
 
-e.g. [Register oasys mainnet chainId](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
+Example of Oasys Mainnet Registration: [github.com/fromreto/chains/commit](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
 
+### Procedure for adding Chainlist
+1. Navigate onto [Chainlist github](https://github.com/ethereum-lists/chains).
+2. Fork the repo, add `_data/chains/eip155-your_verse_chain_no.json` & `_data/icons/your_chain_name.json`
+3. Submit a pull request.
+
+#### `_data/chains/eip155-your_verse_chain_no.json`
+
+On `your_verse_chain_no`, you need to add a chain number not taken from other chain numbers.
+
+Here is an example.
+
+```json
+{
+  "name": "Oasys Mainnet",
+  "chain": "Oasys", //Your O
+  "icon": "oasys", //icon for your_chain_name.json
+  "rpc": ["https://rpc-mainnet.oasys.games"], // RPC address
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "OAS", // Your Verse Currency name. If it does not have a currency, the default is OAS.
+    "symbol": "OAS", // Your symbol
+    "decimals": 18  // 18 Decimal is default on Oasys.
+  },
+  "infoURL": "https://oasys.games", // URL of your landing page.
+  "shortName": "OAS",
+  "chainId": 248, // Your chain ID
+  "networkid": 248, // Your Network ID (you can select same as chain ID)
+  "explorers": [
+    {
+      "name": "blockscout",
+      "url": "https://explorer.oasys.games", // URL of your explorer.
+      "standard": "EIP3091" // Default is EIP3091
+    }
+  ]
+}
+```
+
+#### `_data/icons/your_chain_name.json`
+
+On `your_chain_name`, you need to add a chain name.
+
+On the `icons` directory, you can add icon using the ipfs path.
+
+```json
+[
+  {
+    "url": "", // Your IPFS path of logo.
+    "width": 3600, // IPFS icon's width in pixels.
+    "height": 3600, // IPFS icon's height in pixels.
+    "format": "png" // IPFS icon's format.
+  }
+]
+```
