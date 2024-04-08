@@ -45,6 +45,13 @@ When deploying, you'll register 5 keys and the l2BlockTime as follows:
 |messageRelayer|This key finalizes the L2->L1 withdrawal bridge messages and is set to the `message-relayer`.|
 |l2BlockTime|The block time for L2. Choose within the 1 to 7 seconds range. Please refer [link here](/docs/verse-developer/how-to-build-verse/optional-configs#which-block-time-should-i-choose) for guidance on selection.|
 
+If you're unfamiliar with creating a private key, consider using [oasys-pos-cli](https://github.com/oasysgames/oasys-pos-cli). Download the binary from the [release page](https://github.com/oasysgames/oasys-pos-cli/releases) and follow the instructions to execute the key generation command.
+```shell
+$ oaspos crypto:create-account
+Address : 0xabcd1234...
+Key     : 0xabcd1234...
+```
+
 For those who prefer a UI, please visit [the website here](https://tools-fe.oasys.games/build-verse). The process is straightforward.
 For users who opt for contract method calls, like Nsuite users, follow the steps below.
 
