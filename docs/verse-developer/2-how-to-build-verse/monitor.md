@@ -37,10 +37,10 @@ Please refer to the [this section](/docs/hub-validator/operate-validator/monitor
 
 ### Monitoring Alert Assistance
 We offer a helpful script designed to ensure your Verse is operating smoothly. Should any issues arise, notifications will be sent via Slack or Discord. Please refer to the following link.
-- For users of the previous optimism version of Verse: [L2 Monitoring Alert](https://github.com/oasysgames/oasys-optimism/wiki/L2-Monitoring-Alert)
-- For users of the opstack version of Verse: Coming soon
+- For users of the previous optimism version of Verse: [L2 Monitoring Alert (For Verse v0)](https://github.com/oasysgames/oasys-optimism/wiki/L2-Monitoring-Alert#for-verse-v0)
+- For users of the opstack version of Verse: [L2 Monitoring Alert (For Verse v1)](https://github.com/oasysgames/oasys-optimism/wiki/L2-Monitoring-Alert#for-verse-v1)
 
 ### Troubleshooting Assistance
 We offer a helpful script designed to assist in resolving any issues that may arise with your verse. Please refer to the following link.
-- For users of the previous optimism version of Verse: [L2 Troubleshooting](https://github.com/oasysgames/oasys-optimism/wiki/L2-Troubleshooting)
-- For users of the opstack version of Verse: Coming soon
+- For users of the previous optimism version of Verse: [L2 Troubleshooting (For Verse v0)](https://github.com/oasysgames/oasys-optimism/wiki/L2-Troubleshooting#for-verse-v0)
+- For users of the opstack version of Verse: [L2 Troubleshooting (For Verse v1)](https://github.com/oasysgames/oasys-optimism/wiki/L2-Troubleshooting#for-verse-v1)
