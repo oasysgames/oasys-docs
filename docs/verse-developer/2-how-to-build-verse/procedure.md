@@ -52,6 +52,13 @@ Address : 0xabcd1234...
 Key     : 0xabcd1234...
 ```
 
+:::info fund OAS
+Please fund at least 10 OAS to the following address. This address will send transactions to our L1 to cover the required gas fees:
+- l2OutputOracleProposer
+- batchSenderAddress
+- messageRelayer
+:::
+
 For those who prefer a UI, please visit [the website here](https://tools-fe.oasys.games/build-verse). The process is straightforward.
 For users who opt for contract method calls, like Nsuite users, follow the steps below.
 

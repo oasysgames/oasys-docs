@@ -8,7 +8,7 @@ const sidebars = {
   architecture: [
     {
       type: 'category',
-      label: 'Overview', 
+      label: 'Overview',
       link: {
         type: 'generated-index',
       },
@@ -16,7 +16,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'OASYS Architecture', 
+          label: 'OASYS Architecture',
           link: {
             type: 'generated-index',
           },
@@ -28,7 +28,7 @@ const sidebars = {
           ]
         }, {
           type: 'category',
-          label: 'Permissioned Chain', 
+          label: 'Permissioned Chain',
           link: {
             type: 'generated-index',
           },
@@ -42,7 +42,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Hub Layer', 
+      label: 'Hub Layer',
       link: {
         type: 'generated-index',
       },
@@ -50,7 +50,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Hub Layer', 
+          label: 'Hub Layer',
           link: {
             type: 'doc',
             id: 'architecture/hub-layer/hub-layer',
@@ -60,7 +60,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Consensus Algorithm', 
+          label: 'Consensus Algorithm',
           link: {
             type: 'generated-index',
           },
@@ -68,7 +68,7 @@ const sidebars = {
           items: [
             {
               type: 'category',
-              label: 'DPoS', 
+              label: 'DPoS',
               link: {
                 type: 'generated-index',
               },
@@ -80,7 +80,7 @@ const sidebars = {
               ]
             }, {
               type: 'category',
-              label: 'Incentive Logic', 
+              label: 'Incentive Logic',
               link: {
                 type: 'generated-index',
               },
@@ -94,7 +94,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'About Validator Account', 
+          label: 'About Validator Account',
           link: {
             type: 'doc',
             id: 'architecture/hub-layer/validator-account',
@@ -104,7 +104,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Wallet', 
+          label: 'Wallet',
           link: {
             type: 'doc',
             id: 'architecture/hub-layer/wallet',
@@ -124,7 +124,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Token Flexibility', 
+          label: 'Token Flexibility',
           link: {
             type: 'doc',
             id: 'architecture/hub-layer/ecosystem/token/1-1-ft-types',
@@ -134,7 +134,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Token in Oasys(OAS/LOAS/SOAS/WOAS)', 
+          label: 'Token in Oasys(OAS/LOAS/SOAS/WOAS)',
           link: {
             type: 'doc',
             id: 'architecture/hub-layer/ecosystem/token/1-4-oas-tokens',
@@ -146,7 +146,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Verse Layer', 
+      label: 'Verse Layer',
       link: {
         type: 'generated-index',
       },
@@ -154,7 +154,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Verse Layer', 
+          label: 'Verse Layer',
           link: {
             type: 'doc',
             id: 'architecture/verse-layer/verse-layer'
@@ -164,7 +164,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Consensus', 
+          label: 'Consensus',
           link: {
             type: 'doc',
             id: 'architecture/verse-layer/consensus'
@@ -174,7 +174,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'About Verse accounts', 
+          label: 'About Verse accounts',
           link: {
             type: 'doc',
             id: 'architecture/verse-layer/verse-accounts'
@@ -184,7 +184,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Permission', 
+          label: 'Permission',
           link: {
             type: 'doc',
             id: 'architecture/verse-layer/permission'
@@ -193,7 +193,7 @@ const sidebars = {
           items: []
         }, {
           type: 'category',
-          label: 'Oasys Rollup', 
+          label: 'Oasys Rollup',
           link: {
             type: 'doc',
             id: 'architecture/verse-layer/rollup/1-1-overview'
@@ -204,7 +204,7 @@ const sidebars = {
             'architecture/verse-layer/rollup/1-2-difference',
             {
               type: 'category',
-              label: 'Verifier', 
+              label: 'Verifier',
               link: {
                 type: 'generated-index',
               },
@@ -230,7 +230,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Wallet', 
+      label: 'Wallet',
       link: {
         type: 'doc',
         id: 'architecture/wallet',
@@ -242,7 +242,7 @@ const sidebars = {
   hubvalidator: [
     {
       type: 'category',
-      label: "Operate Validator", 
+      label: "Operate Validator",
       link: {
         type: 'generated-index',
       },
@@ -261,7 +261,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Tools", 
+      label: "Tools",
       link: {
         type: 'generated-index',
       },
@@ -276,7 +276,7 @@ const sidebars = {
   versedeveloper: [
     {
       type: 'category',
-      label: 'Intro', 
+      label: 'Intro',
       link: {
         type: 'doc',
         id: 'verse-developer/intro',
@@ -286,14 +286,14 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Build Verse", 
+      label: "Build Verse",
       link: {
         type: 'generated-index',
       },
       collapsed: true,
       items: [
         'verse-developer/how-to-build-verse/requirement',
-        'verse-developer/how-to-build-verse/manual',
+        'verse-developer/how-to-build-verse/procedure',
         'verse-developer/how-to-build-verse/optional-configs',
         'verse-developer/how-to-build-verse/build-verse-submitter',
         'verse-developer/how-to-build-verse/verse-proxy',
@@ -309,7 +309,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: "Create Token", 
+      label: "Create Token",
       link: {
         type: 'generated-index',
       },
@@ -333,7 +333,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: "Tutorial", 
+          label: "Tutorial",
           link: {
             type: 'generated-index',
           },
@@ -345,7 +345,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: "Repository", 
+          label: "Repository",
           link: {
             type: 'generated-index',
           },
@@ -359,7 +359,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: "Function", 
+          label: "Function",
           link: {
             type: 'generated-index',
           },
@@ -373,7 +373,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: "NFT Creation", 
+          label: "NFT Creation",
           link: {
             type: 'generated-index',
           },
@@ -444,7 +444,7 @@ const sidebars = {
   staking: [
     {
       type: 'category',
-      label: "What's OASYS?", 
+      label: "What's OASYS?",
       link: {
         type: 'doc',
         id: 'tech-docs/whats-oasys/1-1-whats-oasys',
@@ -453,7 +453,7 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Gaming Chain', 
+          label: 'Gaming Chain',
           link: {
             type: 'generated-index',
           },
@@ -465,7 +465,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'What We Provide?', 
+          label: 'What We Provide?',
           link: {
             type: 'generated-index',
           },
@@ -476,7 +476,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Architecture', 
+          label: 'Architecture',
           link: {
             type: 'doc',
             id: 'tech-docs/whats-oasys/oasys-architecture/1-1-oasys-architecture',
@@ -489,14 +489,14 @@ const sidebars = {
         },
         // {
         //   type: 'category',
-        //   label: 'Roadmap', 
+        //   label: 'Roadmap',
         //   link: {
         //     type: 'doc',
         //     id: 'tech-docs/whats-oasys/roadmap/1-1-initial-functionalities',
         //   },
         //   collapsed: true,
         //   items: [],
-        // }, 
+        // },
       ],
     },
     {
@@ -516,7 +516,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Setup Metamask', 
+      label: 'Setup Metamask',
       link: {
         type: 'doc',
         id: 'staking/setup-metamask/1-1-how-to-setup',
@@ -526,7 +526,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'RPC Endpoint', 
+      label: 'RPC Endpoint',
       link: {
         type: 'doc',
         id: 'staking/rpc-endpoint/1-1-rpc-endpoint',
@@ -549,7 +549,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Official Links', 
+      label: 'Official Links',
       link: {
         type: 'doc',
         id: 'staking/official-links/1-1-official-links',
@@ -559,7 +559,7 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Glossary', 
+      label: 'Glossary',
       link: {
         type: 'doc',
         id: 'staking/glossary/1-1-glossary',
