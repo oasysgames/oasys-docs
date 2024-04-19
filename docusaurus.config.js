@@ -60,15 +60,15 @@ const config = {
       algolia: {
         // The application ID provided by Algolia
         appId: 'UY32N5LBZM',
-  
+
         // Public API key: it is safe to commit it
         apiKey: 'ffd5908fc7a35a352d2265dde0833d95',
-  
+
         indexName: 'oasysgames',
-  
+
         // Optional: see doc section below
         contextualSearch: true,
-  
+
         // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
         externalUrlRegex: 'external\\.com|domain\\.com',
 
@@ -77,13 +77,13 @@ const config = {
           from: '/docs/', // or as RegExp: /\/docs\//
           to: '/',
         },
-  
+
         // Optional: Algolia search parameters
         searchParameters: {},
-  
+
         // Optional: path for search page that enabled by default (`false` to disable it)
         searchPagePath: 'search',
-  
+
         //... other Algolia params
       },
       navbar: {
@@ -155,6 +155,10 @@ const config = {
               {
                 label: 'White Paper',
                 to: '/docs/whitepaper/intro',
+              },
+              {
+                label: 'Archive',
+                to: '/docs/archive/overview',
               },
               {
                 label: 'Technical Materials',

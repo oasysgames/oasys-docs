@@ -1,7 +1,12 @@
 # Introduction
-Oasys ecosystem consists of two major parts by structure: Hub Layer and Verse Layer. Hub Layer is responsible for data availability, security, and stability of the entire ecosystem, with the backing of trustworthy validators. Verse Layer is the contents layer and its the home for all the games. The primary concern of every verse layer is gamers and game developers. Please see the separate document to learn more about the Oasys architecture: [Verse Layer](/docs/architecture/verse-layer/verse-layer).
+Oasys ecosystem consists of two major parts by structure: Hub Layer and Verse Layer. Hub Layer is responsible for data availability, security, and stability of the entire ecosystem, with the backing of trustworthy validators. Verse Layer is the contents layer and its the home for all the games. The primary concern of every verse layer is gamers and game developers.
 
-Oasys being an EVM compatible, offers the most available dev resources in most EVM chains without much modification. Most EVM developer tools can also be used in Oasys. This also gives another benefit of the migration of your games with minimal costs. In most cases, all you need is to change the chain ID, and RPC endpoint URL.
+As Verse is compatible with the Ethereum Virtual Machine (EVM), it supports most tools within the EVM ecosystem. This compatibility also facilitates **the migration of your games at minimal cost**. Typically, the only adjustments needed are to the chain ID and the RPC endpoint URL.
+
+The security of Verse relies on Optimistic Rollup. For information on the mechanism of optimistic rollups, please refer to [Ethereum Offical Site](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/). Among various implementations, we have chosen to adopt Optimism, one of the most notable solutions, for our ecosystem. The latest implementation by Optimism is called OP Stack, which corresponds to v1 in our Verse versioning system(v0 was based on the legacy Optimism implementation). OP Stack offers comprehensive documentation, so if you're keen on exploring the technology in depth, we encourage you to consult [the original sources](https://docs.optimism.io/stack/getting-started).
+
+Although our current implementation is based on optimistic rollup, it's important to note that we are not limited to only this type of rollup. It's crucial to understand that our Hub layer (L1) potentially supports various types of optimistic implementations and other rollups, such as ZK rollups, as they mature and demand increases.
+
 
 ## Selecting as a builder in Oasys
 The games on Oasys will only be on L2, which means game developers need a place, an L2, Verse-Layer, to deploy games. As a result, game companies will have to decide between the two options:

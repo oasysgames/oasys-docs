@@ -1,215 +1,71 @@
 # Optional Configurations
+Optional configurations are primarily achieved by modifying parameters in the settings files. Accordingly, we will mainly focus on explaining the purposes of these configuration files.
 
-## Address List
+## Verse Contracts Build Configuration
+The configuration for deploying Verse contract sets is defined as [BuildConfig](https://github.com/oasysgames/oasys-opstack/blob/feat/l1-migrate/packages/contracts-bedrock/src/oasys/L1/build/interfaces/IL1BuildAgent.sol#L5-L51) in `L1BuildAgent.sol`. The meanings of each configuration item are as follows:
 
-After the set up, you may configure files in the: 
+| Name | Default Value | Description |
+|-----------|------------|------------|
+|finalSystemOwner| - |The owner of L1 contract set.|
+|l2OutputOracleProposer| - |The address of proposer|
+|l2OutputOracleChallenger| - |The address of challenger. usually same as finalSystemOwner |
+|batchSenderAddress| - |The address of the l2 transaction batch sender|
+|p2pSequencerAddress| - |The address of the p2p sequencer.|
+|messageRelayer| - |The address of messager relayer|
+|l2BlockTime| 2 |The block time of l2 chain.|
+|l2GasLimit|30000000|The gas limit of l2 chain|
+|l2OutputOracleSubmissionInterval|80|Determines the block number interval for submitting the next L2 state root.|
+|finalizationPeriodSeconds|7days|FinalizationPeriodSeconds represents the number of seconds before an output is considered.|
 
-```
-/oasys/addresses.json
-```
+#### Which Block Time Should I Choose?
+You can select a block time within the 1s to 7s range. Since the default block time for OP Stack is 2s, it's recommended to choose 2 seconds if you have no specific preference. If transaction speed is a priority, choosing 1 second may be beneficial. Setting a 1-second block time means that, on average, an end user will wait about 500ms until their transaction is included in a block (more specifically, until a transaction receipt is received). However, a drawback of this setting is the rapid increase in block numbers, as a new block is produced every second, even if there are no transactions.
 
-After you open it, You may see a few addresses. This is because contract updates may change those addresses. 
-You need to send your tokens to the `sequencer address` for sending gas and Use L1 bridge address from `addresses.json` to use the bridge.
+#### Why have we set the default value of l2OutputOracleSubmissionInterval to 80?
+The submission interval significantly impacts both the waiting time for L2->L1 withdrawals and the speed at which the L2 state proposer operates. If the interval is short, the waiting time for L2 withdrawals decreases. Conversely, if the interval is too short, the state proposer may fail to keep pace with the growth speed of the L2 block height.
 
-```JSON
-{
-    "Lib_AddressManager": "0x158b3E793bc212F5fC0A91de13B6C764fb8D436D",
-    "OVM_Sequencer": "0x900AcdE2455D0791F2AC9220ab700Be9B88886c2",
-    "OVM_Proposer": "0xA9ea09F28Cc491eB92337A7AC243FaB4017509FA",
-    "CanonicalTransactionChain": "0x905554Aa5511C4FE1131bB8Cc7626fC4CC86E7e0",
-    "ChainStorageContainer-CTC-batches": "0x4018839b2bAF87E69cf0d83d8A5bA0553E750417",
-    "StateCommitmentChain": "0x30DF12C6Ba5e44b1cfe9ecdc987184A0ea34Da49",
-    "ChainStorageContainer-SCC-batches": "0xde4121E8dB9B29fCF9354274a6726B176EC8a545",
-    "BondManager": "0x121b3E44dDD0a3E55620346436Ef8C93a51eD1dd",
-    "OVM_L1CrossDomainMessenger": "0x4957BeA0F36d41327a0E8c17B79A98A8B76c3eF7",
-    "Proxy__OVM_L1CrossDomainMessenger": "0x533d078614527c97219F53BB90E72c3a7A400a1d",
-    "Proxy__OVM_L1StandardBridge": "0x0C13f0299DD6B51D547d27C547DA14077Ad4BfFE",
-    "Proxy__OVM_L1ERC721Bridge": "0x1B479728F2EF8c74eFe0e1596f46e2F9b1f11529",
-    "L2CrossDomainMessenger": "0x4200000000000000000000000000000000000007"
-}
-```
+Assumptions:
+- The L2 block time is 1s.
+- The operational proposer (op-proposer) confirms 4 blocks.
+- The op-proposer cannot send multiple rollups to a single block.
 
-#### OVM_Sequencer 
+The op-proposer submits the L2 state every 5 L1 block intervals. During this period, the L2 block grows by 75 blocks. Therefore, 80 was selected as the default value.
 
-It works as L2 Sequencer. 
+## Parameters in addresses.json
+`addresses.json` contains a list of addresses for the Verse contract sets deployed and configured L1.
 
-#### OVM_Proposer
+| Name | Description |
+|-----------|------------|
+|ProxyAdmin|The address of ProxyAdmin.sol|
+|SystemConfigProxy|The address of the proxy contract whose implementation contract is SystemConfig.sol.|
+|L1StandardBridgeProxy|The address of the proxy contract whose implementation contract is L1StandardBridge.sol.|
+|L1ERC721BridgeProxy|The address of the proxy contract whose implementation contract is **OasysL1ERC721Bridge.sol**.|
+|L1CrossDomainMessengerProxy|The address of the proxy contract whose implementation contract is L1CrossDomainMessenger.sol.|
+|L2OutputOracleProxy|The address of the proxy contract whose implementation contract is **OasysL2OutputOracle.sol**.|
+|OptimismPortalProxy|The address of the proxy contract whose implementation contract is **OasysPortal.sol**.|
+|ProtocolVersions|The address of the **proxy contract** whose implementation contract is ProtocolVersions.sol.|
+|BatchInbox|The address of the batch inbox, to which L2 batch transactions are sent.|
+|AddressManager|The address of AddressManager.sol, applicable only to the Verse upgrade from Verse v0.|
+|P2PSequencer|The address of `p2pSequencerAddress` as specified during deployment.|
+|FinalSystemOwner|The address of `finalSystemOwner` as specified during deployment.|
+|L2OutputOracleProposer|The address of `l2OutputOracleProposer` as specified during deployment.|
+|L2OutputOracleChallenger|The address of `l2OutputOracleChallenger` as specified during deployment.|
+|BatchSender|The address of `batchSenderAddress` as specified during deployment.|
 
-It works as L2 Proposer. Mainly handles messaging.
+The `messageRelayer` specified during deployment is not recorded in the addresses.json file.
 
-#### CanonicalTransactionChain
+## Parameters in deploy-config.json
+The `deploy-config.json` file is used by the `op-node` to generate initial configuration files (such as `genesis.json` and `rollup.json`). It contains numerous parameters; we will focus on explaining few paramaters.
 
-Works as a sequencer. 
-
-#### StateCommitmentChain
-
-Works as a proposer. 
-
-#### navigating on L1 deposit address
- 
-You can take [L1 deposit address](https://github.com/oasysgames/oasys-optimism/blob/8f1467bf973a6587fb7482e60cecaf7c50ee78f9/packages/contracts/contracts/oasys/L1/build/L1BuildDeposit.sol#L37) from following the event. 
-
-Or you can see `0x5200000000000000000000000000000000000009` 's log on verse building. 
-
-
-## Related Factory Contract 
-
-
-### Hub Layer 
-
-#### Factory Contract
-
-Factory contract deployed by validator helps deploy some tokens or verse on Oasys or bridging tokens on Oasys.
-You can check [factory contract](https://github.com/oasysgames/oasys-validator/blob/e33f9c71d4c2bb2ba62f94c979c3d293979904d9/contracts/oasys/contracts.go) for list of factory contract. 
-
-
-```JSON
-L1StandardERC20Factory: '0x5200000000000000000000000000000000000004'
-```
-Standard ERC20 Factory contract is a tool for deploying ERC-20 tokens on Hub Layer.
-
-```JSON
-L1StandardERC721Factory: '0x5200000000000000000000000000000000000005'
-```
-
-Standard ERC 721 Factory contract is a tool for deploying ERC-721 tokens on Hub Layer.
-
-#### Bridge Contract
-L1_Bridge_Contract address is different for each Verse-Layer.
-
-```JSON
-"Proxy__OVM_L1CrossDomainMessenger": "0x6D544390Eb535d61e196c87d6B9c80dCD8628Acd",
-"Proxy__OVM_L1StandardBridge": "0xB1eDe3F5AC8654124Cb5124aDf0Fd3885CbDD1F7",
-"Proxy__OVM_L1ERC721Bridge": "0xA6D6d7c556ce6Ada136ba32Dbe530993f128CA44",
-```
-
-
-### Verse Layer 
-
-Pre-Deployed contracts. All Verse Layer Contracts are the same. 
-
-```json
-L2CrossDomainMessenger: '0x4200000000000000000000000000000000000007',
-```
-
-```JSON
-L2StandardBridge: '0x4200000000000000000000000000000000000010',
-```
-
-```json
-L2StandardTokenFactory: '0x4200000000000000000000000000000000000012',
-```
-
-```JSON
-L2ERC721Bridge: '0x6200000000000000000000000000000000000001',
-```
-
-Because the L2StandardERC721 contract is not pre-deployed, if you use ERC721, you have to deploy [L2StandardERC721](https://github.com/oasysgames/oasys-optimism/blob/develop/packages/contracts/contracts/oasys/L2/token/L2StandardERC721.sol).
-
-## Adding Chainlist 
-
-Chainlist is a web that provides an easy way to add a chain for users. It is recommended for all verses to add a verse on Chainlist. 
-
-:::caution
-If you are on dev mode for verse, adding chainlist will open your verse information to public.
-::::::
-
-### Procedure for adding Chainlist
-
-1. Navigate onto [Chainlist github](https://github.com/ethereum-lists/chains).
-2. Fork the repo, add `_data/chains/eip155-your_verse_chain_no.json` & `_data/icons/your_chain_name.json`
-3. Submit a pull request. 
-
-
-#### `_data/chains/eip155-your_verse_chain_no.json`
-
-On `your_verse_chain_no`, you need to add a chain number not taken from other chain numbers.
-
-Here is an example. 
-
-```json
-{
-  "name": "Oasys Mainnet",
-  "chain": "Oasys", //Your O
-  "icon": "oasys", //icon for your_chain_name.json
-  "rpc": ["https://rpc-mainnet.oasys.games"], // RPC address
-  "faucets": [],
-  "nativeCurrency": {
-    "name": "OAS", // Your Verse Currency name. If it does not have a currency, the default is OAS. 
-    "symbol": "OAS", // Your symbol 
-    "decimals": 18  // 18 Decimal is default on Oasys.
-  },
-  "infoURL": "https://oasys.games", // URL of your landing page. 
-  "shortName": "OAS", 
-  "chainId": 248, // Your chain ID
-  "networkid": 248, // Your Network ID (you can select same as chain ID)
-  "explorers": [
-    {
-      "name": "blockscout",
-      "url": "https://explorer.oasys.games", // URL of your explorer. 
-      "standard": "EIP3091" // Default is EIP3091
-    }
-  ]
-}
-```
-
-#### `_data/icons/your_chain_name.json`
-
-On `your_chain_name`, you need to add a chain name.
-
-On the `icons` directory, you can add icon using the ipfs path. 
-
-```json
-[
-  {
-    "url": "", // Your IPFS path of logo.
-    "width": 3600, // IPFS icon's width in pixels.
-    "height": 3600, // IPFS icon's height in pixels.
-    "format": "png" // IPFS icon's format.
-  }
-]
-```
+| Name | Description |
+|-----------|------------|
+|l2ZeroFeeTime|The timestamp for enabling the L2 zero-fee mode. [To enable gas fees](/docs/verse-developer/how-to-build-verse/optional-configs#enabling-gas-fees), remove this.|
+|enableGovernance|Configures whether or not include governance token predeploy.|
+|governanceTokenOwner|The owner of the GovernanceToken. Has the ability to mint and burn tokens.|
+|governanceTokenName|The ERC20 name of the GovernanceToken.|
+|governanceTokenSymbol|The ERC20 symbol of the GovernanceToken.|
 
 ## Gas Fee
+By default configuration, the verse operates gas-free. However, if you wish, you can implement a gas fee system. Concerning the gas currency, the default choice is the bridged OAS, which is the native token of the Hub layer (L1). This choice isn't mandatory, but if you want to use a different token as the gas fee, such as your verse's native token, it would require additional development on the Verse.
 
-By default configuration, the verse operates gas-free. However, if you wish, you can implement a gas fee system. Concerning the gas currency, the default choice is the bridged OAS, which is the native token of the Hub layer (L1). This choice isn't mandatory, but if you want to use a different token as the gas fee, such as your verse's native token, it would require additional development on the [oasys-optimism](https://github.com/oasysgames/oasys-optimism).
-
-
-
-### How is the gas fee implemented?
-In reality, whether a gas fee is applied or not depends on the user's choice. If a user sends a transaction with a non-zero gas price, the calculated gas cost (gas used * gas price) is automatically deducted.
-
-The gas-free environment on a Verse is achieved by setting the minimum gas price. By default, the minimum gas price is set to zero. If the price is zero, no gas fee is deducted because the calculated gas cost will always be zero.
-
-:::info Note
-
-The fee mechanism on a Verse does not support [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), despite the Verse being originally forked from Geth, which is an implementation of the Ethereum protocol.
-
-:::
-
-### How to set a non-zero gas price?
-
-You have two options. The first is through the `miner.gasprice` flag when you start your verse. The other one is via the `GASPRICE` environment variable.
-
-#### For users who have followed the [previous steps](/docs/verse-developer/how-to-build-verse/manual#2-clone-verse-layer-optimism-repository), specifically those using [verse-layer-optimism](https://github.com/oasysgames/verse-layer-optimism).
-
-You can set the GASPRICE setting in the `docker-compose.yml` to your desired value. Please note that the unit is `wei`.
-
-Here is an example of setting the gas price to 1 Gwei:
-```yml
-x-l2geth-environment: &l2geth-environment
-  # ...
-  GASPRICE: 1000000000
-  # ...
-```
-
-#### For users who want to run their verse with an option flag
-
-Please just append the flag in your command line.
-
-Here is an example of setting the gas price to 1 Gwei:
-```sh
-geth \
-  --miner.gasprice 1000000000 \
-  # ...
-```
+#### Enabling Gas Fees
+To enable gas fees, remove `l2ZeroFeeTime` parameter from `deploy-config.json`.
