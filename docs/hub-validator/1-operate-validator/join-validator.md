@@ -22,18 +22,7 @@ We offer three methods for joining, as described below:
 3. [Contract Direct Calling](/docs/hub-validator/operate-validator/join-validator#contract-direct-calling)
     - For those who use NSuite or prefer to use bare-bone contract direct calling, please refer to the bottom section on this page.
 
-<!-- As a brief note, let us outline the support status of related tasks for each method.
-||Web|CLI|Contract|
-|---------|----------|----------|
-|Stake|O|O|O|
-|Stake with Hard wallet|O|O (Need to export Private key)|O|
-|Check reward|O|O|O|
-|Claim reward|O|O|O|
-|Check commissions|O|O|O|
-|Claim commissions|O|O|O| -->
-
 ---
-
 ## Web(tools-fe)
 Join the PoS network as a validator using the [tools-fe](https://tools-fe.oasys.games/join-validator) web interface.
 
@@ -60,6 +49,12 @@ If you followed the Express Setup, you would have generated the operator address
 Once completed, you'll see a confirmation message indicating success.
 ![join](/img/docs/tech/joinvalidator/join_validator.png)
 
+### 3. Staking
+Please refer to the [staking](/docs/staking/stake-oasys/1-2-stake-hub) section for more details.
+
+For Validators who wish to stake using the Oasys Hub (Web) and haven't been listed yet, it's essential to note. **Even if you're not yet listed, you can still stake**. Just input your validator's owner address in the search bar. As long as your validator has joined the network, the staking screen for your validator will appear.
+![staking](/img/docs/tech/oasys-hub/staking.png)
+
 ### Updating the Operator
 You can update the operator address at any time. Regularly rotating your operator address is recommended to enhance security.
 
@@ -67,14 +62,7 @@ Input the new Validator Operator address and select **Update**.
 Once successfully updated, a confirmation message will be displayed.
 ![join_update](/img/docs/tech/joinvalidator/join_validator_update.png)
 
-### Staking
-Please refer to the [staking](/docs/staking/stake-oasys/1-1-stake) section for more details.
-
-For Validators who wish to stake using the Oasys Hub (Web) and haven't been listed yet, it's essential to note. **Even if you're not yet listed, you can still stake**. Just input your validator's owner address in the search bar. As long as your validator has joined the network, the staking screen for your validator will appear.
-![staking](/img/docs/tech/oasys-hub/staking.png)
-
 ---
-
 ## CLI Tool
 You can download the CLI tool from our GitHub repository:
 https://github.com/oasysgames/oasys-pos-cli/releases
@@ -134,6 +122,9 @@ Current Epoch Staking : 0 Wei
 Next Epoch Staking    : 10,000,000 OAS
 ```
 
+### 4. Staking
+Please refer to the [staking](/docs/staking/stake-oasys/1-3-stake-cli) section for more details.
+
 ### Update Operator
 You can update the operator address at any time. Regularly rotating your operator address is recommended to enhance security.
 
@@ -180,6 +171,9 @@ function getValidatorInfo(
 ) external;
 ```
 It's crucial to specify the owner's address, not the operator's. Since this is a read-only transaction, you won't incur any gas fees; it's always free. Additionally, the sender is not restricted; any account will suffice.
+
+### 3. Staking
+Please refer to the [staking](/docs/staking/stake-oasys/1-4-stake-contract) section for more details.
 
 ### Update Operator
 You can update the operator address at any time. Regularly rotating your operator address is recommended to enhance security.
