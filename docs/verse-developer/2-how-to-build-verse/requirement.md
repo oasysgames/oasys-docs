@@ -42,9 +42,10 @@ To ensure global uniqueness, it's crucial that your Verse's ChainId is distinct.
 Example of Oasys Mainnet Registration: [github.com/fromreto/chains/commit](https://github.com/fromreto/chains/commit/00aa7728b1b1180f9e2f6f284ccb585be956d524)
 
 ### Procedure for adding Chainlist
-1. Navigate onto [Chainlist github](https://github.com/ethereum-lists/chains).
-2. Fork the repo, add `_data/chains/eip155-your_verse_chain_no.json` & `_data/icons/your_chain_name.json`
+1. Navigate onto [Chainlist GitHub](https://github.com/ethereum-lists/chains).
+2. Fork the repo, add `_data/chains/eip155-your_verse_chain_no.json` & `_data/icons/your_chain_name.json`.
 3. Submit a pull request.
+    - Before submitting a pull request, please ensure that you follow the guidelines in the README on Chainlist's GitHub and execute checks such as './gradlew run' and 'npx prettier'. If these checks are not successful, your pull request will not be approved.
 
 #### `_data/chains/eip155-your_verse_chain_no.json`
 
@@ -55,8 +56,8 @@ Here is an example.
 ```json
 {
   "name": "Oasys Mainnet",
-  "chain": "Oasys", //Your O
-  "icon": "oasys", //icon for your_chain_name.json
+  "chain": "Oasys", // Your chain
+  "icon": "oasys", // Icon for your_chain_name.json
   "rpc": ["https://rpc-mainnet.oasys.games"], // RPC address
   "faucets": [],
   "nativeCurrency": {
@@ -94,3 +95,48 @@ On the `icons` directory, you can add icon using the ipfs path.
   }
 ]
 ```
+
+### Procedure for adding extra RPCs to chainlist.org
+
+If you would like to display additional extra RPCs for [chainlist.org](https://chainlist.org/), please follow the instructions below.
+
+1. Navigate onto [DefiLlama/chainlist GitHub](https://github.com/DefiLlama/chainlist).
+    - It is recommended to read the [PR template](https://github.com/DefiLlama/chainlist/blob/main/pull_request_template.md) first.
+2. Fork the repo, edit `constants/extraRpcs.js`.
+3. Submit a pull request.
+    - Please use the [PR template](https://github.com/DefiLlama/chainlist/blob/main/pull_request_template.md).
+
+#### `constants/extraRpcs.js`
+
+When adding new entries, append the key and object to the end of the "extraRpcs" object.  
+Just list the RPC URL strings in the 'rpcs' array. If you want to set a privacy statement, list it as an object.  
+Here is an example.
+
+```js
+export const extraRpcs = {
+  ...
+  },
+  248: {
+    rpcs: [
+      {
+        url: "https://oasys.blockpi.network/v1/rpc/public",
+        tracking: "limited",
+        trackingDetails: privacyStatement.blockpi,
+      },
+      {
+        url: "https://oasys-mainnet.rpc.grove.city/v1/167fa7a3",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt
+      },
+      {
+        url: "https://oasys-mainnet-archival.rpc.grove.city/v1/167fa7a3",
+        tracking: "none",
+        trackingDetails: privacyStatement.pokt
+      },
+      "wss://ws.mainnet.oasys.games/",
+    ],
+  }
+};
+```
+
+(The icon images displayed on chainlist.org are managed by DefiLlama, so if you would like to change your icon image, please contact [DefiLlama](https://defillama.com/about).)
