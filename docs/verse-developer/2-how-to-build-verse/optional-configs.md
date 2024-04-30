@@ -15,7 +15,7 @@ The configuration for deploying Verse contract sets is defined as [BuildConfig](
 |l2BlockTime| 2 |The block time of l2 chain.|
 |l2GasLimit|30000000|The gas limit of l2 chain|
 |l2OutputOracleSubmissionInterval|80|Determines the block number interval for submitting the next L2 state root.|
-|finalizationPeriodSeconds|7days|FinalizationPeriodSeconds represents the number of seconds before an output is considered.|
+|finalizationPeriodSeconds|604800(7days)|FinalizationPeriodSeconds represents the number of seconds before an output is considered.|
 
 #### Which Block Time Should I Choose?
 You can select a block time within the 1s to 7s range. Since the default block time for OP Stack is 2s, it's recommended to choose 2 seconds if you have no specific preference. If transaction speed is a priority, choosing 1 second may be beneficial. Setting a 1-second block time means that, on average, an end user will wait about 500ms until their transaction is included in a block (more specifically, until a transaction receipt is received). However, a drawback of this setting is the rapid increase in block numbers, as a new block is produced every second, even if there are no transactions.
