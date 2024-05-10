@@ -11,8 +11,8 @@ Singularityis a method that can improve the payment UX of games developed with O
 
 When purchasing in-game items (including NFT and Fungible Tokens), press the purchase button “Buy” and the payment function (Drawer) will be displayed.
 
-<img width="1357" alt="スクリーンショット 2024-05-10 16 02 59" src="https://github.com/oasysgames/oasys-docs/assets/30031884/5fd967a8-b46b-4386-9950-aca3b0ab8b25">
-<img width="1358" alt="スクリーンショット 2024-05-10 16 03 47" src="https://github.com/oasysgames/oasys-docs/assets/30031884/2aaa2f76-c04b-4918-a0df-297a9069d0c6">
+![Alt text](https://github.com/oasysgames/oasys-docs/assets/30031884/5fd967a8-b46b-4386-9950-aca3b0ab8b25)
+![Alt text](https://github.com/oasysgames/oasys-docs/assets/30031884/2aaa2f76-c04b-4918-a0df-297a9069d0c6)
 
 Even if users do not have game-specific tokens, they can make payments with their own tokens.
 Singularity achieves this by leveraging Tealswap, DEX on Oasys.
