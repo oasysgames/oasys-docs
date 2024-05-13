@@ -18,7 +18,7 @@ There are two methods for depositing OAS: through a UI or by directly calling co
 For those who prefer using a UI, please visit [the website here](https://tools-fe.oasys.games/). The process is straightforward.
 For those who prefer calling contract methods, such as Nsuite users, follow the steps below.
 
-The contract for depositing OAS is [L1BuildDeposit](https://github.com/oasysgames/oasys-opstack/blob/develop/packages/contracts-bedrock/src/oasys/L1/build/L1BuildDeposit.sol), deployed at 0x00....
+The contract for depositing OAS is [L1BuildDeposit](https://github.com/oasysgames/oasys-opstack/blob/develop/packages/contracts-bedrock/src/oasys/L1/build/L1BuildDeposit.sol), deployed at `0xBE75a2769B312269FF945f9cF714eEA8ed8B01A9`
 Use the deposit function as shown below. Please call this function:
 
 - builder: the address of builder
@@ -62,7 +62,7 @@ Please fund at least 10 OAS to the following address. This address will send tra
 For those who prefer a UI, please visit [the website here](https://tools-fe.oasys.games/build-verse). The process is straightforward.
 For users who opt for contract method calls, like Nsuite users, follow the steps below.
 
-The contract to deploy the contract sets is [L1BuildAgent](https://github.com/oasysgames/oasys-opstack/blob/develop/packages/contracts-bedrock/src/oasys/L1/build/L1BuildAgent.sol), deployed at 0x00....
+The contract to deploy the contract sets is [L1BuildAgent](https://github.com/oasysgames/oasys-opstack/blob/develop/packages/contracts-bedrock/src/oasys/L1/build/L1BuildAgent.sol), deployed at `0x85D92cD5d9b7942f2Ed0d02C6b5120E9D43C52aA`
 - chainId: The chain ID of your Verse. Ensure this chain ID is unique globally.
 - cfg: A tuple of the configuration. Please refer to [the optional configuration page](/docs/verse-developer/how-to-build-verse/optional-configs#verse-contracts-deployment-configuration).
 ```solidity
