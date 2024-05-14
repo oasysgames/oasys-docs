@@ -29,7 +29,7 @@ The bellow should also be monitored. You can find its address in the config.yml 
 - Submitter Wallet
 
 ### Monitoring the Delay of Rollup/Instant Verifier
-To check if the rollup is functioning or suspended, you can observe the value returned by the `getTotalElements` function of the L1 (Oasys Hub) contract. This function provides the number of transactions already submitted from L2 (Verse). If this value remains unchanged for an extended period, even though transactions on L2 are being updated, it indicates that the rollup has ceased functioning.
+To check if the rollup is functioning or suspended, you can observe the value returned by the `getTotalElements` function of the L1 (Hub Staking) contract. This function provides the number of transactions already submitted from L2 (Verse). If this value remains unchanged for an extended period, even though transactions on L2 are being updated, it indicates that the rollup has ceased functioning.
 - [getTotalElements](https://github.com/oasysgames/oasys-optimism/blob/067ae176836bd3a7bdc1f16617a5b73f51cfa733/packages/contracts/contracts/L1/rollup/CanonicalTransactionChain.sol#L128-L131)
 
 ### How to Check if the Validator Node is Running in Mining Mode

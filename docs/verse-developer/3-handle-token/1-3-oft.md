@@ -1,5 +1,5 @@
 # oFT
-oFT is a Fungible Token created on Oasys hub.
+oFT is a Fungible Token created on Oasys Staking.
 oFT can be bridged between the Verse layer(L2) and the Hub layer(L1).
 
 When creating an oFT, it is necessary to create an ERC20 for each Hub (L1) and Verse (L2).
@@ -60,7 +60,7 @@ const l2ERC20Factory = await hre.ethers.getContractAt(
 )
 ```
 
-### Create L1StandardERC20 at Oasys hub
+### Create L1StandardERC20 at Oasys Staking
 * Switch to the Hub network where you want to create the oFT
 * Create L1StandardERC20 with oFT_NAME, oFT_SYMBOL
 * Get L1StandardERC20 contact

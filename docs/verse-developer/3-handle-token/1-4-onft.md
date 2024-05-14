@@ -1,5 +1,5 @@
 # oNFT
-oNFT is a Fungible Token created by Oasys hub.
+oNFT is a Fungible Token created by Oasys Staking.
 oNFT can be bridged between the Verse layer(L2) and the Hub layer(L1).
 
 When creating an oNFT, it is necessary to create an ERC721 for each Hub (L1) and Verse (L2).
@@ -64,7 +64,7 @@ const l2ERC721Bridge = await hre.ethers.getContractAt(
 )
 ```
 
-### Create L1StandardERC721 at Oasys hub
+### Create L1StandardERC721 at Oasys Staking
 * Switch to the Hub network where you want to create the oNFT
 * Create L1StandardERC721 with oNFT_NAME, oNFT_SYMBOL, oNFT_BASE_TOKEN_URI
 * Get L1StandardERC721 contact

@@ -3,7 +3,7 @@
 ## Create an ERC-20 on Oasys SAND Verse
 Based on how to create an ERC-20 from the goerli test network created above, we will explain how to create an ERC-20 from Oasys Sand Verse network.
 
-This token is a vFT that cannot be bridged to the Oasys hub.
+This token is a vFT that cannot be bridged to the Oasys Staking.
 Also, to deploy a vFT to the main network of each verse, the deployer must be authorized by the verse operator.
 However, anyone can deploy token in Oasys SAND Verse.
 

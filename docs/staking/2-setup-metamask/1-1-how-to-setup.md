@@ -45,7 +45,7 @@ When you click the Add network button, a web page is called where you can add a 
 
 You can find the RPC / Chain ID on [RPC Environment](/docs/staking/rpc-endpoint/1-1-rpc-endpoint).
 
-Or log into Oasys Hub and add the network automatically.
+Or log into Oasys Staking and add the network automatically.
 
 
 ## Adding a token 
