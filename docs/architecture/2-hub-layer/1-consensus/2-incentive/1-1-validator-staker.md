@@ -18,5 +18,5 @@ In the case of a Delegator, you can choose whomever you want to Delegate. Delega
 
 ## Easy Staking 
 
-You can participate in staking with [Oasys Staking](https://hub.oasys.games)
+You can participate in staking with [Oasys Staking](https://staking.oasys.games)
 

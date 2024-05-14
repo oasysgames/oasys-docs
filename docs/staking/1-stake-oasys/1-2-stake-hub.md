@@ -2,7 +2,7 @@
 
 ## 1. Staking
 
-### 1. Visit [Oasys Staking](https://hub.oasys.games/) -> click validators -> select a validator and click the stake button.
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> click validators -> select a validator and click the stake button.
 
 ![staking1](/img/docs/techdocs/oasys-hub/staking_page.png)
 
@@ -24,7 +24,7 @@ You can see the transaction activity in metamask.
 
 ## 2. Unstake
 
-### 1. Visit [Oasys Staking](https://hub.oasys.games/) -> Select the validator you have previously staked.
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> Select the validator you have previously staked.
 
 ![staking4](/img/docs/techdocs/oasys-hub/staking_page.png)
 
@@ -42,7 +42,7 @@ You can see the transaction activity in metamask.
 
 ## 3. Restake
 
-### 1. Visit [Oasys Staking](https://hub.oasys.games/) -> Select the validator you have previously staked.
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> Select the validator you have previously staked.
 
 ![staking6](/img/docs/techdocs/oasys-hub/staking_page.png)
 
@@ -57,7 +57,7 @@ You can see the transaction activity in metamask.
 
 ## 4. Claim
 
-### 1. Visit [Oasys Staking](https://hub.oasys.games/) -> Select the validator you have previously staked.
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> Select the validator you have previously staked.
 
 ![staking8](/img/docs/techdocs/oasys-hub/staking_page.png)
 
@@ -67,7 +67,7 @@ You can see the transaction activity in metamask.
 
 ## 5. Withdraw
 
-### 1. Visit [Oasys Staking](https://hub.oasys.games/) -> click validators -> select a validator and click the stake button.
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> click validators -> select a validator and click the stake button.
 
 ![staking10](/img/docs/techdocs/oasys-hub/my_staking_page.png)
 
