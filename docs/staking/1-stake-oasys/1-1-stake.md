@@ -13,7 +13,7 @@ keywords:
 # Staking/Unstaking
 We offer 3 options for processing staking/unstaking:
 
-1. [Oasy Hub](/docs/staking/stake-oasys/1-2-stake-hub)
+1. [Oasys Staking](/docs/staking/stake-oasys/1-2-stake-hub)
     - Ideal for those who prefer a user-friendly UI.
 2. [CLI Tool](/docs/staking/stake-oasys/1-3-stake-cli)
     - Suitable for those who prefer using the command-line interface.

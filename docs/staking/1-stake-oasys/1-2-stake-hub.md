@@ -67,7 +67,7 @@ You can see the transaction activity in metamask.
 
 ## 5. Withdraw
 
-### 1. Visit [Oasys Staking](https://staking.oasys.games) -> click validators -> select a validator and click the stake button.
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> click my staking -> select withdraw button
 
 ![staking10](/img/docs/techdocs/oasys-hub/my_staking_page.png)
 
