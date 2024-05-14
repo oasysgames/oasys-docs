@@ -2,7 +2,7 @@
 
 - Oasys Website : https://oasys.games
 
-- OASYS Hub : https://hub.oasys.games
+- Oasys Staking : https://staking.oasys.games
 
 - Oasys Navi: https://oasys.gamefi.org/
 

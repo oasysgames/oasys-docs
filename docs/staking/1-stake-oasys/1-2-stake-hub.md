@@ -1,80 +1,80 @@
-# Stake via Oasys Hub
+# Stake via Oasys Staking
 
 ## 1. Staking
 
-### 1. Visit [Oasys Hub](https://hub.oasys.games/) and click Staking
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> click validators -> select a validator and click the stake button.
 
 ![staking1](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-### 2. Select the wallet you want to connect. Currently, Metamask is supported, but more wallets will be added soon.
+### 2. Select the wallet you want to connect.
 
-![staking2](/img/docs/techdocs/oasys-hub/switch_network.png)
+![staking2](/img/docs/techdocs/oasys-hub/connect_wallet.png)
 
-### 3. If you have no wallet, you can add a network.
-
-![staking13](/img/docs/techdocs/oasys-hub/add_network.png)
-
-### 4. Select a validator and click the stake button.
-
-![staking3](/img/docs/techdocs/oasys-hub/staking_stake.png)
-
-### 5. Input the stake amount, select the token you wish to stake and click the stake button.
+### 3. Input the stake amount, select the token you wish to stake and click the stake button.
 
 **It requires 10 days to unstake.**
 
 **If you press the max button, (max - gas fee) will be displayed.**
 
-![staking4](/img/docs/techdocs/oasys-hub/stake.png)
+![staking3](/img/docs/techdocs/oasys-hub/stake.png)
 
 If you have successfully staked, the following message appears.
 
-![staking6](/img/docs/techdocs/oasys-hub/success.png)
-
 You can see the transaction activity in metamask.
 
-## 2. Unstaking
+## 2. Unstake
 
-### 1. Go to the staking Page.
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> Select the validator you have previously staked.
 
-![staking14](/img/docs/techdocs/oasys-hub/staking_page.png)
+![staking4](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-### 2. Select the validator you have previously staked.
-
-![staking15](/img/docs/techdocs/oasys-hub/staking_stake.png)
-
-### 3. You can unstake by selecting your staked validator and pressing unstake. 
-
-“Withdraw” button is added to the Staking page.
+### 2. You can unstake by selecting your staked validator and pressing unstake.
 
 For the OAS that you have unstaked from each validator page, you can withdraw them 10 days after the unstaking process.
 
-**If you press max button, (max - gas fee) will be displayed.**
+**If you press the max button, (max - gas fee) will be displayed.**
 
-![staking16](/img/docs/techdocs/oasys-hub/unstake.png)
+![staking5](/img/docs/techdocs/oasys-hub/unstake.png)
 
-### 4. Press “Withdraw” button to check the status of unstaked OAS. 
+If you have successfully unstaked, the following message appears.
 
-![staking17](/img/docs/techdocs/oasys-hub/withdraw_select.png)
+You can see the transaction activity in metamask.
 
-### 5. If 10 days have passed, you can withdraw your tokens by pressing the withdraw button. 
+## 3. Restake
 
-You can check how much time is left until the tokens are withdrawable. 
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> Select the validator you have previously staked.
 
-While unstaking, you can not receive staking rewards. 
+![staking6](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-![staking18](/img/docs/techdocs/oasys-hub/withdraw.png)
+### 2. You can retake the previously staked amount.
+
+![staking7](/img/docs/techdocs/oasys-hub/restake.png)
+
+If you have successfully restaked, the following message appears.
+
+You can see the transaction activity in metamask.
 
 
-## 3. Claim Staking Reward 
+## 4. Claim
 
-### 1. Go to the staking Page.
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> Select the validator you have previously staked.
 
-![staking1](/img/docs/techdocs/oasys-hub/staking_page.png)
+![staking8](/img/docs/techdocs/oasys-hub/staking_page.png)
 
-### 2. Select the validator you have previously staked into.
+### 2. You can claim by selecting your staked validator and pressing the claim button.
 
-![staking5](/img/docs/techdocs/oasys-hub/staking_stake.png)
+![staking9](/img/docs/techdocs/oasys-hub/claim.png)
 
-### 3. You can claim by selecting your staked validator and pressing the claim button. 
+## 5. Withdraw
 
-![staking12](/img/docs/techdocs/oasys-hub/claim.png)
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> click my staking -> select withdraw button
+
+![staking10](/img/docs/techdocs/oasys-hub/my_staking_page.png)
+
+### 2. If 10 days have passed, you can withdraw your tokens by pressing the withdraw button.
+
+You can check how much time is left until the tokens are withdrawable.
+
+While unstaking, you can not receive staking rewards.
+
+![staking11](/img/docs/techdocs/oasys-hub/withdraw.png)
