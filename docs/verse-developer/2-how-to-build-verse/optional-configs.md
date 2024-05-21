@@ -2,7 +2,7 @@
 Optional configurations are primarily achieved by modifying parameters in the settings files. Accordingly, we will mainly focus on explaining the purposes of these configuration files.
 
 ## Verse Contracts Build Configuration
-The configuration for deploying Verse contract sets is defined as [BuildConfig](https://github.com/oasysgames/oasys-opstack/blob/feat/l1-migrate/packages/contracts-bedrock/src/oasys/L1/build/interfaces/IL1BuildAgent.sol#L5-L51) in `L1BuildAgent.sol`. The meanings of each configuration item are as follows:
+The configuration for deploying Verse contract sets is defined as [BuildConfig](https://github.com/oasysgames/oasys-opstack/blob/v1.0.0/packages/contracts-bedrock/src/oasys/L1/build/interfaces/IL1BuildAgent.sol#L5-L51) in `L1BuildAgent.sol`. The meanings of each configuration item are as follows:
 
 | Name | Default Value | Description |
 |-----------|------------|------------|
@@ -16,6 +16,9 @@ The configuration for deploying Verse contract sets is defined as [BuildConfig](
 |l2GasLimit|30000000|The gas limit of l2 chain|
 |l2OutputOracleSubmissionInterval|80|Determines the block number interval for submitting the next L2 state root.|
 |finalizationPeriodSeconds|604800(7days)|FinalizationPeriodSeconds represents the number of seconds before an output is considered.|
+|l2OutputOracleStartingBlockNumber|-|The starting block number for the L2OutputOracle. Set it to the latest block number when deploying contracts.|
+|l2OutputOracleStartingTimestamp|-|The starting timestamp for the L2OutputOracle. Set it to the timestamp of the specified above starting block.|
+
 
 #### Which Block Time Should I Choose?
 You can select a block time within the 1s to 7s range. Since the default block time for OP Stack is 2s, it's recommended to choose 2 seconds if you have no specific preference. If transaction speed is a priority, choosing 1 second may be beneficial. Setting a 1-second block time means that, on average, an end user will wait about 500ms until their transaction is included in a block (more specifically, until a transaction receipt is received). However, a drawback of this setting is the rapid increase in block numbers, as a new block is produced every second, even if there are no transactions.
