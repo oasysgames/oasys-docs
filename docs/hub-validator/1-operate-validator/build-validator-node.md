@@ -1,7 +1,7 @@
 ---
 id: build-validator-node
 title: Validator Node Setup
-sidebar_label: Node Setup 
+sidebar_label: Node Setup
 description: "Guide for setting up Node"
 keywords:
   - geth
@@ -17,7 +17,7 @@ import TabItem from '@theme/TabItem';
 # Build Oasys Node (geth)
 
 
-## Build steps 
+## Build steps
 
 ### Full Node
 Oasys's full node is capable of synchronizing blocks and executing commands on geth, including eth.getbalance. However, it is important to note that the Oasys full node itself does not function as a validator.
@@ -50,7 +50,7 @@ The Oasys client undergoes frequent hard forks whenever it updates nodes. To con
 
 :::info
 Please note that we have tested the Express Setup process on CentOS, so the provided commands may vary for other operating systems. However, rest assured that you can run Oasys nodes on any Linux OS or any other operating system of your choice.
-::::::   
+::::::
 
 ### 1. Verify Installation of `unzip` and `wget` Commands
 
@@ -125,7 +125,7 @@ SELINUX= can take one of these three values:
 SELINUX=disabled
 SELINUXTYPE= can take one of these three values:
      targeted - Targeted processes are protected,
-     minimum - Modification of targeted policy. Only selected processes are protected. 
+     minimum - Modification of targeted policy. Only selected processes are protected.
      mls - Multi Level Security protection.
 SELINUXTYPE=targeted
 ```
@@ -209,7 +209,7 @@ $ sudo -u geth geth account new
 ```
 You will receive the following output:
 :::warning Important
-**Keep the secret key and password in a safe place.**  
+**Keep the secret key and password in a safe place.**
 :::
 ```sh
 INFO [03-14|12:10:46.047] Maximum peer count                       ETH=50 LES=0 total=50
@@ -250,7 +250,7 @@ $ export BOOTNODES="enode://1e68361cb0e761e0789c014acdbd2491f30176acf25480408382
 For the testnet:
 ```sh
 $ export NETWORK_ID=9372
-$ export BOOTNODES="enode://4a85df39ec500acd31d4b9feeea1d024afee5e8df4bc29325c2abf2e0a02a34f6ece24aca06cb5027675c167ecf95a9fc23fb7a0f671f84edb07dafe6e729856@3.113.59.173:30303"
+$ export BOOTNODES="enode://319e4b45c1c00e26a4e04ff103242b09fff91dc5a6f6f06ad2181e20683cd9dc1c8dea95588cb4b91d3812e749e0e542e626ee094b6a67476fb67dc2db53d257@34.142.254.12:30301,enode://696f1728b4c44685558fbe9b641d226156668facde8f8d014d7a31e4c462ad0942652494c75db659c46002ca7da0996f61f7dcc26ed9391e42d13af626333f2e@35.247.178.119:30301,enode://54b81cfbdeb1bc55b1d32d78150442b8cee9fdf8e8fb0e8355b405a37afae28595fb31b0a265801d72f34975381619976cb60f8a055e122a24d1a9f668229ad7@34.143.178.245:30301"
 ```
 
 `YOUR_ACCOUNT_ADDRESS` is the address associated with the secret key you have just created.
