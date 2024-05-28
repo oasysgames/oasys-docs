@@ -97,6 +97,26 @@ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec admin.addPeer(
 You can verify whether the syncing is complete or not by referring to the [this question](/docs/hub-validator/operate-validator/faq#q-how-do-i-verify-the-block-synchronization-status).
 
 ---
+### Q. Node keeps printing Looking for peers logs and is unable to connect to peers. How can this be resolved?
+The sample log output is as follows:
+```
+INFO [05-28|01:32:16.363] Looking for peers   peercount=0 tried=154 static=0
+INFO [05-28|01:32:26.385] Looking for peers   peercount=0 tried=250 static=0
+INFO [05-28|01:32:36.440] Looking for peers   peercount=0 tried=97  static=0
+INFO [05-28|01:32:46.481] Looking for peers   peercount=0 tried=192 static=0
+```
+Deleting all the node information may improve peer discovery. The node information is stored in the nodes directory under the datadir. Please try the following steps:
+```sh
+# 1. Stop geth
+
+# 2. Backup the existing node information
+mv /home/geth/.ethereum/geth/nodes /home/geth/.ethereum/geth/nodes-bk
+
+# 3. Start geth
+```
+These steps will reset the node information and might help in finding new peers.
+
+---
 ### Q. My full node is out of sync, and a BAD BLOCK error keeps appearing. How to recover?
 The most straightforward method is to roll back to a block height well before the bad block occurred.
 ```sh
@@ -189,8 +209,8 @@ Here is a sample command:
 ```sh
 # Display the slashes in each epoch
 # - Use the --validator option to specify your validator address.
-# - Use the --back-epoch option to specify the number of epochs to go back in order to start listing the slashes. 
-$ ./oaspos validator:info-slash --network mainnet --validator 0xXX.. --back-epoch 30  
+# - Use the --back-epoch option to specify the number of epochs to go back in order to start listing the slashes.
+$ ./oaspos validator:info-slash --network mainnet --validator 0xXX.. --back-epoch 30
 
 +----+-------+-------+
 | ID | Epoch | Slash |
@@ -223,11 +243,11 @@ For users who prefer a GUI interface, we are considering proofing the StakeManag
 
 ---
 ### Frequently Used Commands for Hub
-| Command                                             | Description                                                                                        |       
-| -------------------------------------               | ----------------------------------------------                                                     |   
+| Command                                             | Description                                                                                        |
+| -------------------------------------               | ----------------------------------------------                                                     |
 | `admin_addPeer`                                     | **Adds a new remote peer to the list of tracked static nodes.**                                    |
 | `admin_addTrustedPeer`                              | **Adds the peer to a reserved trusted list which allows the node to always connect, even if the slots are full.** |                                                                    |
-| `admin_nodeInfo`                                    | **The nodeInfo property can be queried for all the information known about the running Geth node.**|             
+| `admin_nodeInfo`                                    | **The nodeInfo property can be queried for all the information known about the running Geth node.**|
 | `admin_peers`                                       | **The peers property can be queried for all the information known about the connected peers.**     |
 | `admin_removePeer`                                  | **Disconnects from a remote peer if the connection exists.**                                       |
 | `admin_removeTrustedPeer`                           | **Removes a remote peer from the trusted peer set.**                                               |
@@ -236,8 +256,8 @@ For users who prefer a GUI interface, we are considering proofing the StakeManag
 | `clique_getSignersAtHash`                           | **Retrieves the list of authorized signers at the specified block hash.**                          |
 | `debug_getBadBlocks`                                | **Returns a list of the last 'bad blocks' that the client has seen on the network and returns them as a JSON list of block-hashes.**                                                |
 | `eth.getBlock("latest").number`                     | **Queries the height of the latest block.**                                                        |
-| `debug_setHead`                                     | **Sets the current head of the local chain by block number.**                                      |                                                        
+| `debug_setHead`                                     | **Sets the current head of the local chain by block number.**                                      |
 | `les.latestCheckpoint`                              | **Gets the index and hashes of the latest known checkpoint.**                                      |
 | `net_peerCount`                                     | **Returns the number of connected peers.**                                                         |
 |`eth.syncing.highestBlock - eth.syncing.currentBlock`| **Compares the current block of your node to the highest block.**                                  |
-                            `                                           
+                            `
