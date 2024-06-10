@@ -236,6 +236,37 @@ Various factors might prompt you to migrate your operating validator node to a d
 For step-by-step instructions on how to move your validator node to a new server, please consult the [Migrating Validator to a New Server section](/docs/hub-validator/operate-validator/upgrade-migrate#migrating-validator-to-a-new-server).
 
 ---
+### Q. How to Replace Operator Key?
+For security reasons, regular rotation of the [validator operator](/docs/architecture/hub-layer/validator-account#validator-operator) key is recommended. To prevent slashing, you are required to replace the private key on your validator node at a specific height. We describe the steps below.
+
+#### 1. Compute the Start Block of the Next Epoch
+You are required to replace the private key at this height to prevent slashing.
+```
+current epoch: RoundUp(latest height / 5760)
+starting block height: (current epoch + 1) * 5760
+```
+For example, if the latest height is 3566566:
+```
+current epoch: RoundUp(3566566 / 5760) -> 620
+starting block height: (620 + 1) * 5760 -> 3576960
+```
+As the block time of Oasys L1 is 15 seconds, you can precisely estimate the time when the block arrives.
+
+#### 2. Update Validator Key
+Since the updated validator key is applied from the next epoch, you should do this within the `current epoch` above.
+
+To upgrade the key, call the [updateOperator](https://github.com/oasysgames/oasys-genesis-contract/blob/412faff50fd66546082792a34fda1108d5a7a355/contracts/StakeManager.sol#L193) function of StakeManager contract using the [validator Owner](/docs/architecture/hub-layer/validator-account#validator-owner) key. Only the validator owner key is allowed to perform this operation.
+
+For your information, the StakeManager contract is deployed at `0x0000000000000000000000000000000000001001`.
+
+#### 3. Replace Validator Key
+Around the `starting block height` above, replace the validator key set in validator node.
+
+That's it. If you want to avoid this synchronized work of waiting for the starting block, an alternative solution is to skip the next epoch validation. By skipping the next block validation, you are not slashed, but you will not receive rewards.
+
+To skip the next block validation, call the [deactivateValidator](https://github.com/oasysgames/oasys-genesis-contract/blob/412faff50fd66546082792a34fda1108d5a7a355/contracts/StakeManager.sol#L225) function of StakeManager contract. This can be called either via the owner or operator key.
+
+---
 ### Q. How can I obtain the complete list of stakers?
 You can obtain the list of stakers by calling the [getValidatorStakes](https://github.com/oasysgames/oasys-genesis-contract/blob/412faff50fd66546082792a34fda1108d5a7a355/contracts/StakeManager.sol#L601) function on the [StakeManager](/docs/architecture/hub-layer/contract#preset-contracts) contract.
 
