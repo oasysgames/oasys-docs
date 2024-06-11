@@ -243,12 +243,12 @@ For security reasons, regular rotation of the [validator operator](/docs/archite
 You are required to replace the private key at this height to prevent slashing.
 ```
 current epoch: RoundUp(latest height / 5760)
-starting block height: (current epoch + 1) * 5760
+starting block height: current epoch * 5760
 ```
 For example, if the latest height is 3566566:
 ```
 current epoch: RoundUp(3566566 / 5760) -> 620
-starting block height: (620 + 1) * 5760 -> 3576960
+starting block height: 620 * 5760 -> 3571200
 ```
 As the block time of Oasys L1 is 15 seconds, you can precisely estimate the time when the block arrives.
 
@@ -260,7 +260,7 @@ To upgrade the key, call the [updateOperator](https://github.com/oasysgames/oasy
 For your information, the StakeManager contract is deployed at `0x0000000000000000000000000000000000001001`.
 
 #### 3. Replace Validator Key
-Around the `starting block height` above, replace the validator key set in validator node.
+Around the `starting block height` above, replace the validator key set in validator node. It is not necessary to replace the operator key at the exact time. Doing it within one hour before or after the scheduled time is acceptable, and you do not need to worry about any penalties.
 
 That's it. If you want to avoid this synchronized work of waiting for the starting block, an alternative solution is to skip the next epoch validation. By skipping the next block validation, you are not slashed, but you will not receive rewards.
 
