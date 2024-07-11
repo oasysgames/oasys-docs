@@ -15,7 +15,7 @@ Firstly, we will demonstrate [how to check the block height](/docs/hub-validator
 Blocks are generated at 15-second intervals. If no block is created for over a minute, it might be worth raising an alert.
 ```sh
 # via Command Line Interface (CLI)
-$ geth attach ipc:/home/geth/.ethereum/geth.ipc --exec 'eth.blockNumber'
+$ geth attach --exec 'eth.blockNumber' ipc:/home/geth/.ethereum/geth.ipc
 
 # via RPC
 $ curl http://127.0.0.1:8545/ \
@@ -25,7 +25,7 @@ $ curl http://127.0.0.1:8545/ \
 ### How to check if the Validator Node is catching up with the latest block
 ```sh
 # via Command Line Interface (CLI)
-$ geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'eth.syncing'
+$ geth attach --exec 'eth.syncing' ipc:/home/geth/.ethereum/geth.ipc
 # You should expect `false` as the output.
 
 # via RPC
@@ -45,7 +45,7 @@ $ curl http://127.0.0.1:8545/ \
 ### How to Check if the Validator Node is Running in Mining Mode
 ```sh
 # via Command Line Interface (CLI)
-$  geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'eth.mining'
+$ geth attach --exec 'eth.mining' ipc:/home/geth/.ethereum/geth.ipc
 # You should expect `true` as the output.
 
 # via RPC
@@ -57,7 +57,7 @@ $ curl http://127.0.0.1:8545/ \
 ### How Many Peers Are You Connected To?
 ```sh
 # via Command Line Interface (CLI)
-$ geth attach ipc:/home/geth/.ethereum/geth.ipc -exec 'admin.peers.length'
+$ geth attach --exec 'admin.peers.length' ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 ### How to Check Slashing Status?

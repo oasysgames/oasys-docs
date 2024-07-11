@@ -39,7 +39,7 @@ ExecStart=$INSTALL_PATH \
 ### Q. How do I verify the block synchronization status?
 Firstly, ensure that the `genesis.json` file is correctly set up by comparing the genesis block. Retrieve the genesis block using the following command:
 ```sh
-sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec 'eth.getBlockByNumber("0x0")'
+sudo -u geth geth attach --exec 'eth.getBlockByNumber("0x0")' ipc:/home/geth/.ethereum/geth.ipc
 ```
 The expected output should be:
 ```
@@ -50,13 +50,13 @@ If the output differs, download the correct genesis.json from our [GitHub releas
 
 Next, check the synchronization status with the `eth.syncing` command:
 ```sh
-sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
+sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
 ```
 The expected output is `false`, indicating synchronization is complete. If it's still syncing, the output will provide details on the syncing progress.
 
 Lastly, confirm that the latest block number matches the one displayed on the [explorer](https://explorer.oasys.games/):
 ```sh
-sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.blockNumber
+sudo -u geth geth attach --exec eth.blockNumber ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 ---
@@ -65,7 +65,7 @@ Firstly, please ensure that the latest head of your chain matches the one on the
 
 To get the latest block number, use the following command:
 ```sh
-sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.blockNumber
+sudo -u geth geth attach --exec eth.blockNumber ipc:/home/geth/.ethereum/geth.ipc
 ```
 To retrieve the hash of a specific block, ensure you specify the block number in hex format:
 ```sh
@@ -86,12 +86,12 @@ After starting the node, you might notice frequent forced peer disconnections. W
 
 To prevent situations where syncing stops due to the absence of peers, we recommend noting connected peers by executing the following command periodically:
 ```sh
-sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec admin.peers
+sudo -u geth geth attach --exec admin.peers ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 If you get stuck due to a lack of peers, you can manually add them using the following command:
 ```sh
-sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec admin.addPeer("enode://XXX...@XX.XX.XX.XX:30303")
+sudo -u geth geth attach --exec admin.addPeer("enode://XXX...@XX.XX.XX.XX:30303") ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 You can verify whether the syncing is complete or not by referring to the [this question](/docs/hub-validator/operate-validator/faq#q-how-do-i-verify-the-block-synchronization-status).

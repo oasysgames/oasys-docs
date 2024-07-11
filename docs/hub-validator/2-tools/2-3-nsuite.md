@@ -37,7 +37,7 @@ On Execution details, Please input [Validator Operator](/docs/architecture/hub-l
 For confirming operator address, run following command on validator pc.
 
 ```
-$ sudo -u geth /usr/local/bin/geth attach ipc:/home/geth/.ethereum/geth.ipc -exec eth.accounts
+$ sudo -u geth /usr/local/bin/geth attach --exec eth.accounts ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 ## Staking

@@ -68,7 +68,7 @@ $ geth -h
 ### Troubleshooting
 If you encounter issues, please confirm the Geth's syncing status:
 ``` sh
-$ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
+$ sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
 ``` 
 The output should be `false`. If it displays `true`, proceed to the Resync Nodes section below for troubleshooting steps.
 
@@ -111,8 +111,19 @@ In the old validator node, run the following command to stop the geth service:
 systemctl stop geth
 ```
 
-### 2. Setup new validator node
-On the new validator node, execute `setup.sh` as part of the [Express setup](#express-setup).
+### 2. Copy old validator data
+In the old validator node, Copy the old validator data to the new validator node:
+
+```shell
+# In old validator node
+rsync -av /usr/lib/systemd/system/geth.service <NEW_VALIDATOR_NODE>:/usr/lib/systemd/system/geth.service # service file
+rsync -av /home/geth/.ethereum/ <NEW_VALIDATOR_NODE>:/home/geth/.ethereum # geth data
+```
+
+Please ensure that the files are being correctly synchronized from the old validator node to the new validator node.
+
+### 3. Setup new validator node
+On the new validator node, execute `setup.sh` as part of the [Express setup](/docs/hub-validator/operate-validator/build-validator-node#express-setup).
 
 :::info PASSPHRASE
 When running the `setup.sh`, you will be prompted to enter the passphrase for the private key.
@@ -122,27 +133,39 @@ When running the `setup.sh`, you will be prompted to enter the passphrase for th
 This passphrase is the password specified to create the validator operator address in the old validator node.
 :::
 
-### 3. Copy old validator data
-In the old validator node, Copy the old validator data to the new validator node:
+:::info SKIP PROCESSING STEPS
+If synchronization is successful when `Copy old validator data` is performed, then `Create a genesis block`, `Create a private key`, and `Create a systemd unit` steps will be skipped.
+:::
+
+Execute the following command on both the old and new validator nodes to verify that the keystore account information matches.
 
 ```shell
-# In old validator node
-rsync -av /usr/lib/systemd/system/geth.service <NEW_VALIDATOR_NODE>:/usr/lib/systemd/system/geth.service # service file
-rsync -av /home/geth/.ethereum <NEW_VALIDATOR_NODE>:/home/geth/.ethereum # geth data
+sudo -u geth geth account list
 ```
 
-### 4. Remove old validator data
-In the old validator node, remove the old validator data:
+### 4. Start new validator node
+Start the Geth service on the new validator node.
 
-```shell
-# In old validator node
-rm -rf /usr/lib/systemd/system/geth.service
-```
-
-### 5. Start new validator node
 ```shell
 # In new validator node
 systemctl daemon-reload
 systemctl enable geth
 systemctl start geth
 ```
+
+Please check the block synchronization status using [this method](https://docs.oasys.games/docs/hub-validator/operate-validator/faq#q-how-do-i-verify-the-block-synchronization-status).
+
+### 5. Remove old validator data
+Once you have confirmed that the new validator node is operating correctly, in the old validator node, remove the old validator data:
+
+```shell
+# In old validator node
+rm /usr/lib/systemd/system/geth.service
+```
+
+:::info CONCURRENT OPERATION OF THE OLD VALIDATOR NODE AND THE NEW VALIDATOR NODE
+Stopping the validator node will result in the cessation of rewards, so we recommend minimizing the downtime as much as possible.  
+To that end, it is possible to run both the old validator node and the new validator node concurrently.  
+However, please ensure that neither node generates blocks during this time. Blocks will be generated if the geth option `-–mine` is included.  
+Ultimately, please ensure that the `–-mine` option is only enabled on the new validator node.
+:::

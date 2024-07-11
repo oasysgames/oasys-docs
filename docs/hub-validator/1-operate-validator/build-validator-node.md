@@ -45,6 +45,9 @@ The Oasys validator node operation involves running the validator client on the 
 The Oasys client undergoes frequent hard forks whenever it updates nodes. To continue validating on the Oasys chain, it is necessary to update your node prior to each hard fork. If you fail to update in a timely manner, you will be required to [**resync your node**](/docs/hub-validator/operate-validator/build-validator-node#resync-nodes).
 ::::::
 
+<div id="express-setup"></div>
+<div id="manual-setup"></div>
+
 <Tabs>
   <TabItem value="express setup" label="Express Setup" default>
 
@@ -146,7 +149,7 @@ $ systemctl status geth
 ### 7. Checking Block Sync Status
 For CentOS default installations, you can use the following command to check the block sync status:
 ```sh
-$ sudo -u geth /usr/local/bin/geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
+$ sudo -u geth /usr/local/bin/geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 ---
@@ -268,7 +271,7 @@ Once Geth is started, the block synchronization process begins automatically. Yo
 
 Please ensure you are in the installed directory and execute the command below to monitor the sync progress:
 ```sh
-$ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
+$ sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 You will receive the following output:
@@ -294,7 +297,7 @@ You will receive the following output:
 
 Once the synchronization is complete, you will see the output `false`.
 ```sh
-$ sudo -u geth geth attach ipc:/home/geth/.ethereum/geth.ipc --exec eth.syncing
+$ sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
 
 false
 ```
