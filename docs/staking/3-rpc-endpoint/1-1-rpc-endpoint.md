@@ -1,4 +1,4 @@
-# RPC Endpoints 
+# RPC Endpoints
 
 ## Mainnet
 <table>
@@ -16,6 +16,10 @@
     <tr><td colspan="3">Explorer</td><td><a href="https://explorer.oasys.games/" target="_blank" rel="noopener noreferrer">https://explorer.oasys.games/</a></td></tr>
   </tbody>
 </table>
+
+:::note About eth_newFilter Usage
+For those using `eth_newFilter` on the Oasys HTTP endpoint, please switch to using WebSocket. Since the Oasys RPC endpoint is load-balanced, there is no guarantee of accessing the same node each time. If you encounter the error `filter not found` when you call `eth_getFilterChanges`, it means that your request is being processed by a different node than the one where the filter ID was generated. The testnet is the same.
+:::
 
 ## Testnet (Hub Layer)
 <table>
