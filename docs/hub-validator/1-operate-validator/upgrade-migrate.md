@@ -166,6 +166,6 @@ rm /usr/lib/systemd/system/geth.service
 :::info CONCURRENT OPERATION OF THE OLD VALIDATOR NODE AND THE NEW VALIDATOR NODE
 Stopping the validator node will result in the cessation of rewards, so we recommend minimizing the downtime as much as possible.  
 To that end, it is possible to run both the old validator node and the new validator node concurrently.  
-However, please ensure that neither node generates blocks during this time. Blocks will be generated if the geth option `-–mine` is included.  
+However, please ensure that only one of the nodes generates blocks during this time. Blocks will be generated if the geth option `-–mine` is included.  
 Ultimately, please ensure that the `–-mine` option is only enabled on the new validator node.
 :::
