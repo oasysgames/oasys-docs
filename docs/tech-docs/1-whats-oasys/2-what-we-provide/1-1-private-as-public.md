@@ -7,7 +7,7 @@ When designing Oasys, we first and foremost wanted to concentrate on optimizing 
 We found that many chains were designed with general purpose usage in mind, but not optimized for gaming. 
 
 Commonly designed chains are suitable for a wide variety of purposes, use a variety of networks and suit the needs of many users.
-However they don't use a dedicated network wich has many disadvantages for game operators.
+However they don't use a dedicated network which has many disadvantages for game operators.
 Especially when using networks with bot transactions other unwanted loads of transaction, game operators need to use share networks with those transactions.
 
 ## Solution 
