@@ -223,8 +223,12 @@ $ ./oaspos validator:info-slash --network mainnet --validator 0xXX.. --back-epoc
 ```
 
 ---
-### Q.How to Export a Private Key from Ledger?
+### Q. How to Export a Private Key from Ledger?
 To export a private key from a Ledger device, follow the official guide provided by Ledger. You can find detailed instructions on the [Ledger Support page](https://support.ledger.com/hc/en-us/articles/4404388633489-Export-your-accounts?docs=true).
+
+---
+### Q. When sending a transaction with Ledger, the message `This transaction cannot be trusted` appears on the Ledger screen. What should I do?
+If you accept the transaction on your Ledger, you will be able to perform blind signing as before. For more details, please refer to the [Ledger Support page](https://support.ledger.com/article/E8-This-transaction-cannot-be-trusted).
 
 ---
 ### Q. How to Migrate a Validator to Another Machine?
