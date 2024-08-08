@@ -54,7 +54,6 @@ If you have successfully restaked, the following message appears.
 
 You can see the transaction activity in metamask.
 
-
 ## 4. Claim
 
 ### 1. Visit [Oasys Staking](https://staking.oasys.games) -> Select the validator you have previously staked.
@@ -67,7 +66,7 @@ You can see the transaction activity in metamask.
 
 ## 5. Withdraw
 
-### 1. Visit [Oasys Staking](https://staking.oasys.games) -> click my staking -> select withdraw button
+### 1. Visit [Oasys Staking](https://staking.oasys.games) -> click my account -> select withdraw button
 
 ![staking10](/img/docs/techdocs/oasys-hub/my_staking_page.png)
 
