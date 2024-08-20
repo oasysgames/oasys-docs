@@ -570,6 +570,16 @@ const sidebars = {
       collapsed: true,
       items: [],
     },
+    {
+      type: 'category',
+      label: 'FAQ',
+      link: {
+        type: 'doc',
+        id: 'tech-docs/users/faq',
+      },
+      collapsed: true,
+      items: [],
+    },
   ],
   devtools: [
     {
