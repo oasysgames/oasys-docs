@@ -12,5 +12,5 @@ Oasys is compatible with the EVM, so essentially any wallet within the Ethereum 
 |Ledger|https://www.ledger.com/|
 |Face Wallet|https://facewallet.xyz/|
 |ABC Wallet|https://myabcwallet.io/en/|
-|MetaOne|https://getmeta.one/|
+|Saakuru App|https://saakuru.com/app|
 |D'cent|https://dcentwallet.com/|

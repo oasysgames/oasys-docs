@@ -6,4 +6,4 @@ Currently, Oasys incorporates only a limited number of DeFi protocols in our eco
 
 |Name|Category|URL|
 |--|--|---------|
-|cBridge|Multi-Chain Bridge|https://cbridge.celer.network/248/1/USDC|
+|cBridge|Multi-Chain Bridge|https://cbridge.celer.network/248/1/USDC-intermediary|

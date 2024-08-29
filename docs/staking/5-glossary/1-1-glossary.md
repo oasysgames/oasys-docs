@@ -93,7 +93,7 @@ The first block in a blockchain, used to initialize a particular network and its
 Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go. The Hub Layer is written in geth.
 
 #### gwei
-Short for gigawei, a denomination of ether, commonly utilized to price gas. 1 gwei = 109 wei. 109 gwei = 1 ether.
+Short for gigawei, a denomination of ether, commonly utilized to price gas. 1 gwei = 10<sup>9</sup> wei. 10<sup>9</sup> gwei = 1 ether.
 
 ## H 
 
