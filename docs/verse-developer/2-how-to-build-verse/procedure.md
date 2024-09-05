@@ -111,6 +111,6 @@ To confirm the success of your build process, run the [troubleshooting shell scr
 
 As an optional setting, **we highly recommend executing the previously mentioned script on a periodic basis**. This script focuses on L2-specific topics and ensures the overall functionality of your Verse. As the above script lacks notification functionality, we offer an [alternative shell script](/docs/verse-developer/how-to-build-verse/monitor#monitoring-alert-assistance). By executing this script at regular intervals, for instance through cron, This script allows for notifications via Slack or Discord in case of any issues with your Verse installation.
 
-As an example of the risks this script can help mitigate, it monitors the L2 safe head. If the op-batcher is stopped for more than 3600 L2 blocks (the default sequencing window), **the safety of your chain could be compromised**, potentially leading to risks such as reorgs.
+As an example of the risks this script can help mitigate, it monitors the L2 safe head. If the op-batcher is stopped for more than 3600 L1 blocks (the default sequencing window), **the safety of your chain could be compromised**, potentially leading to risks such as reorgs. For more details, please refer to [this section](https://github.com/oasysgames/verse-layer-opstack?tab=readme-ov-file#l2-reorged-what-happens-when-the-op-batcher-stops-for-more-than-6-hours).
 
 It is important to note that this script does not monitor CPU usage or memory consumption, so general infrastructure monitoring will need to be managed through other familiar means.
