@@ -18,7 +18,7 @@ There are two methods for depositing OAS: through a UI or by directly calling co
 For those who prefer using a UI, please visit [the website here](https://tools-fe.oasys.games/). The process is straightforward.
 For those who prefer calling contract methods, such as Nsuite users, follow the steps below.
 
-The contract for depositing OAS is [L1BuildDeposit](https://github.com/oasysgames/oasys-opstack/blob/develop/packages/contracts-bedrock/src/oasys/L1/build/L1BuildDeposit.sol), deployed at `0xBE75a2769B312269FF945f9cF714eEA8ed8B01A9`.  
+The contract for depositing OAS is [L1BuildDeposit](https://github.com/oasysgames/oasys-opstack/blob/develop/packages/contracts-bedrock/src/oasys/L1/build/L1BuildDeposit.sol), deployed at `0xBE75a2769B312269FF945f9cF714eEA8ed8B01A9`.
 Use the deposit function as shown below. Please call this function:
 
 - builder: the address of builder
@@ -109,4 +109,8 @@ For those who prefer to build the services from the source code, please consult 
 ## 4. Verify the Build
 To confirm the success of your build process, run the [troubleshooting shell script](/docs/verse-developer/how-to-build-verse/monitor#troubleshooting-assistance). A successful execution of this script indicates that your build process has completed successfully.
 
-As an optional setting, **we highly recommend executing the previously mentioned script on a periodic basis**. This script focuses on L2-specific topics and ensures the overall functionality of your Verse. As the above script lacks notification functionality, we offer an [alternative shell script](/docs/verse-developer/how-to-build-verse/monitor#monitoring-alert-assistance). By executing this script at regular intervals, for instance through cron, This script allows for notifications via Slack or Discord in case of any issues with your Verse installation. It is important to note that this script does not monitor CPU usage or memory consumption, so general infrastructure monitoring will need to be managed through other familiar means.
+As an optional setting, **we highly recommend executing the previously mentioned script on a periodic basis**. This script focuses on L2-specific topics and ensures the overall functionality of your Verse. As the above script lacks notification functionality, we offer an [alternative shell script](/docs/verse-developer/how-to-build-verse/monitor#monitoring-alert-assistance). By executing this script at regular intervals, for instance through cron, This script allows for notifications via Slack or Discord in case of any issues with your Verse installation.
+
+As an example of the risks this script can help mitigate, it monitors the L2 safe head. If the op-batcher is stopped for more than 3600 L2 blocks (the default sequencing window), **the safety of your chain could be compromised**, potentially leading to risks such as reorgs.
+
+It is important to note that this script does not monitor CPU usage or memory consumption, so general infrastructure monitoring will need to be managed through other familiar means.
