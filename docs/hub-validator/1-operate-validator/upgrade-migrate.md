@@ -1,4 +1,4 @@
-# Upgrade / Resync / Migrate Node
+# Upgrade | Resync | Migrate | Snapshot
 
 ## Node Update Procedure
 
@@ -49,27 +49,27 @@ $ sudo chown <"SERVICE_USER">:<"SERVICE_USER"> $BIN_DIR/geth # default SERVICE_U
 Restart Geth with:
 ```sh
 $ sudo systemctl start geth
-``` 
+```
 
 ### 6. Verify Geth Status
 Check Geth's status with:
 ```sh
 $ sudo systemctl status geth
-``` 
+```
 To confirm the upgrade, refer to journalctl and look for the line indicating the new version:
 ```sh
 INFO [11-02|11:16:11.821] Starting peer-to-peer node   instance=Geth/v1.0.1-54aae939/linux-amd64/go1.17.8
 ```
 Or use geth -h to display version info:
 ```sh
-$ geth -h 
+$ geth -h
 ```
 
 ### Troubleshooting
 If you encounter issues, please confirm the Geth's syncing status:
 ``` sh
 $ sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
-``` 
+```
 The output should be `false`. If it displays `true`, proceed to the Resync Nodes section below for troubleshooting steps.
 
 ## Resyncing Nodes
@@ -164,8 +164,36 @@ rm /usr/lib/systemd/system/geth.service
 ```
 
 :::info CONCURRENT OPERATION OF THE OLD VALIDATOR NODE AND THE NEW VALIDATOR NODE
-Stopping the validator node will result in the cessation of rewards, so we recommend minimizing the downtime as much as possible.  
-To that end, it is possible to run both the old validator node and the new validator node concurrently.  
-However, please ensure that only one of the nodes generates blocks during this time. Blocks will be generated if the geth option `-–mine` is included.  
+Stopping the validator node will result in the cessation of rewards, so we recommend minimizing the downtime as much as possible.
+To that end, it is possible to run both the old validator node and the new validator node concurrently.
+However, please ensure that only one of the nodes generates blocks during this time. Blocks will be generated if the geth option `-–mine` is included.
 Ultimately, please ensure that the `–-mine` option is only enabled on the new validator node.
 :::
+
+
+## Snapshot
+We provide snapshots for the Oasys Hub Layer (L1) testnet and mainnet.
+
+|network|URL|
+|--|--|
+|Mainnet|TODO:|
+|Testnet|https://cdn.testnet.oasys.games/l1-snapshot.tar.gz|
+
+### Applying the Snapshot to a Testnet Node
+Since the snapshot file is large, please ensure you have sufficient storage space available. We recommend having at least 50 GB of free space as a guideline.
+```shell
+# Stop the geth service
+sudo systemctl stop geth
+
+# Download the snapshot archive
+wget https://cdn.testnet.oasys.games/l1-snapshot.tar.gz
+
+# Backup the old data. Adjust the path based on your environment.
+sudo -u geth mv /home/geth/.ethereum/geth/ /home/geth/.ethereum/geth-bk
+
+# Extract the snapshot archive
+sudo -u geth tar -xzvf l1-snapshot.tar.gz -C /
+
+# Restart the geth service
+sudo systemctl start geth
+```

@@ -36,7 +36,9 @@ For those using `eth_newFilter` on the Oasys HTTP endpoint, please switch to usi
   </tbody>
 </table>
 
-Our current testnet cannot sync with other full nodes. We are contemplating launching a new testnet to rectify this synchronization issue.
+:::caution Syncing to Testnet
+If you're planning to run a testnet node, please use our provided [snapshot](/docs/hub-validator/operate-validator/upgrade-migrate#applying-the-snapshot-to-a-testnet-node) for setup. Due to a technical issue (an invalid block accidentally created in the past), the current testnet is unable to fully sync with other full nodes.
+:::
 
 ## SAND Verse (Verse Layer)
 Please refer to [SAND Verse](/docs/verse-developer/sandverse) to learn about SAND verse.
