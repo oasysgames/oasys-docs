@@ -183,7 +183,7 @@ Example implementation
     https://github.com/doublejumptokyo/oasys-sample-webapp/blob/23c5f11428b3ff19955be52e809510a4360b10f1/src/components/PersonalSign.tsx
     
 
-Behaviour can be checked at https://oasys-sample-webapp.vercel.app/.You can replicate the flow by connecting your wallet using Web3Modal then choose personal_sign.
+Behaviour can be checked at https://oasys-sample-webapp.vercel.app/. You can replicate the flow by connecting your wallet using Web3Modal then choose personal_sign.
 
 ### Managing Browser Extension
 
@@ -297,7 +297,7 @@ For new WalletConnect implementations, we recommend using the following librarie
 - wagmi
 - web3modal
 
-Specific behavior can be checked at [https://oasys-sample-webapp.vercel.app/](https://oasys-sample-webapp.vercel.app/%5B1)
+Specific behavior can be checked at [https://oasys-sample-webapp.vercel.app/](https://oasys-sample-webapp.vercel.app/)
 
 For questions or inquiries about this document, please contact the Oasys Passport team at
 
