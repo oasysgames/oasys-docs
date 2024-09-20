@@ -52,8 +52,8 @@ Once completed, you'll see a confirmation message indicating success.
 ### 3. Staking
 Please refer to the [staking](/docs/staking/stake-oasys/1-2-stake-hub) section for more details.
 
-For Validators who wish to stake using the Oasys Staking (Web) and haven't been listed yet, it's essential to note. **Even if you're not yet listed, you can still stake**. Just input your validator's owner address in the search bar. As long as your validator has joined the network, the staking screen for your validator will appear.
-![staking](/img/docs/tech/oasys-hub/staking.png)
+For Validators who wish to stake using the Oasys Staking (Web) and haven't been listed yet, it's essential to note.  
+If you are not yet listed, please contact the Oasys BD team. We will provide you with the URL for the webpage to stake.
 
 ### Updating the Operator
 You can update the operator address at any time. Regularly rotating your operator address is recommended to enhance security.
