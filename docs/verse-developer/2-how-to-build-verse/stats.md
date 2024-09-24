@@ -1,6 +1,14 @@
 
+# Charts and Stats
 
-## Update Docker Configuration and Ngix of EC2
+## Introduction
+New Blockscout stats service
+
+Blockscout provides a way to easily calculate and display chain-relevant charts and statistics. For example, it can calculate and display the number of blocks per day, the average block reward, or the number of active accounts per day.
+
+Statistics are implemented using a separate microservice that is connected to the indexed blockscout database. The source code and full README.md for the service is available here: https://github.com/blockscout/blockscout-rs/tree/main/stats
+
+## How to run Charts and Stats
 
 ### Step 1: Locate blockscout-v6-backend/docker-compose
 ```sh
@@ -36,7 +44,7 @@ services:
     environment:
         POSTGRES_DB: 'stats'
         POSTGRES_USER: 'stats'
-        POSTGRES_PASSWORD: 'n0uejXPl61ci6ldCuE2gQU5Y'
+        POSTGRES_PASSWORD: 'password'
     ports:
       - target: 5432
         published: 7433
