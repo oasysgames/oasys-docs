@@ -294,18 +294,23 @@ Before generating the key, create the necessary directory and password file. Ens
 sudo mkdir /home/geth/.ethereum/bls
 
 # Generate a password
-sudo openssl rand -base64 18 > /home/geth/.ethereum/bls/password.txt
+openssl rand -base64 18 > password.txt
+sudo mv password.txt /home/geth/.ethereum/bls/
 
 # Grant permissions to the geth user
 sudo chown geth:geth /home/geth/.ethereum/bls
 ```
 Next, generate the key using the Geth command:
 ```sh
-sudo -u geth geth bls wallet create --datadir /home/geth/.ethereum/bls ---blspassword /home/geth/.ethereum/bls/password.txt
+# Create a wallet
+sudo -u geth geth bls wallet create --datadir /home/geth/.ethereum/bls --blspassword /home/geth/.ethereum/bls/password.txt
+
+# Generate a BLS Key
+sudo -u geth geth bls account new --datadir /home/geth/.ethereum/bls --blspassword /home/geth/.ethereum/bls/password.txt
 ```
 To verify the key, use the following Geth command:
 ```sh
-sudo -u geth geth bls wallet list --datadir /home/geth/.ethereum/bls ---blspassword /home/geth/.ethereum/bls/password.txt
+sudo -u geth geth bls account list --datadir /home/geth/.ethereum/bls --blspassword /home/geth/.ethereum/bls/password.txt
 ```
 
 ### 2. Register the BLS Public Key
