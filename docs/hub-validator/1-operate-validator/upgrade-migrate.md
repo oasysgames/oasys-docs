@@ -186,7 +186,7 @@ Since the snapshot file is large, please ensure you have sufficient storage spac
 sudo systemctl stop geth
 
 # Download the snapshot archive
-wget https://cdn.testnet.oasys.games/l1-snapshot.tar.gz
+sudo wget https://cdn.testnet.oasys.games/l1-snapshot.tar.gz
 
 # Backup the old data. Adjust the path based on your environment.
 sudo -u geth mv /home/geth/.ethereum/geth/ /home/geth/.ethereum/geth-bk

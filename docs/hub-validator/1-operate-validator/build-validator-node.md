@@ -288,29 +288,23 @@ false
 The following steps outline how to enable [Fast Finality](https://github.com/bnb-chain/BEPs/blob/master/BEPs/BEP126.md), a mechanism designed to finalize PoS chains, originally developed by BSC. To enable this, validators need to generate and register a BLS key, which is used to sign blocks and attest to voted blocks.
 
 ### 1. Generate the BLS Key
-Before generating the key, create the necessary directory and password file. Ensure the password file is kept secure.
+Generate the key using the Geth command:
 ```sh
-# Create the location to store the BLS key
-sudo mkdir /home/geth/.ethereum/bls
+# Create a password file
+sudo -u geth openssl rand -base64 18 > password.txt
 
-# Generate a password
-openssl rand -base64 18 > password.txt
-sudo mv password.txt /home/geth/.ethereum/bls/
-
-# Grant permissions to the geth user
-sudo chown geth:geth /home/geth/.ethereum/bls
-```
-Next, generate the key using the Geth command:
-```sh
 # Create a wallet
-sudo -u geth geth bls wallet create --datadir /home/geth/.ethereum/bls --blspassword /home/geth/.ethereum/bls/password.txt
+sudo -u geth geth bls wallet create --datadir /home/geth/.ethereum/ --blspassword ./password.txt
 
 # Generate a BLS Key
-sudo -u geth geth bls account new --datadir /home/geth/.ethereum/bls --blspassword /home/geth/.ethereum/bls/password.txt
+sudo -u geth geth bls account new --datadir /home/geth/.ethereum/ --blspassword ./password.txt
+
+# Move the password file to bls directory
+sudo mv ./password.txt /home/geth/.ethereum/bls/
 ```
 To verify the key, use the following Geth command:
 ```sh
-sudo -u geth geth bls account list --datadir /home/geth/.ethereum/bls --blspassword /home/geth/.ethereum/bls/password.txt
+sudo -u geth geth bls account list --datadir /home/geth/.ethereum/ --blspassword /home/geth/.ethereum/bls/password.txt
 ```
 
 ### 2. Register the BLS Public Key
