@@ -308,7 +308,7 @@ sudo -u geth geth bls account list --datadir /home/geth/.ethereum/ --blspassword
 ```
 
 ### 2. Register the BLS Public Key
-To associate your BLS key with your validator, it must be registered with the StakeManager contract. You have two options for this: using a manually or explorer.
+To associate your BLS key with your validator, it must be registered with the StakeManager contract. You have three options for this: using a manually or explorer or script.
 
 #### Manual Registration
 Call the [updateBLSPublicKey](https://github.com/oasysgames/oasys-genesis-contract/blob/v1.6.1/contracts/StakeManager.sol#L217) function of the [StakeManager](/docs/architecture/hub-layer/contract#preset-contracts) contract to register the BLS public key.
@@ -336,6 +336,19 @@ returns (
 #### Registration via Explorer
 Open the [verified contract page](https://explorer.oasys.games/address/0x0000000000000000000000000000000000001001?tab=contract) of StakeManager on the blockchain explorer, then call the `updateBLSPublicKey` and `getValidatorInfo` functions as described in the manual method.
 
+#### Registration via Script
+Use the Hardhat task script within the [oasys-genesis-contract](https://github.com/oasysgames/oasys-genesis-contract) repository:
+```sh
+# Set your validator owner's private key
+export DEPLOYER_KEY=0xFF..
+
+# Set your BLS public key
+export BLS_KEY=0xFF..
+
+# Execute the update-bls task
+./node_modules/.bin/hardhat update-bls --network localhost
+```
+
 ### 3. Enable Fast Finality on the Node
 To enable Fast Finality on your node, add the following options to the node's startup command.
 ```sh
@@ -348,5 +361,10 @@ geth \
 ```
 After setting this up, restart the node and check the logs to ensure the following message is printed:
 ```console
-example log
+Sep 28 09:17:06 validator02 geth[21452]: INFO [09-28|09:17:06.335] Create voteSigner successfully           pubKey=ac05bf82382645e2373ae2a4c32d8ca9065520b76c21f13b5780d76cfc7084a5a074b6cf9c888b236f403fc13a21456c
+Sep 28 09:17:06 validator02 geth[21452]: INFO [09-28|09:17:06.335] Create voteJournal successfully
+Sep 28 09:17:06 validator02 geth[21452]: INFO [09-28|09:17:06.335] Create voteManager successfully
 ```
+Ensure the printed `pubKey` matches the one you registered.
+
+The setup is complete. Voting will begin in approximately 1 day (1 epoch). Once voting starts, you can find your vote logged in the `/home/geth/.ethereum/bls` directory.
