@@ -99,7 +99,8 @@ docker-compose up -d verse-verifier
 ```
 
 ## Hardfork
-Guide on how to apply each hardfork.
+A guide on how to apply each hardfork. As an important note, **before performing any updates, always ensure to communicate with Oasys dev team the hardfork date and time, along with the updated configuration details**. The dev team will also apply changes on the replica nodes.
+
 ### Apply Canyon
 To apply the Canyon hardfork, you need to change 2 files.
 
