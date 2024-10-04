@@ -308,6 +308,7 @@ const sidebars = {
         'verse-developer/how-to-build-verse/verse-proxy',
         'verse-developer/how-to-build-verse/explorer',
         'verse-developer/how-to-build-verse/the-graph',
+        'verse-developer/how-to-build-verse/stats',
       ],
     },
     {

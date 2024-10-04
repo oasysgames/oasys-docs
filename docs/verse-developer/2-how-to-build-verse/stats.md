@@ -72,6 +72,7 @@ services:
       - STATS__BLOCKSCOUT_DB_URL=postgresql://{uname}:{upass}@{DB_DOMAIN}:5432/{indexing_DB}
       - STATS__CREATE_DATABASE=true
       - STATS__RUN_MIGRATIONS=true
+      - STATS_CHARTS__TEMPLATE_VALUES__NATIVE_COIN_SYMBOL=OAS
 ```
 
 Replace `{uname}`, `{upass}`, `{DB_DOMAIN}`, `{stats_DB}`, `{indexing_DB}`,  with the actual values of your RDS.
