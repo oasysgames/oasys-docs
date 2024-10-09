@@ -26,6 +26,42 @@ As an alternative solution, consider building a [read-only replica Verse](/docs/
 
 Regarding the `txpool`, there isn't as significant a security concern as with the debug namespace. However, it is still advisable not to make it publicly accessible. Opening this endpoint to the public is unnecessary since the explorer offers similar capabilities.
 :::
+
+### Update `op-geth` Startup Options
+
+The Blockscout explorer requires access to certain JSON-RPC namespaces to function properly with `op-geth`. Specifically, it needs access to the `txpool` and `debug` namespaces. Here is how you can ensure these are enabled:
+
+1. **Locate the Startup Script or Configuration**:
+   - Find the script or configuration file used to start your `op-geth` node. This could be a shell script, a systemd service file, or a Docker Compose file.
+
+2. **Enable Required JSON-RPC Namespaces**:
+   - Modify the startup command or configuration to include the `txpool` and `debug` namespaces. You can do this by adding them to the `--http.api` and/or `--ws.api` options, depending on whether you're using HTTP or WebSocket for RPC.
+
+   Example startup command:
+   ```bash
+   op-geth --networkid <your_network_id> \
+           ... \
+           --http.api "eth,net,web3,txpool,debug" \
+           --ws.api "eth,net,web3,txpool,debug" \
+           ...
+   ```
+
+3. **Environment Variables**:
+   - If your setup uses environment variables to define configuration, ensure these namespaces are included in the respective variables for HTTP or WebSocket APIs.
+
+   Example environment variable configuration:
+   ```plaintext
+   ETH_HTTP_API="eth,net,web3,txpool,debug"
+   ETH_WS_API="eth,net,web3,txpool,debug"
+   ```
+
+4. **Restart the Node**:
+   - After making these changes, restart your `op-geth` node to apply the new settings.
+
+5. **Verify Configuration**:
+   - Check the logs of your `op-geth` node to confirm that it starts without errors and that the specified namespaces are available.
+   - Use a JSON-RPC client to test connectivity and ensure that the `txpool` and `debug` namespaces are accessible.
+
 ### Environment Variable For Blockscout Backend
 When creating a blockscout instance, you have to set the environment variable using blockscout.
 
@@ -70,6 +106,11 @@ You can check the environment variable lists at [this page](https://docs.blocksc
 | NEXT_PUBLIC_OG_DESCRIPTION              | Custom OG description.                     |    -
 | NEXT_PUBLIC_OG_IMAGE_URL              | OG image url. Minimum image size is 200 x 20 pixels (recommended: 1200 x 600); maximum supported file size is 8 MB; 2:1 aspect ratio; supported formats: image/jpeg, image/gif, image/png.                     |    `https://oasys-blockscout-networks.s3.ap-northeast-1.amazonaws.com/oasys-logo-1113.png`
 | NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY              |  Site key.                     |    `<your-secret>`
+| NEXT_PUBLIC_HOMEPAGE_HIDDEN_OP_NODE_TXS | Set to true if op-node transactions will not appear | `false` |
+| NEXT_PUBLIC_TOKENS_UPDATED_ADDRESS | Set the address if the token has changed | - |
+| NEXT_PUBLIC_TOKENS_UPDATED_NAME | Set the token name if the token has changed | - |
+| NEXT_PUBLIC_TOKENS_UPDATED_SYMBOL | Set the token symbol if the token has changed | - |
+
 ### Manual Setup
 If you set up blockscout for a Verse, You have to set it up manually.
 #### Backend Setup
