@@ -4,7 +4,7 @@ After building a Verse, you have to create a Verse explorer. Please use [blocksc
 You can build blockscout-v6 or blockscout-v5
 
 ## Blockscout v6
-### Update L2Geth Startup Options
+### Update L2Geth (For Verse v0) Startup Options
 The explorer utilizes the `txpool` and `debug` namespaces of the JSON RPC to communicate l2geth. Therefore, you need to enable these two namespaces. Please ensure to include these namespaces in the starting options or environment variables.
 
 ```sh
@@ -27,7 +27,7 @@ As an alternative solution, consider building a [read-only replica Verse](/docs/
 Regarding the `txpool`, there isn't as significant a security concern as with the debug namespace. However, it is still advisable not to make it publicly accessible. Opening this endpoint to the public is unnecessary since the explorer offers similar capabilities.
 :::
 
-### Update `op-geth` Startup Options
+### Update op-geth (For Verse v1) Startup Options
 
 The Blockscout explorer requires access to certain JSON-RPC namespaces to function properly with `op-geth`. Specifically, it needs access to the `txpool` and `debug` namespaces. Here is how you can ensure these are enabled:
 
