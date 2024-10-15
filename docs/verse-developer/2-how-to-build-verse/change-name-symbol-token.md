@@ -28,7 +28,7 @@ NEXT_PUBLIC_TOKENS_UPDATED_NAME=Oasys
 NEXT_PUBLIC_TOKENS_UPDATED_SYMBOL=OAS
 ```
 
-Replace `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000`　with the actual value.
+Replace `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` with the actual value.
 
 ### Step 3: Restart Docker Compose Services
 

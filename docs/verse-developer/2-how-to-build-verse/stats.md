@@ -1,9 +1,7 @@
 
 # Charts and Stats
 
-## Introduction
-New Blockscout stats service
-
+New Blockscout stats service.
 Blockscout provides a way to easily calculate and display chain-relevant charts and statistics. For example, it can calculate and display the number of blocks per day, the average block reward, or the number of active accounts per day.
 
 Statistics are implemented using a separate microservice that is connected to the indexed blockscout database. The source code and full README.md for the service is available here: https://github.com/blockscout/blockscout-rs/tree/main/stats
@@ -77,7 +75,7 @@ services:
 
 Replace `{uname}`, `{upass}`, `{DB_DOMAIN}`, `{stats_DB}`, `{indexing_DB}`,  with the actual values of your RDS.
 
-### Step 3: Config NGIX
+### Step 3: Config NGINX
 
 Updating the `proxy/default.conf.template` file involves modifying the NGINX configuration to suit your specific deployment needs. This file is used to configure how NGINX proxies requests to your BlockScout application.
 
