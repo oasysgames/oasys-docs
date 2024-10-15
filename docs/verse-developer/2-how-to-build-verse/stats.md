@@ -331,7 +331,7 @@ Updating `configs/envs/.env.common` file in the project root directory with the 
 NEXT_PUBLIC_STATS_API_HOST=`https://stats-blockscout-domain.com`
 ```
 
-Replace ``https://stats-blockscout-domain.com`　with the actual value.
+Replace `https://stats-blockscout-domain.com` with the actual value.
 
 ### Step 3: Restart Docker Compose Services
 
