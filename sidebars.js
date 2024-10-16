@@ -306,7 +306,19 @@ const sidebars = {
         'verse-developer/how-to-build-verse/upgrade-verse',
         'verse-developer/how-to-build-verse/read-node',
         'verse-developer/how-to-build-verse/verse-proxy',
-        'verse-developer/how-to-build-verse/explorer',
+        {
+          type: 'category',
+          label: 'Explorer',
+          link: {
+            type: 'generated-index',
+          },
+          collapsed: true,
+          items: [
+            'verse-developer/how-to-build-verse/explorer',
+            'verse-developer/how-to-build-verse/stats',
+            'verse-developer/how-to-build-verse/change-name-symbol-token',
+          ],
+        },
         'verse-developer/how-to-build-verse/the-graph',
       ],
     },
