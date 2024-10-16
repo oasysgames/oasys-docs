@@ -112,3 +112,33 @@ Import `l1oft` address at Hub, `l2oft` address at Verse.
 ## How to bridge oFT between Hub and Verse
 If you want to know about bridge oFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/bridge/hub-verse) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oft.ts) in the bride tutorial.
 
+## How to create oFT with non-standard decimals
+The decimals for oFTs created by the L1StandardERC20Factory and L2StandardTokenFactory, namely L1StandardERC20 and L2StandardERC20, default to 18.  
+If you wish to create a special oFT token with decimals other than 18, we recommend inheriting from L1StandardERC20 and L2StandardERC20 and overriding the decimals.  
+Below is an example of creating a USDC.e contract with 6 decimals on Verse.
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.9;
+
+import "./L2StandardERC20.sol";
+
+contract USDCe is L2StandardERC20 {
+    /**
+     * @param _l2Bridge Address of the L2 standard bridge.
+     * @param _l1Token Address of the corresponding L1 token.
+     * @param _name ERC20 name.
+     * @param _symbol ERC20 symbol.
+     */
+    constructor(
+        address _l2Bridge,
+        address _l1Token,
+        string memory _name,
+        string memory _symbol
+    ) L2StandardERC20(_l2Bridge, _l1Token, _name, _symbol) {
+    }
+
+    function decimals() public view virtual override returns (uint8) {
+        return 6;
+    }
+}
+```
