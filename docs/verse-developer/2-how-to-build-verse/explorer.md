@@ -104,7 +104,7 @@ You can check the environment variable lists at [this page](https://docs.blocksc
 | NEXT_PUBLIC_OG_DESCRIPTION              | Custom OG description.                     |    -
 | NEXT_PUBLIC_OG_IMAGE_URL              | OG image url. Minimum image size is 200 x 20 pixels (recommended: 1200 x 600); maximum supported file size is 8 MB; 2:1 aspect ratio; supported formats: image/jpeg, image/gif, image/png.                     |    `https://oasys-blockscout-networks.s3.ap-northeast-1.amazonaws.com/oasys-logo-1113.png`
 | NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY              |  Site key.                     |    `<your-secret>`
-| NEXT_PUBLIC_HOMEPAGE_HIDDEN_OP_NODE_TXS | Set to true if op-node transactions will not appear | `false` |
+| NEXT_PUBLIC_HOMEPAGE_HIDDEN_OP_NODE_TXS | Set to true if you want to hide op-node transactions | `false` |
 | NEXT_PUBLIC_TOKENS_UPDATED_ADDRESS | Set the address if the token has changed | - |
 | NEXT_PUBLIC_TOKENS_UPDATED_NAME | Set the token name if the token has changed | - |
 | NEXT_PUBLIC_TOKENS_UPDATED_SYMBOL | Set the token symbol if the token has changed | - |
@@ -128,7 +128,7 @@ sudo FRONT_PROXY_PASS=http://host.docker.internal:3000 docker compose -f externa
 ```
 ##### Optional
 ###### Migrate verifed contract data from v5 to v6
-When build new blockscout, verify contract data is always no data so if you want hold verified contract data before on v5. You need migrate data from blockscout v5 to blockscout v6 
+When build new blockscout, verify contract data is always no data so if you want hold verified contract data before on v5. You need migrate data from blockscout v5 to blockscout v6.
 
 Let's run
 
@@ -144,7 +144,6 @@ sudo chmod +x excutes/verified_contract.sh
 ./excutes/verified_contract.sh
 
 ```
-
 
 #### Frontend Setup
 ##### Git clone 
