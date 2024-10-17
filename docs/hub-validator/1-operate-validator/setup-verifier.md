@@ -23,11 +23,18 @@ chown geth:geth /home/geth/.oasvlfy
 ```
 Ensure you have **password.txt and the validator operator's private key stored on your disk**. It's necessary to **listen on port 4101(UDP/TCP)** to send and receive transactions. Please open both TCP and UDP.
 
-Create a configuration file. [Click here for a sample.](https://github.com/oasysgames/verse-verifier/blob/main/readme/config.yml)
+Create a configuration file. 
+- [Mainnet sample](https://github.com/oasysgames/verse-verifier/blob/main/readme/config-mainnet.yml)
+- [Testnet sample](https://github.com/oasysgames/verse-verifier/blob/main/readme/config-testnet.yml)
 
 ```shell
+# Mainnet
 curl -O /home/geth/.oasvlfy/config.yml \
-    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config.yml
+    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config-mainnet.yml
+
+# Testnet
+curl -O /home/geth/.oasvlfy/config.yml \
+    https://raw.githubusercontent.com/oasysgames/verse-verifier/main/readme/config-testnet.yml
 ```
 
 Edit config.yml.
