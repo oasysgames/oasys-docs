@@ -12,10 +12,7 @@ keywords:
 ---
 
 # Build Oasys Node (geth)
-
-
 ## Build steps
-
 ### Full Node
 Oasys's full node is capable of synchronizing blocks and executing commands on geth, including eth.getbalance. However, it is important to note that the Oasys full node itself does not function as a validator.
 
@@ -34,9 +31,10 @@ The Oasys validator node operation involves running the validator client on the 
   - [**Manual setup**](/docs/hub-validator/operate-validator/build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
 - [x] 3.[**Join validator with PoS client**](/docs/hub-validator/operate-validator/join-validator#join-validator-to-pos-cli) or [**Join validator with Web**](/docs/hub-validator/operate-validator/join-validator#join-validator-to-pos-web). Web is recommended. (Please follow the steps for [joining](/docs/hub-validator/tools/2-3-nsuite#joining) as an N Suite user)
 - [x] 4.[**stake your token with PoS client**](/docs/hub-validator/operate-validator/join-validator#4-staking) or [**stake your token with web**](/docs/hub-validator/operate-validator/join-validator#3-staking). (Please follow the steps for [staking](/docs/hub-validator/tools/2-3-nsuite#staking) as an N Suite user)
-- [x] 5.Check validation status on **next epoch**
-- [x] 6.After stable validation, run [**Instant verifier**](/docs/hub-validator/operate-validator/setup-verifier)
-- [x] 7.Join our official [Discord](https://discord.gg/oasysgames). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
+- [x] 5.[Enabling Fast Finality](/docs/hub-validator/operate-validator/build-validator-node#enabling-fast-finality)
+- [x] 6.Check validation status on **next epoch**
+- [x] 7.After stable validation, run [**Instant verifier**](/docs/hub-validator/operate-validator/setup-verifier)
+- [x] 8.Join our official [Discord](https://discord.gg/oasysgames). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
 
 ---
 ## Express Setup
@@ -48,14 +46,14 @@ Please ensure that the `unzip` and `wget` commands are installed on your system.
 
 CentOS:
 ```sh
-$ sudo yum install unzip
-$ sudo yum install wget
+sudo yum install unzip
+sudo yum install wget
 ```
 
 Ubuntu:
 ```sh
-$ sudo apt install unzip
-$ sudo apt install wget
+sudo apt install unzip
+sudo apt install wget
 ```
 
 ### 2. Download the Setup File
@@ -64,11 +62,11 @@ Ensure that you are downloading the latest `setup.sh` file. You can verify this 
 ### 3. Granting Permissions to the Setup File
 Once you have located the downloaded `setup.sh` file, please navigate to its location and grant the necessary permissions to the file.
 ```sh
-$ sudo chmod +x setup.sh
+sudo chmod +x setup.sh
 ```
 ### 4. Start setup.sh
 ```sh
-$ ./setup.sh
+./setup.sh
 ```
 When starting Geth, you will encounter a question:
 
@@ -89,7 +87,7 @@ For more information about the operator, please refer to [this discription](/doc
 On CentOS, there are instances where running `sestatus` may cause interruptions with geth(Oasys Node). In such cases, it is necessary to make the following changes:
 
 ```sh
-$ sestatus
+sestatus
 ```
 Then, the following result will be displayed::
 ```sh
@@ -125,18 +123,18 @@ After making the changes, please restart your system for the modifications to ta
 
 To start Geth, execute the following command:
 ```sh
-$ systemctl start geth
+systemctl start geth
 ```
 To check the status of your node, use the following command:
 ```sh
-$ systemctl status geth
+systemctl status geth
 ```
 
 
 ### 7. Checking Block Sync Status
 For CentOS default installations, you can use the following command to check the block sync status:
 ```sh
-$ sudo -u geth /usr/local/bin/geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
+sudo -u geth /usr/local/bin/geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 ---
@@ -147,30 +145,30 @@ Download the Oasys Geth binary from [GitHub](https://github.com/oasysgames/oasys
 ### 2. Create an OS User for Geth
 Create an OS user specifically for running Geth(Oasys Node) by executing the following commands:
 ```sh
-$ sudo useradd -s /sbin/nologin geth
-$ sudo mkdir /home/geth
-$ sudo chown geth:geth /home/geth
-$ sudo chmod 700 /home/geth
+sudo useradd -s /sbin/nologin geth
+sudo mkdir /home/geth
+sudo chown geth:geth /home/geth
+sudo chmod 700 /home/geth
 ```
 ### 3. Download the Genesis Block Configuration
 You can download the configuration files for the genesis block from [GitHub](https://github.com/oasysgames/oasys-validator/releases) or by using the wget command:
 
 ```sh
-$ wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.4/genesis.zip
+wget https://github.com/oasysgames/oasys-validator/releases/download/v1.0.4/genesis.zip
 
-$ unzip genesis.zip
+unzip genesis.zip
 Archive:  genesis.zip
    creating: genesis/
   inflating: genesis/mainnet.json
   inflating: genesis/testnet.json
 
-$ mv genesis/{target network}.json /home/geth/genesis.json
+mv genesis/{target network}.json /home/geth/genesis.json
 ```
 
 ### 4. Create a Genesis Block
 To create a genesis block, run the following command:
 ```sh
-$ sudo -u geth geth init /home/geth/genesis.json
+sudo -u geth geth init /home/geth/genesis.json
 ```
 
 You will see the following output:
@@ -192,7 +190,7 @@ INFO [03-14|12:07:35.106] Maximum peer count ETH=50 LES=0 total=50 INFO [03-14|1
 ### 5. Generate a Secret Key for Geth
 To create a secret key for Geth, execute the following command:
 ```sh
-$ sudo -u geth geth account new
+sudo -u geth geth account new
 ```
 You will receive the following output:
 :::warning Important
@@ -223,26 +221,26 @@ For more information about the operator, please refer to [this discription](/doc
 
 Save the secret key password to a text file using the following command:
 ```sh
-$ vi /home/geth/.ethereum/password.txt
+vi /home/geth/.ethereum/password.txt
 ```
 ### 6. Start Geth
 Export the `NETWORK_ID` and `BOOTNODES` variables.
 
 For the mainnet:
 ```sh
-$ export NETWORK_ID=248
-$ export BOOTNODES="enode://1e68361cb0e761e0789c014acdbd2491f30176acf25480408382916632e58af1711d857c75be5917319d06049937e49c09ca51a28590e6ee22aceca1161fd583@3.113.207.39:30301,enode://24a55fd923d780213d15f5551bcbb7171343ef095512927d91baca3e7917124c679f894282eefec37350088b31c45a49bb28df790eb88f487ad60a9b6ccc8f3b@35.238.159.190:30301"
+export NETWORK_ID=248
+export BOOTNODES="enode://1e68361cb0e761e0789c014acdbd2491f30176acf25480408382916632e58af1711d857c75be5917319d06049937e49c09ca51a28590e6ee22aceca1161fd583@3.113.207.39:30301,enode://24a55fd923d780213d15f5551bcbb7171343ef095512927d91baca3e7917124c679f894282eefec37350088b31c45a49bb28df790eb88f487ad60a9b6ccc8f3b@35.238.159.190:30301"
 ```
 
 For the testnet:
 ```sh
-$ export NETWORK_ID=9372
-$ export BOOTNODES="enode://319e4b45c1c00e26a4e04ff103242b09fff91dc5a6f6f06ad2181e20683cd9dc1c8dea95588cb4b91d3812e749e0e542e626ee094b6a67476fb67dc2db53d257@34.142.254.12:30301,enode://696f1728b4c44685558fbe9b641d226156668facde8f8d014d7a31e4c462ad0942652494c75db659c46002ca7da0996f61f7dcc26ed9391e42d13af626333f2e@35.247.178.119:30301,enode://54b81cfbdeb1bc55b1d32d78150442b8cee9fdf8e8fb0e8355b405a37afae28595fb31b0a265801d72f34975381619976cb60f8a055e122a24d1a9f668229ad7@34.143.178.245:30301"
+export NETWORK_ID=9372
+export BOOTNODES="enode://319e4b45c1c00e26a4e04ff103242b09fff91dc5a6f6f06ad2181e20683cd9dc1c8dea95588cb4b91d3812e749e0e542e626ee094b6a67476fb67dc2db53d257@34.142.254.12:30301,enode://696f1728b4c44685558fbe9b641d226156668facde8f8d014d7a31e4c462ad0942652494c75db659c46002ca7da0996f61f7dcc26ed9391e42d13af626333f2e@35.247.178.119:30301,enode://54b81cfbdeb1bc55b1d32d78150442b8cee9fdf8e8fb0e8355b405a37afae28595fb31b0a265801d72f34975381619976cb60f8a055e122a24d1a9f668229ad7@34.143.178.245:30301"
 ```
 
 `YOUR_ACCOUNT_ADDRESS` is the address associated with the secret key you have just created.
 ```sh
-$ sudo -u geth geth \
+sudo -u geth geth \
  --networkid $NETWORK_ID \
  --bootnodes $BOOTNODES \
  --syncmode full --gcmode archive \
@@ -255,7 +253,7 @@ Once Geth is started, the block synchronization process begins automatically. Yo
 
 Please ensure you are in the installed directory and execute the command below to monitor the sync progress:
 ```sh
-$ sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
+sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
 ```
 
 You will receive the following output:
@@ -281,7 +279,92 @@ You will receive the following output:
 
 Once the synchronization is complete, you will see the output `false`.
 ```sh
-$ sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
+sudo -u geth geth attach --exec eth.syncing ipc:/home/geth/.ethereum/geth.ipc
 
 false
 ```
+
+## Enabling Fast Finality
+The following steps outline how to enable [Fast Finality](https://github.com/bnb-chain/BEPs/blob/master/BEPs/BEP126.md), a mechanism designed to finalize PoS chains, originally developed by BSC. To enable this, validators need to generate and register a BLS key, which is used to sign blocks and attest to voted blocks.
+
+### 1. Generate the BLS Key
+Generate the key using the Geth command:
+```sh
+# Create a password file
+sudo -u geth openssl rand -base64 18 > password.txt
+
+# Create a wallet
+sudo -u geth geth bls wallet create --datadir /home/geth/.ethereum/ --blspassword ./password.txt
+
+# Generate a BLS Key
+sudo -u geth geth bls account new --datadir /home/geth/.ethereum/ --blspassword ./password.txt
+
+# Move the password file to bls directory
+sudo mv ./password.txt /home/geth/.ethereum/bls/
+```
+To verify the key, use the following Geth command:
+```sh
+sudo -u geth geth bls account list --datadir /home/geth/.ethereum/ --blspassword /home/geth/.ethereum/bls/password.txt
+```
+
+### 2. Register the BLS Public Key
+To associate your BLS key with your validator, it must be registered with the StakeManager contract. You have three options for this: using a manually or explorer or script.
+
+#### Manual Registration
+Call the [updateBLSPublicKey](https://github.com/oasysgames/oasys-genesis-contract/blob/v1.6.1/contracts/StakeManager.sol#L217) function of the [StakeManager](/docs/architecture/hub-layer/contract#preset-contracts) contract to register the BLS public key.
+- blsPublicKey: The hexadecimal format of your BLS public key.
+```solidity
+function updateBLSPublicKey(bytes calldata blsPublicKey) external;
+```
+To verify the registration, call the [getValidatorInfo](https://github.com/oasysgames/oasys-genesis-contract/blob/v1.6.1/contracts/StakeManager.sol#L458C5-L468C10) function. This function returns a tuple containing various pieces of information, with the last item being the corresponding BLS public key.
+- validator: the validator's owner address
+- epoch: specify 0
+```solidity
+function getValidatorInfo(address validator, uint256 epoch)
+  external
+  view
+returns (
+    address operator,
+    bool active,
+    bool jailed,
+    bool candidate,
+    uint256 stakes,
+    bytes memory blsPublicKey
+)
+```
+
+#### Registration via Explorer
+Open the [verified contract page](https://explorer.oasys.games/address/0x0000000000000000000000000000000000001001?tab=contract) of StakeManager on the blockchain explorer, then call the `updateBLSPublicKey` and `getValidatorInfo` functions as described in the manual method.
+
+#### Registration via Script
+Use the Hardhat task script within the [oasys-genesis-contract](https://github.com/oasysgames/oasys-genesis-contract) repository:
+```sh
+# Set your validator owner's private key
+export DEPLOYER_KEY=0xFF..
+
+# Set your BLS public key
+export BLS_KEY=0xFF..
+
+# Execute the update-bls task
+./node_modules/.bin/hardhat update-bls --network localhost
+```
+
+### 3. Enable Fast Finality on the Node
+To enable Fast Finality on your node, add the following options to the node's startup command.
+```sh
+geth \
+ ...
+ --vote=true \
+ --blswallet=/home/geth/.ethereum/bls/wallet \
+ --blspassword=/home/geth/.ethereum/bls/password.txt \
+ --vote-journal-path=/home/geth/.ethereum/bls
+```
+After setting this up, restart the node and check the logs to ensure the following message is printed:
+```console
+Sep 28 09:17:06 validator02 geth[21452]: INFO [09-28|09:17:06.335] Create voteSigner successfully           pubKey=ac05bf82382645e2373ae2a4c32d8ca9065520b76c21f13b5780d76cfc7084a5a074b6cf9c888b236f403fc13a21456c
+Sep 28 09:17:06 validator02 geth[21452]: INFO [09-28|09:17:06.335] Create voteJournal successfully
+Sep 28 09:17:06 validator02 geth[21452]: INFO [09-28|09:17:06.335] Create voteManager successfully
+```
+Ensure the printed `pubKey` matches the one you registered.
+
+The setup is complete. Voting will begin in approximately 1 day (1 epoch). Once voting starts, you can find your vote logged in the `/home/geth/.ethereum/bls` directory.
