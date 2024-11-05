@@ -37,7 +37,73 @@ When creating a bridge instance, configure the following environment variables. 
 | NEXT_PUBLIC_FOOTER_X_URL        | X URL           | `https://discord.com/invite/rYq23RtZHH`   |
 | NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID | Wallet connect project ID | `***`   |
 
-### Step 3: Infra (@Binh )
+### Step 3: Build and Deploy
+This guide provides instructions to build a Docker image, run a container from that image, copy a folder from the container to your host machine, and then set up an Nginx container to serve static files.
+
+#### Prerequisites
+
+- Docker installed on your machine
+- Basic knowledge of Docker and Nginx
+
+#### 1. Build the Docker Image
+
+- Locate to your project directory
+
+	```sh
+	cd explorer-bridge/front
+	```
+
+-  Build the Docker image:
+
+   ```bash
+   docker build -t explorer-bridge-image -f ./Dockerfile .
+   ```
+
+##### 2. Run the Container
+
+- Run a container from the image you just built:
+
+	```bash
+	docker run --name oasys-bridge-container explorer-bridge-image
+	```
+
+##### 3. Copy Folder from Container to Host
+
+Identify the folder you want to copy from the container. For this example, let's assume the static files are in `/app/out`.
+
+Use the `docker cp` command to copy the folder to your host machine:
+
+   ```bash
+   docker cp oasys-bridge-container:/app/out ./build/out
+   ```
+
+##### 4. Run Nginx Container to Serve Static Files
+
+1. Create an `nginx.conf` file to configure Nginx. Below is an example configuration:
+
+   ```nginx
+   server {
+       listen 80;
+       server_name localhost;
+
+       location / {
+           root /usr/share/nginx/html;
+           index index.html index.htm;
+           try_files $uri $uri/ =404;
+       }
+   }
+   ```
+
+2. Run the Nginx container with the static files:
+
+   ```bash
+   docker run --name nginx-static -v $(pwd)/build/out:/usr/share/nginx/html:ro -v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro -p 8080:80 -d nginx
+   ```
+
+   - `-v $(pwd)/build/out:/usr/share/nginx/html:ro` mounts the static files to the Nginx container.
+   - `-v $(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:ro` mounts the custom Nginx configuration.
+
+3. Access the static files by navigating to `http://localhost:8080` in your web browser.
 
 ### Step 4: Check token address
 
