@@ -38,7 +38,7 @@ When creating a bridge instance, configure the following environment variables. 
 | NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID | Wallet connect project ID | `***`   |
 
 ### Step 3: Build and Deploy
-This guide provides instructions to build a Docker image, run a container from that image, copy a folder from the container to your host machine, and then set up an Nginx container to serve static files.
+This guide provides instructions to build a Docker image, run a container from that image, copy a directory from the container to your host machine, and then set up an Nginx container to serve static files.
 
 #### Prerequisites
 
@@ -67,11 +67,11 @@ This guide provides instructions to build a Docker image, run a container from t
 	docker run --name oasys-bridge-container explorer-bridge-image
 	```
 
-##### 3. Copy Folder from Container to Host
+##### 3. Copy Directory from Container to Host
 
-Identify the folder you want to copy from the container. For this example, let's assume the static files are in `/app/out`.
+Identify the directory to copy from the container. In this example, assume the static files are in `/app/out`.
 
-Use the `docker cp` command to copy the folder to your host machine:
+Use the `docker cp` command to copy the directory to your host machine:
 
    ```bash
    docker cp oasys-bridge-container:/app/out ./build/out
