@@ -34,7 +34,7 @@ When creating a bridge instance, configure the following environment variables. 
 | NEXT_PUBLIC_HEADER_LOGO   | Header logo path      | `/images/header/tcgverse_logo.png`   |
 | NEXT_PUBLIC_FOOTER_HOMEPAGE_URL | Homepage URL    | `https://tcgverse.xyz`   |
 | NEXT_PUBLIC_FOOTER_DISCORD_URL  | Discord URL     | `https://discord.com/invite/rYq23RtZHH`   |
-| NEXT_PUBLIC_FOOTER_X_URL        | X URL           | `https://discord.com/invite/rYq23RtZHH`   |
+| NEXT_PUBLIC_FOOTER_X_URL        | X URL           | `https://x.com/tcgverse`   |
 | NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID | Wallet connect project ID | `***`   |
 
 ### Step 3: Build and Deploy
