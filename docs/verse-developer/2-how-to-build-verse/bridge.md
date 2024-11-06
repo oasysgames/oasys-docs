@@ -59,7 +59,7 @@ This guide provides instructions to build a Docker image, run a container from t
    docker build -t explorer-bridge-image -f ./Dockerfile .
    ```
 
-##### 2. Run the Container
+#### 2. Run the Container
 
 - Run a container from the image you just built:
 
@@ -67,7 +67,7 @@ This guide provides instructions to build a Docker image, run a container from t
 	docker run --name oasys-bridge-container explorer-bridge-image
 	```
 
-##### 3. Copy Directory from Container to Host
+#### 3. Copy Directory from Container to Host
 
 Identify the directory to copy from the container. In this example, assume the static files are in `/app/out`.
 
@@ -77,7 +77,7 @@ Use the `docker cp` command to copy the directory to your host machine:
    docker cp oasys-bridge-container:/app/out ./build/out
    ```
 
-##### 4. Run Nginx Container to Serve Static Files
+#### 4. Run Nginx Container to Serve Static Files
 
 1. Create an `nginx.conf` file to configure Nginx. Below is an example configuration:
 
