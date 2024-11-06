@@ -20,3 +20,6 @@ The validator signs signatures using the registered address for block signing. I
 
 ## Smart Contract
 Deployment of new smart contracts to the Hub-Layer is not allowed by design. Only smart contracts accepted by Oasys will be deployed. Transaction execution can be done by paying gas in OAS. Accepted smart contracts are those related to FT/NFT, Rollup, and Bridge.
+
+## Fast Finality
+Unlike Ethereum, where finality can take up to 15 minutes, our finality is achieved in just 30 seconds. This means developers and users no longer need to rely on deep block depth confirmations; simply check if the block is finalized. We've integrated this [finalizer mechanism from BSC](https://github.com/bnb-chain/BEPs/blob/master/BEPs/BEP126.md) to deliver this enhanced performance.
