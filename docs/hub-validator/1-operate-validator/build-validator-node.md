@@ -334,7 +334,20 @@ returns (
 ```
 
 #### Registration via Explorer
-Open the [verified contract page](https://explorer.oasys.games/address/0x0000000000000000000000000000000000001001?tab=contract) of StakeManager on the blockchain explorer, then call the `updateBLSPublicKey` and `getValidatorInfo` functions as described in the manual method.
+- **Open the Verified Contract Page**:
+   - Visit the [verified contract page of StakeManager](https://explorer.oasys.games/address/0x0000000000000000000000000000000000001001?tab=contract) on the Oasys blockchain explorer.
+
+- **Connect Your Wallet**:
+   - In the upper right corner of the screen, click "Connect wallet" and connect the wallet associated with your "Validator Owner Address".
+
+- **Update BLS Public Key**:
+   - Once your wallet is connected, navigate to the "Write contract" tab where you can interact directly with the contract's functions.
+   - Find the `updateBLSPublicKey` function within the tab. Input your BLS Public Key into the `blsPublicKey (bytes)` field. **(The `updateBLSPublicKey` function will be available on the Explorer only after Oasys has re-verified the contract following the Layer 1 update on November 18th 2024.)**
+   - Click the "Write" button to submit the transaction. This action will update the BLS Public Key associated with your validator on the blockchain.
+
+- **Check the Update**:
+   - To ensure the update was successful, switch to the "Read contract" tab.
+   - Use the `getValidatorInfo` function. Enter "Validator Owner Address" for `validator` and "0" for `epoch`, then click the "Read" button. This function allows you to retrieve and verify the details of your validator, including the newly updated BLS Public Key.
 
 #### Registration via Script
 Use the Hardhat task script within the [oasys-genesis-contract](https://github.com/oasysgames/oasys-genesis-contract) repository:
