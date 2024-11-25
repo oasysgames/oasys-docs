@@ -342,7 +342,7 @@ returns (
 
 - **Update BLS Public Key**:
    - Once your wallet is connected, navigate to the "Write contract" tab where you can interact directly with the contract's functions.
-   - Find the `updateBLSPublicKey` function within the tab. Input your BLS Public Key into the `blsPublicKey (bytes)` field. **(The `updateBLSPublicKey` function will be available on the Explorer only after Oasys has re-verified the contract following the Layer 1 update on November 18th 2024.)**
+   - Find the `updateBLSPublicKey` function within the tab. Input your BLS Public Key into the `blsPublicKey (bytes)` field.
    - Click the "Write" button to submit the transaction. This action will update the BLS Public Key associated with your validator on the blockchain.
 
 - **Check the Update**:
