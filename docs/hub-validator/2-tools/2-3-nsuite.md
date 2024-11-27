@@ -99,7 +99,7 @@ If you are inputing 1.5 OAS, please input:
 ```
 
 ## Updating BLS Public Key
-Update the your Validator's BLS Public Key of the StakeManager contract.
+Update your Validator's BLS Public Key of the StakeManager contract.
 
 ### 1. Run Workflow
 Create a new workflow. Select `Contract Method > Standard method execution` for the workflow type.
@@ -132,7 +132,7 @@ Check your BLS Public Key.
 <img src="/img/docs/techdocs/nsuite/update-bls-public-key-contract-details.jpg" width="600" />
 
 ## Updating Bridge Contract
-Update the your Verse's bridge contract deployed on the Hub-Layer.
+Update your Verse's bridge contract deployed on the Hub-Layer.
 
 Estimated working time is 30-60 minutes.
 
