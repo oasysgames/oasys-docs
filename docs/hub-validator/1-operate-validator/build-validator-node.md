@@ -362,6 +362,10 @@ export BLS_KEY=0xFF..
 ./node_modules/.bin/hardhat update-bls --network localhost
 ```
 
+#### Registration via N Suite
+
+Please refer to [this guide](/docs/hub-validator/tools/2-3-nsuite#updating-bls-public-key) for the method using N Suite.
+
 ### 3. Enable Fast Finality on the Node
 To enable Fast Finality on your node, add the following options to the node's startup command.
 ```sh
