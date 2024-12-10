@@ -25,7 +25,7 @@ for your Verse in the file within
 eg. `bridge/constants/chains/tcg.ts`
 are correct.
 
-```tsx
+```ts
 export const TOKEN_LIST: { [k in TokenIndex]: TokenInfo } = {
     // mainnet
     [TokenIndex.OAS]: {
@@ -38,26 +38,27 @@ export const TOKEN_LIST: { [k in TokenIndex]: TokenInfo } = {
         symbol: 'USDT',
         icon: '/images/tokens/USDT.png',
     }
+    // your token information
 ```
 
-```
+```ts
 export const TCGVerse = /*#__PURE__*/ defineChain({
-  id: ChainId.TCG,
-  name: 'TCG Verse',
-  nativeCurrency: { name: 'Oasys', symbol: 'OAS', decimals: 18 },
-  rpcUrls: {
-    'default': {
-      http: [ 'https://rpc.tcgverse.xyz' ],
+    id: ChainId.TCG,
+    name: 'TCG Verse',
+    ...
+    erc20Addresses: {
+        [TokenIndex.USDT]: '0x9e1028F5F1D5eDE59748FFceE5532509976840E0',
+        [TokenIndex.TCGC]: '0xA29b548056c3fD0f68BAd9d4829EC4E66f22f796',
+        // ...
+        // your token address
     },
-  },
-  ...
 ```
 
 ### Step 3: Add tokens if necessary
 
-If adding a new token is required, please update the following two files:
+If adding a new token is required, please update the following file:
 
-1. `bridge/constants/types.ts`
+`bridge/constants/types.ts`
 
 ```tsx
 export enum TokenIndex {
