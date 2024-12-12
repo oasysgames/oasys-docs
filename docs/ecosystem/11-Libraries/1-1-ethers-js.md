@@ -59,8 +59,8 @@ ethers.getDefaultProvider([network,[options])
 |--|---------|
 |alchemy|[Alchemy](https://alchemyapi.io/) API Token|
 |etherscan|[Etherscan](https://etherscan.io/) API Token|
-|infura|[INFURA](https://infura.io/) Project ID or \{projectId, projectSeceret\}|
-|pocket|[Pocket Network](https://pokt.network/) Application ID or \{applicationId, applicationSeceretKey\}|
+|infura|[INFURA](https://infura.io/) Project ID or {projectId, projectSeceret}|
+|pocket|[Pocket Network](https://pokt.network/) Application ID or {applicationId, applicationSeceretKey}|
 |quorum|The number of backends that must agree (default: 2 for mainnet, 1 for testnets)|
 
 ### Other Providers
