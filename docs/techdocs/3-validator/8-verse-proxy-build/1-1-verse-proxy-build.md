@@ -166,7 +166,7 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 |  gt  |  txValue > condition is allowed  |
 |  gte  |  txValue >= condition is allowed  |
 |  lt  |  txValue < condition is allowed  |
-|  lte  |  txValue <= condition is allowed  |
+|  lte  |  txValue {'<='} condition is allowed  |
 
 #### Deployer
 You can control the deployer of a verse.

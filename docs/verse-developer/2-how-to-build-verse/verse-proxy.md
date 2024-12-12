@@ -222,7 +222,7 @@ export const getTxAllowList = (): Array<TransactionAllow> => {
 |  gt  |  txValue > condition is allowed  |
 |  gte  |  txValue >= condition is allowed  |
 |  lt  |  txValue < condition is allowed  |
-|  lte  |  txValue <= condition is allowed  |
+|  lte  |  txValue {'<='} condition is allowed  |
 
 #### Transaction access rate limit(Option)
 Please refer to the section [below](/docs/verse-developer/how-to-build-verse/verse-proxy#transaction-rate-limit).
