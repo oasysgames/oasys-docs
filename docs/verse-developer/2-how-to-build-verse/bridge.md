@@ -94,8 +94,6 @@ When creating a bridge instance, configure the following environment variables. 
 | NEXT_PUBLIC_MENU_BRIDGE_VISIBLE       | Set to true to show bridged Token               | true or false                           |
 | NEXT_PUBLIC_L2_CHAIN_ID   | L2 chain ID           | `2400`                                  |
 
-### Step 5: Build and Deploy
-This guide provides instructions to build a Docker image, run a container from that image, copy a directory from the container to your host machine, and then set up an Nginx container to serve static files.
 
 #### Prerequisites
 
