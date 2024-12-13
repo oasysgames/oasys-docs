@@ -98,8 +98,41 @@ If you are inputing 1.5 OAS, please input:
 1500000000000000000
 ```
 
+## Updating BLS Public Key
+Update your Validator's BLS Public Key of the StakeManager contract.
+
+### 1. Run Workflow
+Create a new workflow. Select `Contract Method > Standard method execution` for the workflow type.
+
+- Network: Select the `Oasys`.
+- From Address: Select your `Validator Owner Address` (NOT Operator Address).
+- Contract: Select `StakeManager` of the `Preset` tab.
+- Method: Select the `updateBLSPublicKey(bytes)`.
+- `Input data > blsPublicKey (bytes)`: Input your `BLS public key`
+
+For example:
+<img src="/img/docs/techdocs/nsuite/update-bls-public-key-workflow.jpg" width="600" />
+
+Run the workflow after input is complete.
+
+### 2. Check result
+After the workflow has been approved, check if the contract has been successfully updated. Select the `Completed` tab and open the approved workflow.
+
+Click the icon to the right of the `StakeManager` name under `Contract` in the `Execution details` of the workflow.
+
+<img src="/img/docs/techdocs/nsuite/update-bls-public-key-execution-details.jpg" width="600" />
+
+Open the `Read` tab under `Method` in the `Contract details` popup. Click on `getValidatorInfo(address,uint256)`. Enter the following details and click the `Query` button.
+
+- validator(address): Input your `Validator Owner Address` (NOT Operator Address)
+- epoch(uint256): Input `0`
+
+Check your BLS Public Key.
+
+<img src="/img/docs/techdocs/nsuite/update-bls-public-key-contract-details.jpg" width="600" />
+
 ## Updating Bridge Contract
-Update the your Verse's bridge contract deployed on the Hub-Layer.
+Update your Verse's bridge contract deployed on the Hub-Layer.
 
 Estimated working time is 30-60 minutes.
 
