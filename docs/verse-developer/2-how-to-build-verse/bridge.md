@@ -1,4 +1,3 @@
-
 # Bridge
 
 The Bridge service enables asset transfers exclusively within the Oasys blockchain, specifically between Layer 1 and Layer 2.
@@ -11,11 +10,13 @@ If you set up bridge for a Verse, You have to set it up manually.
 
 #### Git clone
 
-First, clone the [explorer](https://github.com/oasysgames/blockscout-v6-frontend.git) repository:
+You need to set up the Blockscout frontend and backend first.
+If you haven't built the frontend yet, clone the repository using the following command:
 
 ```sh
 https://github.com/oasysgames/blockscout-v6-frontend.git
 ```
+
 
 ### Step 2: Check token address
 
