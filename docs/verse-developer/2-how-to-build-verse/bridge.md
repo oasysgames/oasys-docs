@@ -6,17 +6,15 @@ The Bridge service enables asset transfers exclusively within the Oasys blockcha
 
 If you set up bridge for a Verse, You have to set it up manually.
 
-### Step 1: Fork the Github repository
 
-#### Git clone
+### Step 1: Navigate to the frontend directory
 
-You need to set up the Blockscout frontend and backend first.
-If you haven't built the frontend yet, clone the repository using the following command:
+You need to [set up the Blockscout](/docs/verse-developer/how-to-build-verse/explorer) frontend and backend first.
+And navigate to the frontend directory:
 
 ```sh
-https://github.com/oasysgames/blockscout-v6-frontend.git
+cd blockscout-v6-frontend
 ```
-
 
 ### Step 2: Check token address
 
