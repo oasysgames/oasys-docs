@@ -3,25 +3,23 @@
 
 # Blockchain Explorer
 
-Blockchain Explorer is a search engine that basically performs searches and easily searches for blockchain to track blockchain transactions. Bitcoin and Altcoin traders use Blockchain Explorer to track and verify transactions on Bitcoin networks.
-
-Blockchain Explorer makes it easier for user to see all transactions on the public blockchain and access all data related to blockchain, transactions, and wallets.
-
+The Oasys Blockchain Explorer is a tool for tracking and 
+verifying all transactions, blocks, addresses, and smart contracts on 
+the Oasys chain. 
+This explorer allows users to monitor all activities on the Oasys network with 
+complete transparency.
 
 ## Oasys Explorer 
 - [mainnet](https://explorer.oasys.games/)
 - [testnet](https://explorer.testnet.oasys.games/)
 
+## Key Features of Oasys Explorer
 
-## Usecase of Explorer
-
-1. Blockchain Explorer lets you navigate through the entire transaction history of a particular wallet address. This can audit specific wallet addresses while improving the transparency of the blockchain.
-2. Blockchain Explorer is clear when searching for incoming addresses. In addition to the transaction receiving address, users can increase transaction transparency by preventing excessive input values from being transferred to transaction fees.
-3. Blockchain Explorer can browse the details of unconfirmed transactions and access the details of unconfirmed transactions through Mempool status.
-4. Users can also use Blockchain Explorer to discover orphan blocks and identify corrosion blocks.
-5. Blockchain Explorer lets you identify double-spending transactions in a blockchain network.
-6. Blockchain Explorer can view transaction-related fees, blockchain difficulty, hash rate, and details.
-7. Users can use Blockchain Explorer to explore Genesis blocks or basic blocks of the blockchain. This makes it easy to find the first block mined in a particular chain with miner and details.
+1. Transaction History: Track the complete transaction history of specific wallet addresses and monitor OAS token transfers.
+2. Smart Contract Verification: Examine deployed smart contract code and interactions.
+3. Block Information: View detailed block information, validator signatures, and included transactions.
+4. Network Status: Monitor real-time information about the Oasys chain, including validator information and gas prices.
+5. Token Transfer Tracking: Track the transfer history of OAS tokens and Verse tokens, and verify transaction status.
 
 ## Purpose of Using Explorer
 
