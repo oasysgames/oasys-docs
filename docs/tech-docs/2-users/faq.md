@@ -11,3 +11,13 @@ To resolve a stuck pending transaction, you can try the following method:
 -	Set the gas price to 10 times higher than the normal rate (e.g., if the standard rate is 1.5 Gwei, set it to 15 Gwei). This significantly increases the chances of clearing the pending transaction.
 
 ---
+
+### Q: How can I resolve the issue of `oasfi` not outputting CSV data for the specified date or epoch range?
+
+`oasfi` references the existing CSV file and does not output data for epochs earlier than the latest epoch already in the file.  
+Pleae try the following:
+
+- Use the `--output=output_csv/xxxx.csv` option when running the command to save the CSV with a new name.
+- If the above doesn’t work, back up the `output_csv` directory, delete it, and run the process again.
+
+---
