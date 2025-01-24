@@ -109,6 +109,36 @@ You can check the environment variable lists at [this page](https://docs.blocksc
 | NEXT_PUBLIC_TOKENS_UPDATED_NAME | Set the token name if the token has changed | - |
 | NEXT_PUBLIC_TOKENS_UPDATED_SYMBOL | Set the token symbol if the token has changed | - |
 
+### Featured Network Configuration Properties
+The `NEXT_PUBLIC_FEATURED_NETWORKS` environment variable expects a URL pointing to a JSON file that contains an array of network configurations. Each network configuration object in the array should have the following properties:
+
+| Property | Type | Description | Example |
+|----------|------|-------------|---------|
+| title | string | The display name of the network shown in the network menu | "HUB-Mainnet" |
+| url | string | The URL of the network's explorer | "https://explorer.oasys.games/" |
+| group | string | The group category for the network (either "Mainnets" or "Testnets") | "Mainnets" |
+| icon | string | URL to the network's icon image (optional) | "" |
+
+Example JSON structure:
+```json
+[
+  {
+    "title": "HUB-Mainnet",
+    "url": "https://explorer.oasys.games/",
+    "group": "Mainnets",
+    "icon": ""
+  },
+  {
+    "title": "HUB-Testnet",
+    "url": "https://explorer.testnet.oasys.games/",
+    "group": "Testnets",
+    "icon": ""
+  }
+]
+```
+
+The networks will be displayed in the Blockscout UI's network menu, grouped by their specified group category.
+
 ### Manual Setup
 If you set up blockscout for a Verse, You have to set it up manually.
 #### Backend Setup
