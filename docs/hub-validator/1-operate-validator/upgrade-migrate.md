@@ -100,7 +100,7 @@ $ systemctl start geth
 By following these steps, you should be able to successfully resync your node.
 
 
-## Migrating Validator to new Server
+## Migrating Validator to New Server
 Follow these steps to migrate the validator node to a new server:
 
 ### 1. Stop old validator node

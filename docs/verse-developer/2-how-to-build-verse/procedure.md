@@ -64,7 +64,7 @@ For users who opt for contract method calls, like Nsuite users, follow the steps
 
 The contract to deploy the contract sets is [L1BuildAgent](https://github.com/oasysgames/oasys-opstack/blob/develop/packages/contracts-bedrock/src/oasys/L1/build/L1BuildAgent.sol), deployed at `0x85D92cD5d9b7942f2Ed0d02C6b5120E9D43C52aA`.
 - chainId: The chain ID of your Verse. Ensure this chain ID is unique globally.
-- cfg: A tuple of the configuration. Please refer to [the optional configuration page](/docs/verse-developer/how-to-build-verse/optional-configs#verse-contracts-deployment-configuration).
+- cfg: A tuple of the configuration. Please refer to [the optional configuration page](/docs/verse-developer/how-to-build-verse/optional-configs#verse-contracts-build-configuration).
 ```solidity
 function build(
     uint256 chainId,

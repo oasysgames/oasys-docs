@@ -104,9 +104,9 @@ key:     0x0123456789abcdef0123456789abcdef0123456789abcdef
 ## 5-1. Deploy contracts for Verse-Layer to Hub-Layer.
 
 If you've already built the Verse, skip this procedure.
-And you can check VerseInfo with build_transaction at [check-verse-page](#5-2-check-verse-information-from-verse_build-transaction).
+And you can check VerseInfo with build_transaction at [check-verse-page](#5-2-check-verse-information).
 
-For users wishing to build using Multisig like Nsuite, detailed instructions are provided at the [end](/docs/verse-developer/how-to-build-verse/manual#construct-verse-through-direct-contract-function-calls) of this page.
+For users wishing to build using Multisig like Nsuite, detailed instructions are provided at the [end](#construct-verse-through-direct-contract-function-calls) of this page.
 
 ### Connect wallet
 Access [tools-fe](https://tools-fe.oasys.games) and switch to the oasys network.
@@ -157,7 +157,7 @@ To build a Verse, set the following
 ![Build](/img/docs/techdocs/tools-fe/build.png)
 
 
-If the Verse build is successful, the following will be displayed. You can get verse info with build_tx_hash at [check-verse-page](#5-2-check-verse-information-from-verse_build-transaction).
+If the Verse build is successful, the following will be displayed. You can get verse info with build_tx_hash at [check-verse-page](#5-2-check-verse-information).
 
 ![Verse build Success](/img/docs/techdocs/tools-fe/verse_build_success.png)
 
@@ -211,7 +211,7 @@ $ docker-compose up -d message-relayer
 ## 7. Set Instant Verifier
 Oasys L2 is a fork of Optimistic Rollup. A significant limitation is **the extended delay in bridge** transactions from L2 to L1, which often takes up to 7 days. To bypass this lengthy waiting period, we highly recommend using our **Verse Submitter, which enables instant bridge** transactions from L2 to L1.
 
-For instructions on how to set up the Verse Submitter, please refer to the [this section](/docs/verse-developer/how-to-build-verse/build-verse-submitter).
+For instructions on how to set up the Verse Submitter, please refer to the [this section](/docs/archive/verse-v0/build-verse-submitter).
 
 For users interested in our instant verification mechanism, please visit [this page](/docs/architecture/verse-layer/rollup/2-1-instant-verifier).
 
@@ -241,7 +241,7 @@ function depositERC20(
     uint256 amount
 ) external;
 ```
-After making your deposit, please verify the outcome in the [Check Your Deposit](/docs/verse-developer/how-to-build-verse/manual#check-your-deposit) section above.
+After making your deposit, please verify the outcome in the [Check Your Deposit](#check-your-deposit) section above.
 
 ### Build
 The build contract is named [L1BuildAgent](https://github.com/oasysgames/oasys-optimism/blob/4d667a169296f37422ffaa4901e8d149e84abe5a/packages/contracts/contracts/oasys/L1/build/L1BuildAgent.sol), and its address is `0x5200000000000000000000000000000000000008`.
@@ -256,4 +256,4 @@ function build(
     address proposer
 ) external;
 ```
-After completing the build, please verify the newly deployed contract addresses, such as the bridge, and download the JSON file. For additional details, refer to the [Build Verse](/docs/verse-developer/how-to-build-verse/manual#build-verse) section above.
+After completing the build, please verify the newly deployed contract addresses, such as the bridge, and download the JSON file. For additional details, refer to the [Build Verse](#build-verse) section above.

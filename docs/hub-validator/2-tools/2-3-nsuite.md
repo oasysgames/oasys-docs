@@ -31,7 +31,7 @@ Please `approve sOAS token` use before staking it.
 
 If there is no method for approve sOAS, please contact N Suite team. 
 
-On Execution details, Please input [Validator Operator](/docs/architecture/hub-layer/validator-account#validator-operator-operator-account) in `operator(address)`.
+On Execution details, Please input [Validator Operator](/docs/architecture/hub-layer/validator-account#validator-operator) in `operator(address)`.
 
 
 For confirming operator address, run following command on validator pc.
@@ -75,7 +75,7 @@ Select stake(address,uint8,uint256) if you want to run `$oaspos staker:stake` co
 Please input, Title of Request, Message for Request, Duedate in advance.
 On Execution details, Please input 
 
-- input data [Validator owner address](/docs/architecture/hub-layer/validator-account#validator-owner-owner-account)
+- input data [Validator owner address](/docs/architecture/hub-layer/validator-account#validator-owner)
 
 You can use owner address previously sent to foundation.
 

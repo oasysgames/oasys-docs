@@ -237,7 +237,7 @@ Various factors might prompt you to migrate your operating validator node to a d
 - Enhanced Security
 - Better Network Connectivity
 
-For step-by-step instructions on how to move your validator node to a new server, please consult the [Migrating Validator to a New Server section](/docs/hub-validator/operate-validator/upgrade-migrate#migrating-validator-to-a-new-server).
+For step-by-step instructions on how to move your validator node to a new server, please consult the [Migrating Validator to New Server section](/docs/hub-validator/operate-validator/upgrade-migrate#migrating-validator-to-new-server).
 
 ---
 ### Q. How to Replace Operator Key?

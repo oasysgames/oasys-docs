@@ -63,7 +63,7 @@ $ geth attach --exec 'admin.peers.length' ipc:/home/geth/.ethereum/geth.ipc
 ### How to Check Slashing Status?
 Slashing occurs when your node is down. As long as your node operates normally, which can be checked via block height monitoring, slashing should not be a concern.
 
-Please refer to [FAQ No.8](/docs/hub-validator/operate-validator/faq#q8-how-can-i-check-slashings) for further details.
+Please refer to [FAQ](/docs/hub-validator/operate-validator/faq#q-how-can-i-check-slashings) for further details.
 
 
 ## Monitoring Metrics With Rich Web UI

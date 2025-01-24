@@ -90,7 +90,7 @@ Edit config.yml to set verse submitter.
 
 :::caution
 - Please check you have verse submitter's private key at the **keystore** directory.
-  - If you do not have a private key, [please create one](#create-private-key).
+  - If you do not have a private key, please create one.
   - If password protected, make sure password.txt exists on disk.
 - Please deposit OAS for gas to submitter's wallet on L1(10 OAS or higher).
 - You need to listen **4101(tcp/udp)** port so it can send, receive signatures with other verifiers.
@@ -204,7 +204,7 @@ To better visualize the results of your queries, execute the following commands 
 ```
 
 Before examining the Verse verification status, it's essential to confirm your Verse's state_commitment_chain (scc) contract address.
-You can check the state_commitment_chain address as `StateCommitmentChain` at `addresses.json` downloaded from [tools-fe](/docs/verse-developer/how-to-build-verse/manual#4-2-check-verse-information).
+You can check the state_commitment_chain address as `StateCommitmentChain` at `addresses.json` downloaded from [tools-fe](/docs/archive/verse-v0/manual#5-2-check-verse-information).
 
 You can examine your Verse's verification status by running an SQL command with the `StateCommitmentChain` address as a condition in the WHERE clause.
 
