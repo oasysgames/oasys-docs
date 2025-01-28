@@ -227,7 +227,7 @@ await vaultNoWithdraw.deposit({ value: ethers.parseEther("1") });
 
 #### Creating and Applying the `contract_update.json` File
 Create a `contract_update.json` file as shown below. Specify the `deployedBytecode` of the OASVault contract for the `“code”` field. If you are using Hardhat, the `deployedBytecode` can be found in `artifacts/contracts/OASVault.sol/OASVault.json` after compilation.
-[Apply the contract_update.json file](#include-the-following-environment-when-launching-op-geth) to op-geth.
+Apply the contract_update.json file to L2 Geth.
 
 ```json
 {

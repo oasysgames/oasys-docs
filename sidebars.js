@@ -320,7 +320,6 @@ const sidebars = {
             'verse-developer/how-to-build-verse/change-name-symbol-token',
           ],
         },
-        'verse-developer/how-to-build-verse/contract-update',
         'verse-developer/how-to-build-verse/the-graph',
       ],
     },
