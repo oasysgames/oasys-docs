@@ -91,3 +91,11 @@ With respect to your purchase, exchange or acquisition of any Tokens, if any, yo
 3) DappRadar, Dapp Industry Overview: August 2021, 2021.08  
 4) DappRadar, BGA Blockchain Game Report Q3 2021, 2021.10.14  
 5) Newzoo - Global Games Market Report  
+
+## Change Log
+_4th Feb 2025 Update_
+
+The following sections have been updated to reflect that authorized EOAs can deploy contracts.
+
+- 4.Solution - Oasys Architecture > 4-1. Ecosystem Design > Hub-Layer (Layer 1) > High Scalability
+- 5.Technologies > 5-1. Hub-Layer > Outline & Smart Contract
