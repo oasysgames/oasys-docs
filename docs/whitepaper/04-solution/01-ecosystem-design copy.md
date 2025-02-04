@@ -33,7 +33,7 @@ The Hub-Lyer specializes in storing and exchanging data securely and in a stable
 ### High Network Stability
 Block time is set to 15 seconds, the same as Ethereum, which is enough time to transfer data to globally distributed nodes. The Hub-Layer has enough resilience to operate with thousands of Verse-Layers connected, without the risk of network failure due to trouble with nodes.
 ### High Scalability
-In principle, the Hub-Layer can only be used for FT, NFT, Bridge, and Rollup contracts, only the Verse Layer will experience heavy traffic. Exceptionally, some contracts may be deployed on the Hub-Layer via governance approval, but these are controlled by the governance, so the stability of the blockchain remains unaffected. Also, when posting Verse-Layer transactions to the Hub-Layer, rollups are used to minimize the number of transactions onto the Hub-Layer. This enables scalability that does not depend on an increase of Verse-Layer transactions.
+In principle, the Hub-Layer can only be used for FT, NFT, Bridge, and Rollup contracts, only the Verse Layer will experience heavy traffic. Exceptionally, some contracts may be deployed on the Hub-Layer from Oasys-approved EOAs (Externally Owned Account), but these have been vetted by Oasys, so the stability of the blockchain remains unaffected. Also, when posting Verse-Layer transactions to the Hub-Layer, rollups are used to minimize the number of transactions onto the Hub-Layer. This enables scalability that does not depend on an increase of Verse-Layer transactions.
 ### High Data Availability
 Transaction data on the Verse-Layer (Layer 2) is reflected on the Hub-Layer (Layer 1), so any event in the Verse-Layer is verifiable.
 ### Eco-Friendly
