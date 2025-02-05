@@ -86,7 +86,7 @@ You can check the environment variable lists at [this page](https://docs.blocksc
 
 |    Variable               |   Description                              | Value |
 |---------------------------|--------------------------------------------|--------|
-| NEXT_PUBLIC_APP_PROTOCOL              | Frontend protocol.                     |    http   |
+| NEXT_PUBLIC_APP_PROTOCOL              | Frontend protocol.                     |    https   |
 | NEXT_PUBLIC_APP_HOST              | Frontend UI host.                     |   Your domain (explorer.oasys.games) 
 | NEXT_PUBLIC_NETWORK_NAME              | Displayed name of the network.                     |    Verse name
 | NEXT_PUBLIC_NETWORK_SHORT_NAME              | Used for SEO attributes (e.g, page description).                     |    OoG
@@ -94,7 +94,7 @@ You can check the environment variable lists at [this page](https://docs.blocksc
 | NEXT_PUBLIC_IS_TESTNET              | Set to true if network is testnet.                     |    true | false
 | NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID              | Project id for [WalletConnect](https://cloud.walletconnect.com/) integration.                     |    Wallet connect id
 | NEXT_PUBLIC_NETWORK_RPC_URL              | Chain public RPC server url, see [https://chainlist.org](https://chainlist.org) for the reference.                     |    -
-| NEXT_PUBLIC_API_PROTOCOL              | Main API protocol.                     |    `https` | `http`
+| NEXT_PUBLIC_API_PROTOCOL              | Main API protocol.                     |    `https`
 | NEXT_PUBLIC_API_HOST              | Main API host. It is recommended to set the same value as NEXT_PUBLIC_APP_HOST. |    Your domain (explorer.oasys.games)
 | NEXT_PUBLIC_HOMEPAGE_PLATE_TEXT_COLOR              | Text color of the hero plate on the homepage (escape "#" symbol if you use HEX color codes or use rgba-value instead).                     |    `white` | `\#DCFE76` |
 | NEXT_PUBLIC_HOMEPAGE_PLATE_BACKGROUND              | Background css value for hero plate on the homepage (escape "#" symbol if you use HEX color codes or use rgba-value instead)             |    `radial-gradient(103.03% 103.03% at 0% 0%, rgba(183, 148, 244, 0.8) 0%, rgba(0, 163, 196, 0.8) 100%), var(--chakra-colors-blue-400)` | `radial-gradient(at 15% 86%, hsla(350,65%,70%,1) 0px, transparent 50%)` \| `no-repeat bottom 20% right 0px/100% url(https://placekitten/1400/200)`.  
