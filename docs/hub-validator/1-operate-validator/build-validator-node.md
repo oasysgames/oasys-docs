@@ -18,7 +18,7 @@ Oasys's full node is capable of synchronizing blocks and executing commands on g
 
 - [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/hd-requirement)
 - [x] 2.Install geth through one of the following two options:
-  - [**Express setup**](/docs/hub-validator/operate-validator/build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
+  - [**Express setup**](/docs/hub-validator/operate-validator/build-validator-node#express-setup): This is a straightforward method for setting up the validator node in your preferred environment.
   - [**Manual setup**](/docs/hub-validator/operate-validator/build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
 - [x] 3.Join our official [Discord](https://discord.gg/oasysgames). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
 
@@ -26,7 +26,7 @@ Oasys's full node is capable of synchronizing blocks and executing commands on g
 The Oasys validator node operation involves running the validator client on the Oasys platform. To participate in the validator node operation, it is necessary to have a stake of **10,000,000 OAS** from a delegator or through self-delegation. Please make sure to prepare the required stake in advance.
 
 - [x] 1.[**Check Hardware requirements**](/docs/hub-validator/operate-validator/hd-requirement) & [**validator account roles**](/docs/architecture/hub-layer/validator-account)
-- [x] 2.Install geth through one of the following tow options:
+- [x] 2.Install geth through one of the following two options:
   - [**Express setup**](/docs/hub-validator/operate-validator/build-validator-node#express-setup): his is a straightforward method for setting up the validator node in your preferred environment.
   - [**Manual setup**](/docs/hub-validator/operate-validator/build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
 - [x] 3.[**Join validator with PoS client**](/docs/hub-validator/operate-validator/join-validator#cli-tool) or [**Join validator with Web**](/docs/hub-validator/operate-validator/join-validator#webtools-fe). Web is recommended. (Please follow the steps for [joining](/docs/hub-validator/tools/2-3-nsuite#joining) as an N Suite user)
@@ -80,7 +80,7 @@ The operator address required for registration in the later [Join Validator](/do
 
 The address is written in the wallet.txt file located at `/home/geth/.ethereum/wallet.txt`. You can find the created account's address after the sentence `Public address of the key:`.
 
-For more information about the operator, please refer to [this discription](/docs/architecture/hub-layer/validator-account#validator-operator)
+For more information about the operator, please refer to [this description](/docs/architecture/hub-layer/validator-account#validator-operator)
 :::
 
 ### 5. Check `sestatus` Command
@@ -216,7 +216,7 @@ Path of the secret key file: /home/geth/.ethereum/keystore/UTC--2022-03-14T12-11
 :::info Operator Address
 The generated address is intended to be registered as an operator address in the later [Join Validator](/docs/hub-validator/operate-validator/join-validator#2-register-the-validator-operator) process. You can find the created account's address after the sentence `Public address of the key:`.
 
-For more information about the operator, please refer to [this discription](/docs/architecture/hub-layer/validator-account#validator-operator)
+For more information about the operator, please refer to [this description](/docs/architecture/hub-layer/validator-account#validator-operator)
 :::
 
 Save the secret key password to a text file using the following command:
