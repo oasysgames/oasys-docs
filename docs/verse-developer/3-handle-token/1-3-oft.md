@@ -1,14 +1,11 @@
 # oFT
-oFT is a Fungible Token created on Oasys hub.
-oFT can be bridged between the Verse layer(L2) and the Hub layer(L1).
+oFT is a Fungible Token created on Oasys Hub.
+oFT can be bridged between the Verse Layer(L2) and the Hub Layer(L1).
 
 When creating an oFT, it is necessary to create an ERC20 for each Hub (L1) and Verse (L2).
 
 ## How to create oFT
-From here on out, We will explain how to create an oFT, using [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oft.ts) in [the bride tutorial](https://github.com/oasysgames/l1-l2-bridge-tutorial) as a reference.
-This tutorial actually implements [the contract](https://github.com/oasysgames/oasys-optimism/tree/develop/packages/contracts) used in Verse and Hub.
-
-In this tutorial, L1 is set to Oasys testnetwok and L2 to Oasys SAND Verse.
+In this tutorial, L1 is set to Oasys Testnet and L2 to Oasys SAND Verse.
 ```typescript
 // hardhat.config.ts
 networks: {
@@ -21,6 +18,7 @@ networks: {
     url: 'https://rpc.sandverse.oasys.games/',
     chainId: 20197,
     accounts: [process.env.PRIVATE_KEY],
+    initialBaseFeePerGas: 0,
     gasPrice: 0,
   },
 },
@@ -28,80 +26,70 @@ networks: {
 
 If you want to create an oFT, please refer to this tutorial to generate the code to create an oFT.
 
-When you  generate the code to create an oFT, please also do the following.
+When you create an oFT, please also do the following.
 * Set the name or symbol of the oFT
 * Set network you want to create oFT at `hardhat.config.ts` (Both L1 and L2)
+* Please refer to the `Address` and `Reference Code` of [Hub Layer’s Preset Contracts](/docs/architecture/hub-layer/contract#preset-contracts) for L1StandardERC20Factory and [Verse’s Preset Contracts](/docs/architecture/verse-layer/contract#preset-contracts) for L2StandardTokenFactory.
+* For L1StandardERC20, please refer [here](https://github.com/oasysgames/oasys-optimism/blob/v0.1.7/packages/contracts/contracts/oasys/L1/token/L1StandardERC20.sol), and for L2StandardERC20, please refer [here](https://github.com/oasysgames/oasys-optimism/blob/v0.1.7/packages/contracts/contracts/standards/L2StandardERC20.sol).
 
-
-### Create contract required for creating ERC20
+### Create L1StandardERC20 at Oasys Hub
 * Switch to the Hub network where you want to create the oFT
-* Create a factory contract to create L1StandardERC20
 
-```typescript
-// Get Hub-Layer pre-deployed contracts.
-switchNetwork('l1')
-const [signer] = await hre.ethers.getSigners()
-
-const l1ERC20Factory = (
-  await hre.ethers.getContractFactory('L1StandardERC20Factory')
-).attach(addresses.l1.L1StandardERC20Factory)
+```sh
+npx hardhat console --network l1
 ```
 
-* Switch to the Verse network where you want to create the oFT
-* Create a factory contract to create L2StandardERC20
-
-```typescript
-// Get Verse-Layer pre-deployed contracts.
-switchNetwork('l2')
-
-const l2ERC20Factory = await hre.ethers.getContractAt(
-  'L2StandardTokenFactory',
-  addresses.l2.L2StandardTokenFactory,
-)
-```
-
-### Create L1StandardERC20 at Oasys hub
-* Switch to the Hub network where you want to create the oFT
 * Create L1StandardERC20 with oFT_NAME, oFT_SYMBOL
-* Get L1StandardERC20 contact
 
 ```typescript
-switchNetwork('l1')
-const tx1 = await l1ERC20Factory.createStandardERC20(oFT_NAME, oFT_SYMBOL)
+const oFT_NAME = "MyToken"
+const oFT_SYMBOL = "MTK"
+const l1ERC20FactoryAbi = [ "function createStandardERC20(string memory _name, string memory _symbol) external" ]
+const l1ERC20FactoryAddress = "0x5200000000000000000000000000000000000004"
+const l1ERC20Factory = await ethers.getContractAt( l1ERC20FactoryAbi , l1ERC20FactoryAddress )
+const tx1 = await l1ERC20Factory.createStandardERC20( oFT_NAME , oFT_SYMBOL )
 const receipt1 = await tx1.wait()
-const l1oft = await hre.ethers.getContractAt(
-  'L1StandardERC20',
-  getL1ERC20AddressFromReceipt(receipt1),
-)
-```
-
-### Create L2StandardERC20 at Verse
-* Switch to the Verse network where you want to create the oFT
-* Create L2StandardERC20 with L1StandardERC20 contact, oFT_NAME, oFT_SYMBOL
-* Get L2StandardERC20 contact
-
-```typescript
-switchNetwork('l2')
-const tx2 = await l2ERC20Factory.createStandardL2Token(
-  l1oft.address, // Need to pass token address on Hub-Layer.
-  oFT_NAME,
-  oFT_SYMBOL,
-)
-const receipt2 = await tx2.wait()
-const l2oft = await hre.ethers.getContractAt(
-  'L2StandardERC20',
-  getL2ERC20AddressFromReceipt(receipt2),
-)
+const l1ERC20Address = "0x" + receipt1.logs.find((log) => log.topics[0] == '0xd714a43f627528ad95fc3dcf6c453cf595be2f4d75c58c4273f17208ed899f44').topics[2].slice(-40)
+console.log(l1ERC20Address)
 ```
 
 ### Mint oFT at Hub
-* Switch to the Hub network where you want to create the oFT
-* l1oft Mint with , l1oft_owner_address, oFT_AMOUNT
+* l1oft Mint with oFT_RECIPIENT_ADDRESS, oFT_AMOUNT
 
 ```typescript
-switchNetwork('l1')
-const tx3 = await l1oft.mint(signer.address, oFT_AMOUNT)
+const [ signer ] = await ethers.getSigners()
+const oFT_RECIPIENT_ADDRESS = signer.address
+const oFT_AMOUNT = ethers.parseEther('1000')
+const l1ERC20Abi = [ "function mint(address to, uint256 amount) external", "function balanceOf(address account) external view returns (uint256)" ]
+const l1oft = await ethers.getContractAt( l1ERC20Abi , l1ERC20Address )
+const tx2 = await l1oft.mint( oFT_RECIPIENT_ADDRESS, oFT_AMOUNT )
+const receipt2 = await tx2.wait()
+console.log(await l1oft.balanceOf(oFT_RECIPIENT_ADDRESS))
+// 1000000000000000000000n
+```
+
+If token minting is successful, go to your account page in Oasys Hub Explorer. You can then click on the `Tokens` menu to view tokens you own.
+
+### Create L2StandardERC20 at Verse
+* Switch to the Verse network where you want to create the oFT
+
+```sh
+npx hardhat console --network l2
+```
+
+* Create L2StandardERC20 with L1_oFT_ADDRESS, oFT_NAME, oFT_SYMBOL
+
+```typescript
+const L1_oFT_ADDRESS = "0xYourL1oFTAddress" // l1oft.target
+const oFT_NAME = "MyToken"
+const oFT_SYMBOL = "MTK"
+const l2ERC20FactoryAbi = [ "function createStandardL2Token(address _l1Token, string memory _name, string memory _symbol) external" ]
+const l2ERC20FactoryAddress = "0x4200000000000000000000000000000000000012"
+const l2ERC20Factory = await ethers.getContractAt( l2ERC20FactoryAbi , l2ERC20FactoryAddress )
+const tx3 = await l2ERC20Factory.createStandardL2Token( L1_oFT_ADDRESS, oFT_NAME, oFT_SYMBOL )
 const receipt3 = await tx3.wait()
+const l2ERC20Address = "0x" + receipt3.logs.find((log) => log.topics[0] == '0xceeb8e7d520d7f3b65fc11a262b91066940193b05d4f93df07cfdced0eb551cf').topics[2].slice(-40)
+console.log(l2ERC20Address)
 ```
 
 ### Import token to metamask
@@ -110,7 +98,7 @@ The token has been created but is not visible on the metamask. In this case, you
 Import `l1oft` address at Hub, `l2oft` address at Verse.
 
 ## How to bridge oFT between Hub and Verse
-If you want to know about bridge oFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/bridge/hub-verse) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oft.ts) in the bride tutorial.
+If you want to know about bridge oFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/bridge/hub-verse) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/v1.1.0/front/src/sdk.ts) in the bridge tutorial.
 
 ## How to create oFT with non-standard decimals
 The decimals for oFTs created by the L1StandardERC20Factory and L2StandardTokenFactory, namely L1StandardERC20 and L2StandardERC20, default to 18.  

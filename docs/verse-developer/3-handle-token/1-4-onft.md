@@ -1,14 +1,11 @@
 # oNFT
-oNFT is a Fungible Token created by Oasys hub.
-oNFT can be bridged between the Verse layer(L2) and the Hub layer(L1).
+oNFT is a Non-Fungible Token created by Oasys Hub.
+oNFT can be bridged between the Verse Layer(L2) and the Hub Layer(L1).
 
 When creating an oNFT, it is necessary to create an ERC721 for each Hub (L1) and Verse (L2).
 
 ## How to create oNFT
-From here on out, We will explain how to create an oFT, using [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oNFT.ts) in [the bride tutorial](https://github.com/oasysgames/l1-l2-bridge-tutorial) as a reference.
-This tutorial actually implements [the contract](https://github.com/oasysgames/oasys-optimism/tree/develop/packages/contracts) used in Verse and Hub.
-
-In this tutorial, L1 is set to Oasys testnetwok and L2 to Oasys SAND Verse.
+In this tutorial, L1 is set to Oasys Testnet and L2 to Oasys SAND Verse.
 ```typescript
 // hardhat.config.ts
 networks: {
@@ -21,6 +18,7 @@ networks: {
     url: 'https://rpc.sandverse.oasys.games/',
     chainId: 20197,
     accounts: [process.env.PRIVATE_KEY],
+    initialBaseFeePerGas: 0,
     gasPrice: 0,
   },
 },
@@ -28,90 +26,70 @@ networks: {
 
 If you want to create an oNFT, please refer to this tutorial to generate the code to create an oNFT.
 
-When you  generate the code to create an oNFT, please also do the following.
+When you create an oNFT, please also do the following.
 * Set the name or symbol of the oNFT
 * Set network you want to create oNFT at `hardhat.config.ts` (Both L1 and L2)
+* Please refer to the `Address` and `Reference Code` of [Hub Layer’s Preset Contracts](/docs/architecture/hub-layer/contract#preset-contracts) for L1StandardERC721Factory.
+* For the ERC721 factory on L2 in Verse v1, you can use [OptimismMintableERC721Factory](https://github.com/oasysgames/oasys-opstack/blob/v1.1.0/packages/contracts-bedrock/src/universal/OptimismMintableERC721Factory.sol) at `0x4200000000000000000000000000000000000017`.
+* For L1StandardERC721, please refer [here](https://github.com/oasysgames/oasys-optimism/blob/v0.1.7/packages/contracts/contracts/oasys/L1/token/L1StandardERC721.sol), and for L2StandardERC721, please refer [here](https://github.com/oasysgames/oasys-optimism/blob/v0.1.7/packages/contracts/contracts/oasys/L2/token/L2StandardERC721.sol).
 
-
-### Create contract required for creating ERC721
+### Create L1StandardERC721 at Oasys Hub
 * Switch to the Hub network where you want to create the oNFT
-* Create a factory contract to create L1StandardERC721
 
-```typescript
-// Get Hub-Layer pre-deployed contracts.
-switchNetwork('l1')
-const [signer] = await hre.ethers.getSigners()
-
-const l1StandardERC721Factory = (
-  await hre.ethers.getContractFactory('L1StandardERC721Factory')
-).attach(addresses.l1.L1StandardERC721Factory)
+```sh
+npx hardhat console --network l1
 ```
 
-* Switch to the Verse network where you want to create the oNFT
-* Create a factory contract to create L2StandardERC721
-* Create a bridge contract to bridge L2StandardERC721
-
-```typescript
-// Get Verse-Layer pre-deployed contracts.
-switchNetwork('l2')
-const L2StandardERC721 = await hre.ethers.getContractFactory(
-  'L2StandardERC721',
-) // Note: This is not pre-deployed contract.
-
-const l2ERC721Bridge = await hre.ethers.getContractAt(
-  'IL2ERC721Bridge',
-  addresses.l2.L2ERC721Bridge,
-)
-```
-
-### Create L1StandardERC721 at Oasys hub
-* Switch to the Hub network where you want to create the oNFT
 * Create L1StandardERC721 with oNFT_NAME, oNFT_SYMBOL, oNFT_BASE_TOKEN_URI
-* Get L1StandardERC721 contact
 
 ```typescript
-switchNetwork('l1')
-const tx1 = await l1StandardERC721Factory.createStandardERC721(
-  oNFT_NAME,
-  oNFT_SYMBOL,
-  oNFT_BASE_TOKEN_URI,
-)
+const oNFT_NAME = "MyNFT"
+const oNFT_SYMBOL = "MNFT"
+const oNFT_BASE_TOKEN_URI = ""
+const l1ERC721FactoryAbi = [ "function createStandardERC721(string memory _name, string memory _symbol, string memory _baseTokenURI) external" ]
+const l1ERC721FactoryAddress = "0x5200000000000000000000000000000000000005"
+const l1ERC721Factory = await ethers.getContractAt( l1ERC721FactoryAbi , l1ERC721FactoryAddress )
+const tx1 = await l1ERC721Factory.createStandardERC721( oNFT_NAME , oNFT_SYMBOL, oNFT_BASE_TOKEN_URI )
 const receipt1 = await tx1.wait()
-const l1onft = await hre.ethers.getContractAt(
-  'L1StandardERC721',
-  getL1ERC721AddressFromReceipt(receipt1),
-)
-```
-
-### Create L2StandardERC721 at Verse
-* Switch to the Verse network where you want to create the oNFT
-* Create L2StandardERC721 with l2ERC721Bridge.address, L1StandardERC721 contact, oNFT_NAME, oNFT_SYMBOL
-* Get L2StandardERC721 contact
-
-```typescript
-switchNetwork('l2')
-const l2onft = await L2StandardERC721.deploy(
-  l2ERC721Bridge.address,
-  l1onft.address,
-  oNFT_NAME,
-  oNFT_SYMBOL,
-)
-await l2onft.deployed()
-const receipt2 = await l2onft.deployTransaction.wait()
+const l1ERC721Address = "0x" + receipt1.logs.find((log) => log.topics[0] == '0xbda470470721b5a2c56d61dc0aa9496dd02d39170f9dff803c35efbab6736522').topics[2].slice(-40)
+console.log(l1ERC721Address)
 ```
 
 ### Mint oNFT at Hub
-* Switch to the Hub network where you want to create the oNFT
-* l1onft Mint with , l1onft_owner_address, oNFT_TOKEN_ID
+* l1onft Mint with oNFT_RECIPIENT_ADDRESS, oNFT_TOKEN_ID
 
 ```typescript
-switchNetwork('l1')
-const tx3 = await l1onft.mint(signer.address, oNFT_TOKEN_ID)
-const receipt3 = await tx3.wait()
+const [ signer ] = await ethers.getSigners()
+const oNFT_RECIPIENT_ADDRESS = signer.address
+const oNFT_TOKEN_ID = 0
+const l1ERC721Abi = [ "function mint(address to, uint256 tokenId) external", "function balanceOf(address account) external view returns (uint256)" ]
+const l1onft = await ethers.getContractAt( l1ERC721Abi , l1ERC721Address )
+const tx2 = await l1onft.mint( oNFT_RECIPIENT_ADDRESS, oNFT_TOKEN_ID )
+const receipt2 = await tx2.wait()
+console.log(await l1onft.balanceOf(oNFT_RECIPIENT_ADDRESS))
+// 1n
 ```
 
 If token minting is successful, go to your account page in Oasys Hub Explorer. You can then click on the `Tokens` menu to view tokens you own.
 
-## How to bridge oNFT between Hub and Verse
-If you want to know about bridge oNFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/bridge/hub-verse) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/main/scripts/bridge-oNFT.ts) in the bride tutorial.
+### Create L2StandardERC721 at Verse (Verse v1)
+* Switch to the Verse network where you want to create the oNFT
 
+```sh
+npx hardhat console --network l2
+```
+
+* Create L2StandardERC721 with L1_oNFT_ADDRESS, oNFT_NAME, oNFT_SYMBOL
+
+```typescript
+const L1_oNFT_ADDRESS = "0xYourL1oNFTAddress" // l1onft.target
+const oNFT_NAME = "MyNFT"
+const oNFT_SYMBOL = "MNFT"
+const l2ERC721FactoryAbi = [ "function createOptimismMintableERC721(address _remoteToken, string memory _name, string memory _symbol) external returns (address)" ]
+const l2ERC721FactoryAddress = "0x4200000000000000000000000000000000000017"
+const l2ERC721Factory = await ethers.getContractAt( l2ERC721FactoryAbi , l2ERC721FactoryAddress )
+const tx3 = await l2ERC721Factory.createOptimismMintableERC721( L1_oNFT_ADDRESS, oNFT_NAME, oNFT_SYMBOL )
+const receipt3 = await tx3.wait()
+const l2ERC721Address = "0x" + receipt3.logs.find((log) => log.topics[0] == '0xe72783bb8e0ca31286b85278da59684dd814df9762a52f0837f89edd1483b299').topics[1].slice(-40)
+console.log(l2ERC721Address)
+```
