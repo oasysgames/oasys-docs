@@ -116,17 +116,17 @@ The first file is `rollup.json`, located under the assets directory. Add the `ca
 }
 ```
 
-The second file is `docker-compose.yml`. Add the `--override.canyon` flag to the op-geth service. The example is below. Ensure the time matches the setting above.
+The second file is `docker-compose.yml`. Set the `GETH_OVERRIDE_CANYON` environment to the op-geth service. The example is below. Ensure the time matches the setting above.
 ```yml
 services:
   op-geth:
     <<: *resident
-    image: ghcr.io/oasysgames/oasys-op-geth:v1.1.0 # The container image should be greater than v1.1.0.
+    image: ghcr.io/oasysgames/oasys-op-geth:v1.1.1 # The container image should be greater than v1.1.0.
     entrypoint: geth
-    command: >
+    environment:
+      GETH_DATADIR: /data
       ...
-      --rollup.superchain-upgrades=false
-      --override.canyon=1717579595
+      GETH_OVERRIDE_CANYON: 1717579595
 ```
 
 After making these changes, please follow the [Upgrading OP Services](/docs/verse-developer/how-to-build-verse/upgrade-verse#upgrading-op-services) steps. The Canyon upgrade corresponds to version v1.1.0. Ensure that the container image version is greater than this. Once completed, ensure the upgrade is successful by checking the logs.
