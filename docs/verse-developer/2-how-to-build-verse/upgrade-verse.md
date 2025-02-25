@@ -1,149 +1,121 @@
 # Upgrade Verse
 
-## Upgrading OP Services
-First, check for the [latest release](https://github.com/oasysgames/oasys-opstack/releases), then update the container version in your docker-compose file.
-:::warning Verse Service Maintenance
-To upgrade the L2 container version, it's essential to stop the L2 containers. Please note that stopping the `op-node` and `op-geth` container will halt the Verse service. However, stopping containers other than those will not affect the Verse service. Before upgrading, kindly inform Verse users about the scheduled maintenance!
+## Upgrading Verse Node
+Verse node upgrades are released in the [verse-layer-opstack](https://github.com/oasysgames/verse-layer-opstack) repository.
+
+The verse-layer-opstack repository uses semantic versioning, where patch version updates are focused on bug fixes and parameter changes, while minor version updates are for OPStack protocol upgrades (i.e. hardforks). The major version is fixed at `v1`(meaning Verse V1).
+
+This section describes applying a minor version upgrade(hardfork) to a running Verse node.
+
+:::danger Important Notes
+**Service Maintenance**  
+To upgrade the Verse node, it's essential to stop the containers. Please note that stopping the `op-node` and `op-geth` container will halt the Verse service. However, stopping containers other than those will not affect the Verse service. Before upgrading, kindly inform Verse users about the scheduled maintenance!
+
+**About Replica Nodes**  
+All nodes, including replicas, must be upgraded. Replicas operated by Oasys also need to be upgraded. Therefore, please contact the Oasys team in advance of the scheduled work date and time.
 :::
-```yml
-op-node:
-  <<: *resident
-  image: ghcr.io/oasysgames/oasys-opstack/op-node:vXX.XX.XX
-  ...
-op-batcher:
-  <<: *resident
-  image: ghcr.io/oasysgames/oasys-opstack/op-batcher:vXX.XX.XX
-  ...
-op-proposer:
-  <<: *resident
-  image: ghcr.io/oasysgames/oasys-opstack/op-proposer:vXX.XX.XX
-  ...
-```
-Regarding op-geth, refer this [latest release page](https://github.com/oasysgames/oasys-op-geth/releases)
-```yml
-op-geth:
-  <<: *resident
-  image: ghcr.io/oasysgames/oasys-op-geth:vXX.XX.XX
-  ...
-```
-Backup data(only `op-node` or `op-geth` upgrade):
-Before backup, ensure instance disk has enough space.
-```shell
-# Check size
-# Default L2_DATA_DIR is ./data/
-du -sh ./<L2_DATA_DIR>/op-node
-du -sh ./<L2_DATA_DIR>/op-geth
 
-# Backup
-$DATE=date +"%Y-%m-%d"
-cp ./<L2_DATA_DIR> ./<L2_DATA_DIR>/op-node-$DATE
-cp ./<L2_DATA_DIR> ./<L2_DATA_DIR>/op-geth-$DATE
-```
-Stop and restart the container using the following commands:
-```shell
-# Stop the container
-docker-compose stop op-node && docker-compose rm op-node
-docker-compose stop op-geth && docker-compose rm op-geth
-docker-compose stop op-batcher && docker-compose rm op-batcher
-docker-compose stop op-propoer && docker-compose rm op-propoer
+**Upgrade Steps**
+1. Stop the containers
+1. Create a backup
+1. Change version tag in [verse-layer-opstack](https://github.com/oasysgames/verse-layer-opstack) repository
+1. Add upgrade timestamps to .env
+1. Start the containers
 
-# Start the container
-docker-compose up -d op-node
+### 1. Stop the containers
+Stop all containers across all nodes, including replica nodes.
+```shell
+cd /path/to/verse-layer-opstack
+
+docker-compose stop -t60
+```
+
+### 2. Create a backup
+Back up the origin node data as upgrades involve irreversible changes to chain data. If the data size is large, using cloud provider disk snapshot functionality is recommended.
+```shell
+# Check data size
+du -hcs ./data/{op-node,op-geth}
+
+# Check available disk space
+df -h .
+
+# Create backups
+cp ./data/op-node ./data/op-node-$(date +'%Y-%m-%d')
+cp ./data/op-geth ./data/op-geth-$(date +'%Y-%m-%d')
+cp ./data/message-relayer ./data/message-relayer-$(date +'%Y-%m-%d')
+```
+
+### 3. Change version tag in verse-layer-opstack
+```shell
+# Fetch updates
+git fetch origin
+
+# Change tag
+git checkout <version tag>
+```
+
+### 4. Add upgrade timestamps to .env
+Add the block timestamps for L2 upgrades to the `.env` file. These timestamps must be set slightly in the future as `op-node` and `op-geth` must be launched before the specified times. All timestamps can be set to the same value, but due to specification constraints, `0` cannot be used.
+```dotenv
+# Block timestamps for upgrades (empty = no upgrade)
+OP_OVERRIDE_CANYON=
+OP_OVERRIDE_DELTA=
+OP_OVERRIDE_ECOTONE=
+OP_OVERRIDE_FJORD=
+OP_OVERRIDE_GRANITE=
+```
+
+*Example command to get timestamp 10 minutes ahead*: `expr $(date +%s) + 600`
+
+:::danger
+- Do not modify timestamps after upgrades have been applied. **In particular, never re-change to a future**
+- Please share these timestamps with the Oasys team.
+:::
+
+### 5. Start the containers
+Start `op-geth` container:
+```shell
 docker-compose up -d op-geth
-docker-compose up -d op-batcher
-docker-compose up -d op-proposer
 ```
 
-## Upgrading message-relayer
-First, check for the [latest release](https://github.com/oasysgames/opstack-message-relayer/releases), then update the container version in your docker-compose file.
-```yml
-message-relayer:
-  <<: *resident
-  image: ghcr.io/oasysgames/opstack-message-relayer:vXX.XX.XX
-  ...
-```
-Backup message-relayer folder.
+Check if upgrade times are loaded:
 ```shell
-# Check size
-# Default L2_DATA_DIR is ./data/
-du -sh ./<L2_DATA_DIR>/message-relayer
+docker-compose logs op-geth | egrep '@\d+'
 
-# Backup
-$DATE=date +"%Y-%m-%d"
-cp ./<L2_DATA_DIR> ./<L2_DATA_DIR>/message-relayer-$DATE
+# output
+op-geth-1  | INFO [02-25|14:41:23.062]  - Canyon:                      @1740494383
+op-geth-1  | INFO [02-25|14:41:23.062]  - Ecotone:                     @1740494383
+op-geth-1  | INFO [02-25|14:41:23.062]  - Fjord:                       @1740494383
+op-geth-1  | INFO [02-25|14:41:23.062]  - Granite:                     @1740494383
 ```
-Stop and restart the container using the following commands:
+
+Start `op-node` container:
 ```shell
-# Stop the container
-docker-compose stop message-relayer && docker-compose rm message-relayer
-
-# Start the container
-docker-compose up -d message-relayer
+docker-compose up -d op-node
 ```
 
-## Updating Verifier
-First, check for the [latest release](https://github.com/oasysgames/verse-verifier/releases), then update the container version in your docker-compose file.
-```yml
-verse-verifier:
-  <<: *resident
-  image: ghcr.io/oasysgames/verse-verifier:vXX.XX.XX
-  # ...
-```
-Stop and restart the container using the following commands:
+Check if upgrade times are loaded:
 ```shell
-# Stop the container
-docker-compose stop verse-verifier && docker-compose rm verse-verifier
-
-# Start the container
-docker-compose up -d verse-verifier
-```
-
-## Hardfork
-A guide on how to apply each hardfork. As an important note, **before performing any updates, always ensure to communicate with Oasys dev team the hardfork date and time, along with the updated configuration details**. The dev team will also apply changes on the replica nodes.
-
-### Apply Canyon
-To apply the Canyon hardfork, you need to change 2 files.
-
-The first file is `rollup.json`, located under the assets directory. Add the `canyon_time` property to this file. This property indicates when the Canyon update will be applied. The value should be a Unix timestamp. The following example means the hardfork is applied from `1717579595`, which indicates Wed, 05 Jun 2024 09:26:35 GMT.
-```json
-{
-  "genesis": {
-   // ...
-  },
-  "regolith_time": 0,
-  "canyon_time": 1717579595, // Wed, 05 Jun 2024 09:26:35 GMT
-  // ...
-}
-```
-
-The second file is `docker-compose.yml`. Set the `GETH_OVERRIDE_CANYON` environment to the op-geth service. The example is below. Ensure the time matches the setting above.
-```yml
-services:
-  op-geth:
-    <<: *resident
-    image: ghcr.io/oasysgames/oasys-op-geth:v1.1.1 # The container image should be greater than v1.1.0.
-    entrypoint: geth
-    environment:
-      GETH_DATADIR: /data
-      ...
-      GETH_OVERRIDE_CANYON: 1717579595
-```
-
-After making these changes, please follow the [Upgrading OP Services](/docs/verse-developer/how-to-build-verse/upgrade-verse#upgrading-op-services) steps. The Canyon upgrade corresponds to version v1.1.0. Ensure that the container image version is greater than this. Once completed, ensure the upgrade is successful by checking the logs.
-
-Check the op-node log by running the following command:
-```sh
 docker-compose logs op-node | grep "Rollup Config"
+
+# output
+op-node-1  | t=2025-02-25T15:02:45+0000 lvl=info msg="Rollup Config" <lots of lines> canyon_time="@ 1740494383 ~ Tue Feb 25 14:39:43 UTC 2025" delta_time="@ 1740494383 ~ Tue Feb 25 14:39:43 UTC 2025" ecotone_time="@ 1740494383 ~ Tue Feb 25 14:39:43 UTC 2025" fjord_time="@ 1740494383 ~ Tue Feb 25 14:39:43 UTC 2025" granite_time="@ 1740494383 ~ Tue Feb 25 14:39:43 UTC 2025" holocene_time="(not configured)" interop_time="(not configured)" alt_da=false
 ```
-Ensure the canyon_time is correctly configured.
+
+When the upgrade time is reached, the `op-node` should output logs related to the upgrades:
+```shell
+docker-compose logs op-node | grep upgrade
+
+# output
+op-node-1  | t=2025-02-25T15:28:17+0000 lvl=info msg="Sequencing Ecotone upgrade block"
+op-node-1  | t=2025-02-25T15:28:17+0000 lvl=info msg="Sequencing Fjord upgrade block"
+op-node-1  | t=2025-02-25T15:28:17+0000 lvl=info msg="Sequencing Granite upgrade block"
 ```
-op-node-1 | t=2024-06-05T09:49:34+0000 lvl=info msg="Rollup Config" <lots of lines> canyon_time="@ 1717579595 ~ Wed Jun  5 09:26:35 UTC 2024" span_batch_time="(not configured)
+
+Start all other containers:
+```shell
+docker-compose up -d
 ```
-Secondly, check the op-geth log by running the following command:
-```sh
-docker-compose logs op-geth | grep "Canyon:"
-```
-Ensure the Canyon: is actually applied.
-```
-op-geth-1  | INFO [06-05|09:52:43.423]  - Canyon: @1717579595
-```
+
+## Upgrading L1 Contracts
+*TODO*
