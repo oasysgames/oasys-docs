@@ -81,33 +81,9 @@ When creating a verse blockscout, please set the following environment variables
 | RE_CAPTCHA_DISABLED | Disable reCAPTCHA.         | true                   |
 
 If you build verse on the same server, you can set `ETHEREUM_JSONRPC_HTTP_URL` and `ETHEREUM_JSONRPC_TRACE_URL` as `http://host.docker.internal:8545/`.
-### Environment Variable For Blockscout Frontend
-You can check the environment variable lists at [this page](https://docs.blockscout.com/for-developers/information-and-settings/env-variables/frontend-common-envs).
 
-|    Variable               |   Description                              | Value |
-|---------------------------|--------------------------------------------|--------|
-| NEXT_PUBLIC_APP_PROTOCOL              | Frontend protocol.                     |    https   |
-| NEXT_PUBLIC_APP_HOST              | Frontend UI host.                     |   Your domain (explorer.oasys.games) 
-| NEXT_PUBLIC_NETWORK_NAME              | Displayed name of the network.                     |    Verse name
-| NEXT_PUBLIC_NETWORK_SHORT_NAME              | Used for SEO attributes (e.g, page description).                     |    OoG
-| NEXT_PUBLIC_NETWORK_ID              | Chain id.                     |    Your chain id
-| NEXT_PUBLIC_IS_TESTNET              | Set to true if network is testnet.                     |    true | false
-| NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID              | Project id for [WalletConnect](https://cloud.walletconnect.com/) integration.                     |    Wallet connect id
-| NEXT_PUBLIC_NETWORK_RPC_URL              | Chain public RPC server url, see [https://chainlist.org](https://chainlist.org) for the reference.                     |    -
-| NEXT_PUBLIC_API_PROTOCOL              | Main API protocol.                     |    `https`
-| NEXT_PUBLIC_API_HOST              | Main API host. It is recommended to set the same value as NEXT_PUBLIC_APP_HOST. |    Your domain (explorer.oasys.games)
-| NEXT_PUBLIC_HOMEPAGE_PLATE_TEXT_COLOR              | Text color of the hero plate on the homepage (escape "#" symbol if you use HEX color codes or use rgba-value instead).                     |    `white` | `\#DCFE76` |
-| NEXT_PUBLIC_HOMEPAGE_PLATE_BACKGROUND              | Background css value for hero plate on the homepage (escape "#" symbol if you use HEX color codes or use rgba-value instead)             |    `radial-gradient(103.03% 103.03% at 0% 0%, rgba(183, 148, 244, 0.8) 0%, rgba(0, 163, 196, 0.8) 100%), var(--chakra-colors-blue-400)` | `radial-gradient(at 15% 86%, hsla(350,65%,70%,1) 0px, transparent 50%)` \| `no-repeat bottom 20% right 0px/100% url(https://placekitten/1400/200)`.  
-| NEXT_PUBLIC_NETWORK_LOGO              | Network logo; if not provided, placeholder will be shown; *Note* the logo height should be 24px and width less than 120px.                     |    `https://oasys-blockscout.s3.ap-northeast-1.amazonaws.com/header-logo.png`
-| NEXT_PUBLIC_NETWORK_ICON              | Network icon; used as a replacement for regular network logo when nav bar is collapsed; if not provided, placeholder will be shown; *Note* the icon size should be at least 60px by 60px.                     |    `https://oasys-blockscout.s3.ap-northeast-1.amazonaws.com/icon.png`
-| NEXT_PUBLIC_FEATURED_NETWORKS              | URL of configuration file (`.json` format only) which contains list of featured networks that will be shown in the network menu. See [below](#featured-network-configuration-properties) list of available properties for particular network.                     |    `https://oasys-blockscout-networks.s3.ap-northeast-1.amazonaws.com/blockscout-v6-networks.json`
-| NEXT_PUBLIC_OG_DESCRIPTION              | Custom OG description.                     |    -
-| NEXT_PUBLIC_OG_IMAGE_URL              | OG image url. Minimum image size is 200 x 20 pixels (recommended: 1200 x 600); maximum supported file size is 8 MB; 2:1 aspect ratio; supported formats: image/jpeg, image/gif, image/png.                     |    `https://oasys-blockscout-networks.s3.ap-northeast-1.amazonaws.com/oasys-logo-1113.png`
-| NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY              |  Site key.                     |    `<your-secret>`
-| NEXT_PUBLIC_HOMEPAGE_HIDDEN_OP_NODE_TXS | Set to true if you want to hide op-node transactions | `false` |
-| NEXT_PUBLIC_TOKENS_UPDATED_ADDRESS | Set the address if the token has changed | - |
-| NEXT_PUBLIC_TOKENS_UPDATED_NAME | Set the token name if the token has changed | - |
-| NEXT_PUBLIC_TOKENS_UPDATED_SYMBOL | Set the token symbol if the token has changed | - |
+### Environment Variable For Blockscout Frontend
+For frontend environment variables configuration, please refer to the [Blockscout v6 Frontend Documentation](https://github.com/oasysgames/blockscout-v6-frontend/blob/main/docs/ENVS.md).
 
 ### Featured Network Configuration Properties
 The `NEXT_PUBLIC_FEATURED_NETWORKS` environment variable expects a URL pointing to a JSON file that contains an array of network configurations. Each network configuration object in the array should have the following properties:

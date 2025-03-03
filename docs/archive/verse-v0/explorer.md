@@ -1,6 +1,9 @@
 # Explorer
 After building a Verse, you have to create a Verse explorer. Please use [blockscout](https://docs.blockscout.com/) to create a Verse explorer.
 
+## Blockscout v6 Frontend
+For Blockscout v6 frontend deployment and environment variables configuration, please refer to the [Blockscout v6 Frontend Documentation](https://github.com/oasysgames/blockscout-v6-frontend/tree/main/docs).
+
 ## Blockscout v5
 ### Update L2Geth Startup Options
 The explorer utilizes the `txpool` and `debug` namespaces of the JSON RPC to communicate l2geth. Therefore, you need to enable these two namespaces. Please ensure to include these namespaces in the starting options or environment variables.
@@ -46,7 +49,7 @@ When creating a verse blockscout, please set the following environment variables
 
 If you build verse on the same server, you can set `ETHEREUM_JSONRPC_HTTP_URL` and `ETHEREUM_JSONRPC_TRACE_URL` as `http://host.docker.internal:8545/`.
 
-### Manual Setup
+### Setup
 If you set up blockscout for a Verse, You have to set it up manually.
 
 #### Git Clone
@@ -75,14 +78,18 @@ You can adjust settings related to branding, such as theme colors and logos, to 
 #### Reflect settings for network changes
 
 You can modify the network settings using either a script or the manual method.
-
 ###### Using the script
 
 ```shell
 cd docker-compose
 ./modify_networks.sh default_network_name
 ```
-This script alters the following variables:
+
+You can modify these settings by:
+- Script: ./modify_networks.sh default_network_name
+- Manual: Edit docker-compose/envs/common-blockscout.env
+
+to change:
 - SUPPORTED_CHAINS
 - SUBNETWORK
 
