@@ -86,34 +86,9 @@ If you build verse on the same server, you can set `ETHEREUM_JSONRPC_HTTP_URL` a
 For frontend environment variables configuration, please refer to the [Blockscout v6 Frontend Documentation](https://github.com/oasysgames/blockscout-v6-frontend/blob/main/docs/ENVS.md).
 
 ### Featured Network Configuration Properties
-The `NEXT_PUBLIC_FEATURED_NETWORKS` environment variable expects a URL pointing to a JSON file that contains an array of network configurations. Each network configuration object in the array should have the following properties:
+The `NEXT_PUBLIC_FEATURED_NETWORKS` environment variable allows you to configure the network list displayed in the Blockscout UI's network menu. It expects a URL pointing to a JSON file that contains an array of network configurations.
 
-| Property | Type | Description | Example |
-|----------|------|-------------|---------|
-| title | string | The display name of the network shown in the network menu | "HUB-Mainnet" |
-| url | string | The URL of the network's explorer | "https://explorer.oasys.games/" |
-| group | string | The group category for the network (either "Mainnets" or "Testnets") | "Mainnets" |
-| icon | string | URL to the network's icon image (optional) | "" |
-
-Example JSON structure:
-```json
-[
-  {
-    "title": "HUB-Mainnet",
-    "url": "https://explorer.oasys.games/",
-    "group": "Mainnets",
-    "icon": ""
-  },
-  {
-    "title": "HUB-Testnet",
-    "url": "https://explorer.testnet.oasys.games/",
-    "group": "Testnets",
-    "icon": ""
-  }
-]
-```
-
-The networks will be displayed in the Blockscout UI's network menu, grouped by their specified group category.
+For detailed information about available properties and configuration options, please refer to the [Blockscout v6 Frontend Documentation - Featured Network Configuration Properties](https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#featured-network-configuration-properties).
 
 ### Manual Setup
 If you set up blockscout for a Verse, You have to set it up manually.
