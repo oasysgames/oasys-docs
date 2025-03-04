@@ -2,6 +2,19 @@
 After building a Verse, you have to create a Verse explorer. Please use [blockscout](https://docs.blockscout.com/) to create a Verse explorer.
 
 ## Blockscout v6
+
+:::warning Security Concern Regarding JSON-RPC Namespaces
+The Blockscout explorer requires access to the `txpool` and `debug` namespaces. However, these namespaces pose security risks that need to be carefully considered:
+
+- **debug namespace**: Contains dangerous commands like `setHead(blockNum)` that can roll back the block head to a past state. Never expose this namespace directly to the public.
+- **txpool namespace**: While less risky than debug, it's still recommended to restrict public access as the explorer already provides similar capabilities through its interface.
+
+To mitigate these risks, consider the following approaches:
+
+1. Use verse-proxy to control access to these namespaces. See: [Set allowed verse request methods](/docs/verse-developer/how-to-build-verse/verse-proxy#set-allowed-verse-request-methods)
+2. Set up a [read-only replica Verse](/docs/verse-developer/how-to-build-verse/read-node) for the explorer, while keeping the write node's RPC endpoint (with restricted namespaces) for public access.
+:::
+
 ### Update L2Geth (For Verse v0) Startup Options
 The explorer utilizes the `txpool` and `debug` namespaces of the JSON RPC to communicate l2geth. Therefore, you need to enable these two namespaces. Please ensure to include these namespaces in the starting options or environment variables.
 
@@ -17,13 +30,6 @@ geth \
 RPC_API=eth,web3,net,shh,rollup,txpool,debug
 WS_API=eth,web3,net,shh,rollup,txpool,debug
 ```
-:::warning Security Concern Regarding Activating debug and txpool Namespaces
-The `debug` namespace contains dangerous commands, such as `setHead(blockNum)`, which roll back the block head to a past state. Therefore, it's crucial not to expose the raw API to the public. We recommend introduce middleware that blocks requests to the debug namespace. To facilitate this, we offer the verse-proxy solution. Please refer to here: [Set allowed verse request methods](/docs/verse-developer/how-to-build-verse/verse-proxy#set-allowed-verse-request-methods)
-
-As an alternative solution, consider building a [read-only replica Verse](/docs/verse-developer/how-to-build-verse/read-node) and then direct the explorer to refer to this replica. Make only the write node's RPC endpoint available to the public, ensuring the debug namespace is disabled.
-
-Regarding the `txpool`, there isn't as significant a security concern as with the debug namespace. However, it is still advisable not to make it publicly accessible. Opening this endpoint to the public is unnecessary since the explorer offers similar capabilities.
-:::
 
 ### Update op-geth (For Verse v1) Startup Options
 
