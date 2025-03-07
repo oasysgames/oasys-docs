@@ -82,7 +82,7 @@ You can modify the network settings using either a script or the manual method.
 cd docker-compose
 ./modify_networks.sh default_network_name
 ```
-- This script alters the following variables:
+This script alters the following variables:
 - SUPPORTED_CHAINS
 - SUBNETWORK
 
