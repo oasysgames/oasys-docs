@@ -88,8 +88,8 @@ Both BlockScout v6 and v7 share the following environment variables that need to
 2. **Checkout Specific Version**:
    Check available versions at [blockscout-v6-backend releases](https://github.com/oasysgames/blockscout-v6-backend/tags) and checkout the desired version:
    ```shell
-   # Example: checking out v6.9.2-1e503ae
-   git checkout v6.9.2-1e503ae
+   # Example: checking out the latest stable version
+   git checkout <version-tag>
    ```
 
 3. **Configure Environment Variables and Start**:
