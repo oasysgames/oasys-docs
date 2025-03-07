@@ -1,9 +1,7 @@
 # Explorer
 After building a Verse, you have to create a Verse explorer. Please use [blockscout](https://docs.blockscout.com/) to create a Verse explorer.
 
-## Blockscout v6
-
-### Prerequisites
+## Prerequisites
 Before setting up the Blockscout explorer, you need to configure your Verse node to support the required JSON-RPC namespaces.
 
 :::warning Security Concern Regarding JSON-RPC Namespaces
@@ -18,7 +16,7 @@ To mitigate these risks, consider the following approaches:
 2. Set up a [read-only replica Verse](/docs/verse-developer/how-to-build-verse/read-node) for the explorer, while keeping the write node's RPC endpoint (with restricted namespaces) for public access.
 :::
 
-#### Configure Verse Node (For Verse v0)
+### Configure Verse Node (For Verse v0)
 If you are using L2Geth, enable the required namespaces in your node configuration:
 
 ```sh
@@ -34,7 +32,7 @@ RPC_API=eth,web3,net,shh,rollup,txpool,debug
 WS_API=eth,web3,net,shh,rollup,txpool,debug
 ```
 
-#### Configure Verse Node (For Verse v1)
+### Configure Verse Node (For Verse v1)
 If you are using op-geth, follow these steps to enable the required namespaces:
 
 1. **Locate the Startup Script or Configuration**:
@@ -59,23 +57,8 @@ If you are using op-geth, follow these steps to enable the required namespaces:
    - Restart your `op-geth` node to apply the settings
    - Check the logs to confirm the namespaces are available
 
-### Setup Blockscout
-#### Backend Setup
-1. **Clone Repository**:
-   ```shell
-   git clone https://github.com/oasysgames/blockscout-v6-backend.git
-   cd blockscout-v6-backend
-   ```
-
-2. **Checkout Specific Version**:
-   Check available versions at [blockscout-v6-backend releases](https://github.com/oasysgames/blockscout-v6-backend/tags) and checkout the desired version:
-   ```shell
-   # Example: checking out v6.9.2-1e503ae
-   git checkout v6.9.2-1e503ae
-   ```
-
-3. **Configure Environment Variables**:
-   Set the following variables in [common-blockscout.env](https://github.com/oasysgames/blockscout-v6-backend/blob/main/docker-compose/envs/common-blockscout.env):
+### Common Backend Environment Variables
+Both BlockScout v6 and v7 share the following environment variables that need to be configured:
 
    |    Variable               |   Description                              | Value |
    |---------------------------|--------------------------------------------|--------|
@@ -91,6 +74,36 @@ If you are using op-geth, follow these steps to enable the required namespaces:
    | RE_CAPTCHA_DISABLED | Disable reCAPTCHA                         | true |
 
    Note: If running on the same server, use `http://host.docker.internal:8545/` for RPC URLs.
+
+
+## Blockscout v6
+
+### Setup Blockscout
+#### Backend Setup
+1. **Clone Repository**:
+   ```shell
+   git clone https://github.com/oasysgames/blockscout-v6-backend.git
+   cd blockscout-v6-backend
+   ```
+
+2. **Checkout Specific Version**:
+   Check available versions at [blockscout-v6-backend releases](https://github.com/oasysgames/blockscout-v6-backend/tags) and checkout the desired version:
+   ```shell
+   # Example: checking out v6.9.2-1e503ae
+   git checkout v6.9.2-1e503ae
+   ```
+
+3. **Configure Environment Variables and Start**:
+   Set the following variables in [common-blockscout.env](https://github.com/oasysgames/blockscout-v6-backend/blob/main/docker-compose/envs/common-blockscout.env):
+
+   ```shell
+   cd docker-compose/envs/
+   vim common-blockscout.env
+   docker compose build
+   docker compose up -d
+   ```
+
+   Refer to the [Common Environment Variables](#common-environment-variables) section above for the required configuration.
 
 4. **Run Backend Container**:
    ```shell
