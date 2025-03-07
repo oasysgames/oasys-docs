@@ -83,7 +83,6 @@ cd docker-compose
 ./modify_networks.sh default_network_name
 ```
 - This script alters the following variables:
-
 - SUPPORTED_CHAINS
 - SUBNETWORK
 
