@@ -71,7 +71,6 @@ Both BlockScout v6 and v7 share the following environment variables that need to
    | CHAIN_ID | Chain ID for MetaMask integration           | Your Verse ChainID |
    | RE_CAPTCHA_SECRET_KEY | reCAPTCHA secret key                      | Your secret key |
    | RE_CAPTCHA_CLIENT_KEY | reCAPTCHA client key                      | Your client key |
-   | RE_CAPTCHA_DISABLED | Disable reCAPTCHA                         | true |
 
    Note: If running on the same server, use `http://host.docker.internal:8545/` for RPC URLs.
 
@@ -152,19 +151,19 @@ sudo chmod +x excutes/verified_contract.sh
 Perform these checks to ensure proper operation:
 
 #### UI Functionality
-- [ ] CSV downloads work without errors
-- [ ] Logos display correctly in both light/dark modes
-- [ ] Network list is accurate
-- [ ] MetaMask integration works properly
+- [x] CSV downloads work without errors
+- [x] Logos display correctly in both light/dark modes
+- [x] Network list is accurate
+- [x] MetaMask integration works properly
 
 #### Core Features
-- [ ] Smart Contract verification (GUI and API)
-- [ ] REST API and GraphQL endpoints
-- [ ] Wallet Connect integration
-- [ ] Internal transactions retrieval
+- [x] Smart Contract verification (GUI and API)
+- [x] REST API and GraphQL endpoints
+- [x] Wallet Connect integration
+- [x] Internal transactions retrieval
 
 #### System Health
-- [ ] Monitor CPU and memory usage
-- [ ] Check storage usage and alerts
-- [ ] Verify PostgreSQL database performance
-- [ ] Review error logs
+- [x] Monitor CPU and memory usage
+- [x] Check storage usage and alerts
+- [x] Verify PostgreSQL database performance
+- [x] Review error logs
