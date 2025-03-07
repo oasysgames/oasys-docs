@@ -80,18 +80,11 @@ export enum TokenIndex {
 
 ### Step 4: Set Environment Variables
 
-Set environment variables based on the information in 
-Environment Variables for Bridge.
+For frontend environment variables configuration (including bridge-related variables), please refer to the [Blockscout v6 Frontend Documentation](https://github.com/oasysgames/blockscout-v6-frontend/blob/main/docs/ENVS.md).
 
-#### Environment Variables For Bridge
-
-When creating a bridge instance, configure the following environment variables. Below are example values for TCG Verse.
-
-|    Variable               |   Description         | Value                                   |
-|---------------------------|-----------------------|-----------------------------------------|
-| NEXT_PUBLIC_MENU_BRIDGE_VISIBLE       | Set to true to show bridged Token               | true or false                           |
-| NEXT_PUBLIC_L2_CHAIN_ID   | L2 chain ID           | `2400`                                  |
-
+check the following environment variables:
+- NEXT_PUBLIC_MENU_BRIDGE_VISIBLE
+- NEXT_PUBLIC_L2_CHAIN_ID
 
 #### Prerequisites
 
