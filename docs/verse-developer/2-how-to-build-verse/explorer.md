@@ -57,7 +57,7 @@ If you are using op-geth, follow these steps to enable the required namespaces:
    - Restart your `op-geth` node to apply the settings
    - Check the logs to confirm the namespaces are available
 
-### Common Backend Environment Variables
+## Common Backend Environment Variables
 Both BlockScout v6 and v7 share the following environment variables that need to be configured:
 
    |    Variable               |   Description                              | Value |
@@ -102,7 +102,7 @@ Both BlockScout v6 and v7 share the following environment variables that need to
    docker compose up -d
    ```
 
-   Refer to the [Common Environment Variables](#common-environment-variables) section above for the required configuration.
+   Refer to the [Common Backend Environment Variables](#common-backend-environment-variables) section above for the required configuration.
 
 4. **Run Backend Container**:
    ```shell
