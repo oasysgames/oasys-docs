@@ -8,10 +8,10 @@ The verse-layer-opstack repository uses semantic versioning, where patch version
 This section describes applying a minor version upgrade(hardfork) to a running Verse node.
 
 :::danger Important Notes
-**Service Maintenance**  
+**Service Maintenance**
 To upgrade the Verse node, it's essential to stop the containers. Please note that stopping the `op-node` and `op-geth` container will halt the Verse service. However, stopping containers other than those will not affect the Verse service. Before upgrading, kindly inform Verse users about the scheduled maintenance!
 
-**About Replica Nodes**  
+**About Replica Nodes**
 All nodes, including replicas, must be upgraded. Replicas operated by Oasys also need to be upgraded. Therefore, please contact the Oasys team in advance of the scheduled work date and time.
 :::
 
@@ -55,17 +55,25 @@ git checkout <version tag>
 ```
 
 ### 4. Add upgrade timestamps to .env
-Add the block timestamps for L2 upgrades to the `.env` file. These timestamps must be set slightly in the future as `op-node` and `op-geth` must be launched before the specified times. All timestamps can be set to the same value, but due to specification constraints, `0` cannot be used.
-```dotenv
-# Block timestamps for upgrades (empty = no upgrade)
-OP_OVERRIDE_CANYON=
-OP_OVERRIDE_DELTA=
-OP_OVERRIDE_ECOTONE=
-OP_OVERRIDE_FJORD=
-OP_OVERRIDE_GRANITE=
+Add the block timestamps for L2 upgrades to the `.env` file. These timestamps must be set slightly in the future as `op-node` and `op-geth` must be launched before the specified times. Due to specification constraints, `0` cannot be used.
+```sh
+# Example command to get timestamp 10 minutes ahead
+expr $(date +%s) + 600
+```
+##### Applying the Canyon Hardfork
+Set the following environment variable. If you have already applied it, you can skip this step.
+```sh
+OP_OVERRIDE_CANYON=17XXX... #(Future Unix Time)
 ```
 
-*Example command to get timestamp 10 minutes ahead*: `expr $(date +%s) + 600`
+#### Applying the Granite Hardfork (Includes Delta, Ecotone, Fjord)
+Set the following environment variables. If you have already applied them, you can skip this step.
+```sh
+OP_OVERRIDE_DELTA=17XXX...   #(Future Unix Time)
+OP_OVERRIDE_ECOTONE=17XXX... #(Future Unix Time)
+OP_OVERRIDE_FJORD=17XXX...   #(Future Unix Time)
+OP_OVERRIDE_GRANITE=17XXX... #(Future Unix Time)
+```
 
 :::danger
 - Do not modify timestamps after upgrades have been applied. **In particular, never re-change to a future**
@@ -119,3 +127,20 @@ docker-compose up -d
 
 ## Upgrading L1 Contracts
 *TODO*
+
+## Enabling Blob Rollup
+Blob transactions (EIP-4844) were introduced to reduce L2 rollup transaction costs. Unlike traditional calldata, blobs are not stored permanently on-chain and are pruned after a few weeks, improving Ethereum's scalability.
+
+#### Requirements:
+The OPStack supports blob transactions starting from the `Ecotone` upgrade. Ensure that your Verse has applied this upgrade before proceeding.
+
+#### How to Enable Blob-Based Rollups:
+Enabling blob transactions in the rollup is straightforward. Simply set the following environment variable in the op-batcher configuration:
+```yml
+op-batcher:
+  ...
+  environment:
+    ...
+    OP_BATCHER_DATA_AVAILABILITY_TYPE: blobs
+```
+Once you set this variable, restart op-batcher to apply the changes. Andd ensure that batcher-produced transactions are using blob-type transactions (Type 3).
