@@ -12,7 +12,7 @@ cd blockscout-v6-frontend/
 ```
 
 ### Step 2: Update ENV Configuration
-Update your environment variables file `config/envs/.env.common`. Add or modify the following variables (example):
+Update your environment variables file `configs/envs/.env.common`. Add or modify the following variables (example):
 
 ```env
 # Network Currency Configuration

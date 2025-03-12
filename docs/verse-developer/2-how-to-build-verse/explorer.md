@@ -60,6 +60,8 @@ If you are using op-geth, follow these steps to enable the required namespaces:
 ## Common Backend Environment Variables
 Both BlockScout v6 and v7 share the following environment variables that need to be configured:
 
+For more details, see [Blockscout Backend Environment Variables](https://docs.blockscout.com/setup/env-variables/backend-env-variables).
+
    |    Variable               |   Description                              | Value |
    |---------------------------|--------------------------------------------|--------|
    | DATABASE_URL              | Postgres Database endpoint                  | postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=falset |
