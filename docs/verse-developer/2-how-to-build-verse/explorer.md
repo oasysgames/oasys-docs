@@ -94,6 +94,11 @@ For more common details, see [Blockscout Frontend Environment Variables](https:/
    | NEXT_PUBLIC_HOMEPAGE_HIDDEN_OP_NODE_TXS | Controls the visibility of OP Stack transactions. When enabled, it hides L2 transactions from the OP Stack node . This is particularly useful for Verse v1 which uses OP Stack. | `true` or `false` |
    | NEXT_PUBLIC_VERSE_VERSION | Specifies the Verse version. Set to `1` for Verse v1 (OP Stack) or `0` for Verse v0 (L2Geth). This affects how bridge transactions and other version-specific features are handled in the explorer. | `0` or `1` |
 
+### Token Configuration Variables
+   |    Variable               |   Description                              | Value | Version |
+   |---------------------------|--------------------------------------------|--------|---------|
+   | NEXT_PUBLIC_UPDATED_TOKENS | URL of a JSON configuration file or a JSON string containing updated token information. Used to override token display information in the explorer. | URL: `https://oasys-blockscout-networks.s3.ap-northeast-1.amazonaws.com/blockscout-updated-tokens.json` or JSON string: `{"tokens":[{"address":"0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000","name":"Oasys","symbol":"OAS"},{"address":"0xE1aB220E37AC55A4E2dD5Ba148298A9c09fBD716","name":"Legacy Bridged USDC (Celer)","symbol":"USDC.e-legacy"}]}` | v1.38.x+ |
+
 ## Blockscout v6
 
 ### Setup Blockscout
@@ -147,6 +152,7 @@ For more common details, see [Blockscout Frontend Environment Variables](https:/
    - For available options, see [Blockscout v6 Frontend Documentation](https://github.com/oasysgames/blockscout-v6-frontend/blob/main/docs/ENVS.md)
    - For Featured Networks configuration, see [Featured Network Configuration Properties](https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#featured-network-configuration-properties)
    - For OP Stack configuration, see [OP Stack Related Variables](#op-stack-related-variables)
+   - For Token configuration, see [Token Configuration Variables](#token-configuration-variables)
 
 4. **Run Frontend Container**:
    ```shell
