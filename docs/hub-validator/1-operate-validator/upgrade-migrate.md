@@ -172,11 +172,10 @@ Ultimately, please ensure that the `–-mine` option is only enabled on the new 
 
 
 ## Snapshot
-We provide snapshots for the Oasys Hub Layer (L1) testnet and mainnet.
+We provide snapshots for the Oasys Hub Layer (L1) testnet.
 
 |network|URL|
 |--|--|
-|Mainnet|TODO:|
 |Testnet|https://cdn.testnet.oasys.games/l1-snapshot.tar.gz|
 
 ### Applying the Snapshot to a Testnet Node
