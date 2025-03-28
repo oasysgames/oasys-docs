@@ -67,7 +67,7 @@ For more details, see [Blockscout Backend Environment Variables](https://docs.bl
    | DATABASE_URL              | Postgres Database endpoint                  | postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=falset |
    | ETHEREUM_JSONRPC_VARIANT  | RPC Client type                           | geth |
    | ETHEREUM_JSONRPC_HTTP_URL | RPC endpoint for main operations          | rpc.myverse.com |
-   | ETHEREUM_JSONRPC_TRACE_URL | RPC endpoint for tracing operations       | rpc.myverse.com |
+   | ETHEREUM_JSONRPC_TRACE_URL | RPC endpoint for tracing operations. This endpoint must support debug_traceTransaction method for internal transactions. For Verse v1 (OP Stack), ensure that the debug namespace is enabled and the node is configured to support internal transaction tracing. | rpc.myverse.com |
    | SECRET_KEY_BASE | Random string for contract verification    | Generate using: `head -c 64 /dev/urandom \| base64 \| cut -c 1-64` |
    | JSON_RPC | RPC endpoint for MetaMask integration        | rpc.myverse.com |
    | CHAIN_ID | Chain ID for MetaMask integration           | Your Verse ChainID |
