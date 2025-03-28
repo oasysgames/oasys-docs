@@ -97,6 +97,7 @@ For more common details, see [Blockscout Frontend Environment Variables](https:/
 ### Token Configuration Variables
    |    Variable               |   Description                              | Value | Version |
    |---------------------------|--------------------------------------------|--------|---------|
+   | NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY | reCAPTCHA site key for the application. Note: In versions prior to v1.38.x, this was temporarily named as `NEXT_PUBLIC_RE_CAPTCHA_V3_APP_SITE_KEY`. From v1.38.x onwards, it has been reverted back to `NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY`. | Your reCAPTCHA site key | All |
    | NEXT_PUBLIC_UPDATED_TOKENS | URL of a JSON configuration file or a JSON string containing updated token information. Used to override token display information in the explorer. | URL: `https://oasys-blockscout-networks.s3.ap-northeast-1.amazonaws.com/blockscout-updated-tokens.json` or JSON string: `{"tokens":[{"address":"0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000","name":"Oasys","symbol":"OAS"},{"address":"0xE1aB220E37AC55A4E2dD5Ba148298A9c09fBD716","name":"Legacy Bridged USDC (Celer)","symbol":"USDC.e-legacy"}]}` | v1.38.x+ |
 
 ## Blockscout v6
