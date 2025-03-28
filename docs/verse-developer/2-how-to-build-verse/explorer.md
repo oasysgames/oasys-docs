@@ -100,6 +100,46 @@ For more common details, see [Blockscout Frontend Environment Variables](https:/
    | NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY | reCAPTCHA site key for the application. Note: In versions prior to v1.38.x, this was temporarily named as `NEXT_PUBLIC_RE_CAPTCHA_V3_APP_SITE_KEY`. From v1.38.x onwards, it has been reverted back to `NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY`. | Your reCAPTCHA site key | All |
    | NEXT_PUBLIC_UPDATED_TOKENS | URL of a JSON configuration file or a JSON string containing updated token information. Used to override token display information in the explorer. | URL: `https://oasys-blockscout-networks.s3.ap-northeast-1.amazonaws.com/blockscout-updated-tokens.json` or JSON string: `{"tokens":[{"address":"0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000","name":"Oasys","symbol":"OAS"},{"address":"0xE1aB220E37AC55A4E2dD5Ba148298A9c09fBD716","name":"Legacy Bridged USDC (Celer)","symbol":"USDC.e-legacy"}]}` | v1.38.x+ |
 
+## Migrating from Blockscout v6 to v7
+
+This section guides you through the process of migrating your Blockscout explorer from version 6 to version 7.
+
+### Repository Changes
+
+When migrating from v6 to v7, you'll need to use different repositories:
+
+**Frontend:**
+- v6: `github.com/oasysgames/blockscout-v6-frontend`
+- v7: `github.com/oasysgames/blockscout-v7-frontend`
+
+**Backend:**
+- v6: `github.com/oasysgames/blockscout-v6-backend`
+- v7: `github.com/oasysgames/blockscout-v7-backend`
+
+### Migration Steps
+
+1. Stop the v6 services:
+   ```bash
+   # In the v6 directory
+   docker-compose down
+   ```
+
+2. Start the v7 services:
+   ```bash
+   # In the v7 directory
+   docker-compose up -d
+   ```
+
+### Environment Variable Changes
+
+When migrating to v7, note the following environment variable changes:
+
+**reCAPTCHA Configuration:**
+- v6: `NEXT_PUBLIC_RE_CAPTCHA_V3_APP_SITE_KEY`
+- v7: `NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY`
+
+Make sure to update your environment configuration accordingly.
+
 ## Blockscout v6
 
 ### Setup Blockscout
