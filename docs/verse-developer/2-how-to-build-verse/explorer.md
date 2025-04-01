@@ -140,6 +140,8 @@ When migrating to v7, note the following environment variable changes:
 
 Make sure to update your environment configuration accordingly.
 
+The migration process from v6 to v7 is designed to be automatic, and verified contracts will also be carried over automatically.
+
 ## Blockscout v6
 
 ### Setup Blockscout
