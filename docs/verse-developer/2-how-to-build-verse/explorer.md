@@ -67,7 +67,7 @@ For more details, see [Blockscout Backend Environment Variables](https://docs.bl
    | DATABASE_URL              | Postgres Database endpoint                  | postgresql://postgres:@host.docker.internal:7432/blockscout?ssl=falset |
    | ETHEREUM_JSONRPC_VARIANT  | RPC Client type                           | geth |
    | ETHEREUM_JSONRPC_HTTP_URL | RPC endpoint for main operations          | rpc.myverse.com |
-   | ETHEREUM_JSONRPC_TRACE_URL | RPC endpoint for tracing operations       | rpc.myverse.com |
+   | ETHEREUM_JSONRPC_TRACE_URL | RPC endpoint for tracing operations. This endpoint must support debug_traceTransaction method for internal transactions. For Verse v1 (OP Stack), ensure that the debug namespace is enabled and the node is configured to support internal transaction tracing. | rpc.myverse.com |
    | SECRET_KEY_BASE | Random string for contract verification    | Generate using: `head -c 64 /dev/urandom \| base64 \| cut -c 1-64` |
    | JSON_RPC | RPC endpoint for MetaMask integration        | rpc.myverse.com |
    | CHAIN_ID | Chain ID for MetaMask integration           | Your Verse ChainID |
@@ -76,6 +76,29 @@ For more details, see [Blockscout Backend Environment Variables](https://docs.bl
 
    Note: If running on the same server, use `http://host.docker.internal:8545/` for RPC URLs.
 
+## Frontend Environment Variables
+Both BlockScout v6 and v7 share the following frontend environment variables that need to be configured:
+
+:::note Important Notes for Verse v1 Environment
+When setting up Blockscout for Verse v1 (OP Stack), ensure the following configuration:
+
+1. Set `NEXT_PUBLIC_VERSE_VERSION=1` to enable OP Stack specific features
+2. Set `NEXT_PUBLIC_HOMEPAGE_HIDDEN_OP_NODE_TXS=true` to hide internal L2 transactions (recommended for cleaner transaction view)
+:::
+
+For more common details, see [Blockscout Frontend Environment Variables](https://docs.blockscout.com/for-developers/information-and-settings/env-variables/frontend-common-envs).
+
+### OP Stack Related Variables
+   |    Variable               |   Description                              | Value |
+   |---------------------------|--------------------------------------------|--------|
+   | NEXT_PUBLIC_HOMEPAGE_HIDDEN_OP_NODE_TXS | Controls the visibility of OP Stack transactions. When enabled, it hides L2 transactions from the OP Stack node . This is particularly useful for Verse v1 which uses OP Stack. | `true` or `false` |
+   | NEXT_PUBLIC_VERSE_VERSION | Specifies the Verse version. Set to `1` for Verse v1 (OP Stack) or `0` for Verse v0 (L2Geth). This affects how bridge transactions and other version-specific features are handled in the explorer. | `0` or `1` |
+
+### Token Configuration Variables
+   |    Variable               |   Description                              | Value | Version |
+   |---------------------------|--------------------------------------------|--------|---------|
+   | NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY | reCAPTCHA site key for the application. Note: In versions prior to v1.38.x, this was temporarily named as `NEXT_PUBLIC_RE_CAPTCHA_V3_APP_SITE_KEY`. From v1.38.x onwards, it has been reverted back to `NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY`. | Your reCAPTCHA site key | All |
+   | NEXT_PUBLIC_UPDATED_TOKENS | URL of a JSON configuration file or a JSON string containing updated token information. Used to override token display information in the explorer. | URL: `https://oasys-blockscout-networks.s3.ap-northeast-1.amazonaws.com/blockscout-updated-tokens.json` or JSON string: `{"tokens":[{"address":"0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000","name":"Oasys","symbol":"OAS"},{"address":"0xE1aB220E37AC55A4E2dD5Ba148298A9c09fBD716","name":"Legacy Bridged USDC (Celer)","symbol":"USDC.e-legacy"}]}` | v1.38.x+ |
 
 ## Blockscout v6
 
@@ -129,6 +152,8 @@ For more details, see [Blockscout Backend Environment Variables](https://docs.bl
    - Set variables in [.env.common](https://github.com/oasysgames/blockscout-v6-frontend/blob/main/configs/envs/.env.common)
    - For available options, see [Blockscout v6 Frontend Documentation](https://github.com/oasysgames/blockscout-v6-frontend/blob/main/docs/ENVS.md)
    - For Featured Networks configuration, see [Featured Network Configuration Properties](https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#featured-network-configuration-properties)
+   - For OP Stack configuration, see [OP Stack Related Variables](#op-stack-related-variables)
+   - For Token configuration, see [Token Configuration Variables](#token-configuration-variables)
 
 4. **Run Frontend Container**:
    ```shell
