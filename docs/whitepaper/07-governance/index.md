@@ -6,7 +6,7 @@ sidebar_position: 1
 ## Overview
 Oasys employs sophisticated decentralized governance and operates in an autonomous decentralized manner through the use of tokens.
 
-It is designed as community-driven on-chain governance. Specifically, Oasys uses an indirect democratic approach that combines decision-making by a referendum and a council. The council is independent of the token holders and composed of members elected and delegated by the community. This governance mechanism keeps the legitimacy of decision-making while maintaining decentralization.
+It is designed as community-driven on-chain governance. Specifically, Oasys uses an indirect democratic approach that combines decision-making by a referendum and a council. The council is independent of the token holders and composed of members elected and delegated by the community indirectly. This governance mechanism keeps the legitimacy of decision-making while maintaining decentralization.
 
 ## Principle
 Oasys’ governance is designed with the following three principles.
@@ -22,7 +22,7 @@ The decision-making process takes time. Even if it takes time, most decisions sh
 ### 1. OAS Token Holders
 Any holders of OAS tokens can participate in decentralized governance. There are two ways to participate: proposal and voting.
 ### 2. Council
-The council is composed of members elected and delegated by the community. It is mainly responsible for submitting council proposals and approving public and technical proposals. The maximum number of council members is twenty-one, and their term of service is two years.
+The Council is Oasys' decision-making body. It is composed of entities that are either recommended by the Foundation or self-nominated, and have obtained approval from the validators which are delegated by the community. It is mainly responsible for submitting council proposals and approving public and technical proposals.
 ### 3. Technical Committee
 The committee comprises members who developed Oasys. The people who excel at certain technologies are selected by the council. In case of emergencies, the committee is responsible for fixing bugs following the technical proposal. Same as the council, the committee members can be added or removed by a majority council vote.
 
@@ -35,4 +35,3 @@ You can have the right to submit a proposal to the forum as you stake OAS tokens
 This is a proposal by the council. Since the council has already approved it, it only needs to be approved by the token holders to be implemented. The proposal will be quickly incorporated into the development schedule as soon as approval is granted.
 ### 3. Emergency Proposal
 This is for emergency patching in case of bugs or defects. In order to resolve problems quickly with implementation, only a proposal needs to be submitted to the Council. However, it is obligatory to make a Public Proposal after the implementation is completed.
-
