@@ -99,3 +99,10 @@ The following sections have been updated to reflect that authorized EOAs can dep
 
 - 4.Solution - Oasys Architecture > 4-1. Ecosystem Design > Hub-Layer (Layer 1) > High Scalability
 - 5.Technologies > 5-1. Hub-Layer > Outline & Smart Contract
+
+_17th Apr 2025 Update_
+
+The following sections have been updated to reflect the current state of the Council.
+
+- 5.Technologies > 5-3. NFT Bridge > Bridge Contract
+- 7.Governance > Overview & Decision-making Bodies > 2. Council
