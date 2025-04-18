@@ -8,36 +8,33 @@ Native Token. OAS does not have a contract address.
 
 The Wrapped Oasys Token is an ERC-20 standard token designed for simplicity of token swapping.
 
-# sOAS & LOAS
+### Contract of WOAS
 
+WOAS contract address is `0x5200000000000000000000000000000000000001`
 
-## sOAS
-OAS is our native token, and sOAS means Stakeable Oasys Token. Since we need a locked-up token but POS needs staking for validators, we have made sOAS. Although sOAS tokens are locked and consequently non-circulating, holders of sOAS, as well as validators, can earn rewards through staking activities.
+- [WOAS on GitHub](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/WOAS.sol)
 
-### Purpose of sOAS
-sOAS is, for better participating in our ecosystem, and thanks for early support with us, we are sending tokens that can stake, which makes an opportunity to participate in our ecosystem. sOAS can use Hub layer staking and verse deposit, which can substantially support verse builders or operators.
+## SOAS
+OAS is our native token, and SOAS means Stakeable Oasys Token. Since we need a locked-up token but PoS needs staking for validators, we have made SOAS. Although SOAS tokens are locked and consequently non-circulating, holders of SOAS, as well as validators, can earn rewards through staking activities.
 
-### Contract of sOAS
+### Purpose of SOAS
+SOAS is, for better participating in our ecosystem, and thanks for early support with us, we are sending tokens that can stake, which makes an opportunity to participate in our ecosystem. SOAS can use Hub layer staking and verse deposit, which can substantially support verse builders or operators.
 
-sOAS contract address is `0x5200000000000000000000000000000000000002`
+### Contract of SOAS
 
-- [sOAS on Github](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/SOAS.sol)
+SOAS contract address is `0x5200000000000000000000000000000000000002`
 
-
-### How is sOAS made? 
-
-- [sOAS on Github](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/SOAS.sol)
+- [SOAS on GitHub](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/SOAS.sol)
 
 If you're familiar with solidity, take a look at this code first.
 <!-- TRANSLATION: Is 'the minter can move it only with the minter's permission' really correct? -->
-sOAS can be minted by anyone, but the receiver can move it only with the minter's permission.
+SOAS can be minted by anyone, but the receiver can move it only with the minter's permission.
 
 ||  |
 |----------------|----------------|
 |Mint|Anyone can mint|
 |Receive|Anyone|
 |Move token|Only by minter|
-
 
 ### Vesting period
 
@@ -46,34 +43,33 @@ While we mint a token from a contract, Since (Vesting Start) and Until (Vesting 
 The Calculation formula is: 
 
 ```bash
-ClaimableOAS = (now - Since) ÷ (Until - Since) × sOAS holding amount
-# If (now - Since) ÷ (Until - Since) is over 1, You can claim the total sOAS holding amount.
+ClaimableOAS = (now - Since) ÷ (Until - Since) × SOAS holding amount
+# If (now - Since) ÷ (Until - Since) is over 1, You can claim the total SOAS holding amount.
 ```
 
 For example, 
 
-If 1,000 sOAS tokens are minted:
+If 1,000 SOAS tokens are minted:
 <!-- TRANSLATION: Since is Jan 1, 2023? Instead of 2024? -->
 Since is Jan 1, 2024
 Until is Dec 31, 2024
 
 And you can retrieve locked up token like this.
 
-| Time | Total OAS Claim(convert sOAS to OAS) |
+| Time | Total OAS Claim(convert SOAS to OAS) |
 |----------------|-------------|
 | 2023 Jan 1~2023 Dec 31| 0 | 
-| 2024 Jan 1 | 2.7 sOAS → 2.7 OAS| 
-| 2024 Jan 31 | 84.9 sOAS → 84.9 OAS| 
-| 2024 Feb 28 | 161.6 sOAS → 161.6 OAS| 
-| 2024 Mar 31 | 246.5 sOAS → 246.5 OAS|
-| 2024 Jun 30 | 495.8 sOAS → 495.8 OAS|  
-| 2024 Dec 31 | 1000 sOAS → 1000 OAS|  
-
+| 2024 Jan 1 | 2.7 SOAS → 2.7 OAS| 
+| 2024 Jan 31 | 84.9 SOAS → 84.9 OAS| 
+| 2024 Feb 28 | 161.6 SOAS → 161.6 OAS| 
+| 2024 Mar 31 | 246.5 SOAS → 246.5 OAS|
+| 2024 Jun 30 | 495.8 SOAS → 495.8 OAS|  
+| 2024 Dec 31 | 1000 SOAS → 1000 OAS|  
 
 **Please keep in mind that all example token claims are approximate numbers. Therefore, they might not be accurate.**
 
-### How to claim sOAS into OAS​
-You can claim sOAS into OAS​ at [tools-fe](https://tools-fe.oasys.games/sOAS)
+### How to claim SOAS into OAS​
+You can claim SOAS into OAS​ at [tools-fe](https://tools-fe.oasys.games/sOAS)
 
 ## LOAS
 
@@ -82,13 +78,13 @@ OAS is our native token, and LOAS means Locked Oasys Token.
 ### Purpose of LOAS
 
 On a normal chain, even during the Lock-up period, sometimes you can not claim your token despite having the right to do so. 
-You can claim the same as sOAS during the vesting period. LOAS would be mainly sent for our contributors. 
+You can claim the same as SOAS during the vesting period. LOAS would be mainly sent for our contributors. 
 
 ### Contract of LOAS
 
 LOAS contract address is `0x5200000000000000000000000000000000000023`
 
-- [LOAS on Github](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/LOAS.sol)
+- [LOAS on GitHub](https://github.com/oasysgames/oasys-genesis-contract/blob/main/contracts/token/LOAS.sol)
 
 ### Vesting period
 
@@ -120,15 +116,14 @@ And you can retrieve locked up token like this.
 | 2024 Jun 30 | 495.8 LOAS → 495.8 OAS|  
 | 2024 Dec 31 | 1000 LOAS → 1000 OAS|  
 
-
 **Please keep in mind that all example token claims are approximate numbers. Therefore, they might not be accurate.**
 
 ### How to claim LOAS into OAS​
 You can claim LOAS into OAS​ at [tools-fe](https://tools-fe.oasys.games/lOAS)
 
-## OAS & sOAS & LOAS compare
+## OAS & SOAS & LOAS compare
 
-| Type | OAS | sOAS | LOAS |
+| Type | OAS | SOAS | LOAS |
 |-----------|-----------|-----------|-----------|
 | Stake on Hub Layer| O | O | X |
 | Verse Layer Deposit (1M Deposit to build a verse) | O | O | X |
