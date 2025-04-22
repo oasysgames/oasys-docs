@@ -7,7 +7,7 @@
 | Oasys Navi         | https://oasys.gamefi.org/             |
 | Explorer           | https://explorer.oasys.games/         |
 | GitHub             | https://github.com/oasysgames         |
-| X (Twitter)        | https://x.com/oasys_games             |
+| X (Twitter)        | https://x.com/oasyschain              |
 | Discord            | https://discord.gg/8hfWTbKVex         |
 | Medium             | https://medium.com/@oasys             |
 | Explorer (Testnet) | https://explorer.testnet.oasys.games/ |

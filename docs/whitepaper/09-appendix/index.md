@@ -9,7 +9,7 @@ sidebar_position: 1
 ## Links
 **Website:** https://www.oasys.games/  
 **GitHub:** https://github.com/oasysgames  
-**Twitter:** https://twitter.com/oasys_games  
+**X (Twitter):** https://twitter.com/oasyschain  
 **Discord:** https://discord.gg/8hfWTbKVex  
 **Medium:** https://medium.com/@oasys  
 

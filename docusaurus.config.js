@@ -174,8 +174,8 @@ const config = {
                 href: 'https://discord.gg/8hfWTbKVex',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/oasys_games',
+                label: 'X (Twitter)',
+                href: 'https://twitter.com/oasyschain',
               },
             ],
           },
