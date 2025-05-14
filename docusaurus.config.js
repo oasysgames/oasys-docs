@@ -204,6 +204,18 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+scripts: [
+    // Add your custom script here
+    {
+      src: 'https://dashboard.letmeexplain.ai/embed/lme_chatbot_widget.js',
+      async: false,
+    },
+    {
+      // Custom JS to load the widget after DOM is ready
+      src: '/js/enable_lme_chatbot.js',
+      async: true,
+    },
+  ],
   // i18n: {
   //   defaultLocale: 'en',
   //   locales: ['en', 'ja'],
