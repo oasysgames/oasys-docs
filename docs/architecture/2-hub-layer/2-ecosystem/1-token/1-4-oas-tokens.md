@@ -1,4 +1,4 @@
-# Token in Oasys(OAS/LOAS/SOAS/WOAS/pOAS) 
+# Token in Oasys (OAS/LOAS/SOAS/WOAS/pOAS)
 
 ## OAS
 

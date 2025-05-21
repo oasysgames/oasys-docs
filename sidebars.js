@@ -140,7 +140,7 @@ const sidebars = {
         },
         {
           type: 'category',
-          label: 'Token in Oasys(OAS/LOAS/SOAS/WOAS)',
+          label: 'Token in Oasys',
           link: {
             type: 'doc',
             id: 'architecture/hub-layer/ecosystem/token/1-4-oas-tokens',
