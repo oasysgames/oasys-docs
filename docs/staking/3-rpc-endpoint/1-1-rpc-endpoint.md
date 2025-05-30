@@ -8,10 +8,9 @@
   <tbody>
     <tr><td colspan="3">ChainID</td><td>248</td></tr>
     <tr><td colspan="3">Currency Symbol</td><td>OAS</td></tr>
-    <tr><td rowspan="4">RPC</td><td>BlockPi</td><td>HTTPS</td><td>https://oasys.blockpi.network/v1/rpc/public</td></tr>
-    <tr><td rowspan="2">Oasys</td><td>HTTPS</td><td>https://rpc.mainnet.oasys.games</td></tr>
+    <tr><td rowspan="3">RPC</td><td rowspan="2">Oasys</td><td>HTTPS</td><td>https://rpc.mainnet.oasys.games</td></tr>
     <tr><td>Websocket</td><td>wss://ws.mainnet.oasys.games/</td></tr>
-    <tr><td>Grove</td><td>HTTPS</td><td>https://oasys.rpc.grove.city/v1/167fa7a3</td></tr>
+    <tr><td>BlockPi</td><td>HTTPS</td><td>https://oasys.blockpi.network/v1/rpc/public</td></tr>
     <tr><td colspan="3">Explorer</td><td><a href="https://explorer.oasys.games/" target="_blank" rel="noopener noreferrer">https://explorer.oasys.games/</a></td></tr>
   </tbody>
 </table>
@@ -51,7 +50,7 @@ Please refer to [SAND Verse](/docs/verse-developer/sandverse) to learn about SAN
     <tr><td colspan="2">Currency Symbol</td><td>OAS</td></tr>
     <tr><td rowspan="2">RPC</td><td>HTTPS</td><td>https://rpc.sandverse.oasys.games</td></tr>
     <tr><td>Websocket</td><td>wss://ws.sandverse.oasys.games</td></tr>
-    <tr><td colspan="2">Explorer</td><td><a href="https://scan.sandverse.oasys.games/" target="_blank" rel="noopener noreferrer">https://scan.sandverse.oasys.games/</a></td></tr>
+    <tr><td colspan="2">Explorer</td><td><a href="https://explorer.sandverse.oasys.games/" target="_blank" rel="noopener noreferrer">https://explorer.sandverse.oasys.games/</a></td></tr>
     <tr><td colspan="2">Faucet</td><td><a href="https://faucet.sandverse.oasys.games/" target="_blank" rel="noopener noreferrer">https://faucet.sandverse.oasys.games/</a></td></tr>
   </tbody>
 </table>

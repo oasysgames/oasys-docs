@@ -14,6 +14,7 @@ const config = {
   },
   etherscan: {
     apiKey: {
+      // Is not required by blockscout. Can be any non-empty string
       oasysmainnet: "abc"
     },
     customChains: [
