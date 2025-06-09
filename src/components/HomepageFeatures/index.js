@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
@@ -41,16 +40,6 @@ const FeatureList = [
     description: (
       <>
         Oasys Architecture. 
-      </>
-    ),
-  },
-  {
-    title: 'Ecosystem',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    linkTo: "/docs/ecosystem/intro",
-    description: (
-      <>
-        The current ecosystem of Oasys is continually evolving. We will expand and grow our ecosystem over time.
       </>
     ),
   },

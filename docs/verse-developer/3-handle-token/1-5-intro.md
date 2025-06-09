@@ -9,5 +9,3 @@ vFT/vNFT can be minted on the Verse-Layer. The token can only be used with certa
 oFT/oNFT can be minted on the Hub-Layer. The token is interoperable and is available on all Verse-Layers. Also, it can be sent to another network such as Ethereum by a cross-chain bridge.
 ### 3. exFT/exNFT, Minted in External Network Tokens
 exFT/exNFT is a token minted on a network outside of Oasys. They are available on Oasys' Hub-Layer and Verse-Layer via cross-chain bridges.
-## Cross-Chain Bridge for FT / NFT
-FT/NFT bridges are available: vFT and exFT for FT; and vNFT and exNFT for NFT.

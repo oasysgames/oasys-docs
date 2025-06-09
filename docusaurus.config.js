@@ -109,26 +109,14 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'ecosystem/intro',
-            position: 'left',
-            label: 'Ecosystem',
-          },
-          {
-            type: 'doc',
             docId: 'architecture/overview/oasys-architecture/ecosystem-architecture',
             position: 'left',
             label: 'Architecture',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'whitepaper/intro',
-          //   position: 'left',
-          //   label: 'Whitepaper',
-          // },
-          {
-            type: 'localeDropdown',
-            position: 'right',
-          },
+          //{
+          //  type: 'localeDropdown',
+          //  position: 'right',
+          //},
           {
             href: 'https://github.com/oasysgames',
             label: 'GitHub',
@@ -155,10 +143,6 @@ const config = {
               {
                 label: 'Archive',
                 to: '/docs/archive/overview',
-              },
-              {
-                label: 'Technical Materials',
-                to: '/docs/tech-docs/whats-oasys/1-1-whats-oasys',
               },
               {
                 label: 'GitHub',
@@ -204,10 +188,10 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-  // i18n: {
-  //   defaultLocale: 'en',
-  //   locales: ['en', 'ja'],
-  // },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
 };
 
 module.exports = config;

@@ -11,7 +11,7 @@ To perform this tutorial, use the following tools:
 1. Remix IDE : Remix IDE allows you to edit smart contracts and deploy.
 2. OpenZepplin Contract Wizard : You can easily create an ERC-20 smart contract using OpenZeppelin Contract Wizard.
 3. Metamask (browser extension) : Process transactions and deploy smart contracts through the Metamask browser extension.
-* Oasys SAND Verse network is layer-2, and the faucet does not exist because gas is **free** when processing transactions.
+* Oasys SAND Verse network is layer-2, and gas is **free** when processing transactions.
 
 ### Add Oasys SAND Verse network on metamask
 ![Add Oasys SAND Verse network on metamask](/img/docs/techdocs/smart-contract/add-network-1.png)
@@ -27,10 +27,10 @@ When you click the Add network button, a web page is called where you can add a 
 | Web Socket      | wss://ws.sandverse.oasys.games             |
 
 ### Create a mintable ERC-20 smart contract using the Openzepplin contracts wizard
-Please refer to [this](#create-a-mintable-erc-20-smart-contract-using-the-openzepplin-contracts-wizard) section because the Openzepplin contracts wizard uses the same method of creating a Smart Contract.
+Please refer to this section because the [Openzepplin contracts wizard](https://docs.openzeppelin.com/contracts/wizard) uses the same method of creating a Smart Contract.
 
 ### Deploy the smart contract using Remix IDE
-Create the MyToken.sol file in Remix IDE, as shown in [this](#deploy-the-smart-contract-using-remix-ide) section.
+Create the MyToken.sol file in Remix IDE, as shown in this section.
 ![Deploy Smart Contract - Sand Verse](/img/docs/techdocs/smart-contract/deploy-contract-sandverse-1.png)
 
 
@@ -64,4 +64,4 @@ In this case, you can do the following to approve the transaction.
 The token has been received but is not visible on the metamask. In this case, you must import tokens from the metamask.
 
 ![Import ERC-20](/img/docs/techdocs/smart-contract/import-token-sandverse-1.png)
-- Visit Oasys Sandverse to view information about the minted token. You can copy the token's smart contract address and import it into the meta mask according to how it was written in [this](#import-token-to-metamask) section.
+- Visit Oasys Sandverse to view information about the minted token. You can copy the token's smart contract address and import it into the meta mask according to how it was written in this section.

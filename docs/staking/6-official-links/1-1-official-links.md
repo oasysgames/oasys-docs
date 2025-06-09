@@ -12,3 +12,4 @@
 | Medium             | https://medium.com/@oasys             |
 | Explorer (Testnet) | https://explorer.testnet.oasys.games/ |
 | Faucet (Testnet)   | https://faucet.testnet.oasys.games/   |
+| Verseport          | https://www.verseport.oasys.games/    |

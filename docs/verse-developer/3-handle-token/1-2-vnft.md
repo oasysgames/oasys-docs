@@ -11,7 +11,7 @@ To perform this tutorial, use the following tools:
 1. Remix IDE : Remix IDE allows you to edit smart contracts and deploy.
 2. OpenZepplin Contract Wizard : You can easily create an ERC-721 smart contract using OpenZeppelin Contract Wizard.
 3. Metamask (browser extension) : Process transactions and deploy smart contracts through the Metamask browser extension.
-* Oasys SAND Verse network is layer-2, and the faucet does not exist because gas is **free** when processing transactions.
+* Oasys SAND Verse network is layer-2, and gas is **free** when processing transactions.
 
 ### Add Oasys SAND Verse network on metamask
 ![Add Oasys Sand Verse network on metamask](/img/docs/techdocs/smart-contract/add-network-1.png)
@@ -27,7 +27,7 @@ When you click the Add network button, a web page is called where you can add a 
 | Web Socket      | wss://ws.sandverse.oasys.games             |
 
 ### Create a mintable ERC-721 smart contract using the Openzepplin contracts wizard
-We will create a simple mintable ERC-721 smart contract using the [Openzepplin contracts wizard](https://docs.openzeppelin.com/contracts/4.x/wizard) instead of writing a smart contract directly.
+We will create a simple mintable ERC-721 smart contract using the [Openzepplin contracts wizard](https://docs.openzeppelin.com/contracts/wizard) instead of writing a smart contract directly.
 
 ![Smart Contract Wizard](/img/docs/techdocs/smart-contract/contract-wizard-ERC721.png)
 
