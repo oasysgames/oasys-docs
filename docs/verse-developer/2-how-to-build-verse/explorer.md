@@ -57,9 +57,71 @@ If you are using op-geth, follow these steps to enable the required namespaces:
    - Restart your `op-geth` node to apply the settings
    - Check the logs to confirm the namespaces are available
 
+## Blockscout v8
+
+### Setup Blockscout v8
+#### Backend Setup
+1. **Clone Repository**:
+   ```shell
+   git clone https://github.com/oasysgames/blockscout-v8-backend.git
+   cd blockscout-v8-backend
+   ```
+
+2. **Checkout Specific Version**:
+   Check available versions at [blockscout-v8-backend releases](https://github.com/oasysgames/blockscout-v8-backend/tags) and checkout the desired version:
+   ```shell
+   # Example: checking out the latest stable version
+   git checkout <version-tag>
+   ```
+
+3. **Configure Environment Variables and Start**:
+   Set the following variables in [common-blockscout.env](https://github.com/oasysgames/blockscout-v8-backend/blob/main/docker-compose/envs/common-blockscout.env):
+
+   ```shell
+   cd docker-compose/envs/
+   vim common-blockscout.env
+   docker compose build
+   ```
+
+   Refer to the [Common Backend Environment Variables](#common-backend-environment-variables) section below for the required configuration.
+
+4. **Run Backend Container**:
+   ```shell
+   sudo FRONT_PROXY_PASS=http://host.docker.internal:3000 docker compose -f external-frontend.yml up -d
+   ```
+
+#### Frontend Setup
+1. **Clone Repository**:
+   ```shell
+   git clone https://github.com/oasysgames/blockscout-v8-frontend.git
+   cd blockscout-v8-frontend
+   ```
+
+2. **Checkout Specific Version**:
+   Check available versions at [blockscout-v8-frontend releases](https://github.com/oasysgames/blockscout-v8-frontend/tags) and checkout the desired version:
+   ```shell
+   # Example: checking out the latest stable version
+   git checkout <version-tag>
+   ```
+
+3. **Configure Environment Variables**:
+   - Set variables in [.env.common](https://github.com/oasysgames/blockscout-v8-frontend/blob/main/configs/envs/.env.common)
+   - For available options, see [Blockscout v8 Frontend Documentation](https://github.com/oasysgames/blockscout-v8-frontend/blob/main/docs/ENVS.md)
+   - For Featured Networks configuration, see [Featured Network Configuration Properties](https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#featured-network-configuration-properties)
+   - For OP Stack configuration, see [OP Stack Related Variables](#op-stack-related-variables)
+   - For Token configuration, see [Token Configuration Variables](#token-configuration-variables)
+
+4. **Run Frontend Container**:
+   ```shell
+   docker-compose build 
+   docker compose up -d
+   ```
+
+   Access the explorer at `http://localhost/` or `http://localhost:3000/`
+
 ## Blockscout v7
 
-### Setup Blockscout
+### Setup Blockscout v7
 #### Backend Setup
 1. **Clone Repository**:
    ```shell
@@ -81,7 +143,6 @@ If you are using op-geth, follow these steps to enable the required namespaces:
    cd docker-compose/envs/
    vim common-blockscout.env
    docker compose build
-   docker compose up -d
    ```
 
    Refer to the [Common Backend Environment Variables](#common-backend-environment-variables) section below for the required configuration.
@@ -119,6 +180,48 @@ If you are using op-geth, follow these steps to enable the required namespaces:
    ```
 
    Access the explorer at `http://localhost/` or `http://localhost:3000/`
+
+## Migrating from Blockscout v7 to v8
+
+This section guides you through the process of migrating your Blockscout explorer from version 7 to version 8.
+
+### Repository Changes
+
+When migrating from v7 to v8, you'll need to use different repositories:
+
+**Frontend:**
+- v7: `github.com/oasysgames/blockscout-v7-frontend`
+- v8: `github.com/oasysgames/blockscout-v8-frontend`
+
+**Backend:**
+- v7: `github.com/oasysgames/blockscout-v7-backend`
+- v8: `github.com/oasysgames/blockscout-v8-backend`
+
+### Migration Steps
+
+1. Stop the v7 services:
+   ```bash
+   # In the v7 directory
+   docker-compose down
+   ```
+
+2. Start the v8 services:
+   ```bash
+   # In the v8 directory
+   docker-compose up -d
+   ```
+
+### Environment Variable Changes
+
+When migrating to v8, note the following environment variable changes:
+
+**reCAPTCHA Configuration:**
+- v7: `NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY`
+- v8: `NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY` (no change from v7)
+
+Make sure to update any other environment configuration accordingly.
+
+The migration process from v7 to v8 is designed to be automatic, and verified contracts will also be carried over automatically.
 
 ## Migrating from Blockscout v6 to v7
 
@@ -164,7 +267,7 @@ The migration process from v6 to v7 is designed to be automatic, and verified co
 
 ## Blockscout v6
 
-### Setup Blockscout
+### Setup Blockscout v6
 #### Backend Setup
 1. **Clone Repository**:
    ```shell
@@ -186,7 +289,6 @@ The migration process from v6 to v7 is designed to be automatic, and verified co
    cd docker-compose/envs/
    vim common-blockscout.env
    docker compose build
-   docker compose up -d
    ```
 
    Refer to the [Common Backend Environment Variables](#common-backend-environment-variables) section below for the required configuration.
@@ -225,7 +327,6 @@ The migration process from v6 to v7 is designed to be automatic, and verified co
 
    Access the explorer at `http://localhost/` or `http://localhost:3000/`
 
-
 ```shell
 cd blockscout-v6-backend/migrates/
 cp config/.env.sample config/.env
@@ -237,7 +338,7 @@ sudo chmod +x excutes/verified_contract.sh
 ## Common Configuration Items
 
 ### Common Backend Environment Variables
-Both BlockScout v6 and v7 share the following environment variables that need to be configured:
+All BlockScout versions (v6, v7, and v8) share the following environment variables that need to be configured:
 
 For more details, see [Blockscout Backend Environment Variables](https://docs.blockscout.com/setup/env-variables/backend-env-variables).
 
@@ -256,7 +357,7 @@ For more details, see [Blockscout Backend Environment Variables](https://docs.bl
    Note: If running on the same server, use `http://host.docker.internal:8545/` for RPC URLs.
 
 ## Frontend Environment Variables
-Both BlockScout v6 and v7 share the following frontend environment variables that need to be configured:
+All BlockScout versions share the following frontend environment variables that need to be configured:
 
 :::note Important Notes for Verse v1 Environment
 When setting up Blockscout for Verse v1 (OP Stack), ensure the following configuration:
