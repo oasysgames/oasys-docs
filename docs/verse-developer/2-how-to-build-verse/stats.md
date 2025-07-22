@@ -307,11 +307,11 @@ Ensure that your EC2 instance’s security group allows inbound traffic on port 
 3. Ensure that the traffic is correctly forwarded to the ALB, which in turn forwards it to the EC2 instance on port 8080.
 
 
-## Update ENV Configuration of blockscout-v6-frontend
+## Update ENV Configuration of blockscout-v8-frontend
 
-### Step 1: Locate blockscout-v6-frontend/
+### Step 1: Locate blockscout-v8-frontend/
 ```sh
-cd blockscout-v6-frontend/
+cd blockscout-v8-frontend/
 ```
 
 ### Step 2: Update ENV Configuration

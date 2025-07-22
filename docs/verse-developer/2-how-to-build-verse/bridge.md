@@ -13,7 +13,7 @@ You need to [set up the Blockscout](/docs/verse-developer/how-to-build-verse/exp
 And navigate to the frontend directory:
 
 ```sh
-cd blockscout-v6-frontend
+cd blockscout-v8-frontend
 ```
 
 ### Step 2: Check token address
@@ -80,7 +80,7 @@ export enum TokenIndex {
 
 ### Step 4: Set Environment Variables
 
-For frontend environment variables configuration (including bridge-related variables), please refer to the [Blockscout v6 Frontend Documentation](https://github.com/oasysgames/blockscout-v6-frontend/blob/main/docs/ENVS.md).
+For frontend environment variables configuration (including bridge-related variables), please refer to the [Blockscout v8 Frontend Documentation](https://github.com/oasysgames/blockscout-v8-frontend/blob/main/docs/ENVS.md).
 
 check the following environment variables:
 - NEXT_PUBLIC_MENU_BRIDGE_VISIBLE
