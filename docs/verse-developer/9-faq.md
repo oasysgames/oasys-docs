@@ -78,3 +78,7 @@ However, censorship resistance and MEV (maximal extractable value) present more 
 ---
 ### Q. Is there any security risk in making the explorer API publicly accessible?
 There is no risk. Please refer to the [API documentation](https://docs.blockscout.com/devs/apis/rpc/eth-rpc). Users can only access several eth namespace APIs through the explorer API. Even though the explorer connects to an L2geth with the debug namespace activated, end users cannot make dangerous calls to the debug namespace through the Explorer.
+
+---
+### Q.What else is important to understand about the Oasys ecosystem?
+[This link](https://holistic-chill-aeb.notion.site/Ecosystem-List-22a4a535a09080d695a5ece37bddaeb0) lists useful ecosystem related information for developing on Oasys, so please take a look.
