@@ -98,7 +98,7 @@ The token has been created but is not visible on the metamask. In this case, you
 Import `l1oft` address at Hub, `l2oft` address at Verse.
 
 ## How to bridge oFT between Hub and Verse
-If you want to know about bridge oFT between Hub and Verse, please refer [bridge tutorial](/docs/verse-developer/bridge/hub-verse) and [the code](https://github.com/oasysgames/l1-l2-bridge-tutorial/blob/v1.1.0/front/src/sdk.ts) in the bridge tutorial.
+If you want to know about bridge oFT between Hub and Verse, please refer [Explorer of SAND Verse](https://explorer.sandverse.oasys.games/bridge).
 
 ## How to create oFT with non-standard decimals
 The decimals for oFTs created by the L1StandardERC20Factory and L2StandardTokenFactory, namely L1StandardERC20 and L2StandardERC20, default to 18.  
