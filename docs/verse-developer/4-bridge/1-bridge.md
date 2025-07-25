@@ -1,7 +1,7 @@
 # Bridge
 Regarding the bridge, we can identify the following four types of bridges in the Oasys Ecosystem.
 
-1. [Between Hub and Verse Bridge](/docs/verse-developer/bridge/hub-verse)
+1. Between Hub and Verse Bridge
     - The Verse is the Rollup of the Hub Layer, so the first type of bridge is achieved using the Optimism method. Optimism supports the bridge as a default feature.
 2. Between Verse and Verse Bridge
     - We plan to support this in the future. If there is strong demand or a concrete business opportunity, we can accelerate our discussions.
