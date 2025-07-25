@@ -343,13 +343,11 @@ const sidebars = {
       type: 'category',
       label: 'Bridge',
       link: {
-        type: 'generated-index',
+        type: 'doc',
+        id: 'verse-developer/bridge',
       },
       collapsed: true,
-      items: [
-        'verse-developer/bridge/bridge',
-        'verse-developer/bridge/hub-verse',
-      ],
+      items: [],
     },
     {
       type: 'category',
