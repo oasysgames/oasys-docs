@@ -3,8 +3,7 @@ Verifying a contract enables public access to the code of the deployed contract.
 
 ## Hardhat
 ### Configuring the Hardhat Settings File
-I will present you with a practical example of the config file (`hardhat.config.js`) for our mainnet case. Please note that it's not necessary to login and generate an apiKey; any value is acceptable.  
-For more details, please refer to the Blockscout [Hardhat Verification Plugin](https://docs.blockscout.com/devs/verification/hardhat-verification-plugin).
+Here is a practical example of the config file (`hardhat.config.js`) for our mainnet case. Please note that it's not necessary to login and generate an apiKey; any value is acceptable.
 
 ```javascript
 const config = {
@@ -33,6 +32,8 @@ const config = {
   ...
 }
 ```
+
+For more details, please refer to the Blockscout [Hardhat Verification Plugin](https://docs.blockscout.com/devs/verification/hardhat-verification-plugin).
 
 ## Foundry
 For verification using Foundry, please refer to Blockscout [Foundry Verification](https://docs.blockscout.com/devs/verification/foundry-verification).
