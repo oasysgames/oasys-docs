@@ -4,21 +4,21 @@
 # Validator Account
 
 <!-- TRANSLATE: Not sure what is meant by 'Validator accounts may be various' -->
-Oasys is Using the DPoS system. Validator accounts may be various. 
+Oasys is Using the DPoS system. Validator accounts may be various.
 
 ![wallet](/img/docs/techdocs/validator/wallet.png)
 
 ## Hub Layer
 
-The Hub layer has decentralized nodes with 15 seconds of block confirmation time. During the development, we have noticed that currently using the private key multiple times running commands can be dangerous and bad for operations. 
+The Hub layer has decentralized nodes with 15 seconds(6s from Aug 2024) of block confirmation time. During the development, we have noticed that currently using the private key multiple times running commands can be dangerous and bad for operations.
 
-So we have made two separate accounts for who is involved in validating. 
+So we have made two separate accounts for who is involved in validating.
 
 
 | Type | Delegator | Owner |
 |-----------|-----------|-----------|
 | Stake| O | O |
-| Claim | O | O | 
+| Claim | O | O |
 | CLI | O | O |
 | Claim Commission | X | O (Upto Validator's commission) |
 
@@ -27,7 +27,7 @@ On initial validators: The Delegator must pay a commission to the Validator Owne
 - If the commission rate is 10%, the owner takes 10% of the delegated stake.
 - So the Owner receives 10OAS, Delegator takes 90OAS.
 
-The owner can stake themselves also. 
+The owner can stake themselves also.
 
 ### Delegator (Staking OAS)
 The delegator is an individual who delegates (=stakes) their assets to the validator owner. Since delegators can delegates tokens directly to the owner account through [multiple methods](/docs/staking/stake-oasys/1-1-stake), they can deposit their tokens and, in return, receive rewards.
