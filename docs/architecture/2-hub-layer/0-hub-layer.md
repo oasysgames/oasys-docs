@@ -7,7 +7,7 @@ The Hub-Layer is an EVM-Compatible public blockchain of Layer 1 in Oasys. The no
 ![L1&L2](/img/docs/techdocs/intro/l1.png)
 
 ## Mining
-The Hub-Layer stores the data gathered on Oasys securely and in a stable manner, but doesn’t run applications directly. To ensure stable propagation of information to globally distributed nodes, blocks are generated every 15 seconds to avoid excessively short block times. Also, to avoid meaningless transaction execution, we will avoid excessively low gas costs and set an appropriate minimum gas cost. The goal is to achieve a minimum gas cost of approximately 1 cent per transfer, depending on the prevailing market price.
+The Hub-Layer stores the data gathered on Oasys securely and in a stable manner, but doesn’t run applications directly. To ensure stable propagation of information to globally distributed nodes, blocks are generated every 6 seconds (Changed from 15s in Aug 2024) to avoid excessively short block times. Also, to avoid meaningless transaction execution, we will avoid excessively low gas costs and set an appropriate minimum gas cost. The goal is to achieve a minimum gas cost of approximately 1 cent per transfer, depending on the prevailing market price.
 
 Block generation is performed by a node called the validator, which is selected by PoS (weighted random shuffling) based on the number of OAS tokens staked. A period of time called epoch is set every 5760 blocks (about one day). When the last block of each epoch is executed, the staking reward for the epoch is determined, and the next validator is determined (incorporation of a new validator or withdrawal of an existing validator). Validator information is managed by a special validator contract.
 

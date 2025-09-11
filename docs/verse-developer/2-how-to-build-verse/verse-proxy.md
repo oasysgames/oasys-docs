@@ -523,5 +523,5 @@ If periodic block number checks do not progress the block number, the result of 
 ### Setup
 It can be enabled by setting block numberCache's expiration from the environment variable.
 ```bash
-BLOCK_NUMBER_CACHE_EXPIRE_SEC=15 # 15 seconds
+BLOCK_NUMBER_CACHE_EXPIRE_SEC=6 # 6 seconds
 ```

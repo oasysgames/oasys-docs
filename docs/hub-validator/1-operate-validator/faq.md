@@ -254,7 +254,7 @@ For example, if the latest height is 3566566:
 current epoch: RoundUp(3566566 / 5760) -> 620
 starting block height: 620 * 5760 -> 3571200
 ```
-As the block time of Oasys L1 is 15 seconds, you can precisely estimate the time when the block arrives.
+As the block time of Oasys L1 is 15 seconds, you can precisely estimate the time when the block arrives. (The L1 block time was changed to 6 seconds in August 2024.)
 
 #### 2. Update Validator Key
 Since the updated validator key is applied from the next epoch, you should do this within the `current epoch` above.
