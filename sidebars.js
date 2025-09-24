@@ -319,6 +319,7 @@ const sidebars = {
             'verse-developer/how-to-build-verse/bridge',
             'verse-developer/how-to-build-verse/change-name-symbol-token',
             'verse-developer/how-to-build-verse/change-featured-networks-button-to-legacy-ui',
+            'verse-developer/how-to-build-verse/block-reindexing-procedure',
           ],
         },
         'verse-developer/how-to-build-verse/the-graph',
