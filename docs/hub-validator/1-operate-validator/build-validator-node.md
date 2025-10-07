@@ -243,7 +243,7 @@ export BOOTNODES="enode://319e4b45c1c00e26a4e04ff103242b09fff91dc5a6f6f06ad2181e
 sudo -u geth geth \
  --networkid $NETWORK_ID \
  --bootnodes $BOOTNODES \
- --syncmode full --gcmode archive --state.scheme hash \
+ --syncmode full --gcmode full --state.scheme hash \
  --mine --miner.gaslimit 30000000 \
  --allow-insecure-unlock --unlock {YOUR_ACCOUNT_ADDRESS} \
  --password /home/geth/.ethereum/password.txt

@@ -11,6 +11,67 @@ keywords:
 ---
 # FAQ
 
+### Q. How can I stabilize full sync?
+One effective way is to add a high-performance node to your static nodes list.
+Your node will continuously stay connected to these static peers, which helps reduce delays caused by node discovery and improves sync stability.
+
+#### Steps to add static nodes
+1. Create a `config.toml` file with the following content, and place it in your `geth` directory. The geth directory is usually located at `$HOME/.ethereum/`.
+
+For mainnet:
+```toml
+[Node.P2P]
+StaticNodes = ["enode://e521ad93c7aa24a33a2e57a6be9c1e63ed39bd5a76245c5f8c004e7dac650adf70bee6354a7a9a83322cbb2f9458f6004259b6080ed4c5c3d689d4eef2e6a5a5@172.19.0.2:30303"]
+```
+
+For testnet:
+```toml
+[Node.P2P]
+StaticNodes = ...
+```
+
+2. Add the `--config` option when starting geth:
+```sh
+sudo -u geth geth \
+  ...
+  --config $HOME/.ethereum/geth/config.toml
+```
+
+---
+### Q. How can I reduce Geth storage consumption?
+First, if you are running an archive node, consider switching to a full node. By doing so, your storage usage will drop to roughly **one-third** of the current size. An archive node stores all historical state data since the genesis block, whereas a full node keeps only the genesis state and the latest state.
+
+Archive nodes are primarily required for RPC service providers or block explorers.
+For most operators, including validators, switching to a full node has no drawbacks.
+
+#### Steps to switch to a full node
+1. Prune old states. This process may take several hours, so please be patient. If possible, take a snapshot or backup before starting.
+```sh
+sudo -u geth geth snapshot prune-state --datadir [your datadir, usually $HOME/.ethereum]
+```
+
+2. Change the gc mode in your startup command:
+```sh
+sudo -u geth geth \
+  ...
+  --gcmode full \ # change from archive -> full
+```
+
+Additionally, you can enable ancient block pruning to further reduce disk usage. With this option, your node keeps only the most recent ~90,000 blocks (about one week), and older blocks are pruned automatically.
+
+This has no impact on most node operators — including validators —
+but RPC or explorer operators should avoid this setting, as they may need historical data.
+
+
+#### Steps to enable ancient block pruning
+Simply add the `--pruneancient` option to your startup command:
+```sh
+sudo -u geth geth \
+  ...
+  --pruneancient
+```
+
+---
 ### Q. Validator Header not found
 While operating your node, you might encounter some of the errors listed below. These are not of concern, so you can safely ignore them.
 ```sh
