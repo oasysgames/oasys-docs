@@ -17,17 +17,9 @@ Your node will continuously stay connected to these static peers, which helps re
 
 #### Steps to add static nodes
 1. Create a `config.toml` file with the following content, and place it in your `geth` directory. The geth directory is usually located at `$HOME/.ethereum/`.
-
-For mainnet:
 ```toml
 [Node.P2P]
-StaticNodes = ["enode://e521ad93c7aa24a33a2e57a6be9c1e63ed39bd5a76245c5f8c004e7dac650adf70bee6354a7a9a83322cbb2f9458f6004259b6080ed4c5c3d689d4eef2e6a5a5@172.19.0.2:30303"]
-```
-
-For testnet:
-```toml
-[Node.P2P]
-StaticNodes = ...
+StaticNodes = ["enode://XX..XX@00.00.00.00:30303"]
 ```
 
 2. Add the `--config` option when starting geth:
@@ -50,25 +42,11 @@ For most operators, including validators, switching to a full node has no drawba
 sudo -u geth geth snapshot prune-state --datadir [your datadir, usually $HOME/.ethereum]
 ```
 
-2. Change the gc mode in your startup command:
+2. Change the GC mode in your startup command:
 ```sh
 sudo -u geth geth \
   ...
   --gcmode full \ # change from archive -> full
-```
-
-Additionally, you can enable ancient block pruning to further reduce disk usage. With this option, your node keeps only the most recent ~90,000 blocks (about one week), and older blocks are pruned automatically.
-
-This has no impact on most node operators — including validators —
-but RPC or explorer operators should avoid this setting, as they may need historical data.
-
-
-#### Steps to enable ancient block pruning
-Simply add the `--pruneancient` option to your startup command:
-```sh
-sudo -u geth geth \
-  ...
-  --pruneancient
 ```
 
 ---
