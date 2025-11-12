@@ -23,7 +23,7 @@ If a game company is looking to deploy a game title without building its own ver
 - Contact directly
   - You can navigate onto [Verse Contact List](/docs/verse-developer/contact-list)
 - Leverage verse matching opportunities
-  - Introduce the most suitable verse for you on [Oasys Discord](https://discord.gg/8hfWTbKVex). Please create a ticket in the `#verse-matching` channel under the Developer category and provide the necessary details. The Verse Builder will review it and take action accordingly.
+  - Introduce the most suitable verse for you on [Oasys Discord](https://discord.gg/oasysofficial). Please create a ticket in the `#verse-matching` channel under the Developer category and provide the necessary details. The Verse Builder will review it and take action accordingly.
 
 ## Build a Own Verse
 In principle, anyone with a deposit of 1 million OAS tokens can create an L2 on Oasys.

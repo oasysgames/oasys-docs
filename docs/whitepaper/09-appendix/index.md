@@ -10,7 +10,7 @@ sidebar_position: 1
 **Website:** https://www.oasys.games/  
 **GitHub:** https://github.com/oasysgames  
 **X (Twitter):** https://twitter.com/oasyschain  
-**Discord:** https://discord.gg/8hfWTbKVex  
+**Discord:** https://discord.gg/oasysofficial  
 **Medium:** https://medium.com/@oasys  
 
 <!-- ![Profile](/img/docs/whitepaper/founding/profile.png) -->

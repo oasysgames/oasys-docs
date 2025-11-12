@@ -20,7 +20,7 @@ Oasys's full node is capable of synchronizing blocks and executing commands on g
 - [x] 2.Install geth through one of the following two options:
   - [**Express setup**](/docs/hub-validator/operate-validator/build-validator-node#express-setup): This is a straightforward method for setting up the validator node in your preferred environment.
   - [**Manual setup**](/docs/hub-validator/operate-validator/build-validator-node#manual-setup): This is a more engineering-friendly method. Those who use this setup will gain a good understanding of the Oasys validation node.
-- [x] 3.Join our official [Discord](https://discord.gg/8hfWTbKVex). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
+- [x] 3.Join our official [Discord](https://discord.gg/oasysofficial). Announcements such as validator node updates are posted in the `dev-announcement` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
 
 ### Validator Node
 The Oasys validator node operation involves running the validator client on the Oasys platform. To participate in the validator node operation, it is necessary to have a stake of **10,000,000 OAS** from a delegator or through self-delegation. Please make sure to prepare the required stake in advance.
@@ -34,7 +34,7 @@ The Oasys validator node operation involves running the validator client on the 
 - [x] 5.[Enabling Fast Finality](/docs/hub-validator/operate-validator/build-validator-node#enabling-fast-finality)
 - [x] 6.Check validation status on **next epoch**
 - [x] 7.After stable validation, run [**Instant verifier**](/docs/hub-validator/operate-validator/setup-verifier)
-- [x] 8.Join our official [Discord](https://discord.gg/8hfWTbKVex). Announcements such as validator node updates are posted in the `announcement-validator` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
+- [x] 8.Join our official [Discord](https://discord.gg/oasysofficial). Announcements such as validator node updates are posted in the `dev-announcement` channel. Once you've joined, please remember to obtain roles in the `get-a-role` channel.
 
 ---
 ## Express Setup

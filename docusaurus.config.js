@@ -155,7 +155,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/8hfWTbKVex',
+                href: 'https://discord.gg/oasysofficial',
               },
               {
                 label: 'X (Twitter)',
