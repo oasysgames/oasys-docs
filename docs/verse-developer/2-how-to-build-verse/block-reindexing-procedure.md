@@ -2,7 +2,7 @@
 
 ## 1. Delete the block-related data from the database
 
-Connect to PostgreSQL and delete all data related to block `9089339`.
+Connect to PostgreSQL and delete all data associated with the target block (in this example, block `9089339`).
 
 ```sql
 BEGIN;
