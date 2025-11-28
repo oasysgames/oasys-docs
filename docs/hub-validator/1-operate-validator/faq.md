@@ -31,12 +31,13 @@ sudo -u geth geth \
 
 ---
 ### Q. How can I reduce Geth storage consumption?
-First, if you are running an archive node, consider switching to a full node. By doing so, your storage usage will drop to roughly **one-third** of the current size. An archive node stores all historical state data since the genesis block, whereas a full node keeps only the genesis state and the latest state.
+#### 1. Switch from an Archive Node to a Full Node
+First, if you are running an archive node, consider switching to a full node. By doing so, your storage usage will drop to roughly **one-fourth** of the current size. An archive node stores all historical state data since the genesis block, whereas a full node keeps only the genesis state and the latest state.
 
 Archive nodes are primarily required for RPC service providers or block explorers.
 For most operators, including validators, switching to a full node has no drawbacks.
 
-#### Steps to switch to a full node
+**Steps to switch to a full node**
 1. Prune old states. This process may take several hours, so please be patient. If possible, take a snapshot or backup before starting.
 ```sh
 sudo -u geth geth snapshot prune-state --datadir [your datadir, usually $HOME/.ethereum]
@@ -47,6 +48,18 @@ sudo -u geth geth snapshot prune-state --datadir [your datadir, usually $HOME/.e
 sudo -u geth geth \
   ...
   --gcmode full \ # change from archive -> full
+```
+#### 2. Prune Historical Blocks
+Second, if you do not need historical blocks (most validator nodes do not), enabling block pruning will reduce your storage usage by approximately **30 GB**.
+
+**Steps to enable pruning**
+
+Add the prune option flag below. This flag specifies how many recent blocks to keep in the database.
+For reference, 90,000 blocks is roughly one week.
+```sh
+sudo -u geth geth \
+  ...
+  --history.blocks 90000 \
 ```
 
 ---
