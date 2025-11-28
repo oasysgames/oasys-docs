@@ -50,7 +50,7 @@ sudo -u geth geth \
   --gcmode full \ # change from archive -> full
 ```
 #### 2. Prune Historical Blocks
-Second, if you do not need historical blocks (most validator nodes do not), enabling block pruning will reduce your storage usage by approximately **30 GB**.
+Second, if you do not need historical blocks (most validator nodes do not), enabling block pruning will reduce your storage usage by approximately **10-30 GB**.
 
 **Steps to enable pruning**
 
