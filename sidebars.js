@@ -362,6 +362,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'VersePort',
+      link: {
+        type: 'doc',
+        id: 'verse-developer/verseport',
+      },
+      collapsed: true,
+      items: [],
+    },
+    {
+      type: 'category',
       label: 'Verse Contact List',
       link: {
         type: 'doc',
