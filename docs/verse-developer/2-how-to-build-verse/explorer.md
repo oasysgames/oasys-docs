@@ -57,6 +57,68 @@ If you are using op-geth, follow these steps to enable the required namespaces:
    - Restart your `op-geth` node to apply the settings
    - Check the logs to confirm the namespaces are available
 
+## Blockscout v9
+
+### Setup Blockscout v9
+#### Backend Setup
+1. **Clone Repository**:
+   ```shell
+   git clone https://github.com/oasysgames/blockscout-v9-backend.git
+   cd blockscout-v9-backend
+   ```
+
+2. **Checkout Specific Version**:
+   Check available versions at [blockscout-v9-backend releases](https://github.com/oasysgames/blockscout-v9-backend/tags) and checkout the desired version:
+   ```shell
+   # Example: checking out the latest stable version
+   git checkout <version-tag>
+   ```
+
+3. **Configure Environment Variables and Start**:
+   Set the following variables in [common-blockscout.env](https://github.com/oasysgames/blockscout-v9-backend/blob/main/docker-compose/envs/common-blockscout.env):
+
+   ```shell
+   cd docker-compose/envs/
+   vim common-blockscout.env
+   docker compose build
+   ```
+
+   Refer to the [Common Backend Environment Variables](#common-backend-environment-variables) section below for the required configuration.
+
+4. **Run Backend Container**:
+   ```shell
+   sudo FRONT_PROXY_PASS=http://host.docker.internal:3000 docker compose -f external-frontend.yml up -d
+   ```
+
+#### Frontend Setup
+1. **Clone Repository**:
+   ```shell
+   git clone https://github.com/oasysgames/blockscout-v9-frontend.git
+   cd blockscout-v9-frontend
+   ```
+
+2. **Checkout Specific Version**:
+   Check available versions at [blockscout-v9-frontend releases](https://github.com/oasysgames/blockscout-v9-frontend/tags) and checkout the desired version:
+   ```shell
+   # Example: checking out the latest stable version
+   git checkout <version-tag>
+   ```
+
+3. **Configure Environment Variables**:
+   - Set variables in [.env.common](https://github.com/oasysgames/blockscout-v9-frontend/blob/main/configs/envs/.env.common)
+   - For available options, see [Blockscout v9 Frontend Documentation](https://github.com/oasysgames/blockscout-v9-frontend/blob/main/docs/ENVS.md)
+   - For Featured Networks configuration, see [Featured Network Configuration Properties](https://github.com/blockscout/frontend/blob/main/docs/ENVS.md#featured-network-configuration-properties)
+   - For OP Stack configuration, see [OP Stack Related Variables](#op-stack-related-variables)
+   - For Token configuration, see [Token Configuration Variables](#token-configuration-variables)
+
+4. **Run Frontend Container**:
+   ```shell
+   docker-compose build 
+   docker compose up -d
+   ```
+
+   Access the explorer at `http://localhost/` or `http://localhost:3000/`
+
 ## Blockscout v8
 
 ### Setup Blockscout v8
@@ -180,6 +242,48 @@ If you are using op-geth, follow these steps to enable the required namespaces:
    ```
 
    Access the explorer at `http://localhost/` or `http://localhost:3000/`
+
+## Migrating from Blockscout v8 to v9
+
+This section guides you through the process of migrating your Blockscout explorer from version 8 to version 9.
+
+### Repository Changes
+
+When migrating from v8 to v9, you'll need to use different repositories:
+
+**Frontend:**
+- v8: `github.com/oasysgames/blockscout-v8-frontend`
+- v9: `github.com/oasysgames/blockscout-v9-frontend`
+
+**Backend:**
+- v8: `github.com/oasysgames/blockscout-v8-backend`
+- v9: `github.com/oasysgames/blockscout-v9-backend`
+
+### Migration Steps
+
+1. Stop the v8 services:
+   ```bash
+   # In the v8 directory
+   docker-compose down
+   ```
+
+2. Start the v9 services:
+   ```bash
+   # In the v9 directory
+   docker-compose up -d
+   ```
+
+### Environment Variable Changes
+
+When migrating to v9, note the following environment variable changes:
+
+**reCAPTCHA Configuration:**
+- v8: `NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY`
+- v9: `NEXT_PUBLIC_RE_CAPTCHA_APP_SITE_KEY` (no change from v8)
+
+Make sure to update any other environment configuration accordingly.
+
+The migration process from v8 to v9 is designed to be automatic, and verified contracts will also be carried over automatically.
 
 ## Migrating from Blockscout v7 to v8
 
@@ -338,7 +442,7 @@ sudo chmod +x excutes/verified_contract.sh
 ## Common Configuration Items
 
 ### Common Backend Environment Variables
-All BlockScout versions (v6, v7, and v8) share the following environment variables that need to be configured:
+All BlockScout versions (v6, v7, v8, and v9) share the following environment variables that need to be configured:
 
 For more details, see [Blockscout Backend Environment Variables](https://docs.blockscout.com/setup/env-variables/backend-env-variables).
 
