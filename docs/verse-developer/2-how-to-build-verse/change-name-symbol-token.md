@@ -1,14 +1,14 @@
 # How to change Token name and symbol
 
 ## Environment Variables
-For frontend environment variables configuration (including token-related variables), please refer to the [Blockscout v8 Frontend Documentation](https://github.com/oasysgames/blockscout-v8-frontend/blob/main/docs/ENVS.md).
+For frontend environment variables configuration (including token-related variables), please refer to the [Blockscout v9 Frontend Documentation](https://github.com/oasysgames/blockscout-v9-frontend/blob/main/docs/ENVS.md).
 
 ## Update ENV Configuration
 (see Verse token configuration when changing the token name)
 
-### Step 1: Locate blockscout-v8-frontend/
+### Step 1: Locate blockscout-v9-frontend/
 ```sh
-cd blockscout-v8-frontend/
+cd blockscout-v9-frontend/
 ```
 
 ### Step 2: Update ENV Configuration
