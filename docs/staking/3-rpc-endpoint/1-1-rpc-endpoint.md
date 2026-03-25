@@ -8,9 +8,8 @@
   <tbody>
     <tr><td colspan="3">ChainID</td><td>248</td></tr>
     <tr><td colspan="3">Currency Symbol</td><td>OAS</td></tr>
-    <tr><td rowspan="3">RPC</td><td rowspan="2">Oasys</td><td>HTTPS</td><td>https://rpc.mainnet.oasys.games</td></tr>
+    <tr><td rowspan="2">RPC</td><td rowspan="2">Oasys</td><td>HTTPS</td><td>https://rpc.mainnet.oasys.games</td></tr>
     <tr><td>Websocket</td><td>wss://ws.mainnet.oasys.games/</td></tr>
-    <tr><td>BlockPi</td><td>HTTPS</td><td>https://oasys.blockpi.network/v1/rpc/public</td></tr>
     <tr><td colspan="3">Explorer</td><td><a href="https://explorer.oasys.games/" target="_blank" rel="noopener noreferrer">https://explorer.oasys.games/</a></td></tr>
   </tbody>
 </table>
