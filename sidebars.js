@@ -261,6 +261,7 @@ const sidebars = {
         'hub-validator/operate-validator/setup-verifier',
         'hub-validator/operate-validator/monitor',
         'hub-validator/operate-validator/upgrade-migrate',
+        'hub-validator/operate-validator/hacking-prevention',
         'hub-validator/operate-validator/faq',
         'staking/rpc-endpoint/1-1-rpc-endpoint',
       ]
