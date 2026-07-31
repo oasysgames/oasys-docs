@@ -20,10 +20,6 @@ Below flow chart describes the steps required to deploy your game.
 
 ## Selecting a verse partner
 If a game company is looking to deploy a game title without building its own verse, a game company needs to get in touch with respective verse builders. Oasys team can also help respective game companies to be connected with respective verse builders.
-- Contact directly
-  - You can navigate onto [Verse Contact List](/docs/verse-developer/contact-list)
-- Leverage verse matching opportunities
-  - Introduce the most suitable verse for you on [Oasys Discord](https://discord.gg/oasysofficial). Please create a ticket in the `#verse-matching` channel under the Developer category and provide the necessary details. The Verse Builder will review it and take action accordingly.
 
 ## Build a Own Verse
 In principle, anyone with a deposit of 1 million OAS tokens can create an L2 on Oasys.
@@ -64,4 +60,3 @@ Oasys is compatible with any wallet in the Ethereum ecosystem. We especially fea
 
 #### 4. Built-in Bridge UI
 We believe that incorporating a bridging UI into your game can enhance the user experience. Typical gamers might not be familiar with crypto-friendly bridging UIs. Therefore, seamlessly integrating a bridging function into games can be beneficial. We are considering providing something like an SDK to facilitate the built-in bridge UI if there's high demand.
-
