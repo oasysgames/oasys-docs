@@ -39,8 +39,8 @@ If you're planning to run a testnet node, please use our provided [snapshot](/do
 
 ## SAND Verse (Verse Layer)
 
-:::warning SAND Verse Service Closure
-SAND Verse is scheduled to cease operations at the end of July 2026. Its RPC endpoints and related services will no longer be available after the closure.
+:::danger SAND Verse Has Closed
+SAND Verse ceased operations on July 2026. Its RPC endpoints and related services are no longer available. The information below is retained for historical reference only.
 :::
 
 Please refer to [SAND Verse](/docs/verse-developer/sandverse) to learn about SAND verse.
